@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La soglia dell'albero</title>
+<style>
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#1f2937;background:#fff;padding:14px}
+  .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:8px 0}
+  input[type=range]{width:min(560px,100%)}
+  .k{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#6b7280;font-weight:700}
+  .v{font-size:22px;font-weight:800}
+  .box{border:1px solid #e5e7eb;border-radius:10px;padding:10px 14px;min-width:150px}
+  .box.tot{border-color:#059669;background:#ecfdf5}
+  button{border:1px solid #059669;background:#059669;color:#fff;border-radius:8px;padding:8px 14px;font-weight:700;cursor:pointer}
+  button.alt{background:#fff;color:#059669}
+  svg{width:100%;max-width:820px;height:auto;display:block}
+  .legend{font-size:13px;color:#6b7280}
+</style></head><body>
+<div class="row"><span class="k">Dati</span><span class="legend">ogni pallino è un veicolo: km/h oltre il limite (asse orizzontale) e classe reale: <b style="color:#2563eb">●</b> 36 € (fino a 10 km/h) · <b style="color:#dc2626">●</b> 148 € (oltre 10 km/h). Alcuni valori vicini al confine sono stati "arrotondati" dall'autovelox.</span></div>
+<svg viewBox="0 0 820 150" id="plot"></svg>
+<div class="row"><span class="k">Soglia</span><input type="range" id="th" min="0.5" max="24.5" step="0.5" value="6"><span class="v" id="thv">6</span> km/h</div>
+<div class="row">
+  <div class="box"><div class="k">Sinistra (≤ soglia)</div><div class="v" id="l"></div><div class="legend" id="lc"></div></div>
+  <div class="box"><div class="k">Destra (> soglia)</div><div class="v" id="r"></div><div class="legend" id="rc"></div></div>
+  <div class="box tot"><div class="k">Deviance totale</div><div class="v" id="tot"></div><div class="legend" id="best"></div></div>
+</div>
+<div class="row"><button id="go">Lascia scegliere all'algoritmo</button><button class="alt" id="new">Nuovi dati</button></div>
+<script>
+const W=820,H=150,pad=30;let pts=[];
+function gen(){pts=[];for(let i=0;i<40;i++){const x=Math.round(Math.random()*24*2)/2+0.5;let c=x<=10?0:1;if(Math.abs(x-10)<=1.5&&Math.random()<0.35)c=1-c;pts.push({x,c});}}
+function dev(g){const n=g.length;if(!n)return 0;const n1=g.filter(p=>p.c===1).length,n0=n-n1;const f=(k)=>k?k*Math.log(k/n):0;return -2*(f(n1)+f(n0));}
+function draw(th){const s=document.getElementById('plot');let h=`<line x1="${pad}" y1="100" x2="${W-pad}" y2="100" stroke="#e5e7eb"/>`;for(let t=0;t<=25;t+=5){const x=pad+t/25*(W-2*pad);h+=`<line x1="${x}" y1="96" x2="${x}" y2="104" stroke="#9ca3af"/><text x="${x}" y="122" font-size="11" text-anchor="middle" fill="#6b7280">${t}</text>`;}
+const jit={};pts.forEach(p=>{const x=pad+p.x/25*(W-2*pad);jit[p.x]=(jit[p.x]||0)+1;const y=100-12-(jit[p.x]-1)*11;h+=`<circle cx="${x}" cy="${y}" r="5.5" fill="${p.c?'#dc2626':'#2563eb'}" opacity=".85"/>`;});
+const xt=pad+th/25*(W-2*pad);h+=`<line x1="${xt}" y1="10" x2="${xt}" y2="105" stroke="#059669" stroke-width="3" stroke-dasharray="6 4"/><text x="${xt}" y="140" font-size="12" text-anchor="middle" fill="#059669" font-weight="700">soglia ${th}</text>`;s.innerHTML=h;
+const L=pts.filter(p=>p.x<=th),R=pts.filter(p=>p.x>th);const dl=dev(L),dr=dev(R);
+document.getElementById('l').textContent=dl.toFixed(1);document.getElementById('lc').textContent=`${L.length} veicoli: ${L.filter(p=>!p.c).length} blu, ${L.filter(p=>p.c).length} rossi`;
+document.getElementById('r').textContent=dr.toFixed(1);document.getElementById('rc').textContent=`${R.length} veicoli: ${R.filter(p=>!p.c).length} blu, ${R.filter(p=>p.c).length} rossi`;
+document.getElementById('tot').textContent=(dl+dr).toFixed(1);}
+const th=document.getElementById('th');th.addEventListener('input',()=>{document.getElementById('thv').textContent=th.value;document.getElementById('best').textContent='';draw(+th.value);});
+document.getElementById('go').addEventListener('click',async()=>{let best=null;for(let t=0.5;t<=24.5;t+=0.5){th.value=t;document.getElementById('thv').textContent=t;draw(t);const L=pts.filter(p=>p.x<=t),R=pts.filter(p=>p.x>t);const d=dev(L)+dev(R);if(!best||d<best.d)best={t,d};await new Promise(r=>setTimeout(r,45));}th.value=best.t;document.getElementById('thv').textContent=best.t;draw(best.t);document.getElementById('best').textContent=`la migliore: ${best.t} (deviance ${best.d.toFixed(1)}) — la regola vera era 10`;});
+document.getElementById('new').addEventListener('click',()=>{gen();document.getElementById('best').textContent='';draw(+th.value);});
+gen();draw(+th.value);
+</script></body></html>

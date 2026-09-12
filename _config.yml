@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Coding e Big Data
+title: Coding e fondamenti di AI
 tagline: Corso Università Cattolica del Sacro Cuore
 description: Corso Università Cattolica del Sacro Cuore
 author: Vincenzo Nardelli
@@ -38,7 +38,15 @@ collections:
   modules:
   schedules:
   announcements:
-  lezioni:
+  settimane:
+    output: true
+    permalink: /settimana/:name/
+  lab:
+    output: true
+    permalink: /lab/:name/
+  esplorazioni:
+    output: true
+    permalink: /esplorazioni/:name/
 # Default layouts for each collection type
 defaults:
   - scope:
@@ -64,9 +72,22 @@ defaults:
       layout: announcement
   - scope:
       path: ''
-      type: lezioni
+      type: settimane
     values:
-      layout: lezioni
+      layout: settimana
+      nav_exclude: true
+  - scope:
+      path: ''
+      type: lab
+    values:
+      layout: lab
+      nav_exclude: true
+  - scope:
+      path: ''
+      type: esplorazioni
+    values:
+      layout: esplorazione
+      nav_exclude: true
 
 compress_html:
   clippings: all
@@ -75,6 +96,11 @@ compress_html:
   startings: []
   blanklines: false
   profile: false
+
+# Skill del corso: link "via rapida" (lasciare vuoto finché non esistono)
+skill_gpt_url: ''
+skill_gem_url: ''
+skill_version: '2026.1'
 
 plugins:
   - jekyll-seo-tag

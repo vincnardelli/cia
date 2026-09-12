@@ -1,0 +1,126 @@
+---
+layout: default
+---
+{% assign slug = page.url | split: '/' | last %}
+{% assign week = site.settimane | where: 'number', page.week | first %}
+{% assign visible_tests = page.tests | where: 'visible', true %}
+{% assign settimane = site.settimane | sort: 'number' %}
+
+<div class="lab lab--p{{ week.pillar }}" data-lab="{{ slug }}" data-language="{{ page.language }}" data-tolerance="{{ page.tolerance | default: 0.01 }}"
+     data-output="{{ page.output.name }}" data-level="{{ page.level }}" data-solution-after="{{ page.solution_after }}"
+     {% if page.data_url %}data-data-url="{{ site.baseurl }}/{{ page.data_url }}" data-data-var="{{ page.data_var | default: 'data' }}"{% endif %}
+     {% if page.packages %}data-packages="{{ page.packages | join: ',' }}"{% endif %}
+     {% if page.function %}data-function="{{ page.function }}"{% endif %}>
+
+  <div class="lab__head">
+    <div class="lab__kicker">
+      {% if week %}<a class="tag tag--pillar tag--p{{ week.pillar }}" href="{{ site.baseurl }}{{ week.url }}">Settimana {{ week.number }} · {{ week.title }}</a>{% endif %}
+      <span class="tag tag--level">{{ page.level }}</span>
+      <span class="tag tag--lang">{{ page.language }}</span>
+      <span class="tag tag--ai">AI-{{ page.ai_mode }}</span>
+    </div>
+    <h1 class="lab__title">{{ page.title }} <span class="lab__status" data-lab-status></span></h1>
+  </div>
+
+  <div class="lab__cols">
+    <!-- ───────── colonna sinistra: specifica ───────── -->
+    <div class="lab__spec">
+      <div class="spec">
+        <div class="spec__row"><div class="spec__k">Obiettivo</div><div class="spec__v">{{ page.objective }}</div></div>
+        <div class="spec__row"><div class="spec__k">Input</div><div class="spec__v">
+          <ul class="spec__list">{% for i in page.inputs %}<li><code>{{ i.name }}</code> <em>{{ i.type }}</em>{% if i.desc %} — {{ i.desc }}{% endif %}</li>{% endfor %}</ul>
+        </div></div>
+        <div class="spec__row"><div class="spec__k">Output</div><div class="spec__v">
+          <code>{{ page.output.name }}</code> <em>{{ page.output.type }}</em>{% if page.output.desc %} — {{ page.output.desc }}{% endif %}
+          {% if page.function %}<div class="muted">da scrivere come funzione <code>{{ page.function }}</code></div>{% endif %}
+        </div></div>
+        <div class="spec__row"><div class="spec__k">Regole</div><div class="spec__v spec__rules">{{ content }}</div></div>
+        {% if visible_tests.size > 0 %}
+        <div class="spec__row"><div class="spec__k">Esempi</div><div class="spec__v">
+          <table class="spec__examples">
+            <thead><tr>{% for i in page.inputs %}<th>{{ i.name }}</th>{% endfor %}<th>{{ page.output.name }}</th></tr></thead>
+            <tbody>
+            {% for t in visible_tests %}<tr>{% for i in page.inputs %}<td>{{ t.inputs[i.name] }}</td>{% endfor %}<td><strong>{{ t.expected }}</strong></td></tr>{% endfor %}
+            </tbody>
+          </table>
+        </div></div>
+        {% endif %}
+      </div>
+
+      {% if week and week.concepts_required.size > 0 %}
+      <div class="lab__prereq">Ti serve: {% for c in week.concepts_required %}{% assign found = false %}{% for w in settimane %}{% if w.concepts_new contains c and found == false %}<a href="{{ site.baseurl }}{{ w.url }}">{{ c }}</a>{% assign found = true %}{% endif %}{% endfor %}{% unless found %}{{ c }}{% endunless %}{% unless forloop.last %} · {% endunless %}{% endfor %}</div>
+      {% endif %}
+
+      <!-- ───────── pannello AI ───────── -->
+      <div class="ai-panel" data-ai-context="lab" data-title="{{ page.title }}" data-week="{{ page.week }}">
+        <div class="ai-panel__head">
+          <strong>Lavora con l'assistente</strong>
+          <span class="muted">scegli come vuoi essere aiutato</span>
+        </div>
+        <div class="ai-modes">
+          <label class="ai-mode"><input type="radio" name="ai-mode" value="tutor" checked>
+            <span class="ai-mode__name">Tutor</span><span class="ai-mode__desc">Ho scritto una bozza: aiutami a trovare cosa non va, una cosa per volta.</span></label>
+          <label class="ai-mode"><input type="radio" name="ai-mode" value="assistito">
+            <span class="ai-mode__name">Sviluppo assistito</span><span class="ai-mode__desc">Partiamo dall'analisi: casi limite, domande, poi la struttura.</span></label>
+          {% if page.week >= 7 %}<label class="ai-mode"><input type="radio" name="ai-mode" value="traduci">
+            <span class="ai-mode__name">Traduci in Python</span><span class="ai-mode__desc">Stesso codice, altro linguaggio, stessi test.</span></label>{% endif %}
+        </div>
+        <div class="ai-panel__row">
+          <label>Assistente <select data-ai-provider><option value="gpt">ChatGPT</option><option value="claude">Claude</option><option value="gemini">Gemini</option><option value="altro">altro</option></select></label>
+          <label><input type="checkbox" data-ai-skill> ho installato la skill <a href="{{ site.baseurl }}/skill/" class="muted">(come?)</a></label>
+        </div>
+        <details class="ai-preview"><summary>Anteprima del prompt</summary><pre data-ai-preview></pre></details>
+        <div class="ai-panel__row ai-panel__actions">
+          <button class="btn btn-primary" data-ai-open>Apri nell'assistente</button>
+          <button class="btn btn-outline" data-ai-copy>Copia il prompt</button>
+        </div>
+        <p class="ai-panel__note">Quando torni, premi <strong>Verifica</strong>: i casi nascosti non li conosce nemmeno l'AI.</p>
+      </div>
+    </div>
+
+    <!-- ───────── colonna destra: banco di prova ───────── -->
+    <div class="lab__bench">
+      <div class="bench">
+        <div class="bench__toolbar">
+          <span class="bench__lang">{{ page.language }}</span>
+          <span class="bench__runtime" data-runtime-status>runtime non caricato</span>
+          <button class="btn btn-outline btn-sm" data-reset title="Ripristina lo scheletro">Ripristina</button>
+        </div>
+        <textarea class="bench__editor" data-editor spellcheck="false" rows="16">{{ page.skeleton }}</textarea>
+        <div class="bench__actions">
+          <button class="btn btn-outline" data-run>▶ Esegui</button>
+          <button class="btn btn-primary" data-verify>✓ Verifica</button>
+        </div>
+        <pre class="bench__console" data-console hidden></pre>
+        <div class="results" data-results hidden>
+          <div class="results__summary" data-results-summary></div>
+          <table class="results__table">
+            <thead><tr><th>caso</th>{% for i in page.inputs %}<th>{{ i.name }}</th>{% endfor %}<th>atteso</th><th>ottenuto</th><th></th></tr></thead>
+            <tbody data-results-body></tbody>
+          </table>
+          <div class="hint" data-hint hidden></div>
+        </div>
+      </div>
+
+      <details class="solution" data-solution hidden>
+        <summary>Soluzione</summary>
+        <pre><code class="language-r">{{ page.solution }}</code></pre>
+      </details>
+
+      <div class="lab__nav">
+        {% if week %}<a class="btn btn-outline" href="{{ site.baseurl }}{{ week.url }}#lab">← Settimana {{ week.number }}</a>{% endif %}
+        {% assign next = site.lab | where: 'week', page.week | sort: 'order' %}
+        {% assign take = false %}{% for l in next %}{% if take %}<a class="btn btn-outline" href="{{ site.baseurl }}{{ l.url }}">Lab successivo: {{ l.title }} →</a>{% assign take = false %}{% break %}{% endif %}{% if l.url == page.url %}{% assign take = true %}{% endif %}{% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" data-lab-tests>{{ page.tests | jsonify }}</script>
+  <script type="application/json" data-lab-inputs>{{ page.inputs | jsonify }}</script>
+  <script type="application/json" data-lab-spec>{{ page.objective | jsonify }}</script>
+  <textarea data-lab-rules hidden>{{ content | strip_html | strip }}</textarea>
+  <textarea data-lab-skeleton hidden>{{ page.skeleton }}</textarea>
+</div>
+
+<script src="{{ site.baseurl }}/assets/js/verifica.js"></script>
+<script type="module" src="{{ site.baseurl }}/assets/js/runner-webr.js"></script>

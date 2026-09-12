@@ -1,17 +1,16 @@
 ---
 layout: page
-title: Progetto di gruppo
+title: Progetto
 permalink: /progetto/
-nav_order: 2
+nav_order: 6
 ---
 
 # 💻📈💡 Progetto di gruppo
 
 
-È possibile sostenere l'esame del corso Coding e Big Data in due modalità:
+Il **progetto di gruppo** si svolge a metà corso, tra la settimana 5 e la settimana 6, su un dataset reale assegnato al gruppo. I gruppi sono assegnati dal docente e comunicati in aula (non sul sito).
 
-- Consigliato per chi ha frequentato la maggior parte delle lezioni: Progetto di gruppo (consegna e presentazione progetto durante l'ultima lezione il 12 dicembre 2025)
-- Prova individuale della durata di 1h (durante le sessioni ufficiali di esame di Gennaio/Febbraio 2026)
+Le modalità dell'esame finale verranno comunicate durante il corso.
 
 
 ## 🗓 Iscrizione
@@ -37,25 +36,12 @@ Successivamente sarà necessario iscriversi ad uno degli appelli delle sessioni 
 
 
 
-## Elenco studenti per gruppo
-
-| Gruppo | Studenti |
-|--------|----------|
-| Retail Moda  | Alice Mazzara, Mattia Quaiattini, Vincenzo Andrea Suglia |
-| Immobiliare  | Eleonora De Angelis, Fabiano Palumbo, Greta Guidi |
-| Marketing (Campagne)  | Gabriele Maria Dallatomasina, Giuseppe Rametta, Giulio Scalia, Giulia Maria Rita Ciuni |
-| Assicurazioni  | Chiara Corcelli, Juan Pablo Saucedo, Fabio Ceccio, laura czerwinski |
-| Finanza  | Maddalena Montanaro, Michele Morra, Alessia Conforti, Carlotta Tressanti |
-| Sanità  | Agnese Romano, Elisa Rufa, Giovanni De Rosa, Francesco Jacopo Gati |
-| Logistica  | Ludovica Ranalletta, Chiara Maria Micheli, Emma Biondi, Anna Luna Orso |
-| Retail (Acquisizione)  | Pietro Ascatino, Pierugo Taglialmonte, Maria Maddalena Mascia, Alessandra Zampaloni |
-
 ## 📕 In cosa consiste
 
 Ogni team dovrà:
 
 ### 1. 📊 Analisi dei dati
-Utilizzare i dati forniti e tutti i codici e modelli visti durante il corso per raggiungere l'obiettivo specifico del proprio team.
+Utilizzare i dati forniti e i codici visti nel corso fino a quel punto (dplyr, ggplot2, un albero validato) per rispondere a una domanda di business sul proprio dataset.
 
 ### 2. 📝 Documentazione
 Produrre un documento che contenga:
@@ -64,19 +50,22 @@ Produrre un documento che contenga:
 - Analisi svolte e risultati ottenuti
 - Interpretazione dei risultati e conclusioni
 
-### 3. 💡 Riflessione critica
-Includere considerazioni sull'impatto dei Big Data e idee future nel settore assegnato (sanità, finanza, marketing, logistica, retail, assicurazioni, immobiliare). In particolare, rispondere alle seguenti domande:
-- Quali opportunità e rischi ci saranno grazie ai Big Data nel vostro settore?
+### 3. 🤖 Registro AI
+Un documento che elenca quali prompt avete usato, cosa ha generato l'assistente, cosa avete verificato voi e come (vedi il [patto d'uso]({{site.baseurl}}/guide/patto_ai)).
+
+### 4. 💡 Riflessione critica
+Includere considerazioni sull'impatto dei dati e dell'AI nel settore assegnato (sanità, finanza, marketing, logistica, retail, assicurazioni, immobiliare). In particolare, rispondere alle seguenti domande:
+- Quali opportunità e rischi porta l'AI nel vostro settore, e cosa non può fare?
 - Oltre all'algoritmo e l'analisi dei dati proposti dal gruppo, cosa si potrebbe fare per risolvere il problema?
 - Quali sviluppi futuri sono possibili in questo ambito?
 
-### 4. 🎤 Presentazione
-Presentare il progetto durante la lezione del **12 dicembre 2025**.
+### 5. 🎤 Presentazione
+Presentazione lampo di cinque minuti in aula, a inizio settimana 7.
 
 ## 📅 Scadenze
 
-- **10 dicembre 2025**: Consegna codice e documentazione
-- **12 dicembre 2025**: Consegna presentazione e presentazione in aula
+- Fine settimana 6: consegna codice, documentazione e registro AI
+- Inizio settimana 7: presentazione in aula
 
 ## 🛠 Strumenti e Risorse Consentite
 
@@ -92,7 +81,7 @@ Qualsiasi strumento, pacchetto o metodologia non vista a lezione deve essere:
 
 ## 📋 Modalità di Valutazione
 
-Durante la presentazione del 12 dicembre 2025:
+Durante la presentazione:
 - Verranno poste domande sul progetto e sui risultati ottenuti
 - Verranno poste domande sugli strumenti e metodologie utilizzate
 - Sarà valutata la comprensione degli approcci adottati

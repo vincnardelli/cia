@@ -1,0 +1,113 @@
+---
+layout: default
+---
+{% assign settimane = site.settimane | sort: 'number' %}
+{% assign labs = site.lab | where: 'week', page.number | sort: 'order' %}
+{% assign pillar_names = "Il codice|Come imparano le macchine|LLM e agenti" | split: "|" %}
+{% assign pidx = page.pillar | minus: 1 %}
+
+<div class="settimana settimana--p{{ page.pillar }}">
+  <div class="settimana__head">
+    <div class="settimana__kicker">
+      <span class="tag tag--pillar tag--p{{ page.pillar }}">Pilastro {{ page.pillar }} · {{ pillar_names[pidx] }}</span>
+      <span class="tag tag--lang">{{ page.language }}</span>
+      {% if page.dates.size > 0 %}<span class="tag tag--date">{% for d in page.dates %}{{ d | date: '%d/%m' }}{% unless forloop.last %} · {% endunless %}{% endfor %}</span>{% endif %}
+    </div>
+    <h1 class="settimana__title"><span class="settimana__num">{{ page.number }}</span> {{ page.title }}</h1>
+    <p class="settimana__idea">{{ page.idea }}</p>
+  </div>
+
+  <div class="concetti">
+    <div class="concetti__col">
+      <div class="concetti__label">Cosa devi già sapere</div>
+      {% if page.concepts_required.size > 0 %}
+      <ul class="concetti__list">
+        {% for c in page.concepts_required %}
+          {% assign found = false %}
+          {% for w in settimane %}
+            {% if w.concepts_new contains c and found == false %}
+              <li><a href="{{ site.baseurl }}{{ w.url }}" title="Settimana {{ w.number }} · {{ w.title }}">{{ c }} <span class="concetti__ref">sett. {{ w.number }}</span></a></li>
+              {% assign found = true %}
+            {% endif %}
+          {% endfor %}
+          {% unless found %}<li>{{ c }}</li>{% endunless %}
+        {% endfor %}
+      </ul>
+      {% else %}<p class="concetti__none">Niente: si parte da zero.</p>{% endif %}
+    </div>
+    <div class="concetti__col">
+      <div class="concetti__label">Cosa impari questa settimana</div>
+      <ul class="concetti__list concetti__list--new">
+        {% for c in page.concepts_new %}<li>{{ c }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <nav class="settimana__tabs" aria-label="Sezioni">
+    <a href="#lezione">Lezione</a>
+    <a href="#lab">Lab <span class="count">{{ labs.size }}</span></a>
+    {% if page.explorations.size > 0 %}<a href="#esplorazioni">Esplorazioni</a>{% endif %}
+  </nav>
+
+  <section id="lezione" class="settimana__lezione">
+    {{ content }}
+    {% if page.slides_pdf %}
+    <p><a href="{{ site.baseurl }}/{{ page.slides_pdf }}" class="btn btn-outline">Slide PDF</a></p>
+    {% endif %}
+  </section>
+
+  <section id="lab" class="settimana__lab">
+    <h2>Lab della settimana</h2>
+    {% assign levels = "base|extra|sfida" | split: "|" %}
+    {% for lv in levels %}
+      {% assign group = labs | where: 'level', lv %}
+      {% if group.size > 0 %}
+      <h3 class="lab-level lab-level--{{ lv }}">{% if lv == 'base' %}Base · fatti in aula{% elsif lv == 'extra' %}Extra · in piattaforma, con verifica{% else %}Sfida · solo i test, nessun suggerimento{% endif %}</h3>
+      <div class="lab-grid">
+        {% for lab in group %}{% include lab-card.html lab=lab %}{% endfor %}
+      </div>
+      {% endif %}
+    {% endfor %}
+    {% if labs.size == 0 %}<p class="muted">I lab di questa settimana arrivano con la lezione.</p>{% endif %}
+  </section>
+
+  {% if page.explorations.size > 0 %}
+  <section id="esplorazioni" class="settimana__espl">
+    <h2>Esplorazioni</h2>
+    <div class="espl-grid">
+      {% for slug in page.explorations %}
+        {% assign e = site.esplorazioni | where: 'slug', slug | first %}
+        {% if e %}
+        <a class="espl-card" href="{{ site.baseurl }}{{ e.url }}">
+          <div class="espl-card__title">{{ e.title }}</div>
+          <div class="espl-card__q">{{ e.question }}</div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="ai-panel ai-panel--settimana" data-ai-context="settimana" data-week="{{ page.number }}" data-title="{{ page.title }}">
+    <div class="ai-panel__head">
+      <strong>Ripassa con l'assistente</strong>
+      <span class="muted">copia la lezione e le regole del corso nel tuo assistente</span>
+    </div>
+    <div class="ai-panel__row">
+      <label>Assistente <select data-ai-provider><option value="gpt">ChatGPT</option><option value="claude">Claude</option><option value="gemini">Gemini</option><option value="altro">altro</option></select></label>
+      <label><input type="checkbox" data-ai-skill> ho installato la skill</label>
+      <button class="btn btn-primary" data-ai-open>Apri nell'assistente</button>
+      <button class="btn btn-outline" data-ai-copy>Copia il prompt</button>
+    </div>
+    <textarea class="ai-panel__lezione" hidden>{{ content | strip_html | strip }}</textarea>
+  </div>
+
+  <div class="settimana__nav">
+    {% assign prev = settimane | where: 'number', page.number | minus: 1 %}
+    {% for w in settimane %}
+      {% assign pn = page.number | minus: 1 %}{% assign nn = page.number | plus: 1 %}
+      {% if w.number == pn %}<a class="btn btn-outline" href="{{ site.baseurl }}{{ w.url }}">← {{ w.number }} · {{ w.title }}</a>{% endif %}
+      {% if w.number == nn %}<a class="btn btn-outline settimana__next" href="{{ site.baseurl }}{{ w.url }}">{{ w.number }} · {{ w.title }} →</a>{% endif %}
+    {% endfor %}
+  </div>
+</div>

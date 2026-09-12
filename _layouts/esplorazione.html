@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="esplorazione">
+  <div class="settimana__kicker"><span class="tag">Esplorazione · settimana {{ page.week }}</span></div>
+  <h1>{{ page.title }}</h1>
+  <p class="settimana__idea">{{ page.question }}</p>
+  {% if page.ready %}
+  <iframe class="espl-frame" src="{{ site.baseurl }}/esplorazioni/{{ page.slug }}.html" title="{{ page.title }}"></iframe>
+  {% else %}
+  <div class="via"><div class="via__k">In arrivo</div>Questa esplorazione sarà pubblicata con la settimana {{ page.week }}.</div>
+  {% endif %}
+  {{ content }}
+</div>

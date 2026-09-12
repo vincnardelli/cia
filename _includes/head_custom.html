@@ -1,0 +1,11 @@
+<script>
+  window.CBD_CONFIG = {
+    baseurl: "{{ site.baseurl }}",
+    siteurl: "{{ site.url }}{{ site.baseurl }}",
+    gptUrl: "{{ site.skill_gpt_url }}",
+    gemUrl: "{{ site.skill_gem_url }}",
+    skillVersion: "{{ site.skill_version }}"
+  };
+</script>
+<script src="{{ site.baseurl }}/assets/js/cbd-storage.js"></script>
+<script src="{{ site.baseurl }}/assets/js/risolvi-con-ai.js" defer></script>

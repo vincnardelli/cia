@@ -1,0 +1,166 @@
+// ───────────────────────── Corso 2026/27: pilastri, settimane, lab, pannello AI ─────────────────────────
+
+$p1: #2563eb;   // Il codice
+$p2: #059669;   // Come imparano le macchine
+$p3: #7c3aed;   // LLM e agenti
+$ok: #16a34a;
+$ko: #dc2626;
+$hint: #fef3c7;
+$hint-border: #f59e0b;
+$ink: #1f2937;
+$muted: #6b7280;
+$line: #e5e7eb;
+$soft: #f8fafc;
+
+.muted { color: $muted; font-size: 0.9em; }
+
+// ── tag ──
+.tag {
+  display: inline-block; font-size: 12px; line-height: 1; padding: 5px 9px; border-radius: 999px;
+  border: 1px solid $line; color: $ink; background: #fff; text-decoration: none !important; font-weight: 600; letter-spacing: .01em;
+  &.tag--p1 { border-color: $p1; color: $p1; }
+  &.tag--p2 { border-color: $p2; color: $p2; }
+  &.tag--p3 { border-color: $p3; color: $p3; }
+  &.tag--level { background: $soft; }
+  &.tag--lang { background: #eef2ff; border-color: #c7d2fe; color: #3730a3; }
+  &.tag--ai { background: #fff7ed; border-color: #fed7aa; color: #9a3412; }
+}
+
+// ── pilastri in home ──
+.pilastri { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 1.5rem 0; }
+@media (max-width: 800px) { .pilastri { grid-template-columns: 1fr; } }
+.pilastro {
+  display: block; border: 1px solid $line; border-top: 5px solid $line; border-radius: 10px; padding: 16px 18px; text-decoration: none !important; color: $ink; background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  &:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+  .pilastro__n { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: $muted; }
+  .pilastro__t { font-size: 20px; font-weight: 700; margin: 4px 0; }
+  .pilastro__d { font-size: 14px; color: $muted; }
+  .pilastro__w { font-size: 13px; margin-top: 10px; }
+  &.pilastro--1 { border-top-color: $p1; .pilastro__n{color:$p1} }
+  &.pilastro--2 { border-top-color: $p2; .pilastro__n{color:$p2} }
+  &.pilastro--3 { border-top-color: $p3; .pilastro__n{color:$p3} }
+}
+.dove-siamo {
+  border: 1px solid $line; border-radius: 10px; padding: 14px 18px; background: $soft; margin: 1rem 0;
+  display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+  .dove-siamo__k { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: $muted; font-weight: 700; }
+  .dove-siamo__t { font-weight: 700; }
+}
+.patto { border-left: 4px solid $p3; padding: 6px 14px; background: #faf5ff; border-radius: 6px; margin: 1rem 0; p { margin: .3em 0; font-size: 16px; } }
+
+// ── elenco settimane ──
+.settimane-list { list-style: none; padding: 0; margin: 0; }
+.settimana-row {
+  display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; align-items: center; padding: 12px 8px; border-bottom: 1px solid $line; text-decoration: none !important; color: $ink;
+  &:hover { background: $soft; }
+  .settimana-row__n { font-size: 26px; font-weight: 800; color: $line; text-align: center; }
+  &.settimana-row--p1 .settimana-row__n { color: $p1; } &.settimana-row--p2 .settimana-row__n { color: $p2; } &.settimana-row--p3 .settimana-row__n { color: $p3; }
+  .settimana-row__t { font-weight: 700; font-size: 17px; }
+  .settimana-row__i { color: $muted; font-size: 14px; }
+}
+.pillar-h { margin-top: 2rem; padding-bottom: 4px; border-bottom: 3px solid $line; &.pillar-h--1{border-color:$p1} &.pillar-h--2{border-color:$p2} &.pillar-h--3{border-color:$p3} }
+
+// ── pagina settimana ──
+.settimana__head { margin-bottom: 1rem; }
+.settimana__kicker { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.settimana__title { margin: .2em 0 .1em; .settimana__num { display:inline-block; min-width: 44px; padding: 0 8px; border-radius: 8px; color:#fff; background:$line; text-align:center; margin-right:6px; } }
+.settimana--p1 .settimana__num { background: $p1; } .settimana--p2 .settimana__num { background: $p2; } .settimana--p3 .settimana__num { background: $p3; }
+.settimana__idea { font-size: 20px; color: $muted; margin: 0 0 1rem; font-style: italic; }
+
+.concetti {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1rem 0 1.5rem;
+  @media (max-width: 700px) { grid-template-columns: 1fr; }
+  .concetti__col { border: 1px solid $line; border-radius: 10px; padding: 12px 14px; background: #fff; }
+  .concetti__label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: $muted; font-weight: 700; margin-bottom: 6px; }
+  .concetti__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px;
+    li { font-size: 14px; background: $soft; border: 1px solid $line; border-radius: 6px; padding: 3px 8px; a { text-decoration: none; color: $ink; } }
+    .concetti__ref { color: $muted; font-size: 12px; margin-left: 4px; }
+  }
+  .concetti__list--new li { background: #ecfdf5; border-color: #a7f3d0; }
+  .concetti__none { color: $muted; font-size: 14px; margin: 0; }
+}
+.settimana__tabs { display: flex; gap: 4px; border-bottom: 1px solid $line; margin: 0 0 1.2rem; position: sticky; top: 0; background: #fff; z-index: 2;
+  a { padding: 10px 14px; text-decoration: none !important; color: $ink; font-weight: 600; border-bottom: 3px solid transparent; &:hover { border-color: $line; } .count { background: $soft; border: 1px solid $line; border-radius: 999px; padding: 1px 7px; font-size: 12px; margin-left: 4px; } }
+}
+.settimana__lezione blockquote { border-left: 4px solid $p1; background: $soft; padding: 8px 14px; border-radius: 6px; margin: 1rem 0; font-size: 16px; p { font-size: 16px; margin: .3em 0; } }
+.settimana__lezione blockquote strong:first-child { color: $p1; }
+.settimana__nav { display: flex; justify-content: space-between; gap: 8px; margin: 2rem 0 1rem; .settimana__next { margin-left: auto; } }
+
+// ── schede lab ──
+.lab-level { font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: $muted; margin: 1.2rem 0 .5rem; }
+.lab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.lab-card {
+  display: flex; justify-content: space-between; gap: 10px; border: 1px solid $line; border-left: 5px solid $line; border-radius: 10px; padding: 12px 14px; background: #fff; text-decoration: none !important; color: $ink;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05); transition: box-shadow .15s;
+  &:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+  &.lab-card--base { border-left-color: $p1; } &.lab-card--extra { border-left-color: #f59e0b; } &.lab-card--sfida { border-left-color: $p3; }
+  .lab-card__title { font-weight: 700; font-size: 16px; }
+  .lab-card__obj { font-size: 13px; color: $muted; margin: 3px 0 8px; }
+  .lab-card__tags { display: flex; gap: 5px; flex-wrap: wrap; .tag { font-size: 11px; padding: 3px 7px; } }
+  .lab-card__status { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 70px; font-size: 11px; color: $muted; text-align: center;
+    .status-dot { width: 12px; height: 12px; border-radius: 50%; background: $line; margin-bottom: 4px; }
+    &.is-progress .status-dot { background: #f59e0b; } &.is-done .status-dot { background: $ok; } &.is-done .status-text { color: $ok; font-weight: 700; }
+  }
+}
+
+// ── pagina lab ──
+.main-content-wrap:has(.lab) { max-width: 1240px; }   // la pagina lab usa due colonne
+.main-content-wrap:has(.settimana), .main-content-wrap:has(.lab-grid) { max-width: 1000px; }
+.lab__kicker { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+.lab__title { margin: .2em 0 .8em; .lab__status { font-size: 14px; vertical-align: middle; margin-left: 8px; padding: 3px 10px; border-radius: 999px; background: $soft; border: 1px solid $line; color: $muted; font-weight: 600;
+  &.is-done { background: #ecfdf5; border-color: #a7f3d0; color: $ok; } } }
+.lab__cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 22px; align-items: start;
+  @media (max-width: 960px) { grid-template-columns: 1fr; } }
+.spec { border: 1px solid $line; border-radius: 10px; overflow: hidden; background: #fff;
+  .spec__row { display: grid; grid-template-columns: 92px 1fr; border-bottom: 1px solid $line; &:last-child { border-bottom: none; } }
+  .spec__k { background: $soft; padding: 10px 10px; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; font-weight: 700; color: $muted; border-right: 1px solid $line; }
+  .spec__v { padding: 10px 12px; font-size: 15px; p { font-size: 15px; margin: 0 0 .5em; &:last-child{margin:0} } ul, ol { margin: 0; padding-left: 1.1em; li { font-size: 15px; margin: 0 0 .2em; } } table { font-size: 14px; margin: 0; } }
+  .spec__list { list-style: none !important; padding: 0 !important; li { margin: 0 0 .25em; } }
+  .spec__examples { display: table !important; width: 100%; overflow: visible; th, td { padding: 4px 8px !important; font-size: 13px; min-width: 0 !important; } }
+}
+.lab__prereq { font-size: 13px; color: $muted; margin: 10px 2px; }
+
+.bench { border: 1px solid $line; border-radius: 10px; overflow: hidden; background: #fff;
+  .bench__toolbar { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: $soft; border-bottom: 1px solid $line; font-size: 13px;
+    .bench__lang { font-weight: 700; } .bench__runtime { color: $muted; margin-right: auto; &.is-ready { color: $ok; } &.is-loading { color: #f59e0b; } } }
+  .bench__editor { width: 100%; border: 0; padding: 12px 14px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.5; resize: vertical; background: #0f172a; color: #e2e8f0; tab-size: 2; outline: none; display: block; }
+  .bench__actions { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid $line; }
+  .bench__console { margin: 0; border-top: 1px solid $line; background: #111827; color: #d1d5db; padding: 10px 14px; font-size: 13px; max-height: 240px; overflow: auto; white-space: pre-wrap; &.is-error { color: #fca5a5; } }
+}
+.results { border-top: 1px solid $line; padding: 10px 12px;
+  .results__summary { font-weight: 700; margin-bottom: 6px; &.is-ok { color: $ok; } &.is-ko { color: $ko; } }
+  .results__table { display: table !important; width: 100%; font-size: 13px; margin: 0; overflow: visible; th, td { padding: 4px 6px !important; min-width: 0 !important; white-space: nowrap; } tr.is-ok td:last-child { color: $ok; } tr.is-ko td:last-child { color: $ko; } td.hidden-val { color: $muted; font-style: italic; } }
+}
+.hint { margin-top: 10px; background: $hint; border: 1px solid $hint-border; border-radius: 8px; padding: 10px 12px; font-size: 14px; p { font-size: 14px; margin: 0 0 .4em; &:last-child{margin:0} } .hint__k { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: #92400e; } }
+.solution { margin-top: 14px; summary { cursor: pointer; } pre { margin-top: 8px; } }
+.lab__nav { display: flex; justify-content: space-between; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn-sm { padding: .3em .7em; font-size: 12px; }
+
+// ── pannello AI ──
+.ai-panel { margin-top: 16px; border: 1px solid #ddd6fe; border-radius: 10px; background: #faf5ff; padding: 12px 14px;
+  .ai-panel__head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 8px; strong { font-size: 16px; } }
+  .ai-panel__row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 8px 0; font-size: 14px; label { display: inline-flex; gap: 6px; align-items: center; } select { padding: 3px 6px; border-radius: 6px; border: 1px solid $line; } }
+  .ai-panel__actions { margin-top: 10px; }
+  .ai-panel__note { font-size: 13px; color: #5b21b6; margin: 8px 0 0; }
+  .ai-preview { font-size: 13px; summary { cursor: pointer; color: #5b21b6; } pre { max-height: 260px; overflow: auto; font-size: 12px; white-space: pre-wrap; background: #fff; border: 1px solid #ddd6fe; border-radius: 6px; padding: 8px 10px; margin-top: 6px; } }
+}
+.ai-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; @media (max-width: 500px) { grid-template-columns: 1fr; } }
+.ai-mode { display: block; border: 1px solid #ddd6fe; border-radius: 8px; padding: 8px 10px; background: #fff; cursor: pointer; font-size: 13px;
+  input { margin-right: 6px; } .ai-mode__name { font-weight: 700; } .ai-mode__desc { display: block; color: $muted; margin-top: 2px; }
+  &:has(input:checked) { border-color: $p3; box-shadow: 0 0 0 2px rgba(124,58,237,.15); } }
+
+// ── esplorazioni ──
+.espl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.espl-card { display: block; border: 1px solid $line; border-radius: 10px; padding: 14px; background: linear-gradient(180deg, #fff, $soft); text-decoration: none !important; color: $ink; box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  .espl-card__title { font-weight: 700; } .espl-card__q { font-size: 13px; color: $muted; margin-top: 4px; } &:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); } }
+.espl-frame { width: 100%; height: 560px; border: 1px solid $line; border-radius: 10px; background: #fff; }
+
+// ── skill ──
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid $line; margin: 1rem 0; .tab { padding: 10px 16px; cursor: pointer; font-weight: 600; border-bottom: 3px solid transparent; &.is-active { border-color: $p3; color: $p3; } } }
+.tab-panel { display: none; &.is-active { display: block; } }
+.via { border: 1px solid $line; border-radius: 10px; padding: 12px 16px; margin: 12px 0; &.via--rapida { border-color: #a7f3d0; background: #ecfdf5; } .via__k { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: $muted; } }
+.steps { counter-reset: s; list-style: none; padding: 0; li { counter-increment: s; position: relative; padding-left: 38px; margin: 10px 0; &::before { content: counter(s); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 50%; background: $p3; color: #fff; font-weight: 700; text-align: center; line-height: 26px; font-size: 13px; } } }
+.avanzamento { border: 1px solid $line; border-radius: 10px; padding: 12px 14px; margin: 1rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; @media (max-width: 700px) { grid-template-columns: 1fr; }
+  .avanzamento__p { .avanzamento__k { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: $muted; } .bar { height: 8px; background: $line; border-radius: 999px; overflow: hidden; margin: 6px 0; span { display: block; height: 100%; width: 0; background: $p1; } } &.avanzamento__p--2 .bar span { background: $p2; } &.avanzamento__p--3 .bar span { background: $p3; } .avanzamento__n { font-size: 13px; color: $muted; } } }
+.filtri { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; select { padding: 4px 8px; border-radius: 6px; border: 1px solid $line; } }
