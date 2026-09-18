@@ -4,7 +4,7 @@ number: 1
 title: Partenza
 sezione: 1
 language: R
-idea: "Una macchina si istruisce in tre modi: dirglielo, mostrarle degli esempi, chiederglielo. In tutti e tre, a noi resta dire cosa vogliamo e controllare il risultato."
+idea: "Dalle istruzioni scritte a mano ai prompt: tre modi di far lavorare una macchina, e in tutti il controllo resta a noi."
 hours: 4
 concepts_new: ["software 1.0, 2.0 e 3.0", linguaggi di programmazione, variabili, tipi di dato, operatori aritmetici, operatori di confronto, valori logici]
 concepts_required: []
@@ -47,6 +47,8 @@ La risposta è **controllo e pensiero critico**. Una macchina si istruisce in tr
 ## I linguaggi di programmazione
 
 Quale linguaggio conviene imparare? Secondo l'indice PYPL, che misura quanto si cercano su Google i tutorial di ciascun linguaggio, a settembre 2026 **Python** vale da solo più di metà delle ricerche (52%) ed è in forte crescita dal 2025; **R** è intorno al 4%, in calo dopo il picco di inizio 2026. Nel corso li usiamo entrambi: R per imparare a scrivere le regole e a leggere i dati, Python per l'apprendimento automatico e i modelli di linguaggio.
+
+Attenzione a non confondere il **linguaggio** con l'**IDE** (*integrated development environment*). Il linguaggio è il motore: R, Python. L'IDE è il cruscotto, il programma in cui scriviamo ed eseguiamo il codice: RStudio per R; Colab, Jupyter, VS Code, PyCharm o Spyder per Python. Oggi si aggiunge un cruscotto nuovo, gli **agenti**: Cursor, Google Antigravity, Claude Code non si limitano a suggerire, leggono il progetto, scrivono il codice, lo eseguono e correggono gli errori. Il linguaggio resta il motore, e il controllo resta a noi.
 
 Ma il linguaggio di programmazione più usato dei prossimi anni sarà un altro: **l'inglese** (o l'italiano, se preferite). Con i modelli di linguaggio le istruzioni si danno in lingua naturale.
 

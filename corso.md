@@ -6,9 +6,7 @@ description: I dodici moduli del corso, in tre sezioni
 nav_order: 2
 ---
 
-# 📚 Il corso, modulo per modulo
-
-Ogni modulo ha un'idea sola. In aula si vede il nucleo; qui trovi le slide e la lezione per esteso.
+# 📚 Il corso
 
 {% assign moduli = site.moduli | sort: 'number' %}
 {% assign nomi = "Il codice|Come imparano le macchine|LLM e agenti" | split: "|" %}
