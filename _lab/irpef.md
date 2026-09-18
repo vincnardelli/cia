@@ -1,9 +1,9 @@
 ---
 layout: lab
 title: IRPEF 2025 vs 2026
-week: 2
+modulo: 2
 order: 6
-level: extra
+difficolta: facile
 language: R
 ai_mode: 'on'
 objective: Calcolare l'IRPEF lorda con gli scaglioni 2025 e con la proposta 2026, e la differenza tra le due.
@@ -11,14 +11,57 @@ inputs:
 - name: reddito
   type: numero
   desc: reddito complessivo annuo, euro
-output:
+risultato:
   name: differenza
   type: numero
   desc: IRPEF 2026 − IRPEF 2025, in euro, 2 decimali
+regole: |
+  Aliquote per scaglione (ogni fascia tassa **solo la parte di reddito che ci cade dentro**):
+
+  | scaglione | 2025 | 2026 (proposta) |
+  |---|---|---|
+  | fino a 15.000 € | 23% | 20% |
+  | da 15.001 a 28.000 € | 23% | 23% |
+  | da 28.001 a 50.000 € | 35% | 36% |
+  | da 50.001 a 75.000 € | 43% | 40% |
+  | da 75.001 a 120.000 € | 43% | 43% |
+  | oltre 120.000 € | 43% | 46% |
+
+  - Calcola `imposta_2025` e `imposta_2026`, poi `differenza <- imposta_2026 - imposta_2025` (negativa se il 2026 conviene).
+  - Arrotonda la differenza a due decimali.
 skeleton: |
   reddito <- 45000
 
-  # calcola imposta_2025 e imposta_2026: alla fine deve esistere la variabile differenza
+  # ...
+  if (reddito <= 15000) {
+    # ...
+  } else if (reddito <= 28000) {
+    # ...
+  } else if (reddito <= 50000) {
+    # ...
+  } else if (reddito <= 75000) {
+    # ...
+  } else if (reddito <= 120000) {
+    # ...
+  } else {
+    # ...
+  }
+  # ...
+  if (reddito <= 15000) {
+    # ...
+  } else if (reddito <= 28000) {
+    # ...
+  } else if (reddito <= 50000) {
+    # ...
+  } else if (reddito <= 75000) {
+    # ...
+  } else if (reddito <= 120000) {
+    # ...
+  } else {
+    # ...
+  }
+
+  print(differenza)
 tests:
 - inputs:
     reddito: 45000
@@ -82,7 +125,7 @@ solution: |
       (75000 - 50000) * 0.43 + (reddito - 75000) * 0.43
   } else {
     imposta_2025 <- 15000 * 0.23 + (28000 - 15000) * 0.23 + (50000 - 28000) * 0.35 +
-      (75000 - 50000) * 0.43 + (120000 - 75000) * 0.43 + (reddito - 120000) * 0.46
+      (75000 - 50000) * 0.43 + (120000 - 75000) * 0.43 + (reddito - 120000) * 0.43
   }
 
   aliquota_totale_2025 <- (imposta_2025 / reddito) * 100
@@ -112,16 +155,8 @@ solution: |
 solution_after: ''
 ---
 
-Aliquote per scaglione (ogni fascia tassa **solo la parte di reddito che ci cade dentro**):
+Un commercialista vuole mostrare ai clienti, con un numero, cosa cambierebbe per loro con la **riforma delle aliquote IRPEF** in discussione. Ti chiede un programma che, dato il reddito imponibile annuo, calcoli l'imposta lorda con gli scaglioni del 2025 e con quelli proposti per il 2026, e restituisca la differenza (negativa se con il 2026 si paga meno).
 
-| scaglione | 2025 | 2026 (proposta) |
-|---|---|---|
-| fino a 15.000 € | 23% | 20% |
-| da 15.001 a 28.000 € | 23% | 23% |
-| da 28.001 a 50.000 € | 35% | 36% |
-| da 50.001 a 75.000 € | 43% | 40% |
-| da 75.001 a 120.000 € | 43% | 43% |
-| oltre 120.000 € | 43% | 46% |
+L'IRPEF è **progressiva a scaglioni**: ogni aliquota si applica solo alla parte di reddito che cade in quella fascia, non all'intero reddito. Nel 2025 le fasce sono: fino a 15.000 € al 23%, da 15.001 a 28.000 al 23%, da 28.001 a 50.000 al 35%, oltre 50.000 al 43%. Nella proposta 2026: fino a 15.000 al 20%, da 15.001 a 28.000 al 23%, da 28.001 a 50.000 al 36%, da 50.001 a 75.000 al 40%, da 75.001 a 120.000 al 43%, oltre 120.000 al 46%.
 
-- Calcola `imposta_2025` e `imposta_2026`, poi `differenza <- imposta_2026 - imposta_2025` (negativa se il 2026 conviene).
-- Arrotonda la differenza a due decimali.
+Il commercialista userà il numero per decidere a chi mandare la newsletter, quindi la differenza deve essere esatta al centesimo, e deve tornare anche per chi guadagna esattamente 15.000, 28.000 o 50.000 euro.

@@ -1,9 +1,9 @@
 ---
 layout: lab
 title: Penali sulle fatture
-week: 2
+modulo: 2
 order: 7
-level: extra
+difficolta: facile
 language: R
 ai_mode: 'on'
 objective: Calcolare il totale di una fattura pagata in ritardo, applicando le penali previste.
@@ -14,15 +14,33 @@ inputs:
 - name: giorni_ritardo
   type: numero
   desc: giorni di ritardo (intero, 0 se puntuale)
-output:
+risultato:
   name: totale
   type: numero
   desc: importo più penale, 2 decimali
+regole: |
+  - entro 10 giorni di ritardo: nessuna penale;
+  - da 11 a 30 giorni: 5% dell'importo;
+  - da 31 a 60 giorni: 10%;
+  - da 61 a 90 giorni: 20%;
+  - oltre 90 giorni: 20% **più il 2% per ogni giorno oltre il 90°**.
 skeleton: |
   importo <- 1000
   giorni_ritardo <- 20
 
-  # alla fine deve esistere la variabile totale
+  if(giorni_ritardo <= 10){
+    # ...
+  }else if(giorni_ritardo <= 30){
+    # ...
+  }else if(giorni_ritardo <= 60){
+    # ...
+  }else if(giorni_ritardo <= 90){
+    # ...
+  }else{
+    # ...
+  }
+
+  print(totale)
 tests:
 - inputs:
     importo: 1000
@@ -104,8 +122,6 @@ solution: |
 solution_after: ''
 ---
 
-- entro 10 giorni di ritardo: nessuna penale;
-- da 11 a 30 giorni: 5% dell'importo;
-- da 31 a 60 giorni: 10%;
-- da 61 a 90 giorni: 20%;
-- oltre 90 giorni: 20% **più il 2% per ogni giorno oltre il 90°**.
+Nell'ufficio amministrativo di una piccola azienda ti chiedono di automatizzare il calcolo delle **penali per ritardato pagamento** che vanno aggiunte alle fatture dei clienti in ritardo. Le condizioni sono scritte nel contratto standard: entro 10 giorni di ritardo non si applica nulla; da 11 a 30 giorni si aggiunge il 5% dell'importo; da 31 a 60 giorni il 10%; da 61 a 90 giorni il 20%; oltre i 90 giorni si applica il 20% **più un 2% dell'importo per ogni giorno oltre il novantesimo**.
+
+Il programma riceve l'importo della fattura e i giorni di ritardo e restituisce il totale da pagare (importo più penale), con due decimali. I clienti litigano sempre sui giorni di confine, il decimo, il trentesimo, il novantesimo: il tuo codice deve applicare esattamente ciò che dice il contratto.

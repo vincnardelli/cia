@@ -1,7 +1,8 @@
 ---
 title: La soglia dell'albero
 slug: soglia-albero
-week: 6
+published: false
+modulo: 6
 question: Come fa un albero a scegliere dove tagliare?
 ready: true
 ---

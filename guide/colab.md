@@ -4,11 +4,12 @@ title: Google Colab in cinque minuti
 permalink: /guide/colab
 parent: Guide
 nav_order: 4
+published: false
 ---
 
 # 🐍 Google Colab in cinque minuti
 
-Dalla settimana 7 il corso passa a Python, e Python lo usiamo su **Google Colab**: un notebook nel browser, nessuna installazione, basta un account Google.
+Dalla modulo 7 il corso passa a Python, e Python lo usiamo su **Google Colab**: un notebook nel browser, nessuna installazione, basta un account Google.
 
 1. Vai su [colab.research.google.com](https://colab.research.google.com) e accedi con l'account Google.
 2. **File → Nuovo notebook**. Si apre una pagina con una cella vuota.

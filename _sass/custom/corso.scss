@@ -1,4 +1,4 @@
-// ───────────────────────── Corso 2026/27: pilastri, settimane, lab, pannello AI ─────────────────────────
+// ───────────────────────── Corso 2026/27: sezioni, moduli, lab, pannello AI ─────────────────────────
 
 $p1: #2563eb;   // Il codice
 $p2: #059669;   // Come imparano le macchine
@@ -26,20 +26,26 @@ $soft: #f8fafc;
   &.tag--ai { background: #fff7ed; border-color: #fed7aa; color: #9a3412; }
 }
 
-// ── pilastri in home ──
-.pilastri { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 1.5rem 0; }
-@media (max-width: 800px) { .pilastri { grid-template-columns: 1fr; } }
-.pilastro {
+// ── sezioni in home ──
+.sezioni { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 1.5rem 0; }
+@media (max-width: 800px) { .sezioni { grid-template-columns: 1fr; } }
+.sezione {
   display: block; border: 1px solid $line; border-top: 5px solid $line; border-radius: 10px; padding: 16px 18px; text-decoration: none !important; color: $ink; background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,.05);
   &:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); }
-  .pilastro__n { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: $muted; }
-  .pilastro__t { font-size: 20px; font-weight: 700; margin: 4px 0; }
-  .pilastro__d { font-size: 14px; color: $muted; }
-  .pilastro__w { font-size: 13px; margin-top: 10px; }
-  &.pilastro--1 { border-top-color: $p1; .pilastro__n{color:$p1} }
-  &.pilastro--2 { border-top-color: $p2; .pilastro__n{color:$p2} }
-  &.pilastro--3 { border-top-color: $p3; .pilastro__n{color:$p3} }
+  .sezione__n { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: $muted; }
+  .sezione__t { font-size: 20px; font-weight: 700; margin: 4px 0; }
+  .sezione__d { font-size: 14px; color: $muted; }
+  .sezione__w { font-size: 13px; margin-top: 10px; }
+  &.sezione--1 { border-top-color: $p1; .sezione__n{color:$p1} }
+  &.sezione--2 { border-top-color: $p2; .sezione__n{color:$p2} }
+  &.sezione--3 { border-top-color: $p3; .sezione__n{color:$p3} }
+}
+.iscrizione {
+  border: 2px solid $p1; border-radius: 10px; padding: 14px 18px; background: #eff6ff; margin: 1rem 0 1.25rem;
+  display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  .iscrizione__k { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: $p1; font-weight: 700; }
+  .iscrizione__t { font-weight: 600; }
 }
 .dove-siamo {
   border: 1px solid $line; border-radius: 10px; padding: 14px 18px; background: $soft; margin: 1rem 0;
@@ -49,24 +55,24 @@ $soft: #f8fafc;
 }
 .patto { border-left: 4px solid $p3; padding: 6px 14px; background: #faf5ff; border-radius: 6px; margin: 1rem 0; p { margin: .3em 0; font-size: 16px; } }
 
-// ── elenco settimane ──
-.settimane-list { list-style: none; padding: 0; margin: 0; }
-.settimana-row {
+// ── elenco moduli ──
+.moduli-list { list-style: none; padding: 0; margin: 0; }
+.modulo-row {
   display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; align-items: center; padding: 12px 8px; border-bottom: 1px solid $line; text-decoration: none !important; color: $ink;
   &:hover { background: $soft; }
-  .settimana-row__n { font-size: 26px; font-weight: 800; color: $line; text-align: center; }
-  &.settimana-row--p1 .settimana-row__n { color: $p1; } &.settimana-row--p2 .settimana-row__n { color: $p2; } &.settimana-row--p3 .settimana-row__n { color: $p3; }
-  .settimana-row__t { font-weight: 700; font-size: 17px; }
-  .settimana-row__i { color: $muted; font-size: 14px; }
+  .modulo-row__n { font-size: 26px; font-weight: 800; color: $line; text-align: center; }
+  &.modulo-row--p1 .modulo-row__n { color: $p1; } &.modulo-row--p2 .modulo-row__n { color: $p2; } &.modulo-row--p3 .modulo-row__n { color: $p3; }
+  .modulo-row__t { font-weight: 700; font-size: 17px; }
+  .modulo-row__i { color: $muted; font-size: 14px; }
 }
-.pillar-h { margin-top: 2rem; padding-bottom: 4px; border-bottom: 3px solid $line; &.pillar-h--1{border-color:$p1} &.pillar-h--2{border-color:$p2} &.pillar-h--3{border-color:$p3} }
+.sezione-h { margin-top: 2rem; padding-bottom: 4px; border-bottom: 3px solid $line; &.sezione-h--1{border-color:$p1} &.sezione-h--2{border-color:$p2} &.sezione-h--3{border-color:$p3} }
 
-// ── pagina settimana ──
-.settimana__head { margin-bottom: 1rem; }
-.settimana__kicker { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
-.settimana__title { margin: .2em 0 .1em; .settimana__num { display:inline-block; min-width: 44px; padding: 0 8px; border-radius: 8px; color:#fff; background:$line; text-align:center; margin-right:6px; } }
-.settimana--p1 .settimana__num { background: $p1; } .settimana--p2 .settimana__num { background: $p2; } .settimana--p3 .settimana__num { background: $p3; }
-.settimana__idea { font-size: 20px; color: $muted; margin: 0 0 1rem; font-style: italic; }
+// ── pagina modulo ──
+.modulo__head { margin-bottom: 1rem; }
+.modulo__kicker { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.modulo__title { margin: .2em 0 .1em; .modulo__num { display:inline-block; min-width: 44px; padding: 0 8px; border-radius: 8px; color:#fff; background:$line; text-align:center; margin-right:6px; } }
+.modulo--p1 .modulo__num { background: $p1; } .modulo--p2 .modulo__num { background: $p2; } .modulo--p3 .modulo__num { background: $p3; }
+.modulo__idea { font-size: 20px; color: $muted; margin: 0 0 1rem; font-style: italic; }
 
 .concetti {
   display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1rem 0 1.5rem;
@@ -80,15 +86,14 @@ $soft: #f8fafc;
   .concetti__list--new li { background: #ecfdf5; border-color: #a7f3d0; }
   .concetti__none { color: $muted; font-size: 14px; margin: 0; }
 }
-.settimana__tabs { display: flex; gap: 4px; border-bottom: 1px solid $line; margin: 0 0 1.2rem; position: sticky; top: 0; background: #fff; z-index: 2;
+.modulo__tabs { display: flex; gap: 4px; border-bottom: 1px solid $line; margin: 0 0 1.2rem; position: sticky; top: 0; background: #fff; z-index: 2;
   a { padding: 10px 14px; text-decoration: none !important; color: $ink; font-weight: 600; border-bottom: 3px solid transparent; &:hover { border-color: $line; } .count { background: $soft; border: 1px solid $line; border-radius: 999px; padding: 1px 7px; font-size: 12px; margin-left: 4px; } }
 }
-.settimana__lezione blockquote { border-left: 4px solid $p1; background: $soft; padding: 8px 14px; border-radius: 6px; margin: 1rem 0; font-size: 16px; p { font-size: 16px; margin: .3em 0; } }
-.settimana__lezione blockquote strong:first-child { color: $p1; }
-.settimana__nav { display: flex; justify-content: space-between; gap: 8px; margin: 2rem 0 1rem; .settimana__next { margin-left: auto; } }
+.modulo__lezione blockquote { border-left: 4px solid $p1; background: $soft; padding: 8px 14px; border-radius: 6px; margin: 1rem 0; font-size: 16px; p { font-size: 16px; margin: .3em 0; } }
+.modulo__lezione blockquote strong:first-child { color: $p1; }
+.modulo__nav { display: flex; justify-content: space-between; gap: 8px; margin: 2rem 0 1rem; .modulo__next { margin-left: auto; } }
 
 // ── schede lab ──
-.lab-level { font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: $muted; margin: 1.2rem 0 .5rem; }
 .lab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .lab-card {
   display: flex; justify-content: space-between; gap: 10px; border: 1px solid $line; border-left: 5px solid $line; border-radius: 10px; padding: 12px 14px; background: #fff; text-decoration: none !important; color: $ink;
@@ -98,15 +103,9 @@ $soft: #f8fafc;
   .lab-card__title { font-weight: 700; font-size: 16px; }
   .lab-card__obj { font-size: 13px; color: $muted; margin: 3px 0 8px; }
   .lab-card__tags { display: flex; gap: 5px; flex-wrap: wrap; .tag { font-size: 11px; padding: 3px 7px; } }
-  .lab-card__status { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 70px; font-size: 11px; color: $muted; text-align: center;
-    .status-dot { width: 12px; height: 12px; border-radius: 50%; background: $line; margin-bottom: 4px; }
-    &.is-progress .status-dot { background: #f59e0b; } &.is-done .status-dot { background: $ok; } &.is-done .status-text { color: $ok; font-weight: 700; }
-  }
 }
 
 // ── pagina lab ──
-.main-content-wrap:has(.lab) { max-width: 1240px; }   // la pagina lab usa due colonne
-.main-content-wrap:has(.settimana), .main-content-wrap:has(.lab-grid) { max-width: 1000px; }
 .lab__kicker { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
 .lab__title { margin: .2em 0 .8em; .lab__status { font-size: 14px; vertical-align: middle; margin-left: 8px; padding: 3px 10px; border-radius: 999px; background: $soft; border: 1px solid $line; color: $muted; font-weight: 600;
   &.is-done { background: #ecfdf5; border-color: #a7f3d0; color: $ok; } } }
@@ -137,18 +136,6 @@ $soft: #f8fafc;
 .lab__nav { display: flex; justify-content: space-between; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
 .btn-sm { padding: .3em .7em; font-size: 12px; }
 
-// ── pannello AI ──
-.ai-panel { margin-top: 16px; border: 1px solid #ddd6fe; border-radius: 10px; background: #faf5ff; padding: 12px 14px;
-  .ai-panel__head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 8px; strong { font-size: 16px; } }
-  .ai-panel__row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 8px 0; font-size: 14px; label { display: inline-flex; gap: 6px; align-items: center; } select { padding: 3px 6px; border-radius: 6px; border: 1px solid $line; } }
-  .ai-panel__actions { margin-top: 10px; }
-  .ai-panel__note { font-size: 13px; color: #5b21b6; margin: 8px 0 0; }
-  .ai-preview { font-size: 13px; summary { cursor: pointer; color: #5b21b6; } pre { max-height: 260px; overflow: auto; font-size: 12px; white-space: pre-wrap; background: #fff; border: 1px solid #ddd6fe; border-radius: 6px; padding: 8px 10px; margin-top: 6px; } }
-}
-.ai-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; @media (max-width: 500px) { grid-template-columns: 1fr; } }
-.ai-mode { display: block; border: 1px solid #ddd6fe; border-radius: 8px; padding: 8px 10px; background: #fff; cursor: pointer; font-size: 13px;
-  input { margin-right: 6px; } .ai-mode__name { font-weight: 700; } .ai-mode__desc { display: block; color: $muted; margin-top: 2px; }
-  &:has(input:checked) { border-color: $p3; box-shadow: 0 0 0 2px rgba(124,58,237,.15); } }
 
 // ── esplorazioni ──
 .espl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
@@ -161,6 +148,4 @@ $soft: #f8fafc;
 .tab-panel { display: none; &.is-active { display: block; } }
 .via { border: 1px solid $line; border-radius: 10px; padding: 12px 16px; margin: 12px 0; &.via--rapida { border-color: #a7f3d0; background: #ecfdf5; } .via__k { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: $muted; } }
 .steps { counter-reset: s; list-style: none; padding: 0; li { counter-increment: s; position: relative; padding-left: 38px; margin: 10px 0; &::before { content: counter(s); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 50%; background: $p3; color: #fff; font-weight: 700; text-align: center; line-height: 26px; font-size: 13px; } } }
-.avanzamento { border: 1px solid $line; border-radius: 10px; padding: 12px 14px; margin: 1rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; @media (max-width: 700px) { grid-template-columns: 1fr; }
-  .avanzamento__p { .avanzamento__k { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: $muted; } .bar { height: 8px; background: $line; border-radius: 999px; overflow: hidden; margin: 6px 0; span { display: block; height: 100%; width: 0; background: $p1; } } &.avanzamento__p--2 .bar span { background: $p2; } &.avanzamento__p--3 .bar span { background: $p3; } .avanzamento__n { font-size: 13px; color: $muted; } } }
 .filtri { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; select { padding: 4px 8px; border-radius: 6px; border: 1px solid $line; } }

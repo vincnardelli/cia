@@ -1,11 +1,11 @@
 ---
 layout: lab
 title: Pricing dei voli
-week: 2
-order: 3
-level: base
+modulo: 2
+order: 9
+difficolta: difficile
 language: R
-ai_mode: 'off'
+ai_mode: 'on'
 objective: Calcolare il prezzo di un biglietto aereo in base a classe, giorni di anticipo e riempimento dell'aereo.
 inputs:
 - name: seat_type
@@ -17,16 +17,23 @@ inputs:
 - name: load_factor
   type: numero
   desc: riempimento tra 0 e 1
-output:
+risultato:
   name: prezzo_finale
   type: numero
   desc: prezzo in euro, 2 decimali
+regole: |
+  - **Tariffa base**: Economy 100 €, Premium 180 €, Business 350 €.
+  - **Anticipo** (`days_before`): oltre 60 giorni −20%; da 31 a 60 −10%; da 15 a 30 0%; da 7 a 14 +20%; da 3 a 6 +40%; da 0 a 2 +70%.
+  - **Riempimento** (`load_factor`): sotto 0.50 −10%; da 0.50 a 0.70 0%; oltre 0.70 fino a 0.85 +15%; oltre 0.85 +35%.
+  - **Fee fissa**: 25 € aggiunti alla fine.
+  - **Stress di mercato**: se `days_before` è 2 o meno **e** `load_factor` supera 0.85, ulteriore +10% (prima della fee).
+  - I moltiplicatori si applicano in cascata: `base × anticipo × riempimento × stress + 25`.
 skeleton: |
-  seat_type   <- "Economy"
+  seat_type <- "Economy"
   days_before <- 5
   load_factor <- 0.82
 
-  # alla fine deve esistere la variabile prezzo_finale
+  print(prezzo_finale)
 tests:
 - inputs:
     seat_type: Economy
@@ -175,9 +182,8 @@ solution: |-
 solution_after: ''
 ---
 
-- **Tariffa base**: Economy 100 €, Premium 180 €, Business 350 €.
-- **Anticipo** (`days_before`): oltre 60 giorni −20%; da 31 a 60 −10%; da 15 a 30 0%; da 7 a 14 +20%; da 3 a 6 +40%; da 0 a 2 +70%.
-- **Riempimento** (`load_factor`): sotto 0.50 −10%; da 0.50 a 0.70 0%; oltre 0.70 fino a 0.85 +15%; oltre 0.85 +35%.
-- **Fee fissa**: 25 € aggiunti alla fine.
-- **Stress di mercato**: se `days_before` è 2 o meno **e** `load_factor` supera 0.85, ulteriore +10% (prima della fee).
-- I moltiplicatori si applicano in cascata: `base × anticipo × riempimento × stress + 25`.
+Una compagnia aerea low cost ti ha assunto come stagista nel team che decide i prezzi dei biglietti. Il prezzo non è mai fisso: parte da una **tariffa base** che dipende dalla classe (Economy 100 €, Premium 180 €, Business 350 €) e viene poi corretta da due fattori.
+
+Il primo è l'**anticipo** con cui si prenota: chi compra con più di 60 giorni di anticipo ha uno sconto del 20%, tra 31 e 60 giorni il 10%, tra 15 e 30 giorni paga il prezzo pieno, tra 7 e 14 giorni paga il 20% in più, tra 3 e 6 giorni il 40% in più, e chi compra negli ultimi due giorni il 70% in più. Il secondo è il **riempimento** dell'aereo (`load_factor`, da 0 a 1): sotto il 50% dei posti venduti sconto del 10%, tra 50% e 70% nessuna correzione, oltre il 70% fino all'85% +15%, oltre l'85% +35%.
+
+A tutto questo si aggiunge una **fee fissa** di 25 € alla fine, e c'è una regola di "stress di mercato": se mancano 2 giorni o meno **e** l'aereo è pieno oltre l'85%, si applica un ulteriore +10% prima della fee. I moltiplicatori si applicano in cascata: base × anticipo × riempimento × stress, poi + 25. Scrivi il programma che calcola il prezzo finale.

@@ -1,0 +1,96 @@
+// ── Barra di navigazione in alto e contenuto a tutta larghezza ──
+// (sostituisce la sidebar di Just the Docs; vedi _layouts/default.html)
+
+$topbar-h: 60px;
+$page-w: 1180px;
+$page-w-wide: 1360px;
+$bp-nav: 1100px;
+
+body.has-topbar { padding-bottom: 0; overflow-y: scroll; }
+
+// il tema sposta .main a destra della sidebar: annulliamo
+.has-topbar .main { position: static; max-width: none !important; margin-left: 0 !important; }
+.has-topbar .main-content-wrap { max-width: $page-w; margin: 0 auto; padding: 28px 32px 40px; }
+.has-topbar .main-content-wrap:has(.lab) { max-width: $page-w-wide; }
+.has-topbar .main-content-wrap:has(.lab-grid),
+.has-topbar .main-content-wrap:has(.modulo),
+.has-topbar .main-content-wrap:has(.espl-grid) { max-width: $page-w; }
+@media (max-width: 700px) { .has-topbar .main-content-wrap { padding: 18px 16px 32px; } }
+
+// ── barra ──
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: #fff; border-bottom: 1px solid $line;
+  display: block !important; height: auto !important;
+}
+.topbar__inner {
+  max-width: $page-w-wide; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; gap: 8px; min-height: $topbar-h;
+  @media (max-width: 700px) { padding: 0 12px; }
+}
+.topbar__brand {
+  font-weight: 800; font-size: 17px; letter-spacing: -.01em; color: $ink !important;
+  text-decoration: none !important; white-space: nowrap; margin-right: 20px;
+  &:hover { color: $p1 !important; background: none; }
+}
+.topbar__toggle { display: none; margin-left: auto; padding: 8px; .icon { width: 26px; height: 26px; color: $ink; } }
+
+.topbar__nav { flex: 1 1 auto; min-width: 0; overflow: hidden; }
+.topbar__list { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 2px; }
+.topbar__item { position: relative; margin: 0; padding: 0; }
+.topbar__link {
+  display: block; padding: 0 10px; line-height: $topbar-h; font-size: 14.5px; font-weight: 600; color: #374151 !important;
+  text-decoration: none !important; border-bottom: 3px solid transparent; white-space: nowrap;
+  &:hover { color: $p1 !important; background: none; }
+}
+.topbar__item.active > .topbar__link { color: $p1 !important; border-bottom-color: $p1; }
+
+// tab in evidenza (questionario di iscrizione)
+.topbar__item--cta { margin-right: 6px; }
+.topbar__item--cta > .topbar__link {
+  line-height: 34px; margin: 13px 0; padding: 0 14px; border-radius: 8px; border-bottom: 0;
+  background: $p1; color: #fff !important;
+  &:hover { background: darken($p1, 8%); color: #fff !important; }
+}
+
+// sottomenu (Guide)
+.topbar__sub {
+  list-style: none; margin: 0; padding: 6px 0; position: absolute; left: 0; top: 100%; min-width: 260px;
+  background: #fff; border: 1px solid $line; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  display: none; z-index: 30;
+  li { margin: 0; padding: 0; }
+}
+.topbar__sublink { display: block; padding: 8px 16px; font-size: 14px; color: $ink !important; text-decoration: none !important;
+  &:hover, &.active { background: $soft; color: $p1 !important; } }
+.topbar__item.has-children:hover .topbar__sub, .topbar__item.has-children:focus-within .topbar__sub { display: block; }
+.topbar__item.has-children > .topbar__link::after { content: " ▾"; font-size: 11px; opacity: .6; }
+
+// ricerca del tema dentro la barra
+.topbar__search { flex: 0 0 220px !important; width: 220px !important; height: 40px !important; padding: 0 !important; margin-left: auto;
+  .search-input-wrap { height: 40px; border-radius: 8px; box-shadow: none; border: 1px solid $line; background: $soft; }
+  .search-input { height: 40px; padding-left: 40px; font-size: 14px; background: transparent; }
+  .search-label { height: 40px; padding-left: 12px; }
+  .search-results { top: 44px; left: auto; right: 0; width: 520px; max-width: calc(100vw - 24px); max-height: 70vh; border-radius: 10px; border: 1px solid $line; }
+}
+.search-active .topbar__search { flex-basis: 320px !important; width: 320px !important; }
+
+// ── mobile: hamburger, lista verticale ──
+@media (max-width: $bp-nav) {
+  .topbar__inner { flex-wrap: wrap; }
+  .topbar__toggle { display: flex; }
+  .topbar__nav { display: none; flex-basis: 100%; order: 3; border-top: 1px solid $line; padding: 6px 0 10px; }
+  .topbar__nav.nav-open { display: block; }
+  .topbar__list { flex-direction: column; align-items: stretch; }
+  .topbar__link { line-height: 42px; border-bottom: 0; border-left: 3px solid transparent; }
+  .topbar__item.active > .topbar__link { border-left-color: $p1; border-bottom: 0; }
+  .topbar__item--cta > .topbar__link { margin: 6px 0; line-height: 38px; display: inline-block; border-left: 0; }
+  .topbar__sub { position: static; display: block; border: 0; box-shadow: none; padding: 0 0 4px 14px; min-width: 0; }
+  .topbar__item.has-children > .topbar__link::after { content: ""; }
+  .topbar__search { order: 2; width: 100% !important; margin: 0 0 8px; flex-basis: 100% !important; .search-results { width: 100%; } }
+  .search-active .topbar__search { width: 100% !important; flex-basis: 100% !important; }
+}
+
+// ── piè di pagina ──
+.pagefoot { border-top: 1px solid $line; margin-top: 24px; color: $muted; font-size: 13px; }
+.pagefoot__inner { max-width: $page-w; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  a { color: $muted; margin-left: 12px; } }

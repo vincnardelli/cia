@@ -2,125 +2,139 @@
 layout: default
 ---
 {% assign slug = page.url | split: '/' | last %}
-{% assign week = site.settimane | where: 'number', page.week | first %}
+{% assign modulo = site.moduli | where: 'number', page.modulo | first %}
 {% assign visible_tests = page.tests | where: 'visible', true %}
-{% assign settimane = site.settimane | sort: 'number' %}
+{% assign moduli = site.moduli | sort: 'number' %}
+{% assign facile = false %}{% if page.difficolta == 'facile' %}{% assign facile = true %}{% endif %}
 
-<div class="lab lab--p{{ week.pillar }}" data-lab="{{ slug }}" data-language="{{ page.language }}" data-tolerance="{{ page.tolerance | default: 0.01 }}"
-     data-output="{{ page.output.name }}" data-level="{{ page.level }}" data-solution-after="{{ page.solution_after }}"
+<div class="lab lab--p{{ modulo.sezione }}" data-lab="{{ slug }}" data-language="{{ page.language }}" data-tolerance="{{ page.tolerance | default: 0.01 }}"
+     data-output="{{ page.risultato.name }}" data-difficolta="{{ page.difficolta }}" data-solution-after="{{ page.solution_after }}"
      {% if page.data_url %}data-data-url="{{ site.baseurl }}/{{ page.data_url }}" data-data-var="{{ page.data_var | default: 'data' }}"{% endif %}
      {% if page.packages %}data-packages="{{ page.packages | join: ',' }}"{% endif %}
      {% if page.function %}data-function="{{ page.function }}"{% endif %}>
 
-  <div class="lab__head">
-    <div class="lab__kicker">
-      {% if week %}<a class="tag tag--pillar tag--p{{ week.pillar }}" href="{{ site.baseurl }}{{ week.url }}">Settimana {{ week.number }} · {{ week.title }}</a>{% endif %}
-      <span class="tag tag--level">{{ page.level }}</span>
-      <span class="tag tag--lang">{{ page.language }}</span>
-      <span class="tag tag--ai">AI-{{ page.ai_mode }}</span>
+  <!-- ───────── testata compatta ───────── -->
+  <header class="lab__head">
+    <div class="lab__head-left">
+      <div class="lab__kicker">
+        {% if modulo %}<a class="tag tag--sezione tag--p{{ modulo.sezione }}" href="{{ site.baseurl }}{{ modulo.url }}">Modulo {{ modulo.number }} · {{ modulo.title }}</a>{% endif %}
+        <span class="tag tag--diff tag--{{ page.difficolta }}">{{ page.difficolta }}</span>
+        <span class="tag tag--lang">{{ page.language }}</span>
+      </div>
+      <h1 class="lab__title">{{ page.title }} <span class="lab__status" data-lab-status hidden></span></h1>
     </div>
-    <h1 class="lab__title">{{ page.title }} <span class="lab__status" data-lab-status></span></h1>
-  </div>
+    <div class="lab__head-right">
+      <nav class="lab__nav" aria-label="Altri lab">
+        {% if modulo %}<a class="btn btn-outline" href="{{ site.baseurl }}{{ modulo.url }}#lab">← Modulo {{ modulo.number }}</a>{% endif %}
+        {% assign next = site.lab | where: 'modulo', page.modulo | sort: 'order' %}
+        {% assign take = false %}{% for l in next %}{% if take %}<a class="btn btn-outline" href="{{ site.baseurl }}{{ l.url }}" title="{{ l.title }}">Lab successivo →</a>{% assign take = false %}{% break %}{% endif %}{% if l.url == page.url %}{% assign take = true %}{% endif %}{% endfor %}
+      </nav>
+      <button class="btn-ai" type="button" data-ai-toggle aria-controls="ai-drawer" aria-expanded="false">✨ Lavora con l'AI</button>
+    </div>
+  </header>
 
   <div class="lab__cols">
-    <!-- ───────── colonna sinistra: specifica ───────── -->
+    <!-- ───────── colonna sinistra: contesto e specifica (scorre nel suo contenitore) ───────── -->
     <div class="lab__spec">
+      <div class="contesto">{{ content }}</div>
+
       <div class="spec">
-        <div class="spec__row"><div class="spec__k">Obiettivo</div><div class="spec__v">{{ page.objective }}</div></div>
         <div class="spec__row"><div class="spec__k">Input</div><div class="spec__v">
           <ul class="spec__list">{% for i in page.inputs %}<li><code>{{ i.name }}</code> <em>{{ i.type }}</em>{% if i.desc %} — {{ i.desc }}{% endif %}</li>{% endfor %}</ul>
         </div></div>
         <div class="spec__row"><div class="spec__k">Output</div><div class="spec__v">
-          <code>{{ page.output.name }}</code> <em>{{ page.output.type }}</em>{% if page.output.desc %} — {{ page.output.desc }}{% endif %}
+          <code>{{ page.risultato.name }}</code> <em>{{ page.risultato.type }}</em>{% if page.risultato.desc %} — {{ page.risultato.desc }}{% endif %}
           {% if page.function %}<div class="muted">da scrivere come funzione <code>{{ page.function }}</code></div>{% endif %}
         </div></div>
-        <div class="spec__row"><div class="spec__k">Regole</div><div class="spec__v spec__rules">{{ content }}</div></div>
+        {% if facile %}
+        <div class="spec__row"><div class="spec__k">Regole</div><div class="spec__v spec__rules">{{ page.regole | markdownify }}</div></div>
         {% if visible_tests.size > 0 %}
         <div class="spec__row"><div class="spec__k">Esempi</div><div class="spec__v">
           <table class="spec__examples">
-            <thead><tr>{% for i in page.inputs %}<th>{{ i.name }}</th>{% endfor %}<th>{{ page.output.name }}</th></tr></thead>
+            <thead><tr>{% for i in page.inputs %}<th>{{ i.name }}</th>{% endfor %}<th>{{ page.risultato.name }}</th></tr></thead>
             <tbody>
             {% for t in visible_tests %}<tr>{% for i in page.inputs %}<td>{{ t.inputs[i.name] }}</td>{% endfor %}<td><strong>{{ t.expected }}</strong></td></tr>{% endfor %}
             </tbody>
           </table>
         </div></div>
         {% endif %}
+        {% else %}
+        <div class="spec__row"><div class="spec__k">Nota</div><div class="spec__v muted">Lab difficile: le regole sono nel testo, gli esempi non ci sono. Scrivi tu la specifica prima del codice.</div></div>
+        {% endif %}
       </div>
 
-      {% if week and week.concepts_required.size > 0 %}
-      <div class="lab__prereq">Ti serve: {% for c in week.concepts_required %}{% assign found = false %}{% for w in settimane %}{% if w.concepts_new contains c and found == false %}<a href="{{ site.baseurl }}{{ w.url }}">{{ c }}</a>{% assign found = true %}{% endif %}{% endfor %}{% unless found %}{{ c }}{% endunless %}{% unless forloop.last %} · {% endunless %}{% endfor %}</div>
+      {% if modulo and modulo.concepts_required.size > 0 %}
+      <div class="lab__prereq">Ti serve: {% for c in modulo.concepts_required %}{% assign found = false %}{% for w in moduli %}{% if w.concepts_new contains c and found == false %}<a href="{{ site.baseurl }}{{ w.url }}">{{ c }}</a>{% assign found = true %}{% endif %}{% endfor %}{% unless found %}{{ c }}{% endunless %}{% unless forloop.last %} · {% endunless %}{% endfor %}</div>
       {% endif %}
-
-      <!-- ───────── pannello AI ───────── -->
-      <div class="ai-panel" data-ai-context="lab" data-title="{{ page.title }}" data-week="{{ page.week }}">
-        <div class="ai-panel__head">
-          <strong>Lavora con l'assistente</strong>
-          <span class="muted">scegli come vuoi essere aiutato</span>
-        </div>
-        <div class="ai-modes">
-          <label class="ai-mode"><input type="radio" name="ai-mode" value="tutor" checked>
-            <span class="ai-mode__name">Tutor</span><span class="ai-mode__desc">Ho scritto una bozza: aiutami a trovare cosa non va, una cosa per volta.</span></label>
-          <label class="ai-mode"><input type="radio" name="ai-mode" value="assistito">
-            <span class="ai-mode__name">Sviluppo assistito</span><span class="ai-mode__desc">Partiamo dall'analisi: casi limite, domande, poi la struttura.</span></label>
-          {% if page.week >= 7 %}<label class="ai-mode"><input type="radio" name="ai-mode" value="traduci">
-            <span class="ai-mode__name">Traduci in Python</span><span class="ai-mode__desc">Stesso codice, altro linguaggio, stessi test.</span></label>{% endif %}
-        </div>
-        <div class="ai-panel__row">
-          <label>Assistente <select data-ai-provider><option value="gpt">ChatGPT</option><option value="claude">Claude</option><option value="gemini">Gemini</option><option value="altro">altro</option></select></label>
-          <label><input type="checkbox" data-ai-skill> ho installato la skill <a href="{{ site.baseurl }}/skill/" class="muted">(come?)</a></label>
-        </div>
-        <details class="ai-preview"><summary>Anteprima del prompt</summary><pre data-ai-preview></pre></details>
-        <div class="ai-panel__row ai-panel__actions">
-          <button class="btn btn-primary" data-ai-open>Apri nell'assistente</button>
-          <button class="btn btn-outline" data-ai-copy>Copia il prompt</button>
-        </div>
-        <p class="ai-panel__note">Quando torni, premi <strong>Verifica</strong>: i casi nascosti non li conosce nemmeno l'AI.</p>
-      </div>
     </div>
 
-    <!-- ───────── colonna destra: banco di prova ───────── -->
+    <!-- ───────── colonna destra: banco di prova (fisso) ───────── -->
     <div class="lab__bench">
       <div class="bench">
         <div class="bench__toolbar">
           <span class="bench__lang">{{ page.language }}</span>
           <span class="bench__runtime" data-runtime-status>runtime non caricato</span>
+          <button class="btn btn-outline btn-sm" data-download title="Scarica il codice come file .R per aprirlo in RStudio">⬇ Scarica .R</button>
+          <button class="btn btn-outline btn-sm" data-upload title="Carica un file .R scritto in RStudio e verificalo qui">⬆ Carica .R</button>
+          <input type="file" accept=".R,.r,.txt" data-upload-input hidden>
           <button class="btn btn-outline btn-sm" data-reset title="Ripristina lo scheletro">Ripristina</button>
         </div>
-        <textarea class="bench__editor" data-editor spellcheck="false" rows="16">{{ page.skeleton }}</textarea>
+        <textarea class="bench__editor" data-editor spellcheck="false">{{ page.skeleton }}</textarea>
         <div class="bench__actions">
           <button class="btn btn-outline" data-run>▶ Esegui</button>
           <button class="btn btn-primary" data-verify>✓ Verifica</button>
+          <span class="bench__spacer"></span>
+          {% if page.solution %}<details class="solution" data-solution hidden><summary class="btn btn-outline btn-sm">Soluzione</summary></details>{% endif %}
         </div>
         <pre class="bench__console" data-console hidden></pre>
-        <div class="results" data-results hidden>
-          <div class="results__summary" data-results-summary></div>
-          <table class="results__table">
-            <thead><tr><th>caso</th>{% for i in page.inputs %}<th>{{ i.name }}</th>{% endfor %}<th>atteso</th><th>ottenuto</th><th></th></tr></thead>
-            <tbody data-results-body></tbody>
-          </table>
-          <div class="hint" data-hint hidden></div>
+        <div class="bench__scroll">
+          <div class="results" data-results hidden>
+            <div class="results__summary" data-results-summary></div>
+            <table class="results__table">
+              <thead><tr><th>caso</th>{% for i in page.inputs %}<th>{{ i.name }}</th>{% endfor %}<th>atteso</th><th>ottenuto</th><th></th></tr></thead>
+              <tbody data-results-body></tbody>
+            </table>
+            <div class="hint" data-hint hidden></div>
+          </div>
+          {% if page.solution %}<pre class="solution__code" data-solution-code hidden><code class="language-r">{{ page.solution }}</code></pre>{% endif %}
         </div>
-      </div>
-
-      <details class="solution" data-solution hidden>
-        <summary>Soluzione</summary>
-        <pre><code class="language-r">{{ page.solution }}</code></pre>
-      </details>
-
-      <div class="lab__nav">
-        {% if week %}<a class="btn btn-outline" href="{{ site.baseurl }}{{ week.url }}#lab">← Settimana {{ week.number }}</a>{% endif %}
-        {% assign next = site.lab | where: 'week', page.week | sort: 'order' %}
-        {% assign take = false %}{% for l in next %}{% if take %}<a class="btn btn-outline" href="{{ site.baseurl }}{{ l.url }}">Lab successivo: {{ l.title }} →</a>{% assign take = false %}{% break %}{% endif %}{% if l.url == page.url %}{% assign take = true %}{% endif %}{% endfor %}
       </div>
     </div>
   </div>
 
+  <!-- ───────── pannello AI (cassetto laterale) ───────── -->
+  <div class="ai-drawer__overlay" data-ai-close></div>
+  <aside id="ai-drawer" class="ai-drawer" aria-hidden="true">
+    <div class="ai-drawer__head">
+      <strong>✨ Lavora con l'AI</strong>
+      <button type="button" class="ai-drawer__close" data-ai-close aria-label="Chiudi">✕</button>
+    </div>
+    {% include ai-panel.html contesto="lab" titolo=page.title modulo=page.modulo %}
+  </aside>
+
   <script type="application/json" data-lab-tests>{{ page.tests | jsonify }}</script>
   <script type="application/json" data-lab-inputs>{{ page.inputs | jsonify }}</script>
   <script type="application/json" data-lab-spec>{{ page.objective | jsonify }}</script>
-  <textarea data-lab-rules hidden>{{ content | strip_html | strip }}</textarea>
+  <textarea data-lab-rules hidden>{% if facile %}{{ page.regole }}{% else %}{{ content | strip_html | strip }}{% endif %}</textarea>
   <textarea data-lab-skeleton hidden>{{ page.skeleton }}</textarea>
 </div>
 
+<script>
+(function () {
+  const drawer = document.getElementById('ai-drawer');
+  const overlay = document.querySelector('.ai-drawer__overlay');
+  const toggles = document.querySelectorAll('[data-ai-toggle]');
+  function set(open) {
+    drawer.classList.toggle('is-open', open); overlay.classList.toggle('is-open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    toggles.forEach(b => b.setAttribute('aria-expanded', String(open)));
+  }
+  toggles.forEach(b => b.addEventListener('click', () => set(!drawer.classList.contains('is-open'))));
+  document.querySelectorAll('[data-ai-close]').forEach(b => b.addEventListener('click', () => set(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+  const sol = document.querySelector('[data-solution]'), code = document.querySelector('[data-solution-code]');
+  if (sol && code) sol.addEventListener('toggle', () => { code.hidden = !sol.open; });
+})();
+</script>
 <script src="{{ site.baseurl }}/assets/js/verifica.js"></script>
 <script type="module" src="{{ site.baseurl }}/assets/js/runner-webr.js"></script>

@@ -17,9 +17,9 @@ title: Coding e fondamenti di AI
 tagline: Corso Università Cattolica del Sacro Cuore
 description: Corso Università Cattolica del Sacro Cuore
 author: Vincenzo Nardelli
-baseurl: '/cbd' # the subpath of your site, e.g. /blog
+baseurl: '/cia' # the subpath of your site, e.g. /blog
 url: 'https://vincnardelli.github.io' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor", "node_modules", "PIANO_2026-27.md", "PROGRAMMA_2026-27.md", "PROGRAMMA_2026-27.pdf", "SCALETTA_L1_2026-27.md", "SITO_2026-27.md", "_docs_schema.md", "skill", "assets/skill", "esplorazioni"]
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.4.0.rc2
@@ -36,11 +36,10 @@ footer_content:
 collections:
   staffers:
   modules:
-  schedules:
   announcements:
-  settimane:
+  moduli:
     output: true
-    permalink: /settimana/:name/
+    permalink: /modulo/:name/
   lab:
     output: true
     permalink: /lab/:name/
@@ -49,6 +48,16 @@ collections:
     permalink: /esplorazioni/:name/
 # Default layouts for each collection type
 defaults:
+  - scope:
+      path: 'skill'
+    values:
+      nav_exclude: true
+      search_exclude: true
+  - scope:
+      path: 'assets/skill'
+    values:
+      nav_exclude: true
+      search_exclude: true
   - scope:
       path: ''
       type: staffers
@@ -62,25 +71,21 @@ defaults:
       layout: module
   - scope:
       path: ''
-      type: schedules
-    values:
-      layout: schedule
-  - scope:
-      path: ''
       type: announcements
     values:
       layout: announcement
   - scope:
       path: ''
-      type: settimane
+      type: moduli
     values:
-      layout: settimana
+      layout: modulo
       nav_exclude: true
   - scope:
       path: ''
       type: lab
     values:
       layout: lab
+      published: false
       nav_exclude: true
   - scope:
       path: ''
@@ -96,6 +101,17 @@ compress_html:
   startings: []
   blanklines: false
   profile: false
+
+# Questionario di iscrizione: tab in evidenza nella barra in alto (vuoto = nascosto)
+iscrizione_url: 'https://forms.gle/H5XrnvV977ZBd44F8'
+
+# Lab e skill: nascosti per ora. Per riattivarli: mostra_lab/mostra_skill a true,
+# togliere 'published: false' dal default dei lab qui sotto e "skill", "assets/skill" da exclude.
+mostra_lab: false
+mostra_skill: false
+
+# Sezione "Ripassa con l'AI" in fondo alle pagine dei moduli (false = nascosta)
+ripassa_ai: false
 
 # Skill del corso: link "via rapida" (lasciare vuoto finché non esistono)
 skill_gpt_url: ''

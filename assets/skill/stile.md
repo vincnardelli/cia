@@ -10,12 +10,12 @@ Il codice del corso ha un aspetto riconoscibile. Quando scrivi o correggi codice
 - Una istruzione per riga. Niente `;`.
 - `if(condizione){` senza spazio tra `if` e la parentesi; `}else if(...){` e `}else{` attaccati sulla stessa riga.
 - Le condizioni composte con `&` e `|` (non `&&`/`||`), gli insiemi con `%in%`.
-- Fino alla settimana 3 nessuna funzione definita dallo studente; dalla settimana 3 `nome <- function(argomenti){ ... return(valore) }`.
+- Fino al modulo 3 nessuna funzione definita dallo studente; dal modulo 3 `nome <- function(argomenti){ ... return(valore) }`.
 - Per stampare: `print(paste0("Testo: ", valore))`.
 - Prima R base (vettori, `[ ]`, `for`), poi dplyr con `%>%`, un verbo per riga.
 - Le soglie delle regole scritte come sono nel testo: "non oltre 10" → `<= 10`; "oltre 10" → `> 10`; "da 31 a 60" → `>= 31 & <= 60`.
 
-## Esempio 1 — decisione a fasce (settimana 2, Autovelox)
+## Esempio 1 — decisione a fasce (modulo 2, Autovelox)
 
 ```r
 velocita <- 70
@@ -37,7 +37,7 @@ if(differenza <= 0){
 multa
 ```
 
-## Esempio 2 — tre modi equivalenti (settimana 2, Boomer)
+## Esempio 2 — tre modi equivalenti (modulo 2, Boomer)
 
 ```r
 anno <- 2006
@@ -66,7 +66,7 @@ if(anno %in% 1946:1964){
 }
 ```
 
-## Esempio 3 — ciclo su un vettore con accumulatore (settimana 3, Taxi)
+## Esempio 3 — ciclo su un vettore con accumulatore (modulo 3, Taxi)
 
 ```r
 tariffa_min <- 28/60
@@ -85,7 +85,7 @@ for(i in 1:length(distanza)){
 print(paste0("Costo della corsa: ", round(costo, 2), " euro"))
 ```
 
-## Esempio 4 — ciclo con classificazione (settimana 3, BMI)
+## Esempio 4 — ciclo con classificazione (modulo 3, BMI)
 
 ```r
 altezza <- c(1.58, 1.73, 1.81, 1.47, 1.74)
@@ -107,7 +107,7 @@ for(i in 1:5){
 }
 ```
 
-## Esempio 5 — funzione (settimana 3)
+## Esempio 5 — funzione (modulo 3)
 
 ```r
 multa <- function(velocita, limite){
@@ -129,7 +129,7 @@ multa <- function(velocita, limite){
 multa(75, 50)
 ```
 
-## Esempio 6 — dplyr (settimana 4, Titanic)
+## Esempio 6 — dplyr (modulo 4, Titanic)
 
 ```r
 library(dplyr)
@@ -152,7 +152,7 @@ titanic %>%
   summarise(perc_sopravvissuti = mean(Survived))
 ```
 
-## Esempio 7 — segmentazione a regole su un data frame (settimana 5, RFM)
+## Esempio 7 — segmentazione a regole su un data frame (modulo 5, RFM)
 
 ```r
 rfm <- retail %>%
@@ -168,7 +168,7 @@ rfm <- retail %>%
                              TRUE ~ "Altri"))
 ```
 
-## Esempio 8 — lo stesso Autovelox in Python (dalla settimana 7)
+## Esempio 8 — lo stesso Autovelox in Python (dal modulo 7)
 
 ```python
 velocita = 70

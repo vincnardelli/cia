@@ -4,11 +4,12 @@ title: La chiave API (Groq)
 permalink: /guide/chiave_groq
 parent: Guide
 nav_order: 5
+published: false
 ---
 
 # 🔑 La chiave API per gli LLM
 
-Dalla settimana 10 chiamiamo un modello di linguaggio dal codice. Serve una **chiave API personale**: usiamo Groq, che ha un piano gratuito senza carta di credito e non usa i tuoi dati per addestrare modelli.
+Dalla modulo 10 chiamiamo un modello di linguaggio dal codice. Serve una **chiave API personale**: usiamo Groq, che ha un piano gratuito senza carta di credito e non usa i tuoi dati per addestrare modelli.
 
 1. Vai su [console.groq.com](https://console.groq.com) e crea un account (basta l'email).
 2. **API Keys → Create API Key**, dai un nome (es. `corso`) e copia la chiave: si vede una sola volta.

@@ -1,9 +1,9 @@
 ---
 layout: lab
 title: ISEE semplificato
-week: 2
+modulo: 2
 order: 8
-level: sfida
+difficolta: difficile
 language: R
 ai_mode: 'on'
 objective: Calcolare un ISEE semplificato di una famiglia a partire da reddito, patrimonio e numero di componenti.
@@ -17,16 +17,20 @@ inputs:
 - name: componenti
   type: numero
   desc: persone nel nucleo (intero ≥ 1)
-output:
+risultato:
   name: isee
   type: numero
   desc: ISEE, 2 decimali
+regole: |
+  - L'indicatore della situazione economica è `ISE = reddito + 20% del patrimonio`.
+  - La scala di equivalenza dipende dai componenti: 1 → 1,00; 2 → 1,57; 3 → 2,04; 4 → 2,46; 5 → 2,85; **oltre 5, +0,35 per ogni componente in più**.
+  - `ISEE = ISE / scala`, arrotondato a due decimali.
 skeleton: |
   reddito <- 30000
   patrimonio <- 50000
   componenti <- 3
 
-  # alla fine deve esistere la variabile isee
+  print(isee)
 tests:
 - inputs:
     reddito: 30000
@@ -89,6 +93,8 @@ solution: |
 solution_after: ''
 ---
 
-- L'indicatore della situazione economica è `ISE = reddito + 20% del patrimonio`.
-- La scala di equivalenza dipende dai componenti: 1 → 1,00; 2 → 1,57; 3 → 2,04; 4 → 2,46; 5 → 2,85; **oltre 5, +0,35 per ogni componente in più**.
-- `ISEE = ISE / scala`, arrotondato a due decimali.
+Il CAF del quartiere è sommerso di richieste per le agevolazioni scolastiche, e ti chiede uno strumento che dia alle famiglie una **stima dell'ISEE** prima dell'appuntamento. È una versione semplificata, ma segue la logica vera dell'indicatore.
+
+Si parte dall'ISE, l'indicatore della situazione economica: il reddito annuo della famiglia più il **20% del patrimonio** (conti, case, risparmi). Poi l'ISE si divide per una **scala di equivalenza** che tiene conto di quante persone vivono dei quegli stessi soldi: un componente vale 1,00; due componenti 1,57; tre 2,04; quattro 2,46; cinque 2,85; e per ogni componente oltre il quinto si aggiungono 0,35 alla scala. Il risultato, l'ISEE, va arrotondato a due decimali.
+
+Scrivi il programma che, dati reddito, patrimonio e numero di componenti, calcola l'ISEE. Le famiglie numerose sono quelle che più spesso hanno diritto alle agevolazioni: assicurati che la regola "oltre cinque" torni per sei, sette, otto persone.

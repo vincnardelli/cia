@@ -1,17 +1,13 @@
 {% comment %} include lab-card.html lab=<lab page> {% endcomment %}
 {% assign lab = include.lab %}
-<a class="lab-card lab-card--{{ lab.level }}" href="{{ site.baseurl }}{{ lab.url }}" data-lab="{{ lab.slug | default: lab.url | split: '/' | last }}">
+<a class="lab-card lab-card--{{ lab.difficolta }}" href="{{ site.baseurl }}{{ lab.url }}">
   <div class="lab-card__body">
     <div class="lab-card__title">{{ lab.title }}</div>
     <div class="lab-card__obj">{{ lab.objective }}</div>
     <div class="lab-card__tags">
-      <span class="tag tag--level">{{ lab.level }}</span>
+      <span class="tag tag--diff tag--{{ lab.difficolta }}">{{ lab.difficolta }}</span>
       <span class="tag tag--lang">{{ lab.language }}</span>
-      <span class="tag tag--ai">AI-{{ lab.ai_mode }}</span>
-      <span class="tag tag--week">sett. {{ lab.week }}</span>
+      <span class="tag tag--modulo">mod. {{ lab.modulo }}</span>
     </div>
-  </div>
-  <div class="lab-card__status" data-status-for="{{ lab.slug | default: lab.url | split: '/' | last }}">
-    <span class="status-dot"></span><span class="status-text">non iniziato</span>
   </div>
 </a>

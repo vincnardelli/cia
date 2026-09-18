@@ -1,0 +1,123 @@
+---
+layout: table_wrappers
+---
+{%- comment -%}
+  Override del layout di Just the Docs: menu orizzontale in alto al posto della sidebar,
+  contenuto su tutta la larghezza. Restano head.html, ricerca e stili del tema.
+{%- endcomment -%}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'it-IT' }}">
+{% include head.html %}
+<body class="has-topbar{% if page.layout == 'lab' %} is-fullscreen{% endif %}">
+  <a class="skip-to-main" href="#main-content">Vai al contenuto</a>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24"><title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24"><title>Cerca</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24"><title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </symbol>
+    {% include icons/external_link.html %}
+  </svg>
+
+  {%- assign nav_pages = site.html_pages
+        | where_exp: "item", "item.title != nil"
+        | where_exp: "item", "item.parent == nil"
+        | where_exp: "item", "item.nav_exclude != true"
+        | where_exp: "item", "item.nav_order != nil"
+        | sort: "nav_order" -%}
+
+  <header id="main-header" class="topbar">
+    <div class="topbar__inner">
+      <a href="{{ '/' | relative_url }}" class="topbar__brand">{% include title.html %}</a>
+      <a href="#" id="menu-button" class="topbar__toggle" aria-label="Apri il menu">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+      <nav role="navigation" aria-label="Principale" id="site-nav" class="topbar__nav">
+        <ul class="topbar__list">
+          {%- if site.iscrizione_url and site.iscrizione_url != "" -%}
+            <li class="topbar__item topbar__item--cta"><a href="{{ site.iscrizione_url }}" class="topbar__link" target="_blank" rel="noopener">Iscrizione</a></li>
+          {%- endif -%}
+          {%- for node in nav_pages -%}
+            {%- if node.url == "/" or node.url == "/index.html" -%}{%- continue -%}{%- endif -%}
+            {%- assign active = false -%}
+            {%- if page.url == node.url or page.parent == node.title or page.grand_parent == node.title -%}{%- assign active = true -%}{%- endif -%}
+            {%- if page.collection == "moduli" and node.url == "/corso/" -%}{%- assign active = true -%}{%- endif -%}
+            {%- if page.collection == "lab" and node.url == "/lab/" -%}{%- assign active = true -%}{%- endif -%}
+            {%- if page.collection == "esplorazioni" and node.url == "/esplorazioni/" -%}{%- assign active = true -%}{%- endif -%}
+            <li class="topbar__item{% if node.has_children %} has-children{% endif %}{% if active %} active{% endif %}">
+              <a href="{{ node.url | relative_url }}" class="topbar__link">{{ node.title }}</a>
+              {%- if node.has_children -%}
+                {%- assign children = site.html_pages | where: "parent", node.title | where_exp: "item", "item.nav_exclude != true" | sort: "nav_order" -%}
+                <ul class="topbar__sub">
+                  {%- for child in children -%}
+                    <li><a href="{{ child.url | relative_url }}" class="topbar__sublink{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a></li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+      {% if site.search_enabled != false %}
+        {% capture search_placeholder %}{% include search_placeholder_custom.html %}{% endcapture %}
+        <div class="search topbar__search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="{{ search_placeholder | strip_html | strip }}" aria-label="{{ search_placeholder | strip_html | strip }}" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="main" id="top">
+    <div id="main-content-wrap" class="main-content-wrap">
+      {% unless page.url == "/" %}
+        {% if page.parent %}
+          {%- assign parent_page = site.html_pages | where: "title", page.parent | first -%}
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              <li class="breadcrumb-nav-list-item"><a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a></li>
+              <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+            </ol>
+          </nav>
+        {% endif %}
+      {% endunless %}
+      <div id="main-content" class="main-content" role="main">
+        {% if site.heading_anchors != false %}
+          {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
+        {% else %}
+          {{ content }}
+        {% endif %}
+
+        {% if page.has_children == true and page.has_toc != false %}
+          {%- assign toc_list = site.html_pages | where: "parent", page.title | sort: "nav_order" -%}
+          <hr>
+          <h2 class="text-delta">Indice</h2>
+          <ul>
+            {% for child in toc_list %}
+              <li><a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+
+    <footer class="pagefoot">
+      <div class="pagefoot__inner">
+        <span>{{ site.title }} · {{ site.description | default: "Università Cattolica del Sacro Cuore, Roma" }}</span>
+        {% if site.aux_links %}<span class="pagefoot__links">{% for link in site.aux_links %}<a href="{{ link.last }}">{{ link.first }}</a>{% endfor %}</span>{% endif %}
+      </div>
+    </footer>
+
+    {% if site.search_enabled != false %}
+      <div class="search-overlay"></div>
+    {% endif %}
+  </div>
+</body>
+</html>

@@ -1,9 +1,9 @@
 ---
 layout: lab
 title: 'Titanic: gli over 50'
-week: 4
+modulo: 4
 order: 2
-level: base
+difficolta: facile
 language: R
 ai_mode: 'off'
 objective: Quante persone con più di 50 anni erano a bordo del Titanic?
@@ -11,7 +11,7 @@ inputs:
 - name: titanic
   type: data frame
   desc: 'già caricato: titanic.csv (PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked)'
-output:
+risultato:
   name: n_over50
   type: numero
   desc: passeggeri con Age > 50
@@ -19,11 +19,16 @@ data_url: dati/titanic.csv
 data_var: titanic
 packages:
 - dplyr
+regole: |
+  - Conta i passeggeri con `Age > 50` (età nota).
+  - Estrai il numero dalla tabella di `summarise()`.
+  - Poi, in RStudio, continua con le altre domande del modulo: la percentuale di uomini e donne tra gli over 50 (percentuale *rispetto a chi?*).
 skeleton: |
   library(dplyr)
-  # titanic è già caricato
+  # titanic è già caricato (in RStudio: titanic <- read.csv("titanic.csv"))
 
-  # alla fine deve esistere la variabile n_over50 (un numero)
+
+  print(n_over50)
 tests:
 - inputs: {}
   expected: 64
@@ -40,6 +45,8 @@ solution: |
 solution_after: ''
 ---
 
-- Conta i passeggeri con `Age > 50` (età nota).
-- Estrai il numero dalla tabella di `summarise()`.
-- Poi, in RStudio, continua con le altre domande della settimana: la percentuale di uomini e donne tra gli over 50 (percentuale *rispetto a chi?*).
+Il dataset dei passeggeri del Titanic è il classico su cui tutti imparano a leggere una tabella, e per questo lo usiamo. Il data frame `titanic` è già caricato: una riga per passeggero, con le colonne PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked.
+
+La prima domanda è semplice: **quante persone con più di 50 anni** erano a bordo? Il conteggio riguarda chi ha l'età nota; 177 passeggeri non ce l'hanno, e vanno lasciati fuori consapevolmente. Il risultato deve essere un numero estratto dalla tabella che ottieni con dplyr.
+
+Poi, in RStudio, continua con le altre domande del modulo: la percentuale di uomini e donne tra gli over 50, chiedendoti sempre "percentuale rispetto a chi?".

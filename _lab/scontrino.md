@@ -1,9 +1,9 @@
 ---
 layout: lab
 title: Scontrino
-week: 1
+modulo: 1
 order: 1
-level: base
+difficolta: facile
 language: R
 ai_mode: 'off'
 objective: Calcolare il totale di uno scontrino a partire dal prezzo netto e dalla quantità, con IVA al 22%.
@@ -14,15 +14,20 @@ inputs:
 - name: quantita
   type: numero
   desc: pezzi acquistati
-output:
+risultato:
   name: totale
   type: numero
   desc: totale da pagare, arrotondato a 2 decimali
+regole: |
+  - Il totale netto è `prezzo_netto * quantita`.
+  - L'IVA è il 22% del totale netto: il totale da pagare è il netto più l'IVA.
+  - Arrotonda il risultato a due decimali con `round(x, 2)`.
 skeleton: |
   prezzo_netto <- 10
   quantita <- 3
 
-  # calcola il totale con IVA al 22%: alla fine deve esistere la variabile totale
+
+  print(totale)
 tests:
 - inputs:
     prezzo_netto: 10
@@ -64,6 +69,8 @@ solution: |
 solution_after: ''
 ---
 
-- Il totale netto è `prezzo_netto * quantita`.
-- L'IVA è il 22% del totale netto: il totale da pagare è il netto più l'IVA.
-- Arrotonda il risultato a due decimali con `round(x, 2)`.
+Lavori nel piccolo negozio di elettronica di famiglia e il registratore di cassa si è rotto proprio il giorno dei saldi. Tuo zio ti passa un foglio con i prezzi **netti** dei prodotti, cioè senza IVA, e ti chiede di calcolare a mano quanto far pagare a ogni cliente.
+
+Il primo cliente compra tre cavi HDMI da 10 € l'uno. Tu sai che in Italia l'IVA ordinaria è del 22% e che si applica sul totale della merce, non sul singolo pezzo. Il totale va scritto sullo scontrino con due decimali, come su qualsiasi ricevuta.
+
+Scrivi il programma che, dati prezzo netto e quantità, calcola il totale da pagare. Tuo zio lo userà tutto il giorno, quindi deve funzionare anche nei casi strani: un cliente che ci ripensa e compra zero pezzi, o un prezzo con i centesimi.

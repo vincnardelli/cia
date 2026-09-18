@@ -1,0 +1,29 @@
+{%- comment -%}
+  include ai-panel.html contesto="lab"|"modulo" titolo=... modulo=N
+  Pannello unico "Lavora con l'AI": scegli l'assistente (icone), come vuoi essere aiutato, apri.
+  La logica è in assets/js/risolvi-con-ai.js.
+{%- endcomment -%}
+<div class="ai-panel" data-ai-context="{{ include.contesto }}" data-title="{{ include.titolo }}" data-modulo="{{ include.modulo }}">
+  <div class="ai-panel__k">Il tuo assistente</div>
+  <div class="ai-providers" role="radiogroup" aria-label="Assistente">
+    <label class="ai-provider"><input type="radio" name="ai-provider" value="gpt" checked>{% include icona.html nome="gpt" testo=true size=20 %}</label>
+    <label class="ai-provider"><input type="radio" name="ai-provider" value="claude">{% include icona.html nome="claude" testo=true size=20 %}</label>
+    <label class="ai-provider"><input type="radio" name="ai-provider" value="gemini">{% include icona.html nome="gemini" testo=true size=20 %}</label>
+  </div>
+  {% if include.contesto == "lab" %}
+  <div class="ai-panel__k">Cosa vuoi</div>
+  <div class="ai-modes" role="radiogroup" aria-label="Modalità">
+    <label class="ai-mode"><input type="radio" name="ai-mode" value="tutor" checked><span>Correggi la mia bozza</span></label>
+    <label class="ai-mode"><input type="radio" name="ai-mode" value="assistito"><span>Aiutami a partire</span></label>
+  </div>
+  {% else %}
+  <input type="radio" name="ai-mode" value="spiega" checked hidden>
+  {% endif %}
+  <div class="ai-panel__actions">
+    <button class="btn btn-primary btn-lg" data-ai-open>Apri in ChatGPT</button>
+    <button class="btn btn-outline" data-ai-copy>Copia il prompt</button>
+  </div>
+  <label class="ai-panel__skill"><input type="checkbox" data-ai-skill> ho la <a href="{{ site.baseurl }}/skill/">skill del corso</a> installata (prompt più corto)</label>
+  <details class="ai-preview"><summary>Cosa manda</summary><pre data-ai-preview></pre></details>
+  {% if include.contesto == "lab" %}<p class="ai-panel__note">Quando torni, premi <strong>Verifica</strong>: i casi nascosti non li conosce nemmeno l'AI.</p>{% endif %}
+</div>

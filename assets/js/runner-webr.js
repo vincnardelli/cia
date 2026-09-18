@@ -1,5 +1,5 @@
 /* runner-webr.js — esegue R nel browser con webR (https://docs.r-wasm.org/webr/).
-   Espone window.CBDRunner = { ready, run(code), evalTests(code, tests, opts) }.
+   Espone window.CIARunner = { ready, run(code), evalTests(code, tests, opts) }.
    Canale PostMessage: non richiede header COOP/COEP, quindi funziona su GitHub Pages.   */
 import { WebR, ChannelType } from 'https://webr.r-wasm.org/latest/webr.mjs';
 
@@ -56,7 +56,13 @@ async function evalTests(code, tests, opts) {
       const args = (opts.inputs || []).map(n => toR(t.inputs[n])).join(', ');
       expr = `${prologue()}${code}\n.__out <- ${opts.fn}(${args})`;
     } else {
-      expr = `${prologue()}${assign}\n${code}\n.__out <- ${opts.outputVar}`;
+      // le righe dello studente che assegnano un input (es. `altezza <- 1.73` dello scheletro) vengono
+      // neutralizzate, così ogni caso di test usa i propri valori
+      const names = Object.keys(t.inputs || {});
+      const stripped = names.length
+        ? code.replace(new RegExp(`^[ \\t]*(${names.join('|')})[ \\t]*(<-|=)[^\\n]*$`, 'gm'), '# $& (valore fornito dal test)')
+        : code;
+      expr = `${prologue()}${assign}\n${stripped}\n.__out <- ${opts.outputVar}`;
     }
     try {
       await webR.objs.globalEnv.bind('.codice', expr);
@@ -85,4 +91,4 @@ function cleanError(e) {
   return m;
 }
 
-window.CBDRunner = { ready, run, evalTests };
+window.CIARunner = { ready, run, evalTests };

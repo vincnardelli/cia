@@ -1,0 +1,181 @@
+id,reparto,ruolo,sede,anno_assunzione,stipendio_lordo,giorni_assenza,part_time
+1001,Marketing,specialist,Roma,2014,31700,0,0
+1002,Assistenza clienti,operatore,Roma,2019,24700,6,0
+1003,IT,sviluppatore,Roma,2006,42900,4,0
+1004,Vendite,responsabile,Milano,2008,43200,4,1
+1005,Marketing,specialist,Roma,2008,36800,2,0
+1006,Vendite,addetto,Milano,2015,29700,1,0
+1007,Marketing,specialist,Roma,2012,32600,6,0
+1008,Vendite,addetto,Roma,2021,27000,4,0
+1009,Logistica,magazziniere,Roma,2006,28100,8,0
+1010,Vendite,addetto,Milano,2015,29800,8,0
+1011,Assistenza clienti,operatore,Roma,2023,23300,0,1
+1012,Vendite,addetto,Milano,2024,28200,2,0
+1013,Vendite,senior,Roma,2016,31600,4,0
+1014,Amministrazione,impiegato,Milano,2020,27100,8,0
+1015,IT,sistemista,Roma,2015,41900,8,0
+1016,IT,sistemista,Roma,2019,41900,5,0
+1017,Vendite,addetto,Milano,2006,35600,10,0
+1018,Vendite,senior,Roma,2015,32000,1,0
+1019,Logistica,magazziniere,Roma,2013,25400,13,0
+1020,Assistenza clienti,operatore,Roma,2005,27300,7,1
+1021,Logistica,magazziniere,Milano,2016,26400,10,0
+1022,Logistica,magazziniere,Roma,2015,29900,9,0
+1023,Assistenza clienti,team leader,Roma,2018,26600,0,0
+1024,Amministrazione,impiegato,Milano,2012,28800,5,0
+1025,Logistica,magazziniere,Milano,2011,29200,11,0
+1026,Logistica,magazziniere,Roma,2007,31100,10,0
+1027,Assistenza clienti,operatore,Roma,2016,25300,1,0
+1028,Marketing,senior,Roma,2025,33000,4,1
+1029,Assistenza clienti,operatore,Roma,2014,24700,7,0
+1030,Vendite,addetto,Roma,2010,28900,10,0
+1031,Vendite,addetto,Milano,2010,31400,5,0
+1032,IT,sviluppatore,Milano,2012,38500,13,0
+1033,Assistenza clienti,operatore,Roma,2012,28200,7,0
+1034,Logistica,autista,Roma,2023,30400,3,0
+1035,IT,sviluppatore,Milano,2018,37900,9,0
+1036,Vendite,addetto,Roma,2006,31100,13,0
+1037,Logistica,magazziniere,Roma,2022,24900,10,0
+1038,IT,sviluppatore,Milano,2009,37500,8,0
+1039,Assistenza clienti,operatore,Milano,2021,26300,7,0
+1040,Marketing,specialist,Milano,2006,36600,4,0
+1041,Marketing,specialist,Roma,2007,35500,2,0
+1042,Vendite,addetto,Roma,2025,25800,2,0
+1043,Logistica,magazziniere,Roma,2013,28000,17,0
+1044,IT,sviluppatore,Roma,2023,33800,3,0
+1045,Logistica,magazziniere,Roma,2011,28000,7,0
+1046,Vendite,addetto,Roma,2011,32300,2,0
+1047,Amministrazione,impiegato,Milano,2014,30200,6,0
+1048,Logistica,magazziniere,Roma,2018,25500,13,0
+1049,Assistenza clienti,operatore,Roma,2008,30700,11,0
+1050,Logistica,magazziniere,Roma,2025,22500,12,0
+1051,Amministrazione,impiegato,Roma,2020,28100,6,0
+1052,Assistenza clienti,responsabile,Milano,2010,38000,8,0
+1053,Vendite,addetto,Milano,2018,26500,3,0
+1054,Assistenza clienti,operatore,Roma,2009,27000,11,0
+1055,Logistica,magazziniere,Roma,2019,29400,9,0
+1056,Assistenza clienti,operatore,Roma,2013,26500,4,0
+1057,Marketing,specialist,Roma,2016,32100,6,0
+1058,Assistenza clienti,operatore,Roma,2019,26200,15,0
+1059,IT,sviluppatore,Milano,2018,36700,7,0
+1060,Assistenza clienti,operatore,Milano,2022,25500,9,0
+1061,Assistenza clienti,team leader,Roma,2010,29500,15,0
+1062,Assistenza clienti,operatore,Roma,2010,26000,5,0
+1063,Logistica,magazziniere,Roma,2024,22400,8,0
+1064,Logistica,magazziniere,Milano,2020,27400,10,0
+1065,Vendite,addetto,Roma,2012,30900,9,0
+1066,Vendite,addetto,Roma,2025,26900,11,0
+1067,Marketing,specialist,Roma,2012,36500,5,0
+1068,Logistica,magazziniere,Roma,2013,27100,15,0
+1069,IT,sviluppatore,Roma,2007,41100,7,0
+1070,Vendite,addetto,Roma,2024,26300,3,0
+1071,Vendite,addetto,Milano,2015,29500,6,0
+1072,Logistica,magazziniere,Milano,2022,25200,12,0
+1073,Amministrazione,impiegato,Milano,2009,30000,8,0
+1074,Logistica,magazziniere,Roma,2018,26700,11,0
+1075,Vendite,addetto,Roma,2022,24200,5,0
+1076,Vendite,addetto,Roma,2006,33200,4,0
+1077,Marketing,specialist,Roma,2020,31000,7,0
+1078,Logistica,autista,Roma,2007,35000,11,1
+1079,Assistenza clienti,operatore,Roma,2007,30700,4,1
+1080,Amministrazione,contabile,Roma,2019,32400,10,0
+1081,Marketing,specialist,Milano,2020,29300,6,0
+1082,Marketing,specialist,Roma,2009,36000,6,1
+1083,Amministrazione,contabile,Milano,2011,35000,7,0
+1084,Assistenza clienti,operatore,Milano,2014,25700,9,1
+1085,IT,sviluppatore,Milano,2023,37100,11,0
+1086,Assistenza clienti,operatore,Milano,2017,24500,5,0
+1087,Vendite,addetto,Roma,2014,27000,0,0
+1088,Marketing,specialist,Milano,2010,36200,8,0
+1089,Amministrazione,impiegato,Roma,2025,28000,4,0
+1090,Vendite,addetto,Milano,2019,27300,1,0
+1091,Logistica,magazziniere,Roma,2015,26300,10,0
+1092,Marketing,specialist,Roma,2007,36900,4,0
+1093,Assistenza clienti,operatore,Roma,2016,26600,6,0
+1094,Marketing,senior,Roma,2007,41800,8,0
+1095,IT,sistemista,Roma,2025,37000,0,0
+1096,Logistica,responsabile,Roma,2014,36400,6,0
+1097,Vendite,addetto,Milano,2015,28200,0,0
+1098,Vendite,senior,Roma,2005,33200,12,0
+1099,Assistenza clienti,team leader,Roma,2012,31000,4,0
+1100,Vendite,responsabile,Milano,2015,38600,0,1
+1101,Logistica,magazziniere,Roma,2006,27000,7,1
+1102,Logistica,autista,Milano,2006,31200,7,0
+1103,IT,sviluppatore,Milano,2009,41300,0,0
+1104,Vendite,addetto,Milano,2020,26700,5,0
+1105,Vendite,addetto,Milano,2012,32300,2,1
+1106,Vendite,addetto,Milano,2025,23500,10,0
+1107,IT,sistemista,Roma,2024,39400,0,1
+1108,IT,sviluppatore,Roma,2015,39900,0,0
+1109,Amministrazione,contabile,Roma,2023,32100,6,0
+1110,Amministrazione,impiegato,Roma,2008,32200,1,0
+1111,Vendite,addetto,Roma,2010,30300,1,0
+1112,Amministrazione,impiegato,Roma,2008,31200,5,0
+1113,Vendite,addetto,Roma,2007,31100,14,0
+1114,IT,responsabile,Milano,2020,48900,3,0
+1115,Vendite,senior,Roma,2006,34800,8,0
+1116,Vendite,addetto,Milano,2024,28600,10,0
+1117,Logistica,autista,Roma,2009,32900,13,0
+1118,Logistica,magazziniere,Milano,2009,28800,17,0
+1119,Marketing,senior,Milano,2006,38900,2,0
+1120,Assistenza clienti,operatore,Roma,2005,27900,14,0
+1121,Marketing,specialist,Roma,2020,30200,6,0
+1122,Vendite,addetto,Roma,2009,30700,9,1
+1123,Amministrazione,impiegato,Roma,2023,29800,0,0
+1124,Vendite,addetto,Milano,2017,25700,0,0
+1125,Vendite,responsabile,Roma,2024,36100,6,0
+1126,Vendite,senior,Roma,2013,33700,8,0
+1127,Assistenza clienti,operatore,Milano,2021,25500,7,1
+1128,Amministrazione,impiegato,Roma,2009,29800,7,0
+1129,Vendite,addetto,Roma,2025,27200,0,0
+1130,Vendite,addetto,Milano,2022,28900,2,0
+1131,Vendite,addetto,Roma,2018,26500,7,0
+1132,Assistenza clienti,operatore,Roma,2022,24800,7,0
+1133,Logistica,autista,Milano,2010,32000,15,0
+1134,Vendite,addetto,Milano,2021,27400,5,0
+1135,Logistica,magazziniere,Milano,2012,29100,5,0
+1136,Vendite,senior,Milano,2006,34300,5,0
+1137,Vendite,responsabile,Roma,2017,41000,9,1
+1138,Logistica,responsabile,Roma,2008,42200,17,1
+1139,Vendite,addetto,Roma,2021,27600,2,0
+1140,Vendite,addetto,Roma,2024,25200,2,0
+1141,Logistica,magazziniere,Roma,2018,26100,10,0
+1142,Vendite,addetto,Roma,2015,28600,0,0
+1143,Assistenza clienti,operatore,Roma,2005,29500,15,0
+1144,IT,sviluppatore,Roma,2017,36100,4,0
+1145,Marketing,specialist,Roma,2010,35400,0,0
+1146,Amministrazione,responsabile,Milano,2025,40100,7,0
+1147,Vendite,addetto,Roma,2018,24600,12,0
+1148,Vendite,addetto,Milano,2024,24800,2,0
+1149,Vendite,addetto,Roma,2022,27900,6,0
+1150,Amministrazione,contabile,Roma,2024,31400,5,0
+1151,Vendite,senior,Roma,2011,33800,7,0
+1152,Logistica,autista,Roma,2007,30000,15,0
+1153,Logistica,responsabile,Roma,2015,38100,16,0
+1154,Assistenza clienti,operatore,Milano,2020,24300,9,0
+1155,Vendite,addetto,Roma,2016,31000,5,1
+1156,Logistica,magazziniere,Milano,2021,26500,15,0
+1157,Vendite,senior,Roma,2018,31300,15,0
+1158,Assistenza clienti,operatore,Milano,2017,25400,8,0
+1159,Logistica,magazziniere,Roma,2018,25600,8,1
+1160,Assistenza clienti,operatore,Roma,2017,26100,3,0
+1161,Logistica,magazziniere,Milano,2010,29900,7,0
+1162,Logistica,autista,Roma,2014,30400,5,0
+1163,Logistica,autista,Milano,2005,33100,10,0
+1164,Vendite,senior,Roma,2017,31900,4,0
+1165,Vendite,addetto,Milano,2012,30000,3,0
+1166,Logistica,magazziniere,Roma,2017,26100,15,0
+1167,IT,sviluppatore,Milano,2011,41800,9,1
+1168,Logistica,magazziniere,Roma,2015,27000,11,0
+1169,Vendite,senior,Roma,2009,32400,6,0
+1170,Logistica,autista,Milano,2005,34600,4,0
+1171,Vendite,addetto,Roma,2021,28800,5,0
+1172,Vendite,addetto,Roma,2017,29000,13,0
+1173,Assistenza clienti,operatore,Milano,2025,21900,13,1
+1174,Logistica,magazziniere,Roma,2005,30500,9,0
+1175,Logistica,magazziniere,Roma,2025,22700,14,0
+1176,Vendite,addetto,Roma,2006,27200,2,0
+1177,Marketing,specialist,Roma,2023,29900,8,0
+1178,Logistica,autista,Milano,2008,35600,6,0
+1179,Assistenza clienti,team leader,Roma,2021,26900,8,0
+1180,Vendite,senior,Milano,2008,36900,7,0

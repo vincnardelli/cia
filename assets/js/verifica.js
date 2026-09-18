@@ -1,5 +1,6 @@
-/* verifica.js — logica della pagina lab: editor, esecuzione, test, diagnosi a regole, stato.
-   L'esecuzione vera è delegata al runner (runner-webr.js) che espone window.CBDRunner
+/* verifica.js — logica della pagina lab: editor, esecuzione, test, diagnosi a regole, scarica/carica .R.
+   Niente salvataggio nel browser: il codice vive nell'editor e, se vuoi, nel file .R sul tuo computer.
+   L'esecuzione vera è delegata al runner (runner-webr.js) che espone window.CIARunner
    con:  ready (Promise), run(code) -> {output, error}, evalTests(code, tests, opts) -> [{obtained, error}]   */
 (function () {
   const root = document.querySelector('.lab[data-lab]');
@@ -19,41 +20,48 @@
   const statusEl = root.querySelector('[data-lab-status]');
   const solution = root.querySelector('[data-solution]');
   const skeleton = root.querySelector('[data-lab-skeleton]').value;
+  let attempts = 0, best = 0;
 
-  /* ── editor: ripristino contenuto, tab, salvataggio ── */
-  const saved = CBD.code(slug);
-  if (saved) editor.value = saved;
-  editor.addEventListener('input', () => CBD.setCode(slug, editor.value));
+  /* ── editor: tab, ripristino ── */
   editor.addEventListener('keydown', e => {
     if (e.key === 'Tab') { e.preventDefault(); const s = editor.selectionStart; editor.setRangeText('  ', s, editor.selectionEnd, 'end'); }
   });
-  root.querySelector('[data-reset]').addEventListener('click', () => { if (confirm('Ripristino lo scheletro iniziale? Il tuo codice andrà perso.')) { editor.value = skeleton; CBD.setCode(slug, skeleton); } });
+  root.querySelector('[data-reset]').addEventListener('click', () => { if (confirm('Ripristino lo scheletro iniziale? Il codice nell\'editor andrà perso.')) editor.value = skeleton; });
+  window.addEventListener('beforeunload', e => { if (editor.value !== skeleton) { e.preventDefault(); e.returnValue = ''; } });
 
-  /* ── stato iniziale ── */
-  let attempts = (CBD.progress()[slug] || {}).attempts || 0;
-  paintStatus();
-  maybeUnlockSolution();
+  /* ── scarica / carica .R (per lavorare in RStudio) ── */
+  root.querySelector('[data-download]').addEventListener('click', () => {
+    const blob = new Blob([editor.value.replace(/\n?$/, '\n')], { type: 'text/plain;charset=utf-8' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = slug + '.R'; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  });
+  const fileInput = root.querySelector('[data-upload-input]');
+  root.querySelector('[data-upload]').addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', () => {
+    const f = fileInput.files[0]; if (!f) return;
+    f.text().then(t => { editor.value = t; fileInput.value = ''; showConsole('Caricato ' + f.name + ': premi Verifica.'); });
+  });
 
-  function paintStatus() {
-    const p = CBD.progress()[slug];
-    if (!p) { statusEl.textContent = 'non iniziato'; statusEl.classList.remove('is-done'); return; }
-    if (p.done) { statusEl.textContent = 'superato'; statusEl.classList.add('is-done'); }
-    else { statusEl.textContent = p.passed + '/' + p.total + ' test'; statusEl.classList.remove('is-done'); }
+  /* ── stato (solo in pagina) ── */
+  function paintStatus(passed, total) {
+    statusEl.hidden = false;
+    if (passed === total) { statusEl.textContent = 'superato'; statusEl.classList.add('is-done'); }
+    else { statusEl.textContent = passed + '/' + total + ' test'; statusEl.classList.remove('is-done'); }
   }
-  function maybeUnlockSolution() {
+  function maybeUnlockSolution(done) {
     if (!solution) return;
-    const p = CBD.progress()[slug] || {};
     const after = root.dataset.solutionAfter;
     const dateOk = after && new Date(after) < new Date();
-    if (p.done || (root.dataset.level === 'base' && dateOk)) solution.hidden = false;
+    if (done || (root.dataset.difficolta === 'facile' && dateOk)) solution.hidden = false;
   }
+  maybeUnlockSolution(false);
 
   /* ── esegui ── */
   root.querySelector('[data-run]').addEventListener('click', async () => {
     showConsole('… eseguo');
     try {
-      await CBDRunner.ready;
-      const r = await CBDRunner.run(editor.value);
+      await CIARunner.ready;
+      const r = await CIARunner.run(editor.value);
       showConsole(r.error ? r.error : (r.output || '(nessun output: usa print() per vedere un valore)'), !!r.error);
     } catch (e) { showConsole('Errore del runtime: ' + e, true); }
   });
@@ -64,8 +72,8 @@
     results.hidden = false; summary.textContent = '… eseguo i test'; summary.className = 'results__summary'; body.innerHTML = ''; hintEl.hidden = true;
     let out;
     try {
-      await CBDRunner.ready;
-      out = await CBDRunner.evalTests(editor.value, tests, { outputVar, fn: root.dataset.function || null, inputs: inputs.map(i => i.name) });
+      await CIARunner.ready;
+      out = await CIARunner.evalTests(editor.value, tests, { outputVar, fn: root.dataset.function || null, inputs: inputs.map(i => i.name) });
     } catch (e) { summary.textContent = 'Errore del runtime: ' + e; summary.classList.add('is-ko'); return; }
     attempts++;
     const rows = tests.map((t, i) => {
@@ -74,11 +82,11 @@
       return { t, o, ok, i };
     });
     const passed = rows.filter(r => r.ok).length;
+    best = Math.max(best, passed);
     renderRows(rows);
     summary.textContent = passed === tests.length ? `Tutti i ${tests.length} casi superati.` : `${passed} casi su ${tests.length} superati.`;
     summary.classList.add(passed === tests.length ? 'is-ok' : 'is-ko');
-    CBD.setProgress(slug, { passed, total: tests.length, done: passed === tests.length, attempts });
-    paintStatus(); maybeUnlockSolution();
+    paintStatus(passed, tests.length); maybeUnlockSolution(passed === tests.length);
     if (passed < tests.length) showHint(diagnose(rows));
   });
 
@@ -99,7 +107,7 @@
   }
   function fmt(v) { if (v === null || v === undefined) return '—'; if (typeof v === 'number') return String(Math.round(v * 1000) / 1000); return String(v); }
 
-  /* ── diagnosi a regole (livelli 1 e 2) ── */
+  /* ── diagnosi a regole ── */
   function diagnose(rows) {
     const failed = rows.filter(r => !r.ok);
     const msgs = [];
@@ -119,7 +127,7 @@
     const nonBoundaryFail = failed.filter(r => !r.t.boundary);
     const boundaryAll = rows.filter(r => r.t.boundary);
     if (boundaryFail.length > 0 && nonBoundaryFail.length === 0 && boundaryAll.length > 0) {
-      msgs.push('Il tuo codice funziona <em>dentro</em> gli intervalli ma sbaglia esattamente sui bordi. Ogni soglia è compresa o esclusa? Rileggi le regole: "fino a", "non oltre", "da … a" dicono se il valore sul confine sta di qua o di là (<code>&lt;</code> oppure <code>&lt;=</code>).');
+      msgs.push('Il tuo codice funziona <em>dentro</em> gli intervalli ma sbaglia esattamente sui bordi. Ogni soglia è compresa o esclusa? Rileggi il testo: "fino a", "non oltre", "da … a" dicono se il valore sul confine sta di qua o di là (<code>&lt;</code> oppure <code>&lt;=</code>).');
     }
     const sameOut = {};
     failed.forEach(r => { const k = String(r.o.obtained); sameOut[k] = (sameOut[k] || 0) + 1; });
@@ -128,11 +136,13 @@
     if (failed.every(r => r.o.obtained === null || r.o.obtained === undefined)) {
       msgs.push(`Nessun caso produce <code>${outputVar}</code>: controlla che la variabile venga assegnata in <em>tutti</em> i rami (anche nell'<code>else</code>).`);
     }
-    // livello 1: suggerimenti dei singoli test, sbloccati progressivamente con i tentativi
-    const withHint = failed.filter(r => r.t.hint).slice(0, Math.max(1, attempts - 1));
-    withHint.forEach(r => msgs.push(`<strong>Caso ${r.i + 1}</strong> — ${r.t.hint}`));
+    // i suggerimenti dei singoli test si sbloccano con i tentativi, solo nei lab facili
+    if (root.dataset.difficolta === 'facile') {
+      const withHint = failed.filter(r => r.t.hint).slice(0, Math.max(1, attempts - 1));
+      withHint.forEach(r => msgs.push(`<strong>Caso ${r.i + 1}</strong> — ${r.t.hint}`));
+    }
     if (msgs.length === 0) msgs.push('Qualche caso non passa. Prova a eseguire il codice con gli input del caso fallito e guarda che valore ottieni.');
-    if (attempts >= 3) msgs.push('<span class="muted">Se sei bloccato: incolla codice e casi falliti nel tuo assistente in modalità <strong>Tutor</strong>.</span>');
+    if (attempts >= 3) msgs.push('<span class="muted">Se sei bloccato: <strong>Lavora con l\'AI</strong> in alto a destra porta bozza e casi falliti nel tuo assistente.</span>');
     return msgs;
   }
   function showHint(msgs) { hintEl.hidden = false; hintEl.innerHTML = '<div class="hint__k">Suggerimento</div>' + msgs.map(m => `<p>${m}</p>`).join(''); }

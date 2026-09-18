@@ -1,9 +1,9 @@
 ---
 layout: lab
 title: Boomer finder
-week: 2
+modulo: 2
 order: 1
-level: base
+difficolta: facile
 language: R
 ai_mode: 'off'
 objective: Stabilire se una persona è un baby boomer a partire dall'anno di nascita.
@@ -11,14 +11,24 @@ inputs:
 - name: anno
   type: numero
   desc: anno di nascita
-output:
+risultato:
   name: status
   type: testo
   desc: '"Boomer" oppure "Non Boomer"'
+regole: |
+  - È boomer chi è nato **dal 1946 al 1964 compresi**.
+  - Tutti gli altri sono "Non Boomer".
+  - Scrivilo in almeno due modi diversi (con due `if`, con `&`, con `%in%`) e controlla che diano lo stesso risultato sui casi al confine.
 skeleton: |
   anno <- 1955
 
-  # alla fine deve esistere la variabile status ("Boomer" o "Non Boomer")
+  if(anno >= 1946 & anno <= 1964){
+    # ...
+  }else{
+    # ...
+  }
+
+  print(status)
 tests:
 - inputs:
     anno: 1955
@@ -62,6 +72,8 @@ solution: |
 solution_after: ''
 ---
 
-- È boomer chi è nato **dal 1946 al 1964 compresi**.
-- Tutti gli altri sono "Non Boomer".
-- Scrivilo in almeno due modi diversi (con due `if`, con `&`, con `%in%`) e controlla che diano lo stesso risultato sui casi al confine.
+Un'agenzia di marketing sta preparando una campagna pensata per i *baby boomer*, la generazione nata nel dopoguerra. Per segmentare l'elenco clienti servono regole precise, e la definizione che l'agenzia adotta è quella demografica standard: è boomer chi è nato **dal 1946 al 1964, estremi compresi**.
+
+Ti passano una colonna con l'anno di nascita di ogni cliente e ti chiedono un programma che, dato l'anno, risponda "Boomer" oppure "Non Boomer" (scritti esattamente così, perché poi il testo finisce in un filtro automatico).
+
+Il punto delicato è ai bordi: chi è nato nel 1946 o nel 1964 è dentro. Il capo dell'agenzia è pignolo e vuole che tu lo scriva in almeno due modi diversi, per controllare che diano lo stesso risultato proprio su quegli anni.

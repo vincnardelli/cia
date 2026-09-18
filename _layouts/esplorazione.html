@@ -2,13 +2,13 @@
 layout: default
 ---
 <div class="esplorazione">
-  <div class="settimana__kicker"><span class="tag">Esplorazione · settimana {{ page.week }}</span></div>
+  <div class="modulo__kicker"><span class="tag">Esplorazione · modulo {{ page.modulo }}</span></div>
   <h1>{{ page.title }}</h1>
-  <p class="settimana__idea">{{ page.question }}</p>
+  <p class="modulo__idea">{{ page.question }}</p>
   {% if page.ready %}
   <iframe class="espl-frame" src="{{ site.baseurl }}/esplorazioni/{{ page.slug }}.html" title="{{ page.title }}"></iframe>
   {% else %}
-  <div class="via"><div class="via__k">In arrivo</div>Questa esplorazione sarà pubblicata con la settimana {{ page.week }}.</div>
+  <div class="via"><div class="via__k">In arrivo</div>Questa esplorazione sarà pubblicata con il modulo {{ page.modulo }}.</div>
   {% endif %}
   {{ content }}
 </div>

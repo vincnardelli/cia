@@ -1,29 +1,45 @@
 ---
 layout: lab
 title: Autovelox come funzione
-week: 3
+modulo: 3
 order: 3
-level: base
+difficolta: facile
 language: R
 ai_mode: 'off'
-objective: Riscrivere l'autovelox come funzione `multa(velocita, limite)` riutilizzabile, e verificarla con gli stessi casi della settimana 2.
+objective: Riscrivere l'autovelox come funzione `multa(velocita, limite)` riutilizzabile, e verificarla con gli stessi casi del modulo 2.
 inputs:
 - name: velocita
   type: numero
 - name: limite
   type: numero
-output:
+risultato:
   name: multa
   type: numero
   desc: valore restituito dalla funzione
 function: multa
+regole: |
+  - Stesse regole dell'[Autovelox](../autovelox/): 0 / 36 / 148 / 370 / 500 € per le fasce "entro il limite", "non oltre 10", "non oltre 40", "non oltre 60", "oltre 60".
+  - Il codice deve **definire** la funzione `multa <- function(velocita, limite){ ... }` che **restituisce** l'importo (ultima espressione o `return()`).
+  - La verifica chiama la tua funzione con i valori di ogni caso: non servono assegnazioni di prova.
+  - In RStudio, usala su un vettore di veicoli con un ciclo `for` e conta quante multe superano i 100 €.
 skeleton: |
   multa <- function(velocita, limite){
-    # calcola e restituisci l'importo
-
+    # ...
+    if(differenza <= 0){
+      # ...
+    }else if(differenza <= 10){
+      # ...
+    }else if(differenza <= 40){
+      # ...
+    }else if(differenza <= 60){
+      # ...
+    }else{
+      # ...
+    }
+    # ...
   }
 
-  # prova: multa(75, 50)
+  print(multa(45, 50))
 tests:
 - inputs:
     velocita: 45
@@ -86,7 +102,8 @@ solution: |
 solution_after: ''
 ---
 
-- Stesse regole dell'[Autovelox](../autovelox/): 0 / 36 / 148 / 370 / 500 € per le fasce "entro il limite", "non oltre 10", "non oltre 40", "non oltre 60", "oltre 60".
-- Il codice deve **definire** la funzione `multa <- function(velocita, limite){ ... }` che **restituisce** l'importo (ultima espressione o `return()`).
-- La verifica chiama la tua funzione con i valori di ogni caso: non servono assegnazioni di prova.
-- In RStudio, usala su un vettore di veicoli con un ciclo `for` e conta quante multe superano i 100 €.
+Il software dell'autovelox scritto nel modulo 2 funziona, ma il Comune ne ha comprati altri dodici, su strade con limiti diversi, e vuole usare **lo stesso codice** per tutti senza copiarlo e incollarlo ogni volta. È il momento di trasformarlo in una **funzione**.
+
+Le regole restano quelle dell'articolo 142: nessuna sanzione entro il limite; 36 € per un eccesso non oltre 10 km/h; 148 € oltre 10 e non oltre 40; 370 € oltre 40 e non oltre 60; 500 € oltre 60. Il tuo codice deve **definire** la funzione `multa(velocita, limite)` che restituisce l'importo. La verifica non assegna variabili: chiama direttamente la tua funzione con i valori di ogni caso.
+
+In RStudio, poi, usala su un vettore di veicoli con un ciclo e conta quante multe superano i 100 euro: è esattamente ciò che vuole il Comune.

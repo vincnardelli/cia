@@ -4,11 +4,12 @@ title: VS Code e Copilot
 permalink: /guide/vscode_copilot
 parent: Guide
 nav_order: 6
+published: false
 ---
 
 # 🧑‍💻 VS Code con GitHub Copilot
 
-Serve nella settimana 11, per vedere un **agente** che scrive codice da solo. Non sostituisce RStudio: è un'esperienza di una lezione.
+Serve nel modulo 11, per vedere un **agente** che scrive codice da solo. Non sostituisce RStudio: è un'esperienza di una lezione.
 
 1. Crea un account su [github.com](https://github.com) con la mail universitaria (serve anche per la verifica studenti).
 2. Installa [Visual Studio Code](https://code.visualstudio.com).

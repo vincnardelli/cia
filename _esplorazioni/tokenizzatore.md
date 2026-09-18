@@ -1,7 +1,8 @@
 ---
 title: Il tokenizzatore
 slug: tokenizzatore
-week: 9
+published: false
+modulo: 9
 question: In quanti pezzi un modello spezza una frase?
 ready: false
 ---

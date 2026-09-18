@@ -2,13 +2,14 @@
 layout: page
 title: Skill
 permalink: /skill/
-description: Installa la skill del corso nel tuo assistente AI (ChatGPT, Claude o Gemini)
+description: Installa la skill del corso nel tuo assistente AI
 nav_order: 4
+published: false
 ---
 
 # 🧠 La skill del corso
 
-La **skill** è un insieme di istruzioni e file che insegnano al tuo assistente AI come aiutarti in questo corso: conosce il programma, lo stile del codice, i lab, e soprattutto **non ti dà la soluzione pronta** ma ti fa trovare i casi limite. La stessa skill funziona su ChatGPT, Claude e Gemini; la installi una volta e poi, dalle pagine dei lab, il bottone *Apri nell'assistente* ti manda direttamente nella chat giusta.
+La **skill** è un insieme di istruzioni e file che insegnano al tuo assistente AI come aiutarti in questo corso: conosce il programma, lo stile del codice, i lab, e soprattutto **non ti dà la soluzione pronta** ma ti fa trovare i casi limite. La stessa skill funziona su {% include icona.html nome="gpt" testo=true %}, {% include icona.html nome="claude" testo=true %} e {% include icona.html nome="gemini" testo=true %}; la installi una volta e poi, dalle pagine dei lab, il bottone *Lavora con l'AI* ti manda nella chat giusta con il prompt pronto.
 
 Quando la skill è attiva, puoi parlarle così:
 
@@ -17,15 +18,14 @@ Quando la skill è attiva, puoi parlarle così:
 | `tutor:` + il tuo codice | ti dice **una** cosa da guardare, come domanda, con casi da provare; mai la soluzione intera |
 | `assistito:` + la specifica | analizza l'esercizio, ti fa domande sui casi limite, poi propone la struttura |
 | `errore:` + il messaggio di R | ti traduce l'errore e ti dice dove guardare |
-| `traduci:` + il codice | R → Python (o viceversa), con le differenze che contano |
-| `spiega:` + un concetto | otto righe, un esempio, il rimando alla settimana |
+| `spiega:` + un concetto | otto righe, un esempio, il rimando al modulo |
 
 Versione skill: **{{ site.skill_version }}** · [SKILL.md]({{ site.baseurl }}/assets/skill/istruzioni.txt) · [programma.md]({{ site.baseurl }}/assets/skill/programma.md) · [stile.md]({{ site.baseurl }}/assets/skill/stile.md) · [lab.md]({{ site.baseurl }}/assets/skill/lab.md)
 
 <div class="tabs" data-tabs>
-  <div class="tab is-active" data-tab="gpt">ChatGPT</div>
-  <div class="tab" data-tab="claude">Claude</div>
-  <div class="tab" data-tab="gemini">Gemini</div>
+  <div class="tab is-active" data-tab="gpt">{% include icona.html nome="gpt" testo=true size=20 %}</div>
+  <div class="tab" data-tab="claude">{% include icona.html nome="claude" testo=true size=20 %}</div>
+  <div class="tab" data-tab="gemini">{% include icona.html nome="gemini" testo=true size=20 %}</div>
 </div>
 
 <div class="tab-panel is-active" data-panel="gpt" markdown="1">
@@ -70,7 +70,7 @@ Il GPT condiviso del corso sarà pubblicato qui all'inizio del corso. Nel fratte
 <div class="via__k">Skill vera e propria (piani a pagamento)</div>
 Scarica la cartella della skill e caricala in **Settings → Capabilities → Skills**: si attiva da sola quando parli di codice o di un lab del corso, senza dover aprire un progetto.
 
-[Scarica cbd-skill.zip]({{ site.baseurl }}/assets/skill/cbd-skill.zip){: .btn .btn-primary }
+[Scarica cia-skill.zip]({{ site.baseurl }}/assets/skill/cia-skill.zip){: .btn .btn-primary }
 </div>
 </div>
 
@@ -101,7 +101,7 @@ La Gem condivisa del corso sarà pubblicata qui all'inizio del corso. Nel fratte
 
 ## ✅ Test di installazione
 
-Incolla questo messaggio nella chat del progetto/GPT/Gem:
+Incolla questo messaggio nella chat del tuo assistente:
 
 <pre data-test-prompt>tutor: ecco la mia bozza dell'autovelox
 
@@ -120,31 +120,12 @@ multa</pre>
 
 La skill è attiva se la risposta ha **tre sezioni** — *Cosa funziona*, *Una cosa da guardare*, *Prova questo* — ti fa **una sola domanda** (probabilmente su cosa succede con esattamente 10 km/h oltre il limite) e **non** ti riscrive il codice. Se invece ti consegna la soluzione corretta, le istruzioni non sono state caricate: ricontrolla il passo 2.
 
-## ⚙️ Il mio assistente
-
-Imposta qui una volta il tuo assistente: le pagine dei lab lo useranno per il bottone *Apri nell'assistente*.
-
-<div class="ai-panel" markdown="0">
-  <div class="ai-panel__row">
-    <label>Assistente <select data-pref-provider><option value="gpt">ChatGPT</option><option value="claude">Claude</option><option value="gemini">Gemini</option><option value="altro">altro</option></select></label>
-    <label><input type="checkbox" data-pref-skill> ho installato la skill</label>
-    <span class="muted" data-pref-saved></span>
-  </div>
-  <p class="ai-panel__note">Senza la skill installata, il bottone dei lab include nel prompt una versione compatta delle regole: funziona lo stesso, il prompt è solo più lungo.</p>
-</div>
-
 <script>
 (function(){
   document.querySelectorAll('[data-tabs] .tab').forEach(t => t.addEventListener('click', () => {
     document.querySelectorAll('[data-tabs] .tab').forEach(x => x.classList.toggle('is-active', x === t));
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('is-active', p.dataset.panel === t.dataset.tab));
   }));
-  const st = CBD.ai();
-  const sel = document.querySelector('[data-pref-provider]'), cb = document.querySelector('[data-pref-skill]'), saved = document.querySelector('[data-pref-saved]');
-  sel.value = st.provider || 'gpt'; cb.checked = !!st.skill;
-  const tab = document.querySelector('[data-tabs] .tab[data-tab="' + sel.value + '"]'); if (tab) tab.click();
-  function save(){ CBD.setAi({provider: sel.value, skill: cb.checked}); saved.textContent = 'salvato ✓'; setTimeout(()=>saved.textContent='',1500); }
-  sel.addEventListener('change', save); cb.addEventListener('change', save);
   function copyText(t, btn){ navigator.clipboard.writeText(t).then(()=>{ const o=btn.textContent; btn.textContent='Copiato ✓'; setTimeout(()=>btn.textContent=o,1500); }); }
   document.querySelectorAll('[data-copy-file]').forEach(b => b.addEventListener('click', () => fetch(b.dataset.copyFile).then(r=>r.text()).then(t=>copyText(t,b))));
   document.querySelectorAll('[data-copy-el]').forEach(b => b.addEventListener('click', () => copyText(document.querySelector(b.dataset.copyEl).textContent, b)));

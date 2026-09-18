@@ -1,9 +1,9 @@
 ---
 layout: lab
 title: Autovelox
-week: 2
+modulo: 2
 order: 2
-level: base
+difficolta: facile
 language: R
 ai_mode: 'off'
 objective: Calcolare la sanzione per eccesso di velocità secondo l'art. 142 del Codice della Strada.
@@ -14,15 +14,36 @@ inputs:
 - name: limite
   type: numero
   desc: limite di velocità, km/h
-output:
+risultato:
   name: multa
   type: numero
   desc: sanzione in euro
+regole: |
+  Art. 142 CdS (importi minimi):
+
+  - entro il limite: nessuna sanzione;
+  - oltre il limite di **non oltre 10 km/h**: 36 €;
+  - di **oltre 10 e non oltre 40 km/h**: 148 €;
+  - di **oltre 40 e non oltre 60 km/h**: 370 €;
+  - di **oltre 60 km/h**: 500 €.
 skeleton: |
-  velocita <- 70
+  velocita <- 45
   limite <- 50
 
-  # alla fine deve esistere la variabile multa
+  # ...
+  if(differenza <= 0){
+    # ...
+  }else if(differenza <= 10){
+    # ...
+  }else if(differenza <= 40){
+    # ...
+  }else if(differenza <= 60){
+    # ...
+  }else{
+    # ...
+  }
+
+  print(multa)
 tests:
 - inputs:
     velocita: 45
@@ -94,10 +115,8 @@ solution: |
 solution_after: ''
 ---
 
-Art. 142 CdS (importi minimi):
+Il Comune sta sostituendo il software di un autovelox e ti chiede di riscrivere la parte che calcola la multa. La legge è l'articolo 142 del Codice della Strada, che prevede importi crescenti in base a **di quanto** si supera il limite, e per questo lab si usano gli importi minimi.
 
-- entro il limite: nessuna sanzione;
-- oltre il limite di **non oltre 10 km/h**: 36 €;
-- di **oltre 10 e non oltre 40 km/h**: 148 €;
-- di **oltre 40 e non oltre 60 km/h**: 370 €;
-- di **oltre 60 km/h**: 500 €.
+Il testo di legge parla di eccessi "non oltre 10 km/h", "oltre 10 e non oltre 40", "oltre 40 e non oltre 60" e "oltre 60". Chi rispetta il limite non paga nulla. Le parole "non oltre" e "oltre" decidono da che parte cade chi va esattamente 10 km/h sopra il limite, e la differenza tra 36 e 148 euro per un automobilista la fa il tuo confronto.
+
+Scrivi il programma che, data la velocità rilevata e il limite del tratto, calcola l'importo della sanzione.

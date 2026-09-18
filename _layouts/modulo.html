@@ -1,0 +1,123 @@
+---
+layout: default
+---
+{% assign moduli = site.moduli | sort: 'number' %}
+{% assign labs = site.lab | where: 'modulo', page.number | sort: 'order' %}
+{% assign sezione_names = "Il codice|Come imparano le macchine|LLM e agenti" | split: "|" %}
+{% assign pidx = page.sezione | minus: 1 %}
+{% assign testo = content | strip_html | strip %}
+{% assign ha_lezione = false %}{% if testo.size > 0 %}{% assign ha_lezione = true %}{% endif %}
+
+<div class="modulo modulo--p{{ page.sezione }}">
+  <div class="modulo__head">
+    <div class="modulo__kicker">
+      <span class="tag tag--sezione tag--p{{ page.sezione }}">Sezione {{ page.sezione }} · {{ sezione_names[pidx] }}</span>
+      <span class="tag tag--lang">{{ page.language }}</span>
+    </div>
+    <h1 class="modulo__title"><span class="modulo__num">{{ page.number }}</span> {{ page.title }}</h1>
+    {% if page.slides and page.slides.size > 0 %}
+    <div class="slide-dl">
+      {% for s in page.slides %}
+      <a class="slide-dl__box" href="{{ site.baseurl }}/{{ s.pdf }}" download>
+        <span class="slide-dl__icon" aria-hidden="true">PDF</span>
+        <span class="slide-dl__txt"><span class="slide-dl__t">{{ s.titolo }}</span>{% if s.descr %}<span class="slide-dl__d">{{ s.descr }}</span>{% endif %}</span>
+        <span class="slide-dl__btn">Scarica ↓</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% elsif page.slides_pdf %}
+    <div class="slide-dl">
+      <a class="slide-dl__box" href="{{ site.baseurl }}/{{ page.slides_pdf }}" download>
+        <span class="slide-dl__icon" aria-hidden="true">PDF</span>
+        <span class="slide-dl__txt"><span class="slide-dl__t">Slide</span></span>
+        <span class="slide-dl__btn">Scarica ↓</span>
+      </a>
+    </div>
+    {% endif %}
+    <p class="modulo__idea">{{ page.idea }}</p>
+  </div>
+
+  <div class="concetti">
+    <div class="concetti__col">
+      <div class="concetti__label">Cosa devi già sapere</div>
+      {% if page.concepts_required.size > 0 %}
+      <ul class="concetti__list">
+        {% for c in page.concepts_required %}
+          {% assign found = false %}
+          {% for w in moduli %}
+            {% if w.concepts_new contains c and found == false %}
+              <li><a href="{{ site.baseurl }}{{ w.url }}" title="Modulo {{ w.number }} · {{ w.title }}">{{ c }} <span class="concetti__ref">mod. {{ w.number }}</span></a></li>
+              {% assign found = true %}
+            {% endif %}
+          {% endfor %}
+          {% unless found %}<li>{{ c }}</li>{% endunless %}
+        {% endfor %}
+      </ul>
+      {% else %}<p class="concetti__none">Niente: si parte da zero.</p>{% endif %}
+    </div>
+    <div class="concetti__col">
+      <div class="concetti__label">Cosa impari in questo modulo</div>
+      <ul class="concetti__list concetti__list--new">
+        {% for c in page.concepts_new %}<li>{{ c }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <nav class="modulo__tabs" aria-label="Parti del modulo">
+    {% if ha_lezione %}<a href="#lezione">Lezione</a>{% endif %}
+    {% if site.mostra_lab %}<a href="#lab">Lab <span class="count">{{ labs.size }}</span></a>{% endif %}
+    {% if page.explorations.size > 0 %}<a href="#esplorazioni">Esplorazioni</a>{% endif %}
+  </nav>
+
+  {% if ha_lezione %}
+  <section id="lezione" class="modulo__lezione">
+    <h2>Lezione</h2>
+    {{ content }}
+  </section>
+  {% endif %}
+
+  {% if site.mostra_lab %}
+  <section id="lab" class="modulo__lab">
+    <h2>Lab</h2>
+    {% if labs.size > 0 %}
+    <div class="lab-grid">
+      {% for lab in labs %}{% include lab-card.html lab=lab %}{% endfor %}
+    </div>
+    {% else %}<p class="muted">I lab di questo modulo arrivano con la lezione.</p>{% endif %}
+  </section>
+  {% endif %}
+
+  {% if page.explorations.size > 0 %}
+  <section id="esplorazioni" class="modulo__espl">
+    <h2>Esplorazioni</h2>
+    <div class="espl-grid">
+      {% for slug in page.explorations %}
+        {% assign e = site.esplorazioni | where: 'slug', slug | first %}
+        {% if e %}
+        <a class="espl-card" href="{{ site.baseurl }}{{ e.url }}">
+          <div class="espl-card__title">{{ e.title }}</div>
+          <div class="espl-card__q">{{ e.question }}</div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% comment %} Ripassa con l'AI: nascosto finché site.ripassa_ai non è true in _config.yml {% endcomment %}
+  {% if ha_lezione and site.ripassa_ai %}
+  <section class="modulo__ai">
+    <h2>Ripassa con l'AI</h2>
+    {% include ai-panel.html contesto="modulo" titolo=page.title modulo=page.number %}
+    <textarea class="ai-panel__lezione" hidden>{{ testo }}</textarea>
+  </section>
+  {% endif %}
+
+  <div class="modulo__nav">
+    {% for w in moduli %}
+      {% assign pn = page.number | minus: 1 %}{% assign nn = page.number | plus: 1 %}
+      {% if w.number == pn %}<a class="btn btn-outline" href="{{ site.baseurl }}{{ w.url }}">← {{ w.number }} · {{ w.title }}</a>{% endif %}
+      {% if w.number == nn %}<a class="btn btn-outline modulo__next" href="{{ site.baseurl }}{{ w.url }}">{{ w.number }} · {{ w.title }} →</a>{% endif %}
+    {% endfor %}
+  </div>
+</div>

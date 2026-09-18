@@ -1,29 +1,30 @@
 # Schema dei contenuti (branch 2026-27)
 
-## _settimane/NN-slug.md
+## _moduli/NN-slug.md
 
 ```yaml
 ---
-layout: settimana
+layout: modulo
 number: 2                 # 1..12
 title: Decidere
-pillar: 1                 # 1 = Il codice (R) · 2 = Come imparano le macchine · 3 = LLM e agenti
+sezione: 1                 # 1 = Il codice (R) · 2 = Come imparano le macchine · 3 = LLM e agenti
 language: R               # R | Python | R → Python
 idea: "Il computer sceglie un ramo in base a una condizione."   # una frase
 hours: 5
-dates: []                 # es. [2026-09-21, 2026-09-25] — da compilare
+published: false         # togliere (o mettere true) quando il modulo va online
 concepts_new: [if/else, else if, operatori logici, "%in%"]      # concetti introdotti (stringhe brevi, riusate identiche altrove)
-concepts_required: [variabili, confronti]                       # concetti che devono già essere noti (stessa stringa usata in concepts_new di un'altra settimana)
+concepts_required: [variabili, confronti]                       # concetti che devono già essere noti (stessa stringa usata in concepts_new di un'altra modulo)
 explorations: []          # slug di _esplorazioni
 slides_pdf:               # opzionale
+slides:                   # opzionale, più PDF: lista di {titolo, pdf}; se presente sostituisce slides_pdf
 ---
 ```
 Il corpo è la **lezione in markdown**: spiegazione estesa (più di quanto detto in aula), con:
 - blocchi di codice R con ```r
 - box "In aula abbiamo visto solo…" scritto come `> **In aula** …` (blockquote)
 - box attenzione per i casi limite: `> **Attenzione** …`
-- un paragrafo finale "Per approfondire" con link alla settimana precedente/successiva quando serve.
-I lab NON si elencano nel corpo: li aggiunge il layout leggendo `_lab` (campo `week`).
+- un paragrafo finale "Per approfondire" con link al modulo precedente/successiva quando serve.
+I lab NON si elencano nel corpo: li aggiunge il layout leggendo `_lab` (campo `modulo`).
 
 ## _lab/slug.md
 
@@ -31,15 +32,15 @@ I lab NON si elencano nel corpo: li aggiunge il layout leggendo `_lab` (campo `w
 ---
 layout: lab
 title: Autovelox
-week: 2
-level: base               # base | extra | sfida
+modulo: 2
+difficolta: facile               # facile | difficile
 language: R               # R | Python
 ai_mode: off              # off (fatto a mano in aula) | on (con l'assistente)
 objective: "Calcolare la sanzione per eccesso di velocità secondo l'art. 142 CdS."
 inputs:
   - {name: velocita, type: numero, desc: "velocità rilevata in km/h"}
   - {name: limite,   type: numero, desc: "limite di velocità in km/h"}
-output: {name: multa, type: numero, desc: "importo della sanzione in euro"}
+risultato: {name: multa, type: numero, desc: "importo della sanzione in euro"}
 skeleton: |
   velocita <- 70
   limite <- 50
