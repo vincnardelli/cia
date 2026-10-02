@@ -116,7 +116,7 @@ p .icona, li .icona, td .icona, h2 .icona, h3 .icona { margin: 0 1px; }
 .slide-dl--codice { grid-template-columns: repeat(auto-fill, minmax(275px, 1fr)); }
 .slide-dl--codice .slide-dl__t { white-space: nowrap; font-size: 15px; }
 .slide-dl--codice .slide-dl__icon { width: 34px; height: 40px; }
-.slide-dl__icon--r { background: #276DC3; font-size: 15px; align-items: center; padding-bottom: 0; }
+.slide-dl__box .slide-dl__icon--r { background: #276DC3; font-size: 16px; align-items: center; padding-bottom: 0; }
 .slide-dl__txt { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
 .slide-dl__t { font-weight: 700; font-size: 16px; }
 .slide-dl__d { color: $muted; font-size: 13.5px; }
