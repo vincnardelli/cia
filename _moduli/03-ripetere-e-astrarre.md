@@ -12,7 +12,7 @@ explorations: []
 slides_pdf:
 slides:
   - titolo: Lezione 4
-    descr: BMI, Taxi o Uber
+    descr: Classificazione BMI
     pdf: slide/lezione_4.pdf
 ---
 
