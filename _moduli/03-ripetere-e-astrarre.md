@@ -14,6 +14,13 @@ slides:
   - titolo: Lezione 4
     descr: Classificazione BMI
     pdf: slide/lezione_4.pdf
+codice:
+  - titolo: lezione_4.R
+    descr: il codice della lezione
+    file: codice/4/lezione_4.R
+  - titolo: bmi.R
+    descr: lab Classificazione BMI
+    file: codice/4/bmi.R
 ---
 
 ## Più valori in una variabile sola
@@ -69,7 +76,7 @@ for(i in 1:4){
 
 `for(i in 1:4)` fa girare il blocco quattro volte, con `i` che vale 1, poi 2, 3, 4. Dentro, `eta[i]` e `nomi[i]` sono l'età e il nome della persona corrente. Il corpo del ciclo è esattamente l'`if` del modulo scorso: non abbiamo imparato una regola nuova, l'abbiamo applicata a più casi.
 
-Lo stesso schema serve ogni volta che una regola va applicata a molti casi: i pazienti del lab del BMI, i minuti di una corsa in taxi. Il ciclo non introduce una regola nuova, ripete quella che sapete già scrivere.
+Lo stesso schema serve ogni volta che una regola va applicata a molti casi. Il ciclo non introduce una regola nuova: ripete quella che sapete già scrivere.
 
 Dentro un ciclo serve spesso un **accumulatore**: una variabile che nasce prima del ciclo e cresce a ogni giro. Qui conta le persone in pensione:
 
@@ -84,6 +91,43 @@ quanti
 ```
 
 È lo schema di ogni conteggio, somma o totale: inizializza fuori, aggiorna dentro, leggi dopo. Se l'inizializzazione finisce dentro il ciclo, l'accumulatore riparte da zero a ogni giro e resta solo l'ultimo valore: nessun errore, risultato sbagliato.
+
+## Il lab del BMI: vettori e ciclo insieme
+
+Il lab dei pazienti calcola il BMI (peso / altezza²) di cinque persone e le classifica secondo le fasce del Ministero della Salute: sottopeso sotto 18,5; normopeso da 18,5 a 25 escluso; sovrappeso da 25 a 30 escluso; poi i tre gradi di obesità. Il BMI si calcola in un colpo solo, vettorialmente; la classificazione, che è un `if`, richiede il ciclo:
+
+```r
+altezza <- c(1.58, 1.73, 1.81, 1.47, 1.74)
+peso <- c(62, 86, 85, 95, 75)
+
+bmi <- peso / altezza^2
+
+sovrappeso <- 0
+for(i in 1:length(altezza)){
+  if(bmi[i] < 18.5){
+    classificazione <- "Sottopeso"
+  }else if(bmi[i] < 25){
+    classificazione <- "Normopeso"
+  }else if(bmi[i] < 30){
+    classificazione <- "Sovrappeso"
+  }else if(bmi[i] < 35){
+    classificazione <- "Obesità grado I"
+  }else if(bmi[i] < 40){
+    classificazione <- "Obesità grado II"
+  }else{
+    classificazione <- "Obesità grado III"
+  }
+  if(bmi[i] >= 25){
+    sovrappeso <- sovrappeso + 1
+  }
+  print(paste0("Paziente ", i, ": BMI ", round(bmi[i], 2), " - ", classificazione))
+}
+print(paste0("Pazienti in sovrappeso o oltre: ", sovrappeso))
+```
+
+Due cose da notare. La prima: `bmi <- peso / altezza^2` calcola i cinque valori senza ciclo, perché aritmetica e confronti lavorano già elemento per elemento; il ciclo serve solo dove c'è un `if`. La seconda: le fasce sono **chiuse a sinistra**, quindi un BMI di esattamente 25 è «Sovrappeso», non «Normopeso». Per questo tutti i confronti sono `<` e nessuno è `<=`.
+
+> **Attenzione** Nel codice dell'edizione precedente le soglie erano scritte con `<=`: un paziente con BMI esattamente 25 finiva in «Normopeso». Il programma gira, non dà errori, e sbaglia solo sui confini. I casi da provare sono sempre quelli: 18,5, 25, 30, 35 e 40 esatti.
 
 > **Attenzione** `for(i in 1:length(x))` con un vettore vuoto fa girare il ciclo due volte, con `i` uguale a 1 e a 0, perché `1:0` è il vettore `c(1, 0)`. Se non siete sicuri che il vettore abbia almeno un elemento, usate `seq_along(x)`, che con un vettore vuoto non gira affatto.
 
