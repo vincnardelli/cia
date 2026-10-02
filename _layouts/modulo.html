@@ -34,6 +34,17 @@ layout: default
       </a>
     </div>
     {% endif %}
+    {% if page.codice and page.codice.size > 0 %}
+    <div class="slide-dl slide-dl--codice">
+      {% for c in page.codice %}
+      <a class="slide-dl__box" href="{{ site.baseurl }}/{{ c.file }}" download>
+        <span class="slide-dl__icon slide-dl__icon--r" aria-hidden="true">R</span>
+        <span class="slide-dl__txt"><span class="slide-dl__t">{{ c.titolo }}</span>{% if c.descr %}<span class="slide-dl__d">{{ c.descr }}</span>{% endif %}</span>
+        <span class="slide-dl__btn">Scarica ↓</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
     <p class="modulo__idea">{{ page.idea }}</p>
   </div>
 

@@ -6,11 +6,14 @@ sezione: 1
 language: R
 idea: "La stessa regola applicata a molti casi diventa un ciclo; incapsulata con un nome diventa una funzione."
 hours: 4
-published: false
 concepts_new: [vettori, indicizzazione, operazioni vettoriali, ciclo for, accumulatore, funzioni, test di una funzione]
 concepts_required: [variabili, operatori di confronto, if/else, operatori logici]
 explorations: []
 slides_pdf:
+slides:
+  - titolo: Lezione 4
+    descr: BMI, Taxi o Uber
+    pdf: slide/lezione_4.pdf
 ---
 
 ## Più valori in una variabile sola

@@ -6,11 +6,27 @@ sezione: 1
 language: R
 idea: "Il computer sceglie un ramo in base a una condizione."
 hours: 4
-published: false
 concepts_new: [if/else, else if, operatori logici, "%in%", if annidati]
 concepts_required: [variabili, operatori di confronto, valori logici]
 explorations: []
 slides_pdf:
+slides:
+  - titolo: Lezione 3
+    descr: Boomer finder, Autovelox, Prezzi dei voli
+    pdf: slide/lezione_3.pdf
+codice:
+  - titolo: lezione_3.R
+    descr: il codice della lezione
+    file: codice/3/lezione_3.R
+  - titolo: boomer.R
+    descr: lab Boomer finder
+    file: codice/3/boomer.R
+  - titolo: autovelox.R
+    descr: lab Autovelox
+    file: codice/3/autovelox.R
+  - titolo: prezzi_voli.R
+    descr: lab Pricing dei voli
+    file: codice/3/prezzi_voli.R
 ---
 
 ## Dal confronto alla decisione
