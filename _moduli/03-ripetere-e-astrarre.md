@@ -15,7 +15,7 @@ slides:
     descr: Classificazione BMI
     pdf: slide/lezione_4.pdf
   - titolo: Lezione 5
-    descr: Taxi o Uber, in quattro passi
+    descr: Taxi o Uber, in cinque passi
     pdf: slide/lezione_5.pdf
 codice:
   - titolo: lezione_4.R
@@ -136,14 +136,15 @@ Due cose da notare. La prima: `bmi <- peso / altezza^2` calcola i cinque valori 
 
 ## Il lab del taxi: un passo alla volta
 
-Il secondo lab cresce in quattro passi, e ogni passo aggiunge una regola sola.
+Il secondo lab cresce in cinque passi, e ogni passo aggiunge una regola sola.
 
 1. **La quota variabile.** Il tassametro di Roma non fa pagare solo i chilometri: quando il taxi è fermo nel traffico scatta la tariffa a tempo. Il tracciato è un vettore con i km percorsi in ciascun minuto; per ogni minuto la velocità (km × 60) decide quale tariffa si applica, 32,58 euro l'ora sotto i 20 km/h, 1,33 euro al km sopra. Il costo è un accumulatore che somma minuto per minuto: lo schema del BMI, con una somma al posto di un conteggio.
 2. **La quota fissa.** Dipende da giorno e ora: feriale (3,50 €), sabato o festivo (5,00 €), notturna (7,50 €). Sono tre casi, quindi un `if` con due `else if`, e conviene mettere per prima la notte, che vale per tutti i giorni.
 3. **La decisione.** Uber costa 9 euro: il programma non stampa più un numero, ma una scelta. Con le tariffe di oggi il taxi perde più spesso di quanto perdesse l'anno scorso.
-4. **La funzione.** Ai primi tre passi si cambia corsa modificando le righe in cima e rieseguendo tutto. Al quarto il calcolo prende un nome, `costo_corsa(distanza, giorno, ora)`, e una corsa diventa una riga sola: così si può provarla su tre corse diverse, o contare con un ciclo su quante conviene il taxi.
+4. **La funzione.** Ai primi tre passi si cambia corsa modificando le righe in cima e rieseguendo tutto. Al quarto il calcolo prende un nome, `costo_corsa(distanza, giorno, ora)`, e una corsa diventa una riga sola.
+5. **Tre corse.** La stessa corsa in tre momenti diversi, domenica a mezzogiorno, mercoledì alle 9 e sabato alle 23: giorni e ore stanno in due vettori, la funzione si chiama dentro un ciclo e un contatore dice in quante corse su tre conviene il taxi.
 
-Il quarto passo è il punto del modulo: la stessa regola, scritta una volta e riusata tante. La prossima sezione mostra come si scrive una funzione, partendo dall'autovelox del modulo 2.
+Il quarto e il quinto passo sono il punto del modulo: la stessa regola, scritta una volta e riusata tante. La prossima sezione mostra come si scrive una funzione, partendo dall'autovelox del modulo 2.
 
 > **Attenzione** A esattamente 20 km/h (0,333 km in un minuto) il tariffario dice «inferiore a 20» per il tempo e «superiore a 20» per la distanza: i 20 esatti non sono coperti da nessuna delle due. Decidete voi da che parte mandarli, e scrivetelo nei test: è una scelta, non un dettaglio.
 
