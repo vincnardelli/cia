@@ -17,8 +17,8 @@ risultato:
   desc: costo totale in euro, 2 decimali
 regole: |
   - In ogni minuto il tassametro sceglie la tariffa in base alla velocità di quel minuto: `velocita = km * 60` (km/h).
-  - Velocità **sotto i 20 km/h** → tariffa oraria: 28 €/h, cioè 28/60 € per quel minuto.
-  - Velocità di 20 km/h o più → tariffa chilometrica: 1,14 € per km percorso in quel minuto.
+  - Velocità **sotto i 20 km/h** → tariffa oraria: 32,58 €/h, cioè 32.58/60 € per quel minuto.
+  - Velocità di 20 km/h o più → tariffa chilometrica: 1,33 € per km percorso in quel minuto.
   - Il costo è la somma dei minuti. Arrotonda a due decimali.
 skeleton: |
   distanza <- c(1, 0.3, 0.5, 0.8, 0.2)
@@ -42,19 +42,19 @@ tests:
     - 0.5
     - 0.8
     - 0.2
-  expected: 3.56
+  expected: 4.15
   visible: true
 - inputs:
     distanza:
     - 0.5
     - 0.5
     - 0.5
-  expected: 1.71
+  expected: 2.0
   visible: true
 - inputs:
     distanza:
     - 0.1
-  expected: 0.47
+  expected: 0.54
   visible: false
   boundary: true
   hint: 'Un solo minuto a 6 km/h: costa un sessantesimo della tariffa oraria.'
@@ -62,7 +62,7 @@ tests:
     distanza:
     - 0.35
     - 0.3
-  expected: 0.87
+  expected: 1.01
   visible: false
   boundary: true
   hint: '21 km/h e 18 km/h: il primo minuto è a km, il secondo a tempo.'
@@ -72,7 +72,7 @@ tests:
     - 0
     - 0
     - 0
-  expected: 1.87
+  expected: 2.17
   visible: false
   boundary: true
   hint: 'Taxi fermo per quattro minuti: la velocità è zero, ma il tassametro corre a tempo.'
@@ -81,13 +81,13 @@ tests:
     - 2
     - 1.5
     - 1.2
-  expected: 5.36
+  expected: 6.25
   visible: false
 solution: |
   distanza <- c(1, 0.3, 0.5, 0.8, 0.2)
 
-  tariffa_min <- 28/60
-  tariffa_km <- 1.14
+  tariffa_min <- 32.58/60
+  tariffa_km <- 1.33
   costo <- 0
 
   for(i in 1:length(distanza)){
@@ -105,6 +105,6 @@ solution_after: ''
 
 A Roma il tassametro non fa pagare solo i chilometri: quando il taxi è fermo nel traffico, scatta la **tariffa a tempo**. Un'associazione di consumatori ti chiede di ricostruire il costo di una corsa a partire da un tracciato GPS, per verificare gli scontrini dei tassisti.
 
-Il tracciato è un vettore con i **km percorsi in ciascun minuto** della corsa. In ogni minuto il tassametro guarda la velocità di quel minuto (i km del minuto moltiplicati per 60 danno i km/h): se è **sotto i 20 km/h** applica la tariffa oraria, 28 € all'ora, cioè 28/60 € per quel minuto; se è di 20 km/h o più applica la tariffa chilometrica, 1,14 € per ogni km percorso in quel minuto. Il costo della corsa è la somma dei minuti, arrotondata a due decimali.
+Il tracciato è un vettore con i **km percorsi in ciascun minuto** della corsa. In ogni minuto il tassametro guarda la velocità di quel minuto (i km del minuto moltiplicati per 60 danno i km/h): se è **sotto i 20 km/h** applica la tariffa oraria, 32,58 € all'ora, cioè 32.58/60 € per quel minuto; se è di 20 km/h o più applica la tariffa chilometrica, 1,33 € per ogni km percorso in quel minuto. Il costo della corsa è la somma dei minuti, arrotondata a due decimali.
 
 Scrivi il programma che, dato il vettore delle distanze, calcola il costo. Un taxi fermo per quattro minuti a un semaforo ha velocità zero, ma il tassametro corre lo stesso.
