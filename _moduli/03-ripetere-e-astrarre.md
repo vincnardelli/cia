@@ -14,6 +14,9 @@ slides:
   - titolo: Lezione 4
     descr: Classificazione BMI
     pdf: slide/lezione_4.pdf
+  - titolo: Lezione 5
+    descr: Taxi o Uber, in quattro passi
+    pdf: slide/lezione_5.pdf
 codice:
   - titolo: lezione_4.R
     descr: il codice della lezione
@@ -130,6 +133,19 @@ Due cose da notare. La prima: `bmi <- peso / altezza^2` calcola i cinque valori 
 > **Attenzione** Nel codice dell'edizione precedente le soglie erano scritte con `<=`: un paziente con BMI esattamente 25 finiva in «Normopeso». Il programma gira, non dà errori, e sbaglia solo sui confini. I casi da provare sono sempre quelli: 18,5, 25, 30, 35 e 40 esatti.
 
 > **Attenzione** `for(i in 1:length(x))` con un vettore vuoto fa girare il ciclo due volte, con `i` uguale a 1 e a 0, perché `1:0` è il vettore `c(1, 0)`. Se non siete sicuri che il vettore abbia almeno un elemento, usate `seq_along(x)`, che con un vettore vuoto non gira affatto.
+
+## Il lab del taxi: un passo alla volta
+
+Il secondo lab cresce in quattro passi, e ogni passo aggiunge una regola sola.
+
+1. **La quota variabile.** Il tassametro di Roma non fa pagare solo i chilometri: quando il taxi è fermo nel traffico scatta la tariffa a tempo. Il tracciato è un vettore con i km percorsi in ciascun minuto; per ogni minuto la velocità (km × 60) decide quale tariffa si applica, 28 euro l'ora sotto i 20 km/h, 1,14 euro al km sopra. Il costo è un accumulatore che somma minuto per minuto: lo schema del BMI, con una somma al posto di un conteggio.
+2. **La quota fissa.** Dipende da giorno e ora: feriale, festivo o notturna. Sono tre casi, quindi un `if` con due `else if`, e conviene mettere per prima la notte, che vale per tutti i giorni.
+3. **La decisione.** Uber costa 9 euro: il programma non stampa più un numero, ma una scelta.
+4. **La funzione.** Ai primi tre passi si cambia corsa modificando le righe in cima e rieseguendo tutto. Al quarto il calcolo prende un nome, `costo_corsa(distanza, giorno, ora)`, e una corsa diventa una riga sola: così si può provarla su tre corse diverse, o contare con un ciclo su quante conviene il taxi.
+
+Il quarto passo è il punto del modulo: la stessa regola, scritta una volta e riusata tante. La prossima sezione mostra come si scrive una funzione, partendo dall'autovelox del modulo 2.
+
+> **Attenzione** A esattamente 20 km/h (0,333 km in un minuto) il tariffario dice «inferiore a 20» per il tempo e «superiore a 20» per la distanza: i 20 esatti non sono coperti da nessuna delle due. Decidete voi da che parte mandarli, e scrivetelo nei test: è una scelta, non un dettaglio.
 
 ## La funzione: dare un nome a una regola
 
