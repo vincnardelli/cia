@@ -6,7 +6,7 @@ sezione: 1
 language: R
 idea: "La stessa regola applicata a molti casi diventa un ciclo; incapsulata con un nome diventa una funzione."
 hours: 4
-concepts_new: [vettori, indicizzazione, operazioni vettoriali, ciclo for, accumulatore, funzioni, test di una funzione]
+concepts_new: [vettori, indicizzazione, operazioni vettoriali, ciclo for, accumulatore, funzioni, test di una funzione, ricorsione, caso base]
 concepts_required: [variabili, operatori di confronto, if/else, operatori logici]
 explorations: []
 slides_pdf:
@@ -17,6 +17,9 @@ slides:
   - titolo: Lezione 5
     descr: Taxi o Uber, in cinque passi
     pdf: slide/lezione_5.pdf
+  - titolo: Lezione 6
+    descr: "Funzioni e ricorsione: carnet e spesa e-commerce"
+    pdf: slide/lezione_6.pdf
 codice:
   - titolo: lezione_4.R
     descr: il codice della lezione
@@ -24,6 +27,15 @@ codice:
   - titolo: bmi.R
     descr: lab Classificazione BMI
     file: codice/4/bmi.R
+  - titolo: lezione_6.R
+    descr: "Lezione 6: argomenti, ritorno e chiamate tra funzioni"
+    file: codice/6/lezione_6.R
+  - titolo: biglietti_ricorsione.R
+    descr: "Lezione 6: biglietti singoli o carnet"
+    file: codice/6/biglietti_ricorsione.R
+  - titolo: spesa_ecommerce.R
+    descr: "Lezione 6: tre prodotti e due e-commerce"
+    file: codice/6/spesa_ecommerce.R
 ---
 
 ## Più valori in una variabile sola
@@ -187,6 +199,74 @@ Tutti `TRUE`: la funzione passa i test. Le variabili create dentro la funzione (
 Con lo stesso schema scriviamo `bmi(peso, altezza)` e `nps(voti)`, che riceve un vettore e restituisce un numero solo: una funzione può contenere un ciclo, e chi la chiama non deve saperlo.
 
 > **In aula** abbiamo scritto solo funzioni con `return()` esplicito. R restituisce anche l'ultimo valore calcolato se `return` manca, ma scriverlo rende chiaro cosa esce. Un'altra cosa che in aula non si è vista: gli argomenti possono avere un valore predefinito, `function(velocita, limite = 50)`, e allora `multa(70)` funziona.
+
+<div id="lezione-6"></div>
+
+## Lezione 6: funzioni e ricorsione
+
+Il percorso parte da `lezione_6.R`: una funzione riceve un argomento, restituisce un risultato con `return()` e può chiamare un'altra funzione. `totale_ordine(30)` chiama `spedizione(30)` e restituisce 38. Per un ordine vuoto entrambe restituiscono zero. Il risultato si può assegnare a una variabile, confrontare con un valore atteso o usare in un altro calcolo.
+
+Le [slide della lezione 6]({{ site.baseurl }}/slide/lezione_6.pdf) accompagnano i due laboratori. È disponibile anche la [versione modificabile delle slide]({{ site.baseurl }}/slide/lezione_6.pptx).
+
+Una funzione è **ricorsiva** quando richiama sé stessa. Servono un **caso base**, che restituisce subito il risultato, e una chiamata che si avvicina al caso base. Nei due laboratori le tariffe sono inventate per l'esercizio.
+
+### Primo laboratorio: singoli o carnet
+
+Un biglietto singolo costa **3 €** e copre un viaggio. Un carnet costa **10 €** e copre cinque viaggi. Si possono acquistare più carnet e i biglietti possono avanzare. L'input è il numero intero di viaggi da fare, almeno zero; l'output è il costo minimo per coprirli tutti.
+
+```r
+costo_minimo <- function(viaggi){
+  if(viaggi <= 0){
+    return(0)
+  }
+
+  con_singolo <- 3 + costo_minimo(viaggi - 1)
+  con_carnet <- 10 + costo_minimo(viaggi - 5)
+
+  return(min(con_singolo, con_carnet))
+}
+```
+
+Con quattro viaggi si confrontano `3 + costo_minimo(3)`, cioè 12 €, e `10 + costo_minimo(-1)`, cioè 10 €. Il valore negativo significa che il carnet copre anche un viaggio in più: il caso base deve essere `<= 0`. Con sei viaggi il costo minimo è 13 €; con dieci è 20 €.
+
+Il codice commentato e le prove sono in [biglietti_ricorsione.R]({{ site.baseurl }}/codice/6/biglietti_ricorsione.R). La funzione esplora entrambe le alternative e ricalcola alcuni casi: in aula usiamo pochi viaggi per seguire le chiamate.
+
+### Secondo laboratorio: tre prodotti, due e-commerce
+
+Un ufficio deve acquistare un'unità di ciascun prodotto. Ogni prodotto si può comprare dal negozio A oppure dal negozio B. Ogni negozio usato aggiunge **8 € di spedizione fissa**, senza soglie. Se non compriamo nulla da un negozio, non paghiamo la sua spedizione.
+
+| Prodotto | Negozio A | Negozio B |
+|---|---:|---:|
+| Carta | 20 € | 22 € |
+| Penne | 30 € | 32 € |
+| Cartucce | 40 € | 38 € |
+
+Comprare ogni prodotto al prezzo più basso costa 88 € più due spedizioni: **104 €**. Comprare tutto da A costa 90 € più una spedizione: **98 €**.
+
+Il vettore `scelte` descrive le decisioni nello stesso ordine dei prodotti. `c("A", "B")` significa che carta e penne sono già assegnate, mentre manca la scelta delle cartucce. `c()` indica che nessuna scelta è stata ancora presa.
+
+Nel file [spesa_ecommerce.R]({{ site.baseurl }}/codice/6/spesa_ecommerce.R) ci sono solo due funzioni. `costo(scelte)` riceve tre scelte complete e calcola il conto. `minimo(scelte)` completa le scelte mancanti:
+
+```r
+minimo <- function(scelte){
+  if(length(scelte) == length(prodotti)){
+    return(costo(scelte))
+  }
+
+  con_a <- minimo(c(scelte, "A"))
+  con_b <- minimo(c(scelte, "B"))
+
+  return(min(con_a, con_b))
+}
+
+minimo(c())  # 98 euro
+```
+
+Ogni chiamata aggiunge una scelta, quindi si avvicina al caso base delle tre scelte complete. Le combinazioni sono otto. Ogni chiamata restituisce **un numero**, il costo minimo; non restituisce il vettore dei negozi da cui acquistare.
+
+> **In aula** Le due funzioni leggono `prodotti`, `prezzi_a` e `prezzi_b`, definiti all'inizio del file. È una semplificazione per concentrarci sulla ricorsione. I prezzi devono essere positivi, i vettori devono avere la stessa lunghezza e i prodotti devono comparire nello stesso ordine.
+
+Le prove da fare: `costo(c("A", "A", "A"))` deve dare 98, `costo(c("A", "A", "B"))` deve dare 104 e `minimo(c("B"))` deve dare 100. Nell'ultimo caso fissiamo il primo prodotto da B e lasciamo alla funzione le altre due decisioni.
 
 ## Una funzione che nessuno ha scritto
 
