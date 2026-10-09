@@ -17,6 +17,9 @@ slides:
   - titolo: Lezione 5
     descr: Taxi o Uber, in cinque passi
     pdf: slide/lezione_5.pdf
+  - titolo: Lezione 6
+    descr: Funzioni, Shiny e ricorsione
+    pdf: slide/lezione_6.pdf
 codice:
   - titolo: lezione_4.R
     descr: il codice della lezione
@@ -24,6 +27,24 @@ codice:
   - titolo: bmi.R
     descr: lab Classificazione BMI
     file: codice/4/bmi.R
+  - titolo: taxi.R
+    descr: lab Taxi o Uber
+    file: codice/5/taxi.R
+  - titolo: lezione_6.R
+    descr: funzioni, print e return
+    file: codice/6/lezione_6.R
+  - titolo: app.R
+    descr: la app Shiny del BMI
+    file: codice/6/app.R
+  - titolo: biglietti.R
+    descr: lab 1, biglietti e carnet
+    file: codice/6/biglietti.R
+  - titolo: fornitori.R
+    descr: lab 2, due fornitori
+    file: codice/6/fornitori.R
+  - titolo: fornitori_sconti.R
+    descr: lab 3, con lo sconto
+    file: codice/6/fornitori_sconti.R
 ---
 
 ## Più valori in una variabile sola
