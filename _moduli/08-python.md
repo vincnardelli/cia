@@ -1,6 +1,6 @@
 ---
 layout: modulo
-number: 7
+number: 8
 title: Python per chi sa R
 sezione: 2
 language: R → Python
@@ -46,4 +46,4 @@ Tutti i lab base della sezione 1 da far passare in Python **con gli stessi test*
 
 ## Per approfondire
 
-Le funzioni da tradurre sono nel [modulo 3](03-ripetere-e-astrarre), i verbi dplyr da rimappare nel [modulo 4](04-dati). Nella [modulo 8](08-random-forest) Python serve subito, per scikit-learn.
+Le funzioni da tradurre sono nel [modulo 4](04-astrarre), i verbi dplyr da rimappare nel [modulo 5](05-dati). Nella [modulo 9](09-random-forest) Python serve subito, per scikit-learn.

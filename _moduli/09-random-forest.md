@@ -1,6 +1,6 @@
 ---
 layout: modulo
-number: 8
+number: 9
 title: Random forest
 sezione: 2
 language: Python
@@ -36,4 +36,4 @@ La pipeline scikit-learn passo per passo: separare X e y, dividere train e test,
 
 ## Per approfondire
 
-L'albero singolo e il perché del train/test sono nel [modulo 6](06-software-2-0). Nella [modulo 9](09-da-testo-a-numeri) la stessa foresta classificherà testi, dopo averli trasformati in numeri.
+L'albero singolo e il perché del train/test sono nel [modulo 7](07-software-2-0). Nella [modulo 10](10-da-testo-a-numeri) la stessa foresta classificherà testi, dopo averli trasformati in numeri.

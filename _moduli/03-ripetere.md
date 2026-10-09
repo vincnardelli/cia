@@ -1,12 +1,12 @@
 ---
 layout: modulo
 number: 3
-title: Ripetere e astrarre
+title: Ripetere
 sezione: 1
 language: R
-idea: "La stessa regola applicata a molti casi diventa un ciclo; incapsulata con un nome diventa una funzione."
+idea: "La stessa regola applicata a molti casi diventa un ciclo."
 hours: 4
-concepts_new: [vettori, indicizzazione, operazioni vettoriali, ciclo for, accumulatore, funzioni, test di una funzione]
+concepts_new: [vettori, indicizzazione, operazioni vettoriali, ciclo for, accumulatore]
 concepts_required: [variabili, operatori di confronto, if/else, operatori logici]
 explorations: []
 slides_pdf:
@@ -59,9 +59,9 @@ clienti[eta < 35]
 eta[eta < 35]
 ```
 
-`clienti[eta < 35]` tiene i clienti nelle posizioni dove il confronto è vero: `"Antonio"` e `"Luca"`. Questa riga, «dammi i nomi di chi ha meno di 35 anni», è già un'analisi dei dati, e il modulo prossimo la riscriveremo con `filter`.
+`clienti[eta < 35]` tiene i clienti nelle posizioni dove il confronto è vero: `"Antonio"` e `"Luca"`. Questa riga, «dammi i nomi di chi ha meno di 35 anni», è già un'analisi dei dati, e nel modulo 5 la riscriveremo con `filter`.
 
-> **Attenzione** Cosa succede con `eta[5]` se il vettore ha tre elementi? R risponde `NA`, «non disponibile», senza errore. Un `NA` che entra in un calcolo lo contamina: `NA + 1` è `NA`, `mean(c(1, NA))` è `NA`. Lo incontreremo spesso dal modulo 4.
+> **Attenzione** Cosa succede con `eta[5]` se il vettore ha tre elementi? R risponde `NA`, «non disponibile», senza errore. Un `NA` che entra in un calcolo lo contamina: `NA + 1` è `NA`, `mean(c(1, NA))` è `NA`. Lo incontreremo spesso dal modulo 5.
 
 ## Il ciclo for: la stessa cosa per ogni elemento
 
@@ -147,54 +147,10 @@ Il secondo lab cresce in cinque passi, e ogni passo aggiunge una regola sola.
 4. **La funzione.** Ai primi tre passi si cambia corsa modificando le righe in cima e rieseguendo tutto. Al quarto il calcolo prende un nome, `costo_corsa(distanza, giorno, ora)`, e una corsa diventa una riga sola.
 5. **Tre corse.** La stessa corsa in tre momenti diversi, domenica a mezzogiorno, mercoledì alle 9 e sabato alle 23: giorni e ore stanno in due vettori, la funzione si chiama dentro un ciclo e un contatore dice in quante corse su tre conviene il taxi.
 
-Il quarto e il quinto passo sono il punto del modulo: la stessa regola, scritta una volta e riusata tante. La prossima sezione mostra come si scrive una funzione, partendo dall'autovelox del modulo 2.
+Il quarto e il quinto passo sono il punto del modulo: la stessa regola, scritta una volta e riusata tante. Il [modulo 4](04-astrarre) riprende da lì e mostra come si scrive una funzione, partendo dall'autovelox del modulo 2.
 
 > **Attenzione** A esattamente 20 km/h (0,333 km in un minuto) il tariffario dice «inferiore a 20» per il tempo e «superiore a 20» per la distanza: i 20 esatti non sono coperti da nessuna delle due. Decidete voi da che parte mandarli, e scrivetelo nei test: è una scelta, non un dettaglio.
 
-## La funzione: dare un nome a una regola
-
-L'autovelox del modulo 2 funziona, ma per usarlo con un'altra velocità dovete modificare la prima riga e rieseguire tutto. Se il calcolo servisse in dieci punti diversi di un programma, lo copiereste dieci volte. La **funzione** incapsula il calcolo sotto un nome:
-
-```r
-multa <- function(velocita, limite){
-  differenza <- velocita - limite
-  if(differenza <= 0){
-    importo <- 0
-  }else if(differenza <= 10){
-    importo <- 36
-  }else if(differenza <= 40){
-    importo <- 148
-  }else if(differenza <= 60){
-    importo <- 370
-  }else{
-    importo <- 500
-  }
-  return(importo)
-}
-
-multa(70, 50)
-multa(45, 50)
-multa(60, 50)
-```
-
-`function(velocita, limite)` dichiara gli **argomenti**, i dati che la funzione riceve. Il corpo è identico a prima. `return(importo)` è il **valore di ritorno**, quello che esce. Le tre chiamate in fondo restituiscono 148, 0 e 36. Notate che i test del modulo 2 sono diventati tre righe: chiamare la funzione con gli input del test e confrontare con l'atteso. Da qui in poi **testare una funzione** significa esattamente questo:
-
-```r
-multa(60, 50) == 36
-multa(110, 50) == 370
-multa(111, 50) == 500
-```
-
-Tutti `TRUE`: la funzione passa i test. Le variabili create dentro la funzione (`differenza`, `importo`) vivono solo lì dentro: fuori non esistono, e non disturbano il resto del programma.
-
-Con lo stesso schema scriviamo `bmi(peso, altezza)` e `nps(voti)`, che riceve un vettore e restituisce un numero solo: una funzione può contenere un ciclo, e chi la chiama non deve saperlo.
-
-> **In aula** abbiamo scritto solo funzioni con `return()` esplicito. R restituisce anche l'ultimo valore calcolato se `return` manca, ma scriverlo rende chiaro cosa esce. Un'altra cosa che in aula non si è vista: gli argomenti possono avere un valore predefinito, `function(velocita, limite = 50)`, e allora `multa(70)` funziona.
-
-## Una funzione che nessuno ha scritto
-
-Chiudiamo con una frase da tenere a mente fino al modulo 6. `multa()` è una funzione: entra una velocità e un limite, esce un importo. Le regole dentro le abbiamo scritte noi leggendo il Codice della Strada. Un modello di machine learning è **una funzione che nessuno ha scritto**: entrano dati, esce una previsione, e le regole dentro le ha trovate un algoritmo guardando esempi. La forma è la stessa; cambia chi decide le soglie. Le funzioni `multa()`, `bmi()` e `rata()` di questo modulo torneranno in modulo 11, quando un modello di linguaggio le userà come strumenti.
-
 ## Per approfondire
 
-L'`if` che sta dentro ogni ciclo di oggi è nel [modulo 2](02-decidere). Nella [modulo 4](04-dati) i vettori diventano le colonne di una tabella, e il ciclo `for` per selezionare e contare sarà sostituito da un verbo di dplyr.
+L'`if` che sta dentro ogni ciclo di oggi è nel [modulo 2](02-decidere). Nel [modulo 4](04-astrarre) la regola scritta nel ciclo prende un nome e diventa una funzione.

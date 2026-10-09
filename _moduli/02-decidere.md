@@ -201,4 +201,4 @@ Da questo modulo i lab in piattaforma si chiudono con «fallo tradurre in Python
 
 ## Per approfondire
 
-I confronti e i valori logici sono nel [modulo 1](01-partenza). Nella [modulo 3](03-ripetere-e-astrarre) applicheremo lo stesso `if` a molti valori in una volta con il ciclo `for`, e trasformeremo l'autovelox in una funzione riutilizzabile.
+I confronti e i valori logici sono nel [modulo 1](01-partenza). Nella [modulo 3](03-ripetere) applicheremo lo stesso `if` a molti valori in una volta con il ciclo `for`, e trasformeremo l'autovelox in una funzione riutilizzabile.

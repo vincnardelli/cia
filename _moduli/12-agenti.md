@@ -1,6 +1,6 @@
 ---
 layout: modulo
-number: 11
+number: 12
 title: Agenti
 sezione: 3
 language: Python
@@ -39,4 +39,4 @@ Un agente che risponde a domande di business su un dataset chiamando funzioni pa
 
 ## Per approfondire
 
-Le funzioni che diventano strumenti sono nel [modulo 3](03-ripetere-e-astrarre); la chiamata API e il JSON nel [modulo 10](10-modello-di-linguaggio). Il [modulo 12](12-chiusura) chiude il cerchio.
+Le funzioni che diventano strumenti sono nel [modulo 4](04-astrarre); la chiamata API e il JSON nel [modulo 10](10-modello-di-linguaggio). Il [modulo 12](12-chiusura) chiude il cerchio.

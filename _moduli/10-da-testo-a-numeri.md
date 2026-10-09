@@ -1,6 +1,6 @@
 ---
 layout: modulo
-number: 9
+number: 10
 title: Da testo a numeri
 sezione: 3
 language: Python
@@ -34,4 +34,4 @@ Esplorazione interattiva del tokenizzatore: si scrive una frase e si vede in qua
 
 ## Per approfondire
 
-La foresta che classifica gli embeddings è nel [modulo 8](08-random-forest). Nella [modulo 10](10-modello-di-linguaggio) il modello che produce gli embeddings genera anche testo, un token alla volta.
+La foresta che classifica gli embeddings è nel [modulo 9](09-random-forest). Nella [modulo 10](10-modello-di-linguaggio) il modello che produce gli embeddings genera anche testo, un token alla volta.

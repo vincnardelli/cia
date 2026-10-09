@@ -1,6 +1,6 @@
 ---
 layout: modulo
-number: 10
+number: 11
 title: Il modello di linguaggio
 sezione: 3
 language: Python
@@ -34,4 +34,4 @@ Esplorazione interattiva della temperatura: la distribuzione del prossimo token 
 
 ## Per approfondire
 
-I token e gli embeddings sono nel [modulo 9](09-da-testo-a-numeri). Nella [modulo 11](11-agenti) l'LLM smette di rispondere e basta: chiama le funzioni che avete scritto in modulo 3.
+I token e gli embeddings sono nel [modulo 10](10-da-testo-a-numeri). Nella [modulo 11](11-agenti) l'LLM smette di rispondere e basta: chiama le funzioni che avete scritto nel modulo 4.
