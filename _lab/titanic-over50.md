@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: 'Titanic: gli over 50'
-modulo: 4
+modulo: 5
 order: 2
 difficolta: facile
 language: R

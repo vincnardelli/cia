@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: La categoria che vende di più
-modulo: 4
+modulo: 5
 order: 3
 difficolta: facile
 language: R

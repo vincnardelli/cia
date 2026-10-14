@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: 'Segmenti RFM: quanti clienti Gold'
-modulo: 5
+modulo: 6
 order: 1
 difficolta: facile
 language: R

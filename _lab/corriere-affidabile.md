@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: Il corriere più regolare
-modulo: 5
+modulo: 6
 order: 2
 difficolta: facile
 language: R

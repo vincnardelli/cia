@@ -1,24 +1,37 @@
 # Stile del codice del corso
 
-Il codice del corso ha un aspetto riconoscibile. Quando scrivi o correggi codice per lo studente, imitalo.
+Il codice delle lezioni ha un aspetto riconoscibile. Quando scrivi o correggi codice per lo studente, imitalo. Gli esempi qui sotto sono presi dai file delle lezioni 3–6 (https://www.vincnardelli.com/cia/codice/).
 
 ## Convenzioni
 
-- Assegnazione con `<-` (mai `=` per assegnare).
-- Nomi in italiano, minuscoli, con underscore: `prezzo_netto`, `giorni_ritardo`, `punti_finali`. Niente `x`, `tmp`, `result`.
-- Commenti in italiano, brevi, sopra il blocco che spiegano.
-- Una istruzione per riga. Niente `;`.
-- `if(condizione){` senza spazio tra `if` e la parentesi; `}else if(...){` e `}else{` attaccati sulla stessa riga.
-- Le condizioni composte con `&` e `|` (non `&&`/`||`), gli insiemi con `%in%`.
-- Fino al modulo 3 nessuna funzione definita dallo studente; dal modulo 3 `nome <- function(argomenti){ ... return(valore) }`.
-- Per stampare: `print(paste0("Testo: ", valore))`.
-- Prima R base (vettori, `[ ]`, `for`), poi dplyr con `%>%`, un verbo per riga.
-- Le soglie delle regole scritte come sono nel testo: "non oltre 10" → `<= 10`; "oltre 10" → `> 10`; "da 31 a 60" → `>= 31 & <= 60`.
+- Assegnazione con `<-`, mai `=`.
+- Nomi in italiano, minuscoli, con underscore: `prezzo_netto`, `quota_fissa`, `sovrappeso_o_oltre`. Niente `x`, `tmp`, `result`.
+- Commenti in italiano, brevi, sopra il blocco o a fine riga.
+- Una istruzione per riga.
+- `if(condizione){` senza spazio dopo `if`; `}else if(...){` e `}else{` sulla stessa riga della graffa.
+- Condizioni composte con `&`, `|` e `!` (non `&&`, `||`); insiemi con `%in%`.
+- Cicli con `for(i in 1:length(x)){`; l'accumulatore parte da zero **fuori** dal ciclo.
+- Funzioni con `nome <- function(argomenti){ ... return(valore) }`: `return()` sempre esplicito. Una funzione restituisce, `print()` serve solo per guardare.
+- Quello che serve a una funzione glielo si passa come argomento: niente variabili prese da fuori.
+- Per stampare una frase: `print(paste0("Testo: ", valore))`. Per arrotondare: `round(x, 2)`.
+- Le soglie si scrivono come nel testo: "non oltre 10" → `<= 10`; "oltre 10" → `> 10`; "dal 1946 al 1964, estremi compresi" → `>= 1946 & <= 1964`.
+- Ogni file inizia con un blocco di commenti che dice regola, input e output; le parti sono separate da `# ---- titolo ----`; accanto alle chiamate di prova, nel commento, il risultato atteso.
 
-## Esempio 1 — decisione a fasce (modulo 2, Autovelox)
+## 1. Una regola a fasce (lezione 3, Autovelox)
 
 ```r
-velocita <- 70
+# ==============================================================
+# LAB - Autovelox                             Lezione 3, A.A. 2026/27
+#
+# Input:   velocita   velocità rilevata, km/h
+#          limite     limite del tratto, km/h
+# Output:  multa      importo in euro
+#
+# "Non oltre 10" vuol dire fino a 10 COMPRESO: chi va esattamente
+# 10 km/h sopra il limite paga 36 euro, non 148.
+# ==============================================================
+
+velocita <- 60
 limite <- 50
 
 differenza <- velocita - limite
@@ -34,15 +47,15 @@ if(differenza <= 0){
 }else{
   multa <- 500
 }
-multa
+print(multa)   # 36
 ```
 
-## Esempio 2 — tre modi equivalenti (modulo 2, Boomer)
+## 2. La stessa regola in tre modi (lezione 3, Boomer)
 
 ```r
-anno <- 2006
+anno <- 1964   # un anno al confine: deve dare "Boomer"
 
-# Opzione 1: due if
+# ---- Soluzione 1: due condizioni in catena ---------------------
 if(anno > 1964){
   status <- "Non Boomer"
 }else if(anno < 1946){
@@ -51,14 +64,15 @@ if(anno > 1964){
   status <- "Boomer"
 }
 
-# Opzione 2: una condizione composta (attenzione ai confini: >= e <=, non > e <)
+# ---- Soluzione 2: con & ----------------------------------------
+# >= e <= perché gli estremi sono compresi.
 if(anno >= 1946 & anno <= 1964){
   status <- "Boomer"
 }else{
   status <- "Non Boomer"
 }
 
-# Opzione 3: appartenenza a un insieme
+# ---- Soluzione 3: con %in% -------------------------------------
 if(anno %in% 1946:1964){
   status <- "Boomer"
 }else{
@@ -66,125 +80,228 @@ if(anno %in% 1946:1964){
 }
 ```
 
-## Esempio 3 — ciclo su un vettore con accumulatore (modulo 3, Taxi)
+## 3. Vettori e selezione (lezioni 3 e 4)
 
 ```r
-tariffa_min <- 28/60
-tariffa_km <- 1.14
-distanza <- c(1, 0.3, 0.5, 0.8, 0.2)
-costo <- 0
+nomi <- c("Raffaele", "Giovanni", "Carmela", "Gioele")
+eta  <- c(89, 6, 45, 102)
 
-for(i in 1:length(distanza)){
-  velocita <- distanza[i] * 60
-  if(velocita < 20){
-    costo <- costo + tariffa_min
-  }else{
-    costo <- costo + tariffa_km * distanza[i]
-  }
-}
-print(paste0("Costo della corsa: ", round(costo, 2), " euro"))
+eta[2]
+nomi[c(1, 3)]
+eta > 67               # un TRUE o un FALSE per ogni elemento
+nomi[eta > 67]         # due vettori allineati: stessa posizione, stessa persona
+length(nomi)
 ```
 
-## Esempio 4 — ciclo con classificazione (modulo 3, BMI)
+## 4. Il ciclo con l'accumulatore (lezione 4)
+
+```r
+# Quante persone sono in pensione?
+quanti <- 0                    # si parte da zero, FUORI dal ciclo
+for(i in 1:length(eta)){
+  if(eta[i] > 67){
+    quanti <- quanti + 1       # il valore nuovo è quello vecchio + 1
+  }
+}
+quanti
+
+for(i in 1:length(nomi)){
+  if(eta[i] > 67){
+    print(paste0(nomi[i], " è in pensione"))
+  }else{
+    print(paste0(nomi[i], " non è in pensione"))
+  }
+}
+```
+
+## 5. Un ciclo con una regola dentro (lezione 5, Taxi)
+
+```r
+tariffa_min <- 32.58/60
+tariffa_km <- 1.33
+distanza <- c(1, 0.3, 0.5, 0.8, 0.2)   # km percorsi in ogni minuto
+
+costo <- 0                      # l'accumulatore parte da zero
+velocita <- distanza * 60       # i km/h di ogni minuto, tutti insieme
+
+for(i in 1:length(distanza)){
+  if(velocita[i] < 20){
+    costo <- costo + tariffa_min            # fermo nel traffico: si paga il tempo
+  }else{
+    costo <- costo + tariffa_km * distanza[i]   # in corsa: si pagano i km
+  }
+}
+costo <- round(costo, 2)
+print(costo)                    # 4.15
+```
+
+If annidati, come nella quota fissa del taxi:
+
+```r
+if(ora >= 6 & ora <= 22){
+  if(giorno == "D"){
+    costo <- 5
+  }else{
+    costo <- 3.5
+  }
+}else{
+  costo <- 7.5
+}
+```
+
+## 6. Funzioni che restituiscono e si compongono (lezione 6)
+
+```r
+bmi <- function(peso, altezza){
+  return(peso / altezza^2)
+}
+
+classificazione <- function(valore){
+  if(valore < 18.5){
+    return("Sottopeso")
+  }else if(valore < 25){
+    return("Normopeso")
+  }else if(valore < 30){
+    return("Sovrappeso")
+  }else if(valore < 35){
+    return("Obesità grado I")
+  }else if(valore < 40){
+    return("Obesità grado II")
+  }else{
+    return("Obesità grado III")
+  }
+}
+
+referto <- function(peso, altezza){
+  valore <- bmi(peso, altezza)
+  classe <- classificazione(valore)
+  return(paste0("BMI ", round(valore, 1), ": ", classe))
+}
+
+referto(86, 1.73)
+
+# Provare una funzione è una riga, a partire dalle soglie esatte
+classificazione(24.9) == "Normopeso"
+classificazione(25) == "Sovrappeso"
+```
+
+## 7. Una funzione dentro un ciclo (lezione 6)
 
 ```r
 altezza <- c(1.58, 1.73, 1.81, 1.47, 1.74)
-peso <- c(62, 86, 85, 95, 75)
+peso    <- c(62,   86,   85,   95,   75)
 
-bmi <- peso / altezza^2
-
-for(i in 1:5){
-  if(bmi[i] < 18.5){
-    classificazione <- "Sottopeso"
-  }else if(bmi[i] < 25){
-    classificazione <- "Normopeso"
-  }else if(bmi[i] < 30){
-    classificazione <- "Sovrappeso"
-  }else{
-    classificazione <- "Obesità"
+sovrappeso_o_oltre <- 0
+for(i in 1:length(altezza)){
+  print(referto(peso[i], altezza[i]))
+  if(bmi(peso[i], altezza[i]) >= 25){
+    sovrappeso_o_oltre <- sovrappeso_o_oltre + 1
   }
-  print(paste0("Paziente ", i, ": ", classificazione))
 }
+print(paste0("Pazienti in sovrappeso o oltre: ", sovrappeso_o_oltre))
 ```
 
-## Esempio 5 — funzione (modulo 3)
+## 8. Ricorsione con caso base (lezione 6, Due fornitori)
 
 ```r
-multa <- function(velocita, limite){
-  differenza <- velocita - limite
-  if(differenza <= 0){
-    importo <- 0
-  }else if(differenza <= 10){
-    importo <- 36
-  }else if(differenza <= 40){
-    importo <- 148
-  }else if(differenza <= 60){
-    importo <- 370
-  }else{
-    importo <- 500
+prodotti <- c("Carta", "Penne", "Cartucce")
+
+# costo(scelte) restituisce il costo di un ordine già deciso,
+# per esempio costo(c("A", "B", "B"))
+
+minimo <- function(scelte){
+  if(length(scelte) == length(prodotti)){
+    return(costo(scelte))             # caso base: ordine completo, lo valuto
   }
-  return(importo)
+
+  con_a <- minimo(c(scelte, "A"))     # il prossimo prodotto lo prendo da A
+  con_b <- minimo(c(scelte, "B"))     # ... oppure da B
+
+  return(min(con_a, con_b))
 }
 
-multa(75, 50)
+minimo(c())   # 97 euro: tutto da B
 ```
 
-## Esempio 6 — dplyr (modulo 4, Titanic)
+## 9. La stessa funzione dentro un'app Shiny (lezione 6, app.R)
 
 ```r
-library(dplyr)
-titanic <- read.csv("titanic.csv")
-titanic$Sex    <- as.factor(titanic$Sex)
-titanic$Pclass <- as.factor(titanic$Pclass)
+library(shiny)
 
-summary(titanic)
 
-# Quale era la percentuale di uomini e donne tra gli over 50?
-titanic %>%
-  filter(!is.na(Age), Age > 50) %>%
-  group_by(Sex) %>%
-  summarise(n = n()) %>%
-  mutate(perc = n / sum(n))
+# ---- 1. Le funzioni: identiche a quelle della lezione ---------
 
-# In percentuale sono sopravvissuti più passeggeri in prima o terza classe?
-titanic %>%
-  group_by(Pclass) %>%
-  summarise(perc_sopravvissuti = mean(Survived))
+bmi <- function(peso, altezza){
+  return(peso / altezza^2)
+}
+
+# classificazione() come nell'esempio 6
+
+
+# ---- 2. ui: che cosa si vede ----------------------------------
+
+ui <- fluidPage(
+
+  titlePanel("Calcolatore BMI"),
+
+  sidebarLayout(
+
+    sidebarPanel(
+      sliderInput("peso", "Peso (kg)", min = 30, max = 150, value = 86),
+      sliderInput("altezza", "Altezza (m)", min = 1.40, max = 2.10,
+                  value = 1.73, step = 0.01)
+    ),
+
+    mainPanel(
+      h3(textOutput("valore")),
+      h2(textOutput("classe"))
+    )
+  )
+)
+
+
+# ---- 3. server: che cosa succede ------------------------------
+# input$peso e input$altezza sono i valori dei cursori.
+
+server <- function(input, output){
+
+  output$valore <- renderText({
+    valore <- bmi(input$peso, input$altezza)
+    paste0("BMI: ", round(valore, 1))
+  })
+
+  output$classe <- renderText({
+    valore <- bmi(input$peso, input$altezza)
+    classificazione(valore)
+  })
+}
+
+
+# ---- 4. Avvia l'applicazione ----------------------------------
+
+shinyApp(ui = ui, server = server)
 ```
 
-## Esempio 7 — segmentazione a regole su un data frame (modulo 5, RFM)
+L'interfaccia cambia, la funzione no: se sbaglia a BMI 25 esatto, sbaglia anche con i cursori.
+
+## Errori che il corso fa vedere apposta
 
 ```r
-rfm <- retail %>%
-  group_by(CustomerID) %>%
-  summarise(f = n(),
-            m = sum(Total)) %>%
-  mutate(f_score = ntile(f, 4),
-         m_score = ntile(m, 4)) %>%
-  mutate(cluster = case_when(f_score == 4 & m_score == 4 ~ "Gold",
-                             f_score == 1 & m_score == 1 ~ "Lost",
-                             f_score == 4 ~ "Loyal",
-                             m_score == 4 ~ "High spending",
-                             TRUE ~ "Altri"))
-```
+# L'accumulatore azzerato DENTRO il ciclo: resta solo l'ultimo valore
+totale <- 0
+for(i in 1:length(spese)){
+  totale <- 0                  # errore: riparte ogni volta
+  totale <- totale + spese[i]
+}
 
-## Esempio 8 — lo stesso Autovelox in Python (dal modulo 7)
+# Una funzione che stampa invece di restituire: fuori dà NULL
+bmi_stampa <- function(peso, altezza){
+  print(peso / altezza^2)
+}
 
-```python
-velocita = 70
-limite = 50
-
-differenza = velocita - limite
-
-if differenza <= 0:
-    multa = 0
-elif differenza <= 10:
-    multa = 36
-elif differenza <= 40:
-    multa = 148
-elif differenza <= 60:
-    multa = 370
-else:
-    multa = 500
-print(multa)
+# Una funzione che usa una variabile presa da fuori
+soglia <- 25
+sovrappeso_sbagliata <- function(valore){
+  return(valore >= soglia)        # soglia non è un argomento!
+}
 ```

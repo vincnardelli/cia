@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: Sconto e quantità
-modulo: 5
+modulo: 6
 order: 3
 difficolta: facile
 language: R

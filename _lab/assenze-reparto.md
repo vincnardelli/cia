@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: Assenze per reparto
-modulo: 5
+modulo: 6
 order: 5
 difficolta: difficile
 language: R

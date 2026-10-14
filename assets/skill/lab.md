@@ -250,32 +250,15 @@ Input: distanza (vettore di numeri). Output: costo (numero)
 
 A Roma il tassametro non fa pagare solo i chilometri: quando il taxi è fermo nel traffico, scatta la **tariffa a tempo**. Un'associazione di consumatori ti chiede di ricostruire il costo di una corsa a partire da un tracciato GPS, per verificare gli scontrini dei tassisti.
 
-Il tracciato è un vettore con i **km percorsi in ciascun minuto** della corsa. In ogni minuto il tassametro guarda la velocità di quel minuto (i km del minuto moltiplicati per 60 danno i km/h): se è **sotto i 20 km/h** applica la tariffa oraria, 28 € all'ora, cioè 28/60 € per quel minuto; se è di 20 km/h o più applica la tariffa chilometrica, 1,14 € per ogni km percorso in quel minuto. Il costo della corsa è la somma dei minuti, arrotondata a due decimali.
+Il tracciato è un vettore con i **km percorsi in ciascun minuto** della corsa. In ogni minuto il tassametro guarda la velocità di quel minuto (i km del minuto moltiplicati per 60 danno i km/h): se è **sotto i 20 km/h** applica la tariffa oraria, 32,58 € all'ora, cioè 32.58/60 € per quel minuto; se è di 20 km/h o più applica la tariffa chilometrica, 1,33 € per ogni km percorso in quel minuto. Il costo della corsa è la somma dei minuti, arrotondata a due decimali.
 
 Scrivi il programma che, dato il vettore delle distanze, calcola il costo. Un taxi fermo per quattro minuti a un semaforo ha velocità zero, ma il tassametro corre lo stesso.
 
 Regole:
 - In ogni minuto il tassametro sceglie la tariffa in base alla velocità di quel minuto: `velocita = km * 60` (km/h).
-- Velocità **sotto i 20 km/h** → tariffa oraria: 28 €/h, cioè 28/60 € per quel minuto.
-- Velocità di 20 km/h o più → tariffa chilometrica: 1,14 € per km percorso in quel minuto.
+- Velocità **sotto i 20 km/h** → tariffa oraria: 32,58 €/h, cioè 32.58/60 € per quel minuto.
+- Velocità di 20 km/h o più → tariffa chilometrica: 1,33 € per km percorso in quel minuto.
 - Il costo è la somma dei minuti. Arrotonda a due decimali.
-
-### Autovelox come funzione — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/autovelox-funzione/  
-Obiettivo: Riscrivere l'autovelox come funzione `multa(velocita, limite)` riutilizzabile, e verificarla con gli stessi casi del modulo 2.  
-Input: velocita (numero); limite (numero). Output: multa (numero) — funzione `multa`
-
-Il software dell'autovelox scritto nel modulo 2 funziona, ma il Comune ne ha comprati altri dodici, su strade con limiti diversi, e vuole usare **lo stesso codice** per tutti senza copiarlo e incollarlo ogni volta. È il momento di trasformarlo in una **funzione**.
-
-Le regole restano quelle dell'articolo 142: nessuna sanzione entro il limite; 36 € per un eccesso non oltre 10 km/h; 148 € oltre 10 e non oltre 40; 370 € oltre 40 e non oltre 60; 500 € oltre 60. Il tuo codice deve **definire** la funzione `multa(velocita, limite)` che restituisce l'importo. La verifica non assegna variabili: chiama direttamente la tua funzione con i valori di ogni caso.
-
-In RStudio, poi, usala su un vettore di veicoli con un ciclo e conta quante multe superano i 100 euro: è esattamente ciò che vuole il Comune.
-
-Regole:
-- Stesse regole dell'[Autovelox](../autovelox/): 0 / 36 / 148 / 370 / 500 € per le fasce "entro il limite", "non oltre 10", "non oltre 40", "non oltre 60", "oltre 60".
-- Il codice deve **definire** la funzione `multa <- function(velocita, limite){ ... }` che **restituisce** l'importo (ultima espressione o `return()`).
-- La verifica chiama la tua funzione con i valori di ogni caso: non servono assegnazioni di prova.
-- In RStudio, usala su un vettore di veicoli con un ciclo `for` e conta quante multe superano i 100 €.
 
 ### Prodotti sotto scorta — facile, R, AI-off
 https://www.vincnardelli.com/cia/lab/sotto-scorta/  
@@ -354,155 +337,19 @@ _Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dell
 
 ## Modulo 4
 
-### Clienti giovani — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/ecommerce-giovani/  
-Obiettivo: Contare gli ordini fatti da clienti con meno di 35 anni nel dataset ecommerce.  
-Input: data (data frame). Output: n_giovani (numero)
+### Autovelox come funzione — facile, R, AI-off
+https://www.vincnardelli.com/cia/lab/autovelox-funzione/  
+Obiettivo: Riscrivere l'autovelox come funzione `multa(velocita, limite)` riutilizzabile, e verificarla con gli stessi casi del modulo 2.  
+Input: velocita (numero); limite (numero). Output: multa (numero) — funzione `multa`
 
-Il responsabile marketing di un negozio online vuole capire quanto pesano i **clienti giovani** sugli ordini, per decidere se investire in una campagna sui social. Ti passa l'estratto degli ordini dell'anno (`ecommerce.csv`, una riga per ordine, con le colonne CustomerID, OrderID, OrderDate, Age, Gender, Membership, ProductCategory, ProductName, UnitPrice, Quantity, TotalAmount, PaymentMethod, City, ReturnStatus) e ti chiede una prima cifra: quanti ordini sono stati fatti da clienti con meno di 35 anni.
+Il software dell'autovelox scritto nel modulo 2 funziona, ma il Comune ne ha comprati altri dodici, su strade con limiti diversi, e vuole usare **lo stesso codice** per tutti senza copiarlo e incollarlo ogni volta. È il momento di trasformarlo in una **funzione**.
 
-Il data frame `data` è già caricato quando premi Verifica (in RStudio lo carichi tu con `read.csv`). C'è una trappola: la colonna `Age` ha dei **valori mancanti**, perché non tutti i clienti hanno indicato l'età. Devi decidere cosa farne e scriverlo nel codice, non lasciarlo al caso. Il risultato deve essere un numero, non una tabella.
+Le regole restano quelle dell'articolo 142: nessuna sanzione entro il limite; 36 € per un eccesso non oltre 10 km/h; 148 € oltre 10 e non oltre 40; 370 € oltre 40 e non oltre 60; 500 € oltre 60. Il tuo codice deve **definire** la funzione `multa(velocita, limite)` che restituisce l'importo. La verifica non assegna variabili: chiama direttamente la tua funzione con i valori di ogni caso.
 
-Regole:
-- Il data frame `data` è già caricato quando premi Verifica (in RStudio: `data <- read.csv("ecommerce.csv")`).
-- Conta le righe con `Age < 35`. La colonna `Age` ha valori mancanti: decidi cosa farne e scrivilo nel codice, non lasciarlo al caso.
-- Il risultato deve essere un **numero** (non una tabella): da una pipeline dplyr, estrailo con `$n` oppure usa `nrow()` / `sum()`.
-
-### Titanic: gli over 50 — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/titanic-over50/  
-Obiettivo: Quante persone con più di 50 anni erano a bordo del Titanic?  
-Input: titanic (data frame). Output: n_over50 (numero)
-
-Il dataset dei passeggeri del Titanic è il classico su cui tutti imparano a leggere una tabella, e per questo lo usiamo. Il data frame `titanic` è già caricato: una riga per passeggero, con le colonne PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked.
-
-La prima domanda è semplice: **quante persone con più di 50 anni** erano a bordo? Il conteggio riguarda chi ha l'età nota; 177 passeggeri non ce l'hanno, e vanno lasciati fuori consapevolmente. Il risultato deve essere un numero estratto dalla tabella che ottieni con dplyr.
-
-Poi, in RStudio, continua con le altre domande del modulo: la percentuale di uomini e donne tra gli over 50, chiedendoti sempre "percentuale rispetto a chi?".
+In RStudio, poi, usala su un vettore di veicoli con un ciclo e conta quante multe superano i 100 euro: è esattamente ciò che vuole il Comune.
 
 Regole:
-- Conta i passeggeri con `Age > 50` (età nota).
-- Estrai il numero dalla tabella di `summarise()`.
-- Poi, in RStudio, continua con le altre domande del modulo: la percentuale di uomini e donne tra gli over 50 (percentuale *rispetto a chi?*).
-
-### La categoria che vende di più — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/fatturato-categoria/  
-Obiettivo: Trovare la categoria di prodotto con il fatturato più alto.  
-Input: data (data frame). Output: categoria_top (testo)
-
-Il direttore commerciale di un negozio online vuole sapere, prima della riunione di budget, quale categoria di prodotto ha generato più fatturato nell'anno. Il data frame `data` è già caricato: una riga per ordine, con la categoria in `ProductCategory` e l'importo in `TotalAmount`.
-
-La domanda vuole un nome, non una tabella: dopo aver sommato il fatturato per categoria e ordinato dal più grande al più piccolo, il risultato è il testo della prima riga. In RStudio guarda anche il secondo e il terzo posto: quanto distacco c'è?
-
-Regole:
-- Il fatturato di una categoria è la somma di `TotalAmount` delle sue righe: `group_by(ProductCategory)` e `summarise(fatturato = sum(TotalAmount))`.
-- Ordina con `arrange(desc(fatturato))` e prendi la prima riga.
-- Il risultato è il **testo** della categoria (una stringa), non la tabella: estrailo con `$ProductCategory[1]`.
-
-### Quanti ordini tornano indietro — facile, R, AI-on
-https://www.vincnardelli.com/cia/lab/tasso-reso/  
-Obiettivo: Calcolare la quota di ordini resi tra quelli pagati con PayPal.  
-Input: data (data frame). Output: tasso_paypal (numero)
-
-Il responsabile logistica di un negozio online sospetta che gli ordini pagati con PayPal vengano resi più spesso, perché il reso è più semplice da avviare. Prima di cambiare le condizioni vuole un numero.
-
-Il data frame `data` è già caricato; la colonna `ReturnStatus` vale 1 se l'ordine è stato reso e 0 altrimenti, quindi la sua media è già la quota di resi. Calcola la quota di resi tra gli ordini pagati con PayPal (`PaymentMethod == "PayPal"`), arrotondata a tre decimali. Poi, in RStudio, confronta i quattro metodi di pagamento: il sospetto regge?
-
-Regole:
-- `ReturnStatus` vale 1 se l'ordine è stato reso, 0 altrimenti: la sua **media** è già la quota di resi.
-- Tieni solo le righe con `PaymentMethod == "PayPal"` e calcola la media; arrotonda a 3 decimali.
-- In RStudio confronta i quattro metodi con `group_by(PaymentMethod)`: il reso dipende da come si paga?
-
-### Le città con più ordini — facile, R, AI-on
-https://www.vincnardelli.com/cia/lab/terza-citta/  
-Obiettivo: Trovare la terza città per numero di ordini.  
-Input: data (data frame). Output: terza (testo)
-
-Il negozio online vuole aprire un punto di ritiro in una terza città, dopo le due dove già c'è. La scelta più semplice è la terza città per numero di ordini. Il data frame `data` è già caricato, con la città di consegna in `City`.
-
-Conta gli ordini per città, ordina dalla più grande alla più piccola e prendi il nome della terza. Attenzione al verso dell'ordinamento: se ordini in senso crescente, la terza riga è una città piccola.
-
-Regole:
-- Conta gli ordini per città: `group_by(City)` e `summarise(n = n())`.
-- Ordina dalla più grande alla più piccola e prendi la **terza** riga.
-- Il risultato è il nome della città (testo).
-
-### La categoria che torna indietro di più — difficile, R, AI-on
-https://www.vincnardelli.com/cia/lab/categoria-resi/  
-Obiettivo: Trovare la categoria di prodotto con il tasso di reso più alto.  
-Input: data (data frame). Output: categoria_resi (testo)
-
-Il responsabile qualità del negozio online vuole capire su quale categoria di prodotto concentrare i controlli: quella che viene resa più spesso. Non la categoria con più resi in assoluto, che sarebbe semplicemente quella con più ordini, ma quella con la quota di resi più alta rispetto ai suoi ordini.
-
-Il data frame `data` è già caricato; `ReturnStatus` vale 1 per gli ordini resi. Il risultato è il nome della categoria.
-
-_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
-
-## Modulo 5
-
-### Segmenti RFM: quanti clienti Gold — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/rfm-gold/  
-Obiettivo: Costruire le tre metriche RFM dagli scontrini, assegnare i segmenti con case_when e contare i clienti Gold.  
-Input: scontrini (data frame). Output: n_gold (numero)
-
-Il responsabile marketing di una catena di negozi vuole scrivere ai clienti migliori, quelli che il reparto chiama **Gold**: hanno comprato di recente, comprano spesso e spendono molto. Il metodo è l'RFM della lezione: per ogni cliente si calcolano *recency* (giorni dall'ultimo acquisto rispetto all'ultima data del file), *frequency* (numero di righe di scontrino) e *monetary* (totale speso); ogni metrica si trasforma in un punteggio da 1 a 4 con `ntile`, ricordando che per la recency il migliore è chi ha **pochi** giorni; e i segmenti si assegnano con il `case_when` della lezione, nell'ordine: Gold se 4-4-4, Persi se 1-1-1, Fedeli se frequency 4, Attivi se recency 4, Alta spesa se monetary 4, Altri per tutti gli altri.
-
-Il data frame `scontrini` è già caricato (in RStudio: `read.csv("retail_rfm.csv")`); la data va convertita con `as.Date`. La domanda è una sola: quanti clienti sono Gold. Il numero deve uscire dalla tabella, con un `filter` o un `group_by`, non contato a occhio.
-
-Regole:
-- Converti la data con `as.Date(scontrini$InvoiceDate)`; la data di riferimento è l'ultima del file (`max`).
-- Per cliente: `recency` = giorni tra la data di riferimento e il suo ultimo acquisto, `frequency` = numero di righe, `monetary` = somma di `Total`.
-- Punteggi con `ntile(desc(recency), 4)`, `ntile(frequency, 4)`, `ntile(monetary, 4)`; segmento con il `case_when` della lezione, in quell'ordine, con `TRUE ~ "Altri"` alla fine.
-- `n_gold` è il numero di clienti con segmento `"Gold"`: dalla tabella, non a occhio.
-
-### Il corriere più regolare — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/corriere-affidabile/  
-Obiettivo: Trovare il corriere con i tempi di consegna più regolari, cioè con la deviazione standard più bassa.  
-Input: data (data frame). Output: corriere_regolare (testo)
-
-Il negozio online lavora con quattro corrieri e riceve lamentele sui tempi di consegna. Il responsabile logistica non cerca il corriere più veloce: cerca quello **più regolare**, perché un cliente accetta 4 giorni se glieli hai promessi, non accetta che a volte siano 2 e a volte 8. La regolarità si misura con la deviazione standard dei giorni di consegna, come nella lezione la variabilità di un titolo.
-
-Il data frame `data` è già caricato, con il corriere in `Courier` e i giorni in `DeliveryDays`. Per ogni corriere calcola media e deviazione standard, ordina per deviazione crescente e prendi il primo nome. In RStudio guarda anche la media: il più regolare è anche il più veloce?
-
-Regole:
-- Regolare non vuol dire veloce: un corriere che consegna sempre in 4 giorni è più prevedibile di uno che va da 1 a 8. La regolarità si misura con `sd(DeliveryDays)`.
-- Per corriere: `group_by(Courier)` e `summarise(media = mean(DeliveryDays), variabilita = sd(DeliveryDays))`.
-- Ordina per variabilità crescente e prendi il primo nome. In RStudio guarda anche la media: il più regolare è anche il più veloce?
-
-### Sconto e quantità — facile, R, AI-on
-https://www.vincnardelli.com/cia/lab/sconto-quantita/  
-Obiettivo: Misurare quanto lo sconto applicato e i pezzi acquistati crescono insieme.  
-Input: data (data frame). Output: correlazione (numero)
-
-Il responsabile vendite del negozio online sostiene che gli sconti fanno comprare più pezzi. Il responsabile finanza sostiene che gli sconti fanno solo spendere di meno. Prima di litigare, un numero: quanto lo sconto applicato all'ordine e i pezzi acquistati crescono insieme.
-
-Il data frame `data` è già caricato, con lo sconto in percentuale in `Discount` e i pezzi in `Quantity`. Lo strumento è il coefficiente di correlazione, `cor(x, y)`, da −1 a +1. Arrotonda a tre decimali. Poi, in RStudio, calcola anche la correlazione tra sconto e importo dell'ordine: è più bassa, e vale la pena chiedersi perché.
-
-Regole:
-- `cor(x, y)` va da −1 a +1: vicino a +1 le due colonne salgono insieme, vicino a 0 non c'è legame.
-- Calcola la correlazione tra `Discount` e `Quantity` e arrotonda a 3 decimali.
-- In RStudio fai il grafico a dispersione con ggplot2 e poi confronta con la correlazione tra `Discount` e `TotalAmount`: perché è più bassa?
-
-### Dove si spende di più per ordine — facile, R, AI-on
-https://www.vincnardelli.com/cia/lab/ticket-medio/  
-Obiettivo: Trovare la città con lo scontrino medio più alto.  
-Input: data (data frame). Output: citta_top (testo)
-
-Il negozio online sta scegliendo in quale città fare una campagna con un buono sconto sopra una certa spesa. Serve la città dove i clienti spendono di più **per ordine**: lo scontrino medio (ticket medio), non il fatturato totale, che premia semplicemente le città con più ordini.
-
-Il data frame `data` è già caricato. Raggruppa per città, calcola la media di `TotalAmount` e il numero di ordini, ordina per media decrescente e prendi il nome della prima. In RStudio guarda quanto sono vicine le prime tre: la differenza è abbastanza grande per decidere?
-
-Regole:
-- Lo **scontrino medio** (ticket medio) di una città è `mean(TotalAmount)` sui suoi ordini: non il fatturato totale, che premia le città grandi.
-- Raggruppa per `City`, calcola media e numero di ordini, ordina per media decrescente, prendi il primo nome.
-- In RStudio guarda quanto sono vicine le prime tre: la differenza è abbastanza grande da decidere qualcosa?
-
-### Assenze per reparto — difficile, R, AI-on
-https://www.vincnardelli.com/cia/lab/assenze-reparto/  
-Obiettivo: Trovare il reparto con più giorni di assenza per addetto.  
-Input: personale (data frame). Output: reparto_assenze (testo)
-
-La direttrice del personale di un'azienda di servizi vuole capire in quale reparto il tema delle assenze pesa di più, per parlarne con il responsabile. Il primo conto che le hanno portato, i giorni di assenza totali per reparto, non la convince: le Vendite risultano prime, ma sono anche il reparto con più persone. Il confronto sensato è **per addetto**: i giorni di assenza di un reparto divisi per il numero di dipendenti di quel reparto.
-
-Il data frame `personale` è già caricato (in RStudio: `read.csv("personale.csv")`): una riga per dipendente, con `reparto` e `giorni_assenza`. Il risultato che vuole è il nome del reparto con più giorni di assenza per addetto.
-
-_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
+- Stesse regole dell'[Autovelox](../autovelox/): 0 / 36 / 148 / 370 / 500 € per le fasce "entro il limite", "non oltre 10", "non oltre 40", "non oltre 60", "oltre 60".
+- Il codice deve **definire** la funzione `multa <- function(velocita, limite){ ... }` che **restituisce** l'importo (ultima espressione o `return()`).
+- La verifica chiama la tua funzione con i valori di ogni caso: non servono assegnazioni di prova.
+- In RStudio, usala su un vettore di veicoli con un ciclo `for` e conta quante multe superano i 100 €.

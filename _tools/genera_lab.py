@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+# ATTENZIONE (14 ottobre 2026): questo generatore è superato. I file _lab/*.md
+# sono stati modificati a mano dopo la generazione (tariffe del taxi, numeri di
+# modulo dopo la rinumerazione dei moduli) e qui ci sono lab che il sito non ha
+# più. Rieseguirlo sovrascriverebbe quelle modifiche: la fonte sono i file in _lab/.
 """Genera i file _lab/*.md a partire da definizioni Python.
 I valori attesi dei test sono calcolati da un'implementazione di riferimento in Python,
 così specifica, soluzione e test restano coerenti. Eseguire: python3 _tools/genera_lab.py"""

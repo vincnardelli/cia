@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: Dove si spende di più per ordine
-modulo: 5
+modulo: 6
 order: 4
 difficolta: facile
 language: R

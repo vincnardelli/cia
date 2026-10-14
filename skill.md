@@ -19,6 +19,10 @@ Quando la skill è attiva, puoi parlarle così:
 | `assistito:` + la specifica | analizza l'esercizio, ti fa domande sui casi limite, poi propone la struttura |
 | `errore:` + il messaggio di R | ti traduce l'errore e ti dice dove guardare |
 | `spiega:` + un concetto | otto righe, un esempio, il rimando al modulo |
+| `shiny:` + le tue funzioni | ti aiuta a costruirci attorno un'app Shiny, come il calcolatore BMI della lezione 6 |
+| `progetto:` + la tua idea | ti aiuta a trovare un problema e a specificarlo bene, facendo la parte del compagno che lo deve risolvere |
+
+La skill copre la parte del corso sul codice in R: usa solo i costrutti visti a lezione e scrive il codice nello stesso stile.
 
 Versione skill: **{{ site.skill_version }}** · [SKILL.md]({{ site.baseurl }}/assets/skill/istruzioni.txt) · [programma.md]({{ site.baseurl }}/assets/skill/programma.md) · [stile.md]({{ site.baseurl }}/assets/skill/stile.md) · [lab.md]({{ site.baseurl }}/assets/skill/lab.md)
 
