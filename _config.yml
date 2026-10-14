@@ -19,7 +19,7 @@ description: Corso Università Cattolica del Sacro Cuore
 author: Vincenzo Nardelli
 baseurl: '/cia' # the subpath of your site, e.g. /blog
 url: 'https://vincnardelli.github.io' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor", "node_modules", "PIANO_2026-27.md", "PROGRAMMA_2026-27.md", "PROGRAMMA_2026-27.pdf", "SCALETTA_L1_2026-27.md", "SITO_2026-27.md", "_docs_schema.md", "skill", "assets/skill", "esplorazioni"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor", "node_modules", "_docs_schema.md", "skill", "assets/skill", "esplorazioni"]
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.4.0.rc2
