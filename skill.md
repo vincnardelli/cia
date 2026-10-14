@@ -63,7 +63,7 @@ La Gem è già pronta e condivisa: aprila dal link e salvala tra le tue Gem. Ser
 <div class="tab-panel" data-panel="gpt" markdown="1">
 
 <div class="via via--rapida" markdown="1">
-<div class="via__k">La Skill del corso su ChatGPT</div>
+<div class="via__k">La Skill del corso su ChatGPT (la strada consigliata)</div>
 
 Su ChatGPT la skill si installa caricando un file. Ci vogliono due minuti e si fa una volta sola.
 
@@ -81,7 +81,7 @@ Quando la skill viene aggiornata (la versione è scritta in cima a questa sezion
 </div>
 
 <div class="via" markdown="1">
-<div class="via__k">Non vedi la scheda Skill? Un progetto su ChatGPT</div>
+<div class="via__k">In alternativa, se non vedi la scheda Skill: un progetto su ChatGPT</div>
 
 <ol class="steps">
 <li>Su ChatGPT apri <strong>Progetti → Nuovo progetto</strong> e chiamalo <em>Coding e fondamenti di AI</em>.</li>
