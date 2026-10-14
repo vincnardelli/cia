@@ -43,7 +43,7 @@ seo:
 </div>
 
 {% if site.mostra_skill %}
-Installa la [skill del corso]({{ site.baseurl }}/skill/) nel tuo assistente ({% include icona.html nome="gpt" testo=true %}, {% include icona.html nome="gemini" testo=true %} o {% include icona.html nome="claude" testo=true %}): ti aiuta a trovare gli errori senza darti la soluzione.{% if site.mostra_lab %} In ogni lab trovi il bottone *Lavora con l'AI*.{% endif %}
+Installa la [skill del corso]({{ site.baseurl }}/skill/) nel tuo assistente ({% include icona.html nome="gemini" testo=true %}, {% include icona.html nome="gpt" testo=true %} o {% include icona.html nome="claude" testo=true %}): ti aiuta a trovare gli errori senza darti la soluzione.{% if site.mostra_lab %} In ogni lab trovi il bottone *Lavora con l'AI*.{% endif %}
 {% endif %}
 
 ## 👩🏻‍💻 Perché seguire il corso?

@@ -117,7 +117,7 @@ ripassa_ai: false
 # Skill del corso: link "via rapida" (lasciare vuoto finché non esistono)
 skill_gpt_url: ''
 skill_gem_url: 'https://gemini.google.com/gem/1bWlWV8wi8zGj7WgLi3-bpf-agsho03ut?usp=sharing'
-skill_version: '2026.1'
+skill_version: '2026.2'
 
 plugins:
   - jekyll-seo-tag

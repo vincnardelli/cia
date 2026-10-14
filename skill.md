@@ -8,7 +8,7 @@ nav_order: 4
 
 # 🧠 La skill del corso
 
-La **skill** è un insieme di istruzioni e file che insegnano al tuo assistente AI come aiutarti in questo corso: conosce il programma, lo stile del codice e gli esercizi, e soprattutto **non ti dà la soluzione pronta** ma ti fa trovare i casi limite. La stessa skill funziona su {% include icona.html nome="gpt" testo=true %}, {% include icona.html nome="gemini" testo=true %} e {% include icona.html nome="claude" testo=true %}: la installi una volta e la usi per tutto il corso.{% if site.mostra_lab %} Dalle pagine dei lab, il bottone *Lavora con l'AI* ti manda nella chat giusta con il prompt pronto.{% endif %}
+La **skill** è un insieme di istruzioni e file che insegnano al tuo assistente AI come aiutarti in questo corso: conosce il programma, lo stile del codice e gli esercizi, e soprattutto **non ti dà la soluzione pronta** ma ti fa trovare i casi limite. La stessa skill funziona su {% include icona.html nome="gemini" testo=true %}, {% include icona.html nome="gpt" testo=true %} e {% include icona.html nome="claude" testo=true %}: la installi una volta e la usi per tutto il corso.{% if site.mostra_lab %} Dalle pagine dei lab, il bottone *Lavora con l'AI* ti manda nella chat giusta con il prompt pronto.{% endif %}
 
 La skill copre la parte del corso sul codice in R: usa solo i costrutti visti a lezione e scrive il codice nello stesso stile.{% assign m5 = site.moduli | where: 'number', 5 | first %}{% if m5 %} Perché e quando usarla, con un esempio dall'inizio alla fine, è spiegato nel [modulo 5, Delegare]({{ site.baseurl }}{{ m5.url }}).{% endif %}
 
@@ -32,51 +32,17 @@ Più sotto trovi un esempio pronto per ognuna.
 Versione **{{ site.skill_version }}** · file: [istruzioni]({{ site.baseurl }}/assets/skill/istruzioni.txt) · [programma.md]({{ site.baseurl }}/assets/skill/programma.md) · [stile.md]({{ site.baseurl }}/assets/skill/stile.md) · [lab.md]({{ site.baseurl }}/assets/skill/lab.md)
 
 <div class="tabs" data-tabs>
-  <div class="tab is-active" data-tab="gpt">{% include icona.html nome="gpt" testo=true size=20 %}</div>
-  <div class="tab" data-tab="gemini">{% include icona.html nome="gemini" testo=true size=20 %}</div>
+  <div class="tab is-active" data-tab="gemini">{% include icona.html nome="gemini" testo=true size=20 %}</div>
+  <div class="tab" data-tab="gpt">{% include icona.html nome="gpt" testo=true size=20 %}</div>
   <div class="tab" data-tab="claude">{% include icona.html nome="claude" testo=true size=20 %}</div>
 </div>
 
-<div class="tab-panel is-active" data-panel="gpt" markdown="1">
-
-{% if site.skill_gpt_url != '' %}
-<div class="via via--rapida" markdown="1">
-<div class="via__k">Via rapida</div>
-Il GPT del corso è già configurato: aprilo e fissalo nella barra laterale. Funziona anche con l'account gratuito.
-
-[Apri "Coding e fondamenti di AI" su ChatGPT]({{ site.skill_gpt_url }}){: .btn .btn-primary }
-</div>
-{% endif %}
-
-<div class="via" markdown="1">
-<div class="via__k">Un progetto su ChatGPT (la strada consigliata)</div>
-
-<ol class="steps">
-<li>Su ChatGPT apri <strong>Progetti → Nuovo progetto</strong> e chiamalo <em>Coding e fondamenti di AI</em>.</li>
-<li>Nelle <strong>istruzioni</strong> del progetto incolla il testo della skill: <button class="btn btn-outline btn-sm" data-copy-file="{{ site.baseurl }}/assets/skill/istruzioni.txt">Copia le istruzioni</button></li>
-<li>Nei <strong>file</strong> del progetto carica i tre allegati: <a href="{{ site.baseurl }}/assets/skill/programma.md" download>programma.md</a>, <a href="{{ site.baseurl }}/assets/skill/stile.md" download>stile.md</a>, <a href="{{ site.baseurl }}/assets/skill/lab.md" download>lab.md</a>.</li>
-<li>Apri una chat dentro il progetto e fai il test qui sotto.</li>
-</ol>
-</div>
-
-<div class="via via--rapida" markdown="1">
-<div class="via__k">In alternativa: la Skill di ChatGPT (solo se nel tuo account, in Plugin, c'è la scheda Skill)</div>
-
-<ol class="steps">
-<li>Scarica la skill: <a class="btn btn-outline btn-sm" href="{{ site.baseurl }}/assets/skill/cia-skill.zip" download>cia-skill.zip</a></li>
-<li>Su ChatGPT apri <strong>Plugin</strong> nella barra laterale, poi la scheda <strong>Skill</strong>.</li>
-<li>Premi <strong>+</strong>, scegli <strong>Carica dal tuo computer</strong> e trascina lo zip: tra le skill installate compare <em>coding fondamenti ai</em>.</li>
-<li>Apri una chat nuova e fai il test qui sotto: la skill si attiva da sola quando scrivi <code>tutor:</code>, <code>assistito:</code> e le altre modalità.</li>
-</ol>
-</div>
-</div>
-
-<div class="tab-panel" data-panel="gemini" markdown="1">
+<div class="tab-panel is-active" data-panel="gemini" markdown="1">
 
 {% if site.skill_gem_url != '' %}
 <div class="via via--rapida" markdown="1">
-<div class="via__k">Via rapida</div>
-La Gem del corso è condivisa: aprila e salvala tra le tue Gem.
+<div class="via__k">La Gem del corso (la strada più semplice)</div>
+La Gem è già pronta e condivisa: aprila dal link e salvala tra le tue Gem. Serve un account Google; se con l'account dell'università Gemini non si apre, usa un account personale.
 
 [Apri la Gem "Coding e fondamenti di AI"]({{ site.skill_gem_url }}){: .btn .btn-primary }
 </div>
@@ -90,6 +56,38 @@ La Gem del corso è condivisa: aprila e salvala tra le tue Gem.
 <li>Nelle <strong>istruzioni</strong> incolla la skill: <button class="btn btn-outline btn-sm" data-copy-file="{{ site.baseurl }}/assets/skill/istruzioni.txt">Copia le istruzioni</button></li>
 <li>In <strong>Conoscenza</strong> carica <a href="{{ site.baseurl }}/assets/skill/programma.md" download>programma.md</a>, <a href="{{ site.baseurl }}/assets/skill/stile.md" download>stile.md</a>, <a href="{{ site.baseurl }}/assets/skill/lab.md" download>lab.md</a>.</li>
 <li>Salva, apri la Gem e fai il test qui sotto.</li>
+</ol>
+</div>
+</div>
+
+<div class="tab-panel" data-panel="gpt" markdown="1">
+
+<div class="via via--rapida" markdown="1">
+<div class="via__k">La Skill del corso su ChatGPT</div>
+
+Su ChatGPT la skill si installa caricando un file. Ci vogliono due minuti e si fa una volta sola.
+
+<ol class="steps">
+<li>Scarica la skill: <a class="btn btn-outline btn-sm" href="{{ site.baseurl }}/assets/skill/cia-skill.zip" download>cia-skill.zip</a>. Non aprire lo zip: si carica così com'è.</li>
+<li>Vai su <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a> e nella barra laterale a sinistra apri <strong>Plugin</strong>.</li>
+<li>In alto, passa dalla scheda <strong>Plugin</strong> alla scheda <strong>Skill</strong>.</li>
+<li>Premi <strong>+</strong> in alto a destra e scegli <strong>Carica dal tuo computer</strong>.</li>
+<li>Trascina <code>cia-skill.zip</code> nella finestra <em>Carica una skill</em>, o cliccaci sopra per sceglierlo. ChatGPT controlla il file e mostra <em>Skill caricata</em>.</li>
+<li>Chiudi la finestra: tra le skill <strong>Installate</strong> ora c'è <em>coding fondamenti ai</em>.</li>
+<li>Apri una <strong>chat nuova</strong> e fai il test qui sotto. La skill si attiva da sola quando scrivi <code>tutor:</code>, <code>assistito:</code> o le altre modalità; se non succede, dal menu <strong>⋯</strong> della skill scegli <strong>Chat</strong>, che apre una chat già collegata.</li>
+</ol>
+
+Quando la skill viene aggiornata (la versione è scritta in cima a questa sezione), dal menu <strong>⋯</strong> scegli <strong>Rimuovi</strong> e ricarica lo zip nuovo.
+</div>
+
+<div class="via" markdown="1">
+<div class="via__k">Non vedi la scheda Skill? Un progetto su ChatGPT</div>
+
+<ol class="steps">
+<li>Su ChatGPT apri <strong>Progetti → Nuovo progetto</strong> e chiamalo <em>Coding e fondamenti di AI</em>.</li>
+<li>Nelle <strong>istruzioni</strong> del progetto incolla il testo della skill: <button class="btn btn-outline btn-sm" data-copy-file="{{ site.baseurl }}/assets/skill/istruzioni.txt">Copia le istruzioni</button></li>
+<li>Nei <strong>file</strong> del progetto carica i tre allegati: <a href="{{ site.baseurl }}/assets/skill/programma.md" download>programma.md</a>, <a href="{{ site.baseurl }}/assets/skill/stile.md" download>stile.md</a>, <a href="{{ site.baseurl }}/assets/skill/lab.md" download>lab.md</a>.</li>
+<li>Apri una chat dentro il progetto e fai il test qui sotto.</li>
 </ol>
 </div>
 </div>
