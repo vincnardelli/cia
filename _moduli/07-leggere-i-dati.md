@@ -164,4 +164,4 @@ Ogni riga di `case_when` è un `else if`: condizione a sinistra della tilde, val
 
 ## Per approfondire
 
-I verbi di dplyr su cui si regge ogni riga di questo modulo sono nel [modulo 6](06-dati). Nel [modulo 8](08-software-2-0) le regole dell'autovelox, che finora abbiamo scritto noi, le farà trovare un algoritmo ai dati.
+I verbi di dplyr su cui si regge ogni riga di questo modulo sono nel [modulo 6](../06-dati/). Nel [modulo 8](../08-software-2-0/) le regole dell'autovelox, che finora abbiamo scritto noi, le farà trovare un algoritmo ai dati.

@@ -85,7 +85,6 @@ defaults:
       type: lab
     values:
       layout: lab
-      published: false
       nav_exclude: true
   - scope:
       path: ''
@@ -105,10 +104,10 @@ compress_html:
 # Questionario di iscrizione: tab in evidenza nella barra in alto (vuoto = nascosto)
 iscrizione_url: 'https://forms.gle/H5XrnvV977ZBd44F8'
 
-# Lab nascosti per ora. Per riattivarli: mostra_lab a true e togliere 'published: false'
-# dal default dei lab qui sotto. La skill è online: "skill/" in exclude toglie solo la
-# cartella dei sorgenti (con "skill" senza barra sparirebbe anche skill.md).
-mostra_lab: false
+# Lab e skill online. Per nascondere i lab: mostra_lab a false e 'published: false' nel
+# default dei lab. "skill/" in exclude toglie solo la cartella dei sorgenti della skill
+# (con "skill" senza barra sparirebbe anche skill.md).
+mostra_lab: true
 mostra_skill: true
 
 # Sezione "Ripassa con l'AI" in fondo alle pagine dei moduli (false = nascosta)

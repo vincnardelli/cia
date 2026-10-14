@@ -76,7 +76,7 @@ layout: default
 
   <nav class="modulo__tabs" aria-label="Parti del modulo">
     {% if ha_lezione %}<a href="#lezione">Lezione</a>{% endif %}
-    {% if site.mostra_lab %}<a href="#lab">Lab <span class="count">{{ labs.size }}</span></a>{% endif %}
+    {% if site.mostra_lab and labs.size > 0 %}<a href="#lab">Lab <span class="count">{{ labs.size }}</span></a>{% endif %}
     {% if page.explorations.size > 0 %}<a href="#esplorazioni">Esplorazioni</a>{% endif %}
   </nav>
 
@@ -87,7 +87,7 @@ layout: default
   </section>
   {% endif %}
 
-  {% if site.mostra_lab %}
+  {% if site.mostra_lab and labs.size > 0 %}
   <section id="lab" class="modulo__lab">
     <h2>Lab</h2>
     {% if labs.size > 0 %}

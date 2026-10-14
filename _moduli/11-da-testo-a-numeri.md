@@ -34,4 +34,4 @@ Esplorazione interattiva del tokenizzatore: si scrive una frase e si vede in qua
 
 ## Per approfondire
 
-La foresta che classifica gli embeddings è nel [modulo 10](10-random-forest). Nel [modulo 12](12-modello-di-linguaggio) il modello che produce gli embeddings genera anche testo, un token alla volta.
+La foresta che classifica gli embeddings è nel [modulo 10](../10-random-forest/). Nel [modulo 12](../12-modello-di-linguaggio/) il modello che produce gli embeddings genera anche testo, un token alla volta.

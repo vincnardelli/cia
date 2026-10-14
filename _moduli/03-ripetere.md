@@ -147,10 +147,10 @@ Il secondo lab cresce in cinque passi, e ogni passo aggiunge una regola sola.
 4. **La funzione.** Ai primi tre passi si cambia corsa modificando le righe in cima e rieseguendo tutto. Al quarto il calcolo prende un nome, `costo_corsa(distanza, giorno, ora)`, e una corsa diventa una riga sola.
 5. **Tre corse.** La stessa corsa in tre momenti diversi, domenica a mezzogiorno, mercoledì alle 9 e sabato alle 23: giorni e ore stanno in due vettori, la funzione si chiama dentro un ciclo e un contatore dice in quante corse su tre conviene il taxi.
 
-Il quarto e il quinto passo sono il punto del modulo: la stessa regola, scritta una volta e riusata tante. Il [modulo 4](04-astrarre) riprende da lì e mostra come si scrive una funzione, partendo dall'autovelox del modulo 2.
+Il quarto e il quinto passo sono il punto del modulo: la stessa regola, scritta una volta e riusata tante. Il [modulo 4](../04-astrarre/) riprende da lì e mostra come si scrive una funzione, partendo dall'autovelox del modulo 2.
 
 > **Attenzione** A esattamente 20 km/h (0,333 km in un minuto) il tariffario dice «inferiore a 20» per il tempo e «superiore a 20» per la distanza: i 20 esatti non sono coperti da nessuna delle due. Decidete voi da che parte mandarli, e scrivetelo nei test: è una scelta, non un dettaglio.
 
 ## Per approfondire
 
-L'`if` che sta dentro ogni ciclo di oggi è nel [modulo 2](02-decidere). Nel [modulo 4](04-astrarre) la regola scritta nel ciclo prende un nome e diventa una funzione.
+L'`if` che sta dentro ogni ciclo di oggi è nel [modulo 2](../02-decidere/). Nel [modulo 4](../04-astrarre/) la regola scritta nel ciclo prende un nome e diventa una funzione.

@@ -34,4 +34,4 @@ Un'esplorazione interattiva in cui si sposta la soglia dello split a mano e si v
 
 ## Per approfondire
 
-L'autovelox scritto a mano è nel [modulo 2](02-decidere); la frase «una funzione che nessuno ha scritto» chiude il [modulo 4](04-astrarre). Nel [modulo 9](09-python) cambiamo linguaggio prima di far crescere una foresta di alberi.
+L'autovelox scritto a mano è nel [modulo 2](../02-decidere/); la frase «una funzione che nessuno ha scritto» chiude il [modulo 4](../04-astrarre/). Nel [modulo 9](../09-python/) cambiamo linguaggio prima di far crescere una foresta di alberi.

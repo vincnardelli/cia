@@ -9,7 +9,6 @@ hours: 3
 concepts_new: [specifica prima del codice, skill del corso, modalità della skill, leggere il codice generato, verificare sui casi limite, registro AI]
 concepts_required: [if/else, ciclo for, funzioni, test di una funzione]
 explorations: []
-published: false
 ---
 
 ## Quello che abbiamo capito scrivendo codice
@@ -111,4 +110,4 @@ Il [progetto 1]({{ site.baseurl }}/progetti/1/) è il posto giusto per mettere i
 
 ## Per approfondire
 
-Le funzioni che farai scrivere all'AI sono quelle del [modulo 4](04-astrarre). Nel [modulo 6](06-dati) si passa dai vettori alle tabelle di dati: lo stesso metodo vale anche lì, e diventa ancora più importante, perché con migliaia di righe non si controlla a occhio.
+Le funzioni che farai scrivere all'AI sono quelle del [modulo 4](../04-astrarre/). Nel modulo 6 si passa dai vettori alle tabelle di dati: lo stesso metodo vale anche lì, e diventa ancora più importante, perché con migliaia di righe non si controlla a occhio.

@@ -29,4 +29,4 @@ Rubrica di valutazione, template della documentazione e del registro AI, pagina 
 
 ## Per approfondire
 
-La tabella da cui siamo partiti è nel [modulo 1](01-partenza). Tutte le altre moduli sono a un link di distanza: ripartite da quella in cui i test vi hanno dato più filo da torcere.
+La tabella da cui siamo partiti è nel [modulo 1](../01-partenza/). Tutte le altre moduli sono a un link di distanza: ripartite da quella in cui i test vi hanno dato più filo da torcere.

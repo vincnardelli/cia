@@ -46,4 +46,4 @@ Tutti i lab base della sezione 1 da far passare in Python **con gli stessi test*
 
 ## Per approfondire
 
-Le funzioni da tradurre sono nel [modulo 4](04-astrarre), i verbi dplyr da rimappare nel [modulo 6](06-dati). Nel [modulo 10](10-random-forest) Python serve subito, per scikit-learn.
+Le funzioni da tradurre sono nel [modulo 4](../04-astrarre/), i verbi dplyr da rimappare nel [modulo 6](../06-dati/). Nel [modulo 10](../10-random-forest/) Python serve subito, per scikit-learn.

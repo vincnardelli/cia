@@ -4,7 +4,6 @@ title: Lab
 permalink: /lab/
 description: Tutti gli esercizi del corso, con verifica automatica
 nav_order: 3
-published: false
 ---
 
 # 🧪 Tutti i lab

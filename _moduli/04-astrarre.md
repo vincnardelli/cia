@@ -157,4 +157,4 @@ L'ordine dei passaggi conta: prima si sommano i prodotti, poi si toglie lo scont
 
 ## Per approfondire
 
-Il ciclo che queste funzioni sostituiscono è nel [modulo 3](03-ripetere). {% assign m5 = site.moduli | where: 'number', 5 | first %}{% if m5 %}Nel [modulo 5](05-delegare) le funzioni le faremo scrivere all'AI, dopo aver capito il problema. {% endif %}Nel [modulo 6](06-dati) i vettori diventano le colonne di una tabella, e il ciclo `for` per selezionare e contare sarà sostituito da un verbo di dplyr.
+Il ciclo che queste funzioni sostituiscono è nel [modulo 3](../03-ripetere/). {% assign m5 = site.moduli | where: 'number', 5 | first %}{% if m5 %}Nel [modulo 5](../05-delegare/) le funzioni le faremo scrivere all'AI, dopo aver capito il problema. {% endif %}Nel modulo 6 i vettori diventano le colonne di una tabella, e il ciclo `for` per selezionare e contare sarà sostituito da un verbo di dplyr.
