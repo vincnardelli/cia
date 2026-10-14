@@ -48,8 +48,19 @@ Il GPT del corso è già configurato: aprilo e fissalo nella barra laterale. Fun
 </div>
 {% endif %}
 
+<div class="via via--rapida" markdown="1">
+<div class="via__k">Skill di ChatGPT (se nel tuo account c'è la voce Skill)</div>
+
+<ol class="steps">
+<li>Scarica la skill: <a class="btn btn-outline btn-sm" href="{{ site.baseurl }}/assets/skill/cia-skill.zip" download>cia-skill.zip</a></li>
+<li>Su ChatGPT apri <strong>Plugin</strong> nella barra laterale, poi la scheda <strong>Skill</strong>.</li>
+<li>Premi <strong>+</strong>, scegli <strong>Carica dal tuo computer</strong> e trascina lo zip: tra le skill installate compare <em>coding fondamenti ai</em>.</li>
+<li>Apri una chat nuova e fai il test qui sotto: la skill si attiva da sola quando scrivi <code>tutor:</code>, <code>assistito:</code> e le altre modalità.</li>
+</ol>
+</div>
+
 <div class="via" markdown="1">
-<div class="via__k">{% if site.skill_gpt_url != '' %}In alternativa: un tuo progetto{% else %}Un progetto su ChatGPT (funziona con l'account gratuito){% endif %}</div>
+<div class="via__k">Se non vedi la voce Skill: un progetto su ChatGPT (funziona con l'account gratuito)</div>
 
 <ol class="steps">
 <li>Su ChatGPT apri <strong>Progetti → Nuovo progetto</strong> e chiamalo <em>Coding e fondamenti di AI</em>.</li>
