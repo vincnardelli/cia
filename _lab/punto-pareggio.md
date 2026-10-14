@@ -24,6 +24,8 @@ risultato:
 regole: |
   - Ogni pezzo venduto contribuisce ai costi fissi per `prezzo - costo_unitario` (il **margine di contribuzione**).
   - I pezzi da vendere sono `costi_fissi / margine`, arrotondati **per eccesso** con `ceiling()`: non si vende mezzo pezzo, e con uno in meno non si è ancora in pareggio.
+  - `ceiling(x)` arrotonda per eccesso all'intero: `ceiling(12.1)` è 13, mentre `ceiling(12)` resta 12.
+  - Il prezzo è sempre maggiore del costo unitario, quindi il margine è sempre positivo: con un margine zero o negativo il pareggio non esisterebbe, ma qui questo caso non si presenta (servirebbe un `if`, che vedremo nel modulo 2).
 skeleton: |
   costi_fissi <- 3000
   prezzo <- 8
@@ -80,4 +82,6 @@ Due amici vogliono aprire una pizzeria da asporto e devono rispondere alla doman
 
 Il numero cercato è quante pizze servono perché la somma di quei contributi copra i costi fissi. Non esistono le mezze pizze, e con una pizza in meno non si è ancora in pareggio: quindi la divisione va sempre arrotondata **per eccesso**, anche quando manca pochissimo. Quando invece la divisione è esatta, non si aggiunge nulla.
 
-Scrivi il programma che, dati costi fissi, prezzo e costo unitario, calcola il numero di pizze del pareggio. In R esiste la funzione `ceiling()`.
+Il prezzo di vendita è sempre più alto del costo di una pizza: se non lo fosse, ogni pizza venduta aggiungerebbe una perdita e il pareggio non arriverebbe mai. Qui questo caso non si presenta; per gestirlo servirebbe un `if`, che vedremo nel modulo 2.
+
+Scrivi il programma che, dati costi fissi, prezzo e costo unitario, calcola il numero di pizze del pareggio. In R l'arrotondamento per eccesso all'intero si fa con `ceiling(x)`: `ceiling(12.1)` è 13, mentre `ceiling(12)` resta 12.

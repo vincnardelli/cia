@@ -50,7 +50,7 @@ tests:
   expected: 100.0
   visible: false
   boundary: true
-  hint: 'Hotel pieno: 100, non 100.0 con decimali strani né 1.'
+  hint: 'Hotel pieno: 100, non 1. Hai moltiplicato per 100?'
 - inputs:
     occupate: 13
     totali: 120

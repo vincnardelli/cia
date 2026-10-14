@@ -28,6 +28,7 @@ skeleton: |
 
 
   print(totale)
+tolerance: 0.001
 tests:
 - inputs:
     prezzo_netto: 10

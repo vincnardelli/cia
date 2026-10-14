@@ -74,7 +74,7 @@ Con lo stesso schema scriviamo `bmi(peso, altezza)` e `nps(voti)`, che riceve un
 
 ## Una funzione che nessuno ha scritto
 
-Chiudiamo con una frase da tenere a mente fino al modulo 6. `multa()` è una funzione: entra una velocità e un limite, esce un importo. Le regole dentro le abbiamo scritte noi leggendo il Codice della Strada. Un modello di machine learning è **una funzione che nessuno ha scritto**: entrano dati, esce una previsione, e le regole dentro le ha trovate un algoritmo guardando esempi. La forma è la stessa; cambia chi decide le soglie. Le funzioni `multa()`, `bmi()` e `rata()` di questo modulo torneranno nel modulo 12, quando un modello di linguaggio le userà come strumenti.
+Chiudiamo con una frase da tenere a mente fino al modulo 8. `multa()` è una funzione: entra una velocità e un limite, esce un importo. Le regole dentro le abbiamo scritte noi leggendo il Codice della Strada. Un modello di machine learning è **una funzione che nessuno ha scritto**: entrano dati, esce una previsione, e le regole dentro le ha trovate un algoritmo guardando esempi. La forma è la stessa; cambia chi decide le soglie. Le funzioni `multa()`, `bmi()` e `rata()` di questo modulo torneranno nel modulo 13, quando un modello di linguaggio le userà come strumenti.
 
 <div id="lezione-6"></div>
 
@@ -157,4 +157,4 @@ L'ordine dei passaggi conta: prima si sommano i prodotti, poi si toglie lo scont
 
 ## Per approfondire
 
-Il ciclo che queste funzioni sostituiscono è nel [modulo 3](03-ripetere). Nel [modulo 5](05-dati) i vettori diventano le colonne di una tabella, e il ciclo `for` per selezionare e contare sarà sostituito da un verbo di dplyr.
+Il ciclo che queste funzioni sostituiscono è nel [modulo 3](03-ripetere). {% assign m5 = site.moduli | where: 'number', 5 | first %}{% if m5 %}Nel [modulo 5](05-delegare) le funzioni le faremo scrivere all'AI, dopo aver capito il problema. {% endif %}Nel [modulo 6](06-dati) i vettori diventano le colonne di una tabella, e il ciclo `for` per selezionare e contare sarà sostituito da un verbo di dplyr.

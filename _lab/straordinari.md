@@ -2,7 +2,7 @@
 layout: lab
 title: Straordinari della settimana
 modulo: 3
-order: 5
+order: 2
 difficolta: facile
 language: R
 ai_mode: 'on'

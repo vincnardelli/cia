@@ -19,7 +19,7 @@ description: Corso Università Cattolica del Sacro Cuore
 author: Vincenzo Nardelli
 baseurl: '/cia' # the subpath of your site, e.g. /blog
 url: 'https://vincnardelli.github.io' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor", "node_modules", "_docs_schema.md", "skill", "assets/skill", "esplorazioni"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor", "node_modules", "_docs_schema.md", "skill/", "esplorazioni"]
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.4.0.rc2
@@ -105,10 +105,11 @@ compress_html:
 # Questionario di iscrizione: tab in evidenza nella barra in alto (vuoto = nascosto)
 iscrizione_url: 'https://forms.gle/H5XrnvV977ZBd44F8'
 
-# Lab e skill: nascosti per ora. Per riattivarli: mostra_lab/mostra_skill a true,
-# togliere 'published: false' dal default dei lab qui sotto e "skill", "assets/skill" da exclude.
+# Lab nascosti per ora. Per riattivarli: mostra_lab a true e togliere 'published: false'
+# dal default dei lab qui sotto. La skill è online: "skill/" in exclude toglie solo la
+# cartella dei sorgenti (con "skill" senza barra sparirebbe anche skill.md).
 mostra_lab: false
-mostra_skill: false
+mostra_skill: true
 
 # Sezione "Ripassa con l'AI" in fondo alle pagine dei moduli (false = nascosta)
 ripassa_ai: false

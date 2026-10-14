@@ -2,7 +2,7 @@
 layout: lab
 title: Net Promoter Score
 modulo: 3
-order: 6
+order: 3
 difficolta: facile
 language: R
 ai_mode: 'on'
@@ -18,7 +18,8 @@ risultato:
 regole: |
   - I clienti con voto **9 o 10** sono *promotori*; quelli con voto **da 0 a 6** sono *detrattori*; 7 e 8 sono *passivi* e non contano.
   - `NPS = (promotori − detrattori) / totale intervistati × 100`.
-  - Arrotonda a un decimale. Contali con un ciclo e due contatori; in RStudio confronta con `sum(voti >= 9)`.
+  - Arrotonda a un decimale.
+  - Contali con un ciclo e due contatori, `promotori` e `detrattori`, che partono da 0 e crescono di 1 a ogni voto della loro fascia.
 skeleton: |
   voti <- c(10, 9, 8, 7, 6, 10)
 
@@ -117,4 +118,4 @@ Un'azienda di telefonia manda ai clienti la domanda standard della soddisfazione
 
 Ti passano il vettore dei voti e ti chiedono l'NPS con un decimale. Va da −100 (tutti detrattori) a 100 (tutti promotori). Un mese con soli 7 e 8 dà zero: non è un errore, è la definizione.
 
-Contali con un ciclo e due contatori; poi, in RStudio, confronta con `sum(voti >= 9)`.
+Contali con un ciclo e due contatori, uno per i promotori e uno per i detrattori, che partono da 0 e crescono di 1 a ogni voto della loro fascia.

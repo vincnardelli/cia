@@ -2,7 +2,7 @@
 layout: lab
 title: Tariffa del parcheggio
 modulo: 2
-order: 5
+order: 3
 difficolta: facile
 language: R
 ai_mode: 'off'
@@ -10,7 +10,7 @@ objective: Calcolare quanto si paga all'uscita di un parcheggio a partire dai mi
 inputs:
 - name: minuti
   type: numero
-  desc: minuti di sosta, dall'ingresso all'uscita
+  desc: minuti di sosta, dall'ingresso all'uscita, nella stessa giornata
 risultato:
   name: costo
   type: numero
@@ -18,7 +18,8 @@ risultato:
 regole: |
   - Fino a **30 minuti** la sosta è gratuita.
   - Oltre i 30 minuti si paga **1,50 € per ogni ora o frazione di ora**, contando dall'ingresso: 31 minuti sono una frazione della prima ora, 61 minuti sono già due ore.
-  - Il **massimo giornaliero** è 12 €.
+  - `ceiling(x)` arrotonda per eccesso all'intero: `ceiling(12.1)` è 13, mentre `ceiling(12)` resta 12. Le ore da pagare sono `ceiling(minuti / 60)`.
+  - Il **massimo giornaliero** è 12 €. Le soste sono sempre **entro la stessa giornata** (si entra e si esce lo stesso giorno), quindi l'importo non supera mai 12 €.
 skeleton: |
   minuti <- 20
 
@@ -96,6 +97,6 @@ solution_after: ''
 
 Il parcheggio del centro commerciale ha una cassa automatica e la società che lo gestisce ti chiede di riscrivere la regola che calcola l'importo all'uscita, perché quella vecchia sbagliava proprio sui casi che generano reclami.
 
-La sosta è gratuita **fino a 30 minuti**. Oltre i 30 minuti si paga 1,50 euro **per ogni ora o frazione di ora**, contando dal momento dell'ingresso: chi resta 31 minuti paga una frazione della prima ora, cioè 1,50 euro; chi resta 61 minuti è già nella seconda ora e paga 3 euro; chi resta esattamente 60 minuti paga un'ora sola. C'è un **massimo giornaliero** di 12 euro, oltre il quale il contatore si ferma.
+La sosta è gratuita **fino a 30 minuti**. Oltre i 30 minuti si paga 1,50 euro **per ogni ora o frazione di ora**, contando dal momento dell'ingresso: chi resta 31 minuti paga una frazione della prima ora, cioè 1,50 euro; chi resta 61 minuti è già nella seconda ora e paga 3 euro; chi resta esattamente 60 minuti paga un'ora sola. C'è un **massimo giornaliero** di 12 euro, oltre il quale il contatore si ferma. Il parcheggio chiude la sera, quindi ogni sosta comincia e finisce nella stessa giornata: l'importo non supera mai i 12 euro.
 
-Scrivi il programma che, dati i minuti di sosta, calcola l'importo. In R l'arrotondamento per eccesso è `ceiling()`.
+Scrivi il programma che, dati i minuti di sosta, calcola l'importo. In R l'arrotondamento per eccesso all'intero si fa con `ceiling(x)`: `ceiling(12.1)` è 13, mentre `ceiling(12)` resta 12.

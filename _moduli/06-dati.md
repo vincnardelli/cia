@@ -1,6 +1,6 @@
 ---
 layout: modulo
-number: 5
+number: 6
 title: Dati
 sezione: 1
 language: R
@@ -155,4 +155,4 @@ Il secondo comando raggruppa per due variabili e produce una riga per ogni combi
 
 ## Per approfondire
 
-L'indicizzazione con vettori logici è nel [modulo 3](03-ripetere); `ifelse` è la versione vettoriale dell'`if` del [modulo 2](02-decidere). Nella [modulo 6](06-leggere-i-dati) le statistiche dentro `summarise` (media, mediana, deviazione standard) diventano il centro, e impareremo a disegnarle con ggplot2.
+L'indicizzazione con vettori logici è nel [modulo 3](03-ripetere); `ifelse` è la versione vettoriale dell'`if` del [modulo 2](02-decidere). Nel [modulo 7](07-leggere-i-dati) le statistiche dentro `summarise` (media, mediana, deviazione standard) diventano il centro, e impareremo a disegnarle con ggplot2.

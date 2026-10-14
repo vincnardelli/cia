@@ -2,7 +2,7 @@
 layout: lab
 title: Rimborso per il ritardo del treno
 modulo: 2
-order: 3
+order: 1
 difficolta: facile
 language: R
 ai_mode: 'off'
@@ -27,15 +27,16 @@ skeleton: |
   prezzo <- 50
   ritardo <- 30
 
-  if(ritardo < 60){
+  if(...){
     # ...
-  }else if(ritardo < 120){
+  }else if(...){
     # ...
   }else{
     # ...
   }
 
   print(rimborso)
+tolerance: 0.001
 tests:
 - inputs:
     prezzo: 50
@@ -78,6 +79,12 @@ tests:
     ritardo: 200
   expected: 44.95
   visible: false
+- inputs:
+    prezzo: 23.45
+    ritardo: 75
+  expected: 5.86
+  visible: false
+  hint: 'Il 25% di 23,45 fa 5,8625: il rimborso va con due decimali. Hai usato round(x, 2)?'
 solution: |
   prezzo <- 50
   ritardo <- 30

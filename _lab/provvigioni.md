@@ -2,7 +2,7 @@
 layout: lab
 title: Provvigioni dell'agente
 modulo: 3
-order: 8
+order: 4
 difficolta: difficile
 language: R
 ai_mode: 'on'
@@ -23,6 +23,7 @@ skeleton: |
   vendite <- c(8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000)
 
   print(provvigioni)
+tolerance: 0.001
 tests:
 - inputs:
     vendite:
@@ -131,8 +132,8 @@ tests:
     - 3000
     - 12000
     - 27000
-    - 9999.5
-    - 10000.5
+    - 9999
+    - 10001
     - 0
     - 18000
     - 22000
@@ -140,8 +141,25 @@ tests:
     - 30000
     - 11000
     - 7000
-  expected: 6420.01
+  expected: 6420.02
   visible: false
+- inputs:
+    vendite:
+    - 8000
+    - 8000
+    - 8000
+    - 8000
+    - 8000
+    - 8000
+    - 8000
+    - 8000
+    - 8000
+    - 8000
+    - 8000
+    - 1234.56
+  expected: 2677.04
+  visible: false
+  hint: 'Un mese con i centesimi: 3% di 1.234,56 fa 37,0368. Il totale dell''anno va arrotondato a due decimali con round(x, 2).'
 solution: |
   vendite <- c(8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000)
 
@@ -164,6 +182,6 @@ solution_after: ''
 
 Un'azienda che vende macchine per il caffè ai bar paga i propri agenti a provvigione, con un contratto a **scaglioni progressivi calcolati mese per mese**: sul venduto di ogni mese, il 3% sulla parte fino a 10.000 euro, il 5% sulla parte tra 10.000 e 20.000, l'8% sulla parte oltre i 20.000. È lo stesso meccanismo dell'IRPEF: ogni aliquota si applica solo alla fetta che cade nella sua fascia, non a tutto il venduto.
 
-Un agente con 25.000 euro di venduto in un mese prende quindi 300 sul primo scaglione, 500 sul secondo e 400 sul terzo; uno con 10.000 esatti prende 300 e basta. L'ufficio amministrazione ti passa il vettore del venduto dei dodici mesi di un agente e vuole le provvigioni dell'anno, con due decimali.
+Un agente con 25.000 euro di venduto in un mese prende quindi 300 sul primo scaglione, 500 sul secondo e 400 sul terzo; uno con 10.000 esatti prende 300 e basta. L'ufficio amministrazione ti passa il vettore del venduto dei dodici mesi di un agente e vuole le provvigioni dell'anno, con due decimali. Si arrotonda una volta sola, il **totale dell'anno**: le provvigioni dei singoli mesi si sommano senza arrotondarle.
 
 Prima di scrivere codice, scrivi tu la specifica con i casi al confine (10.000 esatti, 20.000 esatti, un mese a zero), poi ragiona su come applicare la regola a un mese, e infine ripetila con un ciclo.

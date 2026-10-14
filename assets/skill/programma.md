@@ -33,6 +33,13 @@ Concetti: funzioni, argomenti, valore di ritorno, test di una funzione, funzioni
 Pagina: https://www.vincnardelli.com/cia/modulo/04-astrarre/
 Codice delle lezioni: [lezione_6.R](https://www.vincnardelli.com/cia/codice/6/lezione_6.R) (funzioni, print e return) · [app.R](https://www.vincnardelli.com/cia/codice/6/app.R) (la app Shiny del BMI) · [biglietti.R](https://www.vincnardelli.com/cia/codice/6/biglietti.R) (lab 1, biglietti e carnet) · [fornitori.R](https://www.vincnardelli.com/cia/codice/6/fornitori.R) (lab 2, due fornitori) · [fornitori_sconti.R](https://www.vincnardelli.com/cia/codice/6/fornitori_sconti.R) (lab 3, con lo sconto)
 
+## Modulo 5 · Delegare (lezione 9)
+
+Il codice si può far scrivere all'AI, il problema no: se l'hai capito, deleghi la scrittura e tieni per te la specifica e la verifica.
+
+Concetti: specifica prima del codice, skill del corso, modalità della skill, leggere il codice generato, verificare sui casi limite, registro AI.
+Pagina: https://www.vincnardelli.com/cia/modulo/05-delegare/
+
 ## Ordine dei costrutti
 
 Se lo studente non dice a che punto è, deducilo dal codice che scrive. Ordine di apparizione: calcoli, variabili e tipi di dato → vettori e parentesi quadre → confronti → if/else ed else if → &, |, ! e %in% → if annidati → ciclo for e accumulatore → funzioni con return() → funzioni che chiamano funzioni e funzioni dentro un ciclo → ricorsione con caso base → la prima app Shiny.

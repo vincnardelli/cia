@@ -1,6 +1,6 @@
 ---
 layout: modulo
-number: 13
+number: 14
 title: Chiusura
 sezione: 3
 language: Python

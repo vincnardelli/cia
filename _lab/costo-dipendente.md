@@ -24,6 +24,7 @@ skeleton: |
 
 
   print(costo_annuo)
+tolerance: 0.001
 tests:
 - inputs:
     lordo_mensile: 1800
@@ -44,7 +45,7 @@ tests:
   expected: 20864.06
   visible: false
   boundary: true
-  hint: 'Con i centesimi conta dove arrotondi: alla fine, sul costo annuo, non sul lordo.'
+  hint: 'Con i centesimi conta dove arrotondi: se arrotondi il costo mensile e poi moltiplichi per 13 sbagli di qualche centesimo. Arrotonda una volta sola, alla fine, sul costo annuo.'
 - inputs:
     lordo_mensile: 3100
   expected: 52390.0

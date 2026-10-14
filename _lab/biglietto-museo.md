@@ -2,7 +2,7 @@
 layout: lab
 title: Biglietto del museo
 modulo: 2
-order: 4
+order: 2
 difficolta: facile
 language: R
 ai_mode: 'off'
@@ -25,16 +25,17 @@ regole: |
   - La **prima domenica del mese** l'ingresso è gratuito per tutti.
   - Negli altri giorni: gratis **sotto i 6 anni** e **dai 70 in su**; ridotto a 8 € **fino ai 18 anni compresi** oppure con tessera studente; intero 15 € per tutti gli altri.
   - Le condizioni vanno controllate nell'ordine giusto: prima i casi gratuiti, poi i ridotti.
+  - Una variabile logica si può usare direttamente come condizione: `if(studente)` equivale a `if(studente == TRUE)`.
 skeleton: |
   eta <- 30
   studente <- FALSE
   prima_domenica <- FALSE
 
-  if(prima_domenica){
+  if(...){
     # ...
-  }else if(eta < 6 | eta >= 70){
+  }else if(...){
     # ...
-  }else if(eta <= 18 | studente){
+  }else if(...){
     # ...
   }else{
     # ...

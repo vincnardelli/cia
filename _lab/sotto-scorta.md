@@ -2,7 +2,7 @@
 layout: lab
 title: Prodotti sotto scorta
 modulo: 3
-order: 4
+order: 1
 difficolta: facile
 language: R
 ai_mode: 'off'
@@ -21,7 +21,7 @@ risultato:
 regole: |
   - I due vettori hanno la stessa lunghezza: il prodotto `i` ha giacenza `giacenza[i]` e soglia `soglia[i]`.
   - Un prodotto va riordinato se la giacenza è **strettamente minore** della soglia: alla soglia esatta è ancora a posto.
-  - Scorri i prodotti con un ciclo `for` e conta; poi, in RStudio, prova a farlo senza ciclo con `sum(giacenza < soglia)`.
+  - Scorri i prodotti con un ciclo `for` e usa un contatore: parte da 0 e cresce di 1 a ogni prodotto sotto soglia.
 skeleton: |
   giacenza <- c(12, 3, 40, 0)
   soglia <- c(10, 5, 20, 2)
@@ -126,4 +126,4 @@ Il responsabile del magazzino di un negozio di ferramenta ha due elenchi, uno ac
 
 I due elenchi sono due vettori della stessa lunghezza, nello stesso ordine: il prodotto in posizione 3 ha giacenza `giacenza[3]` e soglia `soglia[3]`. Un prodotto va riordinato se la giacenza è **strettamente sotto** la soglia: chi è esattamente alla soglia è ancora a posto.
 
-Scrivi il programma che conta i prodotti da riordinare scorrendo i vettori con un ciclo. In RStudio, dopo, prova a ottenere lo stesso numero senza ciclo, con `sum(giacenza < soglia)`: è una riga sola, ma solo dopo aver capito il ciclo.
+Scrivi il programma che conta i prodotti da riordinare scorrendo i vettori con un ciclo e un contatore: parte da 0 e cresce di 1 ogni volta che trovi un prodotto sotto soglia.

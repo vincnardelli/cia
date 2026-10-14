@@ -18,8 +18,8 @@ def fm(path):
 
 # ── programma.md ──
 # La skill copre solo la parte sul codice fatta finora: moduli 1..MAX_MODULO.
-MAX_MODULO = 4
-LEZIONI = {1: 'lezioni 1–2', 2: 'lezione 3', 3: 'lezioni 4–5', 4: 'lezioni 6–8'}
+MAX_MODULO = 5
+LEZIONI = {1: 'lezioni 1–2', 2: 'lezione 3', 3: 'lezioni 4–5', 4: 'lezioni 6–8', 5: 'lezione 9'}
 moduli = []
 for f in sorted(glob.glob(os.path.join(ROOT, '_moduli', '*.md'))):
     d, body = fm(f)

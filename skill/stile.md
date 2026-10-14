@@ -294,10 +294,13 @@ for(i in 1:length(spese)){
   totale <- totale + spese[i]
 }
 
-# Una funzione che stampa invece di restituire: fuori dà NULL
+# Una funzione che stampa invece di restituire: il numero si vede,
+# ma la funzione restituisce l'ultima riga, cioè la frase
 bmi_stampa <- function(peso, altezza){
   print(peso / altezza^2)
+  print("calcolo fatto")
 }
+x <- bmi_stampa(86, 1.73)   # x vale "calcolo fatto", non il BMI
 
 # Una funzione che usa una variabile presa da fuori
 soglia <- 25

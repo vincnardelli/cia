@@ -56,7 +56,9 @@ Due amici vogliono aprire una pizzeria da asporto e devono rispondere alla doman
 
 Il numero cercato è quante pizze servono perché la somma di quei contributi copra i costi fissi. Non esistono le mezze pizze, e con una pizza in meno non si è ancora in pareggio: quindi la divisione va sempre arrotondata **per eccesso**, anche quando manca pochissimo. Quando invece la divisione è esatta, non si aggiunge nulla.
 
-Scrivi il programma che, dati costi fissi, prezzo e costo unitario, calcola il numero di pizze del pareggio. In R esiste la funzione `ceiling()`.
+Il prezzo di vendita è sempre più alto del costo di una pizza: se non lo fosse, ogni pizza venduta aggiungerebbe una perdita e il pareggio non arriverebbe mai. Qui questo caso non si presenta; per gestirlo servirebbe un `if`, che vedremo nel modulo 2.
+
+Scrivi il programma che, dati costi fissi, prezzo e costo unitario, calcola il numero di pizze del pareggio. In R l'arrotondamento per eccesso all'intero si fa con `ceiling(x)`: `ceiling(12.1)` è 13, mentre `ceiling(12)` resta 12.
 
 _Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
 
@@ -74,42 +76,6 @@ Regole:
 - Arrotonda a **un** decimale.
 
 ## Modulo 2
-
-### Boomer finder — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/boomer/  
-Obiettivo: Stabilire se una persona è un baby boomer a partire dall'anno di nascita.  
-Input: anno (numero). Output: status (testo)
-
-Un'agenzia di marketing sta preparando una campagna pensata per i *baby boomer*, la generazione nata nel dopoguerra. Per segmentare l'elenco clienti servono regole precise, e la definizione che l'agenzia adotta è quella demografica standard: è boomer chi è nato **dal 1946 al 1964, estremi compresi**.
-
-Ti passano una colonna con l'anno di nascita di ogni cliente e ti chiedono un programma che, dato l'anno, risponda "Boomer" oppure "Non Boomer" (scritti esattamente così, perché poi il testo finisce in un filtro automatico).
-
-Il punto delicato è ai bordi: chi è nato nel 1946 o nel 1964 è dentro. Il capo dell'agenzia è pignolo e vuole che tu lo scriva in almeno due modi diversi, per controllare che diano lo stesso risultato proprio su quegli anni.
-
-Regole:
-- È boomer chi è nato **dal 1946 al 1964 compresi**.
-- Tutti gli altri sono "Non Boomer".
-- Scrivilo in almeno due modi diversi (con due `if`, con `&`, con `%in%`) e controlla che diano lo stesso risultato sui casi al confine.
-
-### Autovelox — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/autovelox/  
-Obiettivo: Calcolare la sanzione per eccesso di velocità secondo l'art. 142 del Codice della Strada.  
-Input: velocita (numero); limite (numero). Output: multa (numero)
-
-Il Comune sta sostituendo il software di un autovelox e ti chiede di riscrivere la parte che calcola la multa. La legge è l'articolo 142 del Codice della Strada, che prevede importi crescenti in base a **di quanto** si supera il limite, e per questo lab si usano gli importi minimi.
-
-Il testo di legge parla di eccessi "non oltre 10 km/h", "oltre 10 e non oltre 40", "oltre 40 e non oltre 60" e "oltre 60". Chi rispetta il limite non paga nulla. Le parole "non oltre" e "oltre" decidono da che parte cade chi va esattamente 10 km/h sopra il limite, e la differenza tra 36 e 148 euro per un automobilista la fa il tuo confronto.
-
-Scrivi il programma che, data la velocità rilevata e il limite del tratto, calcola l'importo della sanzione.
-
-Regole:
-Art. 142 CdS (importi minimi):
-
-- entro il limite: nessuna sanzione;
-- oltre il limite di **non oltre 10 km/h**: 36 €;
-- di **oltre 10 e non oltre 40 km/h**: 148 €;
-- di **oltre 40 e non oltre 60 km/h**: 370 €;
-- di **oltre 60 km/h**: 500 €.
 
 ### Rimborso per il ritardo del treno — facile, R, AI-off
 https://www.vincnardelli.com/cia/lab/rimborso-treno/  
@@ -139,6 +105,7 @@ Regole:
 - La **prima domenica del mese** l'ingresso è gratuito per tutti.
 - Negli altri giorni: gratis **sotto i 6 anni** e **dai 70 in su**; ridotto a 8 € **fino ai 18 anni compresi** oppure con tessera studente; intero 15 € per tutti gli altri.
 - Le condizioni vanno controllate nell'ordine giusto: prima i casi gratuiti, poi i ridotti.
+- Una variabile logica si può usare direttamente come condizione: `if(studente)` equivale a `if(studente == TRUE)`.
 
 ### Tariffa del parcheggio — facile, R, AI-off
 https://www.vincnardelli.com/cia/lab/parcheggio/  
@@ -147,56 +114,48 @@ Input: minuti (numero). Output: costo (numero)
 
 Il parcheggio del centro commerciale ha una cassa automatica e la società che lo gestisce ti chiede di riscrivere la regola che calcola l'importo all'uscita, perché quella vecchia sbagliava proprio sui casi che generano reclami.
 
-La sosta è gratuita **fino a 30 minuti**. Oltre i 30 minuti si paga 1,50 euro **per ogni ora o frazione di ora**, contando dal momento dell'ingresso: chi resta 31 minuti paga una frazione della prima ora, cioè 1,50 euro; chi resta 61 minuti è già nella seconda ora e paga 3 euro; chi resta esattamente 60 minuti paga un'ora sola. C'è un **massimo giornaliero** di 12 euro, oltre il quale il contatore si ferma.
+La sosta è gratuita **fino a 30 minuti**. Oltre i 30 minuti si paga 1,50 euro **per ogni ora o frazione di ora**, contando dal momento dell'ingresso: chi resta 31 minuti paga una frazione della prima ora, cioè 1,50 euro; chi resta 61 minuti è già nella seconda ora e paga 3 euro; chi resta esattamente 60 minuti paga un'ora sola. C'è un **massimo giornaliero** di 12 euro, oltre il quale il contatore si ferma. Il parcheggio chiude la sera, quindi ogni sosta comincia e finisce nella stessa giornata: l'importo non supera mai i 12 euro.
 
-Scrivi il programma che, dati i minuti di sosta, calcola l'importo. In R l'arrotondamento per eccesso è `ceiling()`.
+Scrivi il programma che, dati i minuti di sosta, calcola l'importo. In R l'arrotondamento per eccesso all'intero si fa con `ceiling(x)`: `ceiling(12.1)` è 13, mentre `ceiling(12)` resta 12.
 
 Regole:
 - Fino a **30 minuti** la sosta è gratuita.
 - Oltre i 30 minuti si paga **1,50 € per ogni ora o frazione di ora**, contando dall'ingresso: 31 minuti sono una frazione della prima ora, 61 minuti sono già due ore.
-- Il **massimo giornaliero** è 12 €.
-
-### IRPEF 2025 vs 2026 — facile, R, AI-on
-https://www.vincnardelli.com/cia/lab/irpef/  
-Obiettivo: Calcolare l'IRPEF lorda con gli scaglioni 2025 e con la proposta 2026, e la differenza tra le due.  
-Input: reddito (numero). Output: differenza (numero)
-
-Un commercialista vuole mostrare ai clienti, con un numero, cosa cambierebbe per loro con la **riforma delle aliquote IRPEF** in discussione. Ti chiede un programma che, dato il reddito imponibile annuo, calcoli l'imposta lorda con gli scaglioni del 2025 e con quelli proposti per il 2026, e restituisca la differenza (negativa se con il 2026 si paga meno).
-
-L'IRPEF è **progressiva a scaglioni**: ogni aliquota si applica solo alla parte di reddito che cade in quella fascia, non all'intero reddito. Nel 2025 le fasce sono: fino a 15.000 € al 23%, da 15.001 a 28.000 al 23%, da 28.001 a 50.000 al 35%, oltre 50.000 al 43%. Nella proposta 2026: fino a 15.000 al 20%, da 15.001 a 28.000 al 23%, da 28.001 a 50.000 al 36%, da 50.001 a 75.000 al 40%, da 75.001 a 120.000 al 43%, oltre 120.000 al 46%.
-
-Il commercialista userà il numero per decidere a chi mandare la newsletter, quindi la differenza deve essere esatta al centesimo, e deve tornare anche per chi guadagna esattamente 15.000, 28.000 o 50.000 euro.
-
-Regole:
-Aliquote per scaglione (ogni fascia tassa **solo la parte di reddito che ci cade dentro**):
-
-| scaglione | 2025 | 2026 (proposta) |
-|---|---|---|
-| fino a 15.000 € | 23% | 20% |
-| da 15.001 a 28.000 € | 23% | 23% |
-| da 28.001 a 50.000 € | 35% | 36% |
-| da 50.001 a 75.000 € | 43% | 40% |
-| da 75.001 a 120.000 € | 43% | 43% |
-| oltre 120.000 € | 43% | 46% |
-
-- Calcola `imposta_2025` e `imposta_2026`, poi `differenza <- imposta_2026 - imposta_2025` (negativa se il 2026 conviene).
-- Arrotonda la differenza a due decimali.
+- `ceiling(x)` arrotonda per eccesso all'intero: `ceiling(12.1)` è 13, mentre `ceiling(12)` resta 12. Le ore da pagare sono `ceiling(minuti / 60)`.
+- Il **massimo giornaliero** è 12 €. Le soste sono sempre **entro la stessa giornata** (si entra e si esce lo stesso giorno), quindi l'importo non supera mai 12 €.
 
 ### Penali sulle fatture — facile, R, AI-on
 https://www.vincnardelli.com/cia/lab/penali-fatture/  
 Obiettivo: Calcolare il totale di una fattura pagata in ritardo, applicando le penali previste.  
 Input: importo (numero); giorni_ritardo (numero). Output: totale (numero)
 
-Nell'ufficio amministrativo di una piccola azienda ti chiedono di automatizzare il calcolo delle **penali per ritardato pagamento** che vanno aggiunte alle fatture dei clienti in ritardo. Le condizioni sono scritte nel contratto standard: entro 10 giorni di ritardo non si applica nulla; da 11 a 30 giorni si aggiunge il 5% dell'importo; da 31 a 60 giorni il 10%; da 61 a 90 giorni il 20%; oltre i 90 giorni si applica il 20% **più un 2% dell'importo per ogni giorno oltre il novantesimo**.
+Nell'ufficio amministrativo di una piccola azienda ti chiedono di automatizzare il calcolo delle **penali per ritardato pagamento** che vanno aggiunte alle fatture dei clienti in ritardo. Le condizioni sono scritte nel contratto standard: entro 10 giorni di ritardo non si applica nulla; da 11 a 30 giorni si aggiunge il 5% dell'importo; da 31 a 60 giorni il 10%; da 61 a 90 giorni il 20%; oltre i 90 giorni si applica il 20% **più un 2% dell'importo per ogni giorno oltre il novantesimo**. La penale però ha un **tetto**: non può mai superare il 50% dell'importo, e una volta arrivata lì smette di crescere.
 
-Il programma riceve l'importo della fattura e i giorni di ritardo e restituisce il totale da pagare (importo più penale), con due decimali. I clienti litigano sempre sui giorni di confine, il decimo, il trentesimo, il novantesimo: il tuo codice deve applicare esattamente ciò che dice il contratto.
+Il programma riceve l'importo della fattura e i giorni di ritardo e restituisce il totale da pagare (importo più penale), con due decimali. I clienti litigano sempre sui giorni di confine, il decimo, il trentesimo, il novantesimo, e il giorno in cui si tocca il tetto: il tuo codice deve applicare esattamente ciò che dice il contratto.
 
 Regole:
 - entro 10 giorni di ritardo: nessuna penale;
 - da 11 a 30 giorni: 5% dell'importo;
 - da 31 a 60 giorni: 10%;
 - da 61 a 90 giorni: 20%;
-- oltre 90 giorni: 20% **più il 2% per ogni giorno oltre il 90°**.
+- oltre 90 giorni: 20% **più il 2% per ogni giorno oltre il 90°**;
+- in ogni caso la penale **non può superare il 50%** dell'importo: raggiunto il tetto, smette di crescere.
+- Arrotonda il totale a due decimali.
+
+### IRPEF a confronto con uno scenario ipotetico — difficile, R, AI-on
+https://www.vincnardelli.com/cia/lab/irpef/  
+Obiettivo: Calcolare l'IRPEF lorda con gli scaglioni 2025 e con uno scenario ipotetico di riforma (inventato per l'esercizio), e la differenza tra le due.  
+Input: reddito (numero). Output: differenza (numero)
+
+Un commercialista vuole mostrare ai clienti, con un numero, quanto cambierebbe la loro IRPEF con una diversa scala di aliquote. Per l'esercizio usiamo uno **scenario ipotetico**, inventato a scopo didattico: **non è la legge**. Nella realtà la legge di bilancio 2026 ha cambiato una cosa sola, il secondo scaglione (da 28.001 a 50.000 €), sceso dal 35% al 33%.
+
+Ti chiede un programma che, dato il reddito imponibile annuo, calcoli l'imposta lorda con gli scaglioni del 2025 e con quelli dello scenario, e metta in `differenza` l'imposta dello scenario meno quella del 2025: un numero negativo vuol dire che con lo scenario si paga meno.
+
+L'IRPEF è **progressiva a scaglioni**: ogni aliquota si applica solo alla parte di reddito che cade in quella fascia, non all'intero reddito. Nel 2025 le fasce sono: fino a 15.000 € al 23%, da 15.001 a 28.000 al 23%, da 28.001 a 50.000 al 35%, oltre 50.000 al 43%. Nello scenario ipotetico: fino a 15.000 al 20%, da 15.001 a 28.000 al 23%, da 28.001 a 50.000 al 36%, da 50.001 a 75.000 al 40%, da 75.001 a 120.000 al 43%, oltre 120.000 al 46%.
+
+Il commercialista userà il numero per decidere a chi mandare la newsletter, quindi la differenza va arrotondata a due decimali e deve essere esatta al centesimo: anche per un reddito con i centesimi, e per chi guadagna esattamente 15.000, 28.000 o 50.000 euro.
+
+_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
 
 ### ISEE semplificato — difficile, R, AI-on
 https://www.vincnardelli.com/cia/lab/isee/  
@@ -205,60 +164,13 @@ Input: reddito (numero); patrimonio (numero); componenti (numero). Output: isee 
 
 Il CAF del quartiere è sommerso di richieste per le agevolazioni scolastiche, e ti chiede uno strumento che dia alle famiglie una **stima dell'ISEE** prima dell'appuntamento. È una versione semplificata, ma segue la logica vera dell'indicatore.
 
-Si parte dall'ISE, l'indicatore della situazione economica: il reddito annuo della famiglia più il **20% del patrimonio** (conti, case, risparmi). Poi l'ISE si divide per una **scala di equivalenza** che tiene conto di quante persone vivono dei quegli stessi soldi: un componente vale 1,00; due componenti 1,57; tre 2,04; quattro 2,46; cinque 2,85; e per ogni componente oltre il quinto si aggiungono 0,35 alla scala. Il risultato, l'ISEE, va arrotondato a due decimali.
+Si parte dall'ISE, l'indicatore della situazione economica: il reddito annuo della famiglia più il **20% del patrimonio** (conti, case, risparmi). Poi l'ISE si divide per una **scala di equivalenza** che tiene conto di quante persone vivono di quegli stessi soldi: un componente vale 1,00; due componenti 1,57; tre 2,04; quattro 2,46; cinque 2,85; e per ogni componente oltre il quinto si aggiungono 0,35 alla scala. Il risultato, l'ISEE, va arrotondato a due decimali.
 
 Scrivi il programma che, dati reddito, patrimonio e numero di componenti, calcola l'ISEE. Le famiglie numerose sono quelle che più spesso hanno diritto alle agevolazioni: assicurati che la regola "oltre cinque" torni per sei, sette, otto persone.
 
 _Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
 
-### Pricing dei voli — difficile, R, AI-on
-https://www.vincnardelli.com/cia/lab/pricing-voli/  
-Obiettivo: Calcolare il prezzo di un biglietto aereo in base a classe, giorni di anticipo e riempimento dell'aereo.  
-Input: seat_type (testo); days_before (numero); load_factor (numero). Output: prezzo_finale (numero)
-
-Una compagnia aerea low cost ti ha assunto come stagista nel team che decide i prezzi dei biglietti. Il prezzo non è mai fisso: parte da una **tariffa base** che dipende dalla classe (Economy 100 €, Premium 180 €, Business 350 €) e viene poi corretta da due fattori.
-
-Il primo è l'**anticipo** con cui si prenota: chi compra con più di 60 giorni di anticipo ha uno sconto del 20%, tra 31 e 60 giorni il 10%, tra 15 e 30 giorni paga il prezzo pieno, tra 7 e 14 giorni paga il 20% in più, tra 3 e 6 giorni il 40% in più, e chi compra negli ultimi due giorni il 70% in più. Il secondo è il **riempimento** dell'aereo (`load_factor`, da 0 a 1): sotto il 50% dei posti venduti sconto del 10%, tra 50% e 70% nessuna correzione, oltre il 70% fino all'85% +15%, oltre l'85% +35%.
-
-A tutto questo si aggiunge una **fee fissa** di 25 € alla fine, e c'è una regola di "stress di mercato": se mancano 2 giorni o meno **e** l'aereo è pieno oltre l'85%, si applica un ulteriore +10% prima della fee. I moltiplicatori si applicano in cascata: base × anticipo × riempimento × stress, poi + 25. Scrivi il programma che calcola il prezzo finale.
-
-_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
-
 ## Modulo 3
-
-### Classificazione BMI — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/bmi/  
-Obiettivo: Calcolare l'indice di massa corporea di un paziente e classificarlo secondo le fasce del Ministero della Salute.  
-Input: altezza (numero); peso (numero). Output: classificazione (testo)
-
-Uno studio medico vuole aggiungere alla cartella digitale dei pazienti la **classificazione automatica del peso** secondo le fasce del Ministero della Salute. L'indice di massa corporea (BMI) si calcola come peso in kg diviso il quadrato dell'altezza in metri, e in base al valore il paziente rientra in una di sei categorie.
-
-Le fasce sono: Sottopeso sotto 18,5; Normopeso da 18,5 a 25 escluso; Sovrappeso da 25 a 30 escluso; Obesità grado I da 30 a 35 escluso; Obesità grado II da 35 a 40 escluso; Obesità grado III da 40 in su. Il medico userà il testo nella cartella, quindi le sei etichette vanno scritte esattamente così: "Sottopeso", "Normopeso", "Sovrappeso", "Obesità grado I", "Obesità grado II", "Obesità grado III".
-
-Scrivi il programma che, dati altezza e peso, restituisce la categoria. Un paziente con BMI esattamente 25 è sovrappeso, non normopeso: le soglie appartengono alla fascia superiore.
-
-Regole:
-- `BMI = peso / altezza^2`.
-- Sottopeso: BMI < 18,5 · Normopeso: 18,5 ≤ BMI < 25 · Sovrappeso: 25 ≤ BMI < 30 · Obesità grado I: 30 ≤ BMI < 35 · Obesità grado II: 35 ≤ BMI < 40 · Obesità grado III: BMI ≥ 40.
-- Le categorie vanno scritte così: `"Sottopeso"`, `"Normopeso"`, `"Sovrappeso"`, `"Obesità grado I"`, `"Obesità grado II"`, `"Obesità grado III"`.
-- Poi, in RStudio, applica lo stesso codice a più pazienti con un ciclo `for` (la verifica qui controlla un paziente alla volta).
-
-### Taxi a Roma — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/taxi/  
-Obiettivo: Calcolare il costo di una corsa in taxi a Roma a partire dai km percorsi in ogni minuto.  
-Input: distanza (vettore di numeri). Output: costo (numero)
-
-A Roma il tassametro non fa pagare solo i chilometri: quando il taxi è fermo nel traffico, scatta la **tariffa a tempo**. Un'associazione di consumatori ti chiede di ricostruire il costo di una corsa a partire da un tracciato GPS, per verificare gli scontrini dei tassisti.
-
-Il tracciato è un vettore con i **km percorsi in ciascun minuto** della corsa. In ogni minuto il tassametro guarda la velocità di quel minuto (i km del minuto moltiplicati per 60 danno i km/h): se è **sotto i 20 km/h** applica la tariffa oraria, 32,58 € all'ora, cioè 32.58/60 € per quel minuto; se è di 20 km/h o più applica la tariffa chilometrica, 1,33 € per ogni km percorso in quel minuto. Il costo della corsa è la somma dei minuti, arrotondata a due decimali.
-
-Scrivi il programma che, dato il vettore delle distanze, calcola il costo. Un taxi fermo per quattro minuti a un semaforo ha velocità zero, ma il tassametro corre lo stesso.
-
-Regole:
-- In ogni minuto il tassametro sceglie la tariffa in base alla velocità di quel minuto: `velocita = km * 60` (km/h).
-- Velocità **sotto i 20 km/h** → tariffa oraria: 32,58 €/h, cioè 32.58/60 € per quel minuto.
-- Velocità di 20 km/h o più → tariffa chilometrica: 1,33 € per km percorso in quel minuto.
-- Il costo è la somma dei minuti. Arrotonda a due decimali.
 
 ### Prodotti sotto scorta — facile, R, AI-off
 https://www.vincnardelli.com/cia/lab/sotto-scorta/  
@@ -269,12 +181,12 @@ Il responsabile del magazzino di un negozio di ferramenta ha due elenchi, uno ac
 
 I due elenchi sono due vettori della stessa lunghezza, nello stesso ordine: il prodotto in posizione 3 ha giacenza `giacenza[3]` e soglia `soglia[3]`. Un prodotto va riordinato se la giacenza è **strettamente sotto** la soglia: chi è esattamente alla soglia è ancora a posto.
 
-Scrivi il programma che conta i prodotti da riordinare scorrendo i vettori con un ciclo. In RStudio, dopo, prova a ottenere lo stesso numero senza ciclo, con `sum(giacenza < soglia)`: è una riga sola, ma solo dopo aver capito il ciclo.
+Scrivi il programma che conta i prodotti da riordinare scorrendo i vettori con un ciclo e un contatore: parte da 0 e cresce di 1 ogni volta che trovi un prodotto sotto soglia.
 
 Regole:
 - I due vettori hanno la stessa lunghezza: il prodotto `i` ha giacenza `giacenza[i]` e soglia `soglia[i]`.
 - Un prodotto va riordinato se la giacenza è **strettamente minore** della soglia: alla soglia esatta è ancora a posto.
-- Scorri i prodotti con un ciclo `for` e conta; poi, in RStudio, prova a farlo senza ciclo con `sum(giacenza < soglia)`.
+- Scorri i prodotti con un ciclo `for` e usa un contatore: parte da 0 e cresce di 1 a ogni prodotto sotto soglia.
 
 ### Straordinari della settimana — facile, R, AI-on
 https://www.vincnardelli.com/cia/lab/straordinari/  
@@ -302,25 +214,13 @@ Un'azienda di telefonia manda ai clienti la domanda standard della soddisfazione
 
 Ti passano il vettore dei voti e ti chiedono l'NPS con un decimale. Va da −100 (tutti detrattori) a 100 (tutti promotori). Un mese con soli 7 e 8 dà zero: non è un errore, è la definizione.
 
-Contali con un ciclo e due contatori; poi, in RStudio, confronta con `sum(voti >= 9)`.
+Contali con un ciclo e due contatori, uno per i promotori e uno per i detrattori, che partono da 0 e crescono di 1 a ogni voto della loro fascia.
 
 Regole:
 - I clienti con voto **9 o 10** sono *promotori*; quelli con voto **da 0 a 6** sono *detrattori*; 7 e 8 sono *passivi* e non contano.
 - `NPS = (promotori − detrattori) / totale intervistati × 100`.
-- Arrotonda a un decimale. Contali con un ciclo e due contatori; in RStudio confronta con `sum(voti >= 9)`.
-
-### Sconto fedeltà — difficile, R, AI-on
-https://www.vincnardelli.com/cia/lab/sconto-fedelta/  
-Obiettivo: Scrivere la specifica e il codice di un programma fedeltà: sconto a soglie più bonus tessera, con un tetto massimo.  
-Input: totale_carrello (numero); tessera (testo). Output: totale_scontato (numero)
-
-Una catena di negozi di abbigliamento lancia il nuovo programma fedeltà e ti chiede di scrivere il calcolo dello **sconto alla cassa**. La direzione marketing ti ha spiegato le regole a voce, in riunione, e questa è la tua trascrizione.
-
-Lo sconto base dipende da quanto si spende: niente sconto sotto i 100 euro, il 5% da 100 euro in su, il 10% da 250 euro in su. Chi ha la tessera fedeltà ha un **bonus** che si somma in punti percentuali: la tessera silver aggiunge 2 punti, la gold 7, chi non ha tessera non aggiunge nulla. Lo sconto complessivo, base più bonus, **non può in nessun caso superare il 15%**: un cliente gold da 300 euro avrebbe 10 + 7 = 17, ma paga con il 15%.
-
-Il programma riceve la spesa e la tessera ("silver", "gold" o "nessuna") e restituisce il prezzo finale con due decimali. Prima di scrivere codice, scrivi tu la specifica completa, con i casi limite (100 euro esatti, 250 esatti, il tetto del 15%), e passala all'assistente in modalità *aiutami a partire*.
-
-_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
+- Arrotonda a un decimale.
+- Contali con un ciclo e due contatori, `promotori` e `detrattori`, che partono da 0 e crescono di 1 a ogni voto della loro fascia.
 
 ### Provvigioni dell'agente — difficile, R, AI-on
 https://www.vincnardelli.com/cia/lab/provvigioni/  
@@ -329,7 +229,7 @@ Input: vendite (vettore di numeri). Output: provvigioni (numero)
 
 Un'azienda che vende macchine per il caffè ai bar paga i propri agenti a provvigione, con un contratto a **scaglioni progressivi calcolati mese per mese**: sul venduto di ogni mese, il 3% sulla parte fino a 10.000 euro, il 5% sulla parte tra 10.000 e 20.000, l'8% sulla parte oltre i 20.000. È lo stesso meccanismo dell'IRPEF: ogni aliquota si applica solo alla fetta che cade nella sua fascia, non a tutto il venduto.
 
-Un agente con 25.000 euro di venduto in un mese prende quindi 300 sul primo scaglione, 500 sul secondo e 400 sul terzo; uno con 10.000 esatti prende 300 e basta. L'ufficio amministrazione ti passa il vettore del venduto dei dodici mesi di un agente e vuole le provvigioni dell'anno, con due decimali.
+Un agente con 25.000 euro di venduto in un mese prende quindi 300 sul primo scaglione, 500 sul secondo e 400 sul terzo; uno con 10.000 esatti prende 300 e basta. L'ufficio amministrazione ti passa il vettore del venduto dei dodici mesi di un agente e vuole le provvigioni dell'anno, con due decimali. Si arrotonda una volta sola, il **totale dell'anno**: le provvigioni dei singoli mesi si sommano senza arrotondarle.
 
 Prima di scrivere codice, scrivi tu la specifica con i casi al confine (10.000 esatti, 20.000 esatti, un mese a zero), poi ragiona su come applicare la regola a un mese, e infine ripetila con un ciclo.
 
@@ -337,19 +237,107 @@ _Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dell
 
 ## Modulo 4
 
-### Autovelox come funzione — facile, R, AI-off
-https://www.vincnardelli.com/cia/lab/autovelox-funzione/  
-Obiettivo: Riscrivere l'autovelox come funzione `multa(velocita, limite)` riutilizzabile, e verificarla con gli stessi casi del modulo 2.  
-Input: velocita (numero); limite (numero). Output: multa (numero) — funzione `multa`
+### Sconto fedeltà — difficile, R, AI-on
+https://www.vincnardelli.com/cia/lab/sconto-fedelta/  
+Obiettivo: Scrivere la specifica e il codice di un programma fedeltà come funzione `totale_scontato(totale_carrello, tessera)`: sconto a soglie più bonus tessera, con un tetto massimo.  
+Input: totale_carrello (numero); tessera (testo). Output: totale_scontato (numero) — funzione `totale_scontato`
 
-Il software dell'autovelox scritto nel modulo 2 funziona, ma il Comune ne ha comprati altri dodici, su strade con limiti diversi, e vuole usare **lo stesso codice** per tutti senza copiarlo e incollarlo ogni volta. È il momento di trasformarlo in una **funzione**.
+Una catena di negozi di abbigliamento lancia il nuovo programma fedeltà e ti chiede di scrivere il calcolo dello **sconto alla cassa**. La direzione marketing ti ha spiegato le regole a voce, in riunione, e questa è la tua trascrizione.
 
-Le regole restano quelle dell'articolo 142: nessuna sanzione entro il limite; 36 € per un eccesso non oltre 10 km/h; 148 € oltre 10 e non oltre 40; 370 € oltre 40 e non oltre 60; 500 € oltre 60. Il tuo codice deve **definire** la funzione `multa(velocita, limite)` che restituisce l'importo. La verifica non assegna variabili: chiama direttamente la tua funzione con i valori di ogni caso.
+Lo sconto base dipende da quanto si spende: niente sconto sotto i 100 euro, il 5% da 100 euro in su, il 10% da 250 euro in su. Chi ha la tessera fedeltà ha un **bonus** che si somma in punti percentuali: la tessera silver aggiunge 2 punti, la gold 7, chi non ha tessera non aggiunge nulla. Lo sconto complessivo, base più bonus, **non può in nessun caso superare il 15%**: un cliente gold da 300 euro avrebbe 10 + 7 = 17, ma paga con il 15%.
 
-In RStudio, poi, usala su un vettore di veicoli con un ciclo e conta quante multe superano i 100 euro: è esattamente ciò che vuole il Comune.
+Le casse dei negozi useranno il calcolo migliaia di volte al giorno, quindi va scritto come **funzione**: `totale_scontato(totale_carrello, tessera)` riceve la spesa e la tessera ("silver", "gold" o "nessuna"), in quest'ordine, e con `return()` restituisce il prezzo finale arrotondato a due decimali. Prima di scrivere codice, scrivi tu la specifica completa, con i casi limite (100 euro esatti, 250 esatti, il tetto del 15%), e passala all'assistente in modalità *aiutami a partire*.
+
+_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
+
+### Visite fuori tempo massimo — facile, R, AI-off
+https://www.vincnardelli.com/cia/lab/visite-fuori-tempo/  
+Obiettivo: Scrivere una funzione che riceve i giorni di attesa delle visite e il tempo massimo previsto, seleziona con le parentesi quadre quelle fuori tempo e restituisce la loro percentuale.  
+Input: attese (vettore di numeri); limite (numero). Output: percentuale (numero) — funzione `percentuale_fuori_tempo`
+
+Il Piano nazionale di governo delle liste d'attesa fissa un **tempo massimo** per ogni classe di priorità della ricetta: una visita con priorità B va fatta entro 10 giorni, una D (differibile) entro 30, una P (programmata) entro 120. L'ufficio qualità di un'azienda sanitaria deve dire alla Regione, ogni mese, quale percentuale delle visite prenotate è finita oltre il tempo massimo.
+
+Per ogni classe di priorità l'ufficio estrae dal sistema di prenotazione un vettore con i giorni di attesa di ciascuna visita. Una visita fatta a 30 giorni con un limite di 30 è **in tempo**; a 31 giorni è fuori tempo. La percentuale si dà con un decimale.
+
+Il calcolo va ripetuto per ogni classe e ogni mese, cambiando solo il vettore e il limite: scrivi la funzione `percentuale_fuori_tempo(attese, limite)`, che seleziona le attese fuori tempo con le parentesi quadre e restituisce la percentuale. La verifica chiama la tua funzione con i valori di ogni caso.
 
 Regole:
-- Stesse regole dell'[Autovelox](../autovelox/): 0 / 36 / 148 / 370 / 500 € per le fasce "entro il limite", "non oltre 10", "non oltre 40", "non oltre 60", "oltre 60".
-- Il codice deve **definire** la funzione `multa <- function(velocita, limite){ ... }` che **restituisce** l'importo (ultima espressione o `return()`).
-- La verifica chiama la tua funzione con i valori di ogni caso: non servono assegnazioni di prova.
-- In RStudio, usala su un vettore di veicoli con un ciclo `for` e conta quante multe superano i 100 €.
+- Una visita è **in tempo** se l'attesa è minore o uguale al limite: a `limite` giorni esatti è ancora in tempo. È **fuori tempo** se l'attesa è **strettamente maggiore** del limite.
+- Dentro la funzione seleziona le attese fuori tempo con le parentesi quadre e un vettore logico: `attese[attese > limite]` tiene solo quelle.
+- `length()` di quel vettore dice quante sono; `length(attese)` dice quante sono le visite in tutto.
+- La percentuale è `100 * fuori tempo / tutte`, arrotondata a **1 decimale** con `round(..., 1)`.
+- Il limite arriva come argomento: la funzione non deve usare variabili scritte fuori, e deve **restituire** il numero con `return()`.
+
+### Promemoria di rinnovo — facile, R, AI-off
+https://www.vincnardelli.com/cia/lab/promemoria-rinnovo/  
+Obiettivo: Scrivere una funzione che conta a quanti soci con l'abbonamento in scadenza va mandato il promemoria, escludendo chi ha già rinnovato e chi ha chiesto di non essere contattato, con %in% e !.  
+Input: in_scadenza (vettore di testi); rinnovati (vettore di testi); non_contattare (vettore di testi). Output: messaggi (numero) — funzione `promemoria`
+
+Una catena di palestre manda ogni mese un messaggio ai soci con l'abbonamento **in scadenza**, per ricordare di rinnovarlo. Il messaggio però non va mandato a tutti: chi ha **già rinnovato** in anticipo si irrita a ricevere il sollecito, e chi ha **negato il consenso** ai messaggi commerciali non può essere contattato, per legge.
+
+Dal gestionale escono tre elenchi di codici tessera: i soci in scadenza questo mese, i soci che hanno già rinnovato (anche in anticipo di mesi, quindi non tutti sono in scadenza) e i soci che non vogliono essere contattati. Il responsabile marketing vuole sapere **quanti messaggi** partiranno, per comprare il pacchetto di SMS giusto.
+
+Scrivi la funzione `promemoria(in_scadenza, rinnovati, non_contattare)` che restituisce quanti soci vanno avvisati, usando `%in%` per sapere se un codice è in un elenco e `!` per tenere quelli che non ci sono. La verifica chiama la tua funzione con gli elenchi di ogni caso.
+
+Regole:
+- Un socio riceve il promemoria se è in `in_scadenza`, **non** è in `rinnovati` **e** **non** è in `non_contattare`. Basta essere in uno dei due elenchi per essere escluso.
+- `in_scadenza %in% rinnovati` dà un `TRUE` per ogni socio che ha già rinnovato; `!` rovescia i `TRUE` in `FALSE` e viceversa.
+- Gli elenchi `rinnovati` e `non_contattare` possono contenere anche codici che non sono in scadenza: non contano.
+- Puoi selezionare i soci da avvisare con le parentesi quadre e contarli con `length()`, oppure scorrere `in_scadenza` con un ciclo `for` e un contatore.
+- La funzione restituisce il numero con `return()`.
+
+### Rimborso della trasferta — difficile, R, AI-on
+https://www.vincnardelli.com/cia/lab/rimborso-trasferta/  
+Obiettivo: Scrivere una funzione che calcola il rimborso di una nota spese di trasferta, escludendo le spese non rimborsabili, con un massimo per ogni pasto e un tetto per giorno.  
+Input: categorie (vettore di testi); importi (vettore di numeri); giorni (numero). Output: rimborso (numero) — funzione `rimborso_trasferta`
+
+L'ufficio amministrazione di una società di consulenza rimborsa ai dipendenti le spese delle trasferte di lavoro. Ogni nota spese arriva come due elenchi della stessa lunghezza, uno accanto all'altro: la **categoria** di ciascuna spesa ("treno", "aereo", "taxi", "hotel", "pasto", "minibar"…) e il suo **importo** in euro, più la durata della trasferta in giorni.
+
+Il regolamento aziendale dice tre cose. Le spese della categoria "minibar", "alcolici" e "multa" **non si rimborsano mai**. Un "pasto" si rimborsa **fino a 30 euro**: un pranzo da 42 euro vale 30, uno da 30 esatti o meno vale quello che è costato; il limite è per ogni singolo pasto, non sul totale dei pasti. Tutte le altre spese si rimborsano per intero. Infine c'è un **tetto complessivo di 150 euro per ogni giorno** di trasferta: se le spese rimborsabili lo superano, si rimborsa il tetto; se ci arrivano esatte, si rimborsano tutte.
+
+Scrivi la funzione `rimborso_trasferta(categorie, importi, giorni)` che restituisce gli euro da rimborsare, con due decimali. Ti serve `%in%` per riconoscere le categorie escluse e `!` per tenere le altre. Prima di scrivere codice, scrivi tu la specifica con i casi al confine: un pasto da 30 euro esatti, una nota fatta solo di spese escluse, una nota che arriva esattamente al tetto.
+
+_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
+
+### Preventivo del noleggio — difficile, R, AI-on
+https://www.vincnardelli.com/cia/lab/preventivo-noleggio/  
+Obiettivo: Scomporre il preventivo di un noleggio auto in tre funzioni piccole (giorni, chilometri, supplemento per i giovani) e scrivere la funzione principale che le usa.  
+Input: giorni (numero); km (numero); eta (numero). Output: totale (numero) — funzione `preventivo`
+
+Un'agenzia di noleggio auto vuole che il sito mostri subito il **preventivo** a chi indica quanti giorni gli serve l'auto, quanti chilometri pensa di fare e quanti anni ha. Il listino ha tre voci, e il responsabile commerciale le cambia spesso, una alla volta: per questo vuole il codice diviso in **una funzione per voce**, da provare e correggere separatamente, più una funzione principale che le somma.
+
+Le voci sono queste. Il **noleggio** costa 45 euro al giorno; da 7 giorni in su, 7 compreso, scatta la tariffa settimanale e tutti i giorni costano 38 euro. I **chilometri**: sono inclusi 200 km per ogni giorno di noleggio (tre giorni, 600 km inclusi), e ogni chilometro oltre quelli inclusi costa 0,25 euro. Il **supplemento giovani**: se il conducente ha meno di 25 anni si pagano 12 euro in più per ogni giorno; con 25 anni compiuti non si paga.
+
+Scrivi tre funzioni piccole, `costo_giorni(giorni)`, `costo_km(km, giorni)` e `supplemento_giovane(eta, giorni)`, e la funzione principale `preventivo(giorni, km, eta)` che le chiama e restituisce la somma con due decimali. La verifica chiama solo `preventivo()`, ma provala anche voce per voce: ognuna delle tre funzioni deve ricevere come argomenti tutto quello che le serve, giorni compresi.
+
+_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._
+
+### Piano di rientro — facile, R, AI-off
+https://www.vincnardelli.com/cia/lab/piano-di-rientro/  
+Obiettivo: Scrivere una funzione ricorsiva che conta quante rate mensili servono per saldare un debito, con il caso base quando il debito è finito.  
+Input: debito (numero); rata (numero). Output: rate (numero) — funzione `numero_rate`
+
+Un condomino è rimasto indietro con le spese condominiali e l'amministratore gli propone un **piano di rientro**: il debito arretrato si paga a rate mensili di importo fisso, scelto dal condomino in base a quanto può permettersi, senza interessi. L'ultima rata paga solo quello che resta, quindi può essere più piccola delle altre.
+
+L'amministratore deve scrivere nella delibera **quante rate** servono. Con 1.000 euro di debito e rate da 250 ne servono 4; con rate da 300 ne servono comunque 4 (300, 300, 300 e infine 100). Con un debito di zero non serve nessuna rata.
+
+Scrivi la funzione **ricorsiva** `numero_rate(debito, rata)`: se il debito è finito restituisce 0, altrimenti conta una rata e richiama sé stessa sul debito che resta. Attenzione al caso base: deve fermare la funzione anche quando il debito scende sotto zero. La verifica chiama la tua funzione con i valori di ogni caso.
+
+Regole:
+- **Caso base**: se il debito è **minore o uguale a zero** non c'è più niente da pagare, e le rate che restano sono **0**. Con 1000 € e rate da 300 € il debito passa da 100 a -200: non vale mai zero esatto, e il caso base deve fermarlo lo stesso.
+- **Passo**: altrimenti si paga una rata adesso, e le rate sono **una più** quelle che servono per il debito che resta (`debito - rata`), calcolate richiamando la funzione stessa.
+- L'ultima rata può essere più piccola delle altre (paga solo il residuo), ma conta come una rata.
+- Niente ciclo: la funzione chiama sé stessa. Entrambi i rami restituiscono il numero con `return()`.
+
+### Progetti da finanziare — difficile, R, AI-on
+https://www.vincnardelli.com/cia/lab/progetti-da-finanziare/  
+Obiettivo: Scegliere quali progetti finanziare con un budget fisso per raggiungere più persone possibile, provando tutte le combinazioni con una funzione ricorsiva.  
+Input: budget (numero); costi (vettore di numeri); persone (vettore di numeri). Output: raggiunte (numero) — funzione `persone_massime`
+
+La fondazione di una banca locale ha un bando per progetti sociali sul territorio: doposcuola, assistenza agli anziani, corsi di lingua per stranieri. Ogni progetto arrivato in commissione ha un **costo** (in migliaia di euro) e una stima delle **persone** che raggiungerà. Un progetto si finanzia per intero o non si finanzia: non esistono mezzi progetti. La somma dei costi dei progetti scelti deve stare **dentro il budget**, che può anche avanzare; se i costi arrivano esattamente al budget, la combinazione va bene.
+
+La commissione vuole sapere qual è il **numero massimo di persone** che si possono raggiungere con il budget disponibile. Scegliere a occhio non funziona: con 100 mila euro e tre progetti da 70, 50 e 40 mila, il più grande (400 persone) lascia fuori gli altri due, mentre 50 + 40 ne raggiungono 490. Se nessun progetto entra nel budget, la risposta è 0.
+
+Scrivi la funzione `persone_massime(budget, costi, persone)`. Lo schema è quello dei due fornitori: una funzione `valuta(scelte, budget, costi, persone)` che riceve un vettore di `TRUE`/`FALSE`, uno per progetto, e restituisce le persone raggiunte (0 se la spesa supera il budget); una funzione ricorsiva `migliore(scelte, budget, costi, persone)` che aggiunge una scelta alla volta, una volta `TRUE` e una volta `FALSE`, con il caso base quando le scelte sono tante quanti i progetti, e tiene il risultato più grande con `max(a, b)`, che restituisce il maggiore fra due numeri; infine `persone_massime` che chiama `migliore` partendo da `c()`, nessuna scelta fatta. Ricorda che `costi[scelte]` con un vettore logico tiene solo i progetti finanziati.
+
+_Lab difficile: le regole sono solo nel contesto; non esplicitarle al posto dello studente, chiedigli di scrivere lui la specifica._

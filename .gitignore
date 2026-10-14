@@ -12,3 +12,4 @@ _site/
 vendor/
 # Configurazione locale di Claude Code
 .claude/
+_site_anteprima/
