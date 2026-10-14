@@ -48,25 +48,25 @@ Il GPT del corso è già configurato: aprilo e fissalo nella barra laterale. Fun
 </div>
 {% endif %}
 
-<div class="via via--rapida" markdown="1">
-<div class="via__k">Skill di ChatGPT (se nel tuo account c'è la voce Skill)</div>
-
-<ol class="steps">
-<li>Scarica la skill: <a class="btn btn-outline btn-sm" href="{{ site.baseurl }}/assets/skill/cia-skill.zip" download>cia-skill.zip</a></li>
-<li>Su ChatGPT apri <strong>Plugin</strong> nella barra laterale, poi la scheda <strong>Skill</strong>.</li>
-<li>Premi <strong>+</strong>, scegli <strong>Carica dal tuo computer</strong> e trascina lo zip: tra le skill installate compare <em>coding fondamenti ai</em>.</li>
-<li>Apri una chat nuova e fai il test qui sotto: la skill si attiva da sola quando scrivi <code>tutor:</code>, <code>assistito:</code> e le altre modalità.</li>
-</ol>
-</div>
-
 <div class="via" markdown="1">
-<div class="via__k">Se non vedi la voce Skill: un progetto su ChatGPT (funziona con l'account gratuito)</div>
+<div class="via__k">Un progetto su ChatGPT (la strada consigliata)</div>
 
 <ol class="steps">
 <li>Su ChatGPT apri <strong>Progetti → Nuovo progetto</strong> e chiamalo <em>Coding e fondamenti di AI</em>.</li>
 <li>Nelle <strong>istruzioni</strong> del progetto incolla il testo della skill: <button class="btn btn-outline btn-sm" data-copy-file="{{ site.baseurl }}/assets/skill/istruzioni.txt">Copia le istruzioni</button></li>
 <li>Nei <strong>file</strong> del progetto carica i tre allegati: <a href="{{ site.baseurl }}/assets/skill/programma.md" download>programma.md</a>, <a href="{{ site.baseurl }}/assets/skill/stile.md" download>stile.md</a>, <a href="{{ site.baseurl }}/assets/skill/lab.md" download>lab.md</a>.</li>
 <li>Apri una chat dentro il progetto e fai il test qui sotto.</li>
+</ol>
+</div>
+
+<div class="via via--rapida" markdown="1">
+<div class="via__k">In alternativa: la Skill di ChatGPT (solo se nel tuo account, in Plugin, c'è la scheda Skill)</div>
+
+<ol class="steps">
+<li>Scarica la skill: <a class="btn btn-outline btn-sm" href="{{ site.baseurl }}/assets/skill/cia-skill.zip" download>cia-skill.zip</a></li>
+<li>Su ChatGPT apri <strong>Plugin</strong> nella barra laterale, poi la scheda <strong>Skill</strong>.</li>
+<li>Premi <strong>+</strong>, scegli <strong>Carica dal tuo computer</strong> e trascina lo zip: tra le skill installate compare <em>coding fondamenti ai</em>.</li>
+<li>Apri una chat nuova e fai il test qui sotto: la skill si attiva da sola quando scrivi <code>tutor:</code>, <code>assistito:</code> e le altre modalità.</li>
 </ol>
 </div>
 </div>
