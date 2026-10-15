@@ -6,11 +6,31 @@ sezione: 1
 language: R
 idea: "Una tabella è un insieme di vettori affiancati; con cinque verbi la interroghiamo senza cicli."
 hours: 4
-published: false
 concepts_new: [data frame, read.csv, fattori, valori mancanti, dplyr, pipe, group_by]
 concepts_required: [vettori, indicizzazione, funzioni, if/else, operatori logici]
 explorations: []
 slides_pdf:
+slides:
+  - titolo: Lezione 7
+    descr: Data frame, dplyr, Titanic
+    pdf: slide/lezione_7.pdf
+codice:
+  - titolo: lezione_7.R
+    descr: data frame, NA, verbi e pipe
+    file: codice/7/lezione_7.R
+  - titolo: ecommerce.R
+    descr: prova tu, tre domande
+    file: codice/7/ecommerce.R
+  - titolo: titanic.R
+    descr: lab, le domande sul Titanic
+    file: codice/7/titanic.R
+dati:
+  - titolo: ecommerce.csv
+    descr: 10.000 ordini online
+    file: dati/ecommerce.csv
+  - titolo: titanic.csv
+    descr: 891 passeggeri
+    file: dati/titanic.csv
 ---
 
 ## La tabella: vettori affiancati
@@ -151,7 +171,7 @@ Il secondo comando raggruppa per due variabili e produce una riga per ogni combi
 
 > **Attenzione** Dopo un `group_by` con due variabili, `summarise` toglie **solo l'ultimo** raggruppamento: la tabella risultante è ancora raggruppata per `Pclass`. Un `mutate(percentuale = n / sum(n))` a quel punto calcola le quote **dentro ogni classe**, non sul totale. Se volete il totale generale, aggiungete `ungroup()` prima del `mutate`, oppure scrivete `summarise(..., .groups = "drop")`. È l'errore più comune di tutto la sezione 1 e i test della piattaforma lo intercettano.
 
-> **In aula** abbiamo risposto alla metà delle domande sul Titanic. Le altre (biglietto minimo, medio e massimo per classe e sesso; se i sopravvissuti hanno pagato di più; il ruolo della dimensione della famiglia e del porto d'imbarco) usano esattamente gli stessi cinque verbi e sono in piattaforma con la verifica automatica. La verifica funziona come per il codice dei moduli scorse: il test è «il numero di over 50 è N», e se il vostro numero è diverso il suggerimento vi dice dove guardare.
+> **In aula** abbiamo risposto alla prima metà delle domande sul Titanic. Le altre (biglietto minimo, medio e massimo per classe e sesso; se i sopravvissuti hanno pagato di più; il ruolo della dimensione della famiglia e del porto d'imbarco) usano esattamente gli stessi cinque verbi e sono nella seconda parte di [`titanic.R`]({{ site.baseurl }}/codice/7/titanic.R). Guardate il minimo di `Fare` e i valori di `Embarked`: anche lì c'è un caso limite nei dati.
 
 ## Per approfondire
 
