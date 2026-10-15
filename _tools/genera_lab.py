@@ -176,7 +176,7 @@ lab('pricing-voli', title='Pricing dei voli', modulo=2, order=3, level='base', l
            dict(seat_type='Economy', days_before=2, load_factor=0.86, boundary=True, hint="Due giorni e aereo quasi pieno: scatta anche lo stress di mercato (+10%)."),
            dict(seat_type='Economy', days_before=2, load_factor=0.85, boundary=True, hint="A 0.85 esatto lo stress NON scatta: la regola dice \"supera 0.85\".")],
     skeleton='seat_type   <- "Economy"\ndays_before <- 5\nload_factor <- 0.82\n\n# alla fine deve esistere la variabile prezzo_finale\n',
-    solution=open(os.path.join(os.path.dirname(__file__), '..', 'materiale_lezioni', '5', 'prezzo_voli.R')).read().replace('prezzo_finale <- (prezzo_dinamico * extra_stress) + fee_fissa', 'prezzo_finale <- round((prezzo_dinamico * extra_stress) + fee_fissa, 2)'))
+    solution=open(os.path.join(os.path.dirname(__file__), 'sorgenti', 'prezzo_voli.R')).read().replace('prezzo_finale <- (prezzo_dinamico * extra_stress) + fee_fissa', 'prezzo_finale <- round((prezzo_dinamico * extra_stress) + fee_fissa, 2)'))
 
 def autovelox_punti(velocita, limite, punti_iniziali):
     d = velocita - limite
@@ -259,7 +259,7 @@ lab('irpef', title='IRPEF 2025 vs 2026', modulo=2, order=6, level='extra', langu
            dict(reddito=200000)],
     skeleton="reddito <- 45000\n\n# calcola imposta_2025 e imposta_2026: alla fine deve esistere la variabile differenza\n",
     # il file di lezione ha un refuso nell'ultimo scaglione 2025 (0.46 invece di 0.43): corretto qui
-    solution=open(os.path.join(os.path.dirname(__file__), '..', 'materiale_lezioni', '8', 'irpef.R')).read().split('aliquota_totale_2026')[0].replace('(reddito - 120000) * 0.46', '(reddito - 120000) * 0.43', 1) + "\ndifferenza <- round(imposta_2026 - imposta_2025, 2)\ndifferenza\n")
+    solution=open(os.path.join(os.path.dirname(__file__), 'sorgenti', 'irpef.R')).read().split('aliquota_totale_2026')[0].replace('(reddito - 120000) * 0.46', '(reddito - 120000) * 0.43', 1) + "\ndifferenza <- round(imposta_2026 - imposta_2025, 2)\ndifferenza\n")
 
 def penali(importo, giorni_ritardo):
     if giorni_ritardo <= 10: p = 0
