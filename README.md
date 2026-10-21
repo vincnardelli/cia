@@ -23,9 +23,9 @@ seo:
 ## 🧭 Tre sezioni
 
 <div class="sezioni">
-{% assign sez_n = "moduli 1–7 · R|moduli 8–10 · R → Python|moduli 11–14 · Python" | split: "|" %}
+{% assign sez_n = "moduli 1–5 · R|moduli 6–10 · R → Python|moduli 11–14 · Python" | split: "|" %}
 {% assign sez_t = "Il codice|Come imparano le macchine|LLM e agenti" | split: "|" %}
-{% assign sez_d = "Dirglielo. Scrivi tu le regole: variabili, decisioni, cicli, funzioni, dati con dplyr. Poi le provi sui casi limite.|Mostrarle degli esempi. La regola la trova la macchina, nei dati che le dai: alberi, poi Python e random forest. La domanda da fare sempre: su quali dati l'hai provata?|Chiederglielo. Da testo a numeri, il modello di linguaggio che prevede il pezzo di testo successivo, gli agenti che chiamano le funzioni scritte nella sezione 1. La risposta la verifichi con i tuoi strumenti." | split: "|" %}
+{% assign sez_d = "Dirglielo. Scrivi tu le regole: variabili, decisioni, cicli, funzioni, e l'AI che le scrive per te. Poi le provi sui casi limite.|Mostrarle degli esempi. La regola la trova la macchina, nei dati che le dai. Prima impari a leggere i dati con dplyr, poi alberi, Python e random forest. La domanda da fare sempre: su quali dati l'hai provata?|Chiederglielo. Da testo a numeri, il modello di linguaggio che prevede il pezzo di testo successivo, gli agenti che chiamano le funzioni scritte nella sezione 1. La risposta la verifichi con i tuoi strumenti." | split: "|" %}
 {% for p in (1..3) %}{% assign i = p | minus: 1 %}{% assign primo = moduli | where: 'sezione', p | first %}
   <{% if primo %}a href="{{ site.baseurl }}{{ primo.url }}"{% else %}div{% endif %} class="sezione sezione--{{ p }}">
     <div class="sezione__n">Sezione {{ p }} · {{ sez_n[i] }}</div>

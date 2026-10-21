@@ -2,7 +2,7 @@
 layout: modulo
 number: 7
 title: Leggere i dati
-sezione: 1
+sezione: 2
 language: R
 idea: "Una tabella si riassume con pochi numeri e pochi grafici; saperli leggere è più difficile che calcolarli."
 hours: 4
@@ -15,7 +15,7 @@ slides_pdf:
 
 ## Quattro titoli, un anno di Borsa
 
-Il file dei rendimenti contiene, per ogni giorno di Borsa del 2023, il rendimento giornaliero di quattro titoli di Piazza Affari: Ferrari, Enel, Intesa e Unicredit. Un rendimento dello 0,01 significa che il titolo ha guadagnato l'1 % rispetto al giorno prima. È il dataset della sezione 1 su cui impariamo a **riassumere**: una colonna di 250 numeri in due o tre.
+Il file dei rendimenti contiene, per ogni giorno di Borsa del 2023, il rendimento giornaliero di quattro titoli di Piazza Affari: Ferrari, Enel, Intesa e Unicredit. Un rendimento dello 0,01 significa che il titolo ha guadagnato l'1 % rispetto al giorno prima. È il dataset su cui impariamo a **riassumere**: una colonna di 250 numeri in due o tre.
 
 ```r
 library(readxl)

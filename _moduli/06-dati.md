@@ -2,7 +2,7 @@
 layout: modulo
 number: 6
 title: Dati
-sezione: 1
+sezione: 2
 language: R
 idea: "Una tabella è un insieme di vettori affiancati; con cinque verbi la interroghiamo senza cicli."
 hours: 4
@@ -12,12 +12,18 @@ explorations: []
 slides_pdf:
 slides:
   - titolo: Lezione 7
-    descr: Data frame, dplyr, Titanic
+    descr: Data frame, dplyr, ecommerce
     pdf: slide/lezione_7.pdf
+  - titolo: Lezione 8
+    descr: Ripasso ecommerce, lab Titanic
+    pdf: slide/lezione_8.pdf
 codice:
   - titolo: lezione_7.R
     descr: data frame, NA, verbi e pipe
     file: codice/7/lezione_7.R
+  - titolo: lezione_8.R
+    descr: ripasso dell'ecommerce
+    file: codice/8/lezione_8.R
   - titolo: ecommerce.R
     descr: prova tu, tre domande
     file: codice/7/ecommerce.R
@@ -169,9 +175,9 @@ titanic %>%
 
 Il secondo comando raggruppa per due variabili e produce una riga per ogni combinazione classe × sesso. Guardando la seconda tabella si scopre che dentro ogni classe le donne sopravvivono molto più degli uomini: l'aggregazione per sola classe nascondeva la variabile che conta di più.
 
-> **Attenzione** Dopo un `group_by` con due variabili, `summarise` toglie **solo l'ultimo** raggruppamento: la tabella risultante è ancora raggruppata per `Pclass`. Un `mutate(percentuale = n / sum(n))` a quel punto calcola le quote **dentro ogni classe**, non sul totale. Se volete il totale generale, aggiungete `ungroup()` prima del `mutate`, oppure scrivete `summarise(..., .groups = "drop")`. È l'errore più comune di tutto la sezione 1 e i test della piattaforma lo intercettano.
+> **Attenzione** Dopo un `group_by` con due variabili, `summarise` toglie **solo l'ultimo** raggruppamento: la tabella risultante è ancora raggruppata per `Pclass`. Un `mutate(percentuale = n / sum(n))` a quel punto calcola le quote **dentro ogni classe**, non sul totale. Se volete il totale generale, aggiungete `ungroup()` prima del `mutate`, oppure scrivete `summarise(..., .groups = "drop")`. È l'errore più comune di tutto il modulo: nessun errore in console, solo un numero diverso.
 
-> **In aula** abbiamo risposto alla prima metà delle domande sul Titanic. Le altre (biglietto minimo, medio e massimo per classe e sesso; se i sopravvissuti hanno pagato di più; il ruolo della dimensione della famiglia e del porto d'imbarco) usano esattamente gli stessi cinque verbi e sono nella seconda parte di [`titanic.R`]({{ site.baseurl }}/codice/7/titanic.R). Guardate il minimo di `Fare` e i valori di `Embarked`: anche lì c'è un caso limite nei dati.
+> **In aula** il modulo occupa due lezioni: nella lezione 7 i verbi di dplyr sull'ecommerce, nella lezione 8 il ripasso ([`lezione_8.R`]({{ site.baseurl }}/codice/8/lezione_8.R)) e il lab sul Titanic. Le domande su biglietti, famiglie e porto d'imbarco usano esattamente gli stessi cinque verbi e sono nella seconda parte di [`titanic.R`]({{ site.baseurl }}/codice/7/titanic.R). Guardate il minimo di `Fare` e i valori di `Embarked`: anche lì c'è un caso limite nei dati.
 
 ## Per approfondire
 
