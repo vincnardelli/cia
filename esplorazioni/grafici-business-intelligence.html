@@ -16,6 +16,11 @@
   .modi a{padding:8px 14px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;color:var(--ink)}
   .modi a:hover{border-color:var(--line)}
   .modi a.on{border-color:var(--p2);color:var(--p2)}
+  .fs{margin-left:auto;align-self:center;font:inherit;font-size:12.5px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:5px 11px;cursor:pointer}
+  .fs:hover{border-color:var(--ink)}
+  /* a schermo intero: pagina centrata e scorrevole */
+  html:fullscreen{overflow-y:auto;background:#fff}
+  html:fullscreen body{max-width:1180px;margin:0 auto;padding:18px 24px}
   /* pillole, come i tag del sito */
   .viste{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
   .viste button,.chip{font:inherit;font-size:12.5px;font-weight:600;line-height:1;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 10px;cursor:pointer}
@@ -84,7 +89,7 @@
   @media (max-width:700px){.cards{grid-template-columns:1fr}.casi{grid-template-columns:1fr 1fr}}
 </style></head><body>
 
-<nav class="modi" id="modi"><a data-m="esplora" class="on">Esplora</a><a data-m="casi">Domande di business</a></nav>
+<nav class="modi" id="modi"><a data-m="esplora" class="on">Esplora</a><a data-m="casi">Domande di business</a><button class="fs" id="fs" hidden>⛶ Schermo intero</button></nav>
 
 <section id="h-esplora">
   <div class="row">
@@ -509,6 +514,14 @@ function go(d){
 }
 $('prev').onclick=()=>go(-1);$('next').onclick=()=>go(1);
 document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT'||e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);});
+// schermo intero (dove il browser lo permette; sull'iPhone non c'è)
+const fsBtn=$('fs'),de=document.documentElement,fsOn=()=>document.fullscreenElement||document.webkitFullscreenElement;
+if(document.fullscreenEnabled||document.webkitFullscreenEnabled){fsBtn.hidden=false;
+  fsBtn.onclick=()=>{if(fsOn())return (document.exitFullscreen||document.webkitExitFullscreen).call(document);
+    // se il browser rifiuta (per esempio dentro un iframe senza permesso), la apre a pagina intera in una nuova scheda
+    const r=(de.requestFullscreen||de.webkitRequestFullscreen).call(de);if(r&&r.catch)r.catch(()=>{if(window.parent!==window)window.open(location.href,'_blank');});};
+  const lab=()=>fsBtn.textContent=fsOn()?'✕ Esci dallo schermo intero':'⛶ Schermo intero';
+  document.addEventListener('fullscreenchange',lab);document.addEventListener('webkitfullscreenchange',lab);}
 fillVars();drawTabs();render();
 if(location.hash==='#casi')setMode('casi');
 
