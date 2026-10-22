@@ -6,6 +6,7 @@ sezione: 2
 language: R
 idea: "Una tabella si riassume con pochi numeri e pochi grafici; saperli leggere è più difficile che calcolarli."
 hours: 3
+math: true
 concepts_new: [frequenze, istogramma, media e mediana, quartili, boxplot, deviazione standard, skewness, curtosi, correlazione, ggplot2]
 concepts_required: [data frame, dplyr, pipe, group_by]
 explorations: []
@@ -44,7 +45,7 @@ summary(vendite)
 
 ## Dalla tabella all'istogramma
 
-Il primo riassunto di una colonna numerica è una **tabella di frequenza**: si divide il fatturato in fasce e si conta quanti prodotti cadono in ognuna. La frequenza relativa è *f*ᵢ = *n*ᵢ / *N*.
+Il primo riassunto di una colonna numerica è una **tabella di frequenza**: si divide il fatturato in fasce e si conta quanti prodotti cadono in ognuna. La frequenza relativa è $$f_i = n_i / N$$.
 
 ```r
 vendite %>%
@@ -59,10 +60,10 @@ L'**istogramma** è la stessa tabella disegnata: ogni barra è una fascia, la su
 
 Sopra l'istogramma si possono segnare sei valori: minimo, primo quartile, mediana, media, terzo quartile, massimo. Per il fatturato sono 8.004, 73.949, 118.351, 116.047, 144.688 e 301.599 €.
 
-- La **media** è x̄ = Σ xᵢ / N.
+- La **media** è $$\bar{x} = \frac{1}{N}\sum_{i=1}^{N} x_i$$.
 - La **mediana** è il valore che sta a metà una volta ordinati i dati; i **quartili** lasciano sotto di sé un quarto e tre quarti dei prodotti. R li calcola con `quantile()`.
 
-Il **boxplot** è l'istogramma visto dall'alto. La scatola va da Q1 a Q3 e contiene metà dei prodotti; la sua larghezza è l'IQR = Q3 − Q1. I baffi arrivano fino all'ultimo valore entro Q1 − 1,5 · IQR e Q3 + 1,5 · IQR; oltre ci sono i punti isolati.
+Il **boxplot** è l'istogramma visto dall'alto. La scatola va da Q1 a Q3 e contiene metà dei prodotti; la sua larghezza è $$IQR = Q_3 - Q_1$$. I baffi arrivano fino all'ultimo valore entro $$Q_1 - 1{,}5 \cdot IQR$$ e $$Q_3 + 1{,}5 \cdot IQR$$; oltre ci sono i punti isolati.
 
 ```r
 ggplot(vendite, aes(x = fatturato)) +
@@ -73,7 +74,9 @@ ggplot(vendite, aes(x = fatturato)) +
 
 La **deviazione standard** misura quanto i valori si allontanano dalla media:
 
-> s = √( Σ (xᵢ − x̄)² / (N − 1) )
+$$
+s = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \bar{x})^2}{N-1}}
+$$
 
 È quello che calcola `sd()`. Per il fatturato è 55.817 €. Elettronica e Sport hanno medie vicine (135.410 e 121.602 €) ma deviazioni standard molto diverse (70.730 e 40.457 €): nell'elettronica convivono prodotti che vendono pochissimo e prodotti che vendono moltissimo. In finanza la stessa misura si chiama rischio.
 
@@ -90,13 +93,17 @@ ggplot(vendite, aes(x = categoria, y = fatturato)) +
 
 La **skewness** dice se la distribuzione è simmetrica o ha una coda lunga da un lato:
 
-> SK = N / ((N − 1)(N − 2)) · Σ ((xᵢ − x̄) / s)³
+$$
+SK = \frac{N}{(N-1)(N-2)} \sum_{i=1}^{N} \left(\frac{x_i - \bar{x}}{s}\right)^3
+$$
 
 Positiva vuol dire coda a destra, con la media sopra la mediana: il prezzo ha skewness 2,68, media 150 € e mediana 61 €.
 
 La **curtosi** dice quanto sono frequenti i valori estremi rispetto a quello che farebbe pensare la deviazione standard:
 
-> K = [ Σ (xᵢ − x̄)⁴ / N ] / [ Σ (xᵢ − x̄)² / N ]² − 3
+$$
+K = \frac{\frac{1}{N}\sum_{i=1}^{N} (x_i - \bar{x})^4}{\left(\frac{1}{N}\sum_{i=1}^{N} (x_i - \bar{x})^2\right)^2} - 3
+$$
 
 In aula l'abbiamo vista su quattro domande di business:
 
@@ -111,9 +118,11 @@ In aula l'abbiamo vista su quattro domande di business:
 
 Il grafico di dispersione mette un punto per prodotto. La **correlazione** va da −1 a 1:
 
-> Corr(X, Y) = Cov(X, Y) / √( Var(X) · Var(Y) )
+$$
+Corr(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)\,Var(Y)}}
+$$
 
-Unità vendute e numero di recensioni hanno r = 0,93; valutazione e tasso di reso r = −0,90; valutazione e fatturato appena 0,26. La matrice di dispersione (`GGally::ggpairs`) e `corrplot` mostrano tutte le coppie insieme.
+Unità vendute e numero di recensioni hanno $$r = 0{,}93$$; valutazione e tasso di reso $$r = -0{,}90$$; valutazione e fatturato appena $$r = 0{,}26$$. La matrice di dispersione (`GGally::ggpairs`) e `corrplot` mostrano tutte le coppie insieme.
 
 ```r
 cor(vendite$numero_recensioni, vendite$unita_vendute)
