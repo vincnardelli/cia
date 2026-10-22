@@ -18,9 +18,35 @@
   .modi a.on{border-color:var(--p2);color:var(--p2)}
   .fs{margin-left:auto;align-self:center;font:inherit;font-size:12.5px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:5px 11px;cursor:pointer}
   .fs:hover{border-color:var(--ink)}
-  /* a schermo intero: pagina centrata e scorrevole */
-  html:fullscreen{overflow-y:auto;background:#fff}
-  html:fullscreen body{max-width:1180px;margin:0 auto;padding:18px 24px}
+  /* a schermo intero (16:9): grafico grande a sinistra con la tabella sotto, testi e comandi a destra, niente scorrimento */
+  .main{display:flex;flex-direction:column}
+  .left,.side{display:contents}
+  html:not(:fullscreen) #h-domanda{order:1}html:not(:fullscreen) .opts{order:2}html:not(:fullscreen) .chart{order:3}html:not(:fullscreen) #t-esplora{order:4}html:not(:fullscreen) #t-caso{order:5}html:not(:fullscreen) .tabwrap{order:6}html:not(:fullscreen) .nav{order:7}
+  html:fullscreen .viste button,html:fullscreen .chip,html:fullscreen .fs{font-size:14px}
+  html:fullscreen select{font-size:15px}
+  html:fullscreen{background:#fff}
+  html:fullscreen body{height:100vh;overflow:hidden;display:flex;flex-direction:column;padding:14px 26px 18px;font-size:15px}
+  html:fullscreen .modi{margin-bottom:10px}
+  html:fullscreen #h-esplora{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-bottom:8px}
+  html:fullscreen #h-esplora .row,html:fullscreen .viste{margin:0}
+  html:fullscreen .main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) clamp(320px,28vw,480px);gap:22px}
+  html:fullscreen .left{display:flex;flex-direction:column;min-height:0}
+  html:fullscreen .chart{flex:1;min-height:0}
+  html:fullscreen .chart svg{width:100%;height:100%}
+  html:fullscreen .tabwrap{flex:none}
+  html:fullscreen th,html:fullscreen td{padding:5px 4px}
+  html:fullscreen .side{display:flex;flex-direction:column;gap:10px;min-height:0;overflow-y:auto}
+  html:fullscreen .side>*{margin:0}
+  html:fullscreen .casi{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+  html:fullscreen .caso{padding:5px 11px;box-shadow:none}
+  html:fullscreen .caso .k{display:none}
+  html:fullscreen .caso .t{margin:0;font-size:14px}
+  html:fullscreen .domanda{margin:0}
+  html:fullscreen .cards{grid-template-columns:1fr;margin:0}
+  html:fullscreen .nav{margin-top:auto}
+  html:fullscreen .nav .hint{display:none}
+  html:fullscreen .nav{flex-wrap:nowrap}
+  html:fullscreen .nav .btn{flex:1;font-size:13.5px;padding:7px 8px}
   /* pillole, come i tag del sito */
   .viste{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
   .viste button,.chip{font:inherit;font-size:12.5px;font-weight:600;line-height:1;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 10px;cursor:pointer}
@@ -98,14 +124,15 @@
   </div>
   <nav class="viste" id="viste"></nav>
 </section>
-<section id="h-casi" hidden>
-  <div class="casi" id="casi"></div>
-  <div class="domanda"><div><div class="k" id="caso-k"></div><div class="q" id="caso-q"></div></div><div class="passi" id="passi"></div></div>
-</section>
-
+<section id="h-casi" hidden><div class="casi" id="casi"></div></section>
+<div class="main">
+<div class="left">
 <div class="row opts"><div class="legenda" id="legenda"></div><div class="row" style="margin:0" id="opts"></div></div>
 <div class="chart"><svg id="svg" viewBox="0 0 820 430" role="img" aria-label="Grafico dei dati"></svg><div class="tip" id="tip"></div></div>
-
+<div class="tabwrap"><table id="metr"></table></div>
+</div>
+<div class="side">
+<div class="domanda" id="h-domanda" hidden><div><div class="k" id="caso-k"></div><div class="q" id="caso-q"></div></div><div class="passi" id="passi"></div></div>
 <div class="cards" id="t-esplora">
   <div class="card si"><div class="k">Cosa si vede</div><p id="vede"></p></div>
   <div class="card no"><div class="k">Cosa sparisce</div><p id="perde"></p></div>
@@ -114,9 +141,9 @@
   <div class="card no"><div class="k" id="passo-k"></div><p id="passo"></p></div>
   <div class="risposta" id="risposta-box" hidden><div class="k">Risposta</div><p id="risposta"></p></div>
 </div>
-
-<div class="tabwrap"><table id="metr"></table></div>
 <div class="nav"><button class="btn" id="prev">← Precedente</button><span class="hint">Clicca le intestazioni della tabella per disegnare le misure sul grafico; clicca un punto per seguirlo.</span><button class="btn" id="next">Successivo →</button></div>
+</div>
+</div>
 
 <script>
 // ── dati: i tre file della lezione 9 ──
@@ -441,8 +468,10 @@ function drawPin(){const g=G('pin');if(S.pin<0||!P[S.pin]){g.innerHTML='';return
 function showTip(i){const r=C.ds.rows[i];let h=`<b>${r.id}</b> <span class="c">· ${r.sub}</span><br>${C.V.lab}: <b>${C.f(C.vals[i])}</b>`;
   if(S.view==='dispersione')h+=`<br>${C.s.XV.lab}: <b>${fmt(C.s.xs[i],C.s.XV)}</b>`;
   if(S.view==='istogramma'&&!C.V.discreta){const b=C.h.bins[C.h.bin[i]];h+=`<br><span class="c">fascia ${C.f(b.a,C.V.d)} – ${C.f(b.b,C.V.d)}</span>`;}
-  tip.innerHTML=h;tip.style.display='block';const box=svg.getBoundingClientRect(),k=box.width/W,p=P[i];
-  let x=p.x*k+14,y=p.y*k-10;if(x+tip.offsetWidth>box.width)x=p.x*k-14-tip.offsetWidth;tip.style.left=Math.max(0,x)+'px';tip.style.top=Math.max(0,y)+'px';}
+  tip.innerHTML=h;tip.style.display='block';
+  // il grafico può essere rimpicciolito e centrato (a schermo intero): scala e margini veri
+  const box=svg.getBoundingClientRect(),k=Math.min(box.width/W,box.height/H),ox=(box.width-W*k)/2,oy=(box.height-H*k)/2,p=P[i];
+  let x=ox+p.x*k+14,y=oy+p.y*k-10;if(x+tip.offsetWidth>box.width)x=ox+p.x*k-14-tip.offsetWidth;tip.style.left=Math.max(0,x)+'px';tip.style.top=Math.max(0,y)+'px';}
 function drawLegend(){const ds=C.ds,click=!ds.panels;
   $('legenda').innerHTML=ds.groups.map((g,k)=>`<button class="chip ${click?'':'fermo'} ${S.hl>=0&&S.hl!==k?'off':''}" data-k="${k}" ${click?'title="evidenzia la categoria"':''}><i style="background:${g.c}"></i>${g.n}</button>`).join('');
   if(click)$('legenda').querySelectorAll('button').forEach(b=>b.onclick=()=>{const k=+b.dataset.k;S.hl=S.hl===k?-1:k;drawLegend();drawTable();colorPts();});}
@@ -499,7 +528,7 @@ function apriCaso(k,passo){
 function setMode(m){
   if(m===S.mode)return;
   $('modi').querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.dataset.m===m));
-  $('h-esplora').hidden=$('t-esplora').hidden=m!=='esplora';$('h-casi').hidden=$('t-caso').hidden=m!=='casi';
+  $('h-esplora').hidden=$('t-esplora').hidden=m!=='esplora';$('h-casi').hidden=$('h-domanda').hidden=$('t-caso').hidden=m!=='casi';
   if(m==='casi'){salvato={ds:S.ds,v:S.v,view:S.view,xv:S.xv,met:new Set(S.met),hl:S.hl};S.mode='casi';apriCaso(S.caso,S.passo);}
   else{S.mode='esplora';Object.assign(S,salvato||{});S.pin=-1;dsSel.value=S.ds;fillVars();drawTabs();render();}
 }
@@ -513,7 +542,7 @@ function go(d){
   else if(d<0&&S.caso>0)apriCaso(S.caso-1,CASI[S.caso-1].passi.length-1);
 }
 $('prev').onclick=()=>go(-1);$('next').onclick=()=>go(1);
-document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT'||e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);});
+document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT'||e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);if(e.key==='f'&&!$('fs').hidden)$('fs').click();});
 // schermo intero (dove il browser lo permette; sull'iPhone non c'è)
 const fsBtn=$('fs'),de=document.documentElement,fsOn=()=>document.fullscreenElement||document.webkitFullscreenElement;
 if(document.fullscreenEnabled||document.webkitFullscreenEnabled){fsBtn.hidden=false;
