@@ -1,0 +1,81 @@
+"codice_prodotto","categoria","marca","fascia_qualita","disponibilita","prezzo_base","sconto_percentuale","prezzo","unita_vendute","fatturato","valutazione_clienti","numero_recensioni","tasso_reso","margine_profitto","giorni_giacenza","costo_magazzino","ritardo_fornitore_giorni"
+"PROD0001","Casa","TechPro","Economico","In stock",45.41,29,32.16,2007,64544.89,3,157,7.6,11.7,83,5.07,1
+"PROD0002","Alimentari","BioFood","Standard","Limitato",11.49,13,9.99,8241,82311.37,3.6,1358,4.9,28.1,1,0.02,1
+"PROD0003","Casa","HomePlus","Economico","In stock",51.16,18,42.13,1938,81645.44,2.8,116,10.9,15.1,94,8.57,0
+"PROD0004","Sport","SportLife","Standard","Limitato",74.49,10,67.09,1413,94794.81,3.6,194,8.9,21.6,119,16.42,0
+"PROD0005","Sport","Generic","Standard","In stock",55.22,10,49.78,1805,89859.1,3.8,265,8.4,25.4,98,8.37,1
+"PROD0006","Elettronica","HomePlus","Economico","Limitato",43.89,11,38.9,1753,68192.84,3,251,10.4,9.7,91,6.5,0
+"PROD0007","Abbigliamento","StyleMax","Economico","In stock",35.42,36,22.57,2631,59389.14,5,387,0,18.7,52,2.25,1
+"PROD0008","Sport","StyleMax","Standard","Esaurito",102.52,14,88.21,1382,121911.58,3,273,9.6,28.6,120,21.36,2
+"PROD0009","Abbigliamento","StyleMax","Standard","Esaurito",51.04,16,42.8,2806,120106.41,3.7,696,6,20.3,45,3.98,0
+"PROD0010","Abbigliamento","Generic","Standard","Limitato",73.02,19,58.93,2175,128177.21,4.2,474,0.1,32.8,77,8.38,1
+"PROD0011","Sport","Generic","Economico","In stock",29.58,27,21.68,2604,56444.26,4.1,188,3.9,11.2,65,2.66,0
+"PROD0012","Abbigliamento","BioFood","Standard","In stock",94.19,6,88.31,1703,150387.71,4.1,379,2.6,33.2,106,21.94,1
+"PROD0013","Alimentari","TechPro","Premium","In stock",32.18,1,31.7,4794,151974.3,4.6,784,0.8,57.5,1,0.06,0
+"PROD0014","Abbigliamento","BioFood","Economico","In stock",37.73,40,22.77,2699,61455.04,2.7,504,10.9,11.1,53,2.5,2
+"PROD0015","Elettronica","TechPro","Economico","In stock",40.43,40,24.45,1425,34835.07,2.8,296,10,11.1,117,5.15,0
+"PROD0016","Sport","Generic","Economico","Limitato",43.48,22,34,2304,78337.7,1.9,301,16,19.4,71,4.61,0
+"PROD0017","Elettronica","SportLife","Standard","In stock",385.19,19,311.22,440,136935.44,3.7,97,5.1,23.3,163,107.38,1
+"PROD0018","Elettronica","Generic","Economico","In stock",35.94,20,28.62,1630,46658.21,3.9,143,6.7,16.8,108,5.85,0
+"PROD0019","Casa","HomePlus","Premium","In stock",356.47,7,333.16,343,114275.2,4.6,51,0.8,40.6,177,116.42,0
+"PROD0020","Sport","HomePlus","Economico","Limitato",48.12,17,40,2355,94208.41,3.3,174,9.2,12.9,73,5.09,0
+"PROD0021","Sport","BioFood","Premium","Esaurito",318.26,2,313.14,449,140598.64,4,43,1.8,37.5,167,103.8,0
+"PROD0022","Alimentari","TechPro","Standard","Limitato",15.8,6,14.81,6611,97923.33,4,1528,7.2,20.9,1,0.03,0
+"PROD0023","Abbigliamento","HomePlus","Economico","Limitato",11.48,12,10.13,3434,34787.98,3.8,497,5.6,16.9,22,0.36,0
+"PROD0024","Sport","StyleMax","Standard","Esaurito",144.91,19,117.32,1404,164722.82,4.6,222,0,26.2,119,26.62,0
+"PROD0025","Alimentari","HomePlus","Economico","In stock",3.23,24,2.46,9070,22269.75,2.9,2220,11,16,1,0,17
+"PROD0026","Alimentari","StyleMax","Standard","In stock",12.14,16,10.23,7289,74563.3,4.7,1782,1.3,28.7,1,0.02,0
+"PROD0027","Abbigliamento","StyleMax","Standard","In stock",95.5,7,88.95,1515,134754.75,3.8,283,2.7,34.1,113,16.63,1
+"PROD0028","Abbigliamento","BioFood","Economico","In stock",12.07,16,10.18,3301,33619.27,4.5,680,4.1,15.3,23,0.5,0
+"PROD0029","Casa","HomePlus","Premium","In stock",268.84,7,250.63,736,184464.75,4.4,40,1.5,54.4,154,63.43,0
+"PROD0030","Elettronica","Generic","Premium","In stock",860.97,8,788.13,259,204126.72,4,51,6.4,42.7,179,258.57,1
+"PROD0031","Sport","StyleMax","Standard","Limitato",140.61,9,127.82,1503,192116.41,3.8,353,5.4,32.4,114,26.94,19
+"PROD0032","Sport","TechPro","Standard","In stock",105.9,6,99.6,1400,139433.85,3.3,193,7.3,34.9,116,22.57,0
+"PROD0033","Alimentari","Generic","Premium","In stock",70.77,6,66.56,3250,216317.16,3.9,621,0.9,30.5,23,2.98,1
+"PROD0034","Alimentari","StyleMax","Economico","In stock",6.56,30,4.62,8230,38010.74,4.1,1756,1.3,15.4,1,0.01,0
+"PROD0035","Elettronica","SportLife","Premium","Limitato",859.71,4,828.57,364,301599.14,3.6,54,6.4,46.6,179,309.87,1
+"PROD0036","Abbigliamento","Generic","Standard","Limitato",71.11,19,57.47,2098,120567.01,3,459,11.5,25.1,81,8.62,14
+"PROD0037","Alimentari","HomePlus","Standard","Esaurito",22.59,13,19.56,6731,131688.93,4.1,1000,0,23.8,1,0.04,0
+"PROD0038","Elettronica","StyleMax","Economico","In stock",122.42,18,100.72,1134,114221.84,4.1,61,6.2,17.3,135,25.43,1
+"PROD0039","Casa","BioFood","Standard","In stock",107.59,19,86.92,1523,132371.99,3.2,210,11.8,31.7,111,20.62,2
+"PROD0040","Elettronica","HomePlus","Economico","Limitato",127.81,34,84.46,1100,92909.73,3.5,160,4.5,16.1,136,26.65,1
+"PROD0041","Elettronica","BioFood","Standard","Limitato",184.9,17,152.94,949,145140.85,3.4,162,8.6,29,142,49.42,1
+"PROD0042","Casa","TechPro","Premium","In stock",407.72,8,373.23,587,219086.09,4.6,81,0,47.6,157,97.96,2
+"PROD0043","Casa","TechPro","Economico","In stock",28.01,33,18.73,2279,42684.28,4.5,254,0.8,18.4,80,2.76,1
+"PROD0044","Casa","TechPro","Economico","In stock",62.67,38,38.66,1728,66807.29,4.4,319,3.7,13.9,108,8.45,1
+"PROD0045","Elettronica","TechPro","Standard","In stock",359.94,6,337.5,412,139048.98,3.5,71,8.8,24.1,175,112.41,0
+"PROD0046","Elettronica","StyleMax","Premium","In stock",1005.55,0,1000.52,10,8004.19,4.6,2,0,56,196,446.37,0
+"PROD0047","Elettronica","Generic","Standard","In stock",328.12,8,302.2,566,171047.04,4.3,48,1.1,20.6,159,109.98,3
+"PROD0048","Abbigliamento","Generic","Standard","In stock",41.95,15,35.73,2782,99390.49,3.9,681,2.4,22.5,49,3.76,0
+"PROD0049","Casa","Generic","Standard","In stock",70.59,12,62.45,1830,114283.29,3.7,304,6.7,32.8,100,12.49,1
+"PROD0050","Sport","BioFood","Standard","Limitato",146.97,8,135.27,899,121610.41,3.8,178,1.8,20.7,148,44.86,0
+"PROD0051","Elettronica","BioFood","Standard","In stock",257.15,20,205.92,774,159384.7,4.6,173,0,24.1,150,50.57,3
+"PROD0052","Casa","StyleMax","Standard","In stock",80.61,12,71.18,1638,116595.43,3.4,294,10.7,33.3,106,13.65,1
+"PROD0053","Alimentari","BioFood","Standard","In stock",21.5,5,20.33,5962,121194.96,3.4,1126,12.4,28.2,1,0.04,3
+"PROD0054","Elettronica","SportLife","Economico","Limitato",127.98,21,100.49,1124,112946.38,3.7,280,4.8,11.7,141,31.92,2
+"PROD0055","Abbigliamento","HomePlus","Standard","Limitato",49.86,18,40.85,2368,96739.35,2.8,521,12.4,34.4,59,5.48,1
+"PROD0056","Elettronica","BioFood","Economico","Limitato",118.68,26,88.25,1242,109605.62,2,252,16.2,16.9,127,25.4,1
+"PROD0057","Elettronica","SportLife","Standard","Esaurito",343.55,9,310.96,459,142731.5,3.9,36,7.5,26,167,94.33,2
+"PROD0058","Alimentari","SportLife","Standard","In stock",14.87,17,12.33,6874,84722.56,3.9,475,5.6,34.6,1,0.02,0
+"PROD0059","Sport","StyleMax","Premium","In stock",186.61,6,175.36,942,165189.2,4.7,145,0,58.1,145,53.51,3
+"PROD0060","Casa","HomePlus","Premium","Limitato",461.16,0,460.94,404,186221.77,4.2,36,0,44.1,160,162.14,0
+"PROD0061","Alimentari","TechPro","Standard","Limitato",26.82,7,24.97,5806,144983.85,3.3,1140,10.3,22,1,0.05,0
+"PROD0062","Elettronica","HomePlus","Premium","In stock",984.74,4,944.72,143,135094.28,4.2,21,2.2,53.1,175,312.75,2
+"PROD0063","Casa","Generic","Economico","Limitato",49.28,18,40.28,1790,72106.34,3.7,141,3.3,12.1,89,6.62,1
+"PROD0064","Casa","Generic","Economico","Limitato",39.74,29,28.11,1911,53717.81,1.9,417,16.3,11.2,91,4.83,22
+"PROD0065","Alimentari","SportLife","Standard","Limitato",18.18,7,16.9,6211,104967.08,3.3,1480,7.8,29,1,0.03,26
+"PROD0066","Casa","TechPro","Standard","In stock",74.27,5,70.49,1710,120542.47,4,181,6.3,34.7,101,14.46,0
+"PROD0067","Alimentari","TechPro","Standard","In stock",18.24,17,15.09,7412,111868.86,3.4,594,5.5,23.5,1,0.03,1
+"PROD0068","Alimentari","Generic","Economico","In stock",6.9,22,5.4,8605,46499.09,4,1646,2.7,11.3,1,0.01,1
+"PROD0069","Alimentari","TechPro","Economico","In stock",6.84,23,5.28,8324,43972.5,3.5,1357,9.7,10.2,1,0.01,1
+"PROD0070","Casa","SportLife","Premium","In stock",341.81,8,315.5,713,224950.3,4.7,49,2.7,40,154,104.78,31
+"PROD0071","Alimentari","SportLife","Economico","In stock",7.07,28,5.06,7870,39858.41,2.8,1275,13.6,14.6,1,0.01,2
+"PROD0072","Abbigliamento","HomePlus","Standard","In stock",66.46,17,54.92,2424,133136.37,3.9,419,8.1,24.7,77,9.97,1
+"PROD0073","Alimentari","TechPro","Economico","Limitato",10.6,11,9.41,7341,69099.31,3.2,1172,9.4,13.8,1,0.02,1
+"PROD0074","Elettronica","TechPro","Standard","In stock",326.77,14,279.9,586,164021.46,3.1,75,8.1,34.8,169,99.78,2
+"PROD0075","Abbigliamento","Generic","Standard","In stock",64.08,20,51.58,2503,129094.36,3.9,334,5.6,29.1,67,6.02,0
+"PROD0076","Elettronica","TechPro","Standard","Limitato",233.36,12,204.19,757,154572.81,3.9,175,6.8,22.2,152,51.65,1
+"PROD0077","Casa","BioFood","Standard","Limitato",146.81,18,119.79,1207,144589.37,3.6,223,11.2,30.6,118,29.02,1
+"PROD0078","Abbigliamento","TechPro","Premium","In stock",245.45,3,237.72,688,163554.26,4.6,166,0,36.1,149,79.82,1
+"PROD0079","Casa","HomePlus","Standard","In stock",111.49,12,98.43,1321,130029.6,2.5,106,13.8,24.8,122,26.51,0
+"PROD0080","Elettronica","TechPro","Premium","Limitato",1192.11,8,1099.25,243,267117.95,4.2,39,4.3,49.2,181,409.36,2
