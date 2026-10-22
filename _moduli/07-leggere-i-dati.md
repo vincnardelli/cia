@@ -9,7 +9,7 @@ hours: 3
 math: true
 concepts_new: [frequenze, istogramma, media e mediana, quartili, boxplot, deviazione standard, skewness, curtosi, correlazione, ggplot2]
 concepts_required: [data frame, dplyr, pipe, group_by]
-explorations: []
+explorations: [grafici-business-intelligence]
 slides_pdf:
 slides:
   - titolo: Lezione 9

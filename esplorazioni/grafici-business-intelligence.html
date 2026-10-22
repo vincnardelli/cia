@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grafici e Business Intelligence</title>
+<style>
+  :root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--soft:#f8fafc;--p1:#2563eb;--p2:#059669;--p3:#7c3aed;--bar:rgba(31,41,55,.07)}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;padding:12px 14px;font-size:14px;line-height:1.45}
+  [hidden]{display:none!important}
+  .row{display:flex;gap:10px 18px;align-items:center;flex-wrap:wrap;margin:0 0 10px}
+  .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+  label{display:flex;gap:8px;align-items:center}
+  select{font:inherit;padding:4px 8px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+  select:disabled{color:var(--muted);background:var(--soft)}
+  /* schede in alto, come le tab della pagina modulo */
+  .modi{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:0 0 12px}
+  .modi a{padding:8px 14px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;color:var(--ink)}
+  .modi a:hover{border-color:var(--line)}
+  .modi a.on{border-color:var(--p2);color:var(--p2)}
+  /* pillole, come i tag del sito */
+  .viste{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+  .viste button,.chip{font:inherit;font-size:12.5px;font-weight:600;line-height:1;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 10px;cursor:pointer}
+  .viste button b{color:var(--muted);margin-right:3px}
+  .viste button.on{border-color:var(--p2);background:var(--p2);color:#fff}
+  .viste button.on b{color:#a7f3d0}
+  .legenda{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{display:inline-flex;gap:6px;align-items:center;padding:4px 9px;font-weight:500}
+  .chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .chip.off{opacity:.4}
+  .chip.fermo{cursor:default}
+  .opts{min-height:28px;justify-content:space-between}
+  .opts input[type=range]{width:160px}
+  .chart{position:relative}
+  svg{width:100%;height:auto;display:block;overflow:visible}
+  .tick{font-size:11px;fill:var(--muted)}
+  .axt{font-size:12px;fill:var(--ink);font-weight:600}
+  .lab{font-size:11.5px;fill:var(--ink)}
+  .labm{font-size:11px;fill:var(--muted)}
+  .fade{animation:fade .45s ease .4s both}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .pt .hit{fill:transparent;cursor:pointer}
+  .pt .d{stroke:#fff;stroke-width:.8}
+  .tip{position:absolute;pointer-events:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:12.5px;box-shadow:0 4px 14px rgba(0,0,0,.1);display:none;white-space:nowrap;z-index:2}
+  .tip .c{color:var(--muted)}
+  /* riquadri, come .concetti__col e .via */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+  .card{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:#fff}
+  .card p{margin:4px 0 0}
+  .card.si{background:#ecfdf5;border-color:#a7f3d0}
+  .card.si .k{color:var(--p2)}
+  .card.no{background:var(--soft)}
+  /* casi: come le schede lab */
+  .casi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 12px}
+  .caso{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:8px 11px;background:#fff;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.05);text-align:left;font:inherit;color:var(--ink)}
+  .caso:hover{box-shadow:0 4px 14px rgba(0,0,0,.08)}
+  .caso.sk{border-left-color:var(--p1)} .caso.ku{border-left-color:var(--p3)}
+  .caso.on{background:var(--soft);border-color:var(--ink);border-left-color:var(--ink)}
+  .caso .k{font-size:10.5px} .caso.sk .k{color:var(--p1)} .caso.ku .k{color:var(--p3)}
+  .caso .t{font-weight:700;font-size:13.5px;margin-top:2px}
+  .domanda{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--soft);margin:0 0 10px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .domanda .q{font-size:15.5px;font-weight:600;max-width:640px}
+  .passi{display:flex;gap:5px}
+  .passi span{width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:700;display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+  .passi span.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .risposta{margin-top:10px;border:1px solid #a7f3d0;background:#ecfdf5;border-radius:10px;padding:10px 14px}
+  .risposta .k{color:var(--p2)}
+  .risposta p{margin:4px 0 0}
+  /* tabella delle misure */
+  .tabwrap{overflow-x:auto;margin-top:10px;border:1px solid var(--line);border-radius:10px}
+  table{border-collapse:collapse;width:100%;font-size:12.5px;font-variant-numeric:tabular-nums}
+  th,td{padding:5px 6px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  th{background:var(--soft);font-weight:600;vertical-align:bottom}
+  th:first-child,td:first-child{text-align:left}
+  th button{font:inherit;font-size:11.5px;font-weight:700;border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 7px;cursor:pointer;display:inline-flex;gap:4px;align-items:center;color:var(--ink)}
+  th button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  th button svg{width:14px;height:8px}
+  th span.k{display:inline-block;padding:3px 0}
+  td i{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px}
+  th.on,td.on{background:#fef3c7}
+  .nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+  .btn{font:inherit;font-weight:700;border:1px solid var(--p2);background:var(--p2);color:#fff;border-radius:8px;padding:7px 13px;cursor:pointer}
+  .btn:disabled{opacity:.35;cursor:default}
+  .hint{color:var(--muted);font-size:13px}
+  @media (max-width:700px){.cards{grid-template-columns:1fr}.casi{grid-template-columns:1fr 1fr}}
+</style></head><body>
+
+<nav class="modi" id="modi"><a data-m="esplora" class="on">Esplora</a><a data-m="casi">Domande di business</a></nav>
+
+<section id="h-esplora">
+  <div class="row">
+    <label><span class="k">Dati</span><select id="ds"></select></label>
+    <label><span class="k">Variabile</span><select id="var"></select></label>
+  </div>
+  <nav class="viste" id="viste"></nav>
+</section>
+<section id="h-casi" hidden>
+  <div class="casi" id="casi"></div>
+  <div class="domanda"><div><div class="k" id="caso-k"></div><div class="q" id="caso-q"></div></div><div class="passi" id="passi"></div></div>
+</section>
+
+<div class="row opts"><div class="legenda" id="legenda"></div><div class="row" style="margin:0" id="opts"></div></div>
+<div class="chart"><svg id="svg" viewBox="0 0 820 430" role="img" aria-label="Grafico dei dati"></svg><div class="tip" id="tip"></div></div>
+
+<div class="cards" id="t-esplora">
+  <div class="card si"><div class="k">Cosa si vede</div><p id="vede"></p></div>
+  <div class="card no"><div class="k">Cosa sparisce</div><p id="perde"></p></div>
+</div>
+<div id="t-caso" hidden>
+  <div class="card no"><div class="k" id="passo-k"></div><p id="passo"></p></div>
+  <div class="risposta" id="risposta-box" hidden><div class="k">Risposta</div><p id="risposta"></p></div>
+</div>
+
+<div class="tabwrap"><table id="metr"></table></div>
+<div class="nav"><button class="btn" id="prev">← Precedente</button><span class="hint">Clicca le intestazioni della tabella per disegnare le misure sul grafico; clicca un punto per seguirlo.</span><button class="btn" id="next">Successivo →</button></div>
+
+<script>
+// ── dati: i tre file della lezione 9 ──
+// business_intelligence.csv: codice, categoria, marca, prezzo, unita_vendute, fatturato, valutazione_clienti,
+// numero_recensioni, tasso_reso, margine_profitto, giorni_giacenza, costo_magazzino, ritardo_fornitore_giorni
+const CATALOGO=[["0001","Casa","TechPro",32.16,2007,64544.89,3,157,7.6,11.7,83,5.07,1],["0002","Alimentari","BioFood",9.99,8241,82311.37,3.6,1358,4.9,28.1,1,0.02,1],["0003","Casa","HomePlus",42.13,1938,81645.44,2.8,116,10.9,15.1,94,8.57,0],["0004","Sport","SportLife",67.09,1413,94794.81,3.6,194,8.9,21.6,119,16.42,0],["0005","Sport","Generic",49.78,1805,89859.1,3.8,265,8.4,25.4,98,8.37,1],["0006","Elettronica","HomePlus",38.9,1753,68192.84,3,251,10.4,9.7,91,6.5,0],["0007","Abbigliamento","StyleMax",22.57,2631,59389.14,5,387,0,18.7,52,2.25,1],["0008","Sport","StyleMax",88.21,1382,121911.58,3,273,9.6,28.6,120,21.36,2],["0009","Abbigliamento","StyleMax",42.8,2806,120106.41,3.7,696,6,20.3,45,3.98,0],["0010","Abbigliamento","Generic",58.93,2175,128177.21,4.2,474,0.1,32.8,77,8.38,1],["0011","Sport","Generic",21.68,2604,56444.26,4.1,188,3.9,11.2,65,2.66,0],["0012","Abbigliamento","BioFood",88.31,1703,150387.71,4.1,379,2.6,33.2,106,21.94,1],["0013","Alimentari","TechPro",31.7,4794,151974.3,4.6,784,0.8,57.5,1,0.06,0],["0014","Abbigliamento","BioFood",22.77,2699,61455.04,2.7,504,10.9,11.1,53,2.5,2],["0015","Elettronica","TechPro",24.45,1425,34835.07,2.8,296,10,11.1,117,5.15,0],["0016","Sport","Generic",34,2304,78337.7,1.9,301,16,19.4,71,4.61,0],["0017","Elettronica","SportLife",311.22,440,136935.44,3.7,97,5.1,23.3,163,107.38,1],["0018","Elettronica","Generic",28.62,1630,46658.21,3.9,143,6.7,16.8,108,5.85,0],["0019","Casa","HomePlus",333.16,343,114275.2,4.6,51,0.8,40.6,177,116.42,0],["0020","Sport","HomePlus",40,2355,94208.41,3.3,174,9.2,12.9,73,5.09,0],["0021","Sport","BioFood",313.14,449,140598.64,4,43,1.8,37.5,167,103.8,0],["0022","Alimentari","TechPro",14.81,6611,97923.33,4,1528,7.2,20.9,1,0.03,0],["0023","Abbigliamento","HomePlus",10.13,3434,34787.98,3.8,497,5.6,16.9,22,0.36,0],["0024","Sport","StyleMax",117.32,1404,164722.82,4.6,222,0,26.2,119,26.62,0],["0025","Alimentari","HomePlus",2.46,9070,22269.75,2.9,2220,11,16,1,0,17],["0026","Alimentari","StyleMax",10.23,7289,74563.3,4.7,1782,1.3,28.7,1,0.02,0],["0027","Abbigliamento","StyleMax",88.95,1515,134754.75,3.8,283,2.7,34.1,113,16.63,1],["0028","Abbigliamento","BioFood",10.18,3301,33619.27,4.5,680,4.1,15.3,23,0.5,0],["0029","Casa","HomePlus",250.63,736,184464.75,4.4,40,1.5,54.4,154,63.43,0],["0030","Elettronica","Generic",788.13,259,204126.72,4,51,6.4,42.7,179,258.57,1],["0031","Sport","StyleMax",127.82,1503,192116.41,3.8,353,5.4,32.4,114,26.94,19],["0032","Sport","TechPro",99.6,1400,139433.85,3.3,193,7.3,34.9,116,22.57,0],["0033","Alimentari","Generic",66.56,3250,216317.16,3.9,621,0.9,30.5,23,2.98,1],["0034","Alimentari","StyleMax",4.62,8230,38010.74,4.1,1756,1.3,15.4,1,0.01,0],["0035","Elettronica","SportLife",828.57,364,301599.14,3.6,54,6.4,46.6,179,309.87,1],["0036","Abbigliamento","Generic",57.47,2098,120567.01,3,459,11.5,25.1,81,8.62,14],["0037","Alimentari","HomePlus",19.56,6731,131688.93,4.1,1000,0,23.8,1,0.04,0],["0038","Elettronica","StyleMax",100.72,1134,114221.84,4.1,61,6.2,17.3,135,25.43,1],["0039","Casa","BioFood",86.92,1523,132371.99,3.2,210,11.8,31.7,111,20.62,2],["0040","Elettronica","HomePlus",84.46,1100,92909.73,3.5,160,4.5,16.1,136,26.65,1],["0041","Elettronica","BioFood",152.94,949,145140.85,3.4,162,8.6,29,142,49.42,1],["0042","Casa","TechPro",373.23,587,219086.09,4.6,81,0,47.6,157,97.96,2],["0043","Casa","TechPro",18.73,2279,42684.28,4.5,254,0.8,18.4,80,2.76,1],["0044","Casa","TechPro",38.66,1728,66807.29,4.4,319,3.7,13.9,108,8.45,1],["0045","Elettronica","TechPro",337.5,412,139048.98,3.5,71,8.8,24.1,175,112.41,0],["0046","Elettronica","StyleMax",1000.52,10,8004.19,4.6,2,0,56,196,446.37,0],["0047","Elettronica","Generic",302.2,566,171047.04,4.3,48,1.1,20.6,159,109.98,3],["0048","Abbigliamento","Generic",35.73,2782,99390.49,3.9,681,2.4,22.5,49,3.76,0],["0049","Casa","Generic",62.45,1830,114283.29,3.7,304,6.7,32.8,100,12.49,1],["0050","Sport","BioFood",135.27,899,121610.41,3.8,178,1.8,20.7,148,44.86,0],["0051","Elettronica","BioFood",205.92,774,159384.7,4.6,173,0,24.1,150,50.57,3],["0052","Casa","StyleMax",71.18,1638,116595.43,3.4,294,10.7,33.3,106,13.65,1],["0053","Alimentari","BioFood",20.33,5962,121194.96,3.4,1126,12.4,28.2,1,0.04,3],["0054","Elettronica","SportLife",100.49,1124,112946.38,3.7,280,4.8,11.7,141,31.92,2],["0055","Abbigliamento","HomePlus",40.85,2368,96739.35,2.8,521,12.4,34.4,59,5.48,1],["0056","Elettronica","BioFood",88.25,1242,109605.62,2,252,16.2,16.9,127,25.4,1],["0057","Elettronica","SportLife",310.96,459,142731.5,3.9,36,7.5,26,167,94.33,2],["0058","Alimentari","SportLife",12.33,6874,84722.56,3.9,475,5.6,34.6,1,0.02,0],["0059","Sport","StyleMax",175.36,942,165189.2,4.7,145,0,58.1,145,53.51,3],["0060","Casa","HomePlus",460.94,404,186221.77,4.2,36,0,44.1,160,162.14,0],["0061","Alimentari","TechPro",24.97,5806,144983.85,3.3,1140,10.3,22,1,0.05,0],["0062","Elettronica","HomePlus",944.72,143,135094.28,4.2,21,2.2,53.1,175,312.75,2],["0063","Casa","Generic",40.28,1790,72106.34,3.7,141,3.3,12.1,89,6.62,1],["0064","Casa","Generic",28.11,1911,53717.81,1.9,417,16.3,11.2,91,4.83,22],["0065","Alimentari","SportLife",16.9,6211,104967.08,3.3,1480,7.8,29,1,0.03,26],["0066","Casa","TechPro",70.49,1710,120542.47,4,181,6.3,34.7,101,14.46,0],["0067","Alimentari","TechPro",15.09,7412,111868.86,3.4,594,5.5,23.5,1,0.03,1],["0068","Alimentari","Generic",5.4,8605,46499.09,4,1646,2.7,11.3,1,0.01,1],["0069","Alimentari","TechPro",5.28,8324,43972.5,3.5,1357,9.7,10.2,1,0.01,1],["0070","Casa","SportLife",315.5,713,224950.3,4.7,49,2.7,40,154,104.78,31],["0071","Alimentari","SportLife",5.06,7870,39858.41,2.8,1275,13.6,14.6,1,0.01,2],["0072","Abbigliamento","HomePlus",54.92,2424,133136.37,3.9,419,8.1,24.7,77,9.97,1],["0073","Alimentari","TechPro",9.41,7341,69099.31,3.2,1172,9.4,13.8,1,0.02,1],["0074","Elettronica","TechPro",279.9,586,164021.46,3.1,75,8.1,34.8,169,99.78,2],["0075","Abbigliamento","Generic",51.58,2503,129094.36,3.9,334,5.6,29.1,67,6.02,0],["0076","Elettronica","TechPro",204.19,757,154572.81,3.9,175,6.8,22.2,152,51.65,1],["0077","Casa","BioFood",119.79,1207,144589.37,3.6,223,11.2,30.6,118,29.02,1],["0078","Abbigliamento","TechPro",237.72,688,163554.26,4.6,166,0,36.1,149,79.82,1],["0079","Casa","HomePlus",98.43,1321,130029.6,2.5,106,13.8,24.8,122,26.51,0],["0080","Elettronica","TechPro",1099.25,243,267117.95,4.2,39,4.3,49.2,181,409.36,2]];
+const DOMANDA={"Pasta":[85,114,89,93,94,95,122,72,82,107,106,125,92,67,79,118,78,118,68,99,97,109,73,45,102,92,89,109,71,109,68,66,103,115,112,60,102,76,95,99,74,114,118,105,135,103,88,109,88,79,97,74,131,91,104,83,109,140,116,141,105,79,71,104,79,93,108,115,125,78,82,84,101,114,70,128,104,121,103,91,71,94,113,81,130,109,106,87,84,107,116,100,86,106,113,61,117,110,103,70,117,127,126,109,102,98,102,93,75,89,121,115,118,123,99,107,98,136,112,109,116,113,125,123,104,107,104,74,68,91,90,149,66,128,66,116,88,81,85,133,130,104,101,78,72,83,129,103,112,85,102,117,60,111,119,59,96,79,72,99,116,101,111,85,89,96,67,97,90,94,118,94,92,99,95,88,90,84,109,105,59,103,113,99,114,122,124,61,98,82,103,95,93,127,63,119,102,98,126,106,114,107,114,92,128,131,112,82,69,110,106,102,100,90,119,106,156,118,115,88,98,86,70,81,95,80,117,122,87,90,66,75,63,94,130,91,120,96,95,107,63,115,68,73,101,108,110,81,66,116,102,89,96,69,145,134,108,113,81,108,125,103,109,107,107,51,102,111,93,128,137,99,126,116,109,103,110,102,133,102,93,111,47,63,103,145,93,82,97,131,118,122,100,118,129,154,80,95,99,91,78,95,91,113,80,92,101,84,101,111,98,114,77,131,93,112,100,105,123,84,92,91,77,116,67,110,80,80,102,136,125,80,105,102,71,87,90,132,89,124,83,133,79,87,114,112,124,61,122,91,98,78,76,114,107,93,92,119,132,130,121,122,113,119,71],"Smartphone":[98,92,93,109,92,89,95,98,106,102,98,228,104,98,98,89,85,96,100,98,97,94,94,98,92,205,107,91,98,98,93,100,83,95,93,92,82,93,100,94,96,98,92,89,105,94,91,88,106,87,93,102,104,97,107,95,96,88,103,106,93,103,106,103,92,95,93,82,83,109,92,205,89,104,90,94,101,105,92,101,86,96,89,89,99,174,98,92,93,99,93,97,95,112,95,94,102,97,99,101,163,86,99,99,100,98,97,92,101,95,96,91,91,98,94,102,102,87,90,78,111,96,96,92,92,90,101,105,96,97,100,104,94,102,100,103,101,97,87,94,106,91,96,92,100,96,98,112,98,96,86,164,97,100,98,98,100,88,90,95,95,99,100,180,102,94,91,89,100,92,205,103,109,99,93,99,97,99,88,96,213,97,86,94,96,96,98,89,95,102,96,93,90,102,100,92,98,95,85,105,93,93,91,93,108,95,104,98,92,101,78,177,91,90,95,94,95,105,90,90,100,110,87,98,112,93,100,95,101,90,93,97,93,99,98,180,103,95,108,95,94,87,99,101,89,104,98,88,86,104,100,97,92,101,91,101,90,96,98,99,103,91,95,101,92,94,97,104,91,93,89,97,101,90,92,102,107,97,92,101,94,91,106,84,98,97,101,94,106,110,96,104,95,94,92,92,102,99,98,101,86,90,93,93,101,105,100,98,98,213,103,104,92,99,95,88,93,191,81,98,110,92,93,86,90,103,96,94,96,91,87,94,98,99,107,88,95,92,103,98,112,97,87,92,89,97,111,89,91,98,95,91,98,101,111,99,96,97,209,91,108,92,100,96,93]};       // domanda_giornaliera.csv: unità vendute giorno per giorno
+const RECENSIONI={"Cuffie A":[4,3,4,4,1,4,3,4,4,3,4,4,3,3,3,4,3,5,2,4,4,3,4,4,4,4,5,2,4,3,3,4,2,4,4,4,4,4,4,4,4,4,5,3,4,3,3,3,5,3,3,3,4,4,4,4,4,3,4,3,3,4,1,4,3,4,4,4,4,3,3,3,4,3,4,3,4,4,4,3,1,4,4,4,3,3,3,3,5,3,3,5,3,3,3,3,4,4,4,3,4,3,4,4,4,4,5,3,3,4,3,4,3,4,4,2,4,3,2,4,3,5,4,1,4,3,3,4,4,4,3,4,4,4,4,2,4,4,4,1,3,3,3,4,4,4,3,4,3,3,4,2,4,3,3,2,3,3,3,3,3,3,5,3,4,4,3,3,3,3,3,3,4,4,5,4,4,4,3,4,4,3,4,4,3,4,4,3,3,4,4,4,3,4,4,3,4,4,1,4],"Cuffie B":[1,5,4,1,5,5,5,5,5,5,5,1,1,5,4,1,4,3,4,4,5,1,1,1,5,1,5,5,5,5,1,1,5,5,1,5,5,4,5,2,5,5,1,3,5,5,5,2,4,2,1,5,5,4,5,1,5,5,2,1,3,5,3,4,5,1,5,5,5,1,5,5,5,1,4,5,5,1,1,5,5,1,5,4,1,1,5,1,1,1,5,5,5,2,1,5,1,5,5,4,1,1,5,1,3,2,1,5,5,1,5,4,5,1,2,5,4,3,5,5,5,5,5,5,5,3,1,5,5,5,5,5,1,5,1,3,5,1,1,5,4,5,5,1,1,5,5,1,3,1,1,1,1,1,4,1,1,1,5,5,1,5,1,5,5,5,1,1,4,5,4,1,5,5,5,5,5,5,5,3,5,1,1,5,5,4,5,5,1,5,5,5,5,5,5,5,4,5,2,4]}; // recensioni.csv: stelle di ogni recensione
+
+const CATS=['Abbigliamento','Alimentari','Casa','Elettronica','Sport'];
+const PAL=['#7c3aed','#059669','#f59e0b','#0ea5e9','#dc2626'];
+const VCAT={
+  fatturato:{i:5,lab:'Fatturato',u:'€',d:0,ds:0,x:'prezzo'},
+  prezzo:{i:3,lab:'Prezzo',u:'€',d:2,ds:2,x:'unita_vendute'},
+  unita_vendute:{i:4,lab:'Unità vendute',u:'',d:0,ds:0,x:'numero_recensioni'},
+  numero_recensioni:{i:7,lab:'Numero di recensioni',u:'',d:0,ds:0,x:'unita_vendute'},
+  valutazione_clienti:{i:6,lab:'Valutazione clienti',u:'stelle',d:1,ds:2,x:'tasso_reso'},
+  tasso_reso:{i:8,lab:'Tasso di reso',u:'%',d:1,ds:2,x:'valutazione_clienti'},
+  margine_profitto:{i:9,lab:'Margine di profitto',u:'%',d:1,ds:2,x:'prezzo'},
+  giorni_giacenza:{i:10,lab:'Giorni di giacenza',u:'giorni',d:0,ds:2,x:'costo_magazzino'},
+  costo_magazzino:{i:11,lab:'Costo di magazzino',u:'€',d:2,ds:2,x:'giorni_giacenza'},
+  ritardo_fornitore_giorni:{i:12,lab:'Ritardo del fornitore',u:'giorni',d:0,ds:2,x:'giorni_giacenza'}
+};
+const DS={
+  catalogo:{nome:'Catalogo prodotti',panels:false,un:'un prodotto',sing:'prodotto',plur:'prodotti',r:4.5,
+    ordine:"nell'ordine in cui compare nel catalogo",idx:"prodotto, nell'ordine del catalogo",
+    viste:['indice','fila','istogramma','boxplot','medie','boxcat','dispersione'],vars:VCAT,def:'fatturato',
+    groups:CATS.map((n,k)=>({n,c:PAL[k]})),
+    rows:CATALOGO.map(r=>({g:CATS.indexOf(r[1]),id:'PROD'+r[0],sub:r[1]+' · '+r[2],v:Object.fromEntries(Object.entries(VCAT).map(([k,V])=>[k,r[V.i]]))}))},
+  domanda:{nome:'Domanda giornaliera',panels:true,un:'un giorno',sing:'giorno',plur:'giorni',r:2.6,
+    ordine:"nell'ordine dei giorni dell'anno",idx:"giorno dell'anno",tIndice:'Giorno per giorno',
+    viste:['indice','fila','istogramma','boxplot'],vars:{unita:{lab:'Vendite del giorno',u:'pezzi',d:0,ds:2}},def:'unita',
+    groups:[{n:'Pasta',c:'#f59e0b'},{n:'Smartphone',c:'#2563eb'}],
+    rows:['Pasta','Smartphone'].flatMap((p,g)=>DOMANDA[p].map((u,i)=>({g,id:'Giorno '+(i+1),sub:p,v:{unita:u}})))},
+  recensioni:{nome:'Recensioni di due cuffie',panels:true,un:'una recensione',sing:'recensione',plur:'recensioni',r:3,
+    ordine:"nell'ordine di arrivo",idx:"recensione, in ordine di arrivo",tIndice:'Una per una',
+    viste:['indice','fila','istogramma','boxplot'],vars:{stelle:{lab:'Stelle',u:'stelle',d:0,ds:2,discreta:true}},def:'stelle',
+    groups:[{n:'Cuffie A',c:'#059669'},{n:'Cuffie B',c:'#7c3aed'}],
+    rows:['Cuffie A','Cuffie B'].flatMap((p,g)=>RECENSIONI[p].map((s,i)=>({g,id:'Recensione '+(i+1),sub:p,v:{stelle:s}})))}
+};
+
+// misure che si possono disegnare sul grafico (p: posizione nella fila, per i quantili)
+const MET=[
+  {k:'min',n:'Min',full:'minimo',c:'#6b7280',w:1.5,da:'',p:0},
+  {k:'q1',n:'Q1',full:'Q1',c:'#111827',w:1.5,da:'6 4',p:.25},
+  {k:'med',n:'Q2',full:'Q2 (mediana)',c:'#111827',w:2.5,da:'',p:.5},
+  {k:'q3',n:'Q3',full:'Q3',c:'#111827',w:1.5,da:'6 4',p:.75},
+  {k:'max',n:'Max',full:'massimo',c:'#6b7280',w:1.5,da:'',p:1},
+  {k:'mean',n:'Media',full:'media',c:'#be185d',w:2.5,da:''},
+  {k:'sd2',n:'Dev. std.',full:'media ± 2 dev. std.',c:'#be185d',w:1.5,da:'3 3'},
+  {k:'p95',n:'P95',full:'95° percentile',c:'#b45309',w:2,da:'8 3 2 3',p:.95}
+];
+
+const W=820,H=430,M={l:64,r:20,t:44,b:50},PW=W-M.l-M.r,PH=H-M.t-M.b,X0=M.l,YB=M.t+PH;
+const NS='http://www.w3.org/2000/svg';
+const jit=i=>{const s=Math.sin(i*12.9898+78.233)*43758.5453;return (s-Math.floor(s))*2-1;}; // scostamento fisso in [-1, 1]
+
+let S={mode:'esplora',ds:'catalogo',v:'fatturato',view:'indice',met:new Set(),hl:-1,pin:-1,bw:{},pts:{boxplot:true,medie:false,boxcat:true},xv:null,caso:0,passo:0,on:[]};
+let salvato=null;
+
+// ── numeri all'italiana ──
+function num(v,d){const neg=v<0;let [a,b]=(Math.round(Math.abs(v)*10**d+1e-7)/10**d).toFixed(d).split('.');a=a.replace(/\B(?=(\d{3})+(?!\d))/g,'.');return (neg?'−':'')+a+(b?','+b:'');}
+function fmt(v,V,d){d=d??V.d;let n=num(v,d);if(d>V.d)n=n.replace(/(,\d*?)0+$/,'$1').replace(/,$/,'');
+  if(n==='1'){const s={giorni:'giorno',stelle:'stella',pezzi:'pezzo'}[V.u];if(s)return '1 '+s;}
+  return V.u==='€'?n+' €':V.u==='%'?n+' %':V.u?n+' '+V.u:n;}
+function tick(v,max){if(max>=10000&&v)return num(v/1000,v%1000?1:0)+'k';const d=Math.abs(v-Math.round(v))<1e-9?0:Math.abs(v*10-Math.round(v*10))<1e-9?1:2;return num(v,d);}
+function niceStep(raw){const p=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/p;return (f<=1?1:f<=2?2:f<=2.5?2.5:f<=5?5:10)*p;}
+function niceMax(max){let step=niceStep(max/8);while(Math.ceil(max/step-1e-9)>7)step=niceStep(step*1.01);return {max:Math.ceil(max/step-1e-9)*step,step};}
+function quant(s,p){const h=(s.length-1)*p,lo=Math.floor(h);return s[lo]+(h-lo)*((s[lo+1]??s[lo])-s[lo]);}
+function stats(vals){
+  const s=[...vals].sort((a,b)=>a-b),n=s.length,mean=s.reduce((a,b)=>a+b,0)/n;
+  let m2=0,m4=0;for(const x of s){const d=x-mean;m2+=d*d;m4+=d**4;}
+  const sd=Math.sqrt(m2/(n-1));
+  const sk=n>2&&sd>0?n/((n-1)*(n-2))*s.reduce((a,x)=>a+((x-mean)/sd)**3,0):0;
+  const k=m2>0?(m4/n)/((m2/n)**2)-3:0;
+  const q1=quant(s,.25),med=quant(s,.5),q3=quant(s,.75),iqr=q3-q1,lof=q1-1.5*iqr,hif=q3+1.5*iqr;
+  return {n,s,min:s[0],max:s[n-1],mean,sd,sk,k,q1,med,q3,iqr,lof,hif,p95:quant(s,.95),
+    wlo:Math.min(...s.filter(x=>x>=lof)),whi:Math.max(...s.filter(x=>x<=hif))};
+}
+function corr(a,b){const n=a.length,ma=a.reduce((x,y)=>x+y)/n,mb=b.reduce((x,y)=>x+y)/n;let sab=0,saa=0,sbb=0;
+  for(let i=0;i<n;i++){sab+=(a[i]-ma)*(b[i]-mb);saa+=(a[i]-ma)**2;sbb+=(b[i]-mb)**2;}
+  return {r:sab/Math.sqrt(saa*sbb),b:sab/saa,a:mb-sab/saa*ma};}
+
+// ── contesto: dati, variabile, gruppi, pannelli ──
+function ctx(){
+  const ds=DS[S.ds],V=ds.vars[S.v],vals=ds.rows.map(r=>r.v[S.v]),st=stats(vals);
+  const dom=niceMax(V.discreta?st.max+.5:st.max),Y=v=>YB-v/dom.max*PH;
+  const groups=ds.groups.map((g,k)=>{const ix=ds.rows.map((r,i)=>i).filter(i=>ds.rows[i].g===k);return {...g,k,ix,st:stats(ix.map(i=>vals[i]))};});
+  const gap=40,np=ds.panels?groups.length:1,pw=(PW-gap*(np-1))/np;
+  const panels=ds.panels?groups.map((g,k)=>({...g,x0:X0+k*(pw+gap),w:pw})):[{ix:vals.map((v,i)=>i),st,x0:X0,w:PW}];
+  const order=vals.map((v,i)=>i).sort((a,b)=>vals[a]-vals[b]||a-b);
+  const c={ds,V,vals,st,dom,Y,groups,panels,f:(v,d)=>fmt(v,V,d),imax:order[order.length-1],imin:order[0]};
+  c.who=i=>`<b>${ds.rows[i].id}</b> (${ds.panels?ds.rows[i].sub:CATS[ds.rows[i].g]})`;
+  c.g=n=>groups.find(g=>g.n===n);
+  return c;
+}
+function binWidths(max){const out=[];for(let e=-2;e<=6;e++)for(const m of [1,2,2.5,5]){const w=m*10**e,nb=Math.ceil(max/w);if(nb>=3&&nb<=40)out.push(w);}return out;}
+
+// ── pezzi di disegno ──
+const colX=k=>X0+PW*(k+.5)/5,colW=PW/5;
+function boxSvg(cx,w,st,Y){
+  const h=w/2,cap=w*.22,s='stroke="#374151" stroke-width="1.5"';
+  return `<line x1="${cx}" x2="${cx}" y1="${Y(st.whi)}" y2="${Y(st.q3)}" ${s}/><line x1="${cx}" x2="${cx}" y1="${Y(st.q1)}" y2="${Y(st.wlo)}" ${s}/>
+  <line x1="${cx-cap}" x2="${cx+cap}" y1="${Y(st.whi)}" y2="${Y(st.whi)}" ${s}/><line x1="${cx-cap}" x2="${cx+cap}" y1="${Y(st.wlo)}" y2="${Y(st.wlo)}" ${s}/>
+  <rect x="${cx-h}" y="${Y(st.q3)}" width="${w}" height="${Math.max(1,Y(st.q1)-Y(st.q3))}" rx="3" style="fill:rgba(255,255,255,.45)" ${s}/>
+  <line x1="${cx-h}" x2="${cx+h}" y1="${Y(st.med)}" y2="${Y(st.med)}" stroke="#111827" stroke-width="3"/>`;
+}
+function spread(ys,gap){ // allontana le etichette troppo vicine, verso l'alto
+  const o=ys.map((y,i)=>({y,i})).sort((a,b)=>b.y-a.y);
+  for(let k=1;k<o.length;k++)if(o[k-1].y-o[k].y<gap)o[k].y=o[k-1].y-gap;
+  const r=[];o.forEach(e=>r[e.i]=e.y);return r;
+}
+const xLabel=t=>`<text class="axt" x="${X0+PW/2}" y="${YB+38}" text-anchor="middle">${t}</text>`;
+const catAxis=c=>c.groups.map((g,k)=>`<text class="axt" x="${colX(k)}" y="${YB+20}" text-anchor="middle">${g.n}</text><text class="labm" x="${colX(k)}" y="${YB+35}" text-anchor="middle">${g.ix.length} prodotti</text>`).join('');
+const rankTicks=(c,suf)=>c.panels.map(p=>{const n=p.ix.length,ts=n>100?[1,Math.round(n/2),n]:[1,Math.round(n/4),Math.round(n/2),Math.round(3*n/4),n];
+  return ts.map(t=>`<text class="tick" x="${p.x0+(t-.5)/n*p.w}" y="${YB+16}" text-anchor="middle">${t}${suf}</text>`).join('');}).join('');
+const panelTitles=c=>c.ds.panels?c.panels.map(p=>`<circle cx="${p.x0+6}" cy="${M.t-14}" r="5" style="fill:${p.c}"/><text class="axt" x="${p.x0+16}" y="${M.t-10}">${p.n}</text>`).join(''):'';
+
+// ── i grafici: dove va ogni punto, cosa disegnare sotto e sopra ──
+const VIEWS={
+indice:{t:ds=>ds.tIndice||'Uno per uno',
+  pos:c=>{const r=[];c.panels.forEach(p=>p.ix.forEach((i,k)=>r[i]={x:p.x0+(k+.5)/p.ix.length*p.w,y:c.Y(c.vals[i])}));return r;},
+  xax:c=>rankTicks(c,'')+xLabel(c.ds.idx),
+  vede:c=>c.ds.panels
+    ?`Ogni punto è ${c.ds.un}, ${c.ds.ordine}, separati per ${c.groups.map(g=>g.n).join(' e ')}. Si legge <b>quale</b> ${c.ds.sing} fa quanto, e quando: il valore più alto è ${c.who(c.imax)}, con ${c.f(c.st.max)}.`
+    :`Ogni punto è ${c.ds.un}, ${c.ds.ordine}; la sua altezza è ${c.V.lab.toLowerCase()} e il colore la categoria. Si legge <b>quale</b> prodotto fa quanto: il più alto è ${c.who(c.imax)} con ${c.f(c.st.max)}, il più basso ${c.who(c.imin)} con ${c.f(c.st.min)}.`,
+  perde:c=>`<b>Quanti</b> ${c.ds.plur} stanno a ogni altezza. ${c.ds.panels?'I picchi saltano all\'occhio, ma non si capisce quanto sono rari.':'La posizione orizzontale è solo l\'ordine del catalogo e non vuol dire niente: è la tabella, disegnata.'}`},
+
+fila:{t:()=>'In fila',
+  pos:c=>{const r=[];c.panels.forEach(p=>{const o=[...p.ix].sort((a,b)=>c.vals[a]-c.vals[b]||a-b);o.forEach((i,k)=>r[i]={x:p.x0+(k+.5)/o.length*p.w,y:c.Y(c.vals[i])});});return r;},
+  xax:c=>rankTicks(c,'°')+xLabel(`posizione in fila, dal più piccolo al più grande`),
+  vede:c=>`Gli stessi punti, messi in fila dal più piccolo al più grande. A metà fila c'è la <b>mediana</b>${c.ds.panels?'':` (${c.f(c.st.med,c.V.ds)})`}, a un quarto e a tre quarti <b>Q1</b> e <b>Q3</b>: accendili nella tabella e guarda dove cadono. Dove la fila sale piano i ${c.ds.plur} sono fitti, dove sale ripida sono radi.`,
+  perde:c=>`Il posto di ogni ${c.ds.sing} ${c.ds.panels?'nel tempo':'nel catalogo'}. E per capire dove i valori si affollano bisogna leggere la pendenza della fila: il prossimo grafico la rende visibile.`},
+
+istogramma:{t:()=>'Istogramma',under:true,
+  setup:c=>{
+    let bins,w=null;
+    if(c.V.discreta){bins=[];for(let v=Math.round(c.st.min);v<=c.st.max;v++)bins.push({lo:v-.4,hi:v+.4,mid:v,a:v,b:v});}
+    else{const ws=binWidths(c.st.max),aim=c.ds.panels?14:7;w=S.bw[S.ds+S.v];
+      if(!ws.includes(w)){w=ws.reduce((a,b)=>Math.abs(Math.ceil(c.st.max/b)-aim)<Math.abs(Math.ceil(c.st.max/a)-aim)?b:a);S.bw[S.ds+S.v]=w;}
+      const nb=Math.ceil(c.st.max/w-1e-9);bins=[];for(let b=0;b<nb;b++)bins.push({lo:b*w,hi:(b+1)*w,mid:(b+.5)*w,a:b*w,b:(b+1)*w});c.ws=ws;}
+    // come cut() e hist() di R: fasce chiuse a destra, la prima comprende lo zero
+    const bin=c.vals.map(v=>c.V.discreta?bins.findIndex(b=>b.mid===Math.round(v)):(v<=0?0:Math.min(bins.length-1,Math.ceil(v/w-1e-9)-1)));
+    const cnt=c.panels.map(p=>{const k=Array(bins.length).fill(0);p.ix.forEach(i=>k[bin[i]]++);return k;});
+    const mc=Math.max(...cnt.flat()),bpx=PH*(bins[0].hi-bins[0].lo)/c.dom.max-2,avail=c.panels[0].w-30;
+    // quante righe di punti per fascia: la più comoda per farci stare la pila più lunga
+    let best={s:0,rows:1};for(let rows=1;rows<=12;rows++){const s=Math.min(15,avail/Math.ceil(mc/rows),bpx/rows);if(s>best.s+.3)best={s,rows};}
+    c.h={w,bins,bin,cnt,mc,bpx,...best,r:Math.max(1.2,Math.min(5,best.s/2-.5))};},
+  pos:c=>{const r=[],{s,rows}=c.h;
+    c.panels.forEach(p=>{const seen={};[...p.ix].sort((a,b)=>c.ds.rows[a].g-c.ds.rows[b].g||a-b).forEach(i=>{const b=c.h.bin[i],j=(seen[b]=(seen[b]||0)+1)-1;
+      r[i]={x:p.x0+(Math.floor(j/rows)+.5)*s,y:c.Y(c.h.bins[b].mid)+((j%rows)-(rows-1)/2)*s,r:c.h.r};});});return r;},
+  over:c=>c.panels.map((p,pi)=>c.h.cnt[pi].map((n,b)=>{if(!n)return '';const bn=c.h.bins[b],y0=c.Y(bn.hi)+1,hh=Math.max(1,c.Y(bn.lo)-c.Y(bn.hi)-2),w=Math.ceil(n/c.h.rows)*c.h.s;
+    return `<rect x="${p.x0}" y="${y0}" width="${w}" height="${hh}" rx="3" style="fill:var(--bar)"/>`+(c.h.bins.length<=16?`<text class="labm" x="${p.x0+w+5}" y="${y0+hh/2+4}">${n}</text>`:'');}).join('')).join(''),
+  xax:c=>{const step=niceStep(c.h.mc/(c.ds.panels?3:5));return c.panels.map(p=>{let t='';for(let v=0;v<=c.h.mc;v+=step)t+=`<text class="tick" x="${p.x0+v/c.h.rows*c.h.s}" y="${YB+16}" text-anchor="middle">${v}</text>`;return t;}).join('')+xLabel(`numero di ${c.ds.plur} nella fascia`);},
+  opts:c=>c.V.discreta?'':`<label><span class="k">Larghezza delle fasce</span><input type="range" id="bw" min="0" max="${c.ws.length-1}" step="1" value="${c.ws.indexOf(c.h.w)}"><b>${c.f(c.h.w,c.h.w<1?2:c.h.w%1?1:0)}</b></label>`,
+  vede:c=>{if(c.ds.panels)return `I punti cadono verso sinistra e si impilano: ogni barra conta i ${c.ds.plur} della sua fascia, separatamente per ${c.groups.map(g=>g.n).join(' e ')}. Si confrontano le <b>forme</b>.`;
+    const m=c.h.cnt[0].indexOf(c.h.mc),b=c.h.bins[m],sk=c.st.sk;
+    return `I punti cadono verso sinistra e si impilano per fasce larghe ${c.f(c.h.w,c.h.w<1?2:c.h.w%1?1:0)}: ogni barra conta i prodotti della sua fascia, e i colori restano attaccati ai prodotti. La più affollata va da ${c.f(b.a,c.V.d)} a ${c.f(b.b,c.V.d)}, con ${c.h.mc} prodotti su 80. Si vede la <b>forma</b>: ${sk>.5?'una coda lunga verso l\'alto, pochi prodotti con valori molto grandi':sk<-.5?'una coda verso il basso, pochi prodotti con valori molto piccoli':'abbastanza simmetrica'}.`;},
+  perde:c=>`Quale ${c.ds.sing} è quale: i punti ci sono ancora (passaci sopra), ma ora la posizione orizzontale dice solo «quanti». ${c.V.discreta?'':'E la forma dipende dalla larghezza delle fasce: prova a cambiarla.'}`},
+
+boxplot:{t:()=>'Boxplot',
+  pos:c=>{const r=[];c.panels.forEach(p=>{const cx=p.x0+p.w*.5,a=Math.min(80,p.w*.22);
+    p.ix.forEach(i=>{const v=c.vals[i],out=v<p.st.lof||v>p.st.hif;r[i]={x:cx+jit(i)*(out?a*.12:a),y:c.Y(v),o:S.pts.boxplot||out?1:0};});});return r;},
+  over:c=>c.panels.map(p=>boxSvg(p.x0+p.w*.5,Math.min(200,p.w*.6),p.st,c.Y)).join(''),
+  xax:c=>'',
+  opts:c=>`<label><input type="checkbox" id="pts" ${S.pts.boxplot?'checked':''}> mostra tutti i punti</label>`,
+  vede:c=>{const no=c.panels.reduce((a,p)=>a+p.ix.filter(i=>c.vals[i]<p.st.lof||c.vals[i]>p.st.hif).length,0);
+    return `Cinque numeri al posto di ${c.vals.length}. La scatola va da Q1 a Q3 e contiene metà dei ${c.ds.plur}; la riga spessa è la mediana; i baffi arrivano all'ultimo valore entro 1,5 volte lo scarto interquartile${c.ds.panels?'':` (IQR = ${c.f(c.st.iqr,c.V.ds)})`}. ${no?`${no===1?'Un valore resta':no+' valori restano'} oltre i baffi, come punt${no===1?'o isolato':'i isolati'}.`:'Nessun valore va oltre i baffi.'}`;},
+  perde:c=>{if(c.ds.panels)return 'La forma dentro la scatola, e il tempo. Togli i punti per vedere il boxplot da solo, e accendi la media nella tabella.';
+    const m=c.st.mean,md=c.st.med,gap=(m-md)/c.st.sd;
+    return `La forma dentro la scatola: un gruppo compatto e due gruppi separati possono dare la stessa scatola. Togli i punti per vedere il boxplot da solo. Manca anche la media, ${c.f(m,c.V.ds)}: ${Math.abs(gap)<.1?'qui è quasi uguale alla mediana':gap>0?'qui sta sopra la mediana, tirata su dai valori più grandi':'qui sta sotto la mediana, tirata giù dai valori più piccoli'}.`;}},
+
+medie:{t:()=>'Medie per categoria',under:true,
+  pos:c=>c.vals.map((v,i)=>({x:colX(c.ds.rows[i].g)+jit(i)*colW*.28,y:c.Y(v),o:S.pts.medie?1:0,r:4})),
+  over:c=>c.groups.map((g,k)=>{const x=colX(k),w=colW*.7,y=c.Y(g.st.mean);
+    return `<rect x="${x-w/2}" y="${y}" width="${w}" height="${YB-y}" rx="4" style="fill:${g.c};fill-opacity:.18"/><line x1="${x-w/2}" x2="${x+w/2}" y1="${y}" y2="${y}" stroke="${g.c}" stroke-width="3"/><text class="lab" x="${x}" y="${y-7}" text-anchor="middle" font-weight="700">${c.f(g.st.mean,c.V.d)}</text>`;}).join(''),
+  xax:catAxis,
+  opts:c=>`<label><input type="checkbox" id="pts" ${S.pts.medie?'checked':''}> mostra i prodotti dentro le colonne</label>`,
+  vede:c=>{const s=[...c.groups].sort((a,b)=>b.st.mean-a.st.mean);
+    return `Un numero per categoria: la media. ${s[0].n} ha la media più alta (${c.f(s[0].st.mean,c.V.ds)}), ${s[4].n} la più bassa (${c.f(s[4].st.mean,c.V.ds)}). Il confronto si legge in un attimo.`;},
+  perde:c=>{const ns=c.groups.map(g=>g.ix.length);
+    return `Tutto il resto. Ogni colonna riassume da ${Math.min(...ns)} a ${Math.max(...ns)} prodotti diversi e non dice se sono simili o sparsi, né se la media è tirata da pochi casi estremi. ${S.pts.medie?'Ora i prodotti si vedono: confronta quanto sono sparsi da una colonna all\'altra, poi passa al boxplot.':'Accendi i prodotti, o passa al boxplot per categoria.'}`;}},
+
+boxcat:{t:()=>'Boxplot per categoria',
+  pos:c=>{const r=[];c.groups.forEach((g,k)=>g.ix.forEach(i=>{const v=c.vals[i],out=v<g.st.lof||v>g.st.hif;r[i]={x:colX(k)+jit(i)*colW*(out?.04:.22),y:c.Y(v),o:S.pts.boxcat||out?1:0,r:4};}));return r;},
+  over:c=>c.groups.map((g,k)=>boxSvg(colX(k),colW*.55,g.st,c.Y)).join(''),
+  xax:catAxis,
+  opts:c=>`<label><input type="checkbox" id="pts" ${S.pts.boxcat?'checked':''}> mostra tutti i punti</label>`,
+  vede:c=>{const md=[...c.groups].sort((a,b)=>b.st.med-a.st.med),iq=[...c.groups].sort((a,b)=>a.st.iqr-b.st.iqr);
+    return `I punti si separano per colore: ogni categoria diventa una scatola, sulla stessa scala. La mediana più alta è di ${md[0].n} (${c.f(md[0].st.med,c.V.ds)}); ${iq[0]===md[0]?'la sua è anche la scatola più stretta':`la scatola più stretta è quella di ${iq[0].n}`} (IQR ${c.f(iq[0].st.iqr,c.V.ds)}), cioè prodotti simili tra loro, la più larga quella di ${iq[4].n} (IQR ${c.f(iq[4].st.iqr,c.V.ds)}).`;},
+  perde:c=>{const byMean=[...c.groups].sort((a,b)=>b.st.mean-a.st.mean).map(g=>g.n),byMed=[...c.groups].sort((a,b)=>b.st.med-a.st.med).map(g=>g.n);
+    return `La media, e quanti prodotti ci sono dietro ogni scatola. Accendi la <b>media</b> nella tabella: ${byMean.join()!==byMed.join()?'la classifica per media non è la stessa di quella per mediana, perché pochi prodotti estremi spostano la media.':'qui la classifica per media è la stessa di quella per mediana.'}`;}},
+
+dispersione:{t:()=>'Due variabili',
+  setup:c=>{if(!S.xv||S.xv===S.v)S.xv=c.V.x;const XV=c.ds.vars[S.xv],xs=c.ds.rows.map(r=>r.v[S.xv]),xd=niceMax(Math.max(...xs));
+    c.s={XV,xs,xd,X:v=>X0+v/xd.max*PW,cr:corr(xs,c.vals)};},
+  pos:c=>c.vals.map((v,i)=>({x:c.s.X(c.s.xs[i]),y:c.Y(v)})),
+  over:c=>{const {X,xs,cr}=c.s,lo=Math.min(...xs),hi=Math.max(...xs),cl=v=>Math.max(M.t,Math.min(YB,v));
+    return `<line x1="${X(lo)}" x2="${X(hi)}" y1="${cl(c.Y(cr.a+cr.b*lo))}" y2="${cl(c.Y(cr.a+cr.b*hi))}" stroke="#111827" stroke-width="1.5" stroke-dasharray="6 4" opacity=".7"/>
+    <text class="axt" x="${X0+PW-4}" y="${M.t-10}" text-anchor="end" font-size="15">r = ${num(cr.r,2)}</text>`;},
+  xax:c=>{const {xd,X,XV}=c.s;let t='';for(let v=0;v<=xd.max+1e-9;v+=xd.step)t+=`<line x1="${X(v)}" x2="${X(v)}" y1="${YB}" y2="${YB+4}" stroke="#9ca3af"/><text class="tick" x="${X(v)}" y="${YB+16}" text-anchor="middle">${tick(v,xd.max)}</text>`;
+    return t+xLabel(`${XV.lab}${XV.u?' ('+XV.u+')':''}`);},
+  opts:c=>`<label><span class="k">In orizzontale</span><select id="xv">${Object.entries(c.ds.vars).filter(([k])=>k!==S.v).map(([k,v])=>`<option value="${k}" ${k===S.xv?'selected':''}>${v.lab}</option>`).join('')}</select></label>`,
+  vede:c=>{const r=c.s.cr.r,a=Math.abs(r),dir=r>0?'sale':'scende';
+    return `Ogni prodotto ha due coordinate: ${c.V.lab.toLowerCase()} in verticale, come in tutti gli altri grafici, e ${c.s.XV.lab.toLowerCase()} in orizzontale. La correlazione è <b>r = ${num(r,2)}</b>: ${a>=.7?`i punti stanno vicino a una retta che ${dir}`:a>=.4?`una tendenza c'è (la retta ${dir}), ma con molta dispersione`:a>=.2?`una tendenza debole, la nuvola ha poca direzione`:`nessuna relazione lineare, una nuvola senza direzione`}.`;},
+  perde:c=>`La distribuzione di ciascuna variabile presa da sola. E la correlazione dice che due variabili si muovono insieme, non quale delle due muove l'altra.`}
+};
+
+// ── le domande di business ──
+const pct=x=>num(100*x,1).replace(/,0$/,'')+' %';
+const CASI=[
+{tag:'Skewness',cl:'sk',t:'Che prezzo è «tipico»?',ds:'catalogo',v:'prezzo',
+ q:'Il catalogo deve dire quanto costa un prodotto tipico. Si scrive il prezzo medio?',
+ passi:[
+  {view:'istogramma',met:['mean','med'],txt:c=>`Il prezzo medio è <b>${c.f(c.st.mean)}</b>. Ma guarda dove stanno la media e la mediana (${c.f(c.st.med)}) rispetto alla pila più alta: la mediana è dentro la pila, la media molto sopra.`},
+  {view:'boxcat',met:['mean','med'],txt:c=>{const idx=c.vals.map((v,i)=>i).sort((a,b)=>c.vals[b]-c.vals[a]).slice(0,5),cats=[...new Set(idx.map(i=>CATS[c.ds.rows[i].g]))];
+    return `Per categoria: i prezzi molto alti stanno quasi tutti in un posto. I cinque prodotti più cari (da ${c.f(c.vals[idx[4]])} in su) sono ${cats.length===1?'tutti di '+cats[0]:'di '+cats.join(', ')}. Sono pochi punti, ma lontanissimi.`;}},
+  {view:'fila',met:['mean','med'],on:['sk'],txt:c=>`In fila si vede la coda: la fila resta bassa e sale a picco solo alla fine. ${c.vals.filter(v=>v<c.st.mean).length} prodotti su 80 costano meno della media.`,
+   ris:c=>`<b>Skewness = ${num(c.st.sk,2)}</b>: coda lunga a destra. Pochi prodotti molto cari tirano la media (${c.f(c.st.mean)}) lontano dalla mediana (${c.f(c.st.med)}). Il prezzo tipico è la <b>mediana</b>: metà dei prodotti costa meno di ${c.f(c.st.med)}. La media descrive un prodotto che quasi non esiste.`}]},
+{tag:'Skewness',cl:'sk',t:'Su quali prodotti intervenire?',ds:'catalogo',v:'valutazione_clienti',
+ q:'I clienti danno in media 3,7 stelle su 5. Va tutto bene, o c\'è qualcosa da sistemare?',
+ passi:[
+  {view:'istogramma',met:['mean','med'],txt:c=>`Media ${c.f(c.st.mean,2)}, mediana ${c.f(c.st.med,2)}: questa volta la media sta <b>sotto</b> la mediana. La pila è in alto (quasi tutti i prodotti piacciono) e la coda va verso il basso.`},
+  {view:'dispersione',xv:'tasso_reso',met:['q1'],on:['sk'],txt:c=>`In orizzontale il tasso di reso. I prodotti nella coda bassa, sotto Q1, sono quelli che tornano indietro di più: r = ${num(c.s.cr.r,2)}.`,
+   ris:c=>`<b>Skewness = ${num(c.st.sk,2)}</b>: coda a sinistra. La media dice «abbastanza bene», ma nasconde pochi prodotti bocciati: ${c.vals.filter(v=>v<=2.5).length} hanno 2,5 stelle o meno, e sono anche i più resi (in basso a destra). Non serve migliorare tutto: si interviene su quelli.`}]},
+{tag:'Curtosi',cl:'ku',t:'Quante scorte tenere?',ds:'domanda',v:'unita',
+ q:'Pasta e smartphone vendono in media 100 pezzi al giorno, con la stessa deviazione standard (20). Bastano le stesse scorte?',
+ passi:[
+  {view:'indice',met:['mean','sd2'],txt:c=>{const s=c.g('Smartphone');
+    return `Un anno di vendite, giorno per giorno. Stessa media, stessa deviazione standard, quindi la stessa banda media ± 2 dev. std.: fino a ${c.f(Math.round(s.st.mean+2*s.st.sd))} al giorno. La pasta oscilla tranquilla; lo smartphone di solito resta sotto i 100 (${s.ix.filter(i=>c.vals[i]<100).length} giorni su 365), poi esplode.`;}},
+  {view:'istogramma',met:['mean','sd2'],txt:c=>`Le stesse vendite come istogrammi. La pasta è una campana; lo smartphone ha una pila bassa e una coda di giorni enormi, fino a ${c.f(c.g('Smartphone').st.max)}.`},
+  {view:'boxplot',met:['sd2','max'],on:['k'],txt:c=>`Nel boxplot i giorni oltre i baffi sono i picchi: guarda quanti ne ha lo smartphone, e quanto in alto.`,
+   ris:c=>{const p=c.g('Pasta'),s=c.g('Smartphone'),soglia=g=>Math.round(g.st.mean+2*g.st.sd),oltre=g=>g.ix.filter(i=>c.vals[i]>soglia(g)).length;
+    return `<b>Curtosi</b>: pasta ${num(p.st.k,2)}, smartphone ${num(s.st.k,2)}. Con ${soglia(s)} pezzi in magazzino la pasta resta senza merce ${oltre(p)} giorni l'anno, e di poco (al massimo ne vende ${p.st.max}); lo smartphone ${oltre(s)} giorni, e gli mancano fino a ${s.st.max-soglia(s)} pezzi. Media e deviazione standard sono identiche: la differenza la dice solo la curtosi. Per lo smartphone le scorte si decidono sui picchi.`;}}]},
+{tag:'Curtosi',cl:'ku',t:'Che tempi di consegna promettere?',ds:'catalogo',v:'ritardo_fornitore_giorni',
+ q:'Il fornitore ritarda in media di 2,4 giorni. Quanti giorni di margine si promettono al cliente?',
+ passi:[
+  {view:'indice',met:['mean'],txt:c=>`Ogni punto è un prodotto, l'altezza il ritardo del fornitore. La media è ${c.f(c.st.mean,1)}: promettere «2 o 3 giorni di margine» sembra prudente.`},
+  {view:'istogramma',met:['mean','med'],txt:c=>{const n=c.vals.filter(v=>v<=3).length,coda=c.vals.filter(v=>v>3);
+    return `${n} prodotti su 80 arrivano entro 3 giorni: la mediana è ${c.f(c.st.med)}. Ma ${80-n} prodotti arrivano con ${num(Math.min(...coda),0)}–${c.f(Math.max(...coda))} di ritardo, e sono loro a tirare su la media.`;}},
+  {view:'istogramma',met:['mean','p95'],on:['k'],txt:c=>`La linea marrone è il 95° percentile: il 95 % dei ritardi sta sotto.`,
+   ris:c=>`<b>Curtosi = ${num(c.st.k,2)}</b>: code pesanti, i casi estremi sono rari ma enormi. Chi promette sulla media sbaglia proprio sui ${c.vals.filter(v=>v>3).length} prodotti più lenti. Si promette sul <b>95° percentile</b>, ${c.f(c.st.p95,1)}.`}]},
+{tag:'Curtosi',cl:'ku',t:'Dove tagliare il costo di magazzino?',ds:'catalogo',v:'costo_magazzino',
+ q:'Bisogna ridurre il costo di magazzino. Si tagliano un po\' le scorte di tutti i prodotti?',
+ passi:[
+  {view:'indice',met:['mean','med'],txt:c=>`Costo medio ${c.f(c.st.mean)} per prodotto, mediana ${c.f(c.st.med)}: metà dei prodotti costa quasi niente, e pochi punti stanno altissimi.`},
+  {view:'istogramma',met:['mean','med'],txt:c=>`L'istogramma: una pila enorme vicino a zero e qualche punto isolato molto in alto.`},
+  {view:'fila',met:['mean'],on:['k'],txt:c=>`In fila: piatta per quasi tutto il catalogo, poi sale a picco negli ultimi prodotti.`,
+   ris:c=>{const s=[...c.st.s].reverse(),tot=s.reduce((a,b)=>a+b,0);let cum=0,n80=0;for(const x of s){cum+=x;n80++;if(cum>=.8*tot)break;}
+    return `<b>Curtosi = ${num(c.st.k,2)}</b>: il costo è concentrato in pochi prodotti. I 10 più costosi fanno il ${pct(s.slice(0,10).reduce((a,b)=>a+b,0)/tot)} del costo di magazzino, i primi ${n80} l'80 %. Tagliare un po' su tutti serve a poco: si lavora su quei 10.`;}}]},
+{tag:'Curtosi',cl:'ku',t:'Il prodotto piace?',ds:'recensioni',v:'stelle',
+ q:'Due cuffie hanno la stessa media: 3,5 stelle. Piacciono allo stesso modo?',
+ passi:[
+  {view:'indice',met:['mean'],txt:c=>`200 recensioni per ciascuna cuffia, una per punto. Media ${c.f(c.g('Cuffie A').st.mean,2)} e ${c.f(c.g('Cuffie B').st.mean,2)}: guardando solo la media, sono uguali.`},
+  {view:'boxplot',met:['mean'],txt:c=>{const a=c.g('Cuffie A').st,b=c.g('Cuffie B').st;
+    return `La scatola delle cuffie A va da ${c.f(a.q1,2)} a ${c.f(a.q3,2)}; quella delle B da ${c.f(b.q1,2)} a ${c.f(b.q3,2)}. Stessa media, dispersione molto diversa.`;}},
+  {view:'istogramma',met:['mean'],on:['k'],txt:c=>`Le pile dicono il resto: le A si concentrano su 3 e 4 stelle, le B sui due estremi.`,
+   ris:c=>{const a=c.g('Cuffie A'),b=c.g('Cuffie B'),q=(g,s)=>g.ix.filter(i=>c.vals[i]===s).length/g.ix.length;
+    return `<b>Curtosi</b>: A ${num(a.st.k,2)}, B ${num(b.st.k,2)}. Le A sono un prodotto discreto, senza sorprese. Le B sono <b>polarizzate</b> (curtosi negativa): il ${pct(q(b,5))} dà 5 stelle, il ${pct(q(b,1))} una stella sola (per le A il ${pct(q(a,1))}). Non esiste un cliente «tipico», e il motivo va cercato: un difetto in una parte della produzione, una descrizione che crea aspettative sbagliate.`;}}]}
+];
+
+// ── disegno ──
+const svg=document.getElementById('svg'),tip=document.getElementById('tip'),$=id=>document.getElementById(id);
+svg.innerHTML=`<g id="yax"></g><g id="under"></g><g id="pts"></g><g id="over"></g><g id="met"></g><g id="xax"></g><g id="pin"></g>`;
+const G=id=>svg.querySelector('#'+id);
+let P=[],Pds=null,C,anim;
+function buildPoints(){
+  const ds=DS[S.ds];G('pts').innerHTML='';
+  P=ds.rows.map((r,i)=>{const g=document.createElementNS(NS,'g');g.setAttribute('class','pt');
+    g.innerHTML=`<circle class="d" r="${ds.r}"/><circle class="hit" r="${Math.max(6,ds.r+4)}"/>`;G('pts').appendChild(g);
+    g.addEventListener('mouseenter',()=>showTip(i));g.addEventListener('mouseleave',()=>tip.style.display='none');
+    g.addEventListener('click',()=>{S.pin=S.pin===i?-1:i;drawPin();});
+    return {g,dot:g.firstChild,x:null,y:null,r:ds.r,o:0};});
+  Pds=S.ds;
+}
+function render(move=true){
+  if(Pds!==S.ds)buildPoints();
+  C=ctx();const v=VIEWS[S.view];v.setup&&v.setup(C);
+  const T=v.pos(C).map(p=>({x:p.x,y:p.y,r:p.r??C.ds.r,o:p.o??1}));
+  // asse verticale: non cambia mai tra un grafico e l'altro
+  let ya=`<text class="axt" x="${X0-8}" y="${M.t-28}">${C.V.lab}${C.V.u?' ('+C.V.u+')':''} ↑</text>`;
+  for(let t=0;t<=C.dom.max+1e-9;t+=C.dom.step)ya+=`<line x1="${X0}" x2="${X0+PW}" y1="${C.Y(t)}" y2="${C.Y(t)}" stroke="${t?'#f1f2f4':'#9ca3af'}"/><text class="tick" x="${X0-8}" y="${C.Y(t)+4}" text-anchor="end">${tick(t,C.dom.max)}</text>`;
+  G('yax').innerHTML=ya;
+  const ov=v.over?v.over(C):'';G('under').innerHTML=v.under?`<g class="fade">${ov}</g>`:'';G('over').innerHTML=v.under?'':`<g class="fade">${ov}</g>`;
+  G('xax').innerHTML=`<g class="fade">${panelTitles(C)}${v.xax(C)}</g>`;
+  drawMetrics();
+  $('opts').innerHTML=v.opts?v.opts(C):'';bindOpts();
+  drawLegend();drawTable();drawText();colorPts();
+  // animazione: ogni punto va dalla posizione attuale a quella nuova
+  cancelAnimationFrame(anim);
+  const from=P.map((p,i)=>p.x===null?{...T[i],o:0}:{x:p.x,y:p.y,r:p.r,o:p.o}),t0=performance.now(),dur=move?750:0,lag=Math.min(3,240/P.length);
+  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  (function step(now){let done=true;
+    P.forEach((p,i)=>{const t=dur?Math.max(0,Math.min(1,(now-t0-i*lag)/dur)):1;if(t<1)done=false;const e=ease(t),a=from[i],b=T[i];
+      p.x=a.x+(b.x-a.x)*e;p.y=a.y+(b.y-a.y)*e;p.r=a.r+(b.r-a.r)*e;p.o=a.o+(b.o-a.o)*e;
+      p.g.setAttribute('transform',`translate(${p.x.toFixed(1)},${p.y.toFixed(1)})`);p.dot.setAttribute('r',p.r.toFixed(2));
+      p.g.style.opacity=p.o.toFixed(2);p.g.style.pointerEvents=b.o>0?'auto':'none';});
+    drawPin();if(!done)anim=requestAnimationFrame(step);})(t0);
+}
+// linee delle misure: su tutto il pannello, o su ogni colonna nel boxplot per categoria
+function drawMetrics(){
+  const v=S.view,ms=MET.filter(m=>S.met.has(m.k));if(!ms.length){G('met').innerHTML='';return;}
+  const units=v==='boxcat'||v==='medie'?C.groups.map((g,k)=>({x0:colX(k)-colW*.42,x1:colX(k)+colW*.42,st:g.st,n:g.ix.length,stretta:true})):
+    v==='dispersione'?[{x0:X0,x1:X0+PW,st:C.st,n:C.vals.length}]:C.panels.map(p=>({x0:p.x0,x1:p.x0+p.w,st:p.st,n:p.ix.length}));
+  let h='';
+  units.forEach((u,ui)=>{const lines=[];
+    ms.forEach(m=>{const vals=m.k==='sd2'?[u.st.mean+2*u.st.sd,u.st.mean-2*u.st.sd].filter(x=>x>=0):[u.st[m.k]];
+      vals.forEach((val,j)=>lines.push({m,val,lab:m.k==='sd2'?(j?'media − 2 s':'media + 2 s'):m.full}));});
+    lines.forEach(l=>{const y=C.Y(l.val);h+=`<line x1="${u.x0}" x2="${u.x1}" y1="${y}" y2="${y}" stroke="${l.m.c}" stroke-width="${l.m.w}" stroke-dasharray="${l.m.da}"/>`;
+      if(v==='fila'&&l.m.p!==undefined){const x=u.x0+((u.n-1)*l.m.p+.5)/u.n*(u.x1-u.x0);h+=`<line x1="${x}" x2="${x}" y1="${y}" y2="${YB}" stroke="${l.m.c}" stroke-width="1" stroke-dasharray="3 3"/>`;}});
+    if(u.stretta&&ui>0)return;
+    const ly=spread(lines.map(l=>C.Y(l.val)-4),13);
+    lines.forEach((l,j)=>{const t=u.stretta?(l.m.k==='sd2'?(l.lab.includes('+')?'+2 s':'−2 s'):l.m.n):`${l.lab} = ${C.f(l.val,C.V.ds)}`;
+      h+=`<text class="lab" x="${u.stretta?u.x0+2:u.x1-4}" y="${ly[j]}" text-anchor="${u.stretta?'start':'end'}" paint-order="stroke" stroke="#fff" stroke-width="3" style="fill:${l.m.c}" font-weight="600">${t}</text>`;});});
+  G('met').innerHTML=h;
+}
+function colorPts(){const ds=DS[S.ds];P.forEach((p,i)=>{const g=ds.rows[i].g,dim=S.hl>=0&&g!==S.hl;p.dot.style.fill=dim?'#e5e7eb':ds.groups[g].c;});
+  if(S.hl>=0)P.forEach((p,i)=>{if(ds.rows[i].g===S.hl)G('pts').appendChild(p.g);});}
+function drawPin(){const g=G('pin');if(S.pin<0||!P[S.pin]){g.innerHTML='';return;}const p=P[S.pin],left=p.x>X0+PW*.8;
+  g.innerHTML=`<g style="opacity:${p.o}"><circle cx="${p.x}" cy="${p.y}" r="${p.r+3.5}" fill="none" stroke="#111827" stroke-width="2"/>
+  <text class="lab" font-weight="700" x="${p.x+(left?-12:12)}" y="${p.y-8}" text-anchor="${left?'end':'start'}" paint-order="stroke" stroke="#fff" stroke-width="3">${C.ds.rows[S.pin].id}</text></g>`;}
+function showTip(i){const r=C.ds.rows[i];let h=`<b>${r.id}</b> <span class="c">· ${r.sub}</span><br>${C.V.lab}: <b>${C.f(C.vals[i])}</b>`;
+  if(S.view==='dispersione')h+=`<br>${C.s.XV.lab}: <b>${fmt(C.s.xs[i],C.s.XV)}</b>`;
+  if(S.view==='istogramma'&&!C.V.discreta){const b=C.h.bins[C.h.bin[i]];h+=`<br><span class="c">fascia ${C.f(b.a,C.V.d)} – ${C.f(b.b,C.V.d)}</span>`;}
+  tip.innerHTML=h;tip.style.display='block';const box=svg.getBoundingClientRect(),k=box.width/W,p=P[i];
+  let x=p.x*k+14,y=p.y*k-10;if(x+tip.offsetWidth>box.width)x=p.x*k-14-tip.offsetWidth;tip.style.left=Math.max(0,x)+'px';tip.style.top=Math.max(0,y)+'px';}
+function drawLegend(){const ds=C.ds,click=!ds.panels;
+  $('legenda').innerHTML=ds.groups.map((g,k)=>`<button class="chip ${click?'':'fermo'} ${S.hl>=0&&S.hl!==k?'off':''}" data-k="${k}" ${click?'title="evidenzia la categoria"':''}><i style="background:${g.c}"></i>${g.n}</button>`).join('');
+  if(click)$('legenda').querySelectorAll('button').forEach(b=>b.onclick=()=>{const k=+b.dataset.k;S.hl=S.hl===k?-1:k;drawLegend();drawTable();colorPts();});}
+function swatch(m){return `<svg viewBox="0 0 18 8"><line x1="0" x2="18" y1="4" y2="4" stroke="currentColor" stroke-width="${Math.min(2.5,m.w+.5)}" stroke-dasharray="${m.da?m.da.split(' ').map(x=>x/2).join(' '):''}"/></svg>`;}
+function drawTable(){
+  const d=C.V.ds,rows=[];
+  if(!C.ds.panels)rows.push({n:'Tutti i prodotti',st:C.st});
+  const gs=C.ds.panels||S.view==='boxcat'||S.view==='medie'?C.groups:S.hl>=0?[C.groups[S.hl]]:[];
+  gs.forEach(g=>rows.push({n:g.n,c:g.c,st:g.st}));
+  const on=S.mode==='casi'?S.on:[];
+  const cols=[...MET.map(m=>({k:m.k,m,v:st=>C.f(m.k==='sd2'?st.sd:st[m.k],d)})),{k:'sk',n:'Skewness',v:st=>num(st.sk,2)},{k:'k',n:'Curtosi',v:st=>num(st.k,2)}];
+  $('metr').innerHTML=`<tr><th><span class="k">${C.ds.panels?'':'n = '+C.vals.length}</span></th>${cols.map(c=>`<th class="${on.includes(c.k)?'on':''}">${c.m?`<button data-k="${c.k}" class="${S.met.has(c.k)?'on':''}" title="mostra sul grafico: ${c.m.full}" style="${S.met.has(c.k)?'':'color:'+c.m.c}">${swatch(c.m)}${c.m.n}</button>`:`<span class="k">${c.n}</span>`}</th>`).join('')}</tr>`+
+    rows.map(r=>`<tr><td>${r.c?`<i style="background:${r.c}"></i>`:''}${r.n}</td>${cols.map(c=>`<td class="${on.includes(c.k)?'on':''}">${c.v(r.st)}</td>`).join('')}</tr>`).join('');
+  $('metr').querySelectorAll('th button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;S.met.has(k)?S.met.delete(k):S.met.add(k);drawMetrics();drawTable();});
+}
+function drawText(){
+  const v=VIEWS[S.view];
+  if(S.mode==='esplora'){$('vede').innerHTML=v.vede(C);$('perde').innerHTML=v.perde(C);}
+  else{const caso=CASI[S.caso],p=caso.passi[S.passo];$('passo-k').textContent=`Passo ${S.passo+1} di ${caso.passi.length} · ${v.t(C.ds)}`;$('passo').innerHTML=p.txt(C);
+    $('risposta-box').hidden=!p.ris;if(p.ris)$('risposta').innerHTML=p.ris(C);}
+}
+function bindOpts(){const bw=$('bw'),pts=$('pts'),xv=$('xv');
+  if(bw)bw.oninput=()=>{S.bw[S.ds+S.v]=C.ws[+bw.value];render();};
+  if(pts)pts.onchange=()=>{S.pts[S.view]=pts.checked;render();};
+  if(xv)xv.onchange=()=>{S.xv=xv.value;render();};}
+
+// ── controlli: esplora ──
+const dsSel=$('ds'),varSel=$('var');
+dsSel.innerHTML=Object.entries(DS).map(([k,d])=>`<option value="${k}">${d.nome}</option>`).join('');
+function fillVars(){const ds=DS[S.ds];varSel.innerHTML=Object.entries(ds.vars).map(([k,v])=>`<option value="${k}" ${k===S.v?'selected':''}>${v.lab}</option>`).join('');varSel.disabled=Object.keys(ds.vars).length<2;}
+function drawTabs(){const ds=DS[S.ds];$('viste').innerHTML=ds.viste.map((k,j)=>`<button data-v="${k}" class="${k===S.view?'on':''}"><b>${j+1}</b>${VIEWS[k].t(ds)}</button>`).join('');
+  $('viste').querySelectorAll('button').forEach(b=>b.onclick=()=>{S.view=b.dataset.v;drawTabs();render();});
+  const i=ds.viste.indexOf(S.view);$('prev').disabled=i===0;$('next').disabled=i===ds.viste.length-1;
+  $('prev').textContent='← Precedente';$('next').textContent='Successivo →';}
+dsSel.onchange=()=>{S.ds=dsSel.value;S.v=DS[S.ds].def;S.hl=-1;S.pin=-1;S.xv=null;if(!DS[S.ds].viste.includes(S.view))S.view='indice';fillVars();drawTabs();render();};
+varSel.onchange=()=>{S.v=varSel.value;S.xv=null;render();};
+
+// ── controlli: domande di business ──
+$('casi').innerHTML=CASI.map((c,k)=>`<button class="caso ${c.cl}" data-k="${k}"><div class="k">${c.tag}</div><div class="t">${c.t}</div></button>`).join('');
+$('casi').querySelectorAll('.caso').forEach(b=>b.onclick=()=>apriCaso(+b.dataset.k,0));
+function apriCaso(k,passo){
+  const caso=CASI[k],p=caso.passi[passo];
+  if(k!==S.caso||passo===0)S.pin=-1;
+  Object.assign(S,{caso:k,passo,ds:caso.ds,v:caso.v,view:p.view,xv:p.xv||null,met:new Set(p.met),on:p.on||[],hl:-1});
+  $('casi').querySelectorAll('.caso').forEach((b,j)=>b.classList.toggle('on',j===k));
+  $('caso-k').innerHTML=`<span style="color:var(--${caso.cl==='sk'?'p1':'p3'})">Domanda · ${caso.tag}</span>`;$('caso-q').textContent=caso.q;
+  $('passi').innerHTML=caso.passi.map((_,j)=>`<span class="${j===passo?'on':''}" data-j="${j}">${j+1}</span>`).join('');
+  $('passi').querySelectorAll('span').forEach(s=>s.onclick=()=>apriCaso(k,+s.dataset.j));
+  $('prev').disabled=k===0&&passo===0;$('next').disabled=k===CASI.length-1&&passo===caso.passi.length-1;
+  $('prev').textContent=passo===0?'← Domanda precedente':'← Passo precedente';
+  $('next').textContent=passo===caso.passi.length-1?'Prossima domanda →':'Passo successivo →';
+  render();
+}
+function setMode(m){
+  if(m===S.mode)return;
+  $('modi').querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.dataset.m===m));
+  $('h-esplora').hidden=$('t-esplora').hidden=m!=='esplora';$('h-casi').hidden=$('t-caso').hidden=m!=='casi';
+  if(m==='casi'){salvato={ds:S.ds,v:S.v,view:S.view,xv:S.xv,met:new Set(S.met),hl:S.hl};S.mode='casi';apriCaso(S.caso,S.passo);}
+  else{S.mode='esplora';Object.assign(S,salvato||{});S.pin=-1;dsSel.value=S.ds;fillVars();drawTabs();render();}
+}
+$('modi').querySelectorAll('a').forEach(a=>a.onclick=()=>setMode(a.dataset.m));
+
+function go(d){
+  if(S.mode==='esplora'){const vs=DS[S.ds].viste,i=vs.indexOf(S.view)+d;if(i>=0&&i<vs.length){S.view=vs[i];drawTabs();render();}return;}
+  const caso=CASI[S.caso],j=S.passo+d;
+  if(j>=0&&j<caso.passi.length)apriCaso(S.caso,j);
+  else if(d>0&&S.caso<CASI.length-1)apriCaso(S.caso+1,0);
+  else if(d<0&&S.caso>0)apriCaso(S.caso-1,CASI[S.caso-1].passi.length-1);
+}
+$('prev').onclick=()=>go(-1);$('next').onclick=()=>go(1);
+document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT'||e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);});
+fillVars();drawTabs();render();
+if(location.hash==='#casi')setMode('casi');
+
+// dentro il sito la pagina sta in un iframe: gli dice quanto è alta
+if(window.parent!==window&&window.ResizeObserver)new ResizeObserver(()=>parent.postMessage({esplorazione:document.documentElement.scrollHeight},'*')).observe(document.body);
+</script>
+</body></html>

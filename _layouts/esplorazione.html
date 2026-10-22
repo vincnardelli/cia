@@ -6,7 +6,13 @@ layout: default
   <h1>{{ page.title }}</h1>
   <p class="modulo__idea">{{ page.question }}</p>
   {% if page.ready %}
-  <iframe class="espl-frame" src="{{ site.baseurl }}/esplorazioni/{{ page.slug }}.html" title="{{ page.title }}"></iframe>
+  <iframe class="espl-frame"{% if page.altezza %} style="height: {{ page.altezza }}px"{% endif %} src="{{ site.baseurl }}/esplorazioni/{{ page.slug }}.html" title="{{ page.title }}"></iframe>
+  <script>
+    window.addEventListener('message', function (e) {
+      var f = document.querySelector('.espl-frame');
+      if (f && e.source === f.contentWindow && e.data && e.data.esplorazione) f.style.height = (e.data.esplorazione + 2) + 'px';
+    });
+  </script>
   {% else %}
   <div class="via"><div class="via__k">In arrivo</div>Questa esplorazione sarà pubblicata con il modulo {{ page.modulo }}.</div>
   {% endif %}

@@ -3,4 +3,4 @@
 # le pagine con published: false (moduli futuri, lab). Il sito vero non lo usa.
 mostra_lab: true
 mostra_skill: true
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor", "node_modules", "_docs_schema.md", "skill/", "esplorazioni", "_moduli/07-leggere-i-dati.md","_moduli/08-software-2-0.md","_moduli/09-python.md","_moduli/10-random-forest.md","_moduli/11-da-testo-a-numeri.md","_moduli/12-modello-di-linguaggio.md","_moduli/13-agenti.md","_moduli/14-chiusura.md", "_moduli/_archivio"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "vendor", "node_modules", "_docs_schema.md", "skill/", "_moduli/07-leggere-i-dati.md","_moduli/08-software-2-0.md","_moduli/09-python.md","_moduli/10-random-forest.md","_moduli/11-da-testo-a-numeri.md","_moduli/12-modello-di-linguaggio.md","_moduli/13-agenti.md","_moduli/14-chiusura.md", "_moduli/_archivio"]

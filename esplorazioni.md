@@ -4,7 +4,6 @@ title: Esplorazioni
 permalink: /esplorazioni/
 description: Pagine interattive per capire i concetti chiave
 nav_order: 5
-published: false
 ---
 
 # 🔬 Esplorazioni
