@@ -513,6 +513,6 @@ fillVars();drawTabs();render();
 if(location.hash==='#casi')setMode('casi');
 
 // dentro il sito la pagina sta in un iframe: gli dice quanto è alta
-if(window.parent!==window&&window.ResizeObserver)new ResizeObserver(()=>parent.postMessage({esplorazione:document.documentElement.scrollHeight},'*')).observe(document.body);
+if(window.parent!==window&&window.ResizeObserver)new ResizeObserver(()=>parent.postMessage({esplorazione:document.body.scrollHeight},'*')).observe(document.body);
 </script>
 </body></html>
