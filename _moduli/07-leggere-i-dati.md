@@ -5,163 +5,122 @@ title: Leggere i dati
 sezione: 2
 language: R
 idea: "Una tabella si riassume con pochi numeri e pochi grafici; saperli leggere è più difficile che calcolarli."
-hours: 4
-published: false
-concepts_new: [media e mediana, quantili, deviazione standard, correlazione, ggplot2, case_when, ntile]
-concepts_required: [data frame, dplyr, pipe, group_by, valori mancanti, if/else]
+hours: 3
+concepts_new: [frequenze, istogramma, media e mediana, quartili, boxplot, deviazione standard, skewness, curtosi, correlazione, ggplot2]
+concepts_required: [data frame, dplyr, pipe, group_by]
 explorations: []
 slides_pdf:
+slides:
+  - titolo: Lezione 9
+    descr: Analisi Catalogo Prodotti
+    pdf: slide/lezione_9.pdf
+codice:
+  - titolo: lezione_9.R
+    descr: tutti i grafici e gli indicatori
+    file: codice/9/lezione_9.R
+dati:
+  - titolo: business_intelligence.csv
+    descr: 80 prodotti di un catalogo
+    file: dati/business_intelligence.csv
+  - titolo: domanda_giornaliera.csv
+    descr: un anno di vendite di due prodotti
+    file: dati/domanda_giornaliera.csv
+  - titolo: recensioni.csv
+    descr: 400 recensioni di due cuffie
+    file: dati/recensioni.csv
 ---
 
-## Quattro titoli, un anno di Borsa
+## Il catalogo
 
-Il file dei rendimenti contiene, per ogni giorno di Borsa del 2023, il rendimento giornaliero di quattro titoli di Piazza Affari: Ferrari, Enel, Intesa e Unicredit. Un rendimento dello 0,01 significa che il titolo ha guadagnato l'1 % rispetto al giorno prima. È il dataset su cui impariamo a **riassumere**: una colonna di 250 numeri in due o tre.
+Il file `business_intelligence.csv` descrive 80 prodotti di un'azienda in cinque categorie (Abbigliamento, Alimentari, Casa, Elettronica, Sport): prezzo, unità vendute, fatturato, valutazione dei clienti, numero di recensioni, tasso di reso, margine, giorni di giacenza in magazzino, costo di magazzino e ritardo del fornitore. Una riga per prodotto. Il percorso del modulo è sempre lo stesso: una variabile alla volta, poi due gruppi a confronto, poi due variabili insieme.
 
 ```r
-library(readxl)
 library(dplyr)
 library(ggplot2)
-rendimenti <- read_excel("finanza_returns.xlsx")
 
-summary(rendimenti)
-mean(rendimenti$Ferrari)
-median(rendimenti$Ferrari)
+vendite <- read.csv("business_intelligence.csv")
+summary(vendite)
 ```
 
-La **media** è la somma diviso il numero: il rendimento «tipico» se ogni giorno fosse uguale. La **mediana** è il valore che sta a metà una volta ordinati i giorni: metà dei giorni ha fatto peggio, metà meglio. Sono uguali quando la distribuzione è simmetrica; si allontanano quando ci sono pochi giorni estremi, e la media viene trascinata da quelli (è l'aspettativa di vita del Burundi, modulo 1). I **quantili** generalizzano la mediana: il quantile 0,25 lascia sotto di sé un quarto dei giorni.
+## Dalla tabella all'istogramma
+
+Il primo riassunto di una colonna numerica è una **tabella di frequenza**: si divide il fatturato in fasce e si conta quanti prodotti cadono in ognuna. La frequenza relativa è *f*ᵢ = *n*ᵢ / *N*.
 
 ```r
-quantile(rendimenti$Ferrari, c(0.25, 0.5, 0.75))
+vendite %>%
+  mutate(fascia = cut(fatturato, breaks = c(0, 50000, 100000, 150000, 200000, Inf))) %>%
+  count(fascia) %>%
+  mutate(freq_rel = n / sum(n))
 ```
 
-## Rischio è variabilità
+L'**istogramma** è la stessa tabella disegnata: ogni barra è una fascia, la sua altezza è il conteggio. Con fasce più strette (25.000 € invece di 50.000) si vede meglio la forma, e ogni barra fine sta dentro una delle fasce larghe. Messo accanto al grafico «prodotto per prodotto», l'istogramma è quello che si ottiene facendo cadere tutti i punti sull'asse verticale.
 
-Ferrari e Unicredit hanno chiuso l'anno con medie giornaliere simili (0,17 % e 0,26 %). Ma un investitore non vive di medie: vive dei giorni in cui il titolo perde il 5 %. La **deviazione standard** misura quanto i valori si allontanano dalla media, in media:
+## Cinque numeri e il boxplot
+
+Sopra l'istogramma si possono segnare sei valori: minimo, primo quartile, mediana, media, terzo quartile, massimo. Per il fatturato sono 8.004, 73.949, 118.351, 116.047, 144.688 e 301.599 €.
+
+- La **media** è x̄ = Σ xᵢ / N.
+- La **mediana** è il valore che sta a metà una volta ordinati i dati; i **quartili** lasciano sotto di sé un quarto e tre quarti dei prodotti. R li calcola con `quantile()`.
+
+Il **boxplot** è l'istogramma visto dall'alto. La scatola va da Q1 a Q3 e contiene metà dei prodotti; la sua larghezza è l'IQR = Q3 − Q1. I baffi arrivano fino all'ultimo valore entro Q1 − 1,5 · IQR e Q3 + 1,5 · IQR; oltre ci sono i punti isolati.
 
 ```r
-sd(rendimenti$Ferrari)
-sd(rendimenti$Enel)
-sd(rendimenti$Intesa)
-sd(rendimenti$Unicredit)
+ggplot(vendite, aes(x = fatturato)) +
+  geom_boxplot()
 ```
 
-Ferrari 1,3 %, Enel 1,1 %, Intesa 1,5 %, Unicredit 2,2 %. In finanza si chiama rischio, in statistica variabilità: sono la stessa cosa. Un titolo con deviazione standard doppia ha giornate buone e cattive di ampiezza doppia. Per confrontare i quattro titoli con una tabella sola:
+## Variabilità
+
+La **deviazione standard** misura quanto i valori si allontanano dalla media:
+
+> s = √( Σ (xᵢ − x̄)² / (N − 1) )
+
+È quello che calcola `sd()`. Per il fatturato è 55.817 €. Elettronica e Sport hanno medie vicine (135.410 e 121.602 €) ma deviazioni standard molto diverse (70.730 e 40.457 €): nell'elettronica convivono prodotti che vendono pochissimo e prodotti che vendono moltissimo. In finanza la stessa misura si chiama rischio.
+
+## Confronto tra categorie
+
+Un grafico a colonne con il fatturato medio per categoria dice chi vende di più in media, ma nasconde tutto il resto. I boxplot affiancati mostrano, sulla stessa scala, mediana, dispersione e prodotti anomali di ogni categoria: è lo stesso confronto con molte più informazioni.
 
 ```r
-rendimenti %>%
-  summarise(media_ferrari = mean(Ferrari), sd_ferrari = sd(Ferrari),
-            media_unicredit = mean(Unicredit), sd_unicredit = sd(Unicredit))
+ggplot(vendite, aes(x = categoria, y = fatturato)) +
+  geom_boxplot()
 ```
 
-> **Attenzione** `sd()` e `mean()` con un `NA` restituiscono `NA`: vale il `na.rm = TRUE` del modulo scorso. Ma togliere gli `NA` non è neutro: se i giorni mancanti sono proprio quelli di crisi (dati non scaricati perché il mercato era sospeso), la deviazione standard è sottostimata. Prima di togliere, chiedersi perché mancano.
+## Forma: skewness e curtosi
 
-I titoli si muovono insieme? La **correlazione** va da −1 a 1 e misura quanto due colonne salgono e scendono insieme:
+La **skewness** dice se la distribuzione è simmetrica o ha una coda lunga da un lato:
+
+> SK = N / ((N − 1)(N − 2)) · Σ ((xᵢ − x̄) / s)³
+
+Positiva vuol dire coda a destra, con la media sopra la mediana: il prezzo ha skewness 2,68, media 150 € e mediana 61 €.
+
+La **curtosi** dice quanto sono frequenti i valori estremi rispetto a quello che farebbe pensare la deviazione standard:
+
+> K = [ Σ (xᵢ − x̄)⁴ / N ] / [ Σ (xᵢ − x̄)² / N ]² − 3
+
+In aula l'abbiamo vista su quattro domande di business:
+
+| domanda | dati | cosa dice la curtosi |
+|---|---|---|
+| Dove tagliare il costo di magazzino? | `costo_magazzino`, `giorni_giacenza` | costo con K = 8,79: 10 prodotti su 80 fanno il 63 % del costo, e il grafico di Pareto li mostra |
+| Quante scorte tenere? | `domanda_giornaliera.csv` | pasta e smartphone hanno media 100 e dev. std. 20, ma lo smartphone ha K = 20,3: supera 140 pezzi in 14 giorni contro 6, e arriva a 228 |
+| Che tempi di consegna promettere? | `ritardo_fornitore_giorni` | media 2,4 giorni, ma il 95° percentile è 17,1: la media non basta per una promessa al cliente |
+| Il prodotto piace? | `recensioni.csv` | due cuffie con media 3,5 stelle: una con K = 1,52, l'altra polarizzata con K = −1,54 e il 29,5 % di recensioni a una stella |
+
+## Due variabili: correlazione
+
+Il grafico di dispersione mette un punto per prodotto. La **correlazione** va da −1 a 1:
+
+> Corr(X, Y) = Cov(X, Y) / √( Var(X) · Var(Y) )
+
+Unità vendute e numero di recensioni hanno r = 0,93; valutazione e tasso di reso r = −0,90; valutazione e fatturato appena 0,26. La matrice di dispersione (`GGally::ggpairs`) e `corrplot` mostrano tutte le coppie insieme.
 
 ```r
-cor(rendimenti$Intesa, rendimenti$Unicredit)
-round(cor(rendimenti[, c("Ferrari", "Enel", "Intesa", "Unicredit")]), 2)
+cor(vendite$numero_recensioni, vendite$unita_vendute)
+corrplot::corrplot(cor(vendite[, c("prezzo", "unita_vendute", "numero_recensioni",
+                                   "fatturato", "valutazione_clienti", "tasso_reso")]))
 ```
-
-Intesa e Unicredit, due banche, hanno correlazione alta: nei giorni in cui sale una tende a salire l'altra. Ferrari è meno legata alle banche. Per un portafoglio è un'informazione più utile dei singoli rendimenti: due titoli correlati non diversificano. E vale il promemoria del modulo 1: correlazione non è causazione, nemmeno quando il coefficiente è 0,9.
-
-## Tre grafici con ggplot2
-
-Un riassunto numerico dice molto; un grafico dice il resto. Con ggplot2 un grafico si costruisce a strati: i dati, la corrispondenza tra colonne ed elementi visivi (`aes`), il tipo di segno (`geom_`).
-
-L'**istogramma** mostra la distribuzione di una variabile numerica: quanti giorni cadono in ogni intervallo di rendimento.
-
-```r
-ggplot(rendimenti, aes(x = Ferrari)) +
-  geom_histogram(bins = 30, fill = "red", alpha = 0.7) +
-  geom_vline(xintercept = mean(rendimenti$Ferrari)) +
-  theme_minimal() +
-  labs(x = "Rendimento giornaliero", y = "Giorni")
-```
-
-Il **grafico a barre** conta o confronta categorie. Sull'ecommerce del modulo scorso, il fatturato per categoria:
-
-```r
-ecommerce <- read.csv("ecommerce.csv")
-
-ecommerce %>%
-  group_by(ProductCategory) %>%
-  summarise(fatturato = sum(TotalAmount)) %>%
-  ggplot(aes(x = ProductCategory, y = fatturato)) +
-  geom_col() +
-  theme_minimal()
-```
-
-Notate che la pipe può finire in `ggplot`: si prepara la tabella riassunta con dplyr e la si passa al grafico. `geom_col` disegna l'altezza che gli diamo; `geom_bar` conta le righe da solo.
-
-Il **grafico di dispersione** mostra due variabili numeriche, un punto per osservazione; è la correlazione vista a occhio:
-
-```r
-ggplot(rendimenti, aes(x = Intesa, y = Unicredit)) +
-  geom_point(alpha = 0.5) +
-  theme_minimal()
-```
-
-Una nuvola allungata lungo la diagonale è correlazione alta; una nuvola tonda è correlazione zero.
-
-> **In aula** abbiamo fatto questi tre grafici e basta. In piattaforma trovate colori per categoria (`aes(fill = Membership)`), pannelli (`facet_grid`), boxplot, etichette con `labs`, e come ordinare le barre per altezza con `fct_reorder`.
-
-## Come mentire con i grafici
-
-Gli stessi dati possono raccontare storie opposte. Le tecniche sono poche e vanno riconosciute:
-
-- **asse tagliato**: un asse y che parte da 95 invece che da 0 trasforma una differenza del 2 % in una torre;
-- **scala scelta ad arte**: allungare o comprimere l'asse del tempo fa sembrare una crescita esplosiva o piatta;
-- **categorie riaggregate**: sommare o spezzare classi fino a far vincere quella che si vuole (Simpson, di nuovo);
-- **torte**: l'occhio confronta male gli angoli, e con più di tre fette non si legge nulla;
-- **3D**: la prospettiva ingrandisce ciò che sta davanti.
-
-La regola pratica: asse y da zero per le barre, mai torte, mai 3D, e in ogni grafico scrivere nel titolo cosa mostra e nella didascalia da dove vengono i dati.
-
-> **Attenzione** `xlim()` e `ylim()` in ggplot2 non solo tagliano l'asse: **scartano** i dati fuori dai limiti prima di calcolare l'istogramma. Se fissate `xlim(c(-0.05, 0.05))` i giorni con perdite oltre il 5 % spariscono dal conteggio, non solo dalla vista. Per zoomare senza perdere dati si usa `coord_cartesian()`.
-
-## RFM: un if/else su un data frame
-
-Il marketing classifica i clienti con tre metriche: **Recency** (giorni dall'ultimo acquisto), **Frequency** (numero di acquisti), **Monetary** (totale speso). Un cliente recente, frequente e che spende molto vale più degli altri. Dal file degli scontrini (`CustomerID`, `InvoiceDate`, `Quantity`, `UnitPrice`, `Total`) le tre metriche sono un `group_by` più un `summarise`:
-
-```r
-library(lubridate)
-scontrini <- read.csv("retail_rfm.csv")
-scontrini$InvoiceDate <- as_date(scontrini$InvoiceDate)
-data_riferimento <- max(scontrini$InvoiceDate)
-
-rfm <- scontrini %>%
-  group_by(CustomerID) %>%
-  summarise(recency = as.numeric(data_riferimento - max(InvoiceDate)),
-            frequency = n(),
-            monetary = sum(Total)) %>%
-  mutate(r_score = ntile(desc(recency), 4),
-         f_score = ntile(frequency, 4),
-         m_score = ntile(monetary, 4))
-```
-
-`ntile(x, 4)` divide i clienti in quattro gruppi di uguale numerosità (quartili) e assegna 1 al peggiore e 4 al migliore: per la recency il migliore è chi ha pochi giorni, da cui `desc()`. Ora ogni cliente ha tre punteggi da 1 a 4, e vogliamo assegnargli un segmento. Con un `if/else` dovremmo scrivere un ciclo sui clienti; `case_when` fa la stessa cosa su tutta la colonna:
-
-```r
-rfm <- rfm %>%
-  mutate(segmento = case_when(
-    r_score == 4 & f_score == 4 & m_score == 4 ~ "Gold",
-    r_score == 1 & f_score == 1 & m_score == 1 ~ "Persi",
-    f_score == 4 ~ "Fedeli",
-    r_score == 4 ~ "Attivi",
-    m_score == 4 ~ "Alta spesa",
-    TRUE ~ "Altri"
-  ))
-
-rfm %>%
-  group_by(segmento) %>%
-  summarise(clienti = n(), fatturato = sum(monetary)) %>%
-  arrange(desc(fatturato))
-```
-
-Ogni riga di `case_when` è un `else if`: condizione a sinistra della tilde, valore a destra. Come nell'`if` del modulo 2, vince la **prima** condizione vera dall'alto: un cliente 4-4-4 è Gold e non Fedele, perché Gold viene prima. La riga `TRUE ~ "Altri"` è l'`else` finale.
-
-> **Attenzione** Senza la riga `TRUE ~ ...`, i clienti che non soddisfano nessuna condizione ricevono `NA`, e nel `group_by` finale compare un segmento senza nome. E `ntile` con molti valori uguali (tanti clienti con un solo acquisto) spezza i pareggi per ordine di riga: due clienti identici possono finire in quartili diversi. Il test in piattaforma «quanti clienti Gold» controlla entrambe le cose.
 
 ## Per approfondire
 
-I verbi di dplyr su cui si regge ogni riga di questo modulo sono nel [modulo 6](../06-dati/). Nel [modulo 8](../08-software-2-0/) le regole dell'autovelox, che finora abbiamo scritto noi, le farà trovare un algoritmo ai dati.
+I verbi di dplyr usati per preparare ogni grafico sono nel [modulo 6](../06-dati/). Nel [modulo 8](../08-software-2-0/) una macchina impara da sola le regole, a partire da tabelle come queste.
