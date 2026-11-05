@@ -15,11 +15,23 @@ slides:
   - titolo: Lezione 9
     descr: Analisi Catalogo Prodotti
     pdf: slide/lezione_9.pdf
+  - titolo: Lezione 10
+    descr: Un'analisi completa, la campagna telefonica
+    pdf: slide/lezione_10.pdf
 codice:
   - titolo: lezione_9.R
     descr: tutti i grafici e gli indicatori
     file: codice/9/lezione_9.R
+  - titolo: lezione_10.R
+    descr: l'analisi completa della campagna
+    file: codice/10/lezione_10.R
+  - titolo: lab_campagna.R
+    descr: lab, dieci domande sulla campagna
+    file: codice/10/lab_campagna.R
 dati:
+  - titolo: campagna_banca.csv
+    descr: 4.521 clienti chiamati da una banca
+    file: dati/campagna_banca.csv
   - titolo: business_intelligence.csv
     descr: 80 prodotti di un catalogo
     file: dati/business_intelligence.csv
@@ -277,6 +289,98 @@ numeriche <- vendite %>%
   select(prezzo, unita_vendute, numero_recensioni, fatturato, valutazione_clienti, tasso_reso)
 corrplot::corrplot(cor(numeriche))
 ```
+
+## Un'analisi completa: la campagna telefonica
+
+Nella lezione 10 tutti gli strumenti visti finora, i verbi di dplyr e i grafici di ggplot, servono a rispondere a una sola domanda di business. Una banca portoghese telefona a 4.521 clienti per proporre un deposito vincolato (dati veri, 2008–2010): **chi conviene chiamare, e quando?** Su 100 telefonate, 11 o 12 vanno a buon fine.
+
+Il file è `campagna_banca.csv`, una riga per cliente chiamato:
+
+| Colonna | Cosa contiene | Valori |
+|---|---|---|
+| `cliente` | identificativo del cliente | da 1 a 4.521 |
+| `eta` | età in anni | da 19 a 87 |
+| `lavoro` | lavoro del cliente | impiegato, operaio, imprenditore, domestico, dirigente, pensionato, autonomo, servizi, studente, tecnico, disoccupato; NA se non dichiarato (38) |
+| `stato_civile` | stato civile | sposato, single, divorziato (comprende vedovi e vedove) |
+| `istruzione` | titolo di studio | elementare, superiore, laurea; NA se non dichiarato (187) |
+| `insolvente` | ha un debito non pagato | si (76), no |
+| `saldo` | saldo medio annuo del conto, in euro | da −3.313 a 71.188; sotto zero il conto è in rosso |
+| `mutuo` | ha un mutuo per la casa | si, no |
+| `prestito` | ha un prestito personale | si, no |
+| `contatto` | canale dell'ultima telefonata | cellulare, fisso; NA se non registrato (1.324) |
+| `giorno` | giorno del mese dell'ultima telefonata | da 1 a 31 |
+| `mese` | mese dell'ultima telefonata | gen, feb, …, dic |
+| `durata` | durata dell'ultima telefonata, in secondi | da 4 a 3.025; si conosce solo a telefonata finita |
+| `chiamate` | telefonate a questo cliente in questa campagna, compresa l'ultima | da 1 a 50 |
+| `giorni_da_contatto` | giorni passati dall'ultima telefonata della campagna precedente | da 1 a 871; NA se il cliente non era mai stato chiamato (3.705) |
+| `contatti_prima` | telefonate al cliente prima di questa campagna | da 0 a 25 |
+| `esito_prima` | come era finita la campagna precedente | si, no, altro, mai contattato |
+| `sottoscrive` | ha aperto il deposito | 1 = sì, 0 = no |
+
+`sottoscrive` vale 0 o 1, come `Survived` nel Titanic: la sua media è la quota di sì.
+
+```r
+campagna <- read.csv("campagna_banca.csv")
+mean(campagna$sottoscrive)    # 0.115
+```
+
+### Prima di analizzare: gli NA
+
+![Quota di telefonate senza canale, mese per mese]({{ img }}campagna_na_mese.png)
+
+Il canale manca nell'85 % delle telefonate di giugno e nel 59 % di maggio, quasi mai negli altri mesi. Non sono i clienti a essere diversi: in quei mesi qualcuno non l'ha registrato. Un NA concentrato in un periodo racconta come sono stati raccolti i dati.
+
+### 1. Più chiami, meno vendi
+
+![Telefonate e quota di sì, un punto per mese]({{ img }}campagna_mesi_scatter.png)
+
+A maggio la banca fa 1.398 telefonate e ottiene il 6,7 % di sì; a ottobre 80 telefonate e il 46 %. Tra i dodici mesi la correlazione è −0,69: i mesi con più telefonate sono quelli che vendono peggio.
+
+### 2. È il mese, o chi chiami?
+
+![Quota di sì per storia del cliente, mesi rari e altri mesi]({{ img }}campagna_storia.png)
+
+Chi nella campagna precedente aveva già detto sì lo ridice nel 64 % dei casi. Ma anche tra chi non era mai stato chiamato, nei mesi rari (marzo, settembre, ottobre, dicembre) dice sì il 35 %, contro l'8 % degli altri mesi. Quando chiama poco, la banca sceglie meglio chi chiamare. Per vederlo serve un `group_by` con due variabili:
+
+```r
+campagna %>%
+  group_by(esito_prima, periodo) %>%
+  summarise(clienti = n(), conversione = mean(sottoscrive), .groups = "drop")
+```
+
+### 3. L'età a forma di U
+
+![Quota di sì per fascia d'età]({{ img }}campagna_eta_conversione.png)
+
+Sotto i 25 anni dice sì il 21 %, tra 30 e 60 anni circa il 10 %, oltre i 60 il 38 %. La banca chiama soprattutto i trentenni e i quarantenni, cioè chi risponde meno.
+
+![Quota di sì per età, dentro quattro lavori]({{ img }}campagna_eta_lavoro.png)
+
+È l'età o il lavoro? Tutti e due: i pensionati tra 51 e 60 anni dicono sì nel 15 % dei casi, quelli oltre i 60 nel 39 %.
+
+### 4. Insistere non paga
+
+![Quota di sì per numero di telefonate allo stesso cliente]({{ img }}campagna_chiamate.png)
+
+Alla prima telefonata dice sì il 14 %; dalla quinta in poi quasi sempre meno della media, dall'ottava il 5 %. Alcuni clienti sono stati chiamati fino a 50 volte.
+
+### 5. Soldi e debiti
+
+Il saldo ha media 1.423 € e mediana 444 €: metà dei clienti ha meno di 444 €, e 366 sono in rosso. Il cliente "medio" quasi non esiste.
+
+![Quota di sì per debiti con la banca]({{ img }}campagna_debiti.png)
+
+Chi non ha né mutuo né prestito dice sì nel 17 % dei casi; con il solo mutuo il 9 %, con un prestito il 6 %. Chi deve già soldi alla banca non ne mette da parte altri.
+
+### 6. La variabile che sa troppo
+
+![Quota di sì per durata della telefonata]({{ img }}campagna_durata_conversione.png)
+
+Sotto il minuto dice sì lo 0,2 %, oltre gli 8 minuti il 38 %. La durata è la variabile più legata al sì (correlazione 0,40), ma si conosce solo a telefonata finita: per decidere chi chiamare non serve. Una variabile che conosce già la risposta si chiama *leakage*, e una macchina che impara dai dati la sceglierebbe per prima.
+
+### Il lab
+
+`lab_campagna.R` contiene dieci domande sugli stessi dati, da fare in aula e correggere insieme: over 60, conti in rosso, stato civile, istruzione (con gli NA), fisso o cellulare, saldo per lavoro, i dieci clienti più ricchi, l'età di chi dice sì, gli insolventi, i clienti chiamati più di dieci volte. Una pipe per domanda, e prima di eseguire si scrive il risultato che ci si aspetta.
 
 ## Per approfondire
 
