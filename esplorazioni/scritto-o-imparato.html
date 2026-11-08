@@ -55,6 +55,8 @@
   table.err td,table.err th{padding:4px 8px;border-bottom:1px solid var(--line);text-align:left}
   table.err th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
   .hint{color:var(--muted);font-size:12.5px}
+  #albero .nodo{cursor:pointer}
+  #albero .nodo:hover rect.box{stroke-width:2.5}
   @media (max-width:700px){.due{grid-template-columns:1fr}}
   /* schermo intero 16:9: grafici a sinistra, codice e testi a destra */
   html:fullscreen{background:#fff}
@@ -65,6 +67,9 @@
   html:fullscreen .side{overflow-y:auto;min-height:0;display:flex;flex-direction:column;gap:10px}
   html:fullscreen .due{grid-template-columns:1fr}
   html:fullscreen .code{font-size:14px}
+  html:fullscreen #linea2{max-height:27vh}
+  html:fullscreen #albero{max-height:36vh}
+  html:fullscreen #gini{max-height:17vh}
 </style></head><body>
 
 <nav class="modi" id="modi">
@@ -111,6 +116,7 @@
       <span class="legenda" id="legenda"></span>
     </div>
     <svg id="linea2" viewBox="0 0 820 250"></svg>
+    <svg id="albero" viewBox="0 0 820 300"></svg>
     <svg id="gini" viewBox="0 0 820 150"></svg>
   </div>
   <div class="side">
@@ -249,8 +255,17 @@ function disegna1(){
 }
 
 // 2. imparato dai dati
-let T=null,LOG=[],CAMP=null,anim=null,fase=null;
-function ricalcola(){CAMP=campione(NS[S.ni],S.seed);LOG=[];T=cresci(CAMP.tr,0,S.prof,-Infinity,Infinity,LOG);}
+let T=null,LOG=[],NODI=[],FOGLIE=1,PROF=0,SEL=null,CAMP=null,anim=null;
+function ricalcola(){
+  CAMP=campione(NS[S.ni],S.seed);T=cresci(CAMP.tr,0,S.prof,-Infinity,Infinity,null);SEL=null;
+  // livello per livello, come si disegna un albero: LOG sono i nodi da dividere, nell'ordine in cui li divide
+  LOG=[];NODI=[];const coda=[T];
+  while(coda.length){const n=coda.shift();n.i=NODI.length;NODI.push(n);if(n.thr!==undefined){LOG.push(n);coda.push(n.left,n.right);}}
+  // posizione: le foglie in fila da sinistra, ogni nodo a metà tra i suoi due figli
+  let f=0;PROF=0;
+  (function vai(n){PROF=Math.max(PROF,n.depth);if(n.thr===undefined)n.slot=f++;else{vai(n.left);vai(n.right);n.slot=(n.left.slot+n.right.slot)/2;}})(T);
+  FOGLIE=f;
+}
 function puntini(ix,yBase,hMax,opac=1,errati=null){
   const col={};for(const i of ix){(col[D[i]]=col[D[i]]||[]).push(i);}
   const maxc=Math.max(1,...Object.values(col).map(a=>a.length)),passo=Math.min(9,hMax/maxc),r=Math.max(1.3,Math.min(4,passo/2-.2));
@@ -265,6 +280,7 @@ function disegna2(evid){ // evid: {node, t, cand: n} durante l'animazione
   const split=evid?LOG.slice(0,evid.k+(evid.fatto?1:0)):LOG; // split già decisi
   let s='';
   if(evid&&evid.node){const a=X(Math.max(DMIN,evid.node.lo)),b=X(Math.min(DMAX,evid.node.hi));s+=`<rect x="${a}" y="4" width="${b-a}" height="150" fill="#ecfdf5" stroke="#a7f3d0"/>`;}
+  else if(SEL){const a=X(Math.max(DMIN,SEL.lo)),b=X(Math.min(DMAX,SEL.hi));s+=`<rect x="${a}" y="4" width="${b-a}" height="150" fill="#eff6ff" stroke="#93c5fd"/>`;}
   s+=puntini(CAMP.tr,150,140);
   s+=LEGGE.map(t=>`<line x1="${X(t)}" x2="${X(t)}" y1="4" y2="208" stroke="#9ca3af" stroke-dasharray="4 3"/>`).join('');
   for(const nd of split)s+=`<line x1="${X(nd.thr)}" x2="${X(nd.thr)}" y1="${4+nd.depth*6}" y2="208" stroke="#111827" stroke-width="2"/><text class="lab" x="${X(nd.thr)+3}" y="${14+nd.depth*12}" font-weight="700">${num(nd.thr)}</text>`;
@@ -275,8 +291,39 @@ function disegna2(evid){ // evid: {node, t, cand: n} durante l'animazione
   $('linea2').innerHTML=s;
   $('codeA').innerHTML=codiceLegge();
   $('codeB').innerHTML=fatto?codiceAlbero(T):righe([`${kw('def')} <span class="fn">multa_imparata</span>(differenza):`,`    <span class="cm"># sto provando le soglie…</span>`]);
-  if(!evid)disegnaGini(LOG[0]||null,null);
+  if(!evid)disegnaGini(SEL&&SEL.thr!==undefined?SEL:(LOG[0]||null),null);
+  disegnaAlbero(evid);
   testo2(evid);
+}
+function disegnaAlbero(evid){
+  const fatti=evid?evid.k+(evid.fatto?1:0):LOG.length,divisi=new Set(LOG.slice(0,fatti)),visti=new Set([T]);
+  for(const nd of divisi){visti.add(nd.left);visti.add(nd.right);}
+  const bw=Math.min(150,780/FOGLIE-10),bh=58,dy=Math.min(84,(300-30-bh)/Math.max(1,PROF)),
+        nx=n=>20+(n.slot+.5)/FOGLIE*780,ny=n=>24+n.depth*dy;
+  let s=`<text class="axt" x="20" y="13">L'albero${evid?' mentre cresce':''}: ogni riquadro è un gruppo di multe${evid?'':' (clicca un riquadro per vederlo sulla linea)'}</text>`;
+  // rami
+  for(const nd of divisi)for(const [fg,et] of [[nd.left,'sì'],[nd.right,'no']]){
+    const x1=nx(nd),y1=ny(nd)+bh,x2=nx(fg),y2=ny(fg);
+    s+=`<line x1="${x1}" x2="${x2}" y1="${y1}" y2="${y2}" stroke="#9ca3af" stroke-width="1.5"/><text class="tick" x="${x1+(x2-x1)*.45+(et==='sì'?-12:12)}" y="${y1+(y2-y1)*.45+4}" text-anchor="middle" font-weight="700" fill="${et==='sì'?'#059669':'#dc2626'}">${et}</text>`;}
+  // nodi
+  for(const nd of NODI){if(!visti.has(nd))continue;
+    const x=nx(nd)-bw/2,y=ny(nd),foglia=nd.thr===undefined,diviso=divisi.has(nd),
+          corrente=evid&&evid.node===nd&&!evid.fatto,scelto=SEL===nd;
+    let tit,col='#fff',bordo='#9ca3af',spes=1.5,trat='',coltxt='#1f2937';
+    if(foglia){tit=`multa ${CL[nd.cls]} €`;col=HEX[nd.cls];bordo=HEX[nd.cls];coltxt=nd.cls>=3?'#fff':'#1f2937';}
+    else if(diviso){tit=(bw>=128?'Differenza ':'')+`≤ ${num(nd.thr)}`;bordo='#111827';}
+    else if(corrente){tit=`provo ≤ ${num(evid.t)}`;bordo='#059669';spes=3;coltxt='#059669';}
+    else{tit='da dividere…';trat='stroke-dasharray="5 4"';coltxt='#6b7280';}
+    if(scelto){bordo='#2563eb';spes=3;}
+    s+=`<g class="nodo" data-i="${nd.i}"><rect class="box" x="${x}" y="${y}" width="${bw}" height="${bh}" rx="7" fill="${col}" stroke="${bordo}" stroke-width="${spes}" ${trat}/>`+
+       `<text x="${x+bw/2}" y="${y+18}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${coltxt}">${tit}</text>`+
+       `<text x="${x+bw/2}" y="${y+34}" text-anchor="middle" font-size="11" fill="${foglia?coltxt:'#6b7280'}">${nd.n} multe</text>`;
+    // di che multe è fatto il gruppo
+    let bx=x+8;const lw=bw-16;
+    if(!foglia)nd.c.forEach((k,j)=>{if(!k)return;const w=k/nd.n*lw;s+=`<rect x="${bx}" y="${y+41}" width="${w}" height="9" fill="${HEX[j]}" stroke="#fff" stroke-width=".5"/>`;bx+=w;});
+    s+=`</g>`;}
+  $('albero').innerHTML=s;
+  $('albero').querySelectorAll('.nodo').forEach(g=>g.onclick=()=>{if(anim)return;const nd=NODI[+g.dataset.i];SEL=SEL===nd?null:nd;disegna2();});
 }
 function disegnaGini(node,fino){
   let s=`<text class="axt" x="${XL}" y="14">Quanto restano mescolati i due gruppi (impurità di Gini), per ogni soglia provata${node?'':' — premi ▶'}</text>`;
@@ -292,11 +339,11 @@ function disegnaGini(node,fino){
 function testo2(evid){
   const n=NS[S.ni],iv=intervalli(T),visti=new Set(CAMP.tr.map(i=>Y[i]));
   let t;
-  if(evid&&evid.node){const nd=evid.node;t=evid.fatto
-      ?`Split ${evid.k+1} di ${LOG.length}: la curva è più bassa a <b>${num(nd.thr)}</b>, e lì l'albero taglia. A sinistra restano ${nd.left.n} multe, a destra ${nd.right.n}; su ognuno dei due gruppi ricomincia da capo.`
-      :`Split ${evid.k+1} di ${LOG.length}. L'albero guarda solo le ${nd.n} multe nella zona verde e prova a tagliare in ogni punto tra due multe vicine (ora: ${num(evid.t)}). Per ogni taglio misura quanto restano <b>mescolati</b> i due gruppi: la curva verde sotto. Terrà il taglio con la curva più bassa.`;}
+  if(evid&&evid.node){const nd=evid.node,fg=x=>x.thr===undefined?`è una foglia: tutte multe da ${CL[x.cls]} €`:'è ancora mescolato, verrà diviso';t=evid.fatto
+      ?`Split ${evid.k+1} di ${LOG.length}: la curva è più bassa a <b>${num(nd.thr)}</b>, e lì l'albero taglia. Nel disegno nascono due rami: <b>sì</b> (differenza ≤ ${num(nd.thr)}, ${nd.left.n} multe) ${fg(nd.left)}; <b>no</b> (${nd.right.n} multe) ${fg(nd.right)}.`
+      :`Split ${evid.k+1} di ${LOG.length}. L'albero lavora sul riquadro verde: le sue ${nd.n} multe sono nella zona verde della linea. Prova a tagliare in ogni punto tra due multe vicine (ora: ${num(evid.t)}) e per ogni taglio misura quanto restano <b>mescolati</b> i due gruppi (curva verde in basso). Terrà il taglio con la curva più bassa.`;}
   else{const mancano=CL.filter((c,k)=>!visti.has(k));
-    t=`Con <b>${n}</b> multe l'albero ha scritto ${iv.length} casi (${LOG.length} split). Le linee nere sono le sue soglie, le tratteggiate quelle della legge; i numeri arancioni nel codice sono le soglie diverse dalla legge (sugli interi, 10,5 vale come 10).`+
+    t=`Con <b>${n}</b> multe l'albero ha ${LOG.length} domande (i riquadri bianchi) e ${FOGLIE} foglie (i riquadri colorati, una multa ciascuna). Si legge dall'alto: a ogni domanda si va a sinistra se la risposta è sì. Sulla linea, le soglie nere sono le sue e le tratteggiate quelle della legge; nel codice, in arancione le soglie diverse dalla legge (sugli interi, 10,5 vale come 10).`+
       (mancano.length?` Nel campione non c'è nessuna multa da ${mancano.join(' e da ')} €: l'albero non può inventarla.`:'')+
       (S.prof&&S.prof<3?` Con profondità ${S.prof} può fare al massimo ${2**S.prof} casi: troppo pochi per cinque multe.`:'')+
       ` Prova ▶ per vedere come ci arriva, poi cambia il numero di multe o il campione.`;}
