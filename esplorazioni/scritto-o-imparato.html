@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scritto o imparato?</title>
+<style>
+  :root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--soft:#f8fafc;--p1:#2563eb;--p2:#059669;--p3:#7c3aed;--ok:#16a34a;--ko:#dc2626;
+        --c0:#cbd5e1;--c1:#fdba74;--c2:#f97316;--c3:#c2410c;--c4:#7c2d12}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;padding:12px 14px;font-size:14px;line-height:1.45}
+  [hidden]{display:none!important}
+  .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+  .modi{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:0 0 12px;align-items:flex-end}
+  .modi a{padding:8px 14px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;color:var(--ink)}
+  .modi a b{color:var(--muted);margin-right:4px}
+  .modi a:hover{border-color:var(--line)}
+  .modi a.on{border-color:var(--p2);color:var(--p2)}
+  .modi a.on b{color:var(--p2)}
+  .fs{margin-left:auto;align-self:center;font:inherit;font-size:12.5px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:5px 11px;cursor:pointer}
+  .row{display:flex;gap:10px 18px;align-items:center;flex-wrap:wrap;margin:0 0 10px}
+  label{display:flex;gap:8px;align-items:center}
+  input[type=range]{width:200px;accent-color:var(--p2)}
+  .chip{font:inherit;font-size:12.5px;font-weight:600;line-height:1;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 10px;cursor:pointer}
+  .chip.on{border-color:var(--p2);background:var(--p2);color:#fff}
+  .btn{font:inherit;font-weight:700;border:1px solid var(--p2);background:var(--p2);color:#fff;border-radius:8px;padding:7px 13px;cursor:pointer}
+  .btn.alt{background:#fff;color:var(--p2)}
+  .btn:disabled{opacity:.4;cursor:default}
+  svg{width:100%;height:auto;display:block;overflow:visible}
+  .tick{font-size:11px;fill:var(--muted)}
+  .axt{font-size:12px;fill:var(--ink);font-weight:600}
+  .lab{font-size:11.5px;fill:var(--ink)}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+  .card{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--soft)}
+  .card p{margin:4px 0 0}
+  .card.si{background:#ecfdf5;border-color:#a7f3d0}.card.si .k{color:var(--p2)}
+  .due{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  /* codice */
+  .code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;background:#0f172a;color:#e2e8f0;border-radius:10px;padding:10px 0;margin:0;overflow-x:auto}
+  .code .l{display:flex;padding:1px 12px;white-space:pre;border-left:3px solid transparent}
+  .code .l.vero{background:rgba(5,150,105,.28);border-left-color:#34d399}
+  .code .l.falso{background:rgba(220,38,38,.16);border-left-color:#f87171}
+  .code .l.ret{background:rgba(5,150,105,.45);border-left-color:#34d399;font-weight:700}
+  .code .n{color:#64748b;width:22px;flex:none;user-select:none}
+  .code .kw{color:#c4b5fd}.code .num{color:#fbbf24}.code .num.diversa{color:#fb923c;background:rgba(251,146,60,.18);border-radius:3px}
+  .code .fn{color:#7dd3fc}.code .cm{color:#64748b}
+  .code .esito{margin-left:auto;padding-left:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:11.5px;font-weight:700}
+  .titcode{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 4px}
+  /* numeri grandi */
+  .big{display:flex;gap:10px;flex-wrap:wrap}
+  .st{border:1px solid var(--line);border-radius:10px;padding:8px 12px;min-width:120px;background:#fff}
+  .st .v{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
+  .st.ok .v{color:var(--ok)}.st.ko .v{color:var(--ko)}
+  .multa{display:inline-block;min-width:64px;text-align:center;border-radius:8px;padding:2px 8px;font-weight:800;color:#fff}
+  .legenda{display:flex;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+  .legenda i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+  table.err{border-collapse:collapse;font-size:13px;width:100%}
+  table.err td,table.err th{padding:4px 8px;border-bottom:1px solid var(--line);text-align:left}
+  table.err th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .hint{color:var(--muted);font-size:12.5px}
+  @media (max-width:700px){.due{grid-template-columns:1fr}}
+  /* schermo intero 16:9: grafici a sinistra, codice e testi a destra */
+  html:fullscreen{background:#fff}
+  html:fullscreen body{height:100vh;overflow:hidden;display:flex;flex-direction:column;padding:14px 26px;font-size:15px}
+  html:fullscreen .pannello{flex:1;min-height:0}
+  html:fullscreen .grid{height:100%;grid-template-columns:minmax(0,1fr) clamp(340px,32vw,520px);gap:24px}
+  html:fullscreen .vis{display:flex;flex-direction:column;justify-content:center;min-height:0}
+  html:fullscreen .side{overflow-y:auto;min-height:0;display:flex;flex-direction:column;gap:10px}
+  html:fullscreen .due{grid-template-columns:1fr}
+  html:fullscreen .code{font-size:14px}
+</style></head><body>
+
+<nav class="modi" id="modi">
+  <a data-t="0" class="on"><b>1</b>Scritto a mano</a>
+  <a data-t="1"><b>2</b>Imparato dai dati</a>
+  <a data-t="2"><b>3</b>Messi alla prova</a>
+  <button class="fs" id="fs" hidden>⛶ Schermo intero</button>
+</nav>
+
+<!-- ============ 1. Scritto a mano ============ -->
+<section class="pannello" id="t0">
+ <div class="grid">
+  <div class="vis">
+    <div class="row">
+      <label><span class="k">Velocità</span><input type="range" id="vel" min="30" max="160" value="104"><b id="velv"></b></label>
+      <span class="k">Limite</span><span id="limiti"></span>
+    </div>
+    <svg id="linea1" viewBox="0 0 820 150"></svg>
+    <div class="big" style="margin-top:6px">
+      <div class="st"><div class="k">Differenza</div><div class="v" id="diff1"></div></div>
+      <div class="st"><div class="k">Multa</div><div class="v" id="multa1"></div></div>
+    </div>
+  </div>
+  <div class="side">
+    <div class="titcode"><span class="k">Il codice scritto a mano (modulo 2)</span><span class="hint">verde: la riga eseguita</span></div>
+    <pre class="code" id="code1"></pre>
+    <div class="card si"><div class="k">Cosa guardare</div><p>Muovi la velocità e guarda quale riga esegue Python: le condizioni si controllano dall'alto, e alla prima vera la funzione si ferma. Il codice è <b>deterministico</b>: stessa auto, stessa multa, sempre. Le soglie 0, 10, 40 e 60 le ha scritte una persona leggendo l'articolo 142. Se la legge cambia, qualcuno deve riscrivere il codice.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- ============ 2. Imparato dai dati ============ -->
+<section class="pannello" id="t1" hidden>
+ <div class="grid">
+  <div class="vis">
+    <div class="row">
+      <label><span class="k">Multe viste dall'albero</span><input type="range" id="nsl" min="0" max="9" step="1" value="3"><b id="nv"></b></label>
+      <button class="btn alt" id="nuovo">↻ Nuovo campione</button>
+      <span class="k">Profondità</span><span id="prof"></span>
+    </div>
+    <div class="row">
+      <button class="btn" id="anima">▶ Guarda come impara</button>
+      <button class="btn alt" id="salta" hidden>⏭ Salta alla fine</button>
+      <span class="legenda" id="legenda"></span>
+    </div>
+    <svg id="linea2" viewBox="0 0 820 250"></svg>
+    <svg id="gini" viewBox="0 0 820 150"></svg>
+  </div>
+  <div class="side">
+    <div class="due">
+      <div><div class="titcode"><span class="k">Scritto a mano</span></div><pre class="code" id="codeA"></pre></div>
+      <div><div class="titcode"><span class="k">Scritto dall'albero</span></div><pre class="code" id="codeB"></pre></div>
+    </div>
+    <div class="card si" id="spiega2"><div class="k">Cosa guardare</div><p id="testo2"></p></div>
+  </div>
+ </div>
+</section>
+
+<!-- ============ 3. Messi alla prova ============ -->
+<section class="pannello" id="t2" hidden>
+ <div class="grid">
+  <div class="vis">
+    <div class="row">
+      <label><span class="k">Multe viste dall'albero</span><input type="range" id="nsl3" min="0" max="9" step="1" value="3"><b id="nv3"></b></label>
+      <button class="btn alt" id="nuovo3">↻ Nuovo campione</button>
+    </div>
+    <div class="big">
+      <div class="st ok"><div class="k">Accuracy sul training</div><div class="v" id="acctr"></div></div>
+      <div class="st" id="sttest"><div class="k">Accuracy sul test</div><div class="v" id="accte"></div></div>
+      <div class="st"><div class="k">Auto nuove sbagliate</div><div class="v" id="nerr"></div></div>
+    </div>
+    <svg id="linea3" viewBox="0 0 820 170" style="margin-top:8px"></svg>
+    <svg id="curva" viewBox="0 0 820 230"></svg>
+  </div>
+  <div class="side">
+    <div><div class="k" style="margin-bottom:4px">Dove sbaglia sul test</div><table class="err" id="errori"></table></div>
+    <div class="card">
+      <div class="k">Prova un'auto</div>
+      <div class="row" style="margin:6px 0 4px"><label><span class="k">Velocità</span><input type="range" id="vel3" min="30" max="160" value="100"><b id="vel3v"></b></label></div>
+      <div class="row" style="margin:0"><span class="k">Limite</span><span id="limiti3"></span></div>
+      <p id="prova3"></p>
+    </div>
+    <div class="card si"><div class="k">Cosa guardare</div><p>Sul training l'albero prende sempre il 100 %: quelle multe le ha già viste. Conta solo il <b>test</b>, le auto che non ha mai visto. Con poche multe gli errori stanno tutti vicino alle soglie, e una multa assente dal training non verrà mai prevista. La curva in basso è la media di 20 campioni diversi per ogni numero di multe.</p></div>
+  </div>
+ </div>
+</section>
+
+<script>
+// Differenza tra velocità e limite delle 5.000 auto di autovelox.csv (la multa si ricava dalla legge: il file e la legge coincidono)
+const D=[-7,-88,44,80,14,-63,60,-3,-59,-7,-27,73,-18,-45,53,15,-65,22,-74,17,-4,42,43,9,-18,11,64,29,59,-23,-49,-27,33,8,50,-19,-44,91,32,51,-19,34,2,89,-36,0,6,58,47,96,-34,70,-87,52,89,68,57,-40,75,7,-60,-36,41,13,-44,-39,74,21,-4,54,-64,77,24,-47,-32,-71,-40,29,24,-45,41,35,93,29,72,-29,-25,-24,38,-84,-26,0,-44,-62,43,17,3,-39,-15,56,99,45,-8,79,33,32,70,-32,1,-58,41,57,7,-19,-65,35,33,-17,16,59,74,-25,-5,-47,-3,-24,-19,37,-19,-78,-19,-22,34,97,9,48,-81,-47,-71,8,-11,7,-17,27,83,47,8,25,-2,37,24,-8,-49,-68,-14,-13,-48,-20,73,55,57,-32,50,87,-51,34,-7,-84,-27,26,0,-57,20,-13,10,-70,8,87,34,67,-26,74,-47,19,30,-11,40,-2,22,-7,5,-7,-42,-72,9,10,-25,10,4,-39,-13,-51,-23,-63,34,-75,-72,-36,-14,28,55,43,-51,-20,2,31,-22,-42,-41,72,-11,-42,-8,59,61,51,14,1,-11,22,4,25,65,29,11,43,-17,56,-45,84,-26,-13,40,17,-67,-7,87,-16,-70,10,16,15,45,-1,27,50,-44,-13,74,66,11,-44,-7,1,42,-17,-7,-6,-60,4,-12,13,52,-44,34,-72,-7,-78,50,75,2,8,39,15,51,-9,-6,20,-1,49,15,-38,-9,-45,64,35,-10,18,54,74,23,11,14,-54,-6,-19,-54,-50,-27,60,-7,24,20,0,-69,6,3,25,20,-21,45,47,20,-41,37,39,36,32,15,66,18,30,-8,0,-6,-28,-43,67,-13,61,-63,67,-44,-56,-40,40,3,-13,24,5,-45,11,67,-34,48,-20,71,-3,27,-85,90,4,33,38,-6,-36,10,-25,57,38,-31,100,-49,-5,12,57,78,63,0,-52,-6,62,-7,75,-9,-20,-63,21,12,7,-62,45,72,78,-82,-41,-2,3,44,-80,52,-15,-29,3,9,-54,-27,-37,83,54,-73,18,-13,13,13,-17,-38,25,-13,76,8,-7,67,82,3,-64,-49,1,-24,-55,0,-55,-11,-58,57,-16,22,34,-65,42,-46,10,85,50,-16,77,72,20,94,-13,59,26,57,5,-49,-52,29,43,49,97,-24,-77,-1,2,-45,-58,-25,30,6,20,-85,-21,-16,49,-10,-42,1,-6,60,61,63,-20,-79,36,30,-6,25,42,8,2,-63,-37,59,19,8,63,-70,26,16,38,3,-1,11,80,41,-41,85,-23,-38,-11,-15,-22,-62,33,-6,17,-5,-10,43,3,-33,71,-22,39,5,51,-74,93,19,-44,13,11,0,61,46,10,-26,50,13,-5,15,57,39,39,53,-20,61,-89,-43,9,9,4,17,-2,83,14,-28,51,-19,-10,-73,21,-23,-55,-32,25,35,10,-30,21,-28,-31,32,-6,-86,-11,-40,82,-55,40,-55,-58,28,-16,-53,7,69,77,1,3,-6,15,63,84,-4,0,-83,-3,-7,-32,96,30,2,-10,-4,-10,-9,26,-69,-15,19,40,-6,-3,-59,44,66,35,8,-69,72,11,42,-28,17,1,68,10,31,23,-27,33,14,-85,7,45,44,-27,-13,85,43,15,18,45,-80,10,89,67,37,30,0,-10,-4,15,-10,-67,71,-22,72,-36,40,44,81,-5,68,48,17,18,18,51,18,-13,48,1,26,35,35,24,35,4,77,6,-38,17,-30,-7,-45,29,80,33,-15,-9,-38,23,54,-75,61,14,-33,49,17,-83,15,-8,48,28,4,26,-43,12,-48,-52,-45,-44,-85,-8,59,-53,-84,24,-6,-5,-69,9,85,-19,-57,-9,-31,70,-7,6,27,-45,-8,-44,-1,-40,18,-2,38,13,11,37,78,15,12,-62,-50,22,-3,-41,-4,-14,98,-26,52,6,-30,25,97,41,39,56,-36,32,37,-11,69,1,-5,24,-11,9,-23,-14,-86,-10,23,17,-28,30,14,-86,26,-69,-18,43,16,79,51,19,-12,99,40,1,-14,-65,6,27,10,3,-87,14,-6,23,-15,55,18,20,22,-20,-5,30,-8,59,2,18,-38,-2,5,-22,-38,28,71,35,24,91,83,58,7,3,28,-11,-67,6,3,57,-56,28,35,-68,8,4,30,49,0,-18,-34,-8,19,47,88,38,-43,24,-21,4,2,-57,-11,-66,-15,-67,-71,10,-82,-2,-19,32,92,-66,-5,30,-18,18,15,-17,47,17,-27,9,90,-31,78,-63,-63,-66,-24,-46,46,-39,-28,-22,-35,51,7,4,-5,4,0,31,88,53,-4,-32,-41,-77,51,-31,-29,-8,-21,38,27,6,-5,30,14,-18,-23,-2,70,-30,-5,-7,-46,-41,66,-45,37,40,2,-8,88,36,16,28,-56,-41,79,8,-16,-35,75,-17,3,80,21,-25,-36,10,-70,-49,50,6,-24,17,-16,18,-86,90,88,63,89,-68,-44,13,-70,17,-37,-48,98,-19,-19,50,23,-19,16,31,-29,-17,34,51,-34,-21,-40,18,31,29,65,59,35,59,-60,8,-21,9,-30,-4,56,38,-9,94,16,43,-47,43,-28,-27,-55,38,13,22,5,23,17,-38,12,-25,12,-87,49,3,-6,20,-76,36,-87,-20,52,51,-63,-22,77,10,44,-5,-5,-29,35,-27,20,-19,-8,16,75,-21,62,77,90,11,-7,-2,3,-40,-13,-1,-5,-37,16,-16,54,92,-14,74,1,31,14,67,16,24,18,26,-50,-57,-19,1,43,1,45,-28,-49,48,-18,3,57,43,24,18,45,-10,-49,-75,-69,-29,31,63,51,77,-35,-6,-64,-4,13,-85,39,-33,54,-67,48,10,74,-37,0,-71,-47,-16,9,-48,-37,14,40,-19,4,23,-9,14,-43,12,86,-48,-17,32,24,-7,8,36,-6,70,-33,2,-27,12,-70,-75,18,-85,-55,-45,58,-44,11,-34,-37,9,-25,-62,18,93,31,6,72,-3,-18,3,-10,-15,-5,49,-47,20,79,15,16,-28,-20,-58,-20,19,7,-49,35,55,88,-28,-7,-39,22,-27,-14,-51,-12,-58,-10,-11,44,58,23,1,6,-6,36,-86,2,-17,38,-30,36,-2,-58,41,-40,-13,44,-2,38,-14,1,24,17,60,22,-17,-3,50,55,-27,27,47,39,15,4,14,35,24,13,-1,-23,-9,-80,48,24,-48,7,5,5,15,-26,-34,-88,-6,78,-52,3,-43,-14,1,12,-36,-29,-78,42,-6,-20,-47,-11,-48,57,-24,-25,-45,8,-23,45,33,25,73,-51,64,46,55,-35,-9,18,-15,-9,28,12,44,16,27,-37,-27,-21,-12,-80,-2,-81,-11,-30,-64,-42,41,56,17,-89,-6,18,22,-19,20,19,-24,15,-65,27,50,57,22,43,53,-4,3,-33,6,47,-49,14,33,-44,-19,6,-18,7,-39,54,-29,19,77,-20,-53,-37,31,-35,-5,-5,14,-6,38,-24,-48,18,-16,10,29,-56,-37,-81,12,9,9,48,-6,-26,-51,-19,-32,-1,-56,-40,-30,-19,71,33,-27,40,62,-13,-8,23,-3,3,38,-54,-27,30,-43,14,-15,15,0,62,-22,-84,63,-23,-53,-86,17,50,8,-82,64,68,93,-41,83,24,3,-83,-35,-24,13,-1,-48,3,-43,1,90,-18,12,-48,-31,57,9,0,67,4,-6,46,73,-38,-2,79,-80,-61,10,-20,9,4,1,-44,26,-46,6,-62,-63,4,69,-50,20,21,33,70,-16,6,-5,16,-4,2,52,-11,-72,-26,-21,21,-47,40,98,17,-20,-57,62,86,65,7,52,-16,41,-47,-1,-76,3,69,10,27,56,54,43,25,72,-52,57,5,-4,68,24,-38,21,-23,38,18,-70,-32,44,74,14,-52,8,25,56,-15,-9,91,-9,-31,91,-7,-24,-26,38,71,90,-27,2,10,4,8,-42,36,29,-8,17,-46,-5,8,33,-34,-44,15,9,-5,-65,-83,-40,-1,3,-23,-38,-3,12,-20,-60,-16,-70,-34,-11,34,-49,55,-20,18,1,45,42,-77,55,10,11,-37,-54,-22,13,-56,-22,64,57,70,-38,-64,30,26,-46,-15,-39,74,15,8,35,-20,53,5,65,-29,-10,38,-21,5,-31,-81,-45,17,31,48,100,-44,28,-2,16,29,96,-13,-72,-19,-12,23,55,-1,-49,-40,56,60,-6,87,-39,51,52,8,-27,48,-21,-24,-85,17,31,76,0,-7,-50,55,42,35,24,-30,-34,-20,-12,24,73,10,16,62,35,73,51,-2,-24,12,-28,-8,94,80,4,-14,-22,-35,19,-18,15,1,78,-8,1,23,34,5,57,32,-18,51,50,-25,7,49,4,-47,97,20,-24,43,17,-3,21,19,21,37,-16,18,12,12,90,21,-54,35,14,57,9,-5,-46,-67,13,5,-46,59,-37,67,-33,-3,36,-11,42,56,-11,-28,-5,-20,-16,25,-12,-4,-79,-1,6,63,77,7,-1,95,28,4,60,-70,-18,-9,58,16,40,13,20,18,-46,30,-19,-68,-60,-21,15,41,29,-33,79,65,7,-9,70,24,26,-39,-77,28,-12,77,-15,19,6,-35,-39,-70,-76,4,23,-50,-5,58,78,35,-4,21,14,34,80,28,59,26,-87,-26,-64,-29,54,15,63,-3,75,37,28,31,14,56,53,-55,-47,52,-9,-63,-7,37,21,91,42,45,-13,13,-28,32,-30,-5,15,-46,64,13,-39,-32,2,-36,1,-40,-5,44,-36,-68,50,-37,-57,92,-28,-18,-18,19,-38,2,36,32,52,-17,39,33,72,-32,15,-47,-40,36,-4,13,91,-43,23,72,-14,-25,-6,-60,93,-35,33,-19,13,-6,59,-32,10,-51,-86,-53,-5,35,-37,31,73,-50,-7,-42,-48,7,-89,-20,6,10,-41,1,10,54,-11,-40,34,12,-50,44,-6,39,68,45,17,41,-30,-2,36,81,13,-1,26,20,15,-15,11,-21,-41,-13,-71,-47,44,-55,23,18,-9,17,95,45,29,-24,27,-61,16,38,-88,55,16,-26,-19,33,32,-39,38,24,55,33,-39,57,65,10,-26,30,-40,-64,42,6,-4,8,58,54,9,12,20,19,12,-6,-2,-81,55,1,-17,67,11,13,-32,-54,30,51,8,-54,-11,28,-84,68,-9,49,-56,-26,0,88,50,56,-58,62,10,-11,35,6,50,42,-9,-65,-20,-37,-38,-32,48,-32,78,41,-47,-21,-11,-69,-13,-11,5,54,25,-21,-43,34,-3,55,13,-49,76,16,97,-5,-15,44,52,90,32,72,74,50,63,-9,73,-37,-28,-2,-11,26,47,82,100,-2,64,-13,10,-45,-19,41,-19,-17,-68,15,-28,19,44,75,-12,20,-1,-18,2,8,4,35,36,18,7,-60,5,18,16,1,19,32,14,-17,68,19,-61,26,3,-8,24,26,52,-27,57,-22,37,0,35,-37,15,8,4,-25,72,76,58,5,17,78,3,-49,77,-11,77,-43,22,-5,59,37,31,-48,0,78,6,53,-69,-19,31,52,-11,-34,32,-51,-45,-12,19,-28,7,15,-33,2,37,-36,-60,80,-38,-42,-24,-27,33,52,-8,-44,53,34,71,-14,28,56,36,61,-16,-49,-8,-55,-2,-25,-15,-87,14,14,76,-17,-78,28,79,-40,-82,-23,-21,40,5,12,-17,-11,-80,10,-16,-24,55,-15,92,8,-19,79,74,41,12,-37,-46,-71,61,-15,-30,-39,97,71,15,-18,-42,17,38,-4,80,-21,-27,-60,6,-41,57,76,-27,30,16,0,33,43,3,34,9,7,-7,-7,-2,-40,-47,-8,-61,-12,-25,39,-38,1,-49,-44,20,16,32,9,-12,58,-60,34,72,33,-63,54,-18,29,46,-76,77,-22,-13,34,-63,-49,14,-50,-16,-43,22,8,-68,-64,14,61,49,-29,-68,-82,-15,24,10,69,-84,-51,83,18,96,-28,-7,-20,47,-83,-15,-7,-7,-40,45,14,-10,48,-8,74,-58,6,-3,-75,59,99,77,-7,-18,-34,-50,41,-63,80,14,25,-55,84,4,-39,-29,57,-43,-5,58,-7,-50,-36,-11,-47,84,54,-46,-54,-44,75,-5,-60,34,57,40,10,8,13,-11,-49,8,12,27,55,-3,-3,-11,17,-12,-19,9,-67,0,68,22,-17,17,-37,-5,29,-17,35,-27,51,0,-45,11,-11,-19,8,89,-27,-16,0,-29,-2,7,5,77,-12,-3,-86,0,-51,-47,-3,0,49,41,-1,-37,-21,-27,-2,0,-43,25,-32,8,84,-68,31,97,-2,54,34,4,38,-58,-17,-1,-39,-41,63,-74,-71,-74,56,-7,45,64,21,32,35,-23,-3,14,31,-38,-15,-51,5,24,-6,62,-11,61,1,-14,-32,70,-16,21,32,-58,45,-16,8,-13,96,65,8,-41,80,-13,3,-56,-32,-63,66,-20,-83,34,54,48,62,-89,-11,-32,29,-66,-8,-7,-85,4,-59,-40,-38,-20,-18,56,-87,-35,80,-72,-14,-31,-22,-67,19,19,-8,4,-80,19,1,41,-57,55,-3,-5,25,-67,-34,88,-8,35,74,12,-6,68,24,5,-13,-32,-71,-32,71,21,-16,-23,-20,-18,-14,4,27,6,44,-30,9,-1,-48,14,6,7,58,-76,54,-8,59,24,99,28,1,-54,-8,-6,-29,-70,61,-66,-81,14,-46,9,-61,-7,-15,16,5,-10,28,-19,-72,63,0,5,-28,-15,63,12,-48,-46,-30,79,-39,-37,-12,31,1,30,-84,-16,34,58,-15,27,-11,61,16,-26,-59,68,-36,-3,-46,-18,17,-34,27,-59,-87,-71,80,39,79,52,-21,-81,8,-2,65,7,-57,-49,12,48,-55,-3,58,-37,2,60,32,1,86,36,-52,28,-61,-84,-48,-38,12,36,-26,-7,-10,22,54,-40,73,-45,12,-38,-51,46,-82,-43,-20,-36,26,51,57,-58,-68,-17,68,17,-75,15,-65,-42,42,-64,-7,69,95,9,29,-39,-56,-14,-9,-31,15,56,28,-59,-42,21,11,26,27,23,-12,-55,1,48,-38,76,58,-5,-75,-21,20,-13,16,12,-5,-10,16,-63,-2,-72,-59,51,-33,83,15,-32,31,-29,-29,96,-11,-9,-62,8,6,14,47,-17,-72,28,-6,-27,-3,-26,66,-11,7,-73,-54,-9,4,-45,-1,-24,36,16,-5,-78,-4,12,-7,27,-84,54,75,-4,-3,-29,46,21,-17,71,-45,-48,-55,-38,28,-7,-19,7,32,37,28,72,-1,49,75,-40,-55,22,17,-24,-44,-85,-23,30,-63,-45,26,-16,-48,-14,-6,-21,28,-4,-7,-9,55,69,-24,42,-76,-27,-42,-42,49,-8,-25,-21,16,-30,5,-5,31,-53,76,1,5,18,86,10,37,-81,-11,-44,-40,50,-28,-29,39,74,59,47,23,-15,-7,-13,22,-42,5,-25,-38,19,-48,2,26,27,48,25,100,-25,31,7,-89,51,-47,-25,-39,-25,12,-13,29,29,-5,-60,-8,-54,-28,30,65,1,17,-3,23,-37,-26,42,79,23,-30,68,89,-38,20,55,-46,-1,89,-21,37,21,7,49,79,30,-23,13,-54,-15,56,-7,-40,59,-30,40,9,-18,-1,-47,43,-54,6,81,-35,-25,-19,-6,92,17,-25,-52,48,52,20,88,-2,-79,47,3,-1,-39,-89,44,-60,32,15,34,48,-38,-66,-83,-31,-10,-38,-50,24,57,19,22,60,69,-36,63,64,4,0,37,21,9,-62,-7,-6,-59,-2,21,-23,34,-34,9,-39,11,-48,79,24,-33,93,74,55,16,84,-29,2,-76,-4,-31,48,37,4,11,-62,59,-54,-89,-87,-49,-70,-79,23,6,29,-51,-51,-12,45,-58,-28,35,-46,63,61,-11,7,10,39,93,-44,-41,15,71,-30,-4,-54,-3,4,-21,26,3,19,-28,-52,47,50,22,75,-7,-29,-84,52,78,-2,25,-14,-55,32,40,25,8,12,20,41,-7,-7,-31,61,-30,-53,7,2,-18,-42,96,27,-38,53,-14,9,0,-9,56,1,-18,-57,11,78,27,4,-52,25,-10,54,-63,8,21,50,0,43,46,1,-3,-2,60,-6,17,10,21,-19,18,17,9,4,43,91,-5,4,29,-44,-30,33,75,-48,80,60,8,58,17,-26,-41,-88,13,-24,-40,-16,-24,-47,-15,-69,74,16,9,15,-70,-30,50,36,14,18,31,63,-11,-52,-3,52,-15,-61,29,11,-25,-77,-13,51,24,61,96,-29,24,-11,-57,-30,-18,-52,-28,58,-73,8,-26,47,8,31,11,61,-16,-21,57,-85,55,3,37,1,40,-24,83,11,10,8,-4,-28,62,-8,0,-49,84,-51,42,-61,12,-19,47,30,-4,3,-4,18,69,15,47,40,29,12,34,79,-4,28,-31,76,5,-35,41,70,47,-51,-30,-21,-9,-23,46,49,19,98,70,55,51,85,58,-31,8,-32,41,-2,28,-37,-70,-28,3,44,-60,-44,9,-47,13,7,31,25,37,15,75,-64,-7,-63,-2,4,-63,-29,3,-70,42,33,3,-17,-7,90,-40,38,3,-19,69,-10,-89,22,87,-54,71,-85,-34,-20,55,64,-11,-3,10,-3,52,58,38,-34,-19,-44,58,0,-6,80,-65,-22,65,-61,-1,-83,36,7,17,34,-16,-41,16,-7,12,56,8,74,-36,-14,-50,19,16,-44,-46,-20,6,16,0,-61,1,22,-3,38,37,-49,-46,-10,89,39,-60,9,-3,11,-11,14,-17,0,-44,9,-32,25,48,-34,58,-17,-22,-11,-22,-20,69,38,24,-43,-4,-32,-24,44,-77,-14,41,-67,-11,5,23,-68,-33,58,39,19,66,14,-20,-12,84,45,17,27,-6,43,88,-41,23,7,-9,55,-71,-52,-11,67,-50,-14,60,-42,-26,12,39,2,43,27,27,-61,14,-23,-35,16,35,54,16,85,-16,83,41,63,31,15,-54,43,23,-53,34,-47,7,-39,-62,-49,-28,24,-16,-54,7,32,-75,-23,88,76,-1,-10,-10,-58,71,-82,-20,43,43,74,5,73,10,36,46,47,36,61,-25,-87,-44,-61,-54,28,-22,-12,-31,50,63,-36,-26,42,12,38,-25,-53,-16,10,13,-9,-3,-87,42,44,-5,51,-13,-22,73,-13,34,19,28,61,8,-39,7,-58,85,-80,52,-50,98,60,-7,16,-25,-37,13,20,83,-28,65,67,2,-13,73,27,-6,-3,-35,44,9,37,-12,38,57,-21,-2,45,13,6,-34,-42,29,-61,17,27,73,-4,-2,-20,-11,-9,39,-44,84,23,33,-31,31,6,53,10,40,52,57,29,31,55,21,-34,-40,-5,58,35,77,-48,-66,-43,42,69,-44,-5,22,0,11,-18,47,5,4,1,1,-48,19,62,13,70,-1,73,58,-52,-7,6,48,16,4,99,3,-37,-50,-65,5,82,-5,-55,-59,3,48,52,56,-3,-39,14,2,-14,-8,-62,16,29,-15,-39,-41,-7,-9,97,-37,-36,-9,-12,-19,63,-3,69,91,-3,-30,-2,71,30,-53,62,-1,32,12,36,78,-18,3,-3,36,4,27,9,-7,85,-7,-50,-9,16,-10,65,9,-72,-41,-1,-22,-3,-83,15,7,46,-8,19,6,-46,45,-60,-52,2,19,-20,62,-27,58,-30,48,1,22,29,9,17,60,-54,-36,80,7,44,-40,-47,34,41,94,-80,1,-63,31,19,40,-22,-43,21,26,36,-16,-1,31,77,47,45,-32,-64,13,43,5,28,-55,-18,-59,83,46,49,79,8,-9,-14,-39,9,-25,-8,39,14,-54,51,11,-68,26,37,30,68,34,50,41,21,63,18,52,-79,80,-70,35,7,20,-22,7,-49,40,-6,-7,41,33,-26,39,-79,-23,-61,38,-38,61,30,-37,24,42,18,62,18,44,56,-17,3,-67,-19,-8,38,78,70,-10,-50,-13,-24,-27,-33,-7,-43,70,-6,49,-66,-13,7,-16,48,-43,19,-3,26,2,15,-11,-6,54,-41,15,-83,76,-37,-80,8,-54,7,25,37,-40,-48,-1,-9,23,-37,-19,1,12,55,-13,31,42,-2,87,3,56,-19,14,-17,-19,56,-15,-3,-30,92,-72,-13,8,18,51,2,-26,30,32,39,18,7,-30,52,-31,-6,-27,-43,22,21,12,-70,-66,-26,-1,7,1,-88,-63,5,25,18,22,7,-33,-13,58,32,50,-30,-6,16,59,12,13,-32,0,-34,-33,-4,-79,0,17,-70,58,1,28,23,94,2,71,26,36,6,7,26,6,-35,-4,28,45,-13,-17,8,-30,70,12,-19,-67,47,-49,14,24,-69,-5,3,-14,-75,60,-77,-17,36,-23,-38,-7,71,53,-38,96,8,-57,46,29,-46,-49,-9,70,-12,-16,-24,-87,1,-31,-22,-8,-30,-26,10,60,-49,-24,-3,-68,30,6,53,-30,-26,17,22,54,-89,84,83,0,60,-23,-22,55,24,36,-47,-50,-88,72,-32,-80,-17,-5,-23,-54,-86,-68,-36,-44,2,40,15,-12,87,-22,1,-3,-83,-27,68,-37,94,11,13,14,27,-29,-1,-26,15,68,-34,-63,12,60,-14,75,21,12,53,38,68,76,1,97,76,-23,56,-49,-8,15,67,-61,39,96,17,-83,-15,5,30,1,73,8,-20,-50,35,-53,10,68,25,-51,17,55,-3,-12,26,33,45,68,-26,69,-60,4,-55,-36,7,22,38,7,51,-28,-66,31,-62,86,-2,-56,-20,3,23,22,26,31,10,-31,-8,-28,-22,2,-65,-59,-36,-26,64,10,-5,4,-5,5,11,38,1,-77,31,-47,-69,-31,40,7,-27,5,52,99,-55,7,37,-37,-4,12,-9,5,-12,76,64,27,-1,54,-12,72,-20,-76,24,80,42,70,51,-73,-3,-8,67,-68,8,-14,-85,16,-33,56,54,-53,-62,60,-32,-55,-20,32,-60,88,-63,31,1,96,50,38,14,-21,90,17,15,2,93,-61,17,3,8,-9,-39,49,2,5,21,-28,-70,4,29,63,20,-2,36,-38,-3,15,52,29,-11,98,9,62,-10,20,32,3,-5,49,-4,8,57,-16,-70,6,-8,-30,-24,96,9,-40,-32,35,-22,-17,14,7,-35,-72,-35,-10,-44,-10,4,-29,-16,23,62,14,-44,81,47,41,-2,2,-41,15,-19,58,-48,-47,8,4,35,17,75,81,4,9,-2,48,45,25,36,61,39,-42,55,-18,-54,73,-70,-4,45,4,58,-27,2,-19,14,47,31,80,8,-49,25,-47,1,-79,-37,-74,-38,-84,73,23,-62,63,26,-7,21,20,-4,-75,-18,-1,-68,80,45,59,5,-3,-47,38,50,88,74,51,43,78,1,-45,-68,-80,12,48,-63,78,-1,6,-10,-58,1,-11,16,9,25,20,42,11,-26,-80,-14,-47,12,-84,13,41,4,10,83,-21,-54,58,10,-28,39,-63,11,-83,20,77,30,-49,-84,-13,-26,-31,-25,21,76,6,-40,2,-15,77,16,-49,27,-62,-74,75,-47,67,12,49,32,72,59,36,21,76,-4,28,71,-37,-25,-20,-12,15,-43,-4,59,-5,-69,5,-54,-72,65,30,9,16,-35,-43,-28,-54,-21,-89,-2,41,-37,-85,43,-62,-11,36,34,-30,35,-35,-1,-77,-15,12,-25,-44,16,-17,3,-68,34,3,-81,-50,22,-12,30,-58,54,-59,-2,25,-4,57,0,15,52,57,34,64,10,23,79,4,39,-51,-28,-9,12,66,38,3,4,-46,80,16,-65,-14,-14,22,32,17,-1,-36,-38,-38,79,37,20,22,68,18,17,5,-4,-89,83,42,20,-3,11,57,70,-37,-33,-17,26,12,-52,25,16,16,-87,24,-29,-20,-9,17,-12,-30,37,-9,68,-63,6,6,-42,-23,-63,-50,10,9,-8,-67,-14,24,43,-49,-41,57,-11,41,-30,-18,16,28,35,-55,51,37,12,36,8,3,28,45,93,27,-22,36,-5,-34,26,-41,-17,17,5,6,-3,17,43,71,-17,64,17,-65,28,-84,-61,14,66,5,33,44,-78,93,77,64,-64,-36,-79,45,11,-73,7,32,-42,28,26,-42,-85,-1,38,52,79,-3,-8,-28,71,18,-27,51,-45,26,-36,53,-21,-11,-66,-49,-3,67,-30,-6,11,65,1,4,-26,32,-18,-72,8,18,-10,20,67,89,37,26,7,65,4,3,12,6,-19,-34,-29,10,27,-11,28,1,-22,-61,-49,-7,33,30,-19,-38,-3,39,-30,-39,11,20,2,-5,-34,-23,-11,56,99,-9,-7,27,-24,72,-11,30,7,31,-6,56,9,-67,-68,31,-20,-64,86,-17,-13,55,-31,13,-22,10,48,18,-43,88,-29,-15,-2,-38,37,75,-48,-41,-14,-11,-63,-26,-34,-61,44,65,65,-78,8,-4,-20,-50,91,70,86,-57,-50,-18,-19,-70,49,26,-43,-40,69,36,12,19,8,93,36,33,81,46,-15,69,-6,39,-57,0,-9,31,-28,19,51,28,56,-24,32,0,-36,-64,-26,25,-40,-2,12,-10,27,7,63,39,-23,-22,72,16,24,-1,21,-9,8,67,34,-48,4,82,-56,12,-14,53,-8,-48,57,-20,11,-5,70,-7,-74,-24,-5,74,78,57,86,65,43,48,10,-10,56,-81,28,-4,92,28,-48,37,-12,-21,20,-46,41,2,53,-29,-37,34,-25,40,28,-3,19,42,-22,-29,37,-17,43,-42,-61,32,-38,-12,9,-45,13,62,-13,25,62,37,69,49,15,-27,-29,9,-21,32,70,0,10,2,-44,17,25,21,-5,-20,81,-19,33,-20,26,10,88,-3,49,-60,-16,10,75,35,-23,48,-56,-62,33,-20,22,85,-86,90,2,5,42,-48,-21,-22,-13,49,-25,2,55,54,-56,9,-16,-30,46,22,25,57,-29,3,-44,65,34,-87,-41,37,-8,28,-74,60,92,41,16,47,61,37,0,8,-65,7,56,20,-85,10,-55,-27,57,53,-21,10,6,49,71,-8,-39,-17,55,-4];
+const CL=[0,36,148,370,500], COL=['var(--c0)','var(--c1)','var(--c2)','var(--c3)','var(--c4)'], HEX=['#cbd5e1','#fdba74','#f97316','#c2410c','#7c2d12'];
+const LEGGE=[0,10,40,60];
+const legge=d=>d<=0?0:d<=10?1:d<=40?2:d<=60?3:4;          // indice della classe
+const Y=D.map(legge);
+const N=D.length, LIMITI=[50,70,90,110,130], NS=[5,10,20,30,50,100,200,500,1000,3500];
+const W=820, XL=56, XR=800, DMIN=-90, DMAX=100;
+const X=d=>XL+(d-DMIN)/(DMAX-DMIN)*(XR-XL);
+const $=id=>document.getElementById(id);
+const num=(v,d=1)=>{const s=(Math.round(v*10**d)/10**d).toString().replace('.',',');return s.replace('-','−');};
+const pct=v=>num(100*v,1)+' %';
+
+let S={tab:0,vel:104,lim:90,ni:3,seed:1,prof:0,vel3:100,lim3:90};
+
+// ---- numeri casuali ripetibili ----
+function rng(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+function campione(n,seed){const r=rng(seed*7919+13),idx=[...Array(N).keys()];for(let i=N-1;i>0;i--){const j=Math.floor(r()*(i+1));[idx[i],idx[j]]=[idx[j],idx[i]];}return{tr:idx.slice(0,n),te:idx.slice(n)};}
+
+// ---- l'albero: CART su una variabile, impurità di Gini (come scikit-learn) ----
+function gini(c,n){if(!n)return 0;let s=1;for(const k of c)s-=(k/n)**2;return s;}
+function conta(ix){const c=[0,0,0,0,0];for(const i of ix)c[Y[i]]++;return c;}
+function maggioranza(c){let b=0;for(let k=1;k<5;k++)if(c[k]>c[b])b=k;return b;}
+function cresci(ix,depth,maxd,lo,hi,log){
+  ix=[...ix].sort((a,b)=>D[a]-D[b]);
+  const c=conta(ix),n=ix.length,node={n,c,cls:maggioranza(c),lo,hi,depth,imp:gini(c,n)};
+  if(node.imp===0||(maxd&&depth>=maxd)||D[ix[0]]===D[ix[n-1]])return node;
+  // prova tutte le soglie: a metà tra due valori consecutivi diversi
+  const L=[0,0,0,0,0],R=[...c],cand=[];let best=null;
+  for(let i=0;i<n-1;i++){L[Y[ix[i]]]++;R[Y[ix[i]]]--;
+    if(D[ix[i]]===D[ix[i+1]])continue;
+    const nl=i+1,nr=n-nl,w=(nl*gini(L,nl)+nr*gini(R,nr))/n,t=(D[ix[i]]+D[ix[i+1]])/2;
+    cand.push({t,w});if(!best||w<best.w)best={t,w,i};}
+  node.thr=best.t;node.cand=cand;node.best=best;
+  if(log)log.push(node);
+  node.left=cresci(ix.slice(0,best.i+1),depth+1,maxd,lo,best.t,log);
+  node.right=cresci(ix.slice(best.i+1),depth+1,maxd,best.t,hi,log);
+  return node;
+}
+function prevedi(node,d){while(node.thr!==undefined)node=d<=node.thr?node.left:node.right;return node.cls;}
+function intervalli(node){ // foglie in ordine, unite se adiacenti con la stessa multa
+  const f=[];(function vai(n){if(n.thr===undefined)f.push({lo:n.lo,hi:n.hi,cls:n.cls});else{vai(n.left);vai(n.right);}})(node);
+  const u=[];for(const x of f){if(u.length&&u[u.length-1].cls===x.cls)u[u.length-1].hi=x.hi;else u.push({...x});}return u;
+}
+
+// ---- codice ----
+const kw=s=>`<span class="kw">${s}</span>`, nm=(s,cl='')=>`<span class="num ${cl}">${s}</span>`;
+function righe(lines,stato={}){return lines.map((h,i)=>`<span class="l ${stato[i]?.cls||''}"><span class="n">${i+1}</span><span>${h}</span>${stato[i]?.esito?`<span class="esito">${stato[i].esito}</span>`:''}</span>`).join('');}
+function codiceLegge(diff){ // con traccia di esecuzione se diff è dato
+  const L=[`${kw('def')} <span class="fn">multa</span>(velocita, limite):`,`    differenza = velocita - limite`,
+    `    ${kw('if')} differenza &lt;= ${nm(0)}:`,`        ${kw('return')} ${nm(0)}`,
+    `    ${kw('elif')} differenza &lt;= ${nm(10)}:`,`        ${kw('return')} ${nm(36)}`,
+    `    ${kw('elif')} differenza &lt;= ${nm(40)}:`,`        ${kw('return')} ${nm(148)}`,
+    `    ${kw('elif')} differenza &lt;= ${nm(60)}:`,`        ${kw('return')} ${nm(370)}`,
+    `    ${kw('else')}:`,`        ${kw('return')} ${nm(500)}`];
+  const st={};
+  if(diff!==undefined){st[1]={cls:'vero',esito:`= ${num(diff,0)}`};const k=legge(diff);
+    for(let j=0;j<4;j++){if(j<k)st[2+2*j]={cls:'falso',esito:'falso'};else if(j===k){st[2+2*j]={cls:'vero',esito:'vero'};st[3+2*j]={cls:'ret',esito:`→ ${CL[k]} €`};break;}}
+    if(k===4){st[10]={cls:'vero'};st[11]={cls:'ret',esito:'→ 500 €'};}}
+  return righe(L,st);
+}
+function codiceAlbero(tree){
+  const iv=intervalli(tree);
+  if(iv.length===1)return righe([`${kw('def')} <span class="fn">multa_imparata</span>(differenza):`,`    ${kw('return')} ${nm(CL[iv[0].cls])}`]);
+  const L=[`${kw('def')} <span class="fn">multa_imparata</span>(differenza):`];
+  iv.forEach((x,i)=>{const giusta=LEGGE.includes(Math.floor(x.hi)); // sugli interi una soglia tra t e t+1 vale come t
+    if(i<iv.length-1)L.push(`    ${kw(i?'elif':'if')} differenza &lt;= ${nm(num(x.hi),giusta?'':'diversa')}:`,`        ${kw('return')} ${nm(CL[x.cls])}`);
+    else L.push(`    ${kw('else')}:`,`        ${kw('return')} ${nm(CL[x.cls])}`);});
+  return righe(L);
+}
+
+// ---- disegno ----
+function asse(y,passo=10){let h=`<line x1="${XL}" x2="${XR}" y1="${y}" y2="${y}" stroke="#9ca3af"/>`;
+  for(let d=-80;d<=DMAX;d+=passo){const x=X(d);h+=`<line x1="${x}" x2="${x}" y1="${y}" y2="${y+4}" stroke="#9ca3af"/>${d%20===0?`<text class="tick" x="${x}" y="${y+16}" text-anchor="middle">${d>0?'+':''}${d}</text>`:''}`;}
+  return h+`<text class="tick" x="${XR}" y="${y+30}" text-anchor="end">differenza tra velocità e limite (km/h)</text>`;}
+function banda(y,h,iv,etich){let s=`<text class="axt" x="${XL-6}" y="${y+h/2+4}" text-anchor="end">${etich}</text>`;
+  for(const x of iv){const a=X(Math.max(DMIN,x.lo)),b=X(Math.min(DMAX,x.hi));s+=`<rect x="${a}" y="${y}" width="${Math.max(0,b-a)}" height="${h}" fill="${HEX[x.cls]}"/>`;
+    if(b-a>34)s+=`<text x="${(a+b)/2}" y="${y+h/2+4}" text-anchor="middle" font-size="11" font-weight="700" fill="${x.cls>=3?'#fff':'#1f2937'}">${CL[x.cls]} €</text>`;}
+  return s;}
+const IV_LEGGE=[{lo:-Infinity,hi:0,cls:0},{lo:0,hi:10,cls:1},{lo:10,hi:40,cls:2},{lo:40,hi:60,cls:3},{lo:60,hi:Infinity,cls:4}];
+
+// 1. scritto a mano
+function disegna1(){
+  const d=S.vel-S.lim,k=legge(d);
+  $('velv').textContent=S.vel+' km/h';
+  $('limiti').innerHTML=LIMITI.map(l=>`<button class="chip ${l===S.lim?'on':''}" data-l="${l}">${l}</button>`).join('');
+  $('limiti').querySelectorAll('button').forEach(b=>b.onclick=()=>{S.lim=+b.dataset.l;disegna1();});
+  $('diff1').textContent=(d>0?'+':'')+d+' km/h';
+  $('multa1').innerHTML=`<span class="multa" style="background:${HEX[k]};color:${k>=3?'#fff':'#1f2937'}">${CL[k]} €</span>`;
+  const x=X(Math.max(DMIN,Math.min(DMAX,d)));
+  $('linea1').innerHTML=banda(60,26,IV_LEGGE,'legge')+LEGGE.map(t=>`<line x1="${X(t)}" x2="${X(t)}" y1="40" y2="92" stroke="#1f2937" stroke-dasharray="4 3"/><text class="lab" x="${X(t)}" y="34" text-anchor="middle">${t}</text>`).join('')+asse(100)+
+    `<g transform="translate(${x},0)"><path d="M0,58 L-8,44 L8,44 Z" fill="#111827"/><text class="axt" y="18" text-anchor="middle">la tua auto</text></g>`;
+  $('code1').innerHTML=codiceLegge(d);
+}
+
+// 2. imparato dai dati
+let T=null,LOG=[],CAMP=null,anim=null,fase=null;
+function ricalcola(){CAMP=campione(NS[S.ni],S.seed);LOG=[];T=cresci(CAMP.tr,0,S.prof,-Infinity,Infinity,LOG);}
+function puntini(ix,yBase,hMax,opac=1,errati=null){
+  const col={};for(const i of ix){(col[D[i]]=col[D[i]]||[]).push(i);}
+  const maxc=Math.max(1,...Object.values(col).map(a=>a.length)),passo=Math.min(9,hMax/maxc),r=Math.max(1.3,Math.min(4,passo/2-.2));
+  let s='';for(const [d,a] of Object.entries(col)){a.sort((p,q)=>Y[p]-Y[q]);a.forEach((i,j)=>{const er=errati&&errati.has(i);
+    s+=`<circle cx="${X(+d)}" cy="${yBase-r-j*passo}" r="${r}" fill="${er?'#dc2626':HEX[Y[i]]}" opacity="${opac}" ${er?'':'stroke="#fff" stroke-width=".5"'}/>`;});}
+  return s;}
+function disegna2(evid){ // evid: {node, t, cand: n} durante l'animazione
+  const n=NS[S.ni];$('nv').textContent=n;
+  $('prof').innerHTML=[[1,'1'],[2,'2'],[3,'3'],[0,'senza limite']].map(([v,t])=>`<button class="chip ${v===S.prof?'on':''}" data-p="${v}">${t}</button>`).join('');
+  $('prof').querySelectorAll('button').forEach(b=>b.onclick=()=>{S.prof=+b.dataset.p;stop();ricalcola();disegna2();});
+  $('legenda').innerHTML=CL.map((c,k)=>`<span><i style="background:${HEX[k]}"></i>${c} €</span>`).join('');
+  const split=evid?LOG.slice(0,evid.k+(evid.fatto?1:0)):LOG; // split già decisi
+  let s='';
+  if(evid&&evid.node){const a=X(Math.max(DMIN,evid.node.lo)),b=X(Math.min(DMAX,evid.node.hi));s+=`<rect x="${a}" y="4" width="${b-a}" height="150" fill="#ecfdf5" stroke="#a7f3d0"/>`;}
+  s+=puntini(CAMP.tr,150,140);
+  s+=LEGGE.map(t=>`<line x1="${X(t)}" x2="${X(t)}" y1="4" y2="208" stroke="#9ca3af" stroke-dasharray="4 3"/>`).join('');
+  for(const nd of split)s+=`<line x1="${X(nd.thr)}" x2="${X(nd.thr)}" y1="${4+nd.depth*6}" y2="208" stroke="#111827" stroke-width="2"/><text class="lab" x="${X(nd.thr)+3}" y="${14+nd.depth*12}" font-weight="700">${num(nd.thr)}</text>`;
+  if(evid&&evid.t!==undefined)s+=`<line x1="${X(evid.t)}" x2="${X(evid.t)}" y1="4" y2="208" stroke="#059669" stroke-width="3"/>`;
+  s+=banda(166,18,IV_LEGGE,'legge');
+  const fatto=!evid;s+=fatto?banda(190,18,intervalli(T),'albero'):`<text class="axt" x="${XL-6}" y="203" text-anchor="end">albero</text><text class="lab" x="${XL+4}" y="203" fill="#6b7280">sta imparando…</text>`;
+  s+=asse(212);
+  $('linea2').innerHTML=s;
+  $('codeA').innerHTML=codiceLegge();
+  $('codeB').innerHTML=fatto?codiceAlbero(T):righe([`${kw('def')} <span class="fn">multa_imparata</span>(differenza):`,`    <span class="cm"># sto provando le soglie…</span>`]);
+  if(!evid)disegnaGini(LOG[0]||null,null);
+  testo2(evid);
+}
+function disegnaGini(node,fino){
+  let s=`<text class="axt" x="${XL}" y="14">Quanto restano mescolati i due gruppi (impurità di Gini), per ogni soglia provata${node?'':' — premi ▶'}</text>`;
+  if(!node){$('gini').innerHTML=s;return;}
+  const c=node.cand,m=fino===null?c.length:fino,ymax=Math.max(...c.map(z=>z.w),.01),yb=130,yt=26,Yg=w=>yb-(w/ymax)*(yb-yt);
+  s+=`<line x1="${XL}" x2="${XR}" y1="${yb}" y2="${yb}" stroke="#9ca3af"/><text class="tick" x="${XL-6}" y="${yb+4}" text-anchor="end">0</text><text class="tick" x="${XL-6}" y="${yt+4}" text-anchor="end">${num(ymax,2)}</text>`;
+  let p='';for(let i=0;i<m;i++)p+=(i?'L':'M')+X(c[i].t).toFixed(1)+','+Yg(c[i].w).toFixed(1);
+  s+=`<path d="${p}" fill="none" stroke="#059669" stroke-width="2"/>`;
+  for(let i=0;i<m;i++)s+=`<circle cx="${X(c[i].t)}" cy="${Yg(c[i].w)}" r="2.2" fill="#059669"/>`;
+  if(m===c.length){const b=node.best;s+=`<circle cx="${X(b.t)}" cy="${Yg(b.w)}" r="6" fill="none" stroke="#111827" stroke-width="2"/><text class="lab" x="${X(b.t)+9}" y="${Yg(b.w)-6}" font-weight="700">la più bassa: soglia ${num(b.t)}</text>`;}
+  $('gini').innerHTML=s;
+}
+function testo2(evid){
+  const n=NS[S.ni],iv=intervalli(T),visti=new Set(CAMP.tr.map(i=>Y[i]));
+  let t;
+  if(evid&&evid.node){const nd=evid.node;t=evid.fatto
+      ?`Split ${evid.k+1} di ${LOG.length}: la curva è più bassa a <b>${num(nd.thr)}</b>, e lì l'albero taglia. A sinistra restano ${nd.left.n} multe, a destra ${nd.right.n}; su ognuno dei due gruppi ricomincia da capo.`
+      :`Split ${evid.k+1} di ${LOG.length}. L'albero guarda solo le ${nd.n} multe nella zona verde e prova a tagliare in ogni punto tra due multe vicine (ora: ${num(evid.t)}). Per ogni taglio misura quanto restano <b>mescolati</b> i due gruppi: la curva verde sotto. Terrà il taglio con la curva più bassa.`;}
+  else{const mancano=CL.filter((c,k)=>!visti.has(k));
+    t=`Con <b>${n}</b> multe l'albero ha scritto ${iv.length} casi (${LOG.length} split). Le linee nere sono le sue soglie, le tratteggiate quelle della legge; i numeri arancioni nel codice sono le soglie diverse dalla legge (sugli interi, 10,5 vale come 10).`+
+      (mancano.length?` Nel campione non c'è nessuna multa da ${mancano.join(' e da ')} €: l'albero non può inventarla.`:'')+
+      (S.prof&&S.prof<3?` Con profondità ${S.prof} può fare al massimo ${2**S.prof} casi: troppo pochi per cinque multe.`:'')+
+      ` Prova ▶ per vedere come ci arriva, poi cambia il numero di multe o il campione.`;}
+  $('testo2').innerHTML=t;
+}
+function stop(){if(anim)cancelAnimationFrame(anim);anim=null;$('anima').disabled=false;$('salta').hidden=true;}
+function anima(){
+  stop();if(!LOG.length){disegna2();return;}
+  $('anima').disabled=true;$('salta').hidden=false;
+  let k=0,t0=performance.now();const durata=nd=>Math.min(2600,700+nd.cand.length*25);
+  (function passo(now){const nd=LOG[k],dur=durata(nd),el=now-t0;
+    if(el<dur){const m=Math.max(1,Math.ceil(el/dur*nd.cand.length));disegna2({k,node:nd,t:nd.cand[m-1].t});disegnaGini(nd,m);}
+    else if(el<dur+1100){disegna2({k,node:nd,fatto:true});disegnaGini(nd,null);}
+    else{k++;t0=now;if(k>=LOG.length){stop();disegna2();return;}}
+    anim=requestAnimationFrame(passo);})(t0);
+}
+
+// 3. messi alla prova
+let CURVA=null,CURVA_PROF=null;
+function curva(){if(CURVA&&CURVA_PROF===S.prof)return CURVA;CURVA_PROF=S.prof;
+  CURVA=NS.map(n=>{const a=[];for(let s=1;s<=20;s++){const c=campione(n,1000+s),t=cresci(c.tr,0,S.prof,-Infinity,Infinity,null);let ok=0;for(const i of c.te)if(prevedi(t,D[i])===Y[i])ok++;a.push(ok/c.te.length);}
+    return{n,m:a.reduce((x,y)=>x+y)/a.length,lo:Math.min(...a),hi:Math.max(...a)};});return CURVA;}
+function disegna3(){
+  const n=NS[S.ni];$('nv3').textContent=n;$('nsl3').value=S.ni;
+  let okTr=0;for(const i of CAMP.tr)if(prevedi(T,D[i])===Y[i])okTr++;
+  const errati=new Set();const gruppi={};
+  for(const i of CAMP.te){const p=prevedi(T,D[i]);if(p!==Y[i]){errati.add(i);const g=Y[i]+'>'+p;(gruppi[g]=gruppi[g]||{vera:Y[i],prev:p,n:0,min:D[i],max:D[i]});const x=gruppi[g];x.n++;x.min=Math.min(x.min,D[i]);x.max=Math.max(x.max,D[i]);}}
+  const acc=1-errati.size/CAMP.te.length;
+  $('acctr').textContent=pct(okTr/n);$('accte').textContent=pct(acc);$('nerr').textContent=errati.size.toLocaleString('it-IT')+' su '+CAMP.te.length.toLocaleString('it-IT');
+  $('sttest').className='st '+(acc>0.995?'ok':'ko');
+  // le auto del test: rosse quelle sbagliate
+  let s=`<text class="axt" x="${XL}" y="12">Le ${CAMP.te.length.toLocaleString('it-IT')} auto del test, colorate con la multa vera; in rosso quelle a cui l'albero dà la multa sbagliata</text>`;
+  s+=puntini(CAMP.te,118,96,.85,errati)+LEGGE.map(t=>`<line x1="${X(t)}" x2="${X(t)}" y1="20" y2="122" stroke="#9ca3af" stroke-dasharray="4 3"/>`).join('')+
+    intervalli(T).slice(0,-1).map(x=>`<line x1="${X(x.hi)}" x2="${X(x.hi)}" y1="20" y2="122" stroke="#111827" stroke-width="1.5"/>`).join('')+asse(124);
+  $('linea3').innerHTML=s;
+  const righe=Object.values(gruppi).sort((a,b)=>a.min-b.min);
+  $('errori').innerHTML=righe.length?`<tr><th>Auto</th><th>Differenza</th><th>Multa vera</th><th>Prevista</th></tr>`+righe.map(g=>`<tr><td><b>${g.n}</b></td><td>${g.min===g.max?num(g.min,0):num(g.min,0)+' … '+num(g.max,0)} km/h</td><td>${CL[g.vera]} €</td><td style="color:var(--ko);font-weight:700">${CL[g.prev]} €</td></tr>`).join(''):'<tr><td>Nessun errore: l\'albero ha trovato le soglie della legge.</td></tr>';
+  // curva
+  const C=curva(),lx=n=>XL+30+(Math.log10(n)-Math.log10(5))/(Math.log10(3500)-Math.log10(5))*(XR-XL-60),ymin=Math.min(.6,...C.map(c=>c.lo)),Yc=v=>200-(v-ymin)/(1-ymin)*170;
+  let h=`<text class="axt" x="${XL}" y="12">Accuracy sul test al crescere delle multe di training (media di 20 campioni; fascia: dal peggiore al migliore)</text>`;
+  for(const v of [ymin,(ymin+1)/2,1]){h+=`<line x1="${XL}" x2="${XR}" y1="${Yc(v)}" y2="${Yc(v)}" stroke="#f1f2f4"/><text class="tick" x="${XL-6}" y="${Yc(v)+4}" text-anchor="end">${Math.round(v*100)}%</text>`;}
+  h+=`<path d="${C.map((c,i)=>(i?'L':'M')+lx(c.n)+','+Yc(c.hi)).join('')}${[...C].reverse().map(c=>'L'+lx(c.n)+','+Yc(c.lo)).join('')}Z" fill="#a7f3d0" opacity=".6"/>`;
+  h+=`<path d="${C.map((c,i)=>(i?'L':'M')+lx(c.n)+','+Yc(c.m)).join('')}" fill="none" stroke="#059669" stroke-width="2.5"/>`;
+  C.forEach((c,i)=>{h+=`<circle cx="${lx(c.n)}" cy="${Yc(c.m)}" r="${i===S.ni?7:4}" fill="${i===S.ni?'#111827':'#059669'}"/><text class="tick" x="${lx(c.n)}" y="218" text-anchor="middle">${c.n}</text>`;});
+  h+=`<text class="lab" x="${lx(n)+10}" y="${Yc(acc)+4}" font-weight="700">questo campione: ${pct(acc)}</text><circle cx="${lx(n)}" cy="${Yc(acc)}" r="4" fill="#dc2626"/>`;
+  $('curva').innerHTML=h;
+  // prova un'auto
+  $('vel3v').textContent=S.vel3+' km/h';
+  $('limiti3').innerHTML=LIMITI.map(l=>`<button class="chip ${l===S.lim3?'on':''}" data-l="${l}">${l}</button>`).join('');
+  $('limiti3').querySelectorAll('button').forEach(b=>b.onclick=()=>{S.lim3=+b.dataset.l;disegna3();});
+  const d=S.vel3-S.lim3,a=CL[legge(d)],b=CL[prevedi(T,d)];
+  $('prova3').innerHTML=`Differenza ${d>0?'+':''}${d} km/h. Codice scritto: <b>${a} €</b>. Albero: <b style="color:${a===b?'var(--ok)':'var(--ko)'}">${b} €</b>${a===b?' — d\'accordo.':' — <b>sbaglia</b>: qui non aveva abbastanza esempi.'}`;
+}
+
+// ---- controlli ----
+function tab(t){S.tab=t;stop();$('modi').querySelectorAll('a').forEach(a=>a.classList.toggle('on',+a.dataset.t===t));[0,1,2].forEach(i=>$('t'+i).hidden=i!==t);
+  if(t===0)disegna1();if(t===1)disegna2();if(t===2)disegna3();}
+$('modi').querySelectorAll('a').forEach(a=>a.onclick=()=>tab(+a.dataset.t));
+$('vel').oninput=e=>{S.vel=+e.target.value;disegna1();};
+$('vel3').oninput=e=>{S.vel3=+e.target.value;disegna3();};
+const cambiaN=v=>{S.ni=+v;$('nsl').value=S.ni;$('nsl3').value=S.ni;stop();ricalcola();S.tab===1?disegna2():disegna3();};
+$('nsl').oninput=e=>cambiaN(e.target.value);$('nsl3').oninput=e=>cambiaN(e.target.value);
+const nuovo=()=>{S.seed++;stop();ricalcola();S.tab===1?disegna2():disegna3();};
+$('nuovo').onclick=nuovo;$('nuovo3').onclick=nuovo;
+$('anima').onclick=anima;$('salta').onclick=()=>{stop();disegna2();};
+document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight'&&S.tab<2)tab(S.tab+1);if(e.key==='ArrowLeft'&&S.tab>0)tab(S.tab-1);if(e.key==='f'&&!$('fs').hidden)$('fs').click();});
+// schermo intero; se il browser rifiuta (iframe senza permesso) apre la pagina in una scheda nuova
+const de=document.documentElement,fsOn=()=>document.fullscreenElement||document.webkitFullscreenElement;
+if(document.fullscreenEnabled||document.webkitFullscreenEnabled){$('fs').hidden=false;
+  $('fs').onclick=()=>{if(fsOn())return(document.exitFullscreen||document.webkitExitFullscreen).call(document);
+    const r=(de.requestFullscreen||de.webkitRequestFullscreen).call(de);if(r&&r.catch)r.catch(()=>{if(window.parent!==window)window.open(location.href,'_blank');});};
+  const lab=()=>$('fs').textContent=fsOn()?'✕ Esci dallo schermo intero':'⛶ Schermo intero';
+  document.addEventListener('fullscreenchange',lab);document.addEventListener('webkitfullscreenchange',lab);}
+ricalcola();tab(0);
+// dentro il sito la pagina sta in un iframe: gli dice quanto è alta
+if(window.parent!==window&&window.ResizeObserver)new ResizeObserver(()=>parent.postMessage({esplorazione:document.body.scrollHeight},'*')).observe(document.body);
+</script>
+</body></html>
