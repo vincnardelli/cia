@@ -1,12 +1,12 @@
 ---
 layout: modulo
 number: 8
-title: Software 2.0
+title: Imparare con gli alberi
 sezione: 2
 language: Python
 idea: "Le regole dell'autovelox non le scriviamo più noi: le trova un albero guardando gli esempi."
-hours: 4
-concepts_new: [Python, Colab, pandas, scikit-learn, albero di classificazione, training e test, accuracy]
+hours: 5
+concepts_new: [Python, Colab, pandas, scikit-learn, albero di classificazione, training e test, accuracy, overfitting, tabella di confusione]
 concepts_required: [if/else, funzioni, ciclo for, data frame, dplyr]
 explorations: [scritto-o-imparato]
 slides_pdf:
@@ -14,17 +14,26 @@ slides:
   - titolo: Lezione 11
     descr: L'autovelox appreso, il primo albero
     pdf: slide/lezione_11.pdf
+  - titolo: Lezione 12
+    descr: Training e test, multe e seggiolini
+    pdf: slide/lezione_12.pdf
 codice:
   - titolo: lezione_11.ipynb
-    descr: il codice della lezione, in Colab
+    descr: il codice della lezione 11, in Colab
     file: codice/11/lezione_11.ipynb
-  - titolo: lab_multe.ipynb
-    descr: lab, le multe imparate
-    file: codice/11/lab_multe.ipynb
+  - titolo: lezione_12.ipynb
+    descr: il codice della lezione 12, in Colab
+    file: codice/12/lezione_12.ipynb
+  - titolo: lab_seggiolini.ipynb
+    descr: lab, vendite alte o basse?
+    file: codice/12/lab_seggiolini.ipynb
 dati:
   - titolo: autovelox.csv
     descr: 5.000 auto davanti all'autovelox
     file: dati/autovelox.csv
+  - titolo: seggiolini.csv
+    descr: 400 negozi di seggiolini per auto
+    file: dati/seggiolini.csv
 ---
 
 {% assign img = site.baseurl | append: "/assets/images/moduli/08/" %}
@@ -97,7 +106,16 @@ Le soglie che trova sono 0,5 · 10,5 · 40,5 · 60,5: sulle differenze intere, �
 
 ## Training e test
 
-Quel 100 % però è sulle stesse multe da cui l'albero ha imparato: è un esame con le stesse domande dell'esercitazione. Per sapere se un modello ha imparato davvero si dividono i dati in due parti: il **training**, da cui impara, e il **test**, tenuto da parte solo per misurare quanto sbaglia.
+Quel 100 % però è sulle stesse multe da cui l'albero ha imparato: è un esame con le stesse domande dell'esercitazione. Uno studente che ha imparato a memoria le soluzioni prende il massimo, ma non sappiamo se ha capito. Un modello si costruisce per usarlo su **casi nuovi**, e per sapere se funzionerà bisogna metterlo alla prova su esempi che non ha mai visto.
+
+Per questo i dati si dividono in due parti, **prima** di cominciare:
+
+- il **training** (di solito il 70–80 %), da cui il modello impara;
+- il **test**, tenuto da parte e mai toccato mentre il modello impara, solo per misurare quanto sbaglia.
+
+L'**accuracy** è la quota di risposte giuste. Quella sul training è sempre ottimista; quella che conta è sul test.
+
+### Le multe con pochi esempi
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -125,9 +143,78 @@ Lontano dalle soglie non sbaglia mai: dove ha visto pochi esempi, indovina.
 
 Con 10 multe l'albero indovina in media il 79 % delle auto nuove, con 100 il 98 %, da 500 in su il 100 %. Sul training è sempre il 100 %: per questo non dice niente.
 
+### I seggiolini per auto
+
+Il secondo esempio è più vicino a un problema di business. Il file `seggiolini.csv` descrive **400 negozi** che vendono seggiolini per auto (dati del libro *An Introduction to Statistical Learning*):
+
+| Colonna | Cosa contiene |
+|---|---|
+| `negozio` | identificativo del negozio, da 1 a 400 |
+| `vendite` | seggiolini venduti, in migliaia |
+| `prezzo` | prezzo del seggiolino nel negozio |
+| `prezzo_concorrenza` | prezzo del concorrente nella stessa zona |
+| `pubblicita` | budget di pubblicità locale, in migliaia di dollari |
+| `scaffale` | posizione sullo scaffale: cattivo, medio, buono |
+| `reddito` | reddito medio della zona, in migliaia di dollari |
+| `popolazione` | abitanti della zona, in migliaia |
+| `eta` | età media della popolazione della zona |
+| `istruzione` | anni di studio medi della zona |
+| `citta` | il negozio è in città: si, no |
+| `usa` | il negozio è negli Stati Uniti: si, no |
+
+**Domanda:** guardando prezzo e pubblicità, sappiamo dire in anticipo quali negozi avranno **vendite alte**, cioè più di 8.000 pezzi? Qui non c'è una regola esatta come per le multe: due negozi con lo stesso prezzo e la stessa pubblicità possono vendere in modo diverso.
+
+```python
+seggiolini["vendite_alte"] = (seggiolini["vendite"] > 8).astype(int)
+
+X = seggiolini[["prezzo", "pubblicita"]]
+y = seggiolini["vendite_alte"]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+
+albero_2 = DecisionTreeClassifier(max_depth=2, random_state=1).fit(X_train, y_train)
+```
+
+Il primo confronto è con il modello più stupido: dire sempre «vendite basse». Sul test indovina il **58,3 %** dei negozi, e un modello vale qualcosa solo se fa meglio.
+
+![L'albero dei seggiolini, profondità 2]({{ img }}seggiolini_albero.png)
+
+![Le zone dell'albero su prezzo e pubblicità]({{ img }}seggiolini_zone.png)
+
+Con poca pubblicità (fino a 6,5) servono prezzi bassissimi (fino a 90,5); con più pubblicità basta un prezzo non troppo alto (fino a 136). L'albero ha il 76,8 % sul training e il **67,5 %** sul test.
+
+### La tabella di confusione
+
+L'accuracy dice *quanto* sbaglia il modello; la **tabella di confusione** dice *come*. Per ogni negozio del test incrocia la classe vera con quella prevista, come `table()` in R:
+
+```python
+pd.crosstab(y_test, albero_2.predict(X_test), rownames=["vere"], colnames=["previste"])
+```
+
+| | previste basse | previste alte |
+|---|---:|---:|
+| **vere basse** | 49 | 21 |
+| **vere alte** | 18 | 32 |
+
+Le risposte giuste sono 49 + 32 = 81 su 120. I 21 negozi con vendite basse dati per alti sono delusioni; i 18 con vendite alte non riconosciuti sono occasioni perse. I due errori non costano uguale.
+
+### Più profondo non vuol dire migliore
+
+Lasciato crescere senza limiti, l'albero dei seggiolini fa 103 foglie: due o tre negozi per foglia. Sul training arriva al 96,4 %, sul test scende al 60,8 %, appena sopra chi dice sempre «basse». Ha imparato a memoria il training, compresi i casi strani che nei negozi nuovi non si ripetono: è l'**overfitting**.
+
+![Accuracy sul training e sul test al crescere della profondità]({{ img }}seggiolini_profondita.png)
+
+Il training sale sempre; il test arriva al 67,5 % con profondità 2 e 3 e poi scende. È il test a dirci dove fermarci.
+
 ## Il lab
 
-`lab_multe.ipynb` contiene sei domande, più due extra, da fare in aula e correggere insieme. Si comincia con pandas sulle multe (quante da 500 €, la differenza media per importo). Poi la funzione e l'albero sulla stessa auto, e alberi allenati su 100 e su 30 multe. Infine il caso in cui nel training manca una multa intera. Prima di eseguire una cella si scrive il risultato che ci si aspetta.
+`lab_seggiolini.ipynb` contiene sei domande, più una extra, da fare in aula e correggere insieme:
+- quanti negozi hanno vendite alte, e il reddito medio delle loro zone;
+- un albero di profondità 3;
+- la posizione sullo scaffale come variabile in più (il test sale al 73,3 %), con la sua tabella di confusione;
+- la previsione per un negozio nuovo;
+- la profondità migliore.
+
+Prima di eseguire una cella si scrive il risultato che ci si aspetta.
 
 ## Per approfondire
 
