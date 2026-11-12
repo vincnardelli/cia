@@ -139,9 +139,14 @@ Con 30 multe l'albero ha il 100 % sul training e il 92,6 % sul test: le soglie d
 
 Lontano dalle soglie non sbaglia mai: dove ha visto pochi esempi, indovina.
 
-![Accuracy sul test al crescere delle multe di training]({{ img }}curva.png)
+Con lo stesso codice e 500 multe nel training (`train_size=500`) le soglie tornano 0,5 · 10,5 · 40,5 · 60,5 e il test sale al 100 %:
 
-Con 10 multe l'albero indovina in media il 79 % delle auto nuove, con 100 il 98 %, da 500 in su il 100 %. Sul training è sempre il 100 %: per questo non dice niente.
+| Multe nel training | Training | Test |
+|---:|---:|---:|
+| 30 | 100 % | 92,6 % |
+| 500 | 100 % | 100 % |
+
+Sul training è il 100 % in tutti e due i casi: per questo l'accuracy sul training non dice niente.
 
 ### I seggiolini per auto
 
@@ -184,22 +189,29 @@ Con poca pubblicità (fino a 6,5) servono prezzi bassissimi (fino a 90,5); con p
 
 ### La tabella di confusione
 
-L'accuracy dice *quanto* sbaglia il modello; la **tabella di confusione** dice *come*. Per ogni negozio del test incrocia la classe vera con quella prevista, come `table()` in R:
+L'accuracy dice *quanto* sbaglia il modello; la **tabella di confusione** dice *come*. Per ogni negozio del test incrocia la classe vera (righe, *True label*) con quella prevista (colonne, *Predicted label*). scikit-learn la disegna con una riga:
 
 ```python
-pd.crosstab(y_test, albero_2.predict(X_test), rownames=["vere"], colnames=["previste"])
+from sklearn.metrics import ConfusionMatrixDisplay
+
+ConfusionMatrixDisplay.from_estimator(albero_2, X_test, y_test, display_labels=["basse", "alte"])
 ```
 
-| | previste basse | previste alte |
-|---|---:|---:|
-| **vere basse** | 49 | 21 |
-| **vere alte** | 18 | 32 |
+![La tabella di confusione dei seggiolini]({{ img }}seggiolini_confusione.png){: style="max-width: 420px" }
 
 Le risposte giuste sono 49 + 32 = 81 su 120. I 21 negozi con vendite basse dati per alti sono delusioni; i 18 con vendite alte non riconosciuti sono occasioni perse. I due errori non costano uguale.
 
 ### Più profondo non vuol dire migliore
 
-Lasciato crescere senza limiti, l'albero dei seggiolini fa 103 foglie: due o tre negozi per foglia. Sul training arriva al 96,4 %, sul test scende al 60,8 %, appena sopra chi dice sempre «basse». Ha imparato a memoria il training, compresi i casi strani che nei negozi nuovi non si ripetono: è l'**overfitting**.
+Stesso codice, cambia solo `max_depth`:
+
+| Albero | Foglie | Training | Test |
+|---|---:|---:|---:|
+| profondità 2 | 4 | 76,8 % | **67,5 %** |
+| profondità 5 | 20 | 79,3 % | 65,8 % |
+| senza limiti | 103 | 96,4 % | 60,8 % |
+
+Senza limiti l'albero fa 103 foglie, due o tre negozi per foglia: sul test scende al 60,8 %, appena sopra chi dice sempre «basse». Ha imparato a memoria il training, compresi i casi strani che nei negozi nuovi non si ripetono: è l'**overfitting**.
 
 ![Accuracy sul training e sul test al crescere della profondità]({{ img }}seggiolini_profondita.png)
 
@@ -212,7 +224,7 @@ Il training sale sempre; il test arriva al 67,5 % con profondità 2 e 3 e poi sc
 - un albero di profondità 3;
 - la posizione sullo scaffale come variabile in più (il test sale al 73,3 %), con la sua tabella di confusione;
 - la previsione per un negozio nuovo;
-- la profondità migliore.
+- due alberi più profondi a confronto.
 
 Prima di eseguire una cella si scrive il risultato che ci si aspetta.
 
