@@ -11,10 +11,7 @@ seo:
 
 # 💻 Coding e fondamenti di intelligenza artificiale
 
-<div class="iscrizione">
-  <div><span class="iscrizione__k">Iscrizione al corso</span><span class="iscrizione__t">Compila il questionario di iscrizione prima della prossima lezione.</span></div>
-  <a class="btn btn-primary" href="https://forms.gle/H5XrnvV977ZBd44F8" target="_blank" rel="noopener">Compila il questionario</a>
-</div>
+{% include iscrizione-progetto.html pagina=true %}
 
 **Coding e fondamenti di intelligenza artificiale** è un corso facoltativo del Corso di Laurea Triennale in *Economia e Gestione dei Servizi* dell'Università Cattolica del Sacro Cuore (sede di Roma), costruito sui tre modi di far fare qualcosa a una macchina: **dirglielo**, scrivendo le regole in un linguaggio di programmazione; **mostrarle degli esempi**, perché impari le regole dai dati; **chiederglielo**, con un modello di linguaggio fino agli agenti che usano il codice che avrai scritto tu. In tutti e tre il lavoro che resta a te è lo stesso: prima dire con precisione cosa vuoi, dopo controllare il risultato.
 

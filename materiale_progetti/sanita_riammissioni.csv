@@ -1,0 +1,2801 @@
+eta,sesso,giorni_degenza,ricoveri_12_mesi,accessi_ps_6_mesi,indice_comorbidita,emoglobina_dimissione,farmaci_dimissione,destinazione_dimissione,diagnosi_principale,vive_solo,reparto,giorno_dimissione,riammesso_30gg
+76,M,6,2,0,4,9.4,5,assistenza domiciliare,diabete,si,B,ven,si
+91,F,5,0,0,3,12.8,4,struttura riabilitativa,scompenso cardiaco,si,C,gio,no
+89,F,9,0,1,2,12.0,5,assistenza domiciliare,altro,no,A,lun,no
+70,M,6,0,1,4,12.7,5,casa,altro,no,A,lun,no
+73,M,4,0,1,3,12.3,5,casa,altro,si,C,gio,no
+70,F,4,0,0,3,8.6,6,assistenza domiciliare,infezione,no,B,mar,si
+82,F,8,1,2,2,11.7,7,casa,scompenso cardiaco,si,B,lun,si
+75,M,5,0,0,5,NA,3,struttura riabilitativa,BPCO,no,B,mar,no
+84,M,15,2,2,1,13.9,4,casa,diabete,no,B,ven,si
+56,F,8,0,0,0,12.9,6,casa,diabete,si,A,mer,no
+93,F,6,1,3,1,10.5,10,casa,infezione,no,A,lun,si
+75,F,13,4,0,3,9.7,3,casa,infezione,si,D,lun,si
+83,M,3,0,0,5,12.6,6,assistenza domiciliare,scompenso cardiaco,no,C,mer,no
+74,M,13,0,1,1,12.8,9,assistenza domiciliare,altro,no,C,sab,no
+72,M,5,0,2,5,13.9,11,assistenza domiciliare,scompenso cardiaco,si,B,mar,si
+81,F,11,0,1,4,16.5,14,casa,infezione,no,C,mer,no
+85,F,5,0,0,3,10.7,9,casa,BPCO,no,C,gio,no
+74,F,4,0,0,NA,13.4,3,assistenza domiciliare,scompenso cardiaco,si,B,lun,no
+74,F,2,0,0,3,11.6,7,casa,scompenso cardiaco,si,D,sab,no
+84,F,7,1,1,5,NA,8,casa,scompenso cardiaco,si,A,lun,si
+66,M,10,1,1,2,13.0,9,casa,infezione,si,C,ven,no
+59,M,3,0,0,4,13.0,9,struttura riabilitativa,diabete,si,B,gio,no
+80,F,22,0,0,2,10.6,6,casa,infezione,si,A,mar,no
+69,F,7,2,0,5,9.9,7,casa,altro,no,B,mar,si
+55,M,4,1,2,5,13.7,5,casa,altro,si,C,mer,no
+67,M,24,0,0,2,14.2,9,casa,diabete,si,D,mer,no
+71,M,6,0,0,2,11.7,6,casa,scompenso cardiaco,no,B,ven,no
+63,M,18,0,3,3,15.2,6,assistenza domiciliare,altro,si,B,ven,no
+60,F,1,2,1,7,12.5,15,casa,infezione,si,B,ven,si
+76,M,27,1,0,0,12.1,6,casa,BPCO,no,A,ven,no
+86,F,8,1,0,0,13.7,11,casa,scompenso cardiaco,no,A,ven,no
+73,F,7,0,1,2,8.3,3,casa,diabete,no,A,ven,no
+68,M,9,0,2,3,14.1,3,casa,altro,no,B,ven,si
+80,M,3,0,2,NA,11.6,5,casa,BPCO,si,C,mar,si
+84,F,13,0,0,7,13.5,3,assistenza domiciliare,diabete,si,C,gio,no
+73,F,9,1,2,NA,11.5,11,assistenza domiciliare,scompenso cardiaco,no,D,mer,si
+82,F,9,0,0,2,11.8,5,casa,altro,no,C,sab,no
+87,F,5,0,2,6,13.0,12,casa,altro,no,B,mar,no
+74,F,3,1,1,4,12.6,9,casa,altro,no,C,lun,si
+67,F,9,0,0,6,12.7,7,casa,diabete,si,B,gio,no
+80,F,12,6,1,6,10.4,8,casa,altro,si,A,mer,si
+79,F,8,2,1,7,12.7,8,casa,diabete,no,A,sab,si
+88,F,6,0,0,2,10.1,3,assistenza domiciliare,BPCO,si,D,ven,no
+62,F,5,3,0,4,13.9,6,assistenza domiciliare,infezione,no,A,gio,si
+69,M,11,1,1,1,13.6,9,casa,altro,si,D,lun,no
+67,F,18,1,1,5,9.3,6,casa,scompenso cardiaco,si,C,mar,si
+57,M,6,0,1,1,11.1,7,casa,altro,si,D,gio,no
+77,M,4,0,0,4,10.6,8,assistenza domiciliare,BPCO,no,B,mar,no
+82,M,33,2,0,0,11.8,6,casa,BPCO,no,A,ven,no
+68,F,3,0,0,3,13.9,4,casa,altro,no,C,gio,no
+91,F,8,0,1,5,13.7,5,casa,diabete,si,A,ven,no
+85,M,7,1,1,1,13.5,8,casa,altro,no,A,mer,no
+83,F,16,0,0,5,13.0,2,casa,infezione,si,A,mar,no
+80,M,7,0,1,2,12.2,6,casa,altro,no,C,lun,no
+87,M,3,1,1,2,13.3,4,struttura riabilitativa,scompenso cardiaco,no,C,mar,si
+61,F,4,0,0,7,9.3,2,struttura riabilitativa,altro,no,B,ven,no
+83,F,8,0,0,5,NA,9,struttura riabilitativa,infezione,no,B,ven,no
+83,M,7,0,0,1,NA,4,struttura riabilitativa,scompenso cardiaco,no,D,mer,no
+57,F,5,0,3,5,10.2,8,casa,BPCO,si,A,sab,si
+80,F,5,0,2,1,9.3,8,casa,altro,no,C,sab,si
+73,F,3,0,0,1,9.9,9,struttura riabilitativa,scompenso cardiaco,no,A,ven,no
+85,M,3,0,2,2,10.1,7,assistenza domiciliare,infezione,si,B,gio,si
+71,F,5,0,0,3,NA,9,struttura riabilitativa,altro,si,D,gio,si
+76,F,5,0,0,5,10.9,8,casa,BPCO,no,D,mar,si
+80,F,7,0,0,5,14.7,7,struttura riabilitativa,infezione,no,B,lun,no
+66,F,3,0,1,0,12.7,5,casa,BPCO,no,B,mar,no
+83,F,19,0,0,4,12.6,6,casa,altro,si,B,lun,no
+75,F,2,0,0,2,12.9,6,casa,altro,no,C,ven,no
+81,F,12,0,0,0,12.0,6,casa,BPCO,no,A,mer,no
+70,M,10,2,0,1,11.1,9,assistenza domiciliare,infezione,si,A,mer,si
+88,M,19,3,0,0,13.2,1,casa,BPCO,no,D,lun,no
+83,M,17,0,1,NA,12.0,3,struttura riabilitativa,altro,no,B,mer,no
+74,M,3,0,0,3,10.9,4,casa,altro,no,A,lun,no
+83,M,9,3,0,4,11.1,8,casa,diabete,no,C,mar,si
+90,F,12,0,0,0,13.0,7,casa,altro,no,A,lun,no
+96,F,13,0,1,2,11.7,9,casa,scompenso cardiaco,no,C,ven,no
+59,F,10,3,1,4,14.3,10,casa,diabete,no,D,gio,si
+86,M,5,0,1,4,15.7,8,casa,diabete,si,B,lun,no
+81,M,16,0,3,5,11.3,6,casa,altro,si,B,ven,no
+75,M,7,0,1,1,12.4,3,assistenza domiciliare,scompenso cardiaco,no,D,mer,no
+65,F,5,0,0,4,11.8,7,struttura riabilitativa,BPCO,no,C,mar,no
+90,M,8,0,1,3,13.1,4,casa,scompenso cardiaco,si,C,mar,no
+62,M,6,1,0,5,11.5,6,casa,BPCO,no,C,lun,si
+82,M,5,3,1,4,11.8,4,struttura riabilitativa,infezione,si,C,lun,si
+90,F,8,0,4,1,15.6,4,casa,diabete,si,A,lun,no
+58,F,37,0,0,1,9.5,9,casa,altro,no,C,mer,no
+73,M,9,3,0,3,13.3,6,casa,BPCO,no,B,ven,si
+62,F,8,0,3,2,9.6,4,casa,altro,si,B,mar,si
+79,F,6,0,1,0,13.2,3,assistenza domiciliare,altro,si,A,ven,no
+93,F,9,2,0,4,13.3,7,casa,altro,no,D,mar,no
+98,M,4,0,2,2,10.4,6,casa,BPCO,no,C,mar,si
+56,M,10,0,1,1,10.3,6,casa,scompenso cardiaco,si,D,mer,no
+70,F,9,2,0,4,14.8,8,casa,altro,no,A,lun,no
+84,F,8,0,1,2,14.3,7,casa,BPCO,no,B,gio,no
+93,M,10,0,1,NA,14.2,4,casa,infezione,no,D,lun,no
+81,F,6,1,1,1,15.0,6,casa,BPCO,no,C,gio,no
+68,F,11,0,1,5,11.6,7,casa,BPCO,no,B,gio,no
+79,F,10,0,3,7,12.6,8,assistenza domiciliare,altro,no,C,lun,si
+76,F,10,2,0,NA,11.4,5,casa,diabete,no,C,mer,si
+74,M,7,0,1,2,8.9,4,casa,BPCO,si,A,ven,si
+68,F,13,1,1,4,11.6,7,assistenza domiciliare,diabete,no,D,mar,si
+80,F,7,0,1,1,12.7,4,casa,scompenso cardiaco,no,C,lun,no
+79,M,16,0,0,2,11.8,3,casa,infezione,no,C,ven,no
+75,F,7,1,1,2,12.7,8,struttura riabilitativa,altro,no,B,lun,no
+74,F,16,0,0,1,13.8,5,casa,diabete,si,A,gio,no
+62,M,9,1,1,2,14.8,8,casa,diabete,si,A,mar,no
+71,F,7,1,0,3,11.2,7,assistenza domiciliare,altro,no,D,gio,no
+89,M,4,2,0,1,13.5,3,casa,infezione,no,C,mer,no
+74,M,11,3,1,4,13.3,2,casa,altro,si,A,mer,si
+60,M,9,2,0,4,13.9,7,struttura riabilitativa,infezione,si,B,gio,no
+91,F,8,0,0,2,13.2,5,casa,infezione,si,D,sab,no
+82,F,9,1,0,3,11.2,7,casa,scompenso cardiaco,no,D,ven,no
+99,M,8,0,0,1,12.0,5,struttura riabilitativa,altro,no,C,lun,no
+77,M,4,0,2,1,12.7,4,assistenza domiciliare,scompenso cardiaco,no,A,ven,no
+71,M,4,1,1,3,15.7,3,casa,altro,si,A,ven,no
+60,M,11,3,0,3,11.6,1,struttura riabilitativa,BPCO,si,A,mar,si
+91,F,8,0,3,3,11.4,4,assistenza domiciliare,infezione,si,D,gio,no
+99,F,19,1,1,2,12.4,7,casa,BPCO,no,A,lun,no
+67,F,25,0,0,3,12.4,3,casa,BPCO,no,C,mer,no
+69,F,12,2,1,4,12.6,4,assistenza domiciliare,infezione,no,B,mer,si
+83,M,11,0,1,6,10.7,3,casa,infezione,si,C,gio,no
+67,F,10,0,0,0,12.3,4,casa,diabete,no,B,gio,no
+73,F,8,0,1,1,13.9,5,casa,scompenso cardiaco,no,A,mar,no
+72,F,5,0,1,4,8.7,5,assistenza domiciliare,altro,no,C,ven,no
+78,M,1,0,0,4,14.1,5,casa,altro,no,B,mer,no
+88,M,12,0,1,4,9.8,8,casa,scompenso cardiaco,si,A,lun,si
+76,F,11,0,0,6,10.9,4,casa,scompenso cardiaco,si,B,mer,no
+86,F,7,0,1,1,NA,3,struttura riabilitativa,altro,no,A,lun,no
+71,M,8,0,1,5,13.4,7,casa,altro,si,A,mer,no
+80,M,13,0,0,5,12.7,9,struttura riabilitativa,altro,si,B,gio,no
+52,F,13,0,1,1,11.9,9,struttura riabilitativa,scompenso cardiaco,no,C,mar,no
+60,F,8,0,0,2,12.3,7,casa,altro,si,A,ven,no
+85,M,6,0,0,1,NA,9,casa,altro,si,D,mar,no
+70,F,11,0,1,5,10.2,7,casa,altro,no,A,mer,no
+82,M,12,0,1,3,10.3,3,assistenza domiciliare,infezione,si,B,gio,no
+82,M,29,0,0,2,13.0,6,casa,scompenso cardiaco,no,D,ven,no
+91,M,4,1,1,0,12.0,4,assistenza domiciliare,scompenso cardiaco,no,A,gio,no
+85,M,10,1,0,5,13.8,8,struttura riabilitativa,infezione,si,B,ven,no
+87,F,4,0,1,1,12.1,3,casa,diabete,no,B,mar,no
+75,M,6,0,2,NA,13.3,7,assistenza domiciliare,scompenso cardiaco,no,D,ven,no
+68,F,31,0,0,5,12.3,9,casa,infezione,no,C,lun,no
+68,F,6,0,1,3,12.4,5,casa,infezione,si,D,gio,no
+71,F,7,0,1,3,15.2,5,casa,scompenso cardiaco,no,B,lun,no
+64,F,5,0,2,0,12.9,3,casa,altro,no,B,ven,no
+70,M,12,5,1,2,12.2,2,casa,altro,no,D,gio,si
+75,F,6,0,0,3,NA,3,casa,diabete,no,C,ven,no
+79,F,3,0,0,2,15.6,10,casa,scompenso cardiaco,no,C,mer,no
+72,M,8,0,1,3,11.1,9,casa,altro,no,B,lun,si
+55,F,12,0,1,2,13.3,10,casa,scompenso cardiaco,no,C,lun,no
+75,F,7,0,1,2,13.4,10,casa,infezione,no,A,lun,no
+78,F,8,0,0,NA,13.3,6,struttura riabilitativa,BPCO,si,C,mar,no
+88,M,5,0,1,NA,16.5,6,casa,altro,no,C,mer,no
+82,M,4,0,0,1,12.0,6,casa,scompenso cardiaco,no,C,mar,no
+69,F,7,0,0,3,12.2,5,casa,diabete,no,B,gio,no
+68,F,4,0,1,4,12.7,7,casa,BPCO,si,A,mar,no
+98,M,6,0,1,4,10.7,3,struttura riabilitativa,scompenso cardiaco,no,B,lun,si
+84,F,4,1,0,2,8.9,4,assistenza domiciliare,infezione,no,C,lun,si
+96,F,6,3,1,3,8.7,7,casa,diabete,no,B,mer,si
+99,F,12,0,3,NA,9.7,6,struttura riabilitativa,scompenso cardiaco,no,A,ven,si
+67,M,7,0,1,3,13.8,8,casa,scompenso cardiaco,no,A,lun,no
+80,M,15,1,1,3,10.5,4,casa,diabete,no,A,mer,si
+81,M,9,0,0,3,12.1,6,assistenza domiciliare,altro,no,D,mar,no
+82,M,7,0,1,1,9.1,6,casa,altro,no,D,mer,no
+82,F,4,0,0,1,12.7,5,assistenza domiciliare,infezione,no,B,sab,no
+78,M,8,0,3,1,12.5,7,struttura riabilitativa,scompenso cardiaco,no,A,mar,si
+78,M,4,0,1,3,9.9,8,casa,scompenso cardiaco,no,B,mar,si
+59,F,12,0,1,5,12.9,3,assistenza domiciliare,altro,no,B,gio,no
+74,F,3,1,2,NA,10.0,5,casa,infezione,no,B,ven,si
+68,F,3,0,1,4,14.3,3,struttura riabilitativa,altro,si,A,lun,no
+77,M,4,1,2,1,14.0,5,struttura riabilitativa,BPCO,si,D,ven,si
+71,M,3,3,1,4,11.6,5,casa,altro,no,D,mer,si
+83,M,8,2,0,3,NA,4,assistenza domiciliare,BPCO,no,D,mer,si
+85,F,4,0,0,1,11.8,9,casa,altro,si,C,gio,no
+79,F,5,0,0,3,12.8,4,casa,infezione,si,C,ven,no
+79,M,11,2,0,3,12.7,6,casa,scompenso cardiaco,no,A,ven,no
+77,F,2,0,1,1,12.2,7,casa,altro,si,D,gio,no
+71,M,6,0,0,1,NA,7,assistenza domiciliare,altro,no,C,gio,no
+74,F,9,1,2,2,11.8,5,casa,scompenso cardiaco,no,A,mer,si
+71,F,13,0,2,5,12.4,5,casa,infezione,si,C,mar,no
+80,M,8,0,0,3,10.1,7,casa,altro,no,C,mar,no
+76,F,5,3,0,1,12.3,7,struttura riabilitativa,altro,no,C,mar,si
+82,F,13,2,1,1,13.2,2,assistenza domiciliare,infezione,no,B,mar,no
+61,F,13,0,2,1,10.7,6,casa,diabete,no,C,lun,no
+86,F,28,0,0,4,9.6,9,struttura riabilitativa,altro,si,B,lun,no
+68,F,27,0,0,6,13.5,4,casa,infezione,no,A,mar,no
+68,M,6,0,0,3,11.3,6,struttura riabilitativa,altro,si,A,ven,si
+74,F,17,3,1,2,11.0,2,casa,diabete,no,D,gio,si
+70,M,8,0,0,0,11.7,7,casa,diabete,no,A,ven,no
+79,M,4,0,0,4,12.3,6,casa,diabete,si,A,mer,no
+70,M,11,0,1,3,11.8,7,casa,altro,no,B,ven,no
+64,F,16,0,1,3,12.2,9,casa,diabete,no,B,mar,no
+67,M,2,0,2,1,15.2,2,casa,altro,no,B,mer,no
+90,M,16,0,1,4,10.4,6,casa,altro,si,C,lun,no
+76,M,4,5,1,1,13.9,1,casa,altro,si,D,lun,si
+63,M,19,1,1,3,12.3,6,casa,altro,no,A,ven,no
+76,F,8,0,0,2,9.3,7,casa,altro,no,B,ven,no
+59,F,8,0,0,2,10.1,4,casa,diabete,no,D,sab,no
+96,F,17,0,0,3,13.4,12,casa,altro,no,A,gio,no
+59,M,6,0,0,4,10.9,6,casa,altro,no,B,mar,no
+81,M,26,2,2,4,11.1,9,struttura riabilitativa,diabete,si,B,gio,si
+82,M,4,1,1,4,NA,5,casa,scompenso cardiaco,no,C,gio,si
+60,M,5,0,0,0,NA,6,casa,scompenso cardiaco,no,D,ven,no
+79,F,4,0,0,4,12.4,5,struttura riabilitativa,scompenso cardiaco,si,B,lun,no
+87,F,10,2,1,2,10.2,2,casa,BPCO,si,D,lun,si
+81,M,7,0,0,3,12.4,4,casa,altro,si,C,gio,no
+79,F,12,0,3,4,11.6,6,casa,altro,no,B,gio,si
+86,F,14,0,1,6,11.3,10,assistenza domiciliare,infezione,no,C,gio,si
+78,M,12,0,1,4,11.8,8,casa,scompenso cardiaco,no,D,mar,no
+80,M,14,1,1,2,12.6,4,casa,diabete,no,C,gio,no
+75,M,14,2,1,1,12.1,7,struttura riabilitativa,infezione,si,C,gio,no
+83,F,7,0,0,4,11.4,10,casa,altro,no,B,mer,no
+66,M,5,0,0,3,12.9,6,casa,infezione,si,C,lun,no
+85,M,4,1,1,4,15.1,4,casa,BPCO,no,B,mer,no
+70,F,11,0,1,NA,13.5,5,casa,BPCO,si,C,mar,no
+64,M,5,0,1,3,10.7,8,casa,altro,no,C,lun,no
+80,F,4,0,0,4,12.7,11,casa,altro,no,A,gio,no
+95,F,4,0,1,2,13.8,8,casa,altro,si,A,lun,no
+87,F,6,0,1,2,12.8,5,casa,altro,no,C,ven,no
+70,F,8,0,0,3,14.2,6,casa,diabete,si,D,ven,no
+84,F,6,0,0,1,11.9,4,casa,altro,no,D,mer,no
+71,M,4,0,3,5,15.3,10,casa,altro,si,C,mer,no
+75,M,10,2,2,2,15.2,6,casa,scompenso cardiaco,no,B,lun,no
+77,F,2,0,0,1,13.1,7,casa,BPCO,no,D,mar,si
+51,M,6,2,1,2,11.4,9,casa,BPCO,si,B,lun,si
+78,M,13,3,1,4,14.5,2,assistenza domiciliare,infezione,no,A,mar,si
+65,F,8,0,0,4,13.0,9,struttura riabilitativa,altro,no,A,gio,no
+68,M,14,0,0,6,11.5,2,casa,BPCO,si,D,mer,no
+60,F,7,2,3,3,15.0,6,casa,infezione,no,C,lun,si
+59,M,10,1,0,3,13.7,8,assistenza domiciliare,infezione,no,B,mar,no
+66,F,7,0,0,3,9.4,5,casa,infezione,si,C,gio,no
+85,F,5,0,1,4,11.6,9,casa,scompenso cardiaco,no,D,lun,si
+94,M,9,0,1,2,15.9,4,casa,altro,no,A,lun,no
+76,F,13,1,0,6,12.7,5,casa,diabete,si,C,mer,no
+88,M,2,2,2,3,11.5,3,casa,BPCO,si,A,lun,si
+73,F,4,0,0,0,15.3,8,struttura riabilitativa,altro,no,C,ven,no
+55,M,2,0,3,1,12.6,5,assistenza domiciliare,diabete,si,B,lun,si
+78,F,4,0,2,2,14.6,4,struttura riabilitativa,BPCO,no,B,lun,no
+81,M,3,0,1,5,12.2,6,casa,altro,no,A,ven,no
+71,F,5,0,0,4,12.2,10,casa,altro,si,B,ven,si
+79,F,6,1,1,3,12.9,6,casa,altro,no,B,mar,no
+82,F,12,1,2,2,7.5,7,casa,BPCO,no,B,ven,si
+67,F,14,0,0,1,11.6,5,casa,altro,si,A,ven,no
+60,F,4,0,0,3,12.7,4,casa,altro,si,A,mar,no
+74,M,5,0,0,0,12.1,7,casa,diabete,si,C,ven,no
+74,M,10,0,1,6,NA,4,assistenza domiciliare,altro,no,B,mar,si
+72,F,5,1,1,8,11.2,6,casa,altro,no,B,ven,si
+87,F,5,0,1,1,13.0,8,casa,infezione,si,B,gio,no
+95,F,2,0,1,3,13.0,3,casa,diabete,no,D,mer,no
+71,F,11,0,1,3,12.4,8,casa,altro,no,A,lun,no
+84,M,8,0,1,2,13.2,4,struttura riabilitativa,infezione,no,B,lun,no
+86,F,4,0,0,4,12.2,5,casa,altro,no,C,mar,no
+84,M,3,0,1,2,NA,11,casa,altro,no,C,mer,no
+88,F,3,1,0,5,13.4,7,casa,altro,no,D,ven,no
+72,M,9,0,1,2,10.3,0,casa,altro,no,A,sab,no
+84,M,5,0,0,0,12.5,6,casa,scompenso cardiaco,no,C,mar,no
+98,M,3,0,0,1,13.8,4,assistenza domiciliare,diabete,no,A,mar,no
+85,M,5,1,1,5,9.2,6,casa,BPCO,si,A,ven,si
+69,M,11,1,0,1,11.9,7,assistenza domiciliare,BPCO,no,A,mar,no
+83,F,15,0,1,5,14.5,4,casa,altro,no,D,mer,no
+90,F,15,0,1,0,11.2,6,assistenza domiciliare,altro,si,D,gio,no
+80,M,7,0,2,1,9.9,6,casa,infezione,no,D,mar,no
+70,M,8,0,0,5,12.9,4,casa,altro,no,A,mar,no
+93,F,8,0,2,3,13.0,7,casa,scompenso cardiaco,si,A,ven,no
+62,M,10,1,0,3,12.6,5,casa,infezione,no,B,ven,no
+82,M,10,4,0,3,12.8,4,struttura riabilitativa,altro,si,D,gio,si
+76,F,4,0,0,3,14.4,7,casa,altro,no,D,mer,no
+63,M,4,0,0,0,10.6,8,casa,scompenso cardiaco,no,A,lun,no
+89,F,5,0,0,3,9.1,10,casa,altro,si,A,ven,no
+80,F,11,0,1,4,11.2,8,casa,BPCO,si,B,gio,si
+63,F,5,0,1,0,8.6,4,assistenza domiciliare,BPCO,si,B,ven,no
+83,F,4,1,1,0,12.8,4,struttura riabilitativa,infezione,si,A,lun,no
+71,F,13,0,0,3,12.8,9,struttura riabilitativa,infezione,no,C,sab,si
+55,M,17,0,0,0,11.8,10,casa,diabete,si,B,lun,no
+68,F,4,0,1,4,10.7,5,casa,infezione,no,B,gio,no
+79,M,6,0,1,4,10.9,4,casa,diabete,si,D,ven,no
+83,F,14,0,1,4,12.3,8,struttura riabilitativa,scompenso cardiaco,si,A,mar,no
+78,M,5,0,2,3,13.0,1,casa,diabete,no,A,ven,no
+76,M,12,1,0,NA,12.6,7,casa,altro,no,D,gio,no
+81,F,3,0,3,4,9.8,4,casa,altro,si,B,mer,si
+74,F,6,0,0,4,10.4,5,casa,scompenso cardiaco,no,D,mar,no
+89,M,10,0,0,5,9.6,5,struttura riabilitativa,scompenso cardiaco,no,D,mar,no
+78,F,18,0,0,3,11.2,3,casa,scompenso cardiaco,si,C,mer,no
+79,M,12,0,2,2,14.8,4,casa,diabete,no,A,gio,no
+82,F,3,0,0,1,12.1,10,casa,BPCO,no,B,gio,no
+64,F,3,0,0,5,12.1,4,casa,altro,no,B,mar,no
+68,M,4,3,1,2,14.1,5,casa,altro,no,B,sab,si
+93,F,11,0,0,2,13.3,5,struttura riabilitativa,scompenso cardiaco,si,C,lun,no
+80,M,11,0,1,7,11.3,6,casa,diabete,si,D,ven,si
+73,M,13,0,1,2,11.3,3,casa,scompenso cardiaco,no,D,mer,no
+80,F,10,1,1,5,12.3,9,casa,scompenso cardiaco,no,B,mer,si
+71,M,5,0,0,5,12.7,8,casa,scompenso cardiaco,si,D,gio,no
+79,M,5,0,3,3,NA,3,casa,altro,no,A,mer,si
+69,F,4,1,2,3,NA,6,casa,altro,si,C,gio,no
+79,F,11,0,0,5,12.0,8,casa,scompenso cardiaco,si,A,gio,no
+59,M,3,0,1,3,10.1,4,casa,scompenso cardiaco,no,B,mer,si
+91,F,7,0,0,3,14.3,4,casa,altro,si,B,gio,no
+70,M,8,3,1,3,13.8,7,struttura riabilitativa,infezione,si,B,mar,si
+59,F,15,2,0,3,13.3,7,assistenza domiciliare,infezione,si,C,gio,si
+74,F,4,0,2,4,10.6,4,casa,BPCO,no,D,mar,si
+72,F,9,0,2,3,11.9,5,casa,altro,no,A,mar,si
+78,F,4,2,1,4,14.0,6,casa,altro,no,D,mer,no
+63,M,13,0,1,5,14.8,4,struttura riabilitativa,altro,no,C,mar,no
+80,F,5,1,1,5,12.1,4,assistenza domiciliare,BPCO,si,D,mer,si
+99,M,6,0,1,0,13.2,2,struttura riabilitativa,diabete,no,D,ven,no
+62,F,4,0,0,1,10.3,5,struttura riabilitativa,BPCO,no,B,lun,no
+80,M,5,0,1,2,10.1,7,struttura riabilitativa,altro,no,A,gio,no
+73,M,5,0,0,1,13.1,6,casa,BPCO,no,D,lun,no
+78,M,5,0,1,8,10.6,2,casa,BPCO,no,D,mer,si
+56,F,14,0,0,1,10.9,10,casa,scompenso cardiaco,no,D,mer,no
+63,F,4,5,1,4,11.1,8,casa,infezione,no,A,mar,si
+81,M,8,0,0,4,12.8,10,casa,BPCO,si,A,gio,no
+76,F,11,1,0,7,NA,4,struttura riabilitativa,infezione,no,D,mar,si
+94,M,3,0,2,2,11.2,3,casa,BPCO,si,A,gio,si
+68,M,2,0,0,4,13.5,9,assistenza domiciliare,altro,si,A,ven,no
+78,F,9,0,2,3,13.1,11,casa,altro,si,D,ven,no
+99,M,2,0,2,1,11.7,5,casa,altro,si,B,mer,no
+68,M,4,0,1,3,12.3,6,struttura riabilitativa,scompenso cardiaco,si,C,mar,si
+66,M,6,1,1,0,12.4,4,casa,altro,no,B,mer,no
+76,M,8,0,0,6,14.8,7,assistenza domiciliare,scompenso cardiaco,no,D,ven,si
+76,M,6,0,1,4,12.1,8,casa,infezione,no,B,mer,no
+85,M,4,1,0,1,12.0,11,assistenza domiciliare,altro,si,B,gio,si
+77,M,13,0,1,2,10.5,5,casa,altro,no,B,ven,no
+68,M,8,0,0,1,NA,9,casa,scompenso cardiaco,no,A,ven,no
+78,F,22,2,0,3,12.6,10,assistenza domiciliare,BPCO,no,B,lun,no
+99,M,4,0,1,1,NA,5,casa,diabete,no,A,ven,no
+90,F,6,0,1,6,10.3,5,struttura riabilitativa,altro,no,A,sab,si
+45,M,7,0,0,2,12.9,7,casa,altro,no,A,mar,no
+74,M,10,0,1,1,12.7,8,assistenza domiciliare,infezione,no,D,sab,no
+66,M,8,0,1,3,11.0,8,casa,diabete,si,A,lun,no
+83,M,7,2,2,5,13.9,6,casa,altro,no,A,sab,si
+74,M,23,0,2,4,12.5,3,casa,diabete,no,B,gio,no
+97,F,6,0,1,5,13.8,10,casa,scompenso cardiaco,si,B,gio,no
+86,M,9,3,0,2,11.7,5,casa,altro,no,D,mer,si
+86,M,8,0,0,5,NA,7,casa,diabete,no,C,lun,no
+78,M,5,2,2,4,13.0,7,assistenza domiciliare,altro,si,C,gio,si
+76,F,11,0,2,4,11.5,1,casa,infezione,no,B,mar,no
+80,M,2,1,1,6,13.7,8,casa,diabete,si,A,lun,si
+90,M,14,0,2,4,12.1,4,casa,BPCO,no,D,ven,no
+82,F,3,0,0,3,15.6,5,assistenza domiciliare,diabete,no,D,mar,no
+72,M,6,0,3,6,12.4,5,struttura riabilitativa,diabete,si,B,lun,si
+90,F,7,2,0,2,13.3,4,casa,infezione,no,A,ven,no
+78,M,5,0,0,1,12.0,5,assistenza domiciliare,altro,no,D,ven,no
+75,M,5,1,0,3,12.5,4,casa,BPCO,no,A,lun,no
+67,M,14,1,0,2,12.3,5,casa,infezione,no,C,mer,no
+70,F,30,0,0,2,14.3,4,casa,BPCO,no,C,mer,no
+69,F,13,0,3,5,14.0,2,casa,BPCO,no,B,gio,no
+45,M,8,1,0,5,12.5,8,casa,diabete,no,A,mar,no
+87,F,5,0,3,6,13.9,4,casa,scompenso cardiaco,si,C,mar,si
+82,F,4,0,0,5,12.5,7,casa,altro,no,C,gio,no
+74,M,14,0,0,3,10.2,7,casa,altro,si,C,ven,no
+88,F,12,3,2,3,12.8,1,casa,infezione,no,D,mer,si
+81,F,15,2,0,6,12.6,6,casa,infezione,no,A,lun,no
+80,M,13,0,2,4,11.2,5,casa,scompenso cardiaco,no,A,mer,si
+49,M,15,0,0,2,12.3,9,casa,BPCO,si,B,mar,no
+73,M,5,0,0,5,10.5,8,casa,infezione,no,A,lun,no
+82,M,4,0,1,1,16.4,5,casa,altro,no,B,sab,no
+94,F,4,0,0,5,12.3,3,casa,infezione,no,C,mer,no
+96,M,7,0,1,4,14.0,5,casa,infezione,no,C,mer,no
+92,M,6,1,0,1,11.1,4,casa,altro,si,A,lun,no
+63,F,7,0,0,4,11.2,7,assistenza domiciliare,BPCO,no,D,lun,si
+52,M,3,0,2,6,11.8,6,assistenza domiciliare,altro,si,D,gio,no
+82,M,8,0,0,1,11.0,5,struttura riabilitativa,infezione,no,D,sab,no
+76,M,11,0,0,3,14.4,7,casa,altro,si,A,gio,no
+87,F,7,0,2,2,14.1,6,casa,altro,no,D,lun,no
+75,F,1,1,1,1,10.3,6,casa,infezione,no,D,lun,no
+78,F,7,0,1,3,11.0,8,casa,diabete,no,A,ven,no
+60,M,6,0,4,1,14.7,5,casa,altro,no,C,ven,no
+81,F,12,0,1,3,10.9,9,casa,infezione,no,D,lun,no
+71,M,6,0,0,5,11.6,7,casa,scompenso cardiaco,no,C,gio,no
+80,M,10,0,1,3,13.4,5,casa,diabete,si,B,mar,no
+81,F,5,2,0,3,14.0,5,casa,altro,si,B,ven,si
+75,M,8,0,1,1,11.4,10,struttura riabilitativa,infezione,no,A,ven,no
+79,M,12,0,1,2,11.1,6,casa,BPCO,no,D,ven,no
+76,F,6,2,0,2,11.8,6,casa,diabete,si,D,mer,si
+84,F,8,0,0,4,12.8,5,casa,scompenso cardiaco,no,B,ven,si
+82,M,8,2,0,4,10.1,3,casa,altro,si,A,mer,si
+70,M,10,2,1,4,11.7,3,casa,BPCO,si,B,mer,si
+70,M,6,2,0,6,9.5,2,casa,altro,si,A,lun,si
+95,F,9,2,0,3,11.7,3,casa,diabete,si,C,lun,si
+75,F,2,3,1,3,7.5,6,casa,diabete,no,C,mer,si
+87,M,6,0,0,2,13.8,4,casa,diabete,no,A,gio,no
+80,F,11,0,1,4,12.4,4,casa,scompenso cardiaco,no,B,lun,no
+70,M,10,0,2,0,11.2,4,casa,diabete,no,B,mer,no
+68,F,4,0,1,2,12.2,6,assistenza domiciliare,altro,no,D,lun,no
+77,F,4,0,0,3,10.6,8,casa,altro,no,C,mer,no
+79,M,9,2,1,7,11.5,8,casa,altro,no,C,gio,si
+83,M,9,0,1,2,9.7,5,assistenza domiciliare,scompenso cardiaco,no,A,mar,si
+62,F,9,0,1,3,13.7,8,casa,BPCO,si,B,gio,no
+69,F,7,1,2,4,NA,5,casa,infezione,no,A,gio,si
+75,M,7,0,0,3,13.1,3,assistenza domiciliare,altro,si,C,gio,no
+94,M,13,0,0,5,11.1,2,casa,altro,no,D,gio,no
+50,M,4,0,0,6,11.9,5,casa,scompenso cardiaco,si,D,mar,si
+81,M,3,0,0,3,13.6,6,casa,BPCO,no,D,mar,no
+70,F,13,0,0,4,12.0,5,casa,infezione,no,A,ven,no
+81,F,4,0,0,3,12.4,6,casa,infezione,si,B,mar,no
+71,M,10,0,0,3,11.1,5,assistenza domiciliare,diabete,no,B,mer,no
+80,M,5,4,1,2,11.5,6,casa,altro,no,B,mer,si
+93,F,4,0,0,1,12.7,9,casa,scompenso cardiaco,no,B,ven,no
+80,F,17,0,1,2,10.8,2,struttura riabilitativa,diabete,no,C,mer,no
+81,M,7,0,0,2,12.6,6,assistenza domiciliare,diabete,no,A,lun,no
+80,M,3,0,1,4,12.2,5,casa,altro,si,D,gio,no
+68,M,6,0,1,2,11.5,4,struttura riabilitativa,altro,no,A,ven,no
+82,M,6,0,1,5,11.4,4,casa,infezione,no,C,ven,si
+74,M,6,0,0,1,10.5,9,assistenza domiciliare,infezione,si,B,mer,no
+67,M,8,0,0,5,13.8,7,casa,scompenso cardiaco,no,C,mar,no
+76,F,3,0,3,1,14.3,6,casa,diabete,no,B,gio,no
+73,F,6,0,0,3,14.5,5,casa,diabete,no,A,mer,no
+84,F,9,2,2,2,13.3,3,struttura riabilitativa,infezione,si,D,gio,si
+76,M,10,0,0,2,11.8,3,casa,altro,si,D,ven,no
+70,F,7,0,0,3,11.1,6,struttura riabilitativa,scompenso cardiaco,no,B,mar,no
+92,M,4,0,2,4,11.9,3,assistenza domiciliare,altro,no,C,ven,si
+87,F,2,1,2,4,12.7,5,casa,diabete,si,D,lun,si
+90,M,16,2,1,2,12.0,5,casa,altro,no,C,mer,no
+83,M,3,0,0,2,10.2,9,casa,BPCO,no,B,ven,si
+75,M,5,2,2,3,13.0,6,struttura riabilitativa,diabete,si,B,ven,si
+71,F,7,0,1,2,11.1,6,assistenza domiciliare,altro,no,D,gio,no
+73,F,9,1,1,4,10.0,8,casa,scompenso cardiaco,si,B,mer,si
+86,F,7,0,0,5,9.8,9,casa,BPCO,no,C,lun,no
+77,M,4,0,0,4,9.8,2,casa,diabete,si,A,ven,no
+60,M,7,1,0,NA,11.0,5,struttura riabilitativa,altro,no,C,lun,no
+76,F,24,3,0,3,12.4,9,casa,infezione,si,B,ven,no
+60,M,31,0,1,1,12.5,1,casa,infezione,si,C,mar,no
+78,F,6,1,0,4,13.4,4,struttura riabilitativa,scompenso cardiaco,no,D,gio,si
+63,M,10,0,0,3,10.1,7,casa,infezione,no,A,mer,no
+62,M,2,0,2,5,14.1,2,assistenza domiciliare,BPCO,no,D,mer,no
+77,M,8,0,0,NA,9.8,4,casa,scompenso cardiaco,no,B,ven,no
+75,M,10,1,1,2,13.1,10,assistenza domiciliare,BPCO,no,A,mer,no
+58,M,6,0,1,5,10.4,6,casa,infezione,si,D,lun,si
+84,F,20,0,1,1,10.0,8,casa,altro,si,D,ven,no
+99,M,12,1,2,1,13.8,7,casa,altro,si,C,gio,no
+60,F,10,0,0,3,13.0,5,casa,BPCO,si,D,mer,no
+96,M,1,0,1,2,10.3,5,casa,BPCO,no,B,mar,no
+68,M,5,1,0,3,12.4,5,casa,diabete,no,D,mar,no
+71,F,10,0,0,3,13.5,3,casa,altro,si,A,mar,no
+74,F,5,0,0,5,12.4,4,casa,infezione,si,D,ven,no
+60,M,2,0,1,0,11.6,4,casa,altro,si,C,mar,no
+90,M,5,1,0,1,11.8,0,assistenza domiciliare,diabete,no,A,mer,no
+81,F,17,0,0,5,14.1,5,casa,infezione,si,D,gio,no
+68,M,10,0,1,3,11.4,8,casa,scompenso cardiaco,si,D,mer,no
+73,M,12,0,1,3,13.0,3,casa,infezione,no,B,mer,no
+59,M,8,0,0,4,13.5,6,struttura riabilitativa,altro,si,C,ven,no
+72,M,18,0,1,1,11.7,8,casa,altro,no,B,mar,no
+86,M,1,0,1,6,10.9,12,casa,BPCO,no,C,mar,si
+57,F,3,0,0,2,13.5,11,assistenza domiciliare,diabete,no,C,ven,no
+71,M,22,0,2,4,12.4,10,struttura riabilitativa,infezione,no,C,lun,no
+78,F,13,0,1,4,11.0,4,struttura riabilitativa,altro,no,A,lun,no
+88,M,8,1,1,1,10.5,5,casa,altro,no,D,ven,no
+91,M,6,0,0,3,13.2,5,assistenza domiciliare,altro,no,B,sab,no
+71,M,2,3,0,1,14.1,10,casa,altro,si,B,gio,no
+68,F,5,2,1,2,14.0,7,casa,BPCO,no,D,mar,no
+81,M,6,1,0,1,9.6,3,assistenza domiciliare,altro,si,A,lun,no
+72,M,4,0,0,1,12.7,5,struttura riabilitativa,scompenso cardiaco,no,C,mar,no
+73,M,16,3,0,3,10.8,3,casa,BPCO,no,B,gio,si
+88,M,13,0,0,4,12.6,10,casa,BPCO,no,C,mer,no
+95,M,6,0,0,0,15.7,6,casa,scompenso cardiaco,si,B,ven,no
+79,F,12,2,2,5,13.7,10,casa,BPCO,no,B,sab,si
+74,F,7,0,2,4,14.2,8,casa,altro,si,B,ven,no
+82,F,8,2,1,1,14.0,15,casa,infezione,no,C,gio,no
+55,M,5,1,1,1,13.9,3,assistenza domiciliare,altro,si,B,ven,no
+76,M,31,0,2,1,12.4,5,casa,scompenso cardiaco,no,B,mar,no
+64,F,3,0,1,4,10.5,6,casa,altro,no,A,mer,no
+99,F,6,1,2,5,10.9,5,struttura riabilitativa,altro,no,C,mar,si
+84,F,13,0,0,1,16.5,7,assistenza domiciliare,scompenso cardiaco,no,C,mer,no
+78,M,13,0,1,2,12.7,9,casa,altro,si,A,mar,no
+74,M,3,0,0,1,11.6,2,assistenza domiciliare,diabete,no,B,gio,no
+48,M,4,0,1,2,14.3,5,casa,diabete,si,C,ven,no
+84,F,7,0,0,5,9.9,8,assistenza domiciliare,infezione,si,C,mar,no
+94,M,4,6,2,0,13.0,5,struttura riabilitativa,scompenso cardiaco,no,D,mer,si
+68,M,5,0,2,0,13.3,4,casa,infezione,no,A,ven,no
+84,M,6,0,0,3,10.8,7,casa,scompenso cardiaco,no,C,lun,si
+84,F,6,0,0,3,13.4,5,struttura riabilitativa,altro,no,B,ven,no
+59,F,13,0,1,3,10.9,4,casa,BPCO,no,A,lun,si
+86,F,2,0,1,1,12.7,1,casa,altro,no,C,mer,no
+91,F,13,0,2,4,11.2,4,casa,scompenso cardiaco,no,B,mer,si
+79,F,6,0,0,2,14.3,11,casa,BPCO,no,A,sab,no
+75,F,10,0,0,3,13.7,9,casa,altro,no,B,lun,no
+85,M,6,0,2,2,14.9,4,struttura riabilitativa,altro,no,D,lun,no
+59,F,28,0,0,4,10.6,5,casa,altro,si,C,mer,no
+77,M,2,0,0,1,13.0,5,casa,scompenso cardiaco,no,B,ven,no
+88,M,14,0,0,3,12.4,4,casa,altro,si,B,ven,no
+62,M,5,0,0,NA,11.7,6,casa,infezione,no,D,mar,no
+87,M,6,2,0,1,12.6,14,struttura riabilitativa,altro,no,C,gio,si
+71,M,16,3,2,2,12.0,9,struttura riabilitativa,diabete,no,C,gio,si
+53,F,6,0,1,4,10.4,5,casa,BPCO,no,B,ven,no
+75,M,12,2,0,2,12.1,7,casa,altro,si,B,lun,no
+65,M,17,0,1,6,12.8,6,casa,BPCO,no,A,gio,no
+80,F,5,0,0,3,11.7,4,casa,infezione,no,B,ven,no
+63,M,23,0,1,3,12.4,3,casa,altro,no,A,mer,no
+88,M,15,0,0,1,NA,7,casa,diabete,no,C,ven,no
+68,F,6,0,1,1,13.1,6,casa,altro,no,B,mar,no
+80,F,8,3,0,4,13.1,7,casa,altro,si,A,gio,si
+69,F,5,0,1,1,11.0,6,casa,altro,no,C,mar,no
+72,F,8,0,1,2,14.6,9,casa,infezione,si,D,mer,no
+89,F,12,0,0,8,11.8,3,casa,altro,no,B,mar,no
+78,F,13,0,0,3,10.2,7,casa,altro,si,D,ven,no
+72,M,8,0,1,NA,10.0,8,casa,infezione,no,B,mar,si
+62,F,5,0,0,4,11.9,6,casa,altro,no,D,gio,no
+89,F,5,0,1,4,12.8,3,casa,infezione,no,D,ven,si
+84,F,4,0,0,4,13.3,8,casa,BPCO,no,B,ven,no
+72,F,6,0,2,5,10.9,8,struttura riabilitativa,scompenso cardiaco,no,D,mer,si
+79,F,10,0,1,1,11.7,2,casa,infezione,si,B,gio,no
+65,F,5,0,1,4,13.7,5,casa,altro,no,B,gio,no
+65,M,5,0,0,2,11.2,8,casa,altro,si,A,lun,no
+67,M,4,2,1,1,16.5,5,assistenza domiciliare,scompenso cardiaco,si,B,ven,si
+80,M,10,2,0,1,11.8,8,casa,diabete,no,C,lun,no
+79,M,6,0,0,3,13.9,6,casa,scompenso cardiaco,no,C,ven,no
+68,F,3,0,2,4,15.9,6,casa,diabete,si,D,lun,no
+84,M,14,0,0,5,11.4,8,casa,altro,si,B,mar,no
+85,F,13,0,3,3,13.7,2,struttura riabilitativa,infezione,si,B,ven,no
+78,M,7,2,2,5,15.1,7,assistenza domiciliare,scompenso cardiaco,no,B,mar,si
+87,F,6,0,0,2,NA,8,struttura riabilitativa,altro,no,C,mar,no
+73,M,7,0,1,2,13.4,4,struttura riabilitativa,infezione,no,C,ven,no
+75,F,4,0,1,NA,12.7,7,casa,altro,no,B,ven,no
+81,F,13,0,0,3,10.4,8,casa,scompenso cardiaco,si,C,mar,no
+76,F,16,4,1,2,10.0,7,casa,altro,no,B,ven,si
+85,F,13,0,0,2,12.8,5,casa,infezione,no,B,mer,no
+62,M,8,0,1,4,16.2,5,struttura riabilitativa,altro,no,C,lun,no
+92,F,8,0,1,1,13.7,5,casa,infezione,si,A,ven,no
+67,M,10,0,0,3,9.6,13,assistenza domiciliare,scompenso cardiaco,si,C,gio,si
+74,F,19,0,3,3,12.1,4,assistenza domiciliare,BPCO,no,A,lun,no
+61,M,4,0,1,2,11.1,10,casa,altro,si,A,gio,no
+83,M,7,0,2,3,13.2,7,struttura riabilitativa,scompenso cardiaco,si,B,lun,no
+90,F,5,0,0,4,12.6,8,casa,altro,no,B,lun,no
+88,M,3,0,0,6,13.6,3,assistenza domiciliare,infezione,si,B,ven,no
+85,F,9,0,0,1,11.0,7,struttura riabilitativa,infezione,no,A,lun,no
+59,F,14,0,1,0,14.6,7,casa,infezione,no,D,sab,no
+67,F,4,0,1,3,11.9,8,casa,infezione,no,B,ven,no
+71,M,13,0,2,0,12.0,7,assistenza domiciliare,infezione,no,B,mar,no
+66,M,10,0,3,0,12.6,5,casa,scompenso cardiaco,no,C,mar,no
+88,M,9,0,0,4,11.2,4,casa,altro,no,A,gio,si
+78,M,16,3,0,4,12.5,7,assistenza domiciliare,altro,si,C,lun,si
+76,F,5,0,2,3,10.1,8,casa,infezione,si,B,ven,no
+81,F,18,0,2,3,13.9,10,casa,altro,si,A,mar,no
+66,F,6,0,1,5,11.7,6,casa,altro,no,D,lun,no
+66,F,10,0,0,2,13.1,2,casa,diabete,no,B,lun,no
+66,F,3,0,0,3,13.1,4,struttura riabilitativa,altro,si,B,ven,no
+81,F,12,0,1,1,11.1,4,casa,BPCO,no,A,gio,no
+80,M,7,1,1,2,14.8,4,casa,diabete,no,B,mer,no
+82,F,5,0,0,4,13.6,3,casa,scompenso cardiaco,no,D,ven,no
+88,M,4,0,0,2,8.5,5,casa,scompenso cardiaco,no,D,mar,no
+61,M,8,0,2,4,11.6,4,casa,diabete,si,B,ven,no
+70,F,15,0,0,3,12.0,7,struttura riabilitativa,altro,no,D,mer,no
+78,M,10,0,1,0,11.0,6,struttura riabilitativa,BPCO,no,D,ven,no
+61,F,6,0,2,4,12.9,6,casa,altro,no,D,lun,no
+70,F,4,0,1,1,11.6,5,casa,altro,si,D,mer,no
+87,M,4,0,0,5,12.4,13,casa,altro,no,D,mer,no
+88,M,6,0,1,3,11.9,6,casa,altro,no,A,lun,no
+88,F,3,0,2,5,12.3,4,casa,altro,no,A,mer,si
+76,M,6,1,0,3,NA,4,casa,BPCO,no,A,mar,no
+74,F,13,0,0,3,13.5,7,assistenza domiciliare,scompenso cardiaco,no,D,ven,no
+88,F,7,0,0,1,14.1,7,casa,BPCO,si,A,ven,no
+72,M,6,0,1,4,11.9,4,casa,infezione,no,B,gio,no
+80,F,5,0,1,1,11.2,6,casa,infezione,si,C,gio,no
+91,M,11,1,0,1,12.8,9,casa,altro,no,C,mar,no
+72,F,10,0,1,4,14.3,5,casa,BPCO,no,B,mar,no
+69,F,16,0,0,4,14.4,3,casa,BPCO,no,B,gio,no
+76,F,5,2,2,3,12.8,5,casa,altro,no,A,gio,si
+83,F,4,0,1,4,10.2,5,casa,scompenso cardiaco,no,B,mer,si
+81,M,5,0,2,2,9.6,3,casa,infezione,si,C,gio,si
+78,F,3,0,0,NA,10.9,3,casa,scompenso cardiaco,no,A,mer,no
+82,F,7,0,0,2,11.1,10,struttura riabilitativa,diabete,no,A,ven,no
+58,M,5,0,0,2,NA,7,struttura riabilitativa,infezione,si,A,lun,no
+67,M,4,3,1,3,10.9,5,casa,scompenso cardiaco,no,D,mer,si
+78,F,7,2,1,2,11.7,3,casa,infezione,no,B,gio,si
+66,M,13,3,0,3,13.4,5,casa,altro,no,D,mar,si
+61,F,11,0,1,3,10.8,4,casa,infezione,no,B,mer,no
+63,F,5,0,1,1,12.5,9,casa,altro,no,A,mar,no
+66,M,7,0,1,1,10.7,3,struttura riabilitativa,altro,no,C,ven,no
+74,F,8,1,2,2,10.1,4,casa,altro,si,B,mar,si
+65,M,10,0,0,1,11.7,7,casa,diabete,no,C,ven,no
+79,M,6,0,0,5,11.9,6,casa,scompenso cardiaco,no,B,mer,no
+95,F,3,0,1,3,10.4,5,assistenza domiciliare,scompenso cardiaco,no,A,ven,si
+74,M,8,2,2,3,13.1,5,casa,diabete,si,D,ven,si
+90,M,4,0,3,5,11.6,7,casa,diabete,no,A,lun,si
+79,M,5,2,1,0,11.4,10,casa,diabete,no,D,ven,si
+64,M,6,1,0,0,11.3,6,casa,altro,no,D,sab,no
+73,F,12,1,0,4,8.5,7,casa,altro,no,B,mer,no
+65,F,5,0,1,5,10.9,9,casa,BPCO,no,C,ven,no
+84,M,8,3,0,3,12.7,2,casa,diabete,no,A,gio,si
+63,M,6,1,0,2,13.4,9,assistenza domiciliare,altro,no,D,lun,no
+91,F,5,2,1,4,10.4,1,casa,altro,no,A,mer,si
+82,F,12,0,1,NA,15.3,6,casa,BPCO,no,B,gio,no
+54,M,5,0,1,3,12.8,5,assistenza domiciliare,altro,si,D,ven,no
+85,F,9,0,1,0,14.2,6,casa,BPCO,no,A,mar,no
+93,F,8,0,0,6,11.9,7,casa,altro,no,B,gio,no
+67,F,2,0,0,5,11.2,0,casa,BPCO,no,D,lun,no
+87,F,3,3,0,3,14.7,4,casa,altro,si,D,lun,si
+56,M,1,0,0,3,11.8,2,assistenza domiciliare,altro,no,B,ven,no
+79,F,8,0,1,2,13.7,7,casa,scompenso cardiaco,si,B,mar,no
+58,M,8,0,0,7,11.1,5,casa,scompenso cardiaco,no,C,ven,no
+81,F,5,2,1,4,14.1,7,casa,diabete,no,B,ven,si
+56,F,5,1,1,1,14.4,9,casa,altro,no,B,ven,no
+47,F,6,0,1,1,10.5,7,struttura riabilitativa,infezione,si,C,lun,si
+80,M,5,0,1,2,13.3,9,struttura riabilitativa,altro,si,B,mar,no
+99,F,7,1,1,4,10.1,7,casa,infezione,no,D,mer,si
+69,M,7,0,0,0,14.4,8,casa,scompenso cardiaco,no,A,mar,no
+85,F,4,0,0,4,9.2,2,casa,infezione,no,C,mar,no
+77,F,16,0,0,4,13.0,11,casa,BPCO,no,B,gio,no
+72,M,13,0,2,6,14.0,8,casa,BPCO,no,C,ven,no
+83,F,5,0,1,3,9.9,7,casa,altro,si,A,gio,no
+94,M,25,2,1,1,13.4,3,struttura riabilitativa,BPCO,no,B,lun,no
+62,M,30,1,0,5,12.2,11,casa,altro,no,B,ven,no
+82,M,14,0,1,1,9.3,9,casa,infezione,si,A,ven,no
+80,M,14,0,1,2,13.3,7,casa,scompenso cardiaco,si,C,mer,no
+60,F,5,0,1,3,11.6,4,casa,BPCO,si,C,mar,si
+94,F,6,0,2,3,14.5,10,casa,scompenso cardiaco,no,C,mer,no
+97,M,3,0,0,3,11.4,8,casa,altro,no,A,mar,no
+66,F,5,0,1,2,11.5,11,casa,altro,si,C,ven,no
+95,M,12,0,2,2,11.8,10,casa,infezione,no,B,ven,no
+77,F,5,0,2,8,12.5,7,casa,infezione,no,B,ven,si
+74,F,3,0,0,3,9.8,4,casa,BPCO,si,B,lun,no
+93,M,18,2,0,4,11.6,7,casa,diabete,no,A,mer,si
+79,M,22,0,0,3,11.7,6,casa,diabete,no,C,ven,no
+80,M,17,0,0,NA,13.1,8,assistenza domiciliare,altro,no,A,mer,no
+93,M,3,1,1,4,13.2,6,casa,infezione,no,B,sab,si
+90,F,11,0,1,3,9.7,5,casa,altro,si,C,lun,no
+86,F,4,1,1,4,12.7,8,assistenza domiciliare,infezione,no,D,ven,no
+61,F,6,0,1,3,9.8,10,assistenza domiciliare,infezione,no,D,gio,si
+59,F,10,0,0,NA,10.6,4,casa,altro,no,A,lun,no
+88,F,17,0,0,NA,16.5,5,casa,scompenso cardiaco,no,B,mar,no
+66,M,5,0,0,3,14.6,6,casa,diabete,si,D,ven,no
+78,M,6,0,0,3,10.5,6,struttura riabilitativa,scompenso cardiaco,no,A,mar,si
+64,M,3,2,1,8,12.7,2,casa,diabete,no,B,mer,si
+74,M,7,0,1,1,13.0,5,casa,altro,si,C,ven,no
+62,M,4,3,0,8,14.4,4,casa,BPCO,si,B,mer,si
+94,F,5,0,0,6,11.5,7,casa,altro,no,C,gio,no
+65,M,11,2,0,2,13.5,11,casa,diabete,no,D,sab,no
+75,M,7,0,1,0,10.7,8,casa,altro,no,D,mer,no
+74,F,7,3,1,2,13.1,3,assistenza domiciliare,altro,no,A,mer,si
+89,F,8,0,3,NA,10.1,2,assistenza domiciliare,altro,no,C,mar,si
+60,M,11,0,0,4,10.7,2,struttura riabilitativa,altro,no,D,sab,si
+76,F,16,1,1,2,14.4,2,casa,altro,no,D,mer,no
+74,M,3,0,2,4,11.1,8,struttura riabilitativa,diabete,si,C,mer,si
+82,M,3,0,1,3,13.9,11,casa,diabete,si,D,ven,no
+81,M,9,0,1,2,10.9,7,casa,altro,no,D,mer,no
+71,F,10,0,0,6,11.0,8,casa,infezione,no,B,lun,no
+79,M,16,0,0,5,11.8,9,casa,scompenso cardiaco,no,D,mar,no
+72,F,11,0,3,1,11.2,4,casa,altro,no,B,lun,no
+81,M,20,0,0,1,9.5,3,casa,BPCO,no,B,mer,no
+75,M,9,0,1,3,12.2,2,casa,altro,si,A,ven,no
+69,F,5,0,0,2,12.3,5,casa,altro,no,A,mer,no
+76,F,13,0,1,5,11.8,6,casa,diabete,no,C,ven,no
+80,F,4,0,0,3,13.6,6,casa,scompenso cardiaco,si,A,mer,no
+99,M,5,1,1,4,9.8,7,casa,altro,no,C,gio,no
+71,M,9,0,0,3,13.3,7,casa,altro,no,C,gio,no
+79,F,6,0,0,2,12.8,5,struttura riabilitativa,diabete,no,D,mer,no
+92,F,12,0,1,4,13.7,6,casa,BPCO,no,C,gio,no
+53,F,6,5,1,4,10.8,2,casa,infezione,no,C,mer,si
+57,M,21,0,0,3,13.2,5,struttura riabilitativa,scompenso cardiaco,no,C,gio,no
+63,M,4,0,2,6,12.8,11,casa,altro,si,C,mer,si
+75,F,11,2,1,NA,11.1,5,casa,altro,no,D,mar,si
+99,F,5,0,2,2,12.0,5,casa,altro,no,B,mar,no
+80,F,16,0,2,2,9.6,7,casa,diabete,no,B,mer,no
+89,F,5,0,0,3,11.9,6,casa,BPCO,no,B,ven,no
+74,F,11,0,1,2,NA,0,struttura riabilitativa,infezione,no,A,lun,no
+49,M,1,0,2,5,13.6,7,casa,infezione,no,D,gio,no
+51,M,4,0,1,4,11.3,15,casa,infezione,no,A,ven,no
+87,F,19,0,0,1,11.5,6,casa,altro,si,D,mer,no
+78,M,8,0,1,2,10.9,6,casa,altro,si,A,ven,no
+62,M,7,0,1,2,12.8,8,struttura riabilitativa,altro,no,B,mar,no
+88,F,12,0,0,7,12.3,6,casa,diabete,no,D,lun,no
+59,M,30,0,0,4,12.7,4,struttura riabilitativa,altro,no,D,gio,no
+88,M,4,0,2,6,9.7,3,casa,BPCO,si,A,lun,si
+92,F,7,2,1,2,13.2,4,assistenza domiciliare,BPCO,no,B,mar,si
+68,F,5,0,0,3,12.6,7,casa,scompenso cardiaco,si,A,lun,no
+64,F,11,0,3,0,10.7,7,casa,altro,si,D,gio,no
+85,M,5,0,1,2,10.3,8,casa,infezione,no,A,mar,no
+64,M,3,0,0,3,11.6,5,casa,altro,no,D,gio,no
+85,F,3,1,1,NA,13.0,5,assistenza domiciliare,infezione,si,D,gio,no
+63,F,10,2,0,6,16.0,9,casa,BPCO,no,C,mar,si
+85,M,8,0,0,3,12.3,5,casa,altro,si,B,gio,no
+77,M,12,0,3,1,13.1,10,assistenza domiciliare,infezione,no,B,mer,no
+71,F,3,1,0,2,12.0,8,casa,scompenso cardiaco,no,B,lun,no
+66,F,4,0,1,3,15.4,5,casa,scompenso cardiaco,no,C,mer,no
+79,F,5,0,1,3,11.7,6,casa,altro,no,B,mar,no
+55,F,12,0,0,3,13.4,4,struttura riabilitativa,BPCO,no,D,ven,no
+73,F,9,2,2,3,12.4,7,casa,diabete,si,D,mar,si
+72,M,6,0,1,1,11.4,5,struttura riabilitativa,altro,no,B,mar,no
+83,F,4,0,1,2,9.6,5,casa,infezione,no,A,gio,no
+62,F,8,0,0,1,11.2,15,casa,diabete,si,A,mer,no
+95,M,5,0,1,4,13.1,6,casa,BPCO,no,C,ven,no
+73,F,12,0,0,0,10.7,4,casa,altro,si,A,ven,no
+63,F,20,0,0,4,11.7,4,casa,diabete,si,A,mer,no
+91,F,8,2,1,4,13.4,5,casa,altro,si,D,lun,si
+94,F,4,4,1,3,12.6,6,struttura riabilitativa,infezione,no,D,mar,si
+74,M,29,1,1,6,NA,6,casa,diabete,si,A,mer,no
+66,F,10,0,4,3,12.7,9,casa,altro,no,B,ven,si
+76,M,10,0,3,3,10.8,9,casa,infezione,si,A,mar,si
+68,F,8,1,0,1,11.8,7,casa,altro,no,A,ven,no
+73,F,8,0,1,NA,11.1,2,casa,BPCO,no,B,mar,no
+93,F,7,1,0,5,12.7,6,assistenza domiciliare,altro,no,B,lun,no
+80,F,8,1,0,3,14.1,3,casa,infezione,no,A,ven,no
+78,F,3,0,0,4,9.3,5,casa,infezione,no,B,mar,no
+80,F,5,0,2,1,10.6,8,casa,diabete,no,D,ven,no
+75,F,7,1,0,3,12.2,7,casa,altro,si,A,lun,no
+85,F,8,1,1,NA,16.5,9,casa,diabete,no,B,mar,no
+86,M,8,3,1,2,10.3,7,casa,diabete,si,D,gio,si
+72,M,9,0,0,7,11.7,4,casa,altro,no,C,ven,no
+77,F,2,0,1,1,13.1,6,casa,infezione,no,A,mer,no
+99,M,4,0,2,2,13.2,10,casa,diabete,si,B,mer,no
+81,F,5,0,0,3,9.9,6,struttura riabilitativa,scompenso cardiaco,si,A,mer,si
+74,F,8,0,0,3,11.0,6,casa,diabete,si,B,mer,no
+99,F,6,5,1,2,12.2,4,casa,scompenso cardiaco,no,B,mer,si
+76,M,23,0,0,2,11.8,3,casa,scompenso cardiaco,no,A,mer,no
+64,F,6,1,0,5,11.4,8,casa,infezione,no,D,ven,no
+83,F,6,0,0,6,12.9,6,casa,scompenso cardiaco,no,A,mar,si
+66,F,3,0,1,3,9.3,10,struttura riabilitativa,infezione,no,A,sab,no
+71,F,21,0,4,5,12.3,3,casa,infezione,no,A,lun,no
+80,F,7,0,2,4,15.4,9,casa,scompenso cardiaco,no,D,mar,si
+75,M,7,0,2,2,11.8,9,casa,altro,si,A,lun,si
+68,M,5,0,0,3,13.2,7,casa,scompenso cardiaco,no,D,ven,no
+70,F,7,0,1,3,11.8,6,casa,scompenso cardiaco,no,C,gio,no
+69,F,6,0,2,0,12.5,6,casa,altro,no,B,mer,no
+89,M,15,0,0,7,13.3,8,casa,BPCO,si,D,gio,si
+68,M,4,0,3,3,12.8,2,assistenza domiciliare,altro,si,B,mar,si
+70,M,5,0,0,0,15.1,11,struttura riabilitativa,altro,no,A,ven,no
+98,F,5,1,0,6,10.6,6,casa,scompenso cardiaco,si,D,lun,si
+70,F,10,0,2,4,14.2,6,casa,infezione,si,B,lun,no
+92,M,9,1,0,4,10.1,6,casa,infezione,no,C,ven,si
+90,M,13,0,0,4,16.2,6,casa,infezione,no,B,lun,no
+74,F,10,0,1,1,12.5,6,casa,altro,no,C,ven,no
+60,M,10,1,2,3,9.1,4,casa,BPCO,si,D,mer,si
+81,M,7,1,0,1,13.1,13,assistenza domiciliare,infezione,no,A,mer,no
+83,M,12,0,1,2,11.0,6,casa,scompenso cardiaco,no,A,mar,no
+87,F,9,2,1,3,11.5,4,casa,diabete,no,B,mar,no
+77,M,9,0,1,4,14.1,5,casa,altro,si,B,gio,no
+89,M,3,0,2,6,10.3,4,casa,BPCO,si,C,ven,si
+91,F,5,0,1,4,12.7,4,casa,altro,no,D,ven,no
+64,M,5,1,0,5,11.1,5,casa,BPCO,si,A,gio,no
+92,M,2,0,1,3,12.5,9,casa,infezione,no,A,sab,no
+78,M,16,0,1,1,15.0,8,assistenza domiciliare,BPCO,si,C,ven,no
+70,M,17,0,0,2,13.2,8,struttura riabilitativa,altro,no,D,gio,no
+72,F,14,0,1,0,11.7,5,casa,altro,no,B,mer,no
+97,F,10,2,1,0,13.5,9,struttura riabilitativa,infezione,si,B,mer,no
+87,F,17,0,2,3,12.4,6,casa,scompenso cardiaco,no,B,lun,no
+56,M,3,0,0,3,11.2,5,assistenza domiciliare,altro,no,C,ven,no
+77,F,15,0,0,0,11.4,9,casa,altro,no,B,lun,no
+74,F,2,1,0,NA,11.3,7,struttura riabilitativa,infezione,no,D,ven,no
+74,M,8,0,1,2,11.2,7,casa,altro,si,B,mer,no
+70,M,8,0,0,4,9.6,5,assistenza domiciliare,infezione,si,A,mer,si
+60,F,10,1,0,2,13.6,9,assistenza domiciliare,altro,no,C,mar,no
+85,F,10,0,1,6,13.1,4,casa,scompenso cardiaco,si,C,sab,si
+66,M,11,1,3,3,13.0,5,casa,scompenso cardiaco,no,A,lun,si
+72,M,5,0,1,2,11.3,2,assistenza domiciliare,scompenso cardiaco,no,A,gio,no
+69,F,5,0,0,5,12.1,1,casa,altro,no,A,mar,no
+68,M,4,0,2,2,11.1,2,assistenza domiciliare,scompenso cardiaco,no,A,mer,no
+84,M,8,0,1,3,13.7,9,assistenza domiciliare,diabete,no,A,ven,no
+80,M,6,0,0,1,11.1,7,assistenza domiciliare,scompenso cardiaco,no,A,lun,no
+69,F,3,4,1,5,10.2,7,casa,infezione,no,A,lun,si
+66,M,12,1,0,5,14.6,7,casa,altro,si,C,ven,no
+71,F,4,2,4,5,12.4,5,casa,altro,si,B,mer,si
+87,M,5,0,1,3,9.9,6,assistenza domiciliare,scompenso cardiaco,no,A,ven,si
+77,F,4,2,3,5,11.1,7,assistenza domiciliare,altro,no,A,gio,si
+79,M,4,0,0,3,10.8,7,casa,diabete,no,A,lun,no
+72,M,10,0,0,4,14.4,8,casa,scompenso cardiaco,no,D,mer,no
+73,F,5,3,0,2,14.0,4,casa,altro,si,B,mar,si
+78,M,3,0,1,2,13.0,2,casa,altro,no,C,mer,no
+56,M,5,0,0,3,12.2,4,casa,diabete,no,B,ven,no
+94,F,4,0,2,1,10.3,3,casa,BPCO,no,C,lun,si
+67,M,3,0,0,4,10.8,8,casa,scompenso cardiaco,no,B,lun,si
+70,M,12,1,1,1,13.7,4,casa,BPCO,no,D,lun,no
+91,M,14,0,4,2,12.9,3,casa,altro,si,B,lun,no
+78,M,3,0,0,7,12.5,3,casa,infezione,no,B,mer,no
+76,F,18,2,1,2,12.2,5,casa,altro,si,D,mer,si
+70,F,21,0,0,1,13.9,11,casa,diabete,si,B,ven,no
+59,F,3,2,0,2,12.8,7,struttura riabilitativa,BPCO,no,B,lun,si
+78,F,9,2,0,4,14.0,7,casa,altro,no,A,gio,no
+89,F,6,2,2,2,10.1,10,assistenza domiciliare,infezione,no,A,lun,si
+66,M,11,0,1,2,9.7,3,assistenza domiciliare,diabete,si,B,mer,no
+91,F,1,0,0,1,11.2,7,assistenza domiciliare,scompenso cardiaco,si,D,lun,si
+64,M,10,2,0,2,14.0,7,assistenza domiciliare,altro,no,C,gio,no
+68,M,6,0,1,5,14.9,4,casa,BPCO,no,C,ven,no
+82,F,9,0,0,5,9.6,3,casa,BPCO,si,C,gio,no
+76,M,12,1,1,5,10.7,4,casa,diabete,no,B,lun,no
+84,F,2,0,0,5,12.0,8,casa,diabete,no,B,mar,no
+68,F,7,0,1,0,13.7,7,casa,infezione,no,A,ven,no
+65,F,7,0,1,5,11.3,5,casa,altro,si,D,mar,no
+55,M,10,0,1,2,12.6,9,casa,infezione,si,B,mer,no
+63,M,14,0,0,3,14.7,8,casa,infezione,no,B,mar,no
+64,M,11,0,2,6,10.8,7,casa,scompenso cardiaco,no,D,mar,si
+60,M,4,0,2,4,12.4,4,casa,altro,no,B,lun,no
+79,F,11,1,0,6,13.0,8,casa,BPCO,si,D,gio,no
+69,F,4,2,1,2,14.5,8,casa,infezione,no,B,ven,si
+54,F,11,0,0,4,11.3,6,casa,altro,no,B,mar,no
+99,M,6,0,1,5,12.2,5,casa,altro,no,C,mar,no
+67,F,6,0,1,1,15.4,6,casa,BPCO,no,A,ven,no
+62,F,8,0,0,2,12.7,9,casa,infezione,no,B,lun,no
+90,M,3,2,0,5,11.6,7,casa,altro,no,B,mer,si
+89,M,6,0,0,3,12.3,5,casa,scompenso cardiaco,no,B,ven,si
+63,M,3,0,2,2,13.0,13,casa,altro,no,C,gio,si
+60,M,12,0,0,2,14.3,7,casa,altro,no,A,ven,no
+65,M,15,0,1,3,13.0,5,casa,scompenso cardiaco,no,A,gio,no
+88,M,3,0,1,2,16.5,3,casa,infezione,no,D,gio,no
+73,F,2,0,0,2,12.5,3,casa,altro,no,B,lun,no
+67,F,8,0,0,7,14.6,4,casa,altro,no,C,lun,no
+76,M,5,0,0,NA,10.6,4,casa,scompenso cardiaco,no,A,gio,no
+89,F,4,1,0,3,10.9,4,casa,infezione,si,A,gio,no
+61,F,28,0,1,4,13.4,6,casa,diabete,si,A,lun,no
+72,F,5,0,2,1,NA,5,casa,infezione,no,D,mar,no
+61,M,4,0,2,1,11.1,5,casa,infezione,no,B,lun,no
+99,M,6,0,0,2,16.5,5,casa,infezione,si,D,mar,no
+96,M,8,0,0,4,11.7,4,casa,scompenso cardiaco,no,B,mer,no
+86,F,18,4,1,4,11.0,4,assistenza domiciliare,infezione,no,B,mer,si
+75,M,8,0,1,3,16.1,4,assistenza domiciliare,altro,no,D,mer,no
+83,F,3,0,2,3,13.7,8,casa,BPCO,si,B,lun,no
+53,M,5,0,0,3,13.1,4,casa,infezione,no,A,mar,no
+79,M,21,2,0,0,13.5,8,casa,altro,no,C,ven,no
+61,F,2,0,0,NA,NA,4,casa,altro,si,B,gio,no
+61,M,7,0,2,5,9.2,4,assistenza domiciliare,altro,no,D,gio,si
+68,M,14,0,0,3,10.8,7,assistenza domiciliare,altro,no,D,ven,si
+72,F,8,0,1,0,11.5,2,casa,BPCO,no,A,lun,no
+82,F,6,0,0,6,13.9,7,casa,infezione,si,A,lun,no
+84,F,4,0,1,2,15.2,7,casa,BPCO,si,C,gio,no
+79,F,8,0,3,3,12.2,5,casa,diabete,si,C,gio,no
+66,F,10,0,0,0,11.4,7,casa,scompenso cardiaco,no,A,ven,no
+83,F,8,0,1,5,12.3,5,casa,altro,si,B,mar,no
+75,M,13,0,2,1,12.8,12,casa,infezione,si,B,mar,no
+89,F,8,0,1,NA,14.1,6,casa,altro,si,B,mar,no
+66,F,15,4,0,1,NA,4,casa,BPCO,no,C,mer,si
+46,F,8,0,0,3,9.6,9,casa,diabete,no,A,mer,no
+71,M,12,1,2,3,13.7,7,casa,altro,no,C,gio,no
+99,F,6,0,0,4,13.4,8,casa,BPCO,si,B,ven,no
+81,F,20,0,2,0,14.1,8,assistenza domiciliare,scompenso cardiaco,no,C,mar,no
+74,F,15,1,0,6,NA,5,casa,infezione,no,B,gio,no
+86,M,11,0,0,1,NA,6,casa,BPCO,no,C,gio,no
+82,M,4,0,1,5,10.8,7,casa,altro,no,D,gio,no
+81,F,8,2,2,1,12.3,9,assistenza domiciliare,infezione,no,A,sab,no
+70,M,1,2,1,5,13.7,7,casa,infezione,no,A,ven,si
+77,M,6,3,0,3,14.0,5,casa,infezione,si,C,mer,si
+78,M,8,0,0,3,13.5,2,casa,scompenso cardiaco,no,A,mer,no
+69,M,4,2,0,3,9.4,3,casa,infezione,si,A,mer,si
+64,M,8,0,2,2,11.4,8,casa,diabete,si,B,ven,no
+78,M,10,1,1,3,10.1,3,casa,scompenso cardiaco,no,C,mar,si
+87,F,21,6,1,2,13.4,10,casa,altro,no,A,ven,si
+83,F,7,0,3,5,13.1,10,casa,altro,si,B,gio,no
+81,M,3,0,2,2,12.7,3,casa,altro,no,B,gio,no
+82,M,2,1,0,2,11.9,7,casa,infezione,si,D,sab,no
+99,F,6,2,1,NA,9.7,3,casa,scompenso cardiaco,no,D,mer,si
+79,F,12,2,1,7,13.3,6,casa,infezione,si,A,gio,si
+87,F,14,0,0,4,15.1,7,casa,altro,no,B,mer,no
+98,F,7,0,0,3,9.8,5,casa,altro,no,A,lun,no
+77,M,5,5,0,1,12.0,7,assistenza domiciliare,infezione,no,C,mer,si
+79,M,5,2,0,3,12.0,5,casa,infezione,si,B,mer,si
+87,M,6,0,0,3,11.2,9,casa,infezione,no,B,lun,no
+95,M,7,1,0,5,14.6,3,casa,BPCO,no,C,mer,no
+79,M,10,0,1,0,14.5,8,assistenza domiciliare,BPCO,no,C,mer,no
+80,M,8,0,1,3,11.2,4,casa,diabete,no,B,mar,no
+77,M,24,0,0,2,10.9,6,casa,altro,no,B,ven,no
+63,M,8,0,0,5,12.5,6,struttura riabilitativa,BPCO,no,A,ven,no
+88,M,10,0,0,6,12.3,3,casa,BPCO,no,C,mar,no
+73,M,13,0,1,3,13.0,6,casa,scompenso cardiaco,no,C,mer,no
+57,F,13,1,1,4,11.8,5,casa,scompenso cardiaco,no,D,ven,no
+74,F,5,2,2,5,10.6,2,casa,BPCO,no,C,gio,si
+57,M,3,3,0,3,11.0,3,struttura riabilitativa,BPCO,si,B,gio,si
+65,F,3,2,0,3,12.4,3,casa,infezione,no,D,gio,si
+76,M,9,0,1,3,14.5,6,casa,BPCO,si,A,lun,no
+66,F,10,0,0,3,11.6,2,casa,altro,si,B,gio,no
+88,F,9,2,1,3,13.7,5,casa,altro,si,B,lun,si
+60,F,11,3,1,2,12.8,3,casa,infezione,no,D,mer,si
+79,M,15,1,2,6,11.1,3,casa,altro,no,B,mar,si
+82,M,4,0,2,6,11.7,7,casa,altro,no,A,mer,si
+92,M,33,0,1,3,11.8,7,casa,infezione,si,C,gio,no
+86,F,35,1,1,4,14.1,4,casa,altro,no,A,gio,no
+79,F,11,0,2,2,15.1,4,casa,altro,no,D,mer,no
+77,M,6,0,0,1,11.5,9,casa,altro,no,B,gio,no
+75,F,8,0,0,4,13.2,8,casa,scompenso cardiaco,no,B,gio,no
+89,M,3,1,3,2,13.4,5,struttura riabilitativa,diabete,no,A,lun,si
+69,F,7,0,0,4,11.8,7,casa,altro,si,B,mar,no
+82,F,4,0,0,4,11.4,8,casa,diabete,no,A,lun,si
+75,M,7,0,1,1,12.6,10,struttura riabilitativa,scompenso cardiaco,si,A,lun,no
+79,F,6,0,0,0,14.2,6,struttura riabilitativa,altro,no,D,mar,no
+73,F,25,0,1,4,14.6,9,assistenza domiciliare,BPCO,si,C,mar,no
+99,M,4,0,0,5,14.4,6,casa,altro,no,B,lun,no
+69,F,9,0,0,7,14.2,6,casa,BPCO,no,B,gio,no
+79,M,6,1,0,1,11.2,4,casa,BPCO,si,A,lun,no
+79,M,19,0,2,3,10.3,5,struttura riabilitativa,altro,no,A,lun,si
+83,F,14,2,0,1,11.8,8,casa,altro,no,C,lun,no
+81,M,3,0,1,2,11.3,3,casa,scompenso cardiaco,si,C,mar,no
+81,F,4,0,3,4,11.2,5,casa,BPCO,si,D,ven,si
+87,M,8,0,0,7,16.5,9,struttura riabilitativa,infezione,no,D,mar,no
+60,M,5,0,0,5,11.2,3,casa,infezione,no,B,lun,no
+76,F,9,0,0,2,11.6,9,struttura riabilitativa,altro,no,A,ven,no
+63,F,7,1,0,2,12.1,3,assistenza domiciliare,scompenso cardiaco,no,D,sab,si
+79,M,4,0,1,1,12.8,4,casa,infezione,si,C,mar,no
+63,F,6,0,0,5,14.0,4,casa,diabete,no,D,ven,no
+66,F,10,0,1,2,12.0,8,casa,altro,no,D,lun,no
+75,M,7,0,0,1,13.7,8,casa,infezione,no,A,lun,no
+91,M,8,0,1,6,14.3,5,casa,infezione,no,B,sab,no
+82,M,9,0,0,1,NA,3,casa,altro,no,D,gio,no
+79,F,7,0,2,7,11.3,3,struttura riabilitativa,scompenso cardiaco,si,A,lun,si
+92,F,16,0,2,2,11.9,7,assistenza domiciliare,scompenso cardiaco,no,B,ven,no
+66,M,3,0,2,5,10.3,5,casa,altro,no,D,lun,no
+53,F,9,0,3,5,13.5,8,casa,infezione,no,C,mar,no
+71,M,5,0,1,5,14.3,8,casa,BPCO,no,A,sab,no
+73,F,9,3,1,2,11.0,5,assistenza domiciliare,altro,no,B,sab,si
+90,F,12,3,0,3,12.6,4,casa,infezione,no,C,lun,si
+99,F,10,1,1,3,13.5,3,casa,altro,no,C,mer,si
+62,F,11,0,1,2,11.6,7,struttura riabilitativa,diabete,no,A,mar,si
+99,M,11,0,1,2,11.7,5,casa,altro,no,A,mer,no
+93,F,10,0,1,2,10.3,3,struttura riabilitativa,diabete,si,B,mar,no
+85,M,6,1,1,6,10.8,9,casa,infezione,si,B,sab,si
+80,F,11,0,0,2,13.6,9,casa,scompenso cardiaco,no,B,ven,no
+99,M,13,4,0,2,13.2,11,casa,altro,no,A,gio,si
+77,F,12,0,1,NA,14.9,8,casa,scompenso cardiaco,no,A,gio,no
+71,F,8,0,0,2,11.6,5,struttura riabilitativa,altro,no,C,gio,no
+78,M,8,3,1,4,12.9,3,casa,BPCO,no,A,mer,si
+61,M,2,0,0,1,11.7,7,casa,altro,no,B,mer,no
+81,F,4,0,0,4,NA,7,casa,BPCO,no,B,ven,no
+75,M,6,3,0,0,15.4,6,casa,scompenso cardiaco,si,A,ven,si
+80,F,13,0,1,3,11.5,5,assistenza domiciliare,altro,no,C,lun,no
+80,M,15,0,0,2,14.5,4,assistenza domiciliare,BPCO,no,A,lun,no
+65,F,8,2,1,1,10.6,5,casa,diabete,no,D,ven,no
+91,M,4,0,1,3,11.1,13,struttura riabilitativa,BPCO,no,A,mer,si
+65,F,10,0,0,2,12.5,4,assistenza domiciliare,diabete,si,C,ven,no
+86,M,13,0,1,2,12.0,5,casa,scompenso cardiaco,no,D,ven,no
+59,F,11,0,0,1,13.6,13,struttura riabilitativa,infezione,si,A,mer,no
+80,F,5,0,0,2,11.1,5,casa,altro,si,A,sab,no
+67,M,4,0,0,4,13.1,5,casa,scompenso cardiaco,no,D,gio,no
+77,F,4,0,1,4,11.6,4,struttura riabilitativa,BPCO,si,B,ven,si
+69,F,4,0,1,3,11.4,1,casa,infezione,no,B,sab,no
+52,F,13,0,0,5,10.5,9,casa,infezione,si,C,lun,no
+64,M,9,0,1,1,13.0,6,struttura riabilitativa,altro,si,C,mer,no
+77,F,26,3,0,NA,9.0,6,casa,BPCO,no,B,ven,no
+83,F,19,0,1,3,12.6,1,casa,infezione,no,C,mar,no
+60,M,13,3,1,3,16.2,3,casa,altro,no,A,mer,si
+53,F,5,0,0,3,11.1,5,assistenza domiciliare,diabete,si,A,sab,no
+67,M,11,0,1,NA,10.3,4,casa,scompenso cardiaco,si,B,lun,no
+74,F,9,0,2,2,10.8,10,casa,infezione,no,A,lun,no
+69,M,3,0,1,1,12.6,7,casa,infezione,no,A,mer,no
+67,M,3,2,1,4,14.5,7,assistenza domiciliare,BPCO,no,C,mar,si
+86,M,5,3,2,3,9.3,8,casa,scompenso cardiaco,no,A,ven,si
+87,M,15,0,0,1,11.6,6,casa,scompenso cardiaco,no,C,lun,no
+84,F,6,0,0,4,12.8,1,casa,diabete,no,C,ven,no
+66,F,3,0,2,NA,16.2,1,casa,altro,no,A,lun,no
+77,M,7,0,2,3,10.7,5,assistenza domiciliare,scompenso cardiaco,si,A,ven,si
+74,M,10,0,1,6,12.2,13,casa,infezione,no,C,gio,no
+60,M,3,0,0,5,15.2,1,casa,altro,si,C,ven,no
+86,M,22,0,1,7,13.6,6,casa,infezione,si,D,lun,no
+77,F,5,0,1,4,11.4,5,casa,infezione,no,D,sab,si
+71,F,13,0,1,2,12.7,11,assistenza domiciliare,altro,no,D,sab,no
+92,F,11,0,1,1,13.4,4,casa,altro,no,D,gio,no
+85,M,5,0,1,2,8.9,6,struttura riabilitativa,BPCO,no,D,gio,si
+86,M,7,3,1,0,11.6,5,struttura riabilitativa,altro,si,C,mer,si
+89,M,7,0,2,5,15.0,6,casa,altro,si,D,mar,no
+84,F,6,3,1,4,13.0,8,casa,infezione,si,D,mer,si
+62,M,11,0,0,2,10.7,7,casa,infezione,no,D,mer,no
+72,M,7,0,0,5,NA,2,casa,BPCO,si,B,mar,no
+87,F,2,0,0,1,14.9,6,assistenza domiciliare,diabete,no,C,mar,no
+68,F,7,0,1,3,16.5,5,casa,altro,no,D,gio,no
+77,M,4,0,1,4,12.1,6,casa,diabete,no,C,ven,si
+81,F,6,2,1,2,11.1,5,casa,scompenso cardiaco,si,B,mar,si
+92,F,8,2,0,8,13.7,5,casa,altro,no,D,sab,si
+90,F,7,0,2,1,11.5,3,casa,altro,no,D,mer,no
+86,M,13,0,1,2,11.7,8,casa,diabete,no,C,mer,no
+74,F,7,3,0,5,12.3,11,casa,BPCO,no,B,sab,si
+86,M,5,2,0,7,11.1,7,casa,altro,no,B,mar,si
+82,M,19,0,0,1,14.7,4,casa,BPCO,si,A,mer,no
+74,F,11,0,1,3,12.2,11,casa,altro,no,C,mer,no
+91,M,6,0,1,3,9.6,6,casa,altro,si,B,gio,no
+82,F,7,0,0,0,11.0,7,casa,scompenso cardiaco,si,D,lun,no
+68,F,6,0,0,3,14.8,4,casa,diabete,no,C,ven,no
+90,F,7,1,0,4,12.4,5,casa,BPCO,si,B,ven,si
+73,F,4,0,2,1,9.6,7,casa,BPCO,no,A,ven,si
+83,F,20,0,1,3,11.0,5,assistenza domiciliare,infezione,no,D,lun,no
+59,M,15,0,1,6,10.9,7,casa,altro,si,C,gio,no
+76,M,2,0,0,7,12.2,3,assistenza domiciliare,altro,no,C,mar,si
+66,M,4,0,0,1,11.6,3,casa,BPCO,no,B,ven,no
+65,M,7,0,2,4,11.3,7,casa,BPCO,no,B,mer,no
+55,F,5,1,1,7,13.4,5,casa,BPCO,no,D,mar,si
+99,F,2,0,0,3,15.3,2,struttura riabilitativa,diabete,si,A,ven,no
+74,F,11,0,1,4,14.7,13,casa,altro,no,C,mer,no
+79,M,3,0,0,1,8.0,4,casa,infezione,no,B,lun,no
+88,F,11,0,1,1,14.8,9,assistenza domiciliare,diabete,si,B,ven,no
+75,F,9,1,1,2,13.1,7,casa,altro,si,A,gio,no
+82,M,18,0,1,3,11.7,9,casa,diabete,si,B,gio,no
+61,F,4,0,1,3,13.6,5,casa,altro,si,D,mer,no
+78,F,21,0,2,3,12.4,5,casa,diabete,no,A,mer,no
+72,F,3,0,1,3,11.5,5,casa,altro,no,D,mer,no
+82,F,17,0,1,3,11.8,5,assistenza domiciliare,altro,no,B,lun,no
+78,M,13,0,1,3,15.4,5,casa,altro,no,A,gio,no
+61,F,9,2,0,3,14.3,3,casa,altro,no,C,mer,no
+56,F,4,1,1,6,10.0,6,struttura riabilitativa,scompenso cardiaco,no,C,ven,si
+65,F,19,1,0,3,10.0,3,casa,altro,no,D,mer,no
+84,M,11,0,1,2,14.7,5,casa,BPCO,si,B,mer,no
+81,M,3,0,3,2,13.4,9,casa,scompenso cardiaco,no,B,gio,si
+81,F,1,0,4,5,13.1,7,casa,BPCO,si,B,mer,si
+54,F,5,0,1,2,14.8,3,casa,scompenso cardiaco,no,D,mer,no
+47,M,4,0,0,1,10.3,6,assistenza domiciliare,scompenso cardiaco,no,B,mer,no
+69,F,11,1,0,4,12.2,7,casa,scompenso cardiaco,si,C,ven,no
+72,M,8,0,0,0,11.5,2,casa,infezione,si,C,mer,no
+69,M,9,0,2,2,12.6,5,casa,altro,no,B,mer,no
+80,M,5,0,2,1,13.6,1,casa,BPCO,no,D,ven,no
+74,M,12,5,1,6,13.1,8,casa,infezione,no,D,sab,si
+63,M,5,0,1,2,13.2,9,casa,infezione,si,D,lun,no
+66,F,3,0,0,3,9.9,5,casa,altro,si,B,mar,si
+78,M,2,0,0,2,15.6,4,casa,BPCO,no,D,mar,no
+77,M,10,0,0,4,12.3,10,assistenza domiciliare,infezione,no,A,mer,si
+75,M,5,0,1,3,11.6,0,casa,altro,no,C,sab,no
+99,F,2,0,1,0,NA,9,casa,altro,no,D,lun,no
+73,M,4,0,2,6,13.9,3,casa,scompenso cardiaco,no,A,lun,no
+77,F,6,2,1,4,12.8,4,casa,scompenso cardiaco,no,A,gio,si
+65,M,11,0,4,4,11.5,6,casa,scompenso cardiaco,si,C,mar,si
+72,F,2,1,3,4,10.5,7,casa,scompenso cardiaco,no,B,gio,si
+82,M,5,1,1,2,NA,7,casa,scompenso cardiaco,si,C,mer,no
+82,M,11,0,0,5,11.3,5,casa,scompenso cardiaco,no,A,lun,si
+74,M,9,0,0,0,12.9,5,casa,infezione,no,B,mer,no
+80,M,12,0,0,2,12.9,4,casa,altro,si,B,ven,no
+77,F,23,0,0,2,13.0,1,casa,infezione,no,B,sab,no
+55,M,4,2,0,5,15.8,4,casa,scompenso cardiaco,no,A,mar,no
+40,F,5,1,1,2,13.9,5,casa,scompenso cardiaco,no,A,lun,no
+99,M,14,0,0,5,NA,5,casa,BPCO,si,B,lun,no
+85,F,19,2,0,2,12.4,6,casa,altro,no,D,ven,no
+75,F,9,0,0,3,12.5,10,casa,diabete,no,A,ven,no
+57,M,6,0,0,2,10.9,7,casa,altro,no,C,mer,no
+62,M,4,0,1,6,13.2,9,assistenza domiciliare,BPCO,si,C,ven,si
+91,M,10,0,0,8,8.8,4,casa,BPCO,si,A,mer,si
+45,M,9,2,1,4,12.2,7,casa,altro,si,A,gio,si
+72,F,4,0,2,2,14.2,6,casa,BPCO,no,D,ven,no
+86,F,5,0,1,5,10.1,2,casa,BPCO,no,B,mar,no
+78,M,4,3,2,6,10.6,6,casa,infezione,no,B,lun,si
+84,F,10,0,0,6,14.9,5,casa,altro,si,B,mar,no
+75,F,7,0,1,3,12.2,5,assistenza domiciliare,altro,no,C,mer,no
+99,F,15,2,2,3,9.6,6,casa,scompenso cardiaco,no,A,gio,si
+65,F,16,0,1,3,12.7,1,casa,scompenso cardiaco,no,B,mar,no
+61,F,9,3,0,3,11.2,7,casa,infezione,si,C,mar,si
+79,F,15,2,1,0,10.9,5,casa,altro,si,D,mar,no
+92,M,14,0,0,0,15.3,6,casa,infezione,no,B,gio,no
+75,F,18,0,1,3,14.1,7,casa,altro,no,A,lun,no
+88,F,5,0,0,3,12.4,5,casa,scompenso cardiaco,si,C,ven,no
+70,M,11,1,4,8,10.8,9,casa,altro,no,D,gio,si
+63,F,22,0,2,NA,12.9,9,struttura riabilitativa,BPCO,si,C,lun,si
+91,M,11,0,3,4,12.9,15,assistenza domiciliare,scompenso cardiaco,no,B,lun,si
+93,F,6,5,1,1,9.5,8,casa,infezione,no,B,lun,si
+93,F,9,0,1,1,13.6,9,struttura riabilitativa,altro,si,A,ven,no
+71,F,29,0,1,5,13.5,9,casa,altro,no,C,mer,no
+63,M,6,3,0,1,10.9,6,casa,altro,no,C,gio,si
+63,M,5,2,0,1,11.9,6,casa,altro,no,A,ven,no
+74,M,13,1,0,8,12.4,7,casa,diabete,no,D,ven,no
+82,M,6,0,0,4,11.1,9,assistenza domiciliare,altro,no,A,ven,si
+82,F,3,1,0,3,12.1,3,casa,altro,no,B,lun,no
+60,F,3,0,0,3,11.1,1,assistenza domiciliare,infezione,no,A,mar,no
+78,M,7,1,0,2,13.7,10,struttura riabilitativa,BPCO,no,A,mar,si
+76,F,5,0,1,5,12.8,7,casa,altro,no,C,mer,no
+77,F,18,0,1,2,10.9,5,casa,altro,si,B,mer,no
+76,M,5,2,0,2,13.5,10,casa,BPCO,no,C,lun,no
+74,F,3,0,1,6,8.3,9,casa,altro,si,D,mer,si
+83,M,5,0,1,2,13.0,6,casa,infezione,si,C,gio,no
+77,F,3,0,1,2,10.6,9,casa,BPCO,no,C,mar,no
+78,F,15,1,0,2,11.9,8,casa,altro,si,C,sab,no
+68,M,5,1,2,2,12.3,8,casa,altro,no,A,ven,no
+80,F,18,0,0,1,14.1,9,casa,altro,no,A,ven,no
+75,M,10,0,1,1,13.5,1,casa,altro,no,D,mer,no
+53,M,26,1,1,3,11.2,4,casa,diabete,si,D,ven,no
+81,F,7,0,2,2,10.3,8,casa,altro,no,B,lun,no
+73,M,12,0,0,1,16.5,8,casa,diabete,si,C,lun,no
+86,F,2,0,0,3,14.0,9,casa,diabete,no,A,sab,no
+74,F,6,0,1,4,14.8,5,casa,altro,no,A,ven,no
+75,M,5,1,1,3,12.6,8,assistenza domiciliare,altro,si,D,mer,si
+78,F,15,0,0,2,12.7,6,casa,scompenso cardiaco,no,D,gio,no
+76,M,7,0,0,4,13.3,6,casa,scompenso cardiaco,no,D,lun,no
+71,M,11,0,1,1,13.5,7,casa,scompenso cardiaco,no,C,mer,no
+56,F,5,0,0,3,11.9,9,struttura riabilitativa,infezione,no,B,gio,no
+96,F,3,0,0,2,10.5,2,casa,altro,si,D,mer,no
+59,M,7,0,0,4,14.5,3,casa,scompenso cardiaco,no,A,mer,no
+72,F,16,1,0,2,14.4,5,casa,scompenso cardiaco,no,A,gio,no
+83,F,7,1,1,2,13.1,3,casa,BPCO,no,C,mar,no
+80,F,19,0,0,1,11.2,3,casa,BPCO,no,C,mer,no
+82,F,6,3,1,3,10.7,4,casa,infezione,no,C,lun,si
+84,F,6,0,4,NA,11.1,4,assistenza domiciliare,altro,no,D,ven,si
+90,F,6,0,1,1,NA,4,assistenza domiciliare,BPCO,no,B,lun,no
+79,M,6,0,0,3,12.0,3,casa,infezione,si,B,gio,no
+99,M,5,0,0,0,11.6,9,assistenza domiciliare,infezione,no,A,sab,no
+65,F,6,0,1,2,11.9,8,assistenza domiciliare,BPCO,no,B,mar,si
+79,M,5,0,0,2,12.1,1,assistenza domiciliare,BPCO,no,B,mar,no
+72,M,4,0,0,NA,9.2,3,casa,scompenso cardiaco,si,C,ven,no
+70,F,19,2,0,2,13.3,4,casa,scompenso cardiaco,si,C,gio,no
+79,F,13,0,1,3,14.8,4,assistenza domiciliare,infezione,si,D,mer,no
+92,F,6,2,0,3,11.5,9,casa,altro,si,B,mer,si
+68,F,5,1,2,2,13.3,4,casa,altro,no,A,mer,no
+68,F,3,1,1,3,11.5,0,assistenza domiciliare,altro,no,D,ven,si
+84,M,11,1,0,2,10.9,0,casa,scompenso cardiaco,si,C,sab,no
+82,M,5,0,2,2,12.2,6,casa,diabete,no,B,ven,si
+98,F,24,0,0,2,13.3,8,casa,altro,no,A,mer,no
+87,F,3,2,1,1,9.8,7,casa,altro,si,C,gio,si
+79,M,9,0,1,2,13.8,5,casa,altro,no,A,lun,no
+72,M,16,1,0,3,12.6,11,casa,diabete,no,C,mar,no
+78,M,5,0,0,8,11.8,4,casa,altro,no,D,lun,si
+74,F,26,0,1,5,12.1,9,casa,altro,no,A,lun,no
+61,M,14,1,0,2,13.4,10,casa,scompenso cardiaco,no,B,mar,no
+76,M,14,4,2,NA,13.2,4,casa,altro,no,B,mar,si
+74,M,4,0,0,7,13.3,8,casa,scompenso cardiaco,no,B,gio,si
+73,F,14,0,1,0,8.9,5,assistenza domiciliare,scompenso cardiaco,no,D,ven,no
+71,M,14,0,0,3,12.4,10,casa,diabete,no,D,gio,no
+95,M,8,0,1,7,9.3,7,casa,scompenso cardiaco,no,D,mer,si
+84,F,22,1,1,4,13.3,10,assistenza domiciliare,infezione,no,B,mer,no
+86,M,9,4,1,2,13.5,7,struttura riabilitativa,infezione,si,D,lun,si
+69,M,2,0,2,3,11.9,7,casa,altro,no,C,lun,si
+65,M,9,0,1,0,11.7,8,casa,altro,no,C,lun,no
+73,F,22,0,1,3,9.2,7,casa,altro,no,C,mer,no
+79,M,5,0,1,2,10.9,8,casa,altro,no,A,ven,no
+72,F,12,0,0,2,10.9,11,casa,infezione,no,D,mar,no
+74,M,5,0,1,2,13.0,5,struttura riabilitativa,infezione,no,D,mar,no
+87,M,8,0,1,1,12.0,5,struttura riabilitativa,altro,si,B,mer,no
+79,M,1,0,1,3,13.1,2,casa,infezione,no,A,mer,no
+65,M,2,0,1,6,12.2,8,casa,infezione,si,A,mar,si
+71,F,6,0,1,3,12.0,2,casa,scompenso cardiaco,si,B,mer,no
+69,F,5,1,0,3,14.7,10,assistenza domiciliare,scompenso cardiaco,no,A,mer,no
+78,M,2,1,3,4,12.4,7,casa,altro,no,C,ven,si
+63,M,12,0,3,3,11.5,6,casa,diabete,no,A,mar,si
+74,F,9,0,1,0,11.5,6,casa,altro,no,D,sab,no
+84,F,4,0,1,0,12.9,5,casa,altro,no,B,lun,no
+76,F,2,0,1,1,11.4,3,casa,altro,no,A,ven,si
+66,F,11,0,2,1,13.5,5,assistenza domiciliare,diabete,no,C,mar,no
+69,M,6,1,1,2,11.4,9,casa,diabete,si,B,ven,no
+77,F,12,0,3,NA,12.7,3,casa,altro,no,A,mar,no
+81,M,15,0,2,2,13.2,6,casa,infezione,si,C,ven,no
+85,F,6,0,0,2,12.5,11,casa,diabete,no,A,lun,no
+74,F,6,2,2,4,12.6,5,casa,altro,si,B,ven,si
+62,M,12,0,1,1,13.2,7,assistenza domiciliare,infezione,no,D,mer,no
+92,F,6,0,2,NA,10.7,11,casa,infezione,no,C,mer,si
+79,F,2,0,2,1,11.0,8,casa,altro,no,D,ven,no
+80,F,11,1,0,2,13.6,9,casa,BPCO,no,C,ven,no
+79,M,9,0,1,4,15.0,4,struttura riabilitativa,altro,no,B,mer,no
+65,F,5,1,1,3,13.2,6,casa,scompenso cardiaco,si,B,lun,si
+72,M,10,1,1,0,10.5,6,casa,altro,si,B,ven,no
+79,F,6,1,0,3,10.5,7,casa,scompenso cardiaco,no,C,mer,si
+87,M,6,0,1,4,11.5,5,struttura riabilitativa,diabete,no,D,gio,no
+77,M,12,0,4,2,12.7,2,casa,altro,si,B,gio,no
+42,M,3,2,1,3,12.1,9,casa,altro,no,A,ven,si
+73,F,3,0,1,4,10.8,5,casa,altro,no,C,ven,no
+80,M,6,1,1,3,15.1,4,casa,infezione,no,B,gio,no
+90,M,3,0,0,4,10.6,5,casa,infezione,si,A,gio,si
+84,F,12,1,0,1,10.1,6,casa,altro,no,D,gio,no
+99,M,4,0,1,4,13.3,5,casa,BPCO,si,B,gio,no
+92,F,2,1,0,2,12.6,7,casa,diabete,si,B,mer,no
+91,F,6,1,0,4,12.9,10,casa,altro,no,A,ven,no
+86,M,2,0,1,2,15.2,6,casa,altro,no,A,lun,no
+61,M,16,1,1,3,11.7,5,casa,altro,no,D,ven,no
+85,F,7,0,0,3,13.0,5,assistenza domiciliare,altro,no,D,mar,no
+83,F,11,0,0,4,10.9,7,casa,BPCO,si,A,lun,no
+70,M,10,0,1,1,15.1,10,casa,altro,no,C,lun,no
+82,M,8,0,3,1,12.0,5,casa,scompenso cardiaco,si,C,lun,no
+81,M,4,0,2,4,13.1,1,casa,diabete,si,D,mar,no
+71,M,11,0,1,2,11.2,8,casa,infezione,si,C,lun,no
+75,F,6,0,0,1,12.2,5,casa,altro,no,D,lun,no
+73,M,4,0,1,1,11.9,9,casa,scompenso cardiaco,si,D,sab,no
+79,M,2,0,1,2,11.6,2,assistenza domiciliare,infezione,si,C,mar,no
+71,M,15,1,1,3,12.4,4,struttura riabilitativa,diabete,no,D,sab,no
+82,F,6,2,1,2,12.6,7,casa,altro,no,C,lun,si
+55,F,5,0,1,1,12.9,4,casa,infezione,no,A,mar,no
+73,M,2,1,3,0,12.3,7,struttura riabilitativa,scompenso cardiaco,si,B,mer,si
+57,F,12,0,0,4,12.6,9,casa,altro,no,A,mar,no
+71,M,7,0,2,8,12.4,3,casa,altro,no,C,ven,si
+82,M,13,0,0,4,NA,6,casa,altro,no,A,lun,no
+76,F,7,0,2,2,12.8,9,casa,scompenso cardiaco,si,B,ven,no
+75,M,4,0,0,1,11.7,10,assistenza domiciliare,scompenso cardiaco,si,A,mar,no
+77,F,10,0,0,1,12.1,1,casa,altro,si,C,ven,no
+93,F,3,1,1,6,14.7,9,casa,altro,no,B,mer,si
+64,F,3,0,0,5,9.0,4,casa,infezione,no,A,ven,no
+86,M,7,3,1,1,12.0,5,casa,scompenso cardiaco,no,C,mar,si
+59,F,11,0,1,4,13.9,7,casa,infezione,no,D,lun,no
+71,F,14,0,0,4,11.7,7,assistenza domiciliare,BPCO,no,D,mar,no
+78,F,7,0,1,3,12.0,7,casa,altro,no,D,lun,no
+67,M,7,1,0,1,10.7,4,assistenza domiciliare,infezione,no,B,gio,no
+78,F,8,0,3,3,15.3,13,casa,BPCO,no,D,mer,no
+84,M,6,0,2,3,11.4,7,casa,altro,si,C,mar,no
+63,M,5,2,0,4,13.8,1,casa,altro,si,B,lun,si
+75,M,10,0,0,3,16.3,4,casa,diabete,no,D,gio,no
+72,F,5,0,0,8,9.8,4,casa,altro,no,A,mar,no
+55,M,6,0,2,7,13.9,10,assistenza domiciliare,BPCO,no,A,gio,si
+74,M,15,0,0,3,11.8,8,casa,diabete,no,C,mar,no
+67,M,8,0,1,2,14.5,7,casa,altro,si,B,gio,no
+91,M,5,0,0,1,11.1,8,casa,infezione,no,A,gio,no
+66,M,11,0,1,4,10.4,7,casa,infezione,no,C,lun,no
+95,F,6,0,2,4,12.7,9,struttura riabilitativa,scompenso cardiaco,no,B,gio,si
+70,F,11,0,2,NA,12.8,2,casa,BPCO,si,C,lun,no
+97,M,4,0,0,NA,12.5,9,casa,infezione,no,A,mar,no
+82,M,4,0,0,2,12.7,8,casa,altro,no,B,ven,no
+81,M,3,0,0,3,14.9,9,casa,diabete,no,D,mer,no
+85,F,14,0,0,2,15.1,7,assistenza domiciliare,scompenso cardiaco,no,A,ven,no
+86,M,17,0,1,7,11.5,7,casa,altro,no,D,gio,si
+91,F,15,0,0,2,12.4,8,casa,altro,no,C,ven,no
+95,F,9,0,0,4,14.0,2,assistenza domiciliare,altro,no,B,sab,no
+72,F,8,2,1,3,11.3,3,assistenza domiciliare,scompenso cardiaco,no,A,ven,si
+62,M,6,0,4,7,10.7,8,struttura riabilitativa,scompenso cardiaco,si,B,lun,si
+47,F,10,1,1,1,10.7,7,casa,diabete,no,C,lun,no
+72,F,6,0,2,4,14.7,4,casa,diabete,no,D,ven,no
+84,M,4,0,2,2,12.6,5,assistenza domiciliare,scompenso cardiaco,si,A,ven,no
+80,F,13,0,2,2,10.1,6,casa,infezione,si,D,mar,no
+77,F,12,0,2,NA,10.9,7,casa,altro,no,B,mer,no
+72,M,10,0,1,4,10.9,6,casa,altro,no,A,ven,no
+69,M,7,0,1,5,12.7,9,casa,scompenso cardiaco,no,A,ven,no
+73,M,6,0,0,4,12.3,6,assistenza domiciliare,BPCO,no,D,mar,no
+80,F,7,0,3,3,12.6,8,assistenza domiciliare,infezione,no,C,ven,si
+57,M,8,0,0,1,11.3,10,casa,altro,no,A,mer,no
+84,F,3,0,1,4,9.6,9,casa,altro,no,D,mer,si
+60,M,5,4,0,4,15.2,5,casa,BPCO,no,B,ven,si
+74,F,4,0,2,5,NA,4,casa,altro,si,C,lun,si
+69,F,14,1,1,5,9.3,11,casa,altro,si,A,lun,no
+72,F,3,0,1,2,9.3,6,casa,altro,si,A,lun,no
+64,M,3,0,1,NA,11.9,3,casa,BPCO,si,B,ven,no
+63,F,4,0,2,6,12.7,9,struttura riabilitativa,altro,no,B,mar,no
+73,F,8,0,1,2,12.2,4,assistenza domiciliare,infezione,si,D,ven,no
+64,M,4,0,0,1,12.5,4,casa,altro,no,D,lun,no
+99,F,20,0,1,5,12.4,7,assistenza domiciliare,BPCO,no,C,ven,si
+71,F,11,0,0,4,14.0,10,casa,infezione,si,D,mer,no
+69,F,2,0,2,8,10.7,0,casa,altro,no,B,lun,si
+70,F,8,0,0,8,14.2,8,casa,scompenso cardiaco,no,A,sab,no
+64,M,9,1,0,4,12.4,5,casa,scompenso cardiaco,no,B,gio,no
+49,M,3,0,1,4,12.1,4,casa,BPCO,no,C,mar,si
+73,M,7,0,0,2,13.0,3,casa,diabete,no,D,ven,no
+79,F,7,0,0,2,12.8,6,casa,altro,no,D,ven,no
+59,F,5,2,1,1,NA,5,assistenza domiciliare,infezione,no,D,lun,no
+76,F,7,0,0,5,10.7,0,casa,BPCO,no,B,ven,si
+63,M,9,0,0,1,NA,4,casa,altro,no,A,lun,no
+76,F,5,0,2,4,11.2,10,casa,altro,no,A,lun,si
+80,F,7,0,1,2,14.0,4,casa,altro,no,B,lun,no
+81,F,3,0,0,3,14.3,5,casa,infezione,no,B,mar,no
+81,F,10,0,0,4,12.2,11,casa,infezione,no,B,ven,no
+68,M,5,0,0,5,12.0,6,casa,altro,si,B,lun,no
+86,M,14,0,2,3,12.5,11,struttura riabilitativa,scompenso cardiaco,no,C,lun,si
+71,M,24,1,1,4,12.5,6,assistenza domiciliare,altro,no,A,gio,no
+80,F,19,0,1,5,10.6,7,casa,scompenso cardiaco,no,C,gio,no
+84,F,5,2,1,5,13.1,5,assistenza domiciliare,altro,no,A,mar,si
+73,F,9,0,2,4,16.5,6,casa,altro,si,A,mer,no
+62,M,6,0,1,3,12.1,12,casa,diabete,si,A,mar,no
+83,F,9,2,0,2,10.2,3,casa,infezione,si,D,mar,si
+64,M,4,0,1,1,12.2,6,assistenza domiciliare,infezione,no,C,ven,no
+66,M,4,0,1,2,13.7,2,casa,scompenso cardiaco,no,A,mer,si
+64,F,7,0,1,4,11.9,7,casa,scompenso cardiaco,no,A,lun,no
+85,F,4,3,0,3,14.2,7,casa,altro,no,B,mar,si
+74,F,15,0,2,4,11.7,5,assistenza domiciliare,infezione,no,D,gio,si
+51,M,11,0,1,2,16.5,4,casa,BPCO,no,A,ven,no
+84,M,8,0,1,3,13.7,7,casa,altro,si,D,gio,no
+99,M,6,2,2,1,10.4,10,assistenza domiciliare,altro,si,C,lun,si
+96,F,6,0,0,2,12.0,6,casa,infezione,no,C,gio,no
+70,F,12,0,0,3,8.7,3,casa,diabete,si,C,gio,no
+77,M,7,1,0,0,8.3,7,casa,scompenso cardiaco,si,A,ven,no
+81,F,7,0,0,3,13.3,6,casa,altro,no,A,mar,no
+86,M,21,1,2,2,13.2,3,casa,altro,no,D,gio,no
+76,M,8,1,2,3,NA,9,struttura riabilitativa,infezione,si,C,lun,no
+64,F,6,5,0,2,13.9,4,casa,scompenso cardiaco,si,C,gio,si
+84,M,6,0,0,5,9.9,11,assistenza domiciliare,infezione,no,D,sab,si
+83,F,15,1,1,7,12.6,7,casa,altro,no,D,ven,no
+61,F,5,2,0,0,13.3,9,struttura riabilitativa,altro,si,B,gio,no
+72,F,5,2,0,4,12.4,2,casa,diabete,no,D,mar,si
+79,F,13,0,0,1,11.6,10,casa,altro,no,D,mer,no
+76,M,14,1,2,3,11.7,3,casa,scompenso cardiaco,si,A,lun,si
+82,M,16,0,0,2,10.6,3,casa,diabete,no,A,lun,no
+85,F,4,0,0,2,11.0,4,casa,altro,no,A,lun,no
+82,F,9,0,0,2,14.2,5,casa,BPCO,no,A,ven,no
+75,M,5,0,2,4,13.0,5,casa,BPCO,no,C,lun,si
+61,F,9,0,1,1,11.6,5,assistenza domiciliare,scompenso cardiaco,si,A,lun,no
+83,M,3,0,0,2,12.6,5,casa,altro,si,A,sab,no
+91,F,6,2,1,2,12.4,6,casa,scompenso cardiaco,si,D,mer,si
+98,F,13,3,0,NA,9.5,11,casa,diabete,si,C,mar,si
+76,F,8,0,4,4,14.1,6,casa,scompenso cardiaco,si,C,lun,no
+75,M,2,3,2,2,14.4,3,casa,BPCO,no,A,ven,si
+92,F,13,0,3,2,11.2,6,assistenza domiciliare,altro,no,C,mer,si
+92,F,9,0,0,4,12.6,6,casa,altro,no,C,mer,no
+80,F,6,0,0,2,11.6,8,casa,scompenso cardiaco,no,D,lun,no
+84,F,7,2,2,3,12.0,2,casa,altro,no,C,ven,si
+67,F,6,0,1,7,16.4,3,casa,diabete,no,B,gio,si
+82,F,14,0,2,4,12.1,5,assistenza domiciliare,altro,no,D,sab,no
+67,M,7,0,0,1,12.6,9,casa,altro,si,D,mer,no
+74,M,3,0,0,2,10.0,4,casa,infezione,no,D,lun,no
+74,F,4,0,0,3,10.0,7,struttura riabilitativa,BPCO,no,A,mer,no
+71,F,19,0,2,4,11.9,0,casa,infezione,no,D,lun,no
+53,F,14,3,1,6,12.5,5,casa,diabete,no,A,mar,si
+67,M,11,0,1,0,15.2,5,assistenza domiciliare,diabete,si,B,mar,no
+80,M,4,0,0,4,11.9,7,casa,scompenso cardiaco,no,A,gio,no
+75,F,10,1,0,1,10.2,10,casa,altro,no,C,mer,no
+72,M,13,0,0,5,15.2,5,casa,BPCO,no,B,lun,no
+81,M,7,0,1,5,11.8,2,casa,diabete,no,D,ven,si
+83,M,11,0,1,0,NA,9,casa,BPCO,no,D,lun,no
+85,F,14,0,0,4,12.3,7,casa,altro,no,B,lun,no
+67,F,13,0,0,4,15.0,8,casa,altro,si,D,mar,no
+76,F,9,0,0,5,12.3,5,casa,altro,no,B,lun,no
+72,M,9,2,1,2,14.2,5,casa,scompenso cardiaco,no,B,mer,si
+66,F,3,1,1,3,9.7,5,casa,altro,si,C,lun,no
+59,M,6,3,0,2,13.8,8,casa,scompenso cardiaco,no,A,gio,si
+75,M,12,0,1,1,11.4,7,casa,infezione,no,B,mar,no
+66,F,20,0,0,2,12.4,9,assistenza domiciliare,infezione,si,A,mer,no
+99,F,8,1,0,3,10.4,8,assistenza domiciliare,altro,no,D,ven,si
+75,M,14,0,0,2,9.3,4,casa,infezione,no,D,ven,no
+73,F,7,0,1,3,14.1,4,struttura riabilitativa,altro,no,B,lun,no
+71,M,4,0,1,NA,13.9,12,casa,altro,no,A,mer,no
+96,M,9,0,0,2,11.6,3,casa,altro,si,A,lun,no
+65,M,9,0,1,4,11.8,9,casa,scompenso cardiaco,no,A,lun,no
+74,F,4,3,2,2,12.8,9,casa,infezione,si,A,lun,si
+67,F,4,2,2,3,12.7,8,casa,altro,si,B,ven,si
+74,F,7,0,0,3,11.8,9,struttura riabilitativa,altro,no,B,lun,no
+75,F,5,0,1,3,13.0,5,struttura riabilitativa,scompenso cardiaco,no,C,mar,no
+88,M,10,0,1,4,14.6,5,struttura riabilitativa,altro,si,A,ven,no
+60,M,3,0,1,3,11.6,4,struttura riabilitativa,infezione,si,C,mar,no
+76,M,12,0,2,3,10.4,3,casa,altro,no,D,ven,no
+94,M,5,0,1,2,12.5,8,casa,altro,no,C,gio,no
+70,M,9,4,3,3,10.9,8,assistenza domiciliare,altro,no,C,lun,si
+74,F,3,0,1,3,11.8,5,casa,BPCO,si,B,sab,no
+66,M,12,2,0,2,14.2,7,casa,infezione,no,D,sab,no
+47,F,8,0,1,4,9.0,4,struttura riabilitativa,BPCO,no,D,mer,si
+75,F,25,0,0,4,13.2,1,casa,infezione,no,C,ven,no
+89,M,3,0,0,5,14.7,3,struttura riabilitativa,altro,si,A,ven,no
+71,M,2,0,0,4,11.7,5,casa,BPCO,si,A,mer,no
+56,M,11,1,0,0,9.2,2,assistenza domiciliare,BPCO,no,D,lun,no
+79,M,12,0,1,2,10.0,5,casa,BPCO,si,D,mar,no
+77,F,2,4,1,1,NA,2,casa,infezione,no,B,lun,si
+87,F,10,0,1,6,10.3,7,casa,scompenso cardiaco,no,A,lun,no
+86,F,12,0,0,5,10.3,8,struttura riabilitativa,altro,no,C,mar,no
+73,F,17,0,0,3,12.9,4,casa,infezione,no,A,lun,no
+80,F,8,0,0,1,15.5,4,struttura riabilitativa,infezione,si,A,gio,no
+56,F,3,0,0,NA,10.6,7,casa,scompenso cardiaco,no,A,lun,no
+88,F,2,0,0,0,13.5,7,casa,scompenso cardiaco,no,C,lun,no
+78,F,25,0,0,6,11.4,9,casa,scompenso cardiaco,no,D,gio,no
+88,F,9,0,0,NA,13.3,5,casa,altro,no,B,ven,no
+88,F,13,2,0,2,9.6,2,casa,altro,si,D,lun,no
+73,M,6,0,0,3,14.0,4,casa,altro,si,B,mar,no
+74,F,6,0,2,5,10.8,1,casa,diabete,si,D,ven,no
+66,M,6,2,4,NA,11.2,10,assistenza domiciliare,altro,si,D,mer,si
+53,F,4,0,0,2,11.6,7,casa,scompenso cardiaco,no,C,mar,no
+74,M,6,0,1,3,13.5,11,struttura riabilitativa,infezione,no,A,gio,no
+78,F,4,0,0,0,11.6,4,casa,altro,no,D,mer,no
+64,M,6,2,1,3,10.1,6,casa,BPCO,no,A,gio,si
+84,M,14,0,2,1,14.1,4,casa,altro,no,D,lun,no
+77,M,7,1,0,3,13.7,5,assistenza domiciliare,diabete,no,D,mar,no
+81,F,5,1,2,3,12.1,5,struttura riabilitativa,altro,no,A,mer,no
+67,M,20,1,0,2,10.9,4,casa,infezione,si,A,ven,no
+56,F,16,0,0,6,12.0,8,casa,diabete,no,C,mer,no
+84,M,7,0,0,4,10.3,6,casa,diabete,no,C,gio,no
+83,F,2,0,1,4,11.4,3,casa,infezione,si,C,sab,no
+75,M,15,0,0,5,10.9,7,casa,altro,no,D,sab,no
+71,F,16,0,0,5,10.9,2,casa,infezione,no,B,gio,no
+73,F,5,0,0,1,14.2,5,casa,altro,no,B,lun,no
+74,M,17,0,0,4,13.2,8,casa,infezione,no,A,sab,no
+70,M,4,0,1,5,10.4,9,casa,scompenso cardiaco,no,A,ven,si
+54,F,6,0,3,7,12.5,4,struttura riabilitativa,BPCO,no,D,gio,si
+84,F,5,3,4,4,11.9,6,casa,diabete,si,C,lun,si
+59,M,8,2,1,2,8.2,9,assistenza domiciliare,altro,no,A,gio,si
+72,M,7,0,1,3,10.8,4,casa,infezione,no,B,lun,no
+72,F,17,0,0,6,13.6,4,casa,infezione,no,A,mer,no
+79,F,6,0,0,5,11.4,7,casa,altro,no,A,gio,no
+58,M,9,0,0,4,12.0,2,assistenza domiciliare,scompenso cardiaco,si,B,mer,si
+89,F,7,2,1,0,10.7,6,casa,diabete,si,B,lun,si
+83,M,8,0,0,4,12.6,7,struttura riabilitativa,infezione,no,A,sab,no
+84,F,4,0,0,2,12.6,8,casa,altro,no,C,gio,no
+90,F,7,1,1,0,13.4,3,casa,altro,no,C,ven,no
+67,F,16,2,0,2,13.9,8,casa,altro,si,A,mar,no
+41,F,12,0,1,2,10.3,5,casa,infezione,no,B,gio,no
+80,M,3,0,2,0,10.8,4,casa,altro,no,B,mar,no
+90,F,6,1,1,3,14.4,4,struttura riabilitativa,infezione,no,B,ven,no
+89,F,4,0,0,3,10.8,4,casa,scompenso cardiaco,no,D,lun,no
+70,F,5,0,1,4,12.1,10,casa,BPCO,no,A,mer,no
+75,F,5,0,0,4,11.4,5,casa,scompenso cardiaco,no,B,ven,si
+79,F,3,0,1,2,12.1,6,struttura riabilitativa,infezione,si,C,lun,no
+56,F,9,1,0,4,7.5,7,assistenza domiciliare,diabete,no,B,lun,si
+69,F,12,0,2,NA,12.3,6,struttura riabilitativa,infezione,si,C,mar,no
+69,F,8,0,2,2,12.5,8,assistenza domiciliare,altro,no,A,mer,si
+93,M,5,0,0,2,NA,5,casa,infezione,si,D,gio,no
+69,M,8,0,0,0,10.8,7,assistenza domiciliare,altro,no,A,ven,no
+93,F,4,0,3,0,10.8,8,assistenza domiciliare,scompenso cardiaco,no,B,ven,no
+76,F,13,0,1,5,14.6,4,casa,BPCO,si,A,mar,no
+58,M,29,0,0,0,11.7,4,casa,altro,no,D,lun,no
+99,M,1,0,3,2,NA,8,struttura riabilitativa,infezione,si,D,ven,si
+65,F,9,4,4,NA,14.9,6,struttura riabilitativa,infezione,si,A,ven,si
+83,M,7,0,3,1,12.3,4,casa,altro,si,D,gio,no
+95,F,8,0,1,2,14.7,5,struttura riabilitativa,infezione,no,D,ven,no
+70,F,6,2,1,2,14.7,6,casa,diabete,no,D,gio,no
+62,M,3,1,0,0,12.6,5,casa,BPCO,si,B,ven,no
+87,F,7,0,0,3,11.3,9,casa,scompenso cardiaco,no,C,sab,no
+77,F,6,0,0,NA,11.5,4,struttura riabilitativa,infezione,no,B,mar,si
+62,F,6,0,0,4,10.7,2,casa,scompenso cardiaco,no,A,gio,no
+64,F,7,0,0,3,12.0,4,casa,infezione,si,C,ven,no
+72,F,5,2,3,2,12.6,5,struttura riabilitativa,scompenso cardiaco,no,A,ven,si
+87,M,28,0,1,7,11.8,6,casa,altro,no,D,mer,no
+73,F,3,0,0,2,12.5,2,casa,diabete,no,A,ven,no
+83,M,6,1,1,3,11.3,6,casa,altro,no,A,lun,si
+94,M,3,2,0,2,13.2,6,casa,scompenso cardiaco,no,C,ven,no
+90,F,6,0,0,4,13.7,8,casa,infezione,si,C,gio,no
+92,F,18,0,2,5,10.0,8,assistenza domiciliare,altro,no,A,mer,si
+90,F,7,2,1,2,12.3,7,casa,altro,no,B,mer,si
+58,F,4,2,1,6,12.1,3,casa,BPCO,no,C,mer,si
+89,F,3,0,0,NA,11.5,1,struttura riabilitativa,diabete,no,B,gio,no
+80,F,10,0,0,4,11.2,6,casa,infezione,no,A,mar,no
+75,M,5,0,0,5,11.9,10,casa,altro,no,A,gio,no
+64,F,10,0,1,3,12.1,6,casa,BPCO,si,B,lun,no
+59,M,5,3,1,2,12.3,9,struttura riabilitativa,scompenso cardiaco,si,B,mer,si
+64,M,5,1,0,3,10.9,7,assistenza domiciliare,infezione,no,A,lun,si
+76,F,7,2,1,3,15.2,8,struttura riabilitativa,infezione,no,D,gio,si
+63,F,3,0,0,4,13.8,8,struttura riabilitativa,infezione,no,A,lun,si
+67,F,15,0,2,6,12.3,3,casa,altro,si,C,lun,no
+69,M,4,2,1,0,14.9,10,struttura riabilitativa,infezione,si,D,ven,no
+83,F,8,0,1,4,14.0,7,assistenza domiciliare,scompenso cardiaco,no,A,ven,no
+73,M,9,0,0,1,12.1,3,casa,altro,no,C,mar,no
+74,F,29,0,0,NA,9.1,3,casa,altro,no,D,ven,no
+91,F,9,0,0,1,10.8,6,casa,infezione,no,A,gio,no
+72,M,12,0,0,3,10.8,4,casa,scompenso cardiaco,si,D,mar,si
+83,M,5,0,0,1,11.0,5,casa,altro,no,D,ven,no
+64,M,6,0,0,2,11.1,11,struttura riabilitativa,altro,no,C,gio,no
+80,M,7,2,1,3,12.4,5,casa,infezione,si,A,sab,si
+77,M,13,0,0,4,12.6,5,assistenza domiciliare,diabete,no,A,mar,no
+78,F,4,1,0,2,13.3,3,casa,scompenso cardiaco,no,C,lun,no
+71,F,9,0,1,6,13.0,4,casa,infezione,no,A,ven,si
+65,M,40,2,0,0,13.0,6,struttura riabilitativa,infezione,no,C,sab,no
+73,M,4,2,1,4,13.2,11,assistenza domiciliare,infezione,no,A,mer,si
+71,M,2,0,2,10,10.4,5,casa,scompenso cardiaco,no,D,gio,si
+87,M,5,0,0,6,13.2,3,casa,BPCO,no,B,mer,no
+86,M,7,0,1,6,16.0,3,casa,altro,no,A,gio,no
+63,M,19,0,1,3,12.8,8,casa,BPCO,no,A,gio,no
+83,F,9,3,0,0,11.0,8,assistenza domiciliare,scompenso cardiaco,si,D,ven,si
+71,M,14,0,1,3,13.3,6,struttura riabilitativa,altro,no,B,gio,no
+81,M,5,2,0,2,12.6,5,casa,scompenso cardiaco,si,A,gio,si
+71,M,7,0,0,2,10.1,6,casa,scompenso cardiaco,no,B,mer,no
+60,F,8,0,1,5,13.5,7,casa,infezione,no,B,lun,no
+87,M,4,1,1,3,11.8,5,casa,infezione,no,C,lun,no
+81,M,8,0,2,4,12.9,9,struttura riabilitativa,scompenso cardiaco,no,B,lun,no
+63,F,6,1,2,4,NA,2,casa,altro,no,C,gio,no
+55,F,8,0,1,2,11.6,7,assistenza domiciliare,altro,si,A,mar,no
+70,M,3,0,0,3,10.2,5,casa,altro,si,B,sab,no
+63,F,2,1,1,8,9.8,2,casa,BPCO,no,A,mar,si
+72,M,16,0,2,3,10.7,4,casa,altro,si,C,ven,no
+83,M,7,0,0,1,11.7,2,casa,infezione,si,D,mer,no
+92,F,7,0,1,0,11.1,8,casa,diabete,no,B,mer,no
+72,M,34,0,1,2,9.7,11,casa,altro,si,C,mer,no
+91,M,13,0,1,5,10.7,10,casa,BPCO,no,C,ven,no
+89,M,9,0,0,4,12.9,2,struttura riabilitativa,BPCO,no,C,gio,no
+71,M,5,0,1,3,11.8,9,casa,diabete,no,B,mer,no
+58,F,9,2,1,3,14.7,8,casa,infezione,no,B,gio,si
+85,F,8,2,0,3,13.2,5,casa,altro,no,A,lun,no
+83,F,6,0,2,1,11.9,10,struttura riabilitativa,infezione,no,A,lun,no
+99,F,17,0,0,3,12.0,3,assistenza domiciliare,scompenso cardiaco,si,C,gio,no
+92,F,11,0,0,2,12.1,2,assistenza domiciliare,altro,no,C,gio,no
+85,M,10,2,0,3,11.0,4,casa,infezione,no,B,gio,no
+95,M,4,0,0,2,14.2,7,casa,altro,no,C,gio,no
+65,F,5,0,1,NA,11.7,3,assistenza domiciliare,scompenso cardiaco,no,A,mar,si
+78,M,14,0,0,1,13.9,7,casa,infezione,no,B,mar,no
+73,F,8,2,0,4,NA,7,casa,scompenso cardiaco,si,A,lun,si
+95,M,5,3,0,6,12.5,6,casa,scompenso cardiaco,no,B,mar,si
+82,F,9,1,2,7,12.0,4,casa,altro,no,A,gio,si
+42,M,7,0,1,3,14.4,5,casa,altro,si,C,ven,no
+91,M,6,0,1,4,13.9,2,assistenza domiciliare,altro,no,C,ven,si
+66,M,7,0,0,4,12.5,5,casa,BPCO,no,B,ven,no
+85,M,12,0,2,6,13.5,3,casa,BPCO,no,B,mar,si
+71,M,9,0,2,0,11.8,6,casa,diabete,no,D,lun,no
+79,F,4,0,0,4,10.5,7,struttura riabilitativa,scompenso cardiaco,no,B,mar,no
+83,F,5,0,2,3,13.3,10,casa,BPCO,no,A,mar,no
+78,M,9,0,3,2,9.1,7,assistenza domiciliare,BPCO,no,B,gio,si
+66,F,4,3,1,5,12.2,5,assistenza domiciliare,altro,no,D,lun,si
+92,M,8,0,1,5,13.9,4,casa,diabete,no,D,gio,no
+81,M,7,0,2,1,13.7,7,casa,infezione,si,D,gio,no
+76,F,3,1,0,4,13.1,7,casa,BPCO,si,A,gio,no
+84,F,2,0,1,3,13.2,8,casa,altro,no,C,mar,no
+70,M,4,0,2,5,13.3,10,casa,scompenso cardiaco,si,A,ven,no
+97,M,7,0,3,2,13.0,6,casa,altro,si,A,lun,no
+79,F,7,2,2,4,11.3,5,assistenza domiciliare,scompenso cardiaco,no,D,lun,si
+80,F,15,0,1,7,13.2,6,casa,infezione,no,A,lun,si
+80,M,7,1,2,3,11.5,6,casa,scompenso cardiaco,no,C,gio,si
+66,F,7,0,0,3,15.2,4,casa,infezione,si,B,lun,no
+63,M,9,0,0,6,10.1,6,casa,diabete,si,B,mar,si
+79,M,6,0,1,6,10.7,9,casa,altro,si,B,lun,si
+80,M,20,0,1,NA,12.1,4,casa,altro,si,D,gio,no
+91,M,5,1,2,2,12.8,8,casa,infezione,no,B,mer,si
+81,F,4,0,2,2,15.9,5,casa,altro,si,A,mar,no
+64,M,5,0,0,8,13.0,2,casa,altro,no,D,mer,si
+82,M,15,0,0,3,11.8,6,casa,infezione,no,C,gio,no
+85,M,5,0,0,3,9.5,11,casa,altro,si,A,ven,no
+87,M,5,1,2,6,12.5,8,struttura riabilitativa,scompenso cardiaco,no,B,mar,si
+80,M,10,0,0,4,13.7,13,casa,diabete,no,D,lun,no
+63,F,15,0,1,5,12.1,4,casa,altro,si,A,gio,no
+89,F,6,1,1,2,13.4,6,casa,altro,si,D,mar,no
+68,M,11,0,1,1,12.7,10,struttura riabilitativa,altro,si,A,gio,no
+83,M,5,2,0,2,12.8,4,casa,BPCO,no,C,ven,si
+59,M,16,3,0,2,12.5,1,casa,altro,no,B,mar,si
+85,F,4,1,0,5,12.0,3,assistenza domiciliare,BPCO,no,B,lun,si
+68,F,6,0,0,3,11.4,5,assistenza domiciliare,altro,no,D,mer,no
+88,F,6,5,1,1,13.2,7,casa,altro,no,A,mer,si
+96,M,4,2,1,3,13.3,6,assistenza domiciliare,infezione,no,B,sab,si
+89,F,7,0,1,4,11.0,2,casa,altro,no,B,mer,no
+63,F,11,1,3,0,15.6,7,assistenza domiciliare,infezione,si,A,mer,no
+66,F,4,0,2,2,13.9,9,casa,altro,no,C,lun,no
+67,M,22,2,0,1,14.1,8,casa,scompenso cardiaco,no,A,ven,no
+83,M,8,0,0,2,12.2,4,casa,altro,no,A,ven,no
+80,F,9,0,0,1,12.4,7,struttura riabilitativa,infezione,no,A,gio,no
+78,F,4,1,0,2,13.7,7,assistenza domiciliare,altro,no,B,ven,si
+80,M,7,0,0,8,10.8,10,casa,altro,si,D,lun,si
+83,M,12,0,1,3,11.4,7,casa,BPCO,no,B,lun,no
+83,F,4,0,0,3,12.0,7,casa,infezione,si,A,sab,no
+95,M,5,0,0,1,14.2,5,casa,diabete,si,A,ven,no
+76,M,4,0,2,2,12.5,3,struttura riabilitativa,scompenso cardiaco,no,C,mer,no
+78,M,3,0,0,2,10.2,6,casa,altro,si,C,gio,no
+56,F,10,0,0,1,12.5,1,assistenza domiciliare,infezione,no,A,mer,no
+62,F,4,0,1,2,10.5,7,casa,BPCO,no,B,lun,no
+69,F,19,0,0,3,10.5,5,assistenza domiciliare,altro,no,B,mer,no
+63,M,3,0,0,5,13.6,7,casa,altro,no,B,ven,no
+79,M,6,0,0,3,12.0,2,casa,altro,no,A,gio,no
+88,M,7,3,0,0,10.1,8,casa,altro,no,A,gio,si
+71,F,4,0,0,4,NA,10,casa,altro,no,A,ven,no
+71,M,2,0,1,5,9.2,4,casa,altro,no,D,gio,si
+70,F,5,0,1,4,NA,5,casa,diabete,no,B,gio,no
+78,M,7,1,0,4,9.5,5,struttura riabilitativa,BPCO,no,A,ven,si
+70,M,4,2,1,2,12.0,5,casa,altro,si,B,sab,no
+81,F,8,0,2,3,13.9,4,casa,altro,si,C,gio,no
+79,M,2,2,0,3,10.2,4,casa,altro,no,D,ven,si
+80,M,8,0,3,NA,11.1,3,assistenza domiciliare,altro,no,A,sab,no
+84,F,25,1,0,2,14.1,6,casa,altro,no,C,ven,no
+76,M,13,0,0,2,12.0,9,casa,diabete,no,B,sab,no
+78,F,13,1,0,1,12.6,7,casa,infezione,no,B,mar,no
+95,F,6,0,1,3,NA,6,assistenza domiciliare,infezione,no,D,lun,si
+76,F,5,2,1,6,13.7,3,assistenza domiciliare,infezione,si,B,sab,si
+85,M,14,0,2,3,13.5,1,casa,infezione,si,D,mar,no
+77,F,6,0,0,1,12.0,10,casa,altro,no,C,mer,no
+71,M,10,0,0,3,13.1,5,assistenza domiciliare,infezione,no,B,mar,no
+71,F,4,0,1,3,9.2,5,casa,altro,si,D,ven,no
+67,F,9,3,0,2,9.7,6,assistenza domiciliare,altro,si,C,gio,si
+76,M,8,0,1,1,16.1,2,casa,infezione,no,A,lun,no
+69,M,2,0,1,2,14.5,9,casa,altro,no,A,mar,no
+71,F,7,0,1,3,12.9,14,struttura riabilitativa,altro,si,C,lun,no
+89,F,10,0,1,3,11.9,7,casa,infezione,no,A,mer,no
+75,F,10,0,2,4,13.8,6,assistenza domiciliare,altro,si,D,mar,no
+89,F,9,0,1,3,12.0,3,assistenza domiciliare,altro,no,C,mer,no
+79,F,15,0,0,3,12.6,6,casa,BPCO,si,A,mar,no
+85,M,7,0,1,4,13.2,6,casa,altro,si,D,gio,no
+69,M,4,1,2,1,10.9,4,casa,infezione,no,B,gio,si
+78,F,12,0,0,3,10.6,5,assistenza domiciliare,scompenso cardiaco,no,C,gio,no
+99,M,25,2,0,1,11.6,4,casa,scompenso cardiaco,si,C,ven,si
+85,F,6,3,3,2,14.1,10,casa,diabete,no,B,mar,si
+87,F,17,0,2,4,12.1,8,struttura riabilitativa,altro,no,A,mer,no
+79,F,6,2,0,0,11.2,2,casa,altro,no,C,gio,si
+85,F,3,2,1,4,11.5,7,casa,scompenso cardiaco,no,B,ven,si
+63,F,4,0,3,4,8.3,5,casa,diabete,si,D,gio,si
+67,F,4,1,0,4,13.1,12,casa,BPCO,si,B,mer,no
+81,F,14,0,0,4,14.2,4,casa,altro,no,B,ven,no
+85,M,7,2,0,2,12.7,7,casa,infezione,no,C,sab,no
+71,F,5,1,0,3,12.1,4,casa,scompenso cardiaco,no,C,gio,si
+74,F,8,0,0,1,13.9,11,casa,infezione,no,B,ven,no
+72,M,16,2,2,2,12.6,9,casa,scompenso cardiaco,no,B,mar,si
+74,M,7,2,1,3,10.3,7,casa,infezione,no,A,mar,si
+63,M,5,2,1,3,13.2,3,assistenza domiciliare,altro,si,A,ven,si
+60,F,9,0,0,2,13.2,7,casa,infezione,si,C,mar,no
+75,F,4,0,2,1,11.9,5,assistenza domiciliare,altro,no,A,mar,no
+57,M,9,0,0,4,11.4,3,assistenza domiciliare,BPCO,no,A,mer,si
+65,F,13,0,0,6,11.4,4,assistenza domiciliare,BPCO,no,D,ven,no
+69,M,8,0,0,3,14.0,5,struttura riabilitativa,infezione,si,A,lun,no
+64,M,5,0,1,2,12.6,7,casa,diabete,si,C,mer,no
+78,M,8,0,0,5,11.4,10,casa,infezione,si,A,ven,si
+71,M,3,4,0,5,13.4,7,casa,BPCO,no,D,gio,si
+75,F,18,0,0,1,13.9,7,casa,diabete,no,C,lun,no
+65,M,29,2,1,2,10.8,10,casa,BPCO,si,D,ven,no
+68,M,7,3,1,2,14.1,7,casa,infezione,no,A,mar,si
+81,F,2,0,0,2,9.9,7,struttura riabilitativa,infezione,si,D,lun,si
+80,M,5,0,1,4,11.5,5,casa,BPCO,no,C,mer,si
+71,M,3,0,1,2,13.2,7,casa,scompenso cardiaco,si,B,ven,si
+80,F,2,0,0,3,13.4,5,assistenza domiciliare,scompenso cardiaco,no,A,lun,no
+78,F,6,0,1,4,8.1,8,struttura riabilitativa,scompenso cardiaco,no,A,ven,si
+77,F,6,1,0,3,11.7,7,casa,infezione,si,A,mar,no
+93,M,5,1,1,6,9.5,3,assistenza domiciliare,scompenso cardiaco,si,A,gio,si
+71,F,14,0,0,1,16.0,4,assistenza domiciliare,altro,si,D,lun,no
+80,M,7,0,1,3,11.0,5,assistenza domiciliare,altro,no,A,sab,no
+80,M,4,4,0,3,13.2,5,casa,altro,si,A,gio,si
+73,F,9,0,0,4,13.0,8,casa,altro,no,B,sab,no
+63,M,3,0,0,3,12.2,6,casa,altro,no,B,mer,no
+83,F,6,0,0,1,NA,8,assistenza domiciliare,BPCO,no,A,gio,no
+79,F,4,2,0,2,12.8,6,casa,altro,si,D,mer,no
+76,F,8,0,1,4,10.1,8,casa,altro,si,B,gio,si
+76,M,6,0,1,3,14.6,12,struttura riabilitativa,BPCO,no,C,mar,no
+76,F,5,0,1,6,11.0,2,casa,BPCO,no,B,mar,si
+66,M,8,0,0,5,13.9,5,casa,altro,si,A,mar,no
+79,F,9,0,0,2,13.4,10,casa,BPCO,no,A,mar,no
+56,M,8,1,1,7,15.4,8,assistenza domiciliare,infezione,no,A,mer,si
+75,F,14,0,0,3,9.4,8,struttura riabilitativa,scompenso cardiaco,no,C,mar,si
+59,M,4,0,2,NA,NA,6,casa,altro,no,A,gio,si
+72,F,9,0,1,4,11.3,8,casa,diabete,no,A,lun,no
+83,F,19,0,2,7,12.1,7,struttura riabilitativa,altro,si,C,ven,no
+73,M,7,0,0,3,8.7,4,casa,infezione,no,A,lun,no
+70,F,2,1,1,2,10.6,12,struttura riabilitativa,altro,no,A,lun,si
+81,F,13,2,1,2,13.8,7,struttura riabilitativa,BPCO,no,C,ven,si
+73,F,6,1,0,4,13.3,6,struttura riabilitativa,BPCO,no,C,mar,no
+71,F,10,0,0,3,NA,5,struttura riabilitativa,scompenso cardiaco,si,C,lun,no
+71,M,8,0,3,4,9.5,9,casa,scompenso cardiaco,no,A,ven,si
+92,M,10,0,0,1,11.4,1,casa,infezione,si,C,gio,no
+83,M,15,2,1,0,11.7,11,assistenza domiciliare,diabete,si,C,ven,si
+81,F,8,0,1,4,13.4,0,casa,altro,no,C,mar,no
+62,M,11,2,2,1,12.1,2,assistenza domiciliare,BPCO,no,C,sab,si
+82,F,3,2,0,5,11.2,8,casa,infezione,no,A,lun,si
+61,M,4,1,0,4,12.0,7,casa,BPCO,no,B,gio,si
+81,M,7,2,0,6,9.8,4,assistenza domiciliare,altro,no,D,ven,si
+63,F,18,0,0,3,13.7,3,assistenza domiciliare,BPCO,no,D,ven,no
+97,F,4,1,1,4,12.9,6,struttura riabilitativa,altro,no,D,lun,no
+57,F,6,0,2,2,NA,4,assistenza domiciliare,scompenso cardiaco,si,A,mer,no
+89,F,10,0,1,6,13.6,5,casa,altro,no,A,mer,si
+84,F,5,1,0,3,15.4,6,casa,altro,no,A,sab,no
+56,M,3,0,1,NA,7.9,5,casa,altro,si,D,mar,si
+73,M,2,0,1,1,13.0,5,casa,infezione,no,A,lun,no
+91,F,11,0,0,2,11.1,7,casa,scompenso cardiaco,no,D,mar,no
+88,M,4,2,1,2,12.0,5,casa,diabete,no,C,gio,si
+57,F,9,0,0,2,11.9,4,casa,scompenso cardiaco,no,A,gio,no
+70,M,10,0,0,4,11.2,2,assistenza domiciliare,altro,si,A,gio,no
+62,F,4,0,0,6,11.5,4,struttura riabilitativa,altro,si,C,gio,si
+64,M,9,1,1,3,13.2,6,assistenza domiciliare,diabete,no,A,mar,no
+68,F,2,0,0,2,10.8,3,casa,scompenso cardiaco,si,D,lun,no
+96,M,7,0,2,3,13.5,6,casa,BPCO,no,B,mar,no
+77,M,4,2,0,NA,13.1,6,assistenza domiciliare,altro,no,A,ven,si
+73,M,8,0,1,8,11.0,7,casa,altro,si,A,gio,si
+72,F,8,0,2,0,15.3,6,casa,altro,no,D,ven,no
+83,M,8,0,1,1,11.2,5,struttura riabilitativa,BPCO,no,A,sab,no
+83,M,10,0,0,0,12.6,6,casa,infezione,no,B,ven,no
+65,F,5,0,1,4,11.5,4,casa,altro,no,C,lun,no
+91,M,3,2,2,NA,13.6,5,assistenza domiciliare,scompenso cardiaco,si,B,ven,si
+63,M,3,0,0,2,12.6,5,casa,altro,no,C,mar,no
+72,F,13,1,1,1,12.0,6,casa,altro,no,C,gio,no
+80,M,4,0,0,4,12.0,5,casa,diabete,si,B,mer,no
+94,F,6,6,1,0,11.4,1,casa,altro,no,C,sab,si
+71,M,9,0,0,2,9.3,6,casa,altro,no,A,mer,no
+78,F,6,0,0,1,9.5,10,casa,diabete,si,B,mer,no
+90,M,4,0,1,3,11.9,7,struttura riabilitativa,infezione,no,B,lun,si
+82,F,2,0,0,2,12.4,2,assistenza domiciliare,altro,si,B,mer,no
+88,F,12,2,1,3,12.5,2,casa,altro,no,B,gio,no
+87,M,5,0,3,4,NA,5,struttura riabilitativa,infezione,no,B,lun,si
+78,M,3,4,1,4,14.3,9,casa,altro,no,D,ven,si
+82,F,5,0,0,5,NA,5,casa,altro,si,B,lun,no
+85,M,7,0,1,3,11.3,4,casa,altro,si,B,gio,no
+75,M,2,0,1,2,10.2,4,casa,altro,no,C,ven,no
+93,F,8,0,3,2,12.5,9,casa,infezione,si,C,mar,si
+53,F,7,1,0,2,13.7,2,casa,diabete,no,B,mar,si
+65,F,9,4,0,3,12.8,6,casa,infezione,si,A,gio,si
+91,F,7,0,1,3,12.9,8,casa,BPCO,si,A,mar,no
+80,F,4,2,1,NA,9.0,8,assistenza domiciliare,diabete,si,B,sab,si
+68,M,3,0,1,1,12.4,4,assistenza domiciliare,diabete,si,B,mar,no
+79,F,6,0,0,3,12.3,8,casa,altro,no,D,gio,no
+87,F,5,0,2,2,12.5,2,assistenza domiciliare,altro,no,C,gio,no
+69,F,17,1,1,3,13.4,6,assistenza domiciliare,infezione,no,B,lun,no
+84,F,6,1,2,3,11.8,6,casa,BPCO,si,D,ven,si
+74,F,9,0,0,4,15.1,7,casa,altro,no,A,mer,no
+74,M,7,0,0,4,NA,6,casa,BPCO,no,C,gio,no
+75,M,2,1,1,5,13.5,3,assistenza domiciliare,altro,no,D,sab,si
+88,M,11,0,0,3,14.8,2,casa,BPCO,no,B,ven,no
+63,M,5,1,1,0,8.1,3,struttura riabilitativa,altro,si,D,mar,no
+71,M,3,0,1,1,13.6,5,casa,BPCO,si,A,mar,no
+83,M,9,0,0,1,NA,4,casa,infezione,no,C,mar,no
+62,M,15,2,0,1,13.0,8,casa,BPCO,no,B,mar,no
+58,M,6,0,1,2,13.8,4,casa,altro,no,B,mar,no
+82,F,6,2,1,2,12.3,6,casa,infezione,si,B,lun,si
+75,M,5,0,1,2,13.5,4,struttura riabilitativa,altro,si,B,mer,no
+74,F,5,0,0,5,12.1,8,casa,infezione,si,A,mer,no
+77,F,13,0,0,5,11.7,6,casa,infezione,si,D,gio,no
+65,M,7,0,2,1,12.0,2,casa,scompenso cardiaco,no,D,mer,no
+99,M,9,0,1,2,13.7,4,casa,scompenso cardiaco,no,B,gio,no
+64,M,10,0,1,4,8.3,4,casa,diabete,si,C,gio,si
+71,F,1,0,1,2,13.0,4,struttura riabilitativa,altro,si,A,mar,no
+60,M,8,4,2,2,14.0,2,casa,altro,no,C,lun,si
+71,M,10,0,1,3,9.0,2,casa,scompenso cardiaco,no,C,ven,no
+92,M,8,3,1,3,16.5,4,casa,altro,no,C,lun,si
+76,M,3,3,1,6,8.5,2,casa,altro,si,B,mer,si
+82,M,4,0,1,2,12.0,8,casa,diabete,no,D,mer,no
+70,F,10,0,1,6,12.6,4,assistenza domiciliare,BPCO,no,D,mar,no
+95,M,9,0,1,7,13.8,6,struttura riabilitativa,diabete,no,C,ven,si
+77,F,9,0,1,4,12.2,6,assistenza domiciliare,infezione,no,A,lun,no
+62,M,3,0,1,0,12.9,11,struttura riabilitativa,altro,no,A,gio,no
+84,M,8,0,0,1,11.4,7,casa,scompenso cardiaco,si,C,ven,no
+71,F,16,0,0,2,9.9,11,casa,BPCO,si,C,ven,no
+82,M,7,3,0,5,11.6,7,casa,altro,no,C,ven,si
+77,M,15,1,0,4,7.6,6,casa,altro,si,D,mar,si
+78,F,12,0,1,1,13.7,5,assistenza domiciliare,altro,no,B,ven,no
+77,F,11,0,0,3,12.4,5,casa,infezione,no,D,ven,no
+65,F,5,0,0,5,10.6,8,casa,scompenso cardiaco,no,C,ven,si
+59,M,5,0,3,5,NA,8,casa,altro,no,B,mer,no
+86,M,5,2,0,3,11.9,3,casa,infezione,no,C,lun,no
+74,M,14,0,0,6,13.6,8,struttura riabilitativa,scompenso cardiaco,no,D,mer,no
+78,F,15,1,0,3,11.8,7,casa,infezione,si,D,gio,no
+70,M,4,0,1,2,12.1,4,casa,altro,si,C,ven,no
+53,F,3,0,0,3,13.3,10,casa,BPCO,no,C,gio,no
+61,F,7,2,0,2,11.0,9,casa,scompenso cardiaco,no,B,gio,si
+91,F,15,1,1,7,10.4,7,casa,diabete,no,D,gio,si
+67,F,8,0,1,3,NA,4,casa,scompenso cardiaco,no,A,sab,no
+71,M,10,3,1,6,14.5,6,casa,altro,si,A,mer,si
+59,M,9,0,0,3,12.7,3,struttura riabilitativa,BPCO,no,A,ven,no
+69,M,10,1,0,5,10.9,2,assistenza domiciliare,infezione,si,A,mar,no
+71,F,6,0,1,2,12.2,4,casa,scompenso cardiaco,no,D,mar,no
+73,F,9,0,0,4,12.6,8,casa,altro,no,A,mer,no
+74,M,10,0,1,2,11.5,7,casa,infezione,no,D,mer,no
+68,F,6,0,1,4,13.6,2,casa,scompenso cardiaco,no,D,mer,no
+69,M,19,1,0,5,14.0,5,struttura riabilitativa,BPCO,si,A,mar,no
+75,F,4,0,2,2,15.5,7,casa,infezione,si,D,mar,no
+79,M,5,0,0,3,14.1,10,casa,scompenso cardiaco,no,D,gio,no
+74,M,4,0,0,1,13.6,8,casa,infezione,no,B,gio,no
+94,F,13,0,2,2,12.6,5,assistenza domiciliare,BPCO,no,D,ven,no
+78,M,13,0,2,2,11.7,7,casa,infezione,si,D,mar,no
+77,F,4,1,1,4,11.4,7,assistenza domiciliare,scompenso cardiaco,no,A,mer,si
+68,M,7,0,1,2,11.2,6,struttura riabilitativa,infezione,no,C,mer,no
+87,F,5,0,2,1,10.6,6,casa,altro,no,C,lun,no
+64,F,3,0,1,3,13.0,6,casa,infezione,no,B,gio,no
+57,F,4,0,0,4,11.5,5,casa,infezione,no,D,lun,no
+65,F,8,0,2,3,12.1,7,casa,infezione,no,D,ven,no
+82,M,10,0,1,3,12.2,3,casa,diabete,si,D,mar,no
+63,F,4,0,0,3,10.9,3,casa,scompenso cardiaco,no,C,lun,no
+89,F,7,2,3,NA,11.5,6,casa,altro,no,A,mar,si
+75,M,11,0,0,9,12.3,8,assistenza domiciliare,altro,si,D,ven,si
+59,F,16,2,1,6,11.8,6,assistenza domiciliare,altro,no,A,sab,si
+73,F,8,0,0,1,11.9,10,casa,altro,no,B,mer,no
+95,M,4,1,1,5,13.1,6,casa,BPCO,si,D,lun,no
+66,F,3,0,1,2,15.0,11,casa,diabete,no,C,ven,no
+61,F,7,0,1,4,14.6,2,casa,scompenso cardiaco,si,A,mer,si
+81,M,6,0,0,3,16.5,10,casa,altro,si,D,mer,no
+90,M,5,0,0,2,11.6,4,casa,BPCO,no,C,mar,no
+86,M,5,0,2,3,13.6,6,assistenza domiciliare,altro,si,C,lun,si
+72,F,5,1,1,4,13.9,7,struttura riabilitativa,BPCO,si,A,mer,si
+77,F,8,4,0,2,9.8,3,casa,scompenso cardiaco,si,A,mer,si
+79,M,10,0,0,3,10.5,2,casa,altro,no,A,mar,no
+88,F,4,0,0,8,11.8,5,assistenza domiciliare,scompenso cardiaco,no,C,mer,si
+99,F,21,0,0,1,11.2,8,casa,infezione,no,D,gio,no
+74,F,16,2,2,1,11.3,3,casa,scompenso cardiaco,no,D,lun,si
+90,F,6,0,2,NA,11.9,4,casa,BPCO,si,A,gio,si
+71,F,8,0,1,3,11.0,6,struttura riabilitativa,BPCO,no,C,ven,no
+82,F,17,2,3,4,10.3,5,casa,infezione,si,C,ven,si
+65,F,4,0,0,2,12.2,7,casa,diabete,si,C,mer,no
+67,M,5,0,0,4,12.3,8,casa,infezione,si,C,lun,no
+80,F,5,1,1,2,11.1,2,casa,BPCO,si,C,ven,si
+65,M,4,0,2,4,12.4,7,casa,infezione,no,A,lun,si
+85,F,11,0,1,5,14.2,7,casa,altro,no,D,mer,no
+69,F,6,0,1,2,10.4,7,casa,altro,si,B,lun,no
+76,F,7,0,0,1,12.3,7,assistenza domiciliare,infezione,no,A,mer,no
+74,F,7,0,0,1,11.2,8,assistenza domiciliare,infezione,si,C,lun,si
+72,M,6,2,0,6,13.4,4,casa,infezione,no,D,mar,si
+77,M,17,0,0,4,13.8,8,struttura riabilitativa,altro,no,B,sab,no
+87,F,6,0,1,NA,12.8,6,casa,scompenso cardiaco,no,D,mer,no
+99,M,4,0,0,2,12.4,6,casa,scompenso cardiaco,no,D,sab,no
+62,M,3,0,0,3,11.8,6,struttura riabilitativa,BPCO,no,D,ven,no
+79,F,5,2,1,4,15.3,7,casa,BPCO,si,C,ven,si
+73,M,8,0,3,3,8.5,6,casa,infezione,no,C,gio,si
+65,F,8,0,0,2,12.3,7,casa,altro,no,D,mar,no
+78,M,8,1,2,3,9.6,4,casa,altro,si,C,mar,si
+66,F,5,0,4,5,13.1,3,struttura riabilitativa,altro,si,A,lun,si
+74,M,9,0,1,1,12.2,9,struttura riabilitativa,altro,si,C,ven,no
+89,F,9,3,0,6,12.2,9,casa,infezione,no,A,gio,si
+53,F,3,3,2,4,12.1,8,casa,infezione,no,A,lun,si
+78,F,9,0,1,7,13.8,6,casa,infezione,no,C,mer,si
+80,M,9,0,0,4,14.8,2,casa,altro,no,A,mer,no
+65,F,6,0,0,4,12.0,6,struttura riabilitativa,altro,si,A,lun,no
+81,M,13,1,1,2,10.2,5,assistenza domiciliare,altro,no,B,ven,no
+79,F,7,0,0,2,10.3,6,casa,infezione,si,C,mer,no
+71,M,4,2,3,1,12.6,3,assistenza domiciliare,infezione,si,A,ven,si
+89,M,12,1,2,8,11.1,5,struttura riabilitativa,infezione,no,A,lun,si
+61,M,20,1,0,8,13.2,6,casa,infezione,si,C,ven,no
+82,F,4,0,1,3,16.5,7,struttura riabilitativa,BPCO,no,B,lun,no
+73,M,7,0,1,1,14.0,7,struttura riabilitativa,infezione,si,C,mer,no
+64,F,12,0,1,2,14.4,3,casa,infezione,no,D,sab,no
+73,M,10,0,0,NA,13.3,5,casa,BPCO,no,C,mer,no
+71,F,13,0,0,1,11.4,10,casa,altro,no,B,lun,no
+84,M,15,1,0,2,12.6,7,casa,scompenso cardiaco,no,B,mer,no
+59,M,2,0,0,2,12.2,7,struttura riabilitativa,altro,si,A,mar,no
+73,F,11,0,1,4,12.0,6,casa,altro,si,C,sab,no
+70,F,3,2,2,1,12.5,8,casa,diabete,no,D,lun,si
+93,M,4,0,1,4,11.9,7,assistenza domiciliare,altro,no,C,lun,si
+63,F,4,2,1,3,13.9,3,casa,diabete,no,D,lun,si
+87,F,9,0,0,4,12.5,9,struttura riabilitativa,BPCO,no,B,ven,no
+56,F,3,0,0,3,13.6,6,casa,scompenso cardiaco,si,C,mer,no
+79,F,7,0,1,2,10.4,4,casa,altro,no,C,lun,no
+74,M,3,1,0,2,9.5,9,casa,BPCO,no,B,sab,no
+79,F,23,0,0,4,10.9,5,casa,altro,no,A,mar,no
+67,M,5,0,0,1,13.7,8,struttura riabilitativa,BPCO,no,A,mar,no
+54,M,7,0,0,3,10.9,8,struttura riabilitativa,infezione,si,C,ven,si
+58,F,3,0,0,5,11.2,10,casa,altro,no,C,lun,no
+90,F,5,0,2,2,12.1,5,casa,scompenso cardiaco,no,C,sab,no
+77,M,15,0,0,4,12.9,8,casa,BPCO,si,A,gio,no
+66,M,8,0,2,7,10.9,4,casa,scompenso cardiaco,no,A,lun,si
+85,F,3,0,0,2,13.5,4,struttura riabilitativa,scompenso cardiaco,no,D,mer,no
+67,F,5,2,0,2,13.9,4,struttura riabilitativa,altro,no,B,ven,no
+67,M,6,0,1,2,13.1,8,casa,diabete,no,C,gio,no
+62,M,20,2,2,4,13.9,7,casa,altro,no,A,lun,no
+88,M,6,0,1,6,11.8,4,casa,altro,si,D,mer,si
+97,M,9,0,2,1,13.1,12,assistenza domiciliare,diabete,si,A,mer,no
+64,F,13,4,2,2,11.2,5,casa,infezione,si,C,mar,si
+78,F,29,1,1,2,14.4,6,casa,infezione,no,B,gio,no
+86,M,10,1,0,2,9.9,8,casa,diabete,no,A,lun,no
+98,M,4,0,0,1,14.8,11,casa,altro,no,A,lun,no
+49,M,4,0,0,2,10.3,4,casa,BPCO,no,B,lun,no
+77,F,19,0,0,0,10.9,7,casa,altro,no,C,mer,no
+82,F,9,0,0,2,11.0,1,casa,altro,si,A,mar,no
+59,M,2,0,1,4,12.9,2,struttura riabilitativa,altro,no,D,gio,no
+79,M,5,0,2,1,12.9,6,assistenza domiciliare,BPCO,no,D,ven,no
+77,F,5,1,3,7,NA,9,casa,BPCO,no,D,gio,si
+83,M,6,0,0,2,12.3,4,casa,scompenso cardiaco,no,B,ven,no
+69,M,10,0,0,7,12.2,3,casa,BPCO,si,D,mar,no
+80,F,10,0,0,2,12.5,6,struttura riabilitativa,BPCO,no,A,mer,no
+68,F,15,0,0,NA,11.3,6,casa,altro,si,B,sab,no
+82,M,2,3,0,2,15.4,12,casa,altro,no,B,ven,si
+77,M,8,0,0,5,12.7,10,casa,scompenso cardiaco,no,C,mer,no
+71,F,6,0,0,3,12.5,8,casa,infezione,si,B,lun,no
+59,M,4,0,0,NA,11.1,8,casa,infezione,no,C,ven,no
+93,F,12,0,0,3,NA,2,casa,infezione,no,B,mar,no
+87,M,3,1,0,5,11.8,5,casa,infezione,no,B,gio,si
+85,F,3,0,0,3,10.4,8,casa,scompenso cardiaco,si,B,gio,si
+68,M,18,0,1,3,13.2,5,casa,altro,no,B,mar,no
+71,F,9,0,1,2,10.7,8,casa,diabete,si,B,lun,si
+93,F,11,0,1,1,12.8,4,assistenza domiciliare,altro,no,D,lun,no
+83,F,15,0,1,2,11.0,4,assistenza domiciliare,scompenso cardiaco,si,A,gio,no
+66,M,3,0,1,5,10.6,8,casa,BPCO,si,A,mer,si
+75,M,16,1,1,0,12.3,4,casa,altro,no,D,mer,no
+77,M,7,0,1,4,12.6,9,casa,infezione,no,D,mer,no
+73,F,10,0,0,5,13.7,1,assistenza domiciliare,altro,no,B,mer,no
+65,F,11,0,2,1,13.4,3,struttura riabilitativa,scompenso cardiaco,si,D,mer,no
+89,M,10,0,0,5,10.6,6,assistenza domiciliare,altro,si,B,gio,si
+81,M,6,3,1,4,12.9,7,casa,BPCO,si,B,ven,si
+73,F,7,0,0,2,11.4,2,casa,infezione,si,C,mer,no
+58,M,8,0,1,2,13.5,3,casa,infezione,no,B,gio,no
+69,F,13,0,0,5,NA,6,casa,infezione,no,C,sab,si
+75,M,2,0,0,1,10.0,10,casa,diabete,no,D,mer,si
+85,F,16,0,0,1,11.4,4,struttura riabilitativa,infezione,si,C,mer,no
+71,F,4,3,1,NA,12.8,4,casa,scompenso cardiaco,no,C,gio,si
+87,M,26,0,0,3,13.2,6,casa,BPCO,no,B,mar,no
+77,F,9,0,2,4,12.8,5,casa,BPCO,no,B,ven,no
+67,F,20,0,0,6,13.4,10,casa,scompenso cardiaco,no,C,lun,no
+44,F,6,0,1,5,14.2,8,casa,infezione,no,B,mar,no
+62,F,20,0,0,2,12.0,8,casa,scompenso cardiaco,si,B,lun,no
+59,F,9,0,2,1,15.2,8,casa,altro,no,B,gio,no
+73,M,9,0,2,3,14.1,3,casa,altro,no,C,ven,no
+79,M,9,4,2,4,8.7,7,casa,BPCO,si,B,lun,si
+90,M,2,0,1,2,14.0,11,casa,scompenso cardiaco,no,D,lun,no
+75,F,3,0,1,3,14.0,3,casa,scompenso cardiaco,no,B,lun,no
+62,F,3,0,0,2,9.4,10,assistenza domiciliare,infezione,si,D,lun,no
+99,M,7,0,1,4,14.0,5,casa,BPCO,si,B,ven,no
+79,M,6,0,1,2,9.2,9,casa,altro,no,A,mar,no
+72,M,12,0,4,6,13.5,8,casa,BPCO,no,D,mer,si
+72,M,9,1,0,4,11.3,11,casa,altro,si,A,mer,no
+60,M,15,0,1,2,13.8,8,assistenza domiciliare,scompenso cardiaco,si,C,lun,no
+82,F,5,0,0,1,12.4,6,casa,altro,no,A,gio,no
+79,M,9,1,1,3,13.5,5,casa,altro,no,B,lun,no
+93,M,5,0,0,3,11.4,6,casa,altro,si,B,ven,si
+87,F,3,2,0,3,12.6,4,casa,altro,no,C,mer,no
+85,F,2,0,1,2,11.3,9,assistenza domiciliare,infezione,si,C,lun,no
+89,F,7,0,1,2,12.6,9,casa,BPCO,no,B,ven,no
+72,M,4,0,2,1,12.0,9,casa,BPCO,no,D,ven,no
+70,F,5,0,0,0,13.0,5,struttura riabilitativa,diabete,no,B,lun,no
+75,F,4,1,1,2,11.1,10,casa,diabete,no,C,sab,si
+62,F,4,0,1,3,10.1,7,struttura riabilitativa,BPCO,no,B,lun,si
+74,F,38,0,1,4,12.4,7,casa,infezione,si,A,lun,no
+72,F,7,3,0,1,12.8,3,casa,diabete,si,C,lun,no
+83,F,3,0,0,2,14.2,5,casa,altro,no,C,mar,no
+75,F,6,0,1,2,14.1,5,assistenza domiciliare,scompenso cardiaco,no,C,mer,no
+54,F,7,0,1,6,NA,7,casa,altro,no,C,lun,no
+76,F,3,0,2,6,11.2,3,casa,BPCO,no,A,mar,si
+91,F,13,0,0,4,11.9,9,casa,altro,no,D,mar,no
+55,M,4,1,0,4,11.9,4,struttura riabilitativa,altro,no,D,lun,no
+67,M,9,3,2,0,12.3,3,casa,altro,no,C,lun,si
+76,F,5,3,4,4,11.7,4,casa,altro,si,D,lun,si
+61,F,4,0,2,3,11.4,3,casa,scompenso cardiaco,no,B,mar,si
+69,F,48,0,0,3,8.6,2,struttura riabilitativa,infezione,no,A,lun,no
+76,M,5,0,0,3,15.2,6,struttura riabilitativa,diabete,si,A,ven,no
+61,M,3,0,0,2,13.6,5,struttura riabilitativa,altro,no,C,sab,no
+79,F,5,0,1,1,10.3,6,casa,altro,no,B,gio,no
+80,F,4,0,2,1,11.2,5,casa,BPCO,no,B,sab,no
+61,M,13,0,0,4,14.7,5,assistenza domiciliare,altro,no,D,lun,no
+76,F,9,2,3,4,9.8,5,casa,scompenso cardiaco,no,D,sab,si
+87,F,3,0,2,4,13.1,6,casa,altro,no,B,mer,no
+74,F,20,1,0,3,12.7,6,casa,scompenso cardiaco,si,B,mer,no
+80,F,6,2,0,2,12.8,3,struttura riabilitativa,scompenso cardiaco,si,D,ven,si
+83,M,3,2,0,3,12.1,9,casa,diabete,no,B,gio,si
+73,M,13,0,0,4,10.5,9,struttura riabilitativa,altro,no,B,mar,no
+86,M,10,1,1,NA,15.7,5,assistenza domiciliare,altro,no,D,gio,no
+80,M,4,0,1,1,12.8,7,struttura riabilitativa,scompenso cardiaco,no,D,ven,no
+65,F,3,0,1,4,14.9,9,casa,altro,no,D,ven,no
+81,F,6,0,1,1,13.4,6,casa,scompenso cardiaco,si,D,mar,no
+85,F,5,1,1,1,12.0,8,casa,altro,no,C,ven,no
+84,M,9,1,0,5,15.9,7,casa,BPCO,no,C,ven,no
+68,M,8,0,0,3,11.1,6,casa,infezione,no,D,mer,no
+81,F,3,0,1,4,13.0,3,casa,BPCO,no,B,gio,no
+91,F,4,0,0,3,12.5,4,casa,altro,si,A,lun,no
+78,M,6,0,0,3,11.4,6,casa,altro,no,D,mar,no
+89,M,15,0,2,2,13.6,8,struttura riabilitativa,infezione,no,B,lun,no
+90,M,5,2,0,4,11.1,6,casa,scompenso cardiaco,no,A,sab,si
+75,F,10,0,1,3,11.3,4,casa,diabete,no,B,mar,no
+83,M,5,0,1,5,10.6,4,casa,altro,no,C,mer,si
+72,M,9,2,1,3,11.1,8,casa,infezione,si,B,lun,si
+87,F,5,2,1,0,10.6,6,casa,infezione,no,A,ven,si
+75,F,9,0,1,4,12.2,8,casa,infezione,si,B,lun,no
+70,F,4,1,0,3,11.4,6,struttura riabilitativa,altro,no,C,ven,no
+75,M,4,0,2,2,12.5,6,struttura riabilitativa,altro,no,C,ven,no
+75,M,22,0,0,4,11.5,2,casa,altro,si,B,lun,no
+80,F,12,0,0,3,12.0,5,casa,BPCO,no,B,mar,no
+81,F,3,0,1,5,12.7,4,struttura riabilitativa,altro,si,D,gio,no
+63,M,14,0,0,NA,9.8,5,casa,altro,no,B,mer,no
+69,M,6,0,1,2,11.6,8,struttura riabilitativa,altro,no,D,lun,no
+80,M,15,3,3,5,NA,5,struttura riabilitativa,diabete,no,A,ven,si
+81,F,3,0,0,1,10.8,3,casa,diabete,no,B,mar,no
+77,F,6,2,0,3,12.9,4,struttura riabilitativa,BPCO,no,C,mar,si
+99,F,5,0,0,NA,10.2,6,assistenza domiciliare,BPCO,si,C,gio,no
+88,F,4,2,0,1,13.9,1,casa,diabete,no,A,gio,si
+75,M,3,0,0,1,14.7,5,assistenza domiciliare,diabete,si,A,sab,no
+84,M,22,0,1,2,11.5,8,casa,altro,no,A,mar,no
+91,F,7,0,1,3,9.8,7,assistenza domiciliare,infezione,si,C,gio,si
+80,F,6,0,2,4,9.8,4,casa,infezione,no,B,gio,no
+57,F,2,2,1,2,14.2,9,casa,altro,no,B,mar,si
+77,M,13,1,2,2,NA,6,assistenza domiciliare,BPCO,no,D,mer,si
+76,F,13,0,1,1,12.2,11,casa,altro,no,D,ven,no
+99,F,6,0,1,7,13.0,4,casa,scompenso cardiaco,si,C,mar,si
+56,F,3,0,1,3,14.4,4,casa,scompenso cardiaco,no,D,lun,no
+93,F,10,0,0,0,14.0,5,struttura riabilitativa,scompenso cardiaco,no,D,mer,no
+74,F,7,0,0,1,NA,7,assistenza domiciliare,diabete,no,A,gio,no
+86,F,3,0,1,4,11.9,9,struttura riabilitativa,scompenso cardiaco,no,B,ven,si
+73,M,24,0,0,4,12.1,7,assistenza domiciliare,BPCO,si,C,sab,no
+78,M,11,0,0,0,13.9,4,casa,altro,si,B,lun,no
+88,M,4,0,2,3,13.6,3,assistenza domiciliare,diabete,no,C,mar,no
+77,F,4,0,1,4,12.6,6,struttura riabilitativa,infezione,si,D,gio,no
+88,F,11,0,0,4,11.9,5,struttura riabilitativa,altro,no,B,mar,no
+75,M,14,2,2,6,14.0,6,casa,BPCO,no,A,gio,no
+72,F,10,0,1,4,15.7,6,casa,scompenso cardiaco,si,A,lun,no
+74,F,9,0,1,1,13.4,8,assistenza domiciliare,infezione,no,C,gio,no
+71,F,5,0,1,4,12.5,8,casa,altro,si,A,mer,no
+75,F,24,0,0,2,11.4,7,casa,infezione,si,C,mar,no
+91,M,6,0,0,2,12.3,1,casa,BPCO,no,B,mer,no
+63,F,8,0,2,3,11.2,5,casa,BPCO,no,C,gio,no
+58,F,9,2,2,NA,12.7,8,struttura riabilitativa,scompenso cardiaco,no,D,sab,si
+76,M,6,0,0,3,11.8,6,casa,diabete,si,D,lun,no
+95,F,11,0,1,2,13.9,4,struttura riabilitativa,altro,no,A,ven,no
+88,M,18,0,2,3,13.9,6,casa,altro,no,A,mer,no
+91,F,2,0,0,5,12.7,6,casa,scompenso cardiaco,si,C,sab,no
+90,M,6,2,0,2,12.5,2,casa,diabete,no,C,ven,no
+68,M,15,2,1,5,12.7,8,struttura riabilitativa,altro,no,D,ven,si
+77,M,16,0,0,3,NA,8,struttura riabilitativa,altro,si,A,mar,no
+47,F,5,0,0,2,13.2,1,casa,scompenso cardiaco,no,C,ven,no
+69,M,11,1,0,4,13.8,4,struttura riabilitativa,BPCO,no,D,gio,si
+83,M,8,0,1,2,13.9,6,casa,altro,si,B,gio,no
+59,F,8,1,1,1,13.3,7,casa,infezione,no,B,lun,no
+54,M,5,0,0,3,13.1,4,casa,infezione,no,C,mer,no
+62,M,13,0,1,NA,10.9,8,casa,altro,si,D,ven,no
+79,F,15,0,2,4,10.8,5,assistenza domiciliare,scompenso cardiaco,si,A,lun,no
+89,M,19,0,0,0,14.0,5,casa,infezione,no,C,mer,no
+99,F,8,2,0,4,NA,7,casa,BPCO,no,A,lun,si
+92,M,8,1,0,0,10.1,2,casa,altro,no,B,mer,no
+60,F,14,1,0,4,NA,7,casa,altro,si,D,mer,no
+51,F,53,2,0,5,13.3,5,casa,diabete,no,A,ven,no
+78,M,6,0,0,NA,15.7,4,casa,altro,no,A,mar,no
+88,M,7,0,0,4,12.9,8,casa,infezione,no,B,mer,no
+59,F,21,0,2,3,12.7,5,casa,scompenso cardiaco,si,C,gio,no
+71,M,4,0,0,6,12.5,6,casa,BPCO,si,B,gio,no
+71,F,2,0,1,1,12.3,3,casa,altro,si,A,gio,no
+77,F,13,0,1,1,9.1,5,casa,infezione,no,D,mar,no
+75,F,17,0,1,3,11.4,5,assistenza domiciliare,altro,si,C,lun,no
+82,F,16,1,1,3,12.4,7,assistenza domiciliare,altro,si,A,mar,si
+88,F,13,3,1,4,11.7,2,casa,scompenso cardiaco,si,D,gio,si
+77,F,14,0,0,2,13.0,5,struttura riabilitativa,diabete,no,A,mar,no
+85,F,5,0,0,4,13.9,9,casa,altro,no,B,ven,no
+99,M,14,0,0,4,12.2,5,casa,diabete,si,A,gio,no
+65,M,4,0,0,2,12.0,5,assistenza domiciliare,scompenso cardiaco,no,B,gio,no
+65,M,3,0,3,3,14.2,7,casa,altro,si,B,lun,no
+82,M,6,0,1,6,12.8,4,assistenza domiciliare,altro,si,D,ven,si
+97,M,3,0,0,5,12.9,10,casa,scompenso cardiaco,no,A,lun,no
+79,F,4,0,2,3,13.2,7,casa,BPCO,no,C,gio,no
+89,M,5,0,0,1,12.9,6,casa,altro,no,D,lun,no
+73,M,6,0,0,NA,10.6,6,assistenza domiciliare,infezione,si,D,ven,no
+87,M,8,1,0,1,12.0,7,casa,diabete,no,B,gio,no
+70,F,4,0,1,1,15.1,6,assistenza domiciliare,scompenso cardiaco,no,C,ven,no
+84,M,5,2,1,2,13.5,8,casa,altro,si,C,mer,no
+81,M,6,0,1,3,8.5,4,casa,infezione,no,A,mar,no
+81,F,8,0,2,3,9.7,3,casa,altro,si,B,gio,no
+92,M,9,0,0,0,9.5,7,struttura riabilitativa,infezione,si,C,lun,no
+89,F,11,1,0,6,14.1,2,casa,altro,no,D,gio,no
+70,M,8,0,1,3,12.6,2,assistenza domiciliare,diabete,si,C,ven,no
+87,M,9,0,0,3,11.2,7,casa,altro,no,B,gio,no
+58,F,11,0,1,2,13.7,5,casa,scompenso cardiaco,no,C,gio,no
+88,F,7,0,0,NA,14.0,7,casa,altro,no,A,mar,no
+99,M,8,0,1,1,9.5,7,assistenza domiciliare,infezione,no,C,lun,no
+83,M,4,1,1,2,8.9,5,casa,altro,no,A,ven,no
+83,M,8,0,0,2,14.8,2,casa,altro,no,C,gio,no
+78,F,13,0,1,3,11.8,9,casa,scompenso cardiaco,no,D,mer,no
+86,M,5,0,2,3,13.3,8,casa,altro,no,C,lun,no
+72,F,16,0,3,4,9.2,8,assistenza domiciliare,BPCO,no,B,mer,si
+85,F,5,2,1,2,12.3,3,casa,altro,no,B,gio,si
+74,M,14,1,1,2,15.0,9,casa,scompenso cardiaco,no,D,ven,si
+73,F,20,0,2,5,10.1,4,assistenza domiciliare,altro,no,C,gio,no
+79,F,8,2,1,4,10.7,9,struttura riabilitativa,scompenso cardiaco,si,C,mer,si
+77,F,6,1,1,5,10.8,12,casa,altro,si,D,mer,si
+58,F,9,1,2,3,12.9,4,casa,diabete,no,B,mar,no
+99,F,6,0,1,2,9.3,9,casa,BPCO,no,A,mer,si
+79,M,4,1,0,3,14.7,5,casa,BPCO,si,A,gio,no
+59,F,13,0,0,5,14.1,7,casa,altro,no,D,mer,no
+89,F,2,1,1,7,9.6,8,casa,altro,no,B,gio,si
+77,M,12,0,0,3,14.2,1,assistenza domiciliare,altro,no,A,gio,no
+80,F,4,1,0,3,9.0,5,assistenza domiciliare,altro,no,D,ven,no
+85,F,12,2,1,3,11.4,5,casa,scompenso cardiaco,no,D,gio,si
+68,M,5,0,1,2,14.7,2,casa,altro,no,A,ven,no
+45,M,21,0,1,3,12.7,6,struttura riabilitativa,diabete,si,D,lun,no
+76,M,5,0,1,6,13.4,4,casa,altro,no,B,lun,no
+80,F,2,2,1,5,12.6,8,assistenza domiciliare,altro,no,A,gio,si
+88,M,42,1,1,2,15.0,3,casa,altro,no,D,mer,no
+69,M,7,3,0,2,12.2,6,casa,altro,si,D,ven,si
+74,F,7,0,0,NA,16.0,7,casa,scompenso cardiaco,no,D,sab,no
+82,F,7,0,1,1,14.9,7,casa,diabete,si,A,mar,no
+74,M,6,0,1,3,12.5,5,casa,altro,no,A,sab,no
+75,M,8,0,0,2,12.4,5,casa,scompenso cardiaco,no,A,gio,no
+80,M,4,0,3,2,12.7,14,casa,scompenso cardiaco,no,D,lun,si
+66,M,27,0,1,4,10.3,5,assistenza domiciliare,altro,si,C,gio,no
+95,M,5,0,1,2,13.2,7,assistenza domiciliare,infezione,no,B,lun,no
+67,M,10,1,0,4,13.6,5,assistenza domiciliare,infezione,no,A,gio,no
+78,M,16,0,1,3,12.4,9,casa,altro,si,C,ven,no
+74,M,6,0,0,6,12.5,5,casa,altro,no,C,mar,no
+70,F,12,0,1,5,10.9,7,struttura riabilitativa,scompenso cardiaco,si,B,mer,si
+83,M,5,2,1,3,16.3,3,casa,scompenso cardiaco,si,B,gio,si
+88,F,4,0,1,1,10.7,2,casa,altro,no,A,ven,no
+93,F,4,0,2,6,14.5,4,casa,BPCO,no,B,ven,no
+84,F,14,1,1,1,13.0,7,casa,infezione,si,C,mar,no
+72,F,13,1,0,0,10.6,2,struttura riabilitativa,altro,no,B,lun,no
+87,M,4,0,2,2,11.0,7,casa,scompenso cardiaco,no,B,gio,si
+61,F,13,0,2,7,10.6,9,casa,BPCO,no,A,ven,si
+78,F,4,0,2,2,11.9,6,casa,altro,si,C,lun,no
+83,F,8,0,1,3,14.1,5,struttura riabilitativa,altro,no,A,mer,no
+84,F,11,2,2,2,12.3,4,assistenza domiciliare,scompenso cardiaco,si,D,gio,si
+65,F,2,2,1,3,12.1,9,struttura riabilitativa,BPCO,no,C,gio,si
+61,M,10,0,0,4,10.7,5,casa,infezione,no,B,mer,no
+96,M,6,0,0,4,9.5,1,casa,diabete,no,D,mer,no
+72,M,3,0,0,4,13.1,4,casa,infezione,no,B,ven,no
+59,M,11,0,0,5,14.8,7,casa,scompenso cardiaco,si,C,mar,no
+64,M,8,1,1,6,12.8,10,struttura riabilitativa,infezione,no,C,ven,si
+77,M,9,0,1,4,14.5,5,assistenza domiciliare,altro,si,D,gio,no
+90,F,6,4,0,3,12.4,7,casa,diabete,no,B,mer,si
+77,F,5,0,1,1,12.2,4,struttura riabilitativa,BPCO,no,A,mer,no
+90,F,3,3,0,0,14.1,3,casa,diabete,si,C,ven,si
+80,M,6,0,1,5,12.3,7,casa,BPCO,si,A,mar,no
+82,F,4,0,1,3,9.1,2,struttura riabilitativa,altro,no,B,mar,no
+88,F,5,0,1,6,11.9,11,casa,diabete,no,C,lun,si
+73,F,9,0,0,1,15.2,10,casa,altro,no,A,gio,no
+80,F,11,0,0,2,11.4,4,casa,scompenso cardiaco,no,C,mar,no
+73,M,9,0,3,4,10.7,6,struttura riabilitativa,scompenso cardiaco,no,C,mar,si
+70,M,8,0,2,4,13.4,8,casa,BPCO,no,D,ven,si
+84,M,6,0,1,3,12.5,6,casa,altro,si,C,mer,no
+68,F,12,5,2,NA,11.4,5,casa,BPCO,si,A,mar,si
+78,F,14,1,0,1,13.6,7,struttura riabilitativa,BPCO,si,C,mer,no
+68,M,5,1,1,1,14.4,8,casa,diabete,no,D,ven,no
+76,F,5,0,0,2,10.0,8,casa,infezione,no,A,mer,no
+71,F,4,0,0,4,11.6,7,casa,altro,si,B,lun,no
+89,F,6,0,0,0,11.6,7,casa,altro,no,B,lun,no
+78,M,5,0,1,4,11.0,8,casa,altro,no,B,mar,no
+78,F,23,4,0,6,11.3,10,casa,altro,no,A,mer,si
+95,F,16,0,0,3,14.1,8,casa,altro,no,A,mar,no
+45,F,3,0,0,3,12.5,9,casa,altro,no,D,mar,no
+64,M,11,1,1,1,15.0,8,casa,altro,si,B,gio,no
+47,M,6,0,0,2,NA,4,assistenza domiciliare,infezione,si,A,gio,no
+77,M,2,4,1,NA,16.1,7,assistenza domiciliare,altro,si,B,ven,si
+81,M,8,1,1,0,13.6,1,assistenza domiciliare,altro,no,D,gio,no
+84,M,5,0,1,2,14.1,3,casa,altro,no,C,lun,no
+80,M,8,0,0,3,9.1,4,casa,altro,no,B,ven,no
+67,M,9,2,2,1,11.6,3,casa,diabete,no,A,ven,si
+96,M,5,0,1,2,12.6,7,assistenza domiciliare,BPCO,no,D,gio,si
+80,M,17,0,0,3,13.1,8,casa,altro,no,A,mar,no
+74,F,8,0,1,2,14.3,6,struttura riabilitativa,scompenso cardiaco,si,C,gio,no
+64,M,4,0,0,6,15.0,3,casa,scompenso cardiaco,no,A,lun,no
+81,F,3,3,0,3,14.6,6,struttura riabilitativa,diabete,no,C,sab,si
+71,F,27,0,0,2,13.4,9,assistenza domiciliare,infezione,no,A,ven,no
+71,F,4,0,0,4,13.6,6,struttura riabilitativa,infezione,si,B,lun,no
+79,F,7,0,2,4,10.2,4,casa,infezione,si,B,mer,si
+79,M,8,0,0,4,11.0,7,assistenza domiciliare,BPCO,si,D,lun,no
+67,M,12,0,2,2,11.6,11,casa,infezione,si,D,gio,no
+90,M,3,1,2,4,9.5,7,casa,altro,no,D,lun,si
+65,F,2,0,0,5,NA,7,casa,scompenso cardiaco,no,C,mer,no
+64,M,7,0,0,3,11.4,5,casa,infezione,si,C,gio,no
+80,M,3,0,0,2,11.1,6,casa,scompenso cardiaco,no,B,lun,no
+78,M,6,1,0,3,14.1,10,casa,altro,no,D,mer,no
+77,M,24,0,0,2,14.5,10,casa,BPCO,no,A,mar,no
+72,F,5,0,1,2,10.8,5,struttura riabilitativa,BPCO,no,C,lun,no
+77,F,10,1,1,4,9.6,1,casa,infezione,no,D,lun,si
+70,M,3,0,0,5,11.8,7,casa,scompenso cardiaco,no,D,mar,no
+58,F,42,0,1,2,12.0,10,assistenza domiciliare,infezione,no,A,mer,no
+84,M,5,0,0,5,12.6,5,casa,infezione,si,D,lun,no
+65,F,9,2,1,2,12.5,5,casa,altro,si,D,mer,no
+74,F,6,0,1,4,10.1,3,struttura riabilitativa,BPCO,si,C,ven,si
+84,F,5,2,0,6,14.3,1,struttura riabilitativa,altro,no,B,ven,no
+76,F,13,0,1,3,12.7,3,casa,altro,no,C,gio,no
+99,M,6,0,0,6,NA,5,casa,altro,no,C,ven,no
+61,F,4,0,4,4,14.3,7,casa,diabete,no,D,gio,no
+68,M,5,0,1,2,9.6,6,assistenza domiciliare,altro,no,A,ven,no
+77,F,6,1,1,3,9.7,6,casa,infezione,no,D,mer,si
+91,M,7,1,1,2,12.9,6,casa,altro,no,B,mar,si
+73,M,7,0,0,3,12.9,6,casa,infezione,si,B,ven,no
+60,M,4,3,1,4,11.9,5,casa,scompenso cardiaco,si,A,gio,si
+89,M,5,0,1,2,13.3,7,casa,scompenso cardiaco,no,A,lun,no
+66,F,24,0,0,2,9.7,12,casa,scompenso cardiaco,no,D,mar,no
+74,M,6,1,1,4,12.8,7,casa,altro,si,C,ven,no
+86,M,15,0,0,4,12.5,8,assistenza domiciliare,altro,no,B,lun,no
+69,F,5,0,2,2,10.6,6,assistenza domiciliare,scompenso cardiaco,no,D,mer,si
+71,F,8,0,1,0,13.0,3,assistenza domiciliare,scompenso cardiaco,no,C,gio,no
+82,F,5,0,1,1,11.4,6,struttura riabilitativa,altro,no,B,ven,no
+74,F,2,0,2,4,13.6,13,casa,scompenso cardiaco,no,D,lun,no
+79,M,5,2,1,3,10.7,3,assistenza domiciliare,altro,no,D,ven,si
+66,M,11,0,0,2,12.2,6,casa,BPCO,no,D,mar,no
+75,F,14,0,1,3,13.5,3,casa,scompenso cardiaco,no,D,gio,no
+64,M,13,2,3,8,11.8,9,casa,infezione,si,A,ven,si
+59,F,5,0,1,2,10.5,10,casa,infezione,si,C,lun,no
+95,F,5,0,0,5,11.9,5,casa,BPCO,no,C,mer,no
+81,F,3,0,0,5,11.9,6,casa,scompenso cardiaco,no,C,mar,no
+86,F,8,0,4,5,11.7,3,assistenza domiciliare,BPCO,no,C,sab,si
+65,M,11,0,2,4,NA,4,casa,altro,no,B,mar,no
+76,F,8,0,1,2,14.6,6,casa,diabete,no,D,lun,no
+74,M,4,1,1,0,NA,7,casa,infezione,no,B,gio,no
+60,M,8,0,1,4,11.5,8,casa,altro,si,B,mar,no
+82,F,7,0,0,2,10.5,6,casa,infezione,si,A,ven,no
+68,F,9,0,0,1,10.8,7,casa,altro,no,D,mar,no
+74,M,6,0,0,2,12.1,8,casa,diabete,no,B,gio,no
+59,F,7,2,0,4,11.0,4,casa,diabete,no,D,mer,no
+87,M,4,0,2,NA,12.8,6,casa,diabete,no,C,mer,no
+84,F,4,0,1,2,13.6,8,assistenza domiciliare,scompenso cardiaco,no,D,lun,no
+80,F,1,0,0,2,12.6,11,casa,BPCO,no,D,ven,no
+66,F,7,3,2,1,12.0,8,casa,BPCO,no,C,lun,si
+70,F,7,2,0,3,12.1,4,struttura riabilitativa,scompenso cardiaco,no,D,lun,si
+89,M,4,0,0,4,9.6,3,casa,altro,no,D,lun,no
+73,M,17,0,2,3,12.6,4,casa,infezione,no,C,mar,no
+79,M,14,0,0,1,11.7,5,assistenza domiciliare,altro,no,B,sab,no
+78,F,19,0,1,2,14.4,5,casa,altro,no,D,gio,no
+64,M,6,1,2,1,14.2,7,casa,infezione,no,B,mer,no
+93,F,6,0,0,1,13.1,7,casa,infezione,no,C,mar,no
+54,M,8,0,1,NA,11.9,5,casa,altro,no,C,gio,no
+79,F,12,0,1,2,11.4,3,casa,diabete,no,B,mer,no
+75,M,17,0,2,1,12.9,1,struttura riabilitativa,diabete,no,B,ven,no
+58,M,4,0,0,3,11.8,10,assistenza domiciliare,altro,no,D,ven,no
+80,F,6,0,1,0,10.1,11,casa,altro,no,C,ven,no
+82,M,2,0,3,7,15.5,8,casa,altro,no,B,ven,no
+77,M,6,1,0,4,15.1,5,casa,BPCO,no,C,ven,no
+67,F,12,1,3,2,NA,6,casa,scompenso cardiaco,no,C,mar,si
+81,F,10,0,1,2,13.3,4,assistenza domiciliare,altro,no,A,ven,no
+88,M,28,0,1,3,11.9,5,casa,infezione,no,D,ven,no
+78,M,10,0,0,1,12.2,7,casa,scompenso cardiaco,si,D,gio,no
+95,F,5,0,1,3,13.5,9,struttura riabilitativa,altro,no,B,lun,no
+85,F,4,0,0,2,14.8,4,struttura riabilitativa,scompenso cardiaco,no,B,mer,no
+85,F,8,0,1,3,13.0,3,casa,infezione,si,D,ven,no
+91,F,19,0,1,3,10.0,8,assistenza domiciliare,scompenso cardiaco,no,D,mar,si
+69,F,3,0,0,2,13.8,6,assistenza domiciliare,BPCO,si,B,gio,no
+70,F,4,0,0,2,12.3,5,casa,altro,no,A,lun,no
+82,M,7,0,2,5,14.6,6,casa,altro,si,C,mer,no
+82,M,5,0,2,6,12.1,6,struttura riabilitativa,altro,no,A,mar,si
+93,M,12,2,0,2,10.8,13,casa,BPCO,si,A,sab,si
+89,M,5,0,1,6,10.8,2,casa,altro,no,A,mar,si
+78,M,7,0,1,2,13.6,12,casa,infezione,no,C,ven,no
+78,F,7,0,0,4,9.5,7,casa,diabete,no,A,lun,si
+73,F,8,2,1,1,13.7,5,struttura riabilitativa,scompenso cardiaco,no,D,lun,no
+72,F,16,0,2,3,10.2,7,casa,infezione,si,B,gio,si
+71,F,3,5,0,5,12.7,9,casa,infezione,no,D,sab,si
+86,M,2,0,0,4,13.7,5,struttura riabilitativa,altro,no,C,ven,no
+71,M,3,0,0,0,12.7,10,casa,scompenso cardiaco,si,D,mar,no
+72,F,6,0,0,3,9.5,7,casa,infezione,no,B,gio,no
+78,F,7,0,3,5,10.5,7,casa,altro,no,C,ven,si
+71,M,9,0,0,4,11.6,5,struttura riabilitativa,altro,no,A,mar,no
+74,M,8,0,1,2,13.1,4,casa,altro,si,B,gio,no
+52,M,7,0,1,2,11.7,1,casa,infezione,si,D,mar,no
+80,M,2,0,0,4,12.9,10,casa,scompenso cardiaco,no,D,lun,si
+73,M,5,0,1,2,10.9,5,struttura riabilitativa,altro,si,C,mar,no
+78,M,9,0,0,3,12.0,8,assistenza domiciliare,altro,no,B,mer,no
+80,F,3,3,1,3,15.1,7,casa,altro,no,C,ven,si
+56,M,5,1,0,3,9.2,3,casa,infezione,no,C,ven,si
+99,M,5,2,0,3,12.3,8,casa,diabete,no,D,lun,no
+78,M,9,0,0,2,10.9,8,assistenza domiciliare,scompenso cardiaco,no,D,mar,no
+79,M,4,0,1,NA,13.5,1,casa,scompenso cardiaco,no,D,gio,no
+57,F,2,0,0,6,11.8,5,casa,altro,si,C,lun,no
+84,M,5,0,0,4,14.9,3,casa,infezione,si,C,mer,no
+81,F,6,1,1,1,9.1,7,casa,scompenso cardiaco,si,A,mer,no
+73,F,11,0,1,0,10.3,6,struttura riabilitativa,infezione,no,B,ven,no
+80,F,5,1,1,1,13.6,5,casa,altro,no,A,ven,no
+91,F,6,2,0,3,11.8,9,casa,altro,no,A,sab,si
+74,F,5,0,1,3,13.5,6,casa,infezione,si,C,ven,no
+67,M,5,0,0,2,11.8,12,casa,infezione,no,C,mar,no
+92,M,24,0,0,3,NA,5,casa,infezione,si,D,sab,no
+80,F,1,1,1,7,12.0,4,casa,infezione,no,C,mer,no
+76,M,10,0,0,2,NA,7,casa,infezione,no,C,ven,no
+99,F,4,3,1,3,12.7,4,casa,BPCO,si,B,mer,si
+79,F,7,0,0,1,13.3,3,casa,altro,si,A,mar,no
+76,F,3,1,1,4,15.3,5,struttura riabilitativa,BPCO,no,B,ven,si
+81,M,8,0,0,5,9.9,12,casa,BPCO,no,D,lun,si
+73,M,4,0,0,4,14.9,5,struttura riabilitativa,altro,no,B,ven,no
+80,F,9,0,1,3,11.9,4,casa,altro,no,D,mar,no
+79,F,16,1,1,3,11.3,6,casa,scompenso cardiaco,no,A,ven,si
+70,F,3,0,0,2,14.5,7,casa,infezione,no,C,lun,no
+75,M,3,0,0,1,10.7,7,casa,altro,no,D,mer,no
+81,M,14,0,0,1,11.2,6,casa,infezione,no,B,sab,no
+82,M,22,0,0,0,9.4,5,casa,diabete,no,D,lun,no
+84,F,7,0,0,6,11.9,6,casa,infezione,no,C,gio,no
+86,M,2,2,0,4,14.1,4,casa,scompenso cardiaco,no,A,ven,si
+80,M,3,1,1,5,13.4,5,struttura riabilitativa,altro,si,D,mer,no
+83,M,12,0,0,NA,9.3,7,casa,altro,no,A,mar,no
+73,F,20,0,1,4,14.4,6,casa,infezione,no,D,ven,no
+75,M,6,0,1,3,12.2,8,casa,BPCO,no,B,mer,no
+89,F,3,1,0,2,14.2,10,casa,altro,si,D,lun,no
+56,F,14,0,0,2,12.4,4,casa,scompenso cardiaco,no,B,gio,no
+81,F,3,0,0,7,11.2,5,casa,altro,no,D,ven,si
+99,F,4,0,0,2,13.4,8,casa,altro,no,B,lun,no
+57,M,5,0,1,3,11.2,3,casa,altro,no,C,lun,no
+94,M,5,1,0,5,12.0,6,struttura riabilitativa,scompenso cardiaco,no,C,lun,si
+58,M,9,0,0,4,14.2,6,assistenza domiciliare,diabete,no,A,mar,no
+81,M,4,0,0,3,10.6,5,casa,infezione,no,C,lun,no
+95,M,7,0,1,9,13.0,5,casa,diabete,no,C,ven,si
+93,M,13,0,1,3,12.5,14,struttura riabilitativa,BPCO,no,A,lun,no
+67,M,13,2,0,4,12.8,4,casa,scompenso cardiaco,si,B,ven,no
+63,F,15,1,0,4,11.7,4,casa,altro,no,C,ven,no
+61,M,5,0,1,4,10.0,4,casa,altro,no,C,lun,si
+85,M,2,0,0,1,11.4,10,assistenza domiciliare,altro,no,C,gio,no
+72,F,8,1,0,NA,13.1,10,casa,scompenso cardiaco,no,D,ven,no
+77,M,8,0,2,1,9.6,7,casa,BPCO,no,A,gio,si
+80,M,8,0,1,5,11.2,12,struttura riabilitativa,altro,no,B,ven,si
+81,M,5,0,1,3,10.4,6,casa,altro,no,B,ven,no
+83,M,9,0,0,2,13.0,5,casa,altro,no,D,mer,no
+78,F,4,4,0,NA,16.4,4,casa,BPCO,no,D,mar,si
+59,M,11,2,0,3,12.0,6,assistenza domiciliare,infezione,no,D,sab,no
+93,F,20,0,0,NA,13.6,9,casa,altro,si,D,lun,no
+46,F,7,3,0,3,13.5,8,assistenza domiciliare,infezione,no,C,gio,si
+90,F,7,0,1,NA,13.9,5,casa,scompenso cardiaco,no,C,sab,no
+70,F,10,0,1,4,10.2,6,casa,altro,no,B,gio,no
+74,F,10,3,1,5,11.2,10,casa,infezione,si,A,lun,si
+71,F,10,0,0,4,13.4,9,casa,altro,no,B,mer,no
+72,F,8,0,0,7,11.7,2,casa,BPCO,no,B,mer,no
+76,M,6,0,1,1,11.9,9,casa,diabete,no,A,mar,no
+73,M,18,0,1,5,10.5,7,casa,altro,no,A,mar,no
+64,F,3,0,3,5,15.3,5,casa,BPCO,no,A,mar,no
+86,M,14,0,2,2,11.4,5,assistenza domiciliare,BPCO,no,D,mer,no
+70,M,4,0,0,4,10.8,6,casa,infezione,no,B,mer,no
+91,M,9,0,1,2,13.0,8,assistenza domiciliare,infezione,si,B,gio,no
+75,M,4,0,2,3,11.3,6,casa,altro,si,B,lun,si
+69,M,3,4,0,3,12.9,5,struttura riabilitativa,BPCO,no,A,mer,si
+81,M,4,2,0,5,10.6,9,assistenza domiciliare,scompenso cardiaco,si,D,sab,si
+86,F,4,0,0,0,11.0,4,casa,BPCO,no,B,lun,no
+66,F,15,0,0,2,14.2,1,assistenza domiciliare,scompenso cardiaco,si,B,mar,no
+73,F,5,1,0,3,13.0,12,casa,altro,si,D,mer,no
+92,F,4,0,1,4,12.9,7,casa,altro,si,A,ven,no
+65,M,4,0,0,3,13.2,5,casa,BPCO,no,A,ven,si
+67,F,7,1,1,2,11.5,9,casa,altro,no,D,mer,no
+78,F,7,0,0,1,11.2,2,casa,altro,si,C,ven,no
+63,F,10,1,1,5,10.2,10,casa,altro,no,A,gio,si
+49,M,4,0,3,6,14.5,4,casa,altro,no,A,lun,no
+58,F,3,0,0,1,14.2,1,assistenza domiciliare,scompenso cardiaco,no,D,lun,no
+81,F,6,0,0,2,12.8,5,casa,BPCO,si,A,sab,no
+84,F,11,0,1,3,13.4,4,casa,infezione,no,C,mar,no
+83,F,11,0,1,4,12.7,6,assistenza domiciliare,altro,si,B,gio,no
+81,F,4,1,1,4,10.6,6,casa,scompenso cardiaco,no,D,mer,si
+63,M,5,0,0,3,9.4,5,casa,scompenso cardiaco,no,C,lun,no
+84,F,8,3,2,0,13.0,9,casa,altro,no,B,mar,si
+89,M,5,0,3,0,10.4,6,struttura riabilitativa,BPCO,si,D,lun,si
+69,M,3,1,0,4,10.3,8,casa,infezione,no,A,lun,si
+87,F,8,0,1,2,12.3,5,casa,infezione,no,D,lun,no
+72,F,5,0,0,2,12.6,3,casa,altro,no,A,sab,no
+79,M,8,2,0,4,11.1,7,struttura riabilitativa,BPCO,no,B,mar,si
+80,F,11,1,1,2,12.4,7,casa,scompenso cardiaco,si,A,sab,no
+60,M,5,0,2,3,14.8,6,casa,scompenso cardiaco,si,D,ven,no
+93,M,3,0,1,6,13.8,6,casa,altro,si,B,lun,si
+67,M,4,1,0,3,NA,5,struttura riabilitativa,diabete,no,A,ven,no
+75,F,11,0,0,2,13.7,4,assistenza domiciliare,scompenso cardiaco,si,C,ven,no
+71,M,7,0,1,4,13.9,5,casa,infezione,no,C,mer,no
+81,F,11,2,1,2,9.5,8,casa,altro,no,C,ven,si
+81,F,5,1,0,2,12.2,4,casa,infezione,no,A,gio,no
+77,F,11,0,0,2,12.3,4,casa,diabete,no,C,mar,no
+92,M,5,0,0,1,12.7,6,casa,scompenso cardiaco,no,A,lun,no
+80,M,5,1,1,2,13.8,4,casa,diabete,si,B,mer,no
+72,F,7,0,1,1,10.3,6,casa,infezione,si,D,lun,no
+45,M,6,0,1,4,16.3,1,casa,altro,no,A,gio,no
+73,F,6,0,0,4,12.5,2,casa,altro,si,D,ven,no
+73,M,7,2,0,0,14.1,4,casa,altro,no,D,lun,si
+67,M,12,3,0,1,9.8,7,casa,infezione,no,D,mer,si
+67,F,5,0,1,1,11.6,6,casa,BPCO,no,A,ven,no
+83,M,2,0,1,6,12.8,9,casa,altro,no,C,lun,no
+88,F,9,0,4,3,NA,6,casa,BPCO,si,B,lun,si
+97,F,21,1,0,3,11.3,8,casa,altro,si,B,mer,no
+89,F,13,0,1,1,12.7,4,casa,BPCO,no,D,mar,no
+69,F,3,0,0,2,12.6,9,casa,altro,si,B,mar,no
+79,F,9,3,0,3,11.7,4,struttura riabilitativa,scompenso cardiaco,no,D,ven,si
+61,F,13,2,2,3,12.9,6,casa,altro,no,B,sab,si
+84,M,12,1,3,7,12.6,9,struttura riabilitativa,diabete,no,C,gio,si
+80,F,21,0,1,6,12.3,7,casa,altro,si,B,sab,no
+70,M,11,0,1,4,12.0,4,struttura riabilitativa,scompenso cardiaco,no,C,lun,no
+75,F,1,0,0,1,11.6,6,casa,scompenso cardiaco,no,C,ven,no
+74,F,10,0,0,3,13.3,10,casa,altro,no,D,lun,no
+69,F,4,1,4,1,11.0,7,casa,infezione,no,A,mar,si
+91,F,4,3,0,NA,15.8,3,casa,diabete,si,B,gio,si
+99,F,2,0,1,3,12.6,3,assistenza domiciliare,BPCO,no,D,gio,no
+86,M,3,0,1,1,13.6,9,casa,altro,no,B,sab,no
+88,M,5,0,1,1,8.9,6,struttura riabilitativa,diabete,si,B,mer,no
+78,F,13,0,1,6,12.0,4,casa,altro,si,B,lun,no
+73,F,14,0,2,3,12.8,3,struttura riabilitativa,altro,no,A,ven,no
+99,M,10,2,3,5,11.4,5,casa,BPCO,no,A,mer,si
+72,F,14,1,2,2,10.7,4,casa,diabete,si,A,mar,no
+81,M,5,0,0,1,11.0,12,casa,BPCO,si,D,mer,no
+75,M,4,0,1,2,11.8,9,casa,altro,si,A,gio,no
+83,M,22,0,1,2,14.4,7,casa,altro,no,D,gio,no
+76,F,9,0,1,1,15.0,6,casa,diabete,no,A,mer,no
+83,F,5,0,3,1,13.5,3,casa,scompenso cardiaco,si,A,mar,si
+63,F,11,0,1,2,11.7,8,casa,infezione,si,A,sab,no
+75,M,4,0,2,1,13.2,7,casa,scompenso cardiaco,si,B,gio,si
+92,F,18,0,0,3,10.1,5,casa,BPCO,si,B,sab,no
+65,M,3,6,0,0,12.1,4,casa,scompenso cardiaco,no,A,lun,si
+69,M,5,1,1,1,10.4,5,casa,diabete,no,C,ven,si
+92,F,6,0,1,3,12.4,6,struttura riabilitativa,infezione,no,D,ven,si
+81,F,6,4,1,2,12.0,10,casa,altro,no,D,lun,si
+88,F,3,0,3,6,13.3,8,casa,infezione,no,D,lun,si
+52,M,11,0,3,4,12.4,3,casa,BPCO,no,D,ven,no
+78,M,10,0,1,2,8.5,6,casa,scompenso cardiaco,no,A,mar,no
+62,M,7,0,0,3,10.9,4,casa,altro,no,B,ven,si
+61,F,10,0,0,1,12.2,11,assistenza domiciliare,infezione,si,C,mar,no
+81,M,5,0,1,3,13.1,4,casa,scompenso cardiaco,si,A,mer,no
+89,F,12,0,1,3,11.6,9,assistenza domiciliare,diabete,no,C,mar,si
+60,F,5,0,3,5,14.2,7,casa,diabete,no,C,mar,si
+64,F,4,0,3,3,11.2,10,casa,altro,no,D,mer,si
+70,M,6,0,1,0,13.1,4,assistenza domiciliare,scompenso cardiaco,no,B,mar,no
+75,F,6,0,1,1,13.7,6,casa,diabete,no,D,lun,no
+62,M,8,0,1,2,10.4,6,casa,scompenso cardiaco,no,A,mer,no
+99,M,10,2,1,4,12.6,6,casa,BPCO,no,C,ven,si
+83,M,19,0,1,5,11.8,2,casa,scompenso cardiaco,no,A,lun,no
+72,F,3,0,1,2,10.7,5,struttura riabilitativa,altro,no,C,gio,si
+71,M,3,0,1,1,9.6,6,casa,altro,no,A,sab,no
+99,M,8,0,1,6,10.8,7,casa,diabete,no,A,gio,si
+99,F,15,0,3,3,12.5,5,casa,infezione,no,B,mar,no
+71,M,13,0,2,7,NA,6,casa,diabete,si,D,gio,no
+80,M,6,0,1,6,12.8,6,casa,diabete,no,C,mar,no
+90,F,6,0,1,3,14.8,4,casa,scompenso cardiaco,no,D,ven,no
+63,M,6,1,0,5,10.7,6,casa,scompenso cardiaco,si,A,gio,si
+70,M,20,0,3,2,7.5,7,casa,altro,si,D,gio,si
+91,F,6,0,0,2,12.4,2,casa,diabete,no,B,ven,no
+69,M,8,0,1,1,11.2,8,assistenza domiciliare,scompenso cardiaco,si,A,ven,si
+72,F,3,0,1,2,16.4,7,casa,scompenso cardiaco,no,B,ven,no
+61,F,12,0,2,5,13.2,8,casa,scompenso cardiaco,si,D,lun,si
+68,M,6,2,1,5,12.0,5,casa,diabete,si,B,gio,si
+84,F,6,2,3,2,13.3,11,assistenza domiciliare,scompenso cardiaco,si,B,mar,si
+67,M,6,0,1,1,13.6,4,casa,infezione,si,D,mer,no
+62,M,6,1,1,NA,12.2,5,assistenza domiciliare,altro,no,C,lun,si
+69,F,36,2,2,4,13.1,4,casa,altro,no,B,sab,no
+96,F,10,0,1,3,13.5,6,casa,BPCO,no,D,mar,no
+78,M,11,0,1,3,11.8,2,assistenza domiciliare,diabete,no,D,mar,no
+70,F,4,0,0,2,14.1,6,casa,BPCO,no,C,gio,no
+78,M,3,0,1,4,13.1,3,casa,scompenso cardiaco,si,B,gio,si
+81,M,2,0,0,2,14.2,8,casa,BPCO,si,C,ven,no
+78,M,5,1,0,2,NA,4,casa,altro,no,B,mar,no
+56,F,8,0,0,1,10.5,5,assistenza domiciliare,BPCO,no,B,mer,no
+79,F,8,0,0,3,12.7,4,casa,BPCO,no,D,gio,no
+74,M,3,1,0,0,12.2,3,struttura riabilitativa,altro,si,A,mar,si
+85,F,10,0,0,4,12.6,10,struttura riabilitativa,diabete,no,D,gio,no
+61,F,5,1,1,2,NA,2,struttura riabilitativa,altro,no,B,mer,si
+88,M,14,1,1,3,12.0,4,struttura riabilitativa,diabete,no,B,sab,no
+71,F,6,1,0,7,12.4,10,casa,altro,no,B,mer,si
+57,M,7,0,2,4,12.4,5,casa,diabete,si,D,ven,no
+91,M,5,1,0,0,12.8,5,casa,infezione,si,B,mer,no
+70,M,5,0,4,4,13.8,7,casa,infezione,no,D,mer,no
+80,F,7,0,0,2,14.1,10,casa,infezione,no,D,mer,no
+74,M,10,0,1,0,13.7,7,casa,scompenso cardiaco,si,D,mar,no
+88,M,11,2,0,3,12.2,10,casa,infezione,no,B,ven,si
+88,F,5,1,0,1,12.5,6,assistenza domiciliare,scompenso cardiaco,no,C,lun,no
+88,F,3,1,0,2,13.0,4,casa,altro,no,D,ven,no
+84,F,9,0,1,1,10.6,9,struttura riabilitativa,diabete,si,B,ven,no
+58,F,15,0,0,4,12.6,7,casa,diabete,no,C,lun,no
+57,M,5,0,1,4,12.0,8,assistenza domiciliare,scompenso cardiaco,no,C,ven,si
+78,M,5,1,1,4,9.2,4,casa,BPCO,no,C,mer,si
+65,F,5,2,2,5,11.1,4,casa,diabete,no,B,mar,si
+81,M,9,1,0,1,11.0,6,casa,infezione,si,A,gio,no
+78,F,13,0,1,2,12.6,5,casa,altro,no,A,mer,no
+60,F,4,1,0,1,12.2,9,casa,infezione,no,B,ven,no
+65,F,9,0,0,2,12.7,5,casa,diabete,no,D,ven,no
+63,M,17,0,0,1,11.4,5,casa,infezione,no,C,lun,no
+66,F,10,1,2,5,11.0,5,casa,altro,si,C,mar,no
+74,M,4,2,0,2,11.3,5,casa,infezione,no,D,mer,si
+84,M,3,0,1,1,NA,4,casa,infezione,no,D,mer,no
+91,M,7,3,1,3,13.7,5,casa,scompenso cardiaco,no,C,ven,si
+65,M,16,0,1,3,NA,2,casa,scompenso cardiaco,no,A,gio,no
+70,F,12,0,1,3,15.4,3,casa,altro,si,D,ven,no
+93,M,17,1,0,4,10.8,8,assistenza domiciliare,altro,no,A,ven,si
+86,F,6,1,0,3,NA,3,casa,altro,no,A,ven,si
+79,M,7,3,0,3,13.8,4,casa,BPCO,no,B,mar,no
+50,M,4,0,1,4,13.7,1,casa,BPCO,si,A,ven,no
+65,M,10,1,0,2,13.7,10,casa,BPCO,no,A,ven,no
+78,M,6,0,0,3,14.2,4,casa,infezione,no,C,gio,no
+69,F,4,0,2,3,10.8,6,casa,altro,no,C,mar,no
+98,F,6,0,0,3,10.6,11,casa,altro,no,D,mar,no
+77,F,10,0,0,5,14.5,7,casa,altro,si,C,mar,no
+79,M,12,0,0,NA,11.2,5,casa,infezione,no,A,mar,no
+64,F,12,1,0,6,11.6,15,casa,altro,no,B,mar,no
+64,M,29,0,1,3,11.7,5,casa,infezione,si,C,gio,no
+69,F,11,0,1,3,11.6,10,struttura riabilitativa,BPCO,si,A,ven,si
+69,F,4,0,2,8,11.7,6,struttura riabilitativa,scompenso cardiaco,no,A,ven,si
+73,F,14,0,0,3,15.0,5,assistenza domiciliare,infezione,no,D,mer,no
+80,M,4,1,1,7,13.7,12,casa,altro,si,A,ven,si
+79,F,4,0,2,1,14.3,5,casa,altro,no,A,lun,no
+87,M,11,2,0,4,14.2,4,casa,altro,no,C,sab,si
+61,F,5,3,0,3,12.2,6,casa,diabete,no,B,gio,no
+78,F,7,0,1,7,11.4,6,casa,scompenso cardiaco,si,A,ven,si
+79,M,5,0,2,4,12.9,6,struttura riabilitativa,infezione,no,D,lun,si
+94,F,7,0,1,2,11.7,1,assistenza domiciliare,infezione,si,B,lun,no
+74,F,3,2,1,0,12.8,6,casa,altro,no,A,lun,no
+80,M,13,0,1,3,10.3,2,struttura riabilitativa,infezione,no,C,mar,no
+67,M,15,0,2,6,14.7,6,casa,infezione,no,A,lun,no
+81,M,6,0,0,5,11.6,3,assistenza domiciliare,altro,si,C,lun,no
+80,M,16,1,1,3,10.8,5,casa,diabete,si,D,mer,si
+69,F,12,0,1,1,12.6,10,assistenza domiciliare,altro,si,A,mer,no
+71,M,15,2,2,5,11.5,4,casa,diabete,no,D,mer,si
+76,M,18,0,1,4,11.9,4,struttura riabilitativa,altro,no,A,ven,no
+82,F,4,1,2,5,NA,7,casa,altro,no,B,gio,si
+63,F,12,0,2,5,11.6,5,casa,altro,si,D,sab,no
+86,F,7,0,0,4,11.0,6,assistenza domiciliare,diabete,no,D,mer,no
+72,F,12,1,1,2,15.0,3,assistenza domiciliare,altro,si,B,ven,no
+97,M,6,0,0,9,12.2,10,casa,altro,no,A,mer,si
+92,M,26,0,1,4,10.5,7,casa,infezione,no,A,gio,no
+71,M,20,0,1,4,11.5,6,casa,BPCO,si,D,lun,no
+69,F,7,0,0,5,13.1,6,casa,infezione,si,A,gio,no
+99,M,10,0,0,4,12.1,6,casa,altro,si,C,sab,si
+83,F,9,0,0,1,9.4,3,casa,infezione,no,D,mer,no
+82,M,9,0,0,3,9.7,3,assistenza domiciliare,altro,no,A,ven,no
+71,F,13,1,0,2,13.4,8,casa,infezione,si,D,gio,no
+75,M,4,0,2,1,13.8,9,casa,altro,si,A,gio,no
+85,F,3,0,3,1,14.5,6,casa,diabete,no,B,ven,no
+83,M,15,3,1,1,13.4,3,casa,infezione,no,A,ven,no
+67,M,9,1,0,5,13.9,5,struttura riabilitativa,BPCO,si,A,ven,si
+90,F,6,0,0,7,10.7,8,casa,altro,no,B,gio,no
+79,F,5,0,0,1,11.3,5,casa,BPCO,no,C,ven,no
+65,M,3,1,1,4,10.2,7,casa,diabete,no,D,gio,si
+87,F,6,1,0,1,13.3,7,assistenza domiciliare,altro,si,A,ven,no
+74,F,3,1,0,4,14.1,2,casa,altro,no,A,gio,no
+85,F,8,0,0,2,12.6,9,casa,altro,si,D,lun,no
+70,F,9,0,0,2,10.5,3,casa,scompenso cardiaco,no,D,ven,no
+80,M,5,2,1,1,12.9,4,assistenza domiciliare,altro,si,A,mer,no
+58,F,14,0,0,2,12.4,3,casa,altro,si,C,mer,no
+80,M,12,0,1,1,12.6,7,struttura riabilitativa,altro,no,D,ven,si
+59,F,8,0,0,1,12.3,7,struttura riabilitativa,diabete,no,B,gio,no
+78,M,5,0,0,3,14.1,4,casa,diabete,no,A,mar,no
+48,F,5,0,1,1,13.1,7,casa,diabete,si,D,ven,no
+75,F,4,0,1,4,12.5,6,assistenza domiciliare,altro,no,B,gio,no
+84,M,2,0,1,0,10.0,2,casa,infezione,no,A,mar,no
+81,F,7,0,0,4,12.7,7,assistenza domiciliare,altro,si,D,gio,no
+89,F,11,0,4,4,14.4,7,casa,altro,no,D,gio,si
+64,M,3,0,0,2,12.3,6,casa,altro,si,C,mar,no
+93,F,9,1,1,4,14.5,7,struttura riabilitativa,altro,si,A,gio,no
+94,F,6,1,0,4,12.6,9,assistenza domiciliare,scompenso cardiaco,no,A,ven,no
+63,F,8,2,0,2,10.9,3,casa,altro,si,C,ven,si
+67,M,11,0,1,3,12.9,2,casa,BPCO,si,A,lun,no
+70,F,12,1,0,9,13.0,4,assistenza domiciliare,infezione,no,D,gio,no
+76,F,5,1,0,4,11.9,5,casa,altro,si,A,lun,si
+78,M,11,0,1,2,14.6,4,casa,altro,no,D,gio,no
+49,F,6,0,1,8,12.9,5,struttura riabilitativa,altro,no,C,lun,si
+83,M,2,0,1,5,12.0,3,casa,scompenso cardiaco,si,D,gio,si
+73,M,24,1,0,2,9.9,2,casa,scompenso cardiaco,si,A,ven,si
+65,M,7,0,0,5,11.2,2,casa,altro,no,D,mer,no
+87,M,6,1,0,0,12.4,8,assistenza domiciliare,diabete,no,B,mer,no
+72,F,16,0,0,2,14.1,5,casa,altro,no,B,mer,no
+89,M,9,0,0,2,9.0,10,casa,altro,no,C,ven,si
+82,F,5,1,0,6,11.5,3,casa,BPCO,no,A,gio,si
+72,F,8,0,0,4,13.0,10,struttura riabilitativa,diabete,no,B,lun,no
+89,F,9,0,2,3,12.4,4,casa,altro,no,B,gio,no
+85,F,6,0,0,4,9.6,8,casa,altro,no,C,gio,no
+70,F,2,4,0,1,12.7,8,casa,infezione,no,C,mar,si
+58,F,8,0,0,2,10.9,6,assistenza domiciliare,altro,no,C,lun,no
+70,F,4,0,2,5,12.3,4,assistenza domiciliare,infezione,no,C,sab,no
+83,F,4,1,1,2,13.2,7,casa,BPCO,no,C,mer,si
+73,M,7,0,1,NA,10.0,5,casa,BPCO,no,C,mer,no
+96,M,26,2,0,3,9.4,3,assistenza domiciliare,scompenso cardiaco,no,B,gio,si
+79,F,3,0,1,4,14.4,4,casa,BPCO,no,C,gio,no
+78,F,8,0,1,1,11.0,7,assistenza domiciliare,altro,si,B,mar,no
+80,M,3,1,0,4,11.5,7,casa,infezione,si,B,mer,si
+66,M,3,0,2,1,10.8,7,casa,BPCO,si,A,ven,no
+75,M,6,0,0,3,12.3,5,casa,scompenso cardiaco,si,D,mar,no
+69,F,12,1,0,2,11.3,6,casa,scompenso cardiaco,no,C,mer,si
+50,F,8,0,2,5,12.0,8,casa,altro,no,A,mer,no
+56,F,8,0,0,5,14.4,5,assistenza domiciliare,altro,si,B,mar,no
+84,M,15,0,1,2,14.8,8,casa,diabete,no,D,lun,no
+71,F,9,1,0,4,15.1,6,casa,altro,si,C,ven,no
+75,M,5,0,0,0,13.4,6,casa,diabete,no,A,mer,no
+60,M,4,0,0,1,11.0,6,casa,infezione,no,A,sab,no
+69,F,6,0,2,0,15.0,4,casa,infezione,si,C,mer,no
+85,M,9,0,1,1,12.2,2,assistenza domiciliare,scompenso cardiaco,no,C,lun,no
+77,M,6,0,0,1,13.7,3,casa,infezione,si,B,mar,no
+70,M,6,1,0,6,12.5,5,casa,scompenso cardiaco,no,A,ven,si
+93,M,5,1,1,8,11.8,4,struttura riabilitativa,altro,no,D,lun,si
+75,M,4,0,1,2,10.4,6,struttura riabilitativa,altro,no,A,gio,no
+72,F,3,1,0,3,10.4,3,assistenza domiciliare,diabete,no,D,ven,no
+89,F,4,2,1,1,13.8,6,casa,BPCO,no,C,ven,si
+57,F,21,3,1,3,16.5,11,casa,scompenso cardiaco,no,A,gio,no
+82,M,13,2,1,3,12.0,8,assistenza domiciliare,altro,si,D,mer,si
+64,M,16,0,3,3,12.3,10,casa,altro,no,B,mar,no
+67,M,8,0,1,0,15.0,4,casa,scompenso cardiaco,no,A,lun,no
+68,M,7,3,0,4,12.6,4,casa,altro,no,B,gio,si
+77,M,11,0,1,4,14.6,7,casa,BPCO,no,D,mer,no
+77,F,6,0,2,3,12.2,4,struttura riabilitativa,altro,no,A,sab,no
+79,F,14,0,0,2,13.8,6,assistenza domiciliare,altro,si,D,gio,no
+78,F,8,0,0,4,13.1,5,casa,altro,no,D,mer,no
+91,F,11,2,1,4,12.8,4,assistenza domiciliare,diabete,si,B,ven,no
+95,F,4,1,0,3,12.7,6,casa,altro,si,B,mer,no
+84,F,21,1,2,3,9.8,5,casa,altro,no,C,gio,no
+84,F,8,0,0,2,9.1,3,assistenza domiciliare,infezione,si,B,lun,no
+72,M,11,0,2,3,14.7,9,casa,scompenso cardiaco,si,B,mar,no
+64,M,4,1,1,6,12.7,6,casa,scompenso cardiaco,si,D,gio,si
+82,M,5,1,0,4,NA,8,struttura riabilitativa,altro,si,B,gio,si
+76,F,11,0,0,5,14.9,8,assistenza domiciliare,infezione,no,B,ven,no
+85,M,3,2,0,2,15.4,8,casa,BPCO,no,D,mar,no
+56,F,15,0,1,1,13.6,9,assistenza domiciliare,scompenso cardiaco,si,C,ven,no
+99,F,5,0,0,2,14.8,6,casa,altro,no,D,ven,no
+62,M,13,2,1,3,15.9,5,casa,altro,no,C,mar,si
+76,M,5,2,1,3,NA,9,casa,scompenso cardiaco,no,D,gio,si
+87,M,7,0,0,NA,11.0,11,casa,altro,no,A,gio,no
+61,M,7,0,0,2,13.5,9,casa,BPCO,no,D,lun,no
+70,F,12,0,1,2,10.9,11,casa,altro,no,C,ven,no
+54,M,4,0,1,3,10.6,3,assistenza domiciliare,altro,no,A,gio,no
+60,M,10,0,1,1,15.9,7,struttura riabilitativa,diabete,no,C,mer,no
+54,M,8,0,1,4,9.2,7,casa,altro,no,B,mar,no
+77,M,11,0,0,NA,11.3,8,assistenza domiciliare,altro,no,C,ven,no
+79,F,4,0,0,6,11.3,7,casa,altro,si,A,mar,no
+72,F,7,0,0,NA,15.0,9,casa,scompenso cardiaco,si,C,mer,si
+90,F,5,2,1,5,NA,6,struttura riabilitativa,diabete,no,B,sab,si
+91,M,6,0,0,4,11.9,3,casa,altro,no,B,lun,no
+76,M,13,0,0,4,12.5,1,assistenza domiciliare,scompenso cardiaco,no,B,lun,no
+74,M,14,0,0,2,10.4,4,casa,altro,no,D,ven,no
+73,M,4,0,3,3,12.5,2,casa,infezione,si,A,mar,no
+71,M,6,1,2,2,13.0,6,struttura riabilitativa,altro,no,A,ven,si
+90,M,7,0,1,3,13.5,7,casa,altro,no,B,mar,no
+79,M,4,1,0,2,12.4,5,casa,altro,no,C,lun,no
+72,M,6,0,4,4,15.5,5,struttura riabilitativa,infezione,si,D,lun,no
+73,M,4,1,1,4,10.4,4,struttura riabilitativa,scompenso cardiaco,no,C,ven,si
+82,M,10,0,0,2,15.1,6,casa,BPCO,si,D,gio,no
+72,F,4,0,0,1,10.4,7,casa,diabete,no,A,mar,no
+79,F,16,0,0,3,12.8,6,casa,scompenso cardiaco,no,D,lun,no
+76,F,2,1,1,0,11.5,10,casa,scompenso cardiaco,no,C,ven,no
+91,M,10,0,3,4,11.5,4,casa,altro,no,C,mar,si
+89,F,10,0,2,2,11.7,4,assistenza domiciliare,infezione,si,D,lun,no
+60,F,5,0,1,2,NA,6,casa,scompenso cardiaco,no,D,sab,no
+74,M,3,2,1,8,13.7,6,casa,infezione,no,D,sab,si
+84,F,8,0,1,1,12.1,4,assistenza domiciliare,infezione,no,B,mer,no
+71,M,3,2,0,2,11.5,7,assistenza domiciliare,scompenso cardiaco,no,B,gio,si
+85,M,13,1,1,2,15.1,6,casa,infezione,no,B,lun,no
+80,M,7,0,0,2,10.8,5,struttura riabilitativa,altro,si,A,gio,no
+83,F,7,0,1,3,11.0,1,casa,diabete,no,A,lun,no
+75,F,7,0,2,2,11.7,13,casa,infezione,no,D,gio,no
+79,F,11,0,1,1,11.8,6,casa,diabete,si,C,mer,no
+82,F,7,0,1,0,13.1,7,casa,infezione,no,C,lun,no
+60,M,10,0,0,2,12.1,8,casa,BPCO,no,A,mar,no
+66,F,9,0,2,3,7.5,9,casa,altro,no,B,sab,si
+65,M,5,0,2,2,11.6,7,casa,diabete,no,B,lun,no
+95,F,14,1,0,9,12.1,9,casa,altro,no,A,mar,no
+79,M,18,2,0,3,12.8,4,casa,altro,no,D,ven,no
+80,M,14,0,1,1,NA,4,struttura riabilitativa,scompenso cardiaco,no,D,gio,si
+78,M,7,0,0,3,10.6,7,casa,altro,no,C,gio,no
+70,F,10,0,2,4,11.9,4,assistenza domiciliare,infezione,no,B,mer,no
+68,M,4,1,0,4,14.8,12,casa,altro,si,A,mar,no
+85,M,4,0,0,2,12.8,6,casa,altro,no,C,lun,no
+72,M,4,0,0,3,14.8,6,casa,altro,si,D,mar,no
+94,F,5,2,4,7,11.7,9,casa,diabete,si,A,ven,si
+78,F,11,1,1,NA,13.2,7,struttura riabilitativa,scompenso cardiaco,no,C,ven,no
+77,F,4,0,0,3,13.6,6,casa,altro,si,B,mer,no
+74,F,5,1,1,1,NA,4,casa,altro,no,D,ven,no
+75,M,3,2,0,2,15.3,3,assistenza domiciliare,altro,no,B,lun,no
+76,M,5,1,0,6,15.4,7,casa,altro,si,C,lun,si
+93,M,3,1,0,4,15.8,2,casa,infezione,no,B,gio,no
+99,F,12,1,0,5,13.5,3,casa,BPCO,no,A,ven,no
+63,M,6,1,0,4,12.3,7,casa,diabete,no,B,gio,no
+79,F,12,0,0,4,12.9,5,casa,altro,si,C,gio,no
+84,M,16,0,1,6,11.9,5,struttura riabilitativa,BPCO,no,B,gio,si
+66,F,9,0,1,4,10.2,5,assistenza domiciliare,altro,no,B,mer,no
+69,F,8,0,1,0,12.0,6,assistenza domiciliare,BPCO,no,C,lun,no
+71,M,7,0,1,4,14.9,8,casa,altro,no,D,gio,no
+49,M,5,0,1,0,14.2,4,casa,BPCO,si,D,ven,no
+83,M,2,0,0,3,9.2,7,assistenza domiciliare,diabete,no,C,ven,no
+76,M,8,0,1,6,NA,5,assistenza domiciliare,altro,no,A,mar,si
+75,F,5,2,1,2,11.2,6,assistenza domiciliare,altro,no,C,gio,si
+77,M,4,0,0,3,11.6,1,casa,altro,no,C,ven,no
+79,F,5,1,1,7,NA,7,casa,altro,no,C,mar,si
+99,F,7,2,0,6,11.7,5,casa,altro,si,B,gio,si
+78,M,10,1,0,2,15.6,5,struttura riabilitativa,infezione,no,B,mer,no
+85,F,4,0,0,1,11.7,4,casa,altro,si,A,lun,no
+70,F,3,0,2,4,12.6,6,struttura riabilitativa,infezione,no,A,lun,no
+80,M,13,0,2,1,12.4,6,casa,altro,no,A,mer,no
+73,M,10,1,0,2,11.3,8,casa,BPCO,no,B,ven,no
+74,M,11,1,2,5,11.6,3,struttura riabilitativa,altro,no,A,lun,no
+66,M,6,0,0,NA,NA,7,casa,altro,si,D,lun,no
+67,M,3,0,0,7,12.3,5,casa,altro,si,C,lun,no
+81,F,15,0,1,NA,13.0,3,casa,BPCO,si,C,mer,no
+84,M,15,0,0,0,13.0,7,casa,infezione,no,A,mer,no
+81,F,5,0,1,2,13.2,1,casa,diabete,si,A,mar,no
+69,M,9,0,0,2,NA,2,casa,altro,no,A,gio,no
+80,M,13,0,0,2,12.8,9,casa,scompenso cardiaco,no,A,ven,no
+48,M,31,0,2,8,10.7,4,assistenza domiciliare,infezione,no,B,lun,si
+87,F,14,0,1,3,9.3,4,casa,altro,si,D,mar,no
+76,M,10,2,0,3,16.2,5,casa,BPCO,no,C,gio,no
+79,M,6,2,1,0,12.2,8,struttura riabilitativa,infezione,si,D,sab,si
+89,F,5,0,0,2,11.8,5,casa,diabete,no,D,lun,no
+72,F,7,0,1,6,7.5,8,assistenza domiciliare,altro,no,D,ven,si
+87,M,5,0,1,2,13.5,5,casa,altro,si,C,gio,no
+71,M,10,0,1,2,11.9,3,casa,altro,si,D,ven,no
+82,M,8,0,2,4,NA,5,casa,scompenso cardiaco,no,B,lun,no
+72,F,6,2,1,6,13.9,7,casa,scompenso cardiaco,si,C,ven,si
+80,M,4,0,3,1,11.8,2,casa,diabete,si,C,mar,no
+92,F,8,0,1,0,11.7,8,struttura riabilitativa,altro,no,D,mer,no
+69,F,6,0,0,4,11.3,5,casa,infezione,no,A,lun,no
+69,F,9,0,1,1,14.6,6,casa,altro,no,C,mer,no
+73,F,4,2,1,2,11.9,9,casa,BPCO,no,C,lun,no
+80,M,11,2,0,3,12.8,7,casa,altro,no,D,mar,si
+99,M,7,0,1,3,11.7,7,casa,altro,no,C,lun,no
+70,M,22,0,0,1,9.7,6,casa,scompenso cardiaco,no,A,ven,no
+54,F,4,0,0,4,12.8,7,casa,infezione,si,A,gio,no
+69,F,23,0,2,6,12.9,5,casa,diabete,no,B,mar,no
+59,M,40,1,1,NA,12.1,5,casa,altro,no,A,lun,no
+70,F,7,1,0,1,11.9,5,casa,infezione,no,D,ven,no
+76,M,24,0,0,2,10.3,6,casa,altro,no,C,gio,no
+66,F,14,0,0,0,11.9,12,struttura riabilitativa,altro,si,D,sab,no
+69,F,3,0,0,4,NA,7,casa,scompenso cardiaco,si,A,ven,no
+56,M,5,1,1,1,14.5,4,casa,BPCO,no,C,lun,no
+78,F,13,2,2,2,14.4,6,casa,scompenso cardiaco,no,D,gio,no
+68,F,9,0,0,4,14.4,6,struttura riabilitativa,altro,no,A,lun,no
+88,F,12,0,0,3,10.5,8,casa,altro,si,A,lun,no
+88,F,9,0,0,3,10.4,11,casa,BPCO,no,A,sab,no
+67,M,18,0,0,4,15.9,7,casa,infezione,no,C,mar,no
+72,M,6,0,1,3,NA,6,struttura riabilitativa,scompenso cardiaco,no,D,mer,no
+77,M,4,0,0,3,12.3,11,casa,infezione,si,B,mar,no
+85,F,5,1,0,0,12.0,6,casa,altro,no,D,mar,no
+58,F,7,1,2,6,14.0,2,casa,diabete,si,A,gio,si
+76,F,4,0,1,0,12.2,6,casa,altro,no,B,lun,no
+97,M,7,0,0,2,9.5,7,casa,scompenso cardiaco,no,D,gio,no
+75,M,6,0,4,3,11.4,3,casa,altro,si,A,sab,no
+79,F,6,3,1,3,16.3,4,casa,diabete,no,C,ven,si
+76,F,7,0,0,2,11.7,8,casa,infezione,no,B,lun,no
+63,F,6,0,0,4,13.3,3,casa,infezione,si,C,ven,no
+87,M,13,0,1,5,13.6,4,assistenza domiciliare,altro,no,D,lun,no
+79,M,8,0,1,3,12.1,5,casa,BPCO,si,A,lun,no
+78,M,12,0,1,0,14.0,8,casa,scompenso cardiaco,si,D,sab,no
+84,F,3,0,1,2,14.1,6,struttura riabilitativa,altro,si,A,ven,no
+85,M,7,2,3,4,13.6,9,struttura riabilitativa,altro,no,A,ven,si
+56,F,5,1,4,3,15.3,8,assistenza domiciliare,altro,si,A,gio,si
+82,M,2,0,2,3,12.5,5,casa,scompenso cardiaco,no,A,gio,no
+70,F,25,0,1,3,13.1,9,casa,infezione,no,A,lun,no
+78,M,3,0,0,7,12.1,11,struttura riabilitativa,altro,no,D,lun,si
+69,M,12,0,0,2,10.7,6,assistenza domiciliare,BPCO,no,B,ven,no
+67,F,11,0,1,2,11.0,3,casa,altro,no,C,ven,no
+87,F,15,0,0,1,10.8,4,casa,scompenso cardiaco,no,D,gio,no
+76,M,6,0,0,NA,15.6,6,casa,altro,no,A,lun,no
+73,F,2,0,0,1,13.9,7,assistenza domiciliare,scompenso cardiaco,si,B,mer,no
+73,F,11,0,0,4,13.2,6,assistenza domiciliare,altro,no,C,lun,no
+77,F,7,0,0,6,10.5,7,casa,altro,no,B,gio,si
+76,F,11,0,0,3,12.2,10,struttura riabilitativa,BPCO,no,D,ven,no
+50,M,7,0,3,3,12.4,6,assistenza domiciliare,infezione,si,D,lun,no
+67,M,16,0,1,4,13.2,6,casa,infezione,no,C,ven,no
+74,M,10,0,0,6,12.0,6,casa,diabete,si,B,mar,no
+85,F,6,0,2,3,11.4,6,assistenza domiciliare,altro,no,C,lun,no
+92,M,31,2,1,6,9.6,9,casa,altro,no,D,mar,si
+66,F,5,0,0,3,11.7,5,casa,scompenso cardiaco,no,C,mer,no
+98,M,2,0,2,6,13.4,6,casa,altro,no,B,gio,si
+78,M,8,0,1,2,14.2,6,casa,BPCO,si,C,lun,no
+82,M,10,0,0,2,NA,3,casa,BPCO,si,C,mar,no
+71,F,10,1,1,3,12.7,3,struttura riabilitativa,infezione,no,C,mar,no
+70,F,5,1,1,2,11.7,6,casa,altro,no,C,mar,si
+93,F,7,0,3,2,13.2,7,casa,diabete,no,A,mar,no
+74,F,4,0,2,0,12.5,8,casa,diabete,si,B,lun,no
+76,M,6,2,1,1,12.6,6,casa,altro,no,A,mar,si
+90,F,11,0,0,4,9.7,10,casa,scompenso cardiaco,si,C,mar,no
+96,F,5,0,0,7,13.6,6,casa,scompenso cardiaco,no,D,mar,no
+60,F,11,0,1,2,11.5,7,casa,BPCO,si,D,ven,no
+75,M,6,2,0,1,12.8,4,casa,scompenso cardiaco,si,A,mer,no
+77,M,8,0,0,1,12.1,8,casa,infezione,no,B,ven,no
+97,M,6,0,0,1,9.3,5,casa,scompenso cardiaco,no,B,lun,no
+99,F,15,1,1,NA,13.6,5,struttura riabilitativa,infezione,no,A,gio,no
+76,M,8,0,0,4,13.5,4,struttura riabilitativa,infezione,no,B,lun,no
+81,F,5,0,0,3,14.8,5,casa,scompenso cardiaco,no,D,mer,no
+86,M,8,0,0,1,11.2,4,struttura riabilitativa,BPCO,si,C,mer,no
+90,M,15,4,0,4,7.9,4,assistenza domiciliare,altro,no,C,mar,si
+73,M,9,0,1,1,12.0,4,casa,altro,si,C,ven,no
+86,F,4,0,3,2,13.2,4,struttura riabilitativa,BPCO,no,C,gio,no
+69,F,5,0,0,NA,14.5,6,struttura riabilitativa,infezione,no,D,sab,no
+48,M,4,0,0,4,12.2,5,casa,altro,no,C,mer,no
+62,M,16,0,2,1,11.2,5,casa,altro,no,B,ven,si
+79,M,8,0,2,4,10.0,3,casa,BPCO,no,C,mer,no
+86,M,12,0,1,8,8.2,7,casa,scompenso cardiaco,no,B,mar,si
+52,M,12,0,0,9,11.5,7,assistenza domiciliare,altro,no,B,gio,si
+57,F,6,0,1,2,13.1,7,casa,diabete,si,C,mar,no
+77,M,14,0,2,3,11.7,9,casa,scompenso cardiaco,no,A,ven,no
+40,F,7,2,3,2,13.3,8,casa,BPCO,no,A,ven,si
+83,F,9,2,2,0,13.4,5,casa,BPCO,no,C,ven,si
+89,F,2,0,1,3,11.2,6,assistenza domiciliare,altro,no,C,sab,si
+44,M,7,0,1,0,11.7,4,casa,altro,si,A,lun,no
+86,F,6,0,1,NA,13.5,9,assistenza domiciliare,diabete,si,D,mar,no
+75,F,5,1,0,5,13.2,6,casa,diabete,si,C,sab,si
+93,M,8,1,2,2,13.1,12,casa,altro,si,D,mar,no
+80,F,3,0,0,NA,13.2,5,casa,altro,no,C,mer,no
+75,F,6,1,2,2,9.9,4,assistenza domiciliare,BPCO,no,A,gio,si
+79,F,2,0,0,0,15.1,4,casa,altro,si,B,lun,no
+88,F,6,0,1,2,11.9,7,casa,altro,no,D,mar,no
+79,F,5,0,0,3,13.8,9,casa,scompenso cardiaco,no,C,sab,no
+78,F,20,0,3,0,14.9,9,casa,diabete,si,A,lun,no
+62,F,8,0,0,7,11.4,7,assistenza domiciliare,scompenso cardiaco,no,C,mer,si
+83,M,10,0,2,6,NA,8,struttura riabilitativa,diabete,no,C,mar,si
+78,F,1,2,1,0,14.1,8,struttura riabilitativa,infezione,no,A,ven,si
+98,M,5,3,2,6,13.0,5,casa,infezione,no,D,lun,si
+77,M,3,2,0,4,15.0,5,casa,altro,si,D,mer,no
+77,F,15,0,0,4,9.9,8,casa,altro,si,B,lun,no
+71,F,12,0,2,3,11.6,8,casa,scompenso cardiaco,no,B,ven,si
+86,F,8,1,0,0,11.4,4,casa,altro,si,D,mer,no
+75,M,8,0,0,1,14.1,5,casa,scompenso cardiaco,no,B,mer,no
+70,M,7,1,0,1,12.9,8,assistenza domiciliare,altro,no,A,ven,no
+95,M,7,0,0,2,11.5,8,casa,altro,no,A,mar,no
+97,F,10,0,1,4,12.3,10,casa,altro,no,B,lun,no
+73,M,10,1,0,2,14.0,10,casa,altro,no,B,mar,no
+66,F,6,2,0,NA,12.2,5,casa,altro,no,B,gio,no
+90,F,5,0,0,3,15.4,5,casa,altro,no,A,gio,no
+68,M,18,0,0,2,12.3,10,casa,altro,no,B,gio,no
+99,F,5,0,3,0,NA,7,casa,scompenso cardiaco,si,D,gio,no
+76,M,5,0,0,4,11.8,4,struttura riabilitativa,altro,si,A,mar,no
+88,F,28,0,0,2,9.5,2,casa,BPCO,si,B,mer,no
+63,M,7,1,0,2,12.0,4,casa,scompenso cardiaco,no,D,lun,no
+77,F,6,0,1,1,13.6,3,casa,altro,no,A,mar,no
+90,M,3,1,0,5,10.3,5,casa,altro,no,A,ven,no
+82,F,4,0,0,2,11.1,6,assistenza domiciliare,BPCO,si,D,ven,no
+72,F,16,1,1,6,13.1,3,casa,scompenso cardiaco,no,A,ven,no
+99,M,6,0,0,2,15.5,2,casa,scompenso cardiaco,no,A,lun,no
+86,M,14,0,2,2,15.2,1,casa,infezione,no,C,mer,no
+75,M,4,5,0,3,11.9,9,assistenza domiciliare,altro,no,C,mer,si
+71,F,12,2,2,3,10.6,8,casa,altro,si,A,mar,si
+75,F,8,0,0,3,11.4,4,struttura riabilitativa,scompenso cardiaco,no,C,ven,si
+93,F,6,0,0,1,11.8,7,struttura riabilitativa,scompenso cardiaco,no,B,mer,no
+69,M,3,0,0,3,11.2,5,casa,altro,no,D,mer,no
+78,F,16,0,1,7,11.3,6,casa,infezione,no,A,mer,no
+69,M,8,1,1,1,15.6,5,struttura riabilitativa,scompenso cardiaco,no,C,lun,no
+92,M,7,1,1,3,12.8,8,casa,altro,si,B,sab,no
+76,F,12,0,0,6,NA,7,casa,altro,no,D,mer,no
+87,F,4,2,0,0,12.3,5,casa,altro,no,A,gio,no
+84,F,17,2,0,2,13.7,12,assistenza domiciliare,altro,no,C,gio,no
+71,F,12,2,1,3,13.2,3,struttura riabilitativa,infezione,no,C,gio,no
+85,F,10,1,0,NA,13.5,6,assistenza domiciliare,infezione,si,C,lun,no
+88,M,11,0,1,4,16.5,4,casa,diabete,no,D,lun,no
+65,F,5,0,1,1,13.0,3,assistenza domiciliare,altro,si,B,mer,no
+85,F,7,0,0,2,13.2,8,struttura riabilitativa,altro,si,A,gio,no
+99,F,10,0,3,3,13.3,8,casa,infezione,no,D,mar,no
+74,F,6,0,0,5,10.6,5,casa,altro,no,B,mer,no
+85,F,17,0,2,3,13.1,5,struttura riabilitativa,scompenso cardiaco,no,C,mar,si
+63,F,12,0,0,5,14.0,3,casa,BPCO,no,C,mer,no
+83,M,17,0,1,3,12.2,7,assistenza domiciliare,altro,no,D,gio,no
+71,F,3,0,2,4,14.6,5,struttura riabilitativa,diabete,no,A,gio,no
+86,M,19,0,0,4,15.2,3,casa,infezione,no,C,gio,no
+77,M,6,0,1,NA,NA,4,struttura riabilitativa,BPCO,no,A,sab,si
+65,F,5,0,1,2,NA,2,casa,infezione,no,B,mer,no
+90,F,6,4,0,3,9.6,5,casa,diabete,no,B,lun,si
+75,M,17,1,1,6,9.4,6,casa,infezione,no,C,mer,si
+66,F,10,1,1,2,13.7,13,assistenza domiciliare,diabete,no,A,ven,no
+78,M,10,0,2,3,9.3,5,casa,diabete,si,A,mar,si
+67,M,14,0,1,4,12.4,6,casa,diabete,no,B,lun,no
+82,M,14,0,1,6,14.8,3,assistenza domiciliare,diabete,no,C,lun,no
+77,F,15,0,0,1,12.4,6,struttura riabilitativa,altro,no,B,mar,no
+74,M,13,0,0,3,9.2,4,casa,BPCO,si,A,mer,no
+85,F,9,0,2,2,13.2,6,assistenza domiciliare,altro,no,C,mar,no
+64,F,10,0,1,1,12.8,4,struttura riabilitativa,altro,no,D,mer,no
+88,F,3,0,0,3,13.8,9,casa,infezione,si,C,ven,no
+55,F,7,1,1,1,13.0,9,casa,infezione,no,B,mar,no
+96,M,2,0,0,8,9.4,5,casa,scompenso cardiaco,no,D,ven,si
+80,F,7,0,0,2,11.7,2,casa,altro,no,D,mer,no
+75,F,8,2,1,2,12.6,2,casa,infezione,no,C,ven,no
+70,M,5,0,0,2,14.1,5,casa,BPCO,si,C,sab,no
+84,M,5,2,0,5,11.3,3,casa,BPCO,no,C,gio,si
+76,F,14,1,1,2,13.6,6,casa,scompenso cardiaco,no,B,mer,no
+76,M,6,1,2,5,13.2,5,casa,scompenso cardiaco,si,C,ven,si
+89,F,7,0,0,1,11.7,4,casa,diabete,no,C,ven,no
+73,M,23,0,1,5,10.8,4,casa,scompenso cardiaco,no,A,mer,no
+75,M,9,0,1,2,10.9,9,assistenza domiciliare,infezione,no,C,mar,no
+82,M,13,0,1,3,11.5,5,casa,infezione,no,C,mar,no
+90,M,10,0,0,3,9.8,4,struttura riabilitativa,diabete,no,B,sab,si
+76,F,10,0,1,3,15.0,0,casa,BPCO,no,A,gio,no
+79,M,14,0,1,2,12.0,7,casa,infezione,si,D,mer,no
+78,F,6,0,0,3,NA,6,casa,diabete,no,A,mer,no
+86,M,11,0,2,6,15.4,5,casa,diabete,si,B,gio,no
+94,F,5,0,0,2,13.3,10,casa,infezione,no,D,lun,no
+67,F,6,0,0,1,12.6,3,casa,diabete,no,B,gio,no
+76,M,11,0,3,1,11.0,7,assistenza domiciliare,diabete,si,C,gio,si
+77,F,5,2,0,2,12.0,6,casa,scompenso cardiaco,no,B,lun,si
+84,M,2,0,2,3,10.5,7,struttura riabilitativa,scompenso cardiaco,no,D,lun,si
+94,F,6,0,0,4,11.1,9,casa,altro,si,A,mer,no
+78,F,16,0,3,1,12.4,8,casa,altro,no,A,ven,no
+80,M,4,1,0,3,NA,2,struttura riabilitativa,altro,no,C,ven,no
+90,M,10,0,0,2,11.7,7,assistenza domiciliare,diabete,no,D,gio,si
+64,F,6,0,1,NA,12.7,4,casa,scompenso cardiaco,no,C,lun,no
+69,M,3,0,1,3,10.8,8,casa,infezione,si,C,ven,no
+73,M,6,0,1,6,11.0,4,casa,scompenso cardiaco,no,A,lun,no
+78,F,2,0,1,5,12.2,7,casa,infezione,si,D,ven,no
+80,F,14,0,0,1,10.5,6,casa,altro,no,D,lun,no
+72,M,6,0,0,3,13.9,4,casa,BPCO,si,A,ven,no
+97,F,9,1,1,2,12.4,8,casa,altro,no,B,gio,no
+70,M,7,0,1,2,10.9,1,casa,diabete,si,B,mer,no
+75,F,3,0,0,3,11.1,5,casa,infezione,no,B,mar,no
+90,F,6,0,1,3,11.3,7,assistenza domiciliare,scompenso cardiaco,no,B,sab,si
+86,M,14,0,0,6,11.8,5,casa,infezione,no,B,gio,no
+78,M,11,0,1,1,15.1,3,casa,infezione,no,C,lun,no
+82,M,6,0,1,2,NA,7,casa,altro,si,B,mer,si
+87,F,5,2,2,4,13.5,6,casa,infezione,no,B,mer,si
+78,F,7,0,0,3,NA,9,struttura riabilitativa,scompenso cardiaco,no,C,gio,no
+85,F,3,0,0,1,13.2,5,casa,infezione,no,C,mer,no
+67,M,8,0,2,2,13.3,5,casa,altro,no,C,ven,no
+78,F,3,1,1,1,12.0,6,casa,scompenso cardiaco,si,D,lun,si
+59,M,4,0,1,3,10.5,11,casa,infezione,no,A,gio,no
+68,M,11,2,0,NA,11.6,5,casa,diabete,no,A,mer,no
+65,M,7,0,0,4,13.0,9,casa,infezione,no,B,lun,si
+92,F,5,0,1,4,12.7,5,casa,infezione,no,D,mer,no
+72,F,8,0,0,3,13.1,2,casa,altro,no,A,lun,no
+81,F,6,1,2,3,12.7,4,struttura riabilitativa,altro,no,C,gio,si
+67,M,8,0,2,4,12.6,6,casa,diabete,no,A,lun,si
+75,M,13,0,2,1,13.7,6,assistenza domiciliare,diabete,si,D,ven,no
+74,M,7,0,1,4,13.2,13,casa,altro,no,A,lun,no
+68,M,3,0,2,3,NA,5,assistenza domiciliare,BPCO,no,A,gio,si
+87,M,9,0,0,0,11.2,9,casa,infezione,si,C,sab,no
+59,F,4,0,2,3,12.5,4,assistenza domiciliare,altro,no,B,lun,si
+84,F,14,0,1,6,12.8,5,casa,altro,no,D,mar,no
+99,F,12,0,1,4,12.0,5,casa,diabete,si,D,ven,no
+68,M,7,0,1,3,11.4,9,assistenza domiciliare,altro,no,D,mar,no
+78,M,9,2,0,4,10.2,7,casa,BPCO,no,A,mar,si
+60,F,3,0,1,4,12.3,9,casa,altro,si,A,mer,no
+77,M,2,0,0,2,12.3,6,casa,altro,si,C,mer,no
+58,M,6,0,1,3,10.1,1,casa,diabete,si,C,mer,si
+84,M,9,0,0,1,9.8,5,casa,altro,no,B,sab,no
+72,F,16,0,2,5,11.8,2,assistenza domiciliare,BPCO,no,D,lun,no
+57,F,5,0,1,2,14.0,4,struttura riabilitativa,altro,si,A,ven,si
+63,M,4,0,1,2,11.7,2,casa,scompenso cardiaco,si,B,mar,no
+59,F,4,1,1,2,12.7,7,casa,altro,si,C,mar,no

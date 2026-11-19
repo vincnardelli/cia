@@ -47,6 +47,21 @@ $soft: #f8fafc;
   .iscrizione__k { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: $p1; font-weight: 700; }
   .iscrizione__t { font-weight: 600; }
 }
+.cta-progetto {
+  border: 3px solid $p2; border-radius: 14px; padding: 20px 24px; background: #ecfdf5; margin: 1.2rem 0 1.6rem;
+  display: flex; gap: 18px 28px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  .cta-progetto__testo { display: flex; flex-direction: column; gap: 4px; flex: 1 1 320px; }
+  .cta-progetto__k { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: $p2; font-weight: 700; }
+  .cta-progetto__t { font-size: 22px; font-weight: 800; color: $ink; line-height: 1.25; }
+  .cta-progetto__d { font-size: 14px; color: $muted; }
+  .cta-progetto__btn {
+    display: inline-block; background: $p2; color: #fff !important; text-decoration: none !important;
+    font-size: 22px; font-weight: 800; padding: 18px 34px; border-radius: 12px; white-space: nowrap;
+    box-shadow: 0 6px 18px rgba(5,150,105,.35); transition: transform .12s, box-shadow .12s;
+    &:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(5,150,105,.4); }
+  }
+  @media (max-width: 600px) { .cta-progetto__btn { width: 100%; text-align: center; } }
+}
 .dove-siamo {
   border: 1px solid $line; border-radius: 10px; padding: 14px 18px; background: $soft; margin: 1rem 0;
   display: flex; gap: 16px; align-items: center; flex-wrap: wrap;

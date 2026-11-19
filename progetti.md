@@ -22,8 +22,8 @@ Il voto si costruisce con tre progetti, uno per ogni sezione del corso. Il voto 
   <a href="{{ site.baseurl }}/progetti/2/" class="sezione sezione--2">
     <div class="sezione__n">Progetto 2 · di gruppo</div>
     <div class="sezione__t">Analizza un dataset</div>
-    <div class="sezione__d">Sezione 2, Come imparano le macchine. Ogni gruppo riceve un dataset da analizzare.</div>
-    <div class="sezione__w"><strong>3 punti</strong> (10%) · assegnato a novembre →</div>
+    <div class="sezione__d">Sezione 2, Come imparano le macchine. Ogni gruppo riceve un dataset e risponde a una domanda di business con un albero.</div>
+    <div class="sezione__w"><strong>3 punti + 1 bonus</strong> (10%) · iscrizione entro venerdì 20 novembre, consegna domenica 29 novembre →</div>
   </a>
   <a href="{{ site.baseurl }}/progetti/3/" class="sezione sezione--3">
     <div class="sezione__n">Progetto 3 · individuale</div>

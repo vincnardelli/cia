@@ -1,0 +1,3001 @@
+ora_ordine,giorno_ordine,destinazione,periodo,servizio,corriere,deposito,peso_kg,transiti_hub,tentativo_fallito,punto_ritiro,meteo_avverso,in_ritardo
+19.13,mar,nord est,ordinario,standard,Alfa,Bologna,0.6,2,no,no,no,no
+15.92,gio,nord est,ordinario,economy,Alfa,Milano,2.0,NA,no,no,no,no
+12.23,ven,centro,picco,standard,Alfa,Milano,3.4,4,no,si,no,no
+9.21,mer,centro,ordinario,standard,Gamma,Roma,1.3,2,no,no,no,no
+6.54,sab,isole,ordinario,standard,Beta,Roma,5.1,3,no,si,no,no
+14.58,dom,nord ovest,ordinario,standard,Beta,Bologna,4.7,5,no,no,no,si
+11.1,lun,sud,ordinario,standard,Gamma,Bologna,1.1,2,no,no,no,no
+10.84,dom,nord est,ordinario,standard,Alfa,Bologna,2.7,2,no,no,no,no
+13.57,mer,nord est,picco,express,Alfa,Roma,0.8,3,no,no,no,no
+14.28,mer,sud,ordinario,standard,Gamma,Catania,NA,1,no,si,no,no
+4.94,ven,centro,ordinario,standard,Beta,Roma,2.3,2,no,no,no,no
+18.39,mar,nord est,ordinario,standard,Alfa,Milano,2.3,4,no,no,no,no
+5.99,sab,centro,ordinario,economy,Beta,Bologna,2.3,3,si,no,no,no
+22.31,lun,sud,ordinario,standard,Beta,Catania,4.3,2,no,si,no,no
+16.98,lun,isole,ordinario,economy,Beta,Catania,2.6,4,no,no,no,si
+12.52,gio,sud,ordinario,standard,Alfa,Milano,4.2,2,no,no,no,no
+20.14,dom,centro,ordinario,standard,Beta,Roma,2.0,4,no,si,no,no
+14.59,ven,nord est,ordinario,express,Beta,Roma,1.2,2,no,si,no,no
+17.4,sab,centro,ordinario,express,Beta,Bologna,1.1,1,no,si,no,no
+14.95,mer,centro,picco,economy,Gamma,Catania,3.3,2,no,si,no,si
+19.11,sab,nord est,ordinario,express,Beta,Bologna,3.3,2,no,no,no,no
+18.96,mar,isole,ordinario,standard,Alfa,Milano,2.0,2,no,no,si,si
+10.69,ven,centro,ordinario,express,Alfa,Milano,2.0,NA,no,no,no,no
+11.93,ven,nord ovest,ordinario,express,Gamma,Roma,2.9,NA,no,no,no,no
+15.94,lun,nord ovest,ordinario,express,Gamma,Bologna,1.0,3,no,no,no,no
+13.62,mer,nord ovest,ordinario,standard,Alfa,Bologna,4.9,3,si,no,no,no
+4.9,lun,centro,ordinario,standard,Beta,Milano,3.6,2,si,no,no,no
+23.01,lun,nord est,picco,standard,Gamma,Catania,3.3,1,no,no,no,no
+5.37,mar,nord ovest,ordinario,standard,Alfa,Bologna,9.8,1,no,si,no,no
+5.76,ven,nord ovest,picco,standard,Beta,Milano,3.5,1,no,no,no,no
+9.14,dom,nord est,ordinario,standard,Beta,Milano,4.4,2,no,si,no,no
+16.87,ven,nord ovest,ordinario,standard,Alfa,Bologna,2.7,3,no,si,no,no
+22.04,mar,nord ovest,picco,standard,Alfa,Roma,3.4,2,no,no,no,si
+13.51,mer,nord est,ordinario,express,Alfa,Milano,7.8,1,no,no,no,no
+12.86,gio,centro,ordinario,standard,Beta,Milano,0.4,2,no,no,no,no
+15.23,gio,nord est,ordinario,express,Alfa,Milano,2.4,1,no,no,no,no
+12.96,ven,nord est,ordinario,economy,Gamma,Milano,1.9,3,si,no,no,no
+14.85,ven,sud,ordinario,standard,Alfa,Roma,0.4,1,si,si,no,si
+9.71,sab,nord est,ordinario,standard,Alfa,Bologna,2.3,1,no,no,no,no
+16.34,gio,isole,ordinario,standard,Beta,Milano,2.3,3,no,no,no,no
+16.15,mer,nord est,ordinario,standard,Beta,Milano,3.7,2,no,no,no,no
+4.27,mar,nord est,ordinario,express,Beta,Milano,3.8,4,no,no,si,no
+14.04,sab,isole,ordinario,standard,Alfa,Roma,0.5,1,no,no,si,no
+15.18,ven,isole,picco,standard,Alfa,Milano,NA,2,no,no,no,no
+16.86,mer,nord est,picco,standard,Gamma,Catania,2.7,1,no,no,no,no
+11.07,sab,nord ovest,ordinario,economy,Alfa,Catania,5.7,2,no,si,no,no
+8.92,gio,nord est,ordinario,economy,Gamma,Roma,5.8,3,si,no,no,no
+10.51,mar,sud,picco,standard,Gamma,Milano,0.2,2,no,no,no,no
+16.8,gio,sud,ordinario,standard,Gamma,Roma,5.6,2,no,no,no,si
+10.92,sab,sud,ordinario,economy,Alfa,Milano,4.7,2,no,no,no,no
+11.29,lun,centro,ordinario,standard,Alfa,Bologna,NA,1,no,no,no,no
+19.3,mar,centro,ordinario,standard,Beta,Catania,3.6,2,no,no,no,no
+11.2,ven,isole,ordinario,standard,Beta,Catania,5.1,2,no,no,no,no
+10.73,gio,nord ovest,picco,standard,Alfa,Catania,8.7,NA,no,no,no,si
+14.12,mar,sud,ordinario,standard,Alfa,Milano,1.8,2,no,no,no,no
+15.33,sab,nord est,ordinario,standard,Alfa,Roma,2.2,1,si,no,no,no
+18.86,mar,nord ovest,ordinario,express,Alfa,Catania,3.1,3,si,si,no,si
+10.81,mer,sud,ordinario,express,Beta,Milano,0.1,5,no,si,no,no
+7.91,mar,centro,ordinario,express,Alfa,Bologna,3.8,1,no,no,no,no
+13.99,ven,centro,ordinario,economy,Gamma,Roma,0.8,3,no,no,no,no
+17.2,gio,nord ovest,ordinario,express,Gamma,Milano,2.9,3,no,no,no,no
+8.28,gio,nord est,picco,standard,Alfa,Bologna,0.5,2,no,no,si,no
+12.45,mer,centro,ordinario,standard,Beta,Catania,7.1,5,si,si,no,si
+15.79,sab,nord est,ordinario,express,Beta,Milano,3.8,3,no,no,no,no
+15.47,gio,isole,ordinario,standard,Beta,Roma,2.0,3,si,no,no,si
+14.85,dom,nord ovest,ordinario,standard,Beta,Milano,1.7,3,no,si,no,no
+13.42,mar,centro,ordinario,standard,Gamma,Bologna,4.0,3,no,no,no,no
+11.14,mer,nord ovest,picco,standard,Gamma,Milano,1.0,5,no,no,si,si
+10.6,dom,nord ovest,ordinario,economy,Beta,Catania,5.1,2,no,si,no,no
+19.36,lun,nord ovest,ordinario,express,Alfa,Roma,3.1,1,no,si,no,no
+9.81,ven,sud,ordinario,economy,Beta,Bologna,2.5,2,no,si,no,no
+19.66,ven,nord ovest,ordinario,standard,Alfa,Catania,8.5,2,no,no,no,si
+8.98,mer,centro,picco,standard,Alfa,Milano,6.0,3,no,si,no,no
+23.98,sab,nord est,ordinario,express,Alfa,Roma,1.3,2,no,no,no,no
+7.2,gio,centro,picco,standard,Alfa,Roma,2.6,3,no,no,no,no
+21.24,dom,isole,ordinario,standard,Gamma,Milano,4.6,1,no,no,no,no
+10.73,mer,nord ovest,ordinario,express,Gamma,Roma,1.4,2,no,si,no,no
+14.01,dom,nord ovest,ordinario,express,Alfa,Bologna,4.5,4,no,no,no,si
+14.22,mer,nord ovest,picco,standard,Beta,Milano,1.4,NA,no,no,no,no
+11.76,ven,sud,ordinario,standard,Beta,Milano,2.0,2,no,no,no,no
+23.86,sab,nord ovest,ordinario,economy,Gamma,Milano,3.1,1,si,no,no,si
+14.9,gio,sud,ordinario,standard,Beta,Roma,5.4,1,no,no,no,no
+8.95,sab,nord ovest,ordinario,standard,Gamma,Roma,1.6,5,no,no,no,no
+17.22,mer,nord est,ordinario,express,Alfa,Bologna,1.3,2,no,no,no,no
+17.49,mar,nord ovest,ordinario,standard,Alfa,Milano,0.1,4,no,no,no,no
+9.68,ven,sud,ordinario,standard,Alfa,Roma,0.5,2,no,si,no,no
+16.75,mar,isole,ordinario,express,Alfa,Catania,4.5,2,no,no,no,no
+14.79,sab,sud,ordinario,express,Beta,Milano,NA,3,no,si,no,si
+17.95,dom,isole,picco,express,Beta,Bologna,1.8,2,no,no,no,si
+17.49,lun,isole,ordinario,standard,Alfa,Roma,0.5,2,no,no,no,no
+14.46,ven,nord est,ordinario,economy,Alfa,Bologna,6.2,4,no,no,no,si
+12.79,dom,centro,picco,express,Alfa,Milano,2.2,3,no,si,no,no
+18.32,gio,sud,ordinario,economy,Gamma,Roma,1.3,2,no,si,no,no
+15.82,lun,sud,ordinario,standard,Beta,Roma,1.2,4,no,si,no,si
+8.25,lun,nord ovest,picco,express,Beta,Bologna,1.6,1,no,no,no,no
+12.21,lun,centro,ordinario,standard,Alfa,Roma,0.3,3,no,si,no,no
+12.47,ven,nord est,ordinario,standard,Beta,Milano,2.3,1,no,no,no,no
+13.4,gio,nord ovest,ordinario,economy,Beta,Bologna,1.1,2,si,si,no,no
+23.98,lun,sud,ordinario,standard,Beta,Milano,3.3,1,si,no,no,no
+12.92,dom,sud,ordinario,economy,Gamma,Milano,1.5,1,no,no,no,no
+16.5,sab,nord ovest,picco,standard,Beta,Bologna,6.7,NA,no,si,no,no
+21.45,mar,nord ovest,ordinario,standard,Alfa,Milano,1.5,1,no,si,no,no
+16.62,mer,centro,ordinario,economy,Alfa,Catania,7.2,4,no,no,no,si
+16.31,gio,sud,ordinario,standard,Beta,Catania,2.7,3,no,si,no,no
+19.95,mar,nord ovest,ordinario,economy,Beta,Roma,0.1,3,no,si,no,no
+15.33,mer,nord est,ordinario,standard,Alfa,Roma,1.9,1,no,no,si,si
+15.28,sab,sud,ordinario,standard,Alfa,Bologna,0.9,2,no,no,no,no
+17.39,ven,centro,ordinario,standard,Beta,Roma,0.2,3,no,no,no,si
+16.23,mar,sud,ordinario,standard,Alfa,Catania,10.0,4,no,no,no,si
+11.64,mar,isole,ordinario,economy,Beta,Milano,NA,3,no,no,no,no
+9.6,ven,isole,picco,standard,Gamma,Roma,0.9,1,no,si,si,no
+14.02,gio,nord est,picco,standard,Alfa,Roma,0.1,1,si,no,no,no
+20.37,mer,nord ovest,picco,standard,Gamma,Milano,0.1,1,no,no,no,si
+13.55,mar,nord ovest,ordinario,standard,Alfa,Catania,3.4,5,no,no,no,no
+19.32,lun,nord ovest,ordinario,standard,Alfa,Bologna,1.8,4,no,si,no,no
+16.23,dom,sud,picco,express,Alfa,Catania,5.3,3,no,no,no,si
+13.2,mer,nord ovest,ordinario,economy,Beta,Bologna,1.2,2,no,no,no,no
+3.44,gio,nord ovest,ordinario,standard,Alfa,Roma,0.8,3,no,no,no,no
+15.43,mer,nord est,ordinario,standard,Alfa,Milano,1.3,3,no,no,no,no
+13.34,lun,nord est,picco,express,Gamma,Catania,2.8,5,no,si,no,no
+7.78,lun,sud,ordinario,express,Gamma,Milano,0.5,3,no,no,no,no
+16.66,lun,isole,ordinario,economy,Beta,Bologna,1.5,3,no,no,no,no
+14.39,sab,nord est,ordinario,standard,Beta,Bologna,1.1,4,si,no,no,no
+16.08,mar,nord est,ordinario,standard,Beta,Bologna,4.3,1,no,si,no,no
+11.96,gio,nord ovest,picco,standard,Beta,Roma,0.9,4,no,no,no,si
+15.35,sab,sud,picco,express,Alfa,Roma,0.7,1,no,no,no,si
+12.51,gio,nord ovest,ordinario,economy,Alfa,Bologna,4.3,2,no,no,no,no
+18.97,mer,nord ovest,ordinario,express,Beta,Bologna,2.7,2,no,no,no,no
+15.02,ven,sud,ordinario,standard,Gamma,Roma,0.9,1,si,no,no,no
+8.61,dom,centro,ordinario,economy,Gamma,Catania,3.8,3,no,no,si,no
+15.4,dom,sud,ordinario,standard,Alfa,Milano,1.8,3,no,no,no,si
+14.78,sab,nord est,picco,standard,Alfa,Bologna,2.3,4,no,no,no,si
+13.65,mer,nord est,ordinario,standard,Alfa,Catania,5.0,4,no,si,no,no
+8.83,mer,isole,ordinario,standard,Alfa,Roma,1.6,2,no,si,no,no
+18.95,mar,nord ovest,ordinario,economy,Beta,Catania,2.7,3,no,no,no,si
+11.43,mar,nord ovest,picco,economy,Beta,Milano,3.6,2,no,no,no,no
+21.15,gio,nord ovest,ordinario,express,Alfa,Catania,4.4,1,si,si,no,no
+11.73,lun,isole,ordinario,standard,Beta,Catania,5.1,2,no,si,no,no
+14.64,mer,sud,ordinario,standard,Beta,Bologna,8.3,1,no,no,no,no
+14.31,lun,nord est,ordinario,standard,Alfa,Roma,0.6,2,no,no,no,no
+15.13,sab,centro,picco,economy,Gamma,Roma,3.5,1,no,no,no,no
+23.98,mar,sud,ordinario,standard,Beta,Milano,3.1,2,no,si,no,no
+12.41,ven,sud,ordinario,standard,Beta,Milano,3.4,1,no,no,no,no
+23.19,dom,sud,ordinario,economy,Gamma,Milano,1.9,1,no,no,no,no
+17.12,sab,sud,ordinario,economy,Beta,Bologna,2.8,2,si,no,no,si
+11.58,mar,nord ovest,ordinario,standard,Gamma,Roma,2.1,1,no,no,no,no
+19.77,sab,nord ovest,ordinario,standard,Alfa,Bologna,1.5,NA,no,no,no,si
+18.03,gio,nord ovest,ordinario,standard,Beta,Roma,1.9,1,no,si,no,no
+18.51,gio,nord ovest,picco,standard,Beta,Milano,1.5,2,no,no,no,no
+8.9,mar,sud,ordinario,standard,Alfa,Milano,0.1,1,si,no,no,si
+16.61,mer,nord est,ordinario,standard,Alfa,Milano,1.9,4,no,no,no,no
+12.81,lun,centro,picco,standard,Alfa,Milano,1.8,1,no,no,no,no
+13.9,sab,nord ovest,ordinario,express,Gamma,Bologna,1.7,3,no,no,no,no
+13.95,mar,nord est,ordinario,standard,Gamma,Milano,0.4,1,no,no,si,no
+14.67,gio,sud,ordinario,economy,Beta,Milano,1.0,2,no,no,no,no
+21.18,lun,nord ovest,ordinario,standard,Beta,Catania,6.9,NA,no,no,no,no
+16.09,mer,sud,ordinario,standard,Alfa,Catania,5.5,2,si,no,no,si
+6.75,sab,nord ovest,picco,standard,Alfa,Roma,6.8,1,no,no,no,no
+19.74,mar,sud,ordinario,standard,Beta,Milano,4.7,1,si,no,si,si
+14.87,lun,nord ovest,ordinario,express,Beta,Catania,9.8,3,si,si,no,si
+15.05,lun,sud,ordinario,standard,Beta,Catania,4.9,2,no,no,no,si
+6.83,mar,sud,picco,standard,Beta,Roma,2.0,2,no,no,no,no
+16.18,lun,nord est,picco,economy,Alfa,Bologna,0.3,2,no,no,no,no
+12.4,mer,centro,ordinario,standard,Alfa,Milano,0.6,3,no,no,no,no
+18.51,lun,isole,picco,standard,Alfa,Bologna,4.2,4,si,no,no,si
+16.42,mer,nord est,picco,economy,Gamma,Bologna,1.9,4,no,no,no,no
+17.98,gio,isole,picco,standard,Gamma,Milano,1.4,3,no,no,no,si
+12.93,lun,nord ovest,ordinario,express,Alfa,Roma,1.1,1,no,no,no,no
+6.82,mer,nord est,ordinario,express,Alfa,Milano,0.6,2,no,no,no,no
+18.57,mer,centro,ordinario,standard,Beta,Bologna,1.8,2,no,no,no,no
+16.27,dom,nord est,ordinario,standard,Alfa,Milano,9.9,3,no,no,no,no
+13.11,ven,nord ovest,ordinario,economy,Alfa,Bologna,0.7,2,no,si,no,no
+12.16,mer,nord ovest,ordinario,express,Gamma,Bologna,0.9,2,si,no,no,no
+10.78,sab,nord est,picco,standard,Alfa,Bologna,1.1,5,no,no,no,si
+7.1,gio,nord est,ordinario,express,Alfa,Bologna,1.5,3,no,no,si,no
+9.56,dom,nord ovest,ordinario,economy,Gamma,Catania,4.6,2,no,no,no,no
+14.21,lun,centro,ordinario,economy,Gamma,Catania,7.1,5,no,no,no,si
+21.26,gio,isole,ordinario,economy,Gamma,Bologna,4.2,2,no,no,si,si
+16.4,sab,centro,ordinario,express,Alfa,Milano,1.8,3,no,si,no,no
+21.24,dom,centro,ordinario,standard,Gamma,Bologna,2.3,4,no,si,no,no
+10.26,gio,nord est,ordinario,economy,Alfa,Milano,2.2,2,no,no,no,no
+19.78,ven,sud,picco,economy,Beta,Roma,2.4,1,no,no,no,si
+12.75,mar,nord est,ordinario,express,Beta,Catania,5.9,2,no,si,no,no
+20.66,lun,nord ovest,picco,economy,Alfa,Bologna,1.8,2,no,no,si,si
+19.66,mar,nord ovest,ordinario,standard,Alfa,Bologna,2.2,3,no,no,no,no
+14.65,mar,nord est,ordinario,standard,Alfa,Milano,4.1,1,no,no,si,no
+15.06,ven,isole,ordinario,standard,Alfa,Bologna,2.4,2,no,no,no,no
+19.61,sab,centro,ordinario,standard,Gamma,Catania,5.1,NA,no,no,no,si
+11.16,ven,nord est,ordinario,express,Alfa,Bologna,6.9,2,no,si,no,no
+5.42,sab,nord ovest,ordinario,economy,Gamma,Bologna,12.0,1,no,si,no,no
+17.93,lun,centro,picco,express,Alfa,Roma,1.3,3,no,si,no,no
+23.65,mar,sud,ordinario,standard,Gamma,Milano,5.6,1,no,si,no,no
+6.54,sab,centro,ordinario,standard,Beta,Roma,1.1,2,no,no,no,no
+15.38,mar,nord est,ordinario,economy,Gamma,Roma,1.3,4,no,no,no,no
+9.53,mer,nord ovest,ordinario,standard,Alfa,Roma,2.9,1,no,no,no,no
+13.28,lun,nord ovest,ordinario,standard,Alfa,Roma,0.3,2,no,si,no,no
+10.3,ven,nord ovest,picco,standard,Beta,Roma,1.6,2,no,no,no,no
+18.17,ven,centro,picco,standard,Beta,Catania,6.0,3,no,si,no,si
+12.21,mer,nord ovest,ordinario,standard,Beta,Milano,2.6,5,no,no,no,no
+13.69,sab,nord est,ordinario,standard,Beta,Milano,1.2,1,no,no,no,no
+9.95,gio,sud,ordinario,economy,Beta,Catania,4.3,2,no,no,no,no
+17.58,sab,nord ovest,ordinario,economy,Gamma,Roma,1.2,1,no,si,no,no
+12.36,ven,nord ovest,ordinario,standard,Alfa,Catania,3.9,1,no,si,no,no
+12.91,dom,centro,ordinario,standard,Gamma,Milano,0.8,3,no,no,si,no
+14.18,mar,isole,ordinario,express,Alfa,Milano,1.7,1,no,no,no,no
+8.4,mar,centro,ordinario,standard,Alfa,Catania,5.2,2,no,no,no,no
+14.41,lun,sud,ordinario,economy,Gamma,Bologna,1.0,2,no,no,no,no
+7.73,lun,nord ovest,ordinario,standard,Gamma,Bologna,5.8,2,no,no,no,no
+13.58,dom,sud,ordinario,standard,Alfa,Milano,1.8,3,no,si,no,no
+13.58,sab,centro,ordinario,economy,Gamma,Roma,4.4,2,si,no,no,no
+12.82,dom,isole,ordinario,express,Beta,Milano,0.4,2,no,no,no,no
+13.66,lun,nord est,ordinario,express,Beta,Catania,7.0,5,si,no,no,si
+11.67,mer,nord ovest,ordinario,express,Beta,Roma,4.2,2,no,no,no,no
+16.65,mar,sud,ordinario,standard,Beta,Milano,1.7,2,no,si,no,no
+14.49,mer,centro,ordinario,economy,Gamma,Milano,4.9,1,no,si,no,no
+12.52,mer,sud,ordinario,express,Alfa,Roma,2.2,2,no,si,no,no
+13.54,mar,isole,ordinario,express,Beta,Roma,5.9,5,si,no,no,no
+11.66,mar,nord ovest,ordinario,economy,Alfa,Milano,0.4,4,no,no,si,no
+13.96,mar,centro,ordinario,economy,Beta,Milano,4.8,1,no,no,no,no
+13.18,mar,sud,ordinario,standard,Alfa,Milano,2.0,2,no,no,no,no
+6.93,lun,nord est,ordinario,standard,Alfa,Milano,2.5,1,no,no,no,no
+21.42,ven,isole,ordinario,standard,Beta,Bologna,3.1,2,no,si,no,no
+12.63,mer,isole,picco,standard,Alfa,Catania,3.3,2,no,no,no,si
+11.68,gio,nord ovest,ordinario,economy,Gamma,Milano,2.0,1,no,no,no,no
+15.76,lun,nord ovest,ordinario,express,Gamma,Milano,1.1,2,no,no,no,no
+5.73,lun,sud,picco,standard,Beta,Bologna,3.9,3,no,no,no,si
+12.83,ven,nord est,ordinario,standard,Alfa,Milano,1.0,2,no,no,no,no
+15.79,mar,nord ovest,ordinario,economy,Alfa,Milano,3.1,2,no,no,si,si
+13.39,mer,centro,picco,economy,Beta,Roma,1.3,3,no,no,no,no
+14.77,ven,nord ovest,picco,standard,Beta,Bologna,5.4,5,no,si,si,si
+12.63,mar,nord ovest,ordinario,economy,Beta,Bologna,0.9,4,no,no,no,no
+12.95,sab,centro,ordinario,economy,Alfa,Milano,1.1,1,no,si,no,no
+14.33,lun,sud,ordinario,economy,Alfa,Bologna,0.7,1,no,si,no,no
+15.14,mer,sud,picco,economy,Alfa,Bologna,6.8,4,si,si,no,si
+9.9,mar,nord ovest,ordinario,standard,Alfa,Catania,4.9,3,no,no,no,no
+15.67,dom,isole,ordinario,express,Alfa,Bologna,8.2,5,no,no,no,si
+15.75,gio,centro,ordinario,express,Beta,Bologna,0.9,2,no,no,no,no
+11.9,gio,nord est,ordinario,standard,Alfa,Catania,4.5,2,no,no,no,no
+12.09,lun,nord ovest,ordinario,express,Alfa,Milano,2.0,2,no,no,si,no
+14.99,mar,nord ovest,ordinario,standard,Gamma,Milano,1.3,2,si,no,no,no
+19.38,ven,sud,ordinario,economy,Gamma,Roma,2.9,2,no,no,no,no
+19.07,mer,nord ovest,ordinario,economy,Gamma,Roma,0.6,3,si,no,no,si
+11.0,mar,sud,ordinario,standard,Beta,Milano,1.3,3,no,si,no,no
+12.22,lun,nord ovest,ordinario,standard,Alfa,Bologna,4.4,2,no,no,no,no
+12.14,gio,nord ovest,picco,express,Gamma,Catania,6.4,1,no,no,no,no
+16.1,lun,isole,ordinario,standard,Alfa,Roma,2.0,4,no,no,no,si
+13.82,mer,nord ovest,picco,economy,Alfa,Roma,2.0,1,si,no,no,no
+15.83,dom,nord ovest,picco,standard,Alfa,Bologna,0.1,2,no,si,no,no
+19.72,ven,nord ovest,ordinario,standard,Alfa,Bologna,1.1,1,no,si,no,no
+15.38,mar,nord ovest,ordinario,standard,Alfa,Milano,0.1,1,no,si,no,no
+16.15,sab,nord ovest,ordinario,standard,Beta,Milano,1.9,2,no,no,no,no
+15.89,mar,sud,ordinario,standard,Alfa,Bologna,2.5,4,si,no,no,si
+11.21,lun,nord ovest,ordinario,express,Beta,Catania,4.2,3,no,no,no,no
+13.76,ven,nord ovest,picco,standard,Beta,Bologna,2.2,2,no,si,no,no
+13.41,gio,centro,ordinario,economy,Alfa,Roma,9.0,2,si,no,si,si
+12.23,lun,nord est,ordinario,express,Beta,Milano,4.1,1,si,no,no,no
+20.71,ven,isole,ordinario,standard,Alfa,Milano,0.7,5,no,no,no,si
+16.72,sab,centro,picco,standard,Alfa,Milano,2.8,2,no,no,no,no
+3.06,dom,centro,ordinario,standard,Beta,Milano,2.4,2,si,no,no,no
+10.91,mer,nord est,ordinario,standard,Alfa,Milano,3.2,1,no,no,no,no
+13.92,lun,nord ovest,ordinario,economy,Beta,Milano,4.4,1,no,no,si,no
+14.31,ven,nord ovest,ordinario,express,Alfa,Bologna,NA,3,no,no,no,si
+10.86,ven,nord est,ordinario,standard,Alfa,Milano,5.3,1,si,no,no,no
+12.94,dom,nord est,ordinario,express,Gamma,Catania,3.0,4,no,si,no,no
+12.66,ven,nord est,ordinario,standard,Beta,Bologna,2.0,3,no,no,no,si
+12.34,ven,nord ovest,ordinario,standard,Alfa,Milano,0.1,1,si,no,no,no
+16.97,dom,sud,ordinario,standard,Gamma,Milano,5.3,1,no,si,no,no
+14.1,lun,nord est,ordinario,standard,Alfa,Bologna,0.8,3,no,no,no,no
+11.93,lun,sud,ordinario,standard,Alfa,Milano,2.6,2,no,no,no,no
+13.08,mar,centro,picco,standard,Alfa,Roma,1.9,4,no,si,no,no
+14.3,mar,nord est,ordinario,standard,Beta,Bologna,2.1,2,no,no,no,no
+9.7,gio,nord est,picco,economy,Alfa,Milano,1.6,1,si,no,no,no
+12.01,mar,nord est,picco,standard,Alfa,Milano,0.3,1,no,si,no,no
+16.87,mer,sud,ordinario,express,Alfa,Roma,1.9,5,no,no,si,si
+18.52,gio,centro,ordinario,standard,Beta,Roma,1.0,2,no,no,no,no
+4.46,gio,centro,ordinario,standard,Beta,Catania,6.1,1,no,no,no,no
+23.98,gio,isole,ordinario,standard,Beta,Roma,1.2,NA,no,no,no,si
+11.77,mar,nord ovest,picco,express,Alfa,Catania,2.6,1,no,no,no,no
+17.8,ven,centro,ordinario,economy,Gamma,Bologna,1.7,1,no,no,no,no
+8.71,ven,centro,picco,economy,Beta,Milano,1.3,2,no,no,no,no
+17.4,mar,nord est,ordinario,economy,Gamma,Milano,0.8,1,no,no,no,no
+14.61,sab,centro,ordinario,economy,Beta,Bologna,1.5,4,no,no,no,no
+14.16,ven,sud,ordinario,express,Beta,Bologna,0.1,3,no,no,no,si
+13.24,mer,centro,ordinario,standard,Beta,Bologna,3.1,2,no,no,no,no
+13.44,ven,centro,picco,standard,Alfa,Catania,6.7,3,no,no,no,no
+17.59,sab,nord ovest,ordinario,standard,Beta,Bologna,1.6,1,no,no,no,no
+11.33,mer,nord est,picco,standard,Beta,Roma,1.3,2,si,no,no,no
+13.43,dom,centro,ordinario,standard,Beta,Roma,3.6,4,no,no,no,no
+12.84,mer,nord est,ordinario,economy,Alfa,Roma,1.9,3,no,si,no,no
+7.63,mar,nord ovest,picco,standard,Beta,Catania,4.4,4,no,si,no,no
+14.89,ven,sud,ordinario,express,Alfa,Bologna,0.1,1,si,no,no,si
+14.34,ven,nord est,ordinario,economy,Gamma,Roma,3.2,4,no,no,no,si
+12.48,gio,nord ovest,ordinario,express,Gamma,Bologna,NA,2,no,no,no,no
+8.75,dom,nord ovest,ordinario,standard,Beta,Bologna,0.3,1,no,no,no,no
+13.03,lun,nord est,ordinario,express,Alfa,Milano,2.8,2,no,no,no,no
+13.81,mar,nord est,ordinario,standard,Alfa,Roma,3.1,3,no,no,no,no
+14.46,gio,sud,ordinario,economy,Beta,Milano,0.3,2,no,no,no,no
+14.72,gio,nord est,picco,standard,Gamma,Milano,0.4,3,no,no,no,si
+9.46,gio,nord ovest,picco,standard,Alfa,Bologna,2.6,NA,no,no,no,no
+18.79,sab,nord est,ordinario,express,Alfa,Roma,2.4,3,no,no,no,no
+17.83,lun,nord ovest,ordinario,standard,Alfa,Catania,3.5,5,no,no,no,si
+17.82,dom,isole,ordinario,standard,Beta,Roma,0.6,1,no,no,no,no
+16.46,ven,nord est,ordinario,standard,Beta,Milano,1.6,3,no,si,no,no
+20.03,mer,nord ovest,ordinario,economy,Gamma,Catania,3.0,3,no,no,si,si
+17.58,gio,nord est,ordinario,economy,Alfa,Catania,15.6,1,no,si,no,no
+19.24,lun,isole,ordinario,express,Beta,Milano,0.9,2,no,no,no,no
+15.87,mar,isole,picco,express,Gamma,Milano,2.3,2,no,no,no,si
+15.11,sab,centro,ordinario,express,Alfa,Bologna,6.9,2,si,no,no,no
+17.16,mer,isole,ordinario,standard,Gamma,Milano,2.3,2,si,no,no,si
+11.55,gio,nord est,ordinario,economy,Gamma,Bologna,0.2,1,no,no,no,no
+13.55,mar,nord est,ordinario,standard,Gamma,Bologna,1.8,3,no,no,no,no
+15.37,gio,centro,ordinario,express,Beta,Bologna,1.7,3,no,no,no,no
+12.03,mar,sud,ordinario,standard,Beta,Milano,2.4,3,si,si,no,no
+4.23,sab,nord ovest,ordinario,express,Alfa,Bologna,0.9,1,no,no,no,no
+12.05,mer,centro,ordinario,standard,Beta,Milano,0.8,3,no,no,no,no
+11.38,ven,nord ovest,ordinario,standard,Alfa,Bologna,3.4,2,no,no,no,no
+18.11,mar,centro,picco,economy,Alfa,Bologna,5.4,2,no,si,si,no
+6.48,mer,nord est,picco,economy,Beta,Milano,0.1,2,no,no,no,no
+11.27,mar,centro,ordinario,economy,Gamma,Roma,2.6,4,no,no,no,no
+21.18,sab,sud,ordinario,economy,Alfa,Milano,0.9,1,no,no,no,no
+4.56,sab,centro,ordinario,express,Gamma,Milano,1.5,3,no,si,no,no
+13.34,gio,centro,ordinario,standard,Alfa,Roma,3.6,3,no,no,no,no
+11.78,gio,nord ovest,picco,express,Gamma,Roma,3.8,1,no,no,si,no
+7.26,mar,nord est,ordinario,economy,Gamma,Roma,5.3,3,no,no,no,no
+14.5,mer,nord ovest,ordinario,express,Gamma,Catania,2.9,1,no,no,no,no
+10.75,gio,centro,ordinario,standard,Alfa,Bologna,4.1,4,no,no,no,no
+3.11,dom,nord est,ordinario,standard,Gamma,Roma,4.8,1,no,no,si,no
+11.91,gio,sud,ordinario,standard,Beta,Milano,2.5,2,no,no,no,no
+8.8,sab,nord ovest,ordinario,standard,Alfa,Bologna,3.2,3,no,no,no,no
+19.0,mar,nord est,ordinario,standard,Beta,Milano,1.1,4,no,no,no,no
+14.52,lun,nord est,ordinario,express,Alfa,Milano,3.4,3,no,no,no,no
+9.81,lun,nord ovest,ordinario,express,Gamma,Milano,5.8,2,no,no,no,no
+15.31,dom,centro,ordinario,standard,Alfa,Catania,3.6,1,no,no,no,no
+22.46,gio,isole,ordinario,economy,Beta,Milano,4.7,2,no,no,no,no
+9.04,dom,centro,ordinario,standard,Alfa,Catania,3.7,2,no,no,no,no
+10.22,ven,isole,picco,standard,Beta,Roma,NA,3,no,no,no,si
+14.02,gio,nord ovest,ordinario,standard,Beta,Roma,4.2,1,no,no,no,no
+14.64,mar,nord est,ordinario,express,Gamma,Bologna,4.9,2,no,no,no,no
+15.14,gio,nord ovest,ordinario,economy,Alfa,Catania,4.0,1,no,no,no,no
+8.11,sab,centro,picco,standard,Alfa,Bologna,1.0,2,no,no,no,no
+14.88,sab,nord ovest,ordinario,standard,Gamma,Bologna,1.2,2,no,si,no,no
+9.51,mar,centro,ordinario,express,Beta,Milano,1.2,1,no,no,no,no
+11.15,mar,sud,ordinario,economy,Beta,Catania,3.2,4,no,no,no,no
+18.25,ven,nord ovest,ordinario,standard,Alfa,Bologna,1.3,2,no,no,si,si
+11.37,ven,nord est,ordinario,express,Beta,Milano,0.7,3,si,si,no,no
+16.93,lun,centro,ordinario,standard,Beta,Roma,1.6,2,no,si,no,no
+13.02,mer,sud,ordinario,express,Alfa,Roma,3.7,2,si,si,no,no
+15.1,gio,centro,ordinario,economy,Gamma,Bologna,3.5,3,no,si,no,no
+15.05,dom,nord est,ordinario,standard,Gamma,Milano,1.7,1,no,no,no,no
+17.09,mer,nord est,ordinario,economy,Beta,Roma,0.2,1,no,no,no,no
+17.49,lun,nord est,ordinario,economy,Gamma,Milano,NA,3,no,no,no,no
+11.31,ven,sud,picco,economy,Beta,Bologna,0.5,1,si,no,no,no
+21.38,mar,centro,ordinario,standard,Beta,Roma,1.9,3,no,no,no,no
+16.96,mer,sud,ordinario,standard,Gamma,Milano,1.1,2,no,si,no,no
+18.44,ven,centro,ordinario,standard,Alfa,Roma,1.1,3,no,no,no,no
+18.62,sab,nord est,picco,standard,Alfa,Catania,3.5,3,no,si,no,no
+12.47,mar,nord ovest,picco,economy,Alfa,Milano,5.0,1,no,no,no,no
+14.21,sab,centro,picco,express,Beta,Bologna,1.9,5,no,no,no,si
+14.82,mer,nord ovest,ordinario,economy,Beta,Roma,2.0,3,si,no,no,no
+15.68,ven,nord ovest,ordinario,express,Gamma,Roma,0.8,2,no,no,no,no
+21.61,ven,nord est,ordinario,economy,Alfa,Bologna,1.9,5,no,no,no,si
+22.28,mar,nord ovest,picco,standard,Alfa,Bologna,1.1,1,no,no,no,no
+23.98,dom,nord ovest,ordinario,standard,Gamma,Milano,1.8,1,no,no,no,no
+22.21,mer,isole,ordinario,standard,Beta,Bologna,4.2,4,no,no,si,no
+21.59,lun,nord ovest,ordinario,express,Alfa,Roma,0.4,2,no,no,no,no
+14.23,sab,nord est,ordinario,standard,Beta,Bologna,3.1,1,no,no,no,no
+11.01,ven,nord ovest,ordinario,standard,Beta,Bologna,0.5,1,no,no,no,no
+14.61,mar,nord est,picco,standard,Beta,Catania,3.9,2,no,no,no,no
+13.35,gio,nord ovest,picco,standard,Beta,Milano,5.4,3,no,no,no,no
+10.3,gio,nord ovest,ordinario,standard,Gamma,Bologna,3.8,2,si,no,no,no
+13.51,mar,nord est,ordinario,express,Gamma,Milano,4.7,3,no,no,no,no
+16.35,gio,nord ovest,ordinario,standard,Alfa,Catania,3.9,3,no,no,no,no
+14.74,ven,nord est,picco,express,Gamma,Roma,NA,1,si,no,no,si
+18.33,sab,nord est,ordinario,express,Gamma,Roma,0.5,2,si,si,no,no
+17.13,lun,sud,ordinario,standard,Alfa,Catania,NA,2,no,no,no,no
+16.36,lun,centro,ordinario,economy,Gamma,Milano,1.0,3,no,si,no,no
+19.86,mer,sud,ordinario,standard,Beta,Bologna,7.9,3,no,si,no,si
+14.1,ven,isole,ordinario,standard,Alfa,Bologna,0.1,3,no,no,no,no
+14.88,dom,centro,ordinario,standard,Gamma,Roma,0.7,2,si,no,no,no
+20.69,mer,nord est,ordinario,express,Beta,Milano,2.2,3,no,no,no,no
+18.59,lun,sud,picco,standard,Gamma,Milano,0.8,2,si,si,no,si
+8.25,mer,isole,ordinario,standard,Beta,Bologna,6.1,3,no,no,no,no
+15.09,ven,nord est,ordinario,standard,Alfa,Bologna,1.7,4,no,no,no,si
+21.05,ven,nord est,picco,standard,Alfa,Bologna,3.3,2,no,no,no,no
+16.59,gio,nord ovest,ordinario,standard,Gamma,Roma,4.9,3,no,no,no,no
+19.75,mer,centro,ordinario,standard,Gamma,Milano,0.9,2,no,no,no,no
+8.25,gio,nord ovest,picco,standard,Gamma,Roma,2.9,1,si,no,no,no
+16.49,mer,sud,picco,economy,Alfa,Roma,6.6,3,si,no,no,si
+6.16,mar,nord ovest,picco,express,Gamma,Milano,0.6,1,no,no,no,no
+17.61,gio,nord ovest,ordinario,express,Beta,Roma,3.5,1,no,no,no,no
+9.51,lun,nord ovest,ordinario,standard,Beta,Milano,3.0,NA,si,no,no,no
+20.58,ven,nord ovest,ordinario,standard,Beta,Roma,6.2,3,no,no,no,si
+11.78,mer,nord est,ordinario,express,Alfa,Catania,NA,2,no,no,no,no
+15.17,mer,nord ovest,picco,standard,Beta,Roma,0.8,1,no,no,no,no
+15.82,ven,nord est,picco,express,Alfa,Milano,5.7,2,si,no,no,si
+14.59,gio,sud,ordinario,standard,Beta,Bologna,2.0,4,no,no,no,no
+8.19,mer,centro,ordinario,standard,Beta,Roma,1.4,2,no,si,no,no
+17.7,gio,sud,ordinario,standard,Beta,Milano,4.6,2,no,si,no,no
+12.56,sab,nord ovest,ordinario,standard,Gamma,Roma,3.3,4,no,no,no,no
+23.98,gio,nord est,ordinario,economy,Alfa,Roma,1.5,1,no,no,no,no
+13.55,ven,isole,ordinario,standard,Gamma,Bologna,3.4,1,no,no,no,no
+15.59,mer,nord est,ordinario,standard,Beta,Milano,2.7,2,no,no,no,no
+13.28,mar,sud,ordinario,economy,Gamma,Bologna,6.8,2,no,no,no,no
+21.91,gio,sud,ordinario,economy,Beta,Bologna,1.3,NA,no,no,no,no
+20.97,sab,nord est,ordinario,express,Beta,Catania,8.6,2,no,no,si,no
+17.25,sab,nord ovest,picco,standard,Beta,Bologna,1.9,1,si,si,no,si
+19.04,mer,isole,picco,economy,Alfa,Bologna,1.8,3,no,no,no,si
+10.97,mar,centro,ordinario,standard,Alfa,Milano,2.5,2,no,no,no,no
+10.68,lun,isole,ordinario,standard,Beta,Milano,0.6,1,no,si,no,no
+20.12,ven,sud,ordinario,economy,Gamma,Roma,1.7,2,no,no,no,si
+11.05,lun,nord ovest,ordinario,express,Alfa,Roma,1.6,2,si,no,si,si
+13.38,mer,nord ovest,ordinario,standard,Beta,Milano,1.4,2,no,no,no,no
+8.13,ven,nord ovest,ordinario,standard,Beta,Milano,3.8,2,no,no,no,no
+13.01,mer,sud,ordinario,express,Alfa,Bologna,1.5,3,no,no,no,no
+16.38,ven,nord ovest,ordinario,standard,Beta,Bologna,2.4,3,no,no,no,si
+14.3,mer,nord est,picco,express,Alfa,Milano,3.2,2,no,no,no,no
+8.23,lun,nord est,picco,express,Gamma,Roma,NA,NA,no,no,no,no
+17.97,mer,nord ovest,ordinario,standard,Beta,Milano,9.1,1,no,no,no,no
+15.33,dom,nord est,ordinario,express,Gamma,Roma,0.1,3,no,no,no,no
+3.89,ven,nord ovest,picco,economy,Alfa,Roma,3.6,3,no,no,no,no
+9.99,gio,sud,ordinario,standard,Alfa,Bologna,4.3,3,no,no,no,no
+13.12,gio,centro,picco,standard,Gamma,Roma,0.9,2,no,si,no,no
+12.32,mar,isole,ordinario,economy,Alfa,Bologna,1.3,1,no,no,no,no
+15.23,ven,nord ovest,ordinario,economy,Alfa,Roma,NA,1,si,no,si,si
+19.08,gio,isole,picco,standard,Gamma,Roma,0.5,1,no,no,no,si
+14.21,mer,centro,ordinario,standard,Gamma,Roma,3.6,2,no,no,no,no
+14.16,mar,nord ovest,ordinario,standard,Beta,Bologna,2.1,2,no,si,no,no
+20.25,lun,nord est,ordinario,standard,Beta,Roma,3.0,NA,no,no,no,no
+21.29,lun,nord est,ordinario,standard,Alfa,Bologna,1.9,2,no,no,no,no
+13.23,mar,nord ovest,picco,economy,Gamma,Bologna,0.7,2,no,no,no,no
+21.35,gio,isole,picco,express,Alfa,Bologna,1.0,2,no,no,no,si
+7.17,lun,nord ovest,ordinario,express,Beta,Roma,2.0,3,si,no,no,no
+21.12,lun,nord est,ordinario,standard,Beta,Milano,3.0,1,no,no,no,no
+16.56,dom,nord ovest,ordinario,standard,Beta,Catania,5.9,2,no,no,no,si
+10.99,lun,nord ovest,ordinario,economy,Beta,Roma,1.1,2,no,no,no,no
+12.43,gio,sud,ordinario,standard,Alfa,Bologna,2.5,3,no,si,no,no
+15.09,mer,sud,ordinario,standard,Beta,Bologna,2.1,4,no,no,no,si
+20.14,mer,nord ovest,picco,economy,Beta,Catania,4.7,2,si,si,no,si
+18.2,mer,centro,ordinario,standard,Beta,Milano,1.6,2,si,si,no,si
+15.79,mar,centro,ordinario,economy,Beta,Bologna,1.2,2,no,no,no,no
+12.92,gio,nord est,ordinario,standard,Alfa,Bologna,2.2,2,no,no,no,no
+14.92,gio,sud,picco,economy,Alfa,Milano,1.3,1,no,no,no,si
+9.44,gio,nord est,picco,standard,Beta,Milano,3.1,3,no,no,no,no
+12.82,lun,isole,ordinario,economy,Beta,Roma,0.9,2,no,si,no,no
+10.91,mer,nord ovest,ordinario,standard,Alfa,Milano,NA,2,no,no,no,no
+12.98,sab,centro,picco,express,Alfa,Roma,4.0,4,no,no,no,no
+16.35,lun,isole,ordinario,standard,Beta,Milano,1.9,2,no,no,no,si
+13.12,gio,nord ovest,ordinario,economy,Alfa,Bologna,1.0,3,no,no,no,no
+7.02,sab,sud,ordinario,standard,Alfa,Catania,6.9,3,no,no,no,no
+19.01,gio,nord est,ordinario,standard,Gamma,Roma,2.6,4,no,no,no,no
+14.38,mar,centro,ordinario,express,Gamma,Catania,3.0,1,no,si,no,no
+16.23,lun,nord est,ordinario,standard,Beta,Catania,6.4,1,no,no,no,no
+11.45,gio,nord est,ordinario,standard,Alfa,Milano,1.5,4,no,si,no,no
+13.35,mer,isole,picco,express,Alfa,Bologna,0.2,2,no,no,no,no
+13.18,lun,sud,ordinario,standard,Beta,Roma,0.5,2,no,si,no,no
+20.38,mar,centro,ordinario,express,Alfa,Roma,0.6,3,si,si,si,si
+9.23,mar,centro,ordinario,standard,Gamma,Roma,2.2,1,no,no,no,no
+18.1,gio,nord ovest,ordinario,express,Gamma,Bologna,3.0,2,si,no,no,si
+14.03,gio,nord est,ordinario,economy,Beta,Roma,1.2,4,no,no,no,si
+17.32,mar,centro,ordinario,express,Beta,Catania,4.1,3,no,no,no,no
+11.77,ven,nord est,picco,standard,Beta,Catania,3.1,1,no,no,no,no
+7.39,mer,nord est,ordinario,economy,Beta,Roma,1.1,3,no,no,si,no
+18.2,mar,nord est,picco,standard,Beta,Milano,0.6,1,no,si,no,no
+12.76,gio,sud,ordinario,express,Beta,Roma,0.8,2,no,no,si,no
+16.34,mer,nord ovest,ordinario,standard,Alfa,Milano,4.4,3,no,no,no,no
+17.29,dom,nord est,picco,economy,Alfa,Catania,3.4,2,no,si,no,no
+7.05,mer,nord ovest,picco,standard,Beta,Milano,2.1,3,no,si,no,no
+12.23,mer,centro,ordinario,economy,Beta,Roma,1.6,1,no,no,no,no
+13.49,sab,nord est,ordinario,standard,Gamma,Bologna,4.4,2,no,si,no,no
+16.75,gio,nord ovest,ordinario,economy,Gamma,Milano,1.6,2,no,no,si,si
+16.88,ven,sud,ordinario,standard,Alfa,Milano,1.5,2,no,si,no,si
+17.64,sab,centro,ordinario,standard,Beta,Bologna,0.3,1,no,si,no,no
+13.45,mer,nord ovest,ordinario,express,Beta,Catania,3.9,1,no,no,no,no
+20.07,ven,nord est,ordinario,economy,Beta,Roma,2.7,1,no,no,si,si
+14.56,gio,nord est,ordinario,standard,Alfa,Catania,5.6,4,no,no,no,si
+14.15,sab,nord est,ordinario,standard,Alfa,Milano,1.6,4,no,no,si,si
+12.37,dom,isole,ordinario,standard,Gamma,Catania,3.6,2,no,no,no,no
+9.68,ven,sud,ordinario,standard,Alfa,Roma,2.6,2,si,no,no,no
+14.35,lun,sud,ordinario,standard,Beta,Catania,4.7,1,no,no,no,si
+15.54,dom,nord ovest,picco,standard,Gamma,Catania,6.0,1,no,no,no,si
+15.61,ven,centro,ordinario,standard,Beta,Milano,1.9,1,no,si,no,no
+23.59,lun,nord ovest,ordinario,express,Beta,Bologna,1.3,3,no,si,no,no
+15.73,lun,nord est,ordinario,economy,Alfa,Bologna,1.6,2,no,no,no,no
+16.02,mer,centro,picco,standard,Alfa,Bologna,0.7,1,no,no,no,no
+8.99,mar,nord ovest,picco,standard,Beta,Roma,0.9,2,no,no,no,no
+13.4,gio,centro,ordinario,standard,Gamma,Catania,6.1,3,no,no,no,no
+14.57,sab,sud,ordinario,economy,Gamma,Bologna,0.9,3,no,no,no,si
+16.44,mar,isole,ordinario,express,Gamma,Milano,1.7,NA,no,no,no,si
+13.6,gio,nord est,ordinario,express,Gamma,Roma,1.9,2,no,no,no,no
+15.89,mer,nord ovest,ordinario,express,Alfa,Roma,2.2,5,si,si,no,si
+10.28,lun,nord est,ordinario,economy,Beta,Milano,0.8,2,no,no,no,no
+19.18,sab,centro,ordinario,express,Gamma,Milano,1.5,4,no,no,no,si
+18.75,lun,nord ovest,ordinario,express,Beta,Bologna,0.2,2,si,no,no,si
+9.65,mer,nord est,ordinario,standard,Gamma,Bologna,2.0,2,no,si,no,no
+8.09,ven,centro,ordinario,standard,Alfa,Roma,1.8,1,si,no,no,no
+11.59,mar,nord ovest,ordinario,express,Gamma,Bologna,2.0,1,si,no,no,no
+15.07,lun,nord est,ordinario,standard,Alfa,Bologna,2.4,1,no,si,no,no
+10.69,ven,nord ovest,ordinario,express,Beta,Milano,1.6,2,si,no,no,no
+15.07,mar,nord ovest,ordinario,standard,Gamma,Milano,1.2,2,no,si,no,no
+17.53,sab,centro,ordinario,standard,Beta,Milano,1.2,2,no,si,no,no
+18.47,sab,sud,ordinario,economy,Alfa,Milano,5.8,1,no,no,no,no
+19.04,mar,nord ovest,ordinario,express,Beta,Milano,1.1,5,no,si,no,si
+8.23,lun,isole,ordinario,economy,Gamma,Milano,1.2,3,si,no,no,si
+6.01,dom,nord est,ordinario,standard,Gamma,Milano,0.9,4,no,si,no,no
+16.44,dom,nord ovest,picco,standard,Gamma,Bologna,0.2,2,no,no,no,no
+11.11,lun,nord est,picco,economy,Beta,Milano,2.4,2,no,no,no,no
+11.14,gio,nord ovest,picco,express,Gamma,Bologna,1.4,1,no,no,no,no
+9.79,dom,sud,ordinario,economy,Alfa,Catania,3.6,4,no,no,no,no
+11.61,dom,nord ovest,ordinario,standard,Alfa,Catania,6.3,1,no,no,no,no
+16.56,mar,sud,ordinario,economy,Alfa,Milano,1.9,3,no,no,no,si
+8.17,lun,nord est,ordinario,standard,Gamma,Roma,NA,NA,si,no,no,no
+8.53,gio,isole,ordinario,standard,Gamma,Catania,2.9,5,no,no,no,si
+18.46,lun,sud,ordinario,economy,Beta,Roma,5.5,3,si,si,no,si
+16.84,mer,centro,ordinario,economy,Beta,Roma,3.5,1,no,no,no,no
+7.08,dom,nord ovest,ordinario,standard,Beta,Roma,1.7,1,no,no,no,no
+6.41,mar,nord ovest,picco,standard,Alfa,Bologna,3.5,3,no,no,no,no
+15.62,mer,nord ovest,ordinario,standard,Gamma,Catania,4.8,4,no,si,no,no
+17.61,gio,nord ovest,picco,standard,Alfa,Milano,1.2,5,si,no,si,si
+22.65,mar,nord ovest,ordinario,standard,Alfa,Catania,8.1,1,no,no,no,no
+16.79,gio,nord est,ordinario,standard,Gamma,Catania,2.4,2,no,no,si,si
+16.71,gio,sud,ordinario,standard,Alfa,Milano,1.2,3,no,si,no,no
+12.93,gio,nord ovest,ordinario,express,Alfa,Bologna,3.1,1,no,si,no,no
+14.21,mar,centro,ordinario,standard,Alfa,Milano,5.6,2,no,no,no,no
+12.2,gio,sud,ordinario,express,Beta,Bologna,3.4,2,si,no,no,si
+18.86,mer,isole,ordinario,economy,Beta,Bologna,2.8,3,no,no,no,no
+15.53,sab,nord est,ordinario,standard,Alfa,Roma,1.4,3,no,no,si,no
+18.39,gio,sud,picco,standard,Alfa,Roma,2.8,3,no,no,si,no
+15.24,mar,centro,ordinario,standard,Gamma,Catania,4.1,2,si,si,no,si
+10.01,sab,nord est,ordinario,standard,Beta,Bologna,4.2,1,no,no,no,no
+13.84,mar,centro,ordinario,standard,Alfa,Catania,2.4,3,no,no,no,no
+18.42,mer,nord est,ordinario,standard,Alfa,Roma,0.1,2,no,no,no,no
+15.48,mer,centro,ordinario,express,Alfa,Bologna,0.5,1,no,no,si,si
+6.67,dom,nord ovest,picco,standard,Alfa,Catania,4.6,3,no,no,no,no
+18.36,mar,nord ovest,ordinario,standard,Alfa,Catania,5.2,1,no,no,no,no
+12.06,gio,centro,ordinario,standard,Alfa,Bologna,0.1,3,no,no,no,no
+19.67,ven,nord ovest,ordinario,express,Beta,Catania,6.1,2,si,no,si,si
+12.57,gio,sud,ordinario,economy,Alfa,Roma,2.0,3,no,si,no,no
+10.35,gio,sud,ordinario,economy,Alfa,Milano,1.8,2,no,no,si,no
+17.4,lun,nord ovest,ordinario,express,Alfa,Bologna,0.9,2,no,no,no,no
+9.05,sab,sud,ordinario,standard,Alfa,Roma,7.8,2,no,si,no,no
+18.91,sab,centro,ordinario,standard,Beta,Milano,2.5,2,no,no,no,no
+11.9,mar,centro,ordinario,standard,Beta,Bologna,4.1,4,no,no,no,no
+16.54,mer,nord ovest,ordinario,economy,Beta,Roma,3.9,3,no,no,no,no
+8.02,gio,sud,ordinario,standard,Beta,Bologna,5.5,2,no,no,no,no
+14.13,gio,sud,ordinario,standard,Gamma,Roma,1.9,1,no,no,no,si
+11.8,gio,centro,picco,express,Alfa,Roma,1.4,5,no,no,no,si
+20.73,mer,sud,ordinario,economy,Alfa,Milano,3.2,1,si,si,no,no
+10.81,mer,sud,ordinario,economy,Gamma,Bologna,1.2,1,no,no,no,no
+13.32,lun,nord ovest,ordinario,standard,Beta,Milano,NA,2,no,no,no,no
+10.65,sab,nord est,picco,economy,Beta,Catania,4.8,2,no,no,no,no
+14.09,mar,nord ovest,ordinario,economy,Gamma,Roma,NA,2,no,no,no,no
+14.71,mer,centro,ordinario,standard,Beta,Catania,3.8,2,si,si,no,no
+18.9,mer,sud,ordinario,standard,Alfa,Milano,1.7,2,no,no,si,si
+17.07,gio,sud,ordinario,express,Beta,Roma,2.8,2,no,no,no,si
+7.77,lun,nord ovest,picco,economy,Gamma,Roma,0.8,1,no,no,no,no
+22.0,lun,nord ovest,ordinario,standard,Beta,Milano,3.1,3,no,no,no,no
+14.75,lun,sud,ordinario,economy,Alfa,Milano,4.1,4,no,no,no,si
+18.97,ven,sud,ordinario,standard,Alfa,Milano,2.1,2,no,si,no,no
+12.84,sab,nord est,ordinario,standard,Beta,Bologna,0.6,2,si,si,no,no
+17.44,dom,centro,ordinario,express,Beta,Catania,4.3,3,no,no,si,si
+13.82,lun,centro,picco,express,Alfa,Bologna,6.1,1,no,no,si,no
+13.01,mer,isole,ordinario,standard,Gamma,Bologna,0.7,1,no,si,no,no
+13.79,gio,isole,ordinario,express,Alfa,Roma,2.6,1,no,si,no,no
+10.7,ven,isole,ordinario,economy,Gamma,Catania,5.5,1,si,no,no,no
+16.23,lun,sud,ordinario,express,Beta,Roma,0.8,3,no,si,no,si
+15.88,mer,centro,ordinario,standard,Gamma,Roma,0.6,1,no,no,si,no
+17.12,dom,nord ovest,ordinario,standard,Gamma,Catania,4.2,3,no,no,no,no
+19.55,lun,nord est,ordinario,express,Alfa,Bologna,6.6,1,no,no,no,no
+18.62,mar,sud,ordinario,express,Alfa,Milano,4.2,1,no,no,no,no
+16.2,lun,nord ovest,ordinario,standard,Beta,Bologna,4.6,2,no,no,no,no
+18.73,lun,nord ovest,picco,express,Beta,Milano,1.6,2,no,no,no,si
+15.16,mar,nord ovest,ordinario,standard,Gamma,Bologna,7.1,2,no,no,no,no
+18.41,gio,sud,picco,standard,Alfa,Bologna,0.1,4,no,no,no,si
+14.09,ven,nord ovest,ordinario,express,Gamma,Milano,0.6,4,no,no,no,si
+6.99,ven,nord ovest,ordinario,economy,Gamma,Bologna,0.5,1,no,no,no,no
+11.49,sab,isole,ordinario,standard,Gamma,Bologna,0.1,1,si,no,no,no
+10.49,ven,nord est,picco,standard,Alfa,Roma,1.4,2,no,no,no,no
+12.53,sab,nord ovest,picco,express,Alfa,Milano,0.8,2,no,si,no,no
+13.87,mar,nord est,ordinario,standard,Gamma,Milano,2.4,4,no,no,no,no
+14.94,mar,centro,ordinario,standard,Gamma,Bologna,4.2,2,no,no,no,no
+16.73,gio,sud,ordinario,economy,Alfa,Roma,3.2,1,no,no,no,no
+10.15,mer,nord ovest,ordinario,standard,Alfa,Bologna,1.3,2,no,si,no,no
+12.64,dom,sud,picco,express,Alfa,Milano,1.6,1,no,no,no,no
+17.36,ven,sud,ordinario,standard,Alfa,Milano,2.9,4,no,no,no,si
+17.07,lun,nord est,ordinario,standard,Beta,Milano,3.5,1,no,no,no,no
+19.74,gio,isole,ordinario,standard,Beta,Milano,1.5,1,no,no,no,no
+13.52,ven,isole,ordinario,express,Gamma,Roma,4.1,3,no,no,no,no
+23.87,gio,nord est,ordinario,standard,Beta,Milano,2.6,1,no,si,si,no
+11.78,lun,sud,ordinario,economy,Beta,Roma,1.7,1,no,no,no,no
+8.22,mar,centro,ordinario,standard,Beta,Bologna,0.6,2,no,no,no,no
+13.06,ven,sud,ordinario,standard,Alfa,Bologna,4.3,1,no,no,no,no
+8.9,mer,sud,ordinario,standard,Alfa,Roma,1.8,3,no,no,no,no
+17.14,lun,nord est,ordinario,standard,Beta,Roma,1.1,3,no,no,no,no
+14.0,mar,nord ovest,ordinario,express,Alfa,Bologna,5.3,3,no,no,no,no
+8.13,gio,nord est,ordinario,economy,Alfa,Roma,0.2,1,no,no,no,no
+15.13,mer,nord ovest,ordinario,standard,Alfa,Milano,1.0,1,no,no,no,no
+18.53,sab,nord est,ordinario,standard,Beta,Bologna,4.3,1,si,no,no,si
+11.91,lun,centro,ordinario,economy,Alfa,Milano,2.7,5,no,no,no,si
+12.71,lun,nord est,ordinario,standard,Beta,Milano,1.9,3,no,no,no,no
+11.19,gio,nord est,ordinario,standard,Alfa,Milano,3.0,1,no,no,no,no
+11.89,dom,nord est,ordinario,express,Beta,Milano,5.2,3,no,no,no,no
+8.64,mer,sud,picco,standard,Alfa,Catania,3.5,2,no,no,no,no
+13.29,mer,sud,ordinario,express,Gamma,Bologna,1.9,3,no,si,no,no
+9.89,ven,nord est,ordinario,economy,Alfa,Roma,6.5,3,no,no,si,no
+14.89,dom,nord ovest,picco,standard,Alfa,Milano,1.8,4,si,si,no,si
+18.94,mar,nord est,ordinario,standard,Gamma,Bologna,1.2,2,no,no,no,no
+17.39,lun,nord ovest,ordinario,express,Beta,Catania,3.9,2,no,no,si,si
+15.39,lun,sud,ordinario,express,Alfa,Roma,0.1,NA,no,no,si,si
+18.86,lun,sud,ordinario,standard,Alfa,Roma,4.8,1,no,no,no,no
+16.88,sab,sud,ordinario,standard,Alfa,Bologna,4.4,3,no,si,no,no
+11.78,mer,nord est,ordinario,express,Gamma,Milano,2.6,1,no,no,no,no
+15.91,lun,nord ovest,picco,express,Beta,Milano,4.6,3,no,no,no,si
+16.88,mer,nord est,ordinario,standard,Beta,Milano,1.8,3,no,no,no,no
+13.24,mer,centro,ordinario,standard,Beta,Roma,2.4,2,si,no,no,no
+16.71,lun,nord ovest,ordinario,standard,Alfa,Bologna,2.1,2,no,no,no,no
+10.75,dom,centro,picco,standard,Alfa,Catania,6.6,1,no,no,no,no
+15.87,gio,isole,picco,express,Beta,Milano,1.1,1,si,no,no,si
+16.72,mer,centro,picco,standard,Beta,Bologna,1.2,4,no,no,no,si
+14.98,mar,sud,ordinario,economy,Gamma,Milano,0.6,2,no,no,no,si
+13.11,dom,nord ovest,ordinario,express,Beta,Milano,0.6,3,no,si,si,no
+15.43,mer,isole,ordinario,standard,Beta,Catania,3.9,2,no,no,no,si
+10.78,dom,nord est,picco,express,Beta,Bologna,4.0,2,no,no,no,no
+11.96,mer,nord ovest,picco,economy,Beta,Milano,4.3,NA,no,no,no,no
+16.6,lun,sud,ordinario,standard,Alfa,Milano,0.5,2,no,si,no,no
+18.47,gio,sud,picco,standard,Beta,Catania,5.7,NA,no,si,no,si
+17.82,mer,nord est,ordinario,express,Beta,Roma,1.0,4,si,si,si,si
+14.17,ven,sud,picco,standard,Gamma,Bologna,6.3,5,no,no,no,si
+16.26,gio,nord ovest,ordinario,standard,Beta,Catania,4.9,2,no,no,no,no
+11.84,ven,nord est,picco,economy,Alfa,Roma,0.9,3,no,no,no,no
+15.34,ven,nord est,ordinario,standard,Alfa,Roma,1.1,1,no,no,no,no
+11.82,ven,nord ovest,ordinario,economy,Gamma,Catania,4.9,2,no,no,no,no
+9.45,lun,centro,ordinario,standard,Alfa,Catania,3.6,4,no,no,no,no
+15.74,mer,nord ovest,ordinario,standard,Beta,Roma,6.7,2,no,no,no,si
+13.05,dom,nord est,ordinario,standard,Gamma,Milano,4.3,1,si,no,no,no
+13.6,sab,isole,ordinario,express,Alfa,Bologna,1.1,1,no,no,no,no
+10.99,mer,nord ovest,ordinario,standard,Beta,Milano,1.2,NA,no,no,no,no
+20.75,ven,isole,ordinario,standard,Beta,Bologna,0.3,3,no,no,no,si
+16.34,gio,isole,ordinario,express,Beta,Bologna,0.8,5,no,no,no,no
+11.09,mer,centro,ordinario,standard,Beta,Roma,0.3,2,no,no,no,no
+17.1,dom,nord ovest,ordinario,standard,Alfa,Bologna,1.2,2,no,no,no,no
+14.65,mar,nord ovest,ordinario,economy,Beta,Roma,2.5,4,no,no,no,no
+11.36,ven,nord est,ordinario,standard,Gamma,Milano,5.4,2,si,no,no,no
+11.22,gio,nord est,ordinario,economy,Gamma,Roma,0.7,2,no,si,no,no
+18.39,sab,nord ovest,ordinario,standard,Gamma,Roma,0.7,3,no,no,no,no
+13.14,dom,sud,ordinario,standard,Gamma,Roma,4.4,1,no,no,no,no
+16.11,dom,centro,ordinario,standard,Beta,Milano,0.6,3,no,no,no,no
+11.88,dom,nord est,ordinario,standard,Alfa,Milano,1.2,2,si,no,si,no
+16.49,mar,sud,ordinario,economy,Gamma,Bologna,3.0,1,no,no,no,no
+16.35,gio,nord est,picco,economy,Alfa,Bologna,3.3,2,no,no,no,no
+16.47,mar,isole,ordinario,standard,Gamma,Bologna,4.6,1,no,si,no,no
+16.16,gio,nord ovest,ordinario,standard,Beta,Roma,0.8,2,no,no,no,no
+18.68,mer,centro,ordinario,express,Gamma,Roma,3.1,3,si,no,no,si
+17.67,sab,isole,picco,standard,Beta,Catania,2.9,1,no,no,no,si
+12.14,sab,nord est,picco,economy,Gamma,Bologna,0.1,2,no,no,no,no
+21.43,dom,nord ovest,ordinario,standard,Gamma,Bologna,1.7,3,no,si,no,no
+12.61,mer,nord ovest,ordinario,standard,Alfa,Bologna,2.3,NA,no,si,no,no
+12.05,ven,sud,picco,economy,Alfa,Roma,2.2,NA,no,no,no,si
+14.58,ven,sud,ordinario,standard,Gamma,Roma,0.1,1,no,si,no,no
+17.97,ven,nord ovest,ordinario,express,Beta,Roma,2.3,3,no,si,no,si
+16.51,mar,nord est,ordinario,express,Alfa,Milano,1.1,2,no,no,si,no
+10.05,ven,sud,ordinario,standard,Gamma,Catania,3.6,2,si,no,no,si
+12.6,mar,sud,ordinario,standard,Gamma,Milano,2.9,1,no,si,no,no
+18.49,ven,isole,ordinario,economy,Beta,Bologna,0.4,3,no,no,no,no
+15.58,gio,nord est,ordinario,standard,Beta,Catania,4.5,3,no,no,no,no
+15.52,sab,nord ovest,ordinario,economy,Alfa,Milano,0.6,2,si,no,no,si
+8.07,mar,sud,picco,standard,Gamma,Catania,6.4,2,no,no,si,si
+14.62,ven,centro,ordinario,economy,Gamma,Roma,1.2,1,si,no,no,si
+15.64,sab,nord est,ordinario,economy,Beta,Bologna,0.2,4,no,si,no,no
+10.12,dom,nord ovest,ordinario,standard,Alfa,Bologna,1.4,2,no,no,no,no
+6.84,dom,sud,picco,standard,Alfa,Catania,4.2,2,si,no,no,si
+15.42,lun,centro,ordinario,standard,Alfa,Milano,1.1,2,no,no,no,no
+17.81,lun,sud,ordinario,express,Beta,Roma,1.2,4,no,no,no,si
+9.04,mar,sud,picco,standard,Gamma,Bologna,1.3,4,no,no,no,si
+13.15,sab,nord ovest,ordinario,standard,Gamma,Milano,2.2,2,no,si,no,no
+20.1,lun,isole,ordinario,standard,Alfa,Catania,4.3,1,no,si,no,no
+21.12,gio,nord ovest,ordinario,standard,Alfa,Roma,1.7,3,no,si,no,no
+14.96,lun,centro,ordinario,standard,Alfa,Roma,1.2,3,no,si,no,no
+5.16,gio,centro,ordinario,standard,Gamma,Catania,8.4,3,no,no,no,no
+15.22,lun,isole,ordinario,standard,Gamma,Bologna,2.0,3,no,no,no,si
+18.35,mer,centro,ordinario,express,Alfa,Milano,2.6,2,no,si,no,no
+23.98,lun,sud,ordinario,standard,Alfa,Milano,1.4,2,no,si,si,si
+18.8,gio,sud,ordinario,economy,Gamma,Catania,8.0,1,no,no,no,no
+17.74,lun,centro,ordinario,economy,Alfa,Roma,1.5,2,no,si,no,no
+13.48,ven,sud,ordinario,express,Alfa,Bologna,2.8,2,si,no,si,si
+8.58,lun,nord est,ordinario,express,Alfa,Roma,1.5,2,no,si,no,no
+11.31,ven,sud,ordinario,standard,Alfa,Roma,0.8,3,no,si,no,no
+11.0,mar,nord ovest,ordinario,economy,Alfa,Roma,1.0,1,no,no,no,no
+12.16,mar,sud,picco,express,Alfa,Milano,2.5,3,no,si,no,si
+17.67,mer,nord est,ordinario,standard,Gamma,Milano,4.8,4,si,no,no,si
+15.02,lun,nord ovest,ordinario,standard,Beta,Milano,1.2,3,no,no,no,no
+6.22,ven,nord ovest,ordinario,express,Beta,Roma,2.1,2,no,no,si,no
+13.2,gio,sud,ordinario,standard,Alfa,Roma,3.8,5,no,si,no,no
+19.52,ven,nord est,ordinario,standard,Alfa,Catania,6.5,2,si,no,no,si
+18.0,mar,nord ovest,ordinario,express,Gamma,Milano,0.4,1,no,no,no,no
+20.86,mer,nord est,picco,express,Beta,Milano,0.5,1,no,no,no,no
+10.09,mer,nord est,picco,standard,Alfa,Bologna,5.8,1,no,no,si,no
+16.17,mar,sud,ordinario,standard,Beta,Catania,5.9,1,si,no,no,no
+13.15,mer,centro,picco,express,Gamma,Catania,3.7,3,no,no,no,si
+10.1,sab,nord est,ordinario,standard,Gamma,Catania,8.7,2,si,no,no,no
+11.64,sab,sud,ordinario,standard,Gamma,Catania,5.0,1,no,no,no,no
+7.15,gio,nord est,ordinario,standard,Beta,Catania,4.3,3,no,no,no,no
+7.65,lun,nord est,ordinario,economy,Beta,Catania,3.8,2,no,no,no,no
+15.2,ven,sud,picco,express,Beta,Milano,3.4,5,no,si,no,si
+13.73,lun,nord est,ordinario,express,Beta,Bologna,0.6,3,no,no,no,no
+12.65,lun,isole,ordinario,standard,Beta,Milano,1.7,3,no,no,no,no
+19.75,gio,centro,picco,standard,Alfa,Catania,3.7,1,no,no,no,no
+12.99,sab,centro,ordinario,economy,Alfa,Bologna,3.9,NA,no,no,no,no
+16.89,ven,nord ovest,ordinario,standard,Gamma,Milano,1.5,5,no,no,no,si
+10.0,mer,centro,ordinario,economy,Beta,Milano,4.3,1,no,no,no,no
+9.56,ven,nord ovest,ordinario,economy,Beta,Bologna,4.6,2,no,no,no,no
+12.62,sab,isole,ordinario,economy,Alfa,Milano,2.1,3,no,no,no,no
+12.18,mar,sud,ordinario,standard,Gamma,Milano,3.1,2,si,no,no,no
+13.21,ven,nord est,ordinario,standard,Beta,Catania,3.8,2,no,si,no,no
+14.65,dom,centro,ordinario,express,Beta,Milano,4.1,1,no,si,no,no
+21.49,lun,nord est,ordinario,standard,Alfa,Bologna,NA,3,no,no,no,si
+10.69,gio,isole,ordinario,economy,Alfa,Catania,3.6,2,no,no,no,no
+9.22,mer,sud,ordinario,standard,Alfa,Catania,3.8,2,si,no,si,si
+16.58,mar,nord ovest,ordinario,economy,Gamma,Bologna,0.5,2,no,no,no,no
+19.64,mar,isole,ordinario,standard,Beta,Catania,6.1,3,no,no,no,si
+21.8,mer,nord est,ordinario,standard,Alfa,Roma,0.8,1,no,no,no,no
+10.05,gio,sud,ordinario,express,Beta,Bologna,2.1,2,no,no,no,no
+16.64,mer,nord ovest,ordinario,economy,Beta,Bologna,2.5,4,no,no,no,no
+7.01,lun,nord ovest,ordinario,standard,Beta,Catania,3.0,1,no,si,no,no
+14.24,gio,centro,picco,standard,Beta,Milano,1.0,3,no,no,no,no
+10.01,sab,isole,ordinario,economy,Alfa,Milano,3.3,3,no,no,no,no
+12.21,mar,nord ovest,ordinario,standard,Beta,Milano,1.7,1,no,no,no,no
+8.36,gio,isole,ordinario,standard,Alfa,Roma,NA,3,no,no,no,no
+19.74,gio,nord est,ordinario,standard,Alfa,Bologna,NA,2,no,si,no,no
+18.45,mer,nord est,ordinario,standard,Alfa,Roma,0.3,2,no,si,no,no
+16.47,lun,sud,picco,economy,Beta,Milano,4.5,NA,no,si,no,si
+10.57,lun,nord est,ordinario,standard,Alfa,Roma,5.9,1,no,no,no,no
+21.51,mer,isole,ordinario,economy,Alfa,Bologna,2.5,2,no,no,no,no
+18.95,gio,sud,ordinario,express,Alfa,Milano,1.6,1,no,si,no,no
+13.48,mar,centro,picco,standard,Gamma,Catania,2.5,3,si,no,no,si
+19.09,lun,nord est,ordinario,express,Gamma,Catania,6.8,4,no,no,no,si
+16.63,mer,centro,ordinario,express,Beta,Roma,2.6,3,no,no,no,si
+17.14,dom,isole,ordinario,standard,Gamma,Catania,6.0,4,no,no,no,si
+17.88,gio,sud,picco,standard,Beta,Milano,4.9,3,si,no,no,si
+17.78,lun,nord est,ordinario,standard,Alfa,Milano,5.1,2,no,no,no,no
+14.59,ven,centro,ordinario,standard,Alfa,Roma,NA,2,no,no,no,no
+9.11,gio,nord ovest,picco,economy,Beta,Roma,5.1,NA,si,no,no,no
+10.24,gio,sud,picco,economy,Alfa,Bologna,3.3,1,no,no,no,si
+16.41,sab,sud,ordinario,standard,Beta,Milano,0.7,1,no,no,no,si
+12.79,gio,sud,ordinario,economy,Beta,Bologna,NA,2,no,no,no,no
+15.95,ven,nord est,ordinario,standard,Alfa,Roma,3.2,2,no,no,no,no
+6.86,mar,centro,ordinario,standard,Beta,Catania,4.8,4,no,no,no,no
+12.78,ven,sud,picco,standard,Gamma,Catania,2.8,1,no,no,no,no
+12.83,gio,nord ovest,picco,standard,Alfa,Bologna,0.5,3,si,no,no,no
+20.89,gio,sud,ordinario,standard,Gamma,Roma,4.1,4,no,no,no,si
+13.34,lun,nord est,ordinario,standard,Gamma,Bologna,1.3,1,si,no,no,no
+11.96,mer,nord ovest,picco,standard,Beta,Milano,4.3,2,no,si,no,si
+15.0,mer,sud,ordinario,standard,Gamma,Milano,0.4,3,si,no,si,si
+19.54,ven,centro,ordinario,express,Alfa,Milano,1.6,2,no,no,no,no
+23.98,lun,sud,picco,economy,Alfa,Milano,3.0,1,no,no,no,si
+8.89,ven,centro,ordinario,economy,Beta,Catania,5.2,3,si,no,no,si
+21.85,mer,sud,picco,express,Gamma,Bologna,1.6,NA,no,no,no,si
+6.42,lun,sud,ordinario,express,Beta,Bologna,1.2,NA,no,no,no,no
+20.21,gio,sud,ordinario,economy,Beta,Milano,1.2,1,no,no,no,no
+20.63,mer,isole,ordinario,economy,Alfa,Milano,3.4,2,no,si,no,no
+19.24,gio,nord est,picco,standard,Gamma,Bologna,4.4,3,no,si,no,no
+5.14,sab,centro,picco,economy,Alfa,Roma,NA,1,no,no,no,no
+10.57,ven,sud,ordinario,standard,Beta,Catania,8.8,3,no,no,no,no
+22.04,mar,centro,picco,standard,Beta,Catania,5.0,NA,no,no,no,no
+16.46,ven,sud,ordinario,standard,Gamma,Catania,6.2,1,no,no,no,no
+18.97,dom,nord ovest,picco,standard,Beta,Catania,6.1,1,si,no,no,no
+14.79,dom,nord est,picco,express,Beta,Bologna,1.6,3,no,si,si,si
+15.84,sab,nord ovest,picco,standard,Beta,Roma,1.7,1,no,si,si,no
+15.98,lun,nord ovest,ordinario,express,Alfa,Catania,6.7,2,no,no,no,no
+11.96,sab,centro,ordinario,standard,Beta,Milano,2.8,3,no,no,no,no
+18.64,sab,isole,picco,standard,Beta,Milano,5.1,1,no,no,no,si
+23.98,mer,sud,picco,standard,Alfa,Roma,1.3,3,no,no,no,si
+10.04,ven,nord ovest,ordinario,express,Alfa,Roma,0.5,1,si,no,no,no
+10.49,gio,sud,ordinario,standard,Alfa,Bologna,2.0,2,no,si,no,no
+10.51,dom,sud,ordinario,express,Alfa,Catania,3.1,2,no,no,no,no
+11.11,dom,centro,ordinario,standard,Gamma,Milano,0.1,1,si,si,no,no
+15.18,sab,nord ovest,ordinario,standard,Alfa,Catania,4.0,2,no,no,no,no
+16.52,ven,isole,picco,standard,Gamma,Milano,2.9,2,no,no,no,si
+16.82,ven,nord ovest,ordinario,standard,Gamma,Bologna,4.8,2,no,no,no,no
+15.57,gio,centro,picco,standard,Beta,Catania,NA,2,no,no,no,no
+9.45,lun,nord est,ordinario,standard,Gamma,Milano,1.0,4,no,si,si,no
+13.87,mer,centro,ordinario,standard,Gamma,Catania,6.1,2,no,no,no,no
+10.2,lun,nord ovest,picco,standard,Beta,Catania,4.9,2,no,no,no,no
+13.98,gio,nord ovest,ordinario,standard,Beta,Roma,0.1,2,no,no,no,no
+16.6,lun,centro,ordinario,standard,Beta,Milano,0.1,1,no,no,no,no
+14.78,lun,nord est,ordinario,standard,Beta,Roma,2.6,1,no,si,no,no
+20.01,ven,sud,ordinario,economy,Alfa,Bologna,0.2,1,no,no,no,no
+15.07,lun,centro,ordinario,standard,Alfa,Bologna,12.1,2,no,no,no,no
+18.96,gio,isole,ordinario,express,Gamma,Bologna,6.9,1,no,no,no,no
+23.98,mer,sud,ordinario,standard,Alfa,Milano,0.5,NA,no,no,no,no
+17.98,sab,centro,ordinario,standard,Alfa,Milano,9.0,1,no,no,no,no
+8.07,ven,nord ovest,ordinario,standard,Beta,Milano,2.3,2,no,no,no,no
+9.51,lun,nord ovest,picco,standard,Gamma,Roma,0.6,3,no,no,no,no
+13.94,mer,nord est,picco,standard,Gamma,Bologna,1.7,3,no,no,no,si
+17.81,ven,isole,picco,standard,Gamma,Bologna,0.8,3,si,no,no,si
+12.99,gio,isole,ordinario,economy,Gamma,Roma,0.6,1,no,no,no,no
+17.12,mer,nord ovest,picco,express,Beta,Milano,0.3,NA,no,no,no,no
+12.65,mer,sud,ordinario,standard,Alfa,Milano,1.2,3,no,si,no,no
+13.44,mar,centro,ordinario,economy,Beta,Bologna,2.5,2,no,no,no,no
+13.46,ven,nord ovest,ordinario,standard,Alfa,Bologna,2.6,4,no,no,si,si
+22.8,gio,sud,ordinario,standard,Gamma,Bologna,4.1,1,no,no,no,no
+18.5,gio,sud,ordinario,economy,Alfa,Catania,5.9,1,no,si,no,no
+8.83,lun,nord ovest,ordinario,express,Alfa,Roma,0.3,3,no,no,no,no
+14.05,mar,sud,ordinario,express,Alfa,Milano,2.0,2,no,si,no,no
+21.46,gio,isole,ordinario,standard,Beta,Roma,3.4,2,si,si,no,si
+15.09,ven,centro,ordinario,standard,Alfa,Roma,2.1,2,no,no,no,no
+23.98,ven,centro,ordinario,standard,Alfa,Catania,5.0,1,no,no,no,no
+15.72,sab,centro,ordinario,standard,Alfa,Bologna,7.1,2,no,no,no,no
+15.61,mar,nord ovest,ordinario,standard,Alfa,Roma,1.4,3,si,no,no,si
+13.37,ven,nord est,ordinario,standard,Beta,Roma,3.6,2,no,no,no,no
+13.86,gio,nord est,ordinario,standard,Beta,Roma,2.4,2,no,no,no,no
+13.9,gio,nord ovest,ordinario,standard,Alfa,Bologna,2.7,3,no,no,no,no
+17.12,dom,nord est,ordinario,express,Alfa,Roma,1.0,3,si,no,no,si
+19.61,sab,centro,ordinario,economy,Alfa,Catania,4.1,NA,no,no,no,no
+13.27,lun,nord ovest,ordinario,standard,Beta,Bologna,1.3,3,no,no,no,no
+17.07,dom,sud,picco,economy,Alfa,Roma,4.1,4,no,no,no,si
+9.27,mer,sud,picco,economy,Gamma,Milano,1.0,2,no,si,no,no
+15.03,lun,isole,ordinario,express,Alfa,Bologna,2.3,3,no,no,no,no
+17.13,ven,sud,ordinario,express,Beta,Catania,3.5,2,no,no,no,si
+14.29,gio,sud,ordinario,standard,Beta,Bologna,3.4,1,no,no,no,no
+11.35,lun,nord ovest,picco,standard,Alfa,Roma,1.6,2,no,no,no,no
+17.22,sab,centro,ordinario,standard,Beta,Milano,3.3,NA,no,no,no,si
+18.91,mar,nord ovest,ordinario,express,Beta,Catania,7.0,1,no,no,no,si
+19.75,lun,nord ovest,picco,standard,Alfa,Roma,2.2,1,no,no,no,no
+17.01,lun,nord ovest,ordinario,economy,Beta,Bologna,1.2,3,no,no,si,si
+22.15,mer,centro,picco,express,Beta,Milano,2.9,3,no,no,no,si
+13.49,mar,centro,picco,express,Beta,Catania,3.9,3,no,si,no,si
+17.01,mar,sud,picco,standard,Gamma,Bologna,2.1,2,no,no,no,si
+8.08,lun,nord est,picco,economy,Gamma,Milano,1.0,5,no,no,no,si
+14.59,mer,nord ovest,ordinario,standard,Alfa,Bologna,4.1,4,no,no,no,no
+14.95,lun,nord est,picco,express,Gamma,Milano,1.5,2,si,no,no,si
+23.6,mer,isole,ordinario,express,Beta,Bologna,2.4,1,no,no,no,si
+20.04,ven,sud,ordinario,express,Alfa,Catania,5.0,2,no,si,no,si
+19.74,mer,nord ovest,picco,standard,Beta,Milano,1.5,2,no,no,no,no
+10.6,gio,sud,ordinario,express,Alfa,Catania,5.5,2,no,no,no,si
+13.44,sab,sud,ordinario,express,Alfa,Roma,1.2,2,no,no,no,no
+15.29,lun,nord est,ordinario,standard,Alfa,Roma,1.3,1,no,no,no,no
+9.32,dom,isole,ordinario,standard,Beta,Milano,1.4,1,no,si,no,no
+12.88,mer,nord est,ordinario,standard,Gamma,Catania,4.8,4,no,no,no,si
+17.72,mar,centro,ordinario,standard,Alfa,Roma,3.1,2,si,no,no,si
+14.37,mar,centro,ordinario,standard,Alfa,Bologna,4.9,2,no,no,no,no
+10.84,ven,centro,ordinario,express,Alfa,Milano,0.2,2,no,si,no,no
+22.6,ven,sud,ordinario,standard,Beta,Milano,4.9,3,si,no,no,si
+16.55,mar,nord ovest,picco,standard,Beta,Catania,6.8,2,no,no,no,no
+14.55,ven,nord ovest,ordinario,economy,Alfa,Bologna,1.9,1,no,no,no,no
+9.24,mar,nord est,ordinario,standard,Alfa,Milano,2.0,2,no,no,no,no
+18.34,dom,nord ovest,picco,standard,Gamma,Milano,2.2,2,si,no,no,si
+13.48,lun,sud,ordinario,economy,Alfa,Roma,1.2,3,no,no,no,no
+12.67,mar,sud,ordinario,express,Alfa,Milano,1.0,5,si,no,no,si
+11.83,mar,nord ovest,ordinario,express,Beta,Roma,0.1,NA,no,no,no,no
+19.83,lun,nord est,ordinario,express,Beta,Catania,5.7,4,si,no,no,si
+6.75,mer,isole,ordinario,express,Alfa,Milano,0.8,1,no,no,no,no
+10.23,mar,centro,ordinario,standard,Alfa,Bologna,4.2,4,no,no,no,no
+17.89,ven,isole,ordinario,standard,Alfa,Roma,3.1,NA,si,no,no,si
+16.0,mer,sud,picco,standard,Gamma,Roma,1.3,3,no,no,si,si
+16.63,lun,sud,ordinario,standard,Alfa,Roma,2.7,5,no,no,no,si
+13.24,mer,isole,ordinario,standard,Gamma,Milano,1.0,1,no,no,no,no
+16.48,sab,centro,ordinario,standard,Gamma,Bologna,2.6,2,no,no,no,no
+11.54,sab,centro,ordinario,express,Beta,Catania,4.2,4,no,no,no,no
+11.81,mar,centro,ordinario,standard,Alfa,Milano,5.5,3,no,no,no,no
+13.68,gio,isole,ordinario,economy,Beta,Catania,9.2,3,no,si,no,no
+12.38,ven,centro,ordinario,standard,Alfa,Catania,3.0,4,no,no,no,no
+16.41,sab,nord est,ordinario,economy,Beta,Roma,3.6,1,si,si,no,no
+14.58,dom,centro,ordinario,standard,Alfa,Milano,0.4,2,no,no,no,no
+11.69,gio,nord est,ordinario,standard,Beta,Milano,4.4,3,no,si,no,no
+9.51,ven,isole,ordinario,standard,Beta,Bologna,2.7,1,si,no,no,no
+21.92,ven,sud,ordinario,express,Gamma,Bologna,1.7,3,no,no,si,si
+10.36,gio,nord ovest,ordinario,standard,Gamma,Roma,3.0,2,no,no,no,no
+15.03,mar,sud,ordinario,standard,Alfa,Roma,1.6,3,no,si,no,no
+8.54,lun,isole,ordinario,standard,Gamma,Roma,1.7,4,no,no,no,si
+9.26,gio,centro,picco,standard,Alfa,Bologna,0.1,2,no,no,no,no
+15.59,ven,nord ovest,ordinario,economy,Alfa,Roma,1.2,2,no,no,no,si
+21.43,ven,nord est,ordinario,standard,Beta,Roma,0.6,4,no,si,no,no
+21.09,gio,nord ovest,ordinario,standard,Alfa,Bologna,2.1,2,no,no,no,no
+12.65,gio,centro,picco,economy,Alfa,Bologna,0.4,4,no,no,si,no
+10.75,mar,nord est,ordinario,standard,Alfa,Milano,3.3,2,si,no,no,no
+17.74,gio,centro,ordinario,express,Alfa,Roma,0.6,4,no,no,si,si
+20.21,sab,nord ovest,ordinario,express,Alfa,Catania,5.3,3,no,no,no,si
+11.32,gio,nord ovest,picco,economy,Alfa,Milano,1.2,1,no,no,no,no
+11.6,mer,sud,picco,economy,Gamma,Bologna,1.5,NA,no,no,no,no
+20.85,sab,nord est,ordinario,economy,Alfa,Milano,1.0,1,no,no,no,no
+11.05,mar,sud,ordinario,express,Beta,Roma,0.9,3,no,no,no,no
+18.07,lun,sud,ordinario,economy,Beta,Milano,1.2,2,no,si,no,no
+11.51,dom,nord est,ordinario,express,Beta,Milano,4.1,3,no,no,no,no
+16.33,dom,nord ovest,ordinario,standard,Alfa,Catania,4.6,3,no,no,no,si
+8.95,lun,nord est,picco,standard,Gamma,Roma,NA,3,si,no,no,si
+16.56,lun,nord est,ordinario,express,Beta,Milano,2.8,1,no,no,no,no
+10.16,mer,nord est,picco,standard,Alfa,Catania,8.3,2,si,si,no,no
+9.49,lun,nord ovest,ordinario,standard,Alfa,Catania,4.6,2,no,no,no,no
+12.35,gio,nord ovest,ordinario,standard,Gamma,Bologna,4.0,2,no,si,no,no
+19.79,mer,nord ovest,ordinario,economy,Gamma,Catania,3.4,1,no,no,no,no
+15.95,dom,nord est,ordinario,standard,Alfa,Milano,1.4,3,no,no,no,no
+14.75,gio,nord est,ordinario,economy,Gamma,Bologna,0.5,3,no,no,no,no
+17.83,mer,nord ovest,ordinario,express,Alfa,Milano,3.8,2,no,si,no,no
+11.96,gio,nord est,ordinario,standard,Beta,Catania,2.9,2,no,no,no,no
+19.29,dom,nord ovest,picco,standard,Beta,Bologna,0.7,3,si,si,no,si
+9.01,ven,isole,ordinario,standard,Beta,Roma,1.7,5,no,no,no,si
+23.09,mer,nord est,ordinario,standard,Beta,Roma,2.9,3,no,si,si,no
+16.61,gio,nord est,ordinario,standard,Gamma,Roma,3.3,3,no,si,no,no
+15.44,gio,centro,ordinario,standard,Gamma,Milano,3.8,NA,no,no,no,no
+4.8,sab,sud,ordinario,economy,Beta,Catania,8.8,5,no,no,no,no
+14.7,sab,centro,ordinario,standard,Alfa,Bologna,1.4,2,si,no,no,no
+14.49,ven,nord est,picco,economy,Alfa,Roma,1.8,1,si,no,no,si
+17.6,dom,sud,ordinario,standard,Gamma,Milano,2.8,1,si,no,no,si
+9.94,lun,sud,picco,standard,Gamma,Milano,0.7,2,si,no,no,si
+21.73,mer,nord est,picco,economy,Alfa,Roma,2.9,NA,no,no,no,si
+13.87,gio,nord ovest,picco,standard,Alfa,Roma,3.4,NA,no,si,no,no
+16.02,gio,nord est,ordinario,express,Alfa,Roma,0.7,2,no,no,no,no
+12.2,sab,nord ovest,ordinario,standard,Beta,Catania,3.4,2,no,no,no,no
+23.98,dom,nord ovest,ordinario,standard,Gamma,Milano,8.3,3,no,no,no,no
+12.23,mar,centro,ordinario,standard,Alfa,Catania,5.5,1,no,no,no,no
+15.18,mer,centro,ordinario,express,Beta,Catania,4.5,1,no,si,no,no
+18.81,dom,centro,ordinario,standard,Alfa,Bologna,10.3,3,no,no,no,no
+23.98,gio,nord est,ordinario,economy,Alfa,Milano,2.0,2,no,no,si,no
+14.9,gio,centro,ordinario,economy,Alfa,Catania,3.8,1,no,no,no,no
+12.62,dom,sud,ordinario,economy,Gamma,Catania,6.4,3,si,si,no,no
+13.56,ven,nord ovest,ordinario,express,Beta,Milano,2.1,3,no,no,no,no
+15.13,gio,isole,ordinario,economy,Beta,Roma,0.9,1,no,no,no,no
+17.44,lun,isole,ordinario,express,Gamma,Milano,5.6,2,no,no,no,no
+15.04,dom,nord ovest,picco,standard,Gamma,Milano,0.7,4,si,si,si,si
+10.25,lun,nord est,ordinario,economy,Alfa,Roma,NA,2,no,no,no,no
+15.06,ven,nord ovest,ordinario,economy,Gamma,Roma,0.5,3,no,no,no,no
+15.53,gio,sud,ordinario,standard,Gamma,Catania,4.2,2,no,no,no,no
+12.52,dom,centro,ordinario,standard,Alfa,Bologna,0.1,1,si,no,no,no
+18.75,mar,sud,ordinario,economy,Beta,Milano,2.7,2,no,si,no,no
+20.21,mar,nord ovest,picco,express,Beta,Roma,0.6,5,si,no,no,si
+4.88,gio,nord est,ordinario,economy,Gamma,Bologna,NA,1,no,no,si,no
+17.36,ven,nord ovest,ordinario,standard,Beta,Bologna,2.8,1,no,no,no,no
+17.64,mer,isole,ordinario,standard,Beta,Roma,NA,2,no,no,no,si
+21.34,mar,nord ovest,ordinario,standard,Beta,Bologna,1.0,1,no,no,no,no
+18.28,mar,sud,ordinario,standard,Gamma,Bologna,0.6,1,no,no,no,no
+21.76,mer,nord est,ordinario,standard,Gamma,Roma,1.0,2,no,si,no,no
+19.68,sab,nord est,picco,economy,Alfa,Catania,6.1,1,si,no,si,si
+10.88,gio,nord est,ordinario,standard,Alfa,Milano,3.4,3,no,si,no,no
+12.62,gio,sud,picco,standard,Gamma,Catania,5.5,1,no,no,no,si
+11.91,gio,nord ovest,ordinario,economy,Gamma,Catania,3.5,4,no,no,no,no
+17.27,sab,nord ovest,picco,standard,Alfa,Milano,1.0,3,si,no,no,si
+13.2,mar,nord ovest,ordinario,standard,Alfa,Roma,1.4,1,no,no,no,no
+10.86,lun,sud,ordinario,express,Gamma,Bologna,1.8,3,no,no,no,no
+16.84,mar,sud,ordinario,express,Beta,Milano,2.8,4,no,no,no,si
+20.89,gio,nord est,ordinario,express,Beta,Bologna,0.1,1,no,no,no,no
+15.07,mer,nord ovest,ordinario,economy,Alfa,Bologna,0.1,1,no,si,si,si
+12.39,gio,isole,ordinario,standard,Alfa,Milano,2.6,2,si,no,no,no
+11.55,mer,nord est,ordinario,economy,Beta,Roma,0.9,3,no,no,no,no
+13.93,gio,nord est,ordinario,standard,Alfa,Roma,5.0,2,no,si,no,no
+14.87,gio,isole,ordinario,standard,Alfa,Roma,0.7,2,no,no,no,no
+15.7,mar,nord est,ordinario,express,Beta,Roma,2.8,1,no,no,no,no
+17.84,lun,nord ovest,ordinario,standard,Gamma,Roma,2.0,2,no,no,no,no
+15.42,lun,centro,picco,economy,Alfa,Bologna,3.5,4,si,no,no,si
+6.58,sab,sud,picco,standard,Alfa,Milano,3.6,2,no,no,no,si
+18.98,dom,centro,ordinario,standard,Gamma,Roma,3.1,1,no,no,si,no
+23.98,gio,sud,picco,economy,Beta,Roma,5.3,3,no,no,no,no
+11.29,ven,centro,ordinario,express,Alfa,Milano,5.2,3,no,no,no,no
+9.14,mer,sud,ordinario,standard,Gamma,Bologna,1.4,3,si,no,no,no
+20.43,sab,sud,picco,express,Alfa,Milano,0.1,1,si,no,no,si
+22.1,ven,sud,ordinario,standard,Alfa,Bologna,4.7,2,no,no,no,no
+15.95,ven,nord ovest,ordinario,standard,Gamma,Bologna,1.0,3,no,no,no,si
+23.54,dom,centro,ordinario,express,Alfa,Roma,0.7,3,no,no,no,no
+22.56,mer,nord est,ordinario,standard,Beta,Milano,NA,1,no,no,no,no
+18.78,lun,sud,picco,standard,Alfa,Milano,2.7,2,no,si,si,si
+23.98,mar,sud,ordinario,standard,Beta,Milano,2.5,1,no,si,no,no
+7.01,ven,nord ovest,ordinario,express,Gamma,Roma,1.9,1,no,no,no,no
+19.42,gio,centro,ordinario,standard,Alfa,Milano,0.8,1,no,no,no,no
+9.87,mer,nord est,ordinario,standard,Beta,Catania,6.1,3,no,no,no,no
+11.54,ven,nord ovest,picco,standard,Beta,Catania,5.3,2,no,no,no,no
+13.66,ven,centro,ordinario,economy,Alfa,Milano,1.1,4,no,no,no,no
+13.1,ven,centro,picco,standard,Beta,Catania,4.8,3,si,si,no,si
+14.42,lun,nord est,picco,economy,Alfa,Catania,8.1,2,no,no,no,no
+23.98,lun,nord est,ordinario,standard,Beta,Roma,1.5,2,si,no,no,si
+16.19,ven,nord ovest,ordinario,standard,Gamma,Roma,2.3,4,no,si,no,no
+12.76,lun,centro,ordinario,economy,Beta,Milano,5.4,3,no,no,no,no
+12.3,ven,nord ovest,ordinario,standard,Alfa,Bologna,4.4,NA,no,si,no,no
+13.76,sab,sud,ordinario,express,Alfa,Bologna,2.5,2,no,no,no,no
+7.41,mar,nord ovest,ordinario,express,Alfa,Milano,3.2,2,si,no,no,no
+23.16,gio,centro,picco,standard,Alfa,Bologna,3.2,2,no,no,no,no
+11.42,mer,centro,picco,express,Alfa,Roma,3.4,2,no,si,no,no
+22.58,mer,nord ovest,ordinario,standard,Beta,Milano,3.4,NA,no,si,no,no
+8.68,mer,sud,picco,economy,Alfa,Bologna,3.6,2,no,no,no,no
+10.96,mer,nord ovest,picco,standard,Alfa,Catania,4.1,2,no,no,no,si
+11.41,dom,nord est,picco,standard,Beta,Milano,2.1,2,no,no,si,no
+16.58,mer,nord est,picco,economy,Beta,Milano,2.7,2,no,no,no,no
+17.91,dom,nord est,picco,economy,Alfa,Milano,0.9,2,no,no,si,si
+9.36,mer,centro,ordinario,standard,Beta,Milano,2.9,2,si,no,no,no
+8.1,dom,isole,ordinario,economy,Gamma,Bologna,0.3,3,no,no,no,no
+13.95,mer,sud,picco,express,Beta,Milano,1.6,2,no,no,no,no
+15.71,sab,sud,picco,standard,Gamma,Bologna,4.1,5,no,no,no,si
+16.53,gio,isole,ordinario,economy,Alfa,Milano,9.8,2,no,no,no,no
+6.01,sab,centro,picco,standard,Gamma,Milano,2.8,2,no,no,no,no
+20.75,ven,isole,ordinario,economy,Beta,Roma,0.9,3,no,no,no,si
+14.19,dom,nord ovest,picco,standard,Alfa,Catania,3.4,2,no,si,no,si
+16.24,mer,centro,ordinario,economy,Gamma,Catania,NA,2,no,no,no,no
+16.78,mar,nord ovest,ordinario,economy,Gamma,Roma,1.7,3,no,no,no,no
+10.62,lun,isole,ordinario,economy,Alfa,Bologna,1.0,3,no,no,no,no
+18.75,ven,nord ovest,picco,economy,Alfa,Bologna,3.0,5,no,no,no,si
+21.98,lun,nord est,ordinario,express,Alfa,Milano,1.6,3,no,no,no,si
+16.46,mar,centro,ordinario,express,Alfa,Roma,4.7,2,no,si,no,no
+11.33,lun,nord ovest,ordinario,standard,Gamma,Milano,0.1,2,no,no,no,no
+12.43,sab,sud,ordinario,economy,Gamma,Catania,3.1,2,no,si,no,no
+15.47,mar,sud,ordinario,standard,Alfa,Milano,NA,NA,no,no,no,no
+15.33,sab,nord ovest,ordinario,economy,Alfa,Milano,1.2,2,no,no,no,no
+19.15,lun,nord ovest,ordinario,express,Alfa,Bologna,2.2,4,no,no,no,si
+11.13,mer,centro,ordinario,standard,Gamma,Roma,2.2,1,no,no,no,no
+13.59,lun,nord ovest,picco,express,Beta,Catania,5.1,5,no,no,no,no
+16.17,gio,nord est,ordinario,express,Gamma,Roma,9.2,3,no,no,no,si
+14.97,lun,sud,ordinario,express,Alfa,Milano,1.8,2,no,si,no,no
+13.82,dom,centro,ordinario,economy,Alfa,Roma,0.3,3,no,no,si,no
+10.79,dom,centro,picco,standard,Alfa,Milano,5.0,2,no,no,no,no
+12.63,gio,centro,ordinario,economy,Gamma,Milano,8.4,3,si,no,no,no
+14.51,mer,sud,ordinario,standard,Gamma,Catania,6.1,NA,no,no,no,si
+19.44,lun,centro,ordinario,economy,Alfa,Milano,1.8,1,no,si,no,no
+14.12,mar,nord est,ordinario,standard,Alfa,Milano,1.3,3,no,no,no,no
+20.69,mar,nord ovest,ordinario,standard,Alfa,Catania,2.9,2,no,si,no,no
+17.79,sab,centro,picco,express,Alfa,Roma,1.0,4,si,si,no,si
+15.83,mer,nord est,ordinario,standard,Alfa,Milano,2.4,2,no,si,no,no
+16.35,gio,sud,ordinario,standard,Alfa,Milano,1.9,2,no,si,no,no
+15.34,gio,sud,picco,standard,Alfa,Milano,1.3,4,no,si,no,si
+13.05,mar,centro,ordinario,economy,Alfa,Bologna,1.7,3,no,no,no,no
+11.89,dom,nord est,ordinario,standard,Alfa,Catania,8.7,4,no,no,no,no
+20.25,mar,nord est,picco,economy,Alfa,Milano,3.8,1,si,no,no,si
+11.66,mar,centro,ordinario,standard,Alfa,Milano,0.9,4,no,si,no,no
+19.09,ven,nord ovest,ordinario,standard,Gamma,Milano,5.4,3,si,no,no,si
+11.61,mer,nord est,ordinario,express,Alfa,Milano,0.2,1,no,no,no,no
+15.44,mar,centro,ordinario,standard,Gamma,Roma,3.2,1,no,no,si,no
+17.71,sab,sud,ordinario,standard,Gamma,Milano,2.5,2,no,no,no,no
+20.17,sab,nord est,picco,standard,Beta,Roma,6.3,2,no,si,no,no
+16.2,sab,nord ovest,ordinario,standard,Beta,Milano,4.4,1,no,no,no,no
+10.98,mer,nord ovest,ordinario,express,Gamma,Milano,7.7,4,no,si,no,no
+9.65,mar,nord ovest,ordinario,standard,Beta,Milano,1.7,5,no,no,si,si
+11.53,sab,nord ovest,ordinario,standard,Alfa,Milano,0.8,3,no,si,no,no
+17.96,mer,nord ovest,picco,standard,Alfa,Roma,NA,4,no,no,no,no
+10.17,dom,nord ovest,ordinario,economy,Alfa,Catania,7.3,3,no,si,si,no
+18.42,gio,nord est,picco,express,Beta,Roma,2.7,4,no,no,no,no
+14.43,ven,nord est,ordinario,standard,Beta,Milano,4.4,3,si,si,no,si
+7.32,gio,sud,ordinario,standard,Alfa,Milano,0.8,2,no,no,no,no
+11.7,lun,sud,ordinario,standard,Beta,Milano,3.2,2,no,no,no,no
+16.4,mer,isole,ordinario,standard,Beta,Bologna,0.5,NA,si,si,si,si
+10.72,ven,nord ovest,ordinario,express,Alfa,Milano,2.3,1,no,no,no,no
+15.53,mer,centro,ordinario,express,Alfa,Milano,2.1,1,no,no,si,si
+16.43,sab,centro,picco,express,Alfa,Catania,6.1,2,no,no,no,no
+5.01,gio,nord est,ordinario,economy,Beta,Roma,0.3,2,no,si,no,no
+5.32,ven,nord est,ordinario,economy,Beta,Catania,4.8,5,no,no,no,si
+10.58,gio,isole,ordinario,express,Beta,Bologna,2.0,2,no,si,no,no
+7.67,lun,centro,picco,standard,Alfa,Bologna,1.4,2,no,no,no,no
+16.03,gio,sud,ordinario,standard,Gamma,Milano,0.1,5,si,no,si,si
+13.95,lun,centro,ordinario,economy,Gamma,Bologna,2.1,1,no,no,no,no
+11.21,gio,sud,ordinario,express,Beta,Milano,3.3,3,no,no,no,no
+15.22,mer,nord est,picco,standard,Beta,Milano,2.4,1,no,no,no,no
+16.25,gio,sud,ordinario,economy,Gamma,Bologna,2.4,2,si,no,no,no
+5.93,dom,sud,ordinario,standard,Beta,Bologna,0.5,5,no,si,no,no
+10.29,gio,nord ovest,ordinario,standard,Gamma,Bologna,0.4,2,no,si,no,no
+12.8,dom,nord est,ordinario,standard,Alfa,Bologna,3.0,3,no,no,no,no
+21.1,mar,centro,picco,economy,Alfa,Catania,3.3,2,no,si,no,no
+13.45,sab,sud,ordinario,standard,Alfa,Milano,2.2,2,no,no,no,no
+19.89,gio,centro,picco,economy,Gamma,Roma,3.0,4,no,no,no,si
+8.78,lun,nord ovest,ordinario,economy,Gamma,Roma,2.6,1,no,no,no,no
+9.36,gio,nord est,ordinario,economy,Alfa,Catania,10.7,4,no,si,no,no
+16.79,mer,nord ovest,ordinario,economy,Beta,Bologna,1.1,1,no,no,no,no
+12.26,lun,nord ovest,ordinario,economy,Beta,Bologna,0.5,3,no,si,no,no
+20.39,ven,centro,ordinario,standard,Gamma,Milano,3.1,3,no,si,no,si
+17.98,mer,nord ovest,picco,standard,Gamma,Catania,6.1,1,no,no,no,no
+10.08,gio,nord ovest,ordinario,economy,Alfa,Bologna,5.1,NA,si,no,no,no
+8.81,ven,nord ovest,picco,standard,Alfa,Roma,1.7,3,si,no,no,si
+18.4,mer,isole,picco,standard,Beta,Milano,1.9,2,no,no,no,no
+16.06,mar,nord ovest,ordinario,standard,Alfa,Roma,2.6,1,no,no,no,no
+16.18,gio,nord ovest,picco,economy,Beta,Milano,4.7,4,no,no,no,si
+9.63,gio,sud,ordinario,standard,Gamma,Bologna,1.5,2,no,no,si,si
+15.81,mar,sud,ordinario,standard,Alfa,Roma,1.6,NA,si,si,no,no
+8.38,mer,nord est,ordinario,economy,Gamma,Bologna,2.0,2,no,no,no,no
+16.08,ven,centro,ordinario,economy,Gamma,Catania,5.4,3,no,no,no,si
+16.73,lun,nord est,ordinario,standard,Gamma,Bologna,1.3,2,no,no,no,no
+11.29,mer,nord ovest,ordinario,standard,Gamma,Roma,3.5,2,no,no,si,no
+11.67,ven,centro,ordinario,standard,Beta,Milano,1.8,3,no,no,no,no
+23.98,mar,centro,ordinario,economy,Alfa,Bologna,0.4,2,no,si,no,no
+15.58,mer,nord ovest,picco,express,Beta,Roma,1.7,NA,si,no,no,si
+14.87,dom,nord ovest,ordinario,express,Alfa,Milano,2.1,4,no,no,no,si
+9.91,gio,nord ovest,ordinario,standard,Alfa,Bologna,4.1,1,no,si,no,no
+17.13,ven,sud,ordinario,standard,Beta,Milano,0.4,2,no,no,no,si
+15.3,sab,sud,picco,economy,Beta,Catania,4.0,2,no,no,no,si
+15.8,sab,sud,ordinario,standard,Beta,Roma,5.6,3,no,no,no,no
+19.72,lun,sud,picco,standard,Gamma,Bologna,0.9,1,no,no,si,si
+17.01,gio,centro,ordinario,economy,Alfa,Milano,NA,1,si,no,no,no
+23.98,lun,nord ovest,ordinario,standard,Alfa,Catania,2.8,3,no,si,no,no
+12.38,sab,sud,picco,express,Beta,Bologna,0.2,2,no,no,no,no
+11.46,mer,centro,ordinario,economy,Alfa,Bologna,1.3,2,no,no,no,no
+18.47,ven,isole,picco,express,Gamma,Roma,2.6,2,no,no,no,si
+10.99,mar,nord ovest,ordinario,standard,Beta,Bologna,NA,1,no,no,no,no
+18.27,dom,centro,ordinario,standard,Alfa,Roma,2.2,1,no,si,no,no
+9.51,ven,sud,ordinario,standard,Alfa,Roma,2.0,1,si,no,no,no
+14.96,mer,isole,ordinario,standard,Alfa,Roma,3.9,4,no,no,no,si
+23.56,gio,nord est,ordinario,standard,Beta,Roma,2.6,1,no,no,no,no
+15.01,ven,isole,ordinario,economy,Alfa,Milano,2.9,2,no,si,no,no
+16.46,mar,isole,ordinario,standard,Gamma,Milano,0.3,3,si,no,no,si
+22.93,lun,sud,picco,standard,Alfa,Roma,6.0,1,no,no,no,si
+17.06,sab,nord ovest,picco,standard,Alfa,Milano,2.3,3,no,no,no,si
+12.74,lun,centro,ordinario,standard,Beta,Roma,NA,2,si,no,no,no
+14.01,mer,nord ovest,ordinario,standard,Beta,Bologna,2.6,4,no,no,no,no
+21.85,lun,nord ovest,ordinario,economy,Alfa,Bologna,NA,NA,no,no,no,no
+21.45,gio,sud,ordinario,express,Alfa,Milano,NA,2,no,no,no,no
+20.92,gio,nord ovest,ordinario,standard,Beta,Roma,5.6,1,no,si,no,no
+15.11,lun,sud,ordinario,express,Beta,Catania,3.4,5,no,si,no,si
+11.88,lun,nord ovest,picco,standard,Alfa,Roma,1.1,1,no,no,no,no
+16.15,dom,nord ovest,picco,standard,Alfa,Roma,1.7,2,no,si,no,si
+7.96,mar,nord ovest,ordinario,economy,Beta,Roma,2.9,2,no,si,no,no
+8.54,dom,centro,ordinario,standard,Beta,Milano,0.4,3,no,si,no,no
+11.51,gio,nord ovest,ordinario,standard,Beta,Roma,3.5,3,no,no,no,no
+14.3,gio,centro,ordinario,standard,Gamma,Bologna,0.1,5,no,no,no,si
+16.92,ven,nord ovest,picco,standard,Beta,Roma,3.8,2,no,no,no,no
+4.83,ven,nord ovest,ordinario,economy,Beta,Bologna,0.1,2,no,no,no,no
+22.22,mer,nord ovest,ordinario,express,Alfa,Milano,2.0,5,si,no,no,si
+14.1,mar,nord est,picco,economy,Alfa,Catania,2.7,5,no,no,no,si
+18.03,gio,nord est,ordinario,standard,Gamma,Roma,0.4,2,no,no,no,no
+21.85,mer,nord ovest,picco,economy,Beta,Catania,3.6,1,no,no,no,no
+16.91,lun,centro,ordinario,express,Beta,Catania,2.5,2,no,no,no,no
+22.68,lun,centro,ordinario,standard,Alfa,Roma,1.2,1,no,no,no,no
+13.12,gio,centro,ordinario,economy,Alfa,Milano,3.9,2,no,no,no,no
+10.04,mar,nord ovest,picco,economy,Beta,Roma,0.7,3,no,no,no,si
+14.76,lun,centro,ordinario,economy,Gamma,Roma,1.7,3,no,no,no,no
+10.98,mar,nord ovest,ordinario,standard,Beta,Roma,1.9,1,no,no,no,no
+21.25,mer,nord est,picco,economy,Gamma,Roma,1.1,3,no,no,no,si
+6.23,gio,nord ovest,picco,standard,Alfa,Catania,2.7,2,no,no,no,no
+16.81,lun,nord ovest,ordinario,express,Alfa,Roma,0.7,3,no,no,no,no
+15.92,gio,centro,ordinario,economy,Beta,Roma,1.3,2,si,no,no,no
+16.42,sab,nord est,ordinario,standard,Alfa,Roma,5.2,1,no,no,no,no
+12.94,sab,nord est,picco,express,Alfa,Milano,2.6,2,si,no,no,si
+11.07,mar,sud,ordinario,economy,Beta,Bologna,1.0,5,no,no,no,si
+13.89,mar,nord est,ordinario,express,Gamma,Bologna,6.6,5,no,si,no,no
+7.2,dom,nord est,ordinario,express,Gamma,Milano,3.3,1,no,no,no,no
+9.54,ven,nord ovest,picco,express,Gamma,Bologna,2.4,4,no,no,no,no
+12.4,mer,nord est,ordinario,express,Gamma,Roma,1.2,2,no,no,no,si
+10.05,dom,sud,ordinario,standard,Beta,Catania,3.5,2,no,no,no,no
+11.63,ven,centro,picco,standard,Gamma,Milano,4.9,2,no,no,no,no
+16.5,gio,nord ovest,ordinario,economy,Alfa,Bologna,2.5,1,si,no,no,no
+4.01,gio,isole,ordinario,standard,Beta,Milano,4.1,3,no,no,no,no
+10.74,mer,nord est,ordinario,express,Beta,Roma,1.1,3,no,no,si,no
+7.4,mar,sud,picco,standard,Alfa,Bologna,3.2,2,no,no,no,si
+15.75,mar,sud,ordinario,express,Beta,Roma,2.6,3,no,si,no,no
+18.25,gio,isole,ordinario,economy,Alfa,Bologna,1.7,5,no,no,no,si
+14.91,lun,isole,ordinario,economy,Alfa,Milano,0.5,3,no,no,no,no
+7.65,ven,nord ovest,picco,express,Gamma,Milano,0.3,4,no,no,no,no
+11.69,mer,centro,ordinario,standard,Beta,Roma,1.7,1,no,no,no,no
+11.25,gio,nord est,picco,standard,Alfa,Milano,1.3,4,no,no,no,no
+14.79,mar,sud,ordinario,economy,Beta,Bologna,1.0,2,no,no,no,no
+19.24,sab,nord ovest,ordinario,standard,Gamma,Catania,3.9,1,no,no,no,no
+12.24,sab,isole,ordinario,standard,Alfa,Milano,0.6,NA,no,no,no,si
+21.89,dom,centro,ordinario,standard,Alfa,Milano,1.6,2,no,no,no,no
+16.59,mar,nord est,ordinario,standard,Gamma,Catania,3.3,3,no,no,no,si
+20.42,lun,sud,picco,standard,Alfa,Roma,0.9,2,no,no,no,si
+13.1,mar,isole,ordinario,economy,Beta,Milano,1.6,1,no,no,no,no
+8.39,mar,centro,ordinario,standard,Beta,Milano,7.2,2,no,no,no,no
+23.98,sab,isole,picco,express,Alfa,Bologna,0.6,3,no,no,no,si
+15.04,mer,nord ovest,ordinario,express,Gamma,Roma,2.6,1,no,no,no,no
+11.45,mar,nord ovest,picco,economy,Gamma,Catania,4.0,1,no,no,no,no
+8.38,gio,nord est,picco,economy,Alfa,Milano,2.2,4,no,no,no,no
+5.09,dom,sud,picco,standard,Beta,Roma,3.2,NA,no,si,si,si
+20.84,mer,nord ovest,ordinario,express,Alfa,Bologna,2.9,3,no,no,no,no
+15.63,mar,nord ovest,ordinario,standard,Alfa,Catania,3.2,2,no,no,no,no
+14.97,lun,nord ovest,ordinario,economy,Beta,Milano,0.9,1,no,no,no,no
+11.46,gio,sud,ordinario,standard,Beta,Bologna,2.4,2,no,no,no,no
+16.46,lun,isole,ordinario,express,Gamma,Catania,8.0,1,no,si,no,no
+19.48,mar,sud,ordinario,standard,Gamma,Milano,0.7,1,si,no,no,si
+10.63,dom,nord ovest,ordinario,standard,Alfa,Bologna,0.1,5,si,si,no,no
+12.71,sab,centro,picco,standard,Gamma,Roma,NA,2,no,no,no,no
+7.45,mar,sud,picco,economy,Gamma,Roma,1.7,3,no,no,no,si
+8.49,gio,nord est,ordinario,standard,Alfa,Milano,5.3,2,no,no,no,no
+11.98,mer,nord est,picco,standard,Alfa,Milano,4.2,1,no,no,no,no
+15.31,gio,nord est,ordinario,standard,Alfa,Bologna,6.5,2,no,no,no,no
+23.83,mer,centro,ordinario,standard,Alfa,Bologna,6.6,3,si,no,no,si
+16.88,lun,nord ovest,ordinario,express,Gamma,Roma,2.2,4,no,no,no,no
+16.08,lun,sud,ordinario,standard,Gamma,Milano,0.1,3,no,no,no,si
+14.94,gio,nord ovest,ordinario,express,Alfa,Roma,3.7,2,si,no,no,si
+18.95,lun,sud,ordinario,standard,Alfa,Roma,4.7,2,no,no,no,si
+13.53,lun,nord est,ordinario,standard,Alfa,Milano,1.6,1,no,no,no,no
+10.22,mar,nord ovest,ordinario,standard,Beta,Roma,0.5,5,no,si,no,no
+11.58,dom,centro,picco,economy,Alfa,Milano,1.9,NA,no,no,no,no
+14.77,ven,nord ovest,ordinario,express,Beta,Milano,2.2,2,no,no,si,si
+17.26,gio,sud,ordinario,standard,Gamma,Milano,0.1,2,no,si,si,si
+17.25,gio,nord ovest,ordinario,economy,Beta,Bologna,0.9,3,si,si,no,no
+15.83,mer,sud,ordinario,economy,Gamma,Milano,0.1,1,no,no,no,no
+14.12,mar,nord est,ordinario,standard,Beta,Milano,5.3,2,no,no,no,si
+17.8,mar,nord ovest,ordinario,economy,Alfa,Milano,2.7,2,no,no,no,no
+16.27,ven,centro,ordinario,economy,Gamma,Bologna,0.7,1,no,no,si,no
+21.25,mar,nord ovest,picco,express,Alfa,Milano,1.1,NA,si,si,no,no
+12.47,lun,sud,ordinario,standard,Alfa,Roma,0.5,2,si,no,no,no
+16.0,dom,nord ovest,ordinario,standard,Alfa,Bologna,4.2,1,si,no,no,no
+13.68,ven,sud,ordinario,express,Gamma,Catania,3.2,NA,no,no,no,no
+12.58,mar,isole,ordinario,standard,Beta,Roma,0.9,3,si,si,no,si
+19.29,ven,nord est,ordinario,standard,Gamma,Bologna,9.3,2,no,no,no,no
+16.63,sab,sud,ordinario,express,Alfa,Roma,0.4,5,no,no,no,si
+13.28,lun,nord est,ordinario,economy,Alfa,Catania,8.1,2,no,no,no,no
+13.9,sab,nord ovest,ordinario,economy,Beta,Catania,4.1,1,no,no,no,no
+12.29,mar,nord ovest,picco,standard,Alfa,Catania,5.7,2,no,no,no,si
+18.26,mar,sud,ordinario,standard,Beta,Bologna,3.7,5,no,no,no,si
+15.94,gio,sud,ordinario,express,Alfa,Roma,2.7,3,si,no,no,si
+17.17,mar,nord ovest,ordinario,express,Alfa,Milano,1.9,5,no,no,no,si
+15.26,mar,centro,ordinario,standard,Alfa,Milano,3.2,1,no,no,no,no
+19.23,dom,centro,ordinario,standard,Beta,Milano,0.9,2,no,no,no,no
+21.01,mer,nord ovest,picco,express,Alfa,Milano,2.1,1,no,no,no,no
+12.09,dom,centro,ordinario,economy,Beta,Milano,5.6,5,no,si,no,no
+12.33,mer,centro,ordinario,express,Alfa,Catania,4.0,2,no,no,no,no
+14.44,gio,centro,picco,standard,Gamma,Milano,1.1,5,no,no,no,si
+11.76,dom,isole,picco,express,Beta,Milano,0.8,5,si,no,no,si
+14.02,mer,sud,picco,standard,Beta,Roma,3.0,4,no,no,no,no
+18.97,ven,centro,picco,standard,Alfa,Roma,4.9,3,no,no,no,si
+12.15,gio,nord ovest,ordinario,standard,Alfa,Bologna,1.3,1,no,no,no,no
+10.62,lun,nord ovest,ordinario,standard,Beta,Roma,2.8,1,no,no,no,no
+15.04,sab,nord ovest,picco,express,Gamma,Bologna,0.2,3,no,no,no,si
+18.33,ven,nord ovest,ordinario,express,Beta,Bologna,1.3,2,si,no,no,si
+14.41,ven,centro,picco,economy,Beta,Roma,5.9,5,no,no,no,si
+10.39,ven,sud,ordinario,economy,Alfa,Milano,1.2,3,no,no,no,no
+16.39,gio,nord ovest,picco,standard,Beta,Catania,3.1,2,no,no,no,no
+14.15,gio,nord ovest,picco,standard,Gamma,Catania,7.3,2,no,si,no,no
+12.8,mer,sud,picco,standard,Alfa,Roma,2.7,3,no,no,no,si
+15.15,mar,nord est,ordinario,economy,Alfa,Milano,0.4,3,no,no,no,no
+17.06,sab,sud,ordinario,economy,Beta,Milano,4.0,NA,no,si,no,si
+12.26,ven,nord ovest,ordinario,standard,Beta,Roma,0.4,3,no,no,no,no
+15.21,mar,centro,ordinario,express,Alfa,Milano,1.4,3,no,no,no,no
+16.69,sab,nord ovest,ordinario,express,Beta,Milano,2.8,2,no,no,no,no
+10.87,lun,nord ovest,ordinario,standard,Beta,Milano,1.1,3,no,si,no,no
+14.6,ven,nord ovest,ordinario,economy,Beta,Bologna,1.6,1,no,si,no,no
+12.98,lun,nord est,picco,standard,Beta,Bologna,2.5,2,no,no,no,no
+13.89,lun,centro,ordinario,standard,Alfa,Bologna,1.3,3,si,no,no,si
+17.94,mer,nord est,ordinario,standard,Beta,Roma,NA,2,no,no,no,no
+18.86,mar,nord ovest,picco,express,Gamma,Milano,0.4,3,no,no,no,si
+15.74,mer,nord ovest,ordinario,economy,Alfa,Milano,2.3,2,no,no,no,no
+20.13,gio,sud,picco,standard,Alfa,Catania,2.7,2,no,no,si,si
+10.57,gio,sud,ordinario,standard,Alfa,Roma,4.1,3,si,no,si,no
+17.85,sab,nord est,ordinario,standard,Beta,Catania,6.3,2,no,si,si,no
+12.39,lun,nord est,picco,express,Beta,Bologna,1.0,3,no,si,no,no
+12.59,mer,nord ovest,ordinario,standard,Alfa,Roma,2.7,1,no,no,no,no
+21.09,sab,nord ovest,ordinario,express,Beta,Milano,1.8,1,no,no,no,si
+18.66,sab,centro,ordinario,express,Alfa,Bologna,1.1,3,no,no,no,no
+20.57,gio,nord ovest,ordinario,standard,Gamma,Bologna,0.4,2,no,no,no,no
+21.33,mar,nord est,picco,express,Alfa,Roma,3.0,2,si,si,no,si
+5.29,ven,sud,ordinario,standard,Beta,Milano,1.9,5,no,si,no,no
+18.65,lun,isole,picco,express,Alfa,Catania,3.9,1,si,no,no,si
+10.42,lun,centro,picco,standard,Alfa,Roma,4.0,1,si,no,si,si
+18.66,lun,isole,ordinario,express,Beta,Catania,4.3,2,no,no,no,no
+23.98,gio,centro,ordinario,express,Alfa,Roma,2.0,4,no,si,no,no
+14.69,mar,sud,ordinario,economy,Alfa,Bologna,1.5,3,no,no,no,si
+6.33,sab,sud,ordinario,standard,Alfa,Roma,7.2,3,no,no,no,no
+16.38,ven,nord est,picco,standard,Alfa,Milano,1.9,3,no,no,no,si
+14.57,gio,nord est,ordinario,standard,Gamma,Bologna,3.9,1,no,no,si,no
+21.43,gio,sud,ordinario,economy,Alfa,Bologna,0.8,2,no,no,no,no
+23.98,dom,nord ovest,ordinario,standard,Gamma,Bologna,3.6,2,no,no,no,no
+14.49,lun,sud,ordinario,standard,Beta,Bologna,0.6,2,no,si,si,si
+9.55,mer,centro,picco,standard,Beta,Milano,2.4,1,no,no,no,no
+10.48,gio,nord est,picco,standard,Alfa,Bologna,1.5,2,no,si,no,no
+8.8,mar,sud,ordinario,standard,Beta,Milano,NA,3,no,si,no,no
+8.58,ven,nord est,picco,economy,Alfa,Roma,2.0,1,no,no,no,no
+12.72,sab,isole,ordinario,economy,Alfa,Milano,1.4,4,no,no,no,si
+16.41,mar,sud,ordinario,standard,Beta,Catania,5.9,2,no,si,no,no
+9.9,lun,isole,ordinario,economy,Alfa,Roma,3.9,5,si,no,no,si
+13.85,mar,nord ovest,ordinario,express,Alfa,Catania,5.6,2,no,si,no,no
+23.98,gio,nord ovest,ordinario,standard,Alfa,Roma,0.9,2,no,si,no,no
+7.18,gio,sud,ordinario,standard,Alfa,Milano,NA,2,no,no,no,no
+17.41,lun,isole,ordinario,economy,Beta,Roma,6.2,2,si,no,no,si
+15.48,ven,nord ovest,picco,standard,Beta,Bologna,0.9,2,no,no,no,si
+13.74,gio,nord ovest,ordinario,express,Alfa,Catania,5.0,5,no,no,no,si
+17.1,gio,nord ovest,ordinario,standard,Gamma,Catania,3.3,1,no,no,no,no
+13.0,gio,nord est,ordinario,standard,Beta,Milano,0.9,2,no,si,no,no
+10.57,mer,nord ovest,ordinario,economy,Beta,Milano,0.1,4,si,no,no,no
+15.62,ven,centro,ordinario,express,Alfa,Milano,0.2,1,no,no,no,si
+14.18,lun,centro,ordinario,express,Alfa,Bologna,1.0,4,no,no,no,si
+16.99,mar,nord ovest,ordinario,express,Alfa,Roma,2.1,1,no,no,no,no
+10.0,mer,nord ovest,ordinario,economy,Beta,Roma,0.4,NA,no,no,no,no
+9.77,mar,nord ovest,picco,standard,Gamma,Milano,0.3,3,no,no,no,no
+21.59,mar,nord ovest,picco,standard,Beta,Milano,1.5,1,no,no,si,si
+14.42,dom,nord ovest,ordinario,standard,Alfa,Milano,1.7,1,no,no,no,no
+17.19,mar,isole,ordinario,economy,Alfa,Milano,2.4,1,si,no,no,no
+12.11,mar,nord ovest,ordinario,standard,Beta,Milano,1.7,2,no,no,no,no
+14.89,sab,centro,picco,standard,Alfa,Milano,1.5,1,no,no,no,no
+14.71,sab,sud,picco,standard,Gamma,Roma,1.1,3,no,no,no,si
+10.92,mer,nord est,picco,standard,Gamma,Bologna,4.2,NA,no,si,no,no
+17.28,ven,nord est,picco,express,Alfa,Milano,0.4,1,no,no,no,si
+19.96,mer,isole,ordinario,express,Alfa,Bologna,1.3,2,no,no,no,si
+16.05,dom,nord ovest,picco,economy,Beta,Roma,1.5,1,no,no,no,no
+19.24,lun,nord ovest,ordinario,economy,Alfa,Catania,6.2,2,no,no,si,si
+17.82,mer,centro,picco,economy,Beta,Roma,2.1,3,no,si,no,si
+14.04,gio,centro,ordinario,standard,Beta,Milano,1.4,2,no,si,no,no
+15.18,ven,sud,ordinario,economy,Gamma,Milano,5.6,1,no,no,si,si
+10.12,lun,sud,picco,standard,Beta,Roma,2.2,4,no,si,no,si
+15.55,sab,nord ovest,ordinario,standard,Beta,Milano,0.1,3,no,no,no,no
+14.81,sab,nord est,ordinario,standard,Alfa,Roma,1.0,1,no,no,no,no
+20.31,mer,nord ovest,ordinario,economy,Gamma,Catania,3.8,1,no,no,no,no
+9.89,gio,nord est,ordinario,standard,Alfa,Milano,1.1,3,no,si,no,no
+9.31,sab,nord ovest,ordinario,standard,Gamma,Bologna,2.5,2,no,si,no,no
+17.07,ven,nord est,picco,economy,Beta,Bologna,1.2,1,no,no,no,no
+7.0,mar,nord ovest,ordinario,standard,Alfa,Bologna,4.5,1,no,no,no,no
+15.04,lun,centro,ordinario,standard,Alfa,Roma,0.1,4,no,si,no,no
+18.03,mer,isole,ordinario,standard,Alfa,Roma,8.5,4,no,no,no,si
+8.1,gio,nord ovest,ordinario,express,Alfa,Catania,3.7,2,no,no,no,no
+16.61,mer,nord ovest,ordinario,economy,Gamma,Milano,1.7,1,no,si,no,no
+15.54,lun,nord est,ordinario,standard,Beta,Bologna,0.3,5,no,no,no,no
+19.38,mar,nord ovest,ordinario,express,Beta,Milano,0.5,2,no,no,no,no
+10.8,dom,isole,ordinario,standard,Alfa,Bologna,1.5,3,no,no,no,no
+12.15,dom,centro,ordinario,express,Beta,Catania,3.1,2,no,no,no,no
+11.25,lun,nord est,picco,standard,Beta,Bologna,1.7,2,si,no,no,si
+10.62,ven,isole,ordinario,standard,Gamma,Milano,1.3,1,no,si,no,no
+18.25,lun,nord ovest,picco,standard,Alfa,Bologna,4.2,2,si,no,no,si
+18.0,gio,sud,ordinario,economy,Beta,Roma,5.5,NA,no,no,no,si
+22.32,ven,centro,ordinario,standard,Gamma,Bologna,2.6,1,no,no,si,si
+20.15,ven,centro,ordinario,standard,Beta,Milano,1.0,2,si,no,no,si
+8.98,lun,nord est,ordinario,standard,Beta,Milano,2.2,1,no,si,no,no
+14.81,mar,sud,picco,economy,Beta,Bologna,2.2,1,no,si,si,si
+17.31,dom,nord est,ordinario,standard,Alfa,Roma,2.7,2,no,no,si,no
+19.8,gio,sud,ordinario,economy,Beta,Bologna,1.7,4,no,no,no,no
+13.28,gio,nord ovest,ordinario,economy,Gamma,Milano,NA,5,no,si,no,no
+7.85,mer,centro,ordinario,express,Gamma,Bologna,0.4,2,no,no,no,no
+12.09,gio,nord ovest,ordinario,economy,Beta,Catania,3.3,1,no,no,no,no
+10.51,mer,nord est,ordinario,express,Gamma,Catania,3.9,2,no,no,no,no
+15.29,ven,centro,ordinario,standard,Alfa,Catania,12.9,4,no,no,no,no
+18.6,lun,nord ovest,ordinario,standard,Gamma,Milano,1.8,2,no,no,si,no
+19.98,dom,centro,ordinario,standard,Alfa,Catania,5.9,NA,no,no,no,no
+15.31,sab,nord ovest,ordinario,economy,Beta,Roma,2.7,4,no,si,no,no
+15.93,gio,sud,picco,standard,Beta,Bologna,1.8,4,no,si,no,si
+16.85,gio,nord ovest,ordinario,economy,Alfa,Roma,0.9,3,no,no,no,no
+13.09,mer,sud,ordinario,standard,Alfa,Roma,1.5,NA,no,no,no,no
+17.68,sab,nord ovest,picco,standard,Alfa,Bologna,0.1,2,no,no,no,no
+22.62,lun,nord ovest,ordinario,express,Beta,Milano,1.3,5,no,no,no,si
+10.51,mer,isole,picco,standard,Alfa,Bologna,7.2,2,no,no,si,no
+19.81,mer,isole,ordinario,standard,Alfa,Milano,2.7,1,no,no,no,no
+18.53,sab,sud,picco,standard,Beta,Roma,1.7,4,no,si,no,si
+19.2,mar,sud,ordinario,standard,Alfa,Roma,1.3,2,no,no,no,no
+19.89,gio,nord ovest,ordinario,economy,Alfa,Bologna,1.0,NA,no,no,no,no
+23.98,gio,isole,ordinario,standard,Beta,Bologna,1.2,1,no,no,no,no
+14.32,sab,nord est,ordinario,standard,Alfa,Roma,0.8,3,no,no,no,no
+15.48,mar,nord ovest,picco,express,Gamma,Catania,3.4,2,no,no,no,no
+9.79,lun,centro,ordinario,economy,Beta,Bologna,2.6,NA,no,no,no,no
+14.66,mar,sud,ordinario,standard,Gamma,Catania,NA,1,no,no,no,si
+18.27,lun,isole,picco,standard,Gamma,Milano,5.3,4,no,si,si,si
+12.57,mer,nord est,ordinario,economy,Beta,Bologna,0.7,NA,no,si,no,no
+11.11,gio,centro,picco,standard,Beta,Milano,0.8,2,si,no,no,si
+11.68,dom,nord ovest,ordinario,standard,Beta,Roma,2.1,5,no,no,no,no
+8.33,dom,sud,ordinario,standard,Alfa,Roma,4.2,2,no,no,no,no
+23.98,lun,centro,picco,express,Beta,Bologna,2.4,5,no,no,no,si
+16.45,lun,isole,ordinario,economy,Gamma,Milano,0.3,3,si,si,si,si
+9.77,mar,sud,ordinario,standard,Alfa,Roma,3.0,5,no,no,no,si
+14.29,lun,centro,ordinario,standard,Alfa,Milano,1.9,3,si,no,no,si
+16.36,gio,sud,ordinario,express,Alfa,Bologna,1.0,4,no,no,no,si
+13.58,ven,nord ovest,picco,economy,Gamma,Catania,2.8,1,si,no,no,no
+13.22,gio,nord est,ordinario,standard,Gamma,Roma,1.0,3,no,no,no,no
+16.32,gio,nord ovest,ordinario,standard,Beta,Milano,NA,1,no,si,no,no
+10.51,mar,nord ovest,ordinario,express,Beta,Roma,0.1,3,no,no,no,no
+14.97,gio,nord ovest,ordinario,standard,Beta,Roma,1.9,2,no,no,no,no
+11.0,ven,nord ovest,ordinario,standard,Beta,Catania,8.6,1,no,si,no,no
+10.25,mar,nord ovest,picco,standard,Beta,Bologna,4.5,2,no,si,no,no
+16.65,mar,nord est,ordinario,economy,Alfa,Catania,NA,3,no,no,no,no
+10.76,ven,nord ovest,picco,standard,Beta,Catania,4.2,2,no,no,no,no
+12.33,gio,centro,ordinario,standard,Alfa,Milano,5.7,1,no,si,no,no
+14.76,mar,nord est,ordinario,economy,Alfa,Bologna,0.5,NA,no,si,no,no
+19.12,ven,nord ovest,picco,standard,Alfa,Roma,1.1,2,no,no,no,si
+13.59,mer,sud,ordinario,economy,Alfa,Bologna,5.4,3,no,no,no,no
+17.38,ven,centro,ordinario,economy,Beta,Roma,1.5,2,no,si,no,no
+8.55,dom,sud,ordinario,standard,Alfa,Milano,2.5,2,no,no,no,no
+10.22,mar,sud,ordinario,standard,Beta,Roma,4.1,3,no,no,no,no
+21.7,mer,nord est,picco,standard,Gamma,Milano,1.8,1,no,no,no,no
+15.21,gio,centro,picco,standard,Gamma,Bologna,2.0,2,no,no,si,no
+13.3,gio,nord est,picco,economy,Beta,Roma,NA,3,no,no,si,si
+9.98,mer,centro,ordinario,standard,Gamma,Catania,NA,3,no,si,no,no
+12.9,gio,sud,ordinario,standard,Beta,Roma,0.1,3,no,si,no,no
+15.94,ven,centro,ordinario,standard,Alfa,Catania,4.1,1,no,no,no,no
+13.78,lun,nord est,picco,standard,Gamma,Milano,0.9,1,no,no,si,no
+16.55,gio,sud,ordinario,standard,Alfa,Milano,5.9,3,no,si,no,si
+13.48,ven,centro,ordinario,standard,Alfa,Catania,4.9,2,no,no,no,no
+11.04,ven,nord ovest,ordinario,standard,Beta,Milano,1.1,3,si,no,no,si
+23.98,dom,centro,picco,express,Gamma,Bologna,1.4,1,no,no,no,si
+13.99,mar,nord ovest,ordinario,economy,Beta,Milano,0.3,4,no,no,no,no
+14.42,gio,sud,ordinario,express,Gamma,Bologna,1.7,2,no,no,no,si
+16.26,lun,nord est,ordinario,standard,Beta,Milano,5.6,3,no,no,no,no
+14.44,dom,nord est,ordinario,standard,Gamma,Bologna,2.6,1,no,si,no,no
+23.98,mer,nord est,ordinario,economy,Alfa,Roma,NA,1,no,no,no,no
+16.14,lun,isole,ordinario,standard,Beta,Bologna,5.2,2,no,si,no,no
+18.39,dom,centro,ordinario,standard,Alfa,Milano,0.3,2,no,no,si,no
+15.72,dom,sud,ordinario,standard,Alfa,Bologna,5.5,NA,no,no,no,si
+21.6,mer,centro,ordinario,standard,Gamma,Catania,7.9,3,no,si,no,no
+21.55,mer,isole,ordinario,standard,Beta,Catania,3.2,1,no,no,no,no
+14.88,mer,nord est,picco,standard,Alfa,Milano,2.2,2,si,no,no,si
+9.75,gio,centro,ordinario,express,Gamma,Milano,1.2,1,no,si,no,no
+16.98,dom,nord est,ordinario,standard,Beta,Milano,3.0,1,no,no,no,no
+6.51,lun,centro,picco,standard,Beta,Catania,4.1,1,no,si,no,no
+15.14,mar,nord ovest,picco,economy,Alfa,Milano,0.9,1,no,no,no,no
+19.22,mar,centro,ordinario,express,Beta,Catania,3.3,2,no,si,no,no
+15.52,dom,sud,picco,standard,Gamma,Milano,2.4,2,no,no,no,si
+10.99,sab,nord est,ordinario,economy,Alfa,Milano,2.1,3,no,no,no,no
+23.85,mer,nord ovest,ordinario,standard,Gamma,Milano,0.3,3,no,si,si,no
+18.03,sab,isole,ordinario,standard,Gamma,Milano,2.0,3,no,si,no,no
+10.69,lun,sud,ordinario,standard,Beta,Milano,0.3,1,no,si,no,no
+7.63,mar,nord est,ordinario,economy,Beta,Catania,NA,3,no,si,no,no
+9.97,mer,nord ovest,ordinario,standard,Alfa,Roma,1.9,1,no,no,no,no
+19.1,mer,nord ovest,ordinario,standard,Alfa,Bologna,NA,2,no,no,no,no
+13.68,dom,nord ovest,ordinario,express,Gamma,Milano,0.4,2,no,no,no,no
+17.39,mar,nord est,ordinario,standard,Gamma,Bologna,10.7,3,no,si,no,no
+14.87,mer,sud,picco,express,Gamma,Milano,3.4,1,no,no,no,si
+16.95,mar,nord ovest,picco,standard,Beta,Catania,5.7,2,no,si,si,no
+11.92,mer,nord ovest,ordinario,standard,Alfa,Roma,2.5,1,no,si,no,no
+21.27,sab,nord ovest,ordinario,express,Beta,Roma,NA,3,no,si,no,no
+13.25,dom,centro,ordinario,economy,Alfa,Roma,9.4,3,no,no,no,no
+14.13,gio,nord ovest,ordinario,standard,Beta,Roma,0.6,2,no,no,no,no
+16.15,lun,centro,picco,standard,Alfa,Roma,1.3,5,no,no,no,si
+17.85,mar,nord est,ordinario,economy,Beta,Roma,0.9,3,no,no,no,no
+14.0,sab,sud,ordinario,standard,Alfa,Catania,4.6,2,no,si,no,no
+12.61,gio,nord ovest,ordinario,standard,Alfa,Milano,2.9,2,no,no,no,no
+14.18,gio,nord est,ordinario,standard,Beta,Bologna,8.9,1,si,no,no,no
+23.98,mar,centro,ordinario,economy,Alfa,Bologna,3.5,2,no,no,no,no
+6.35,dom,sud,picco,economy,Alfa,Roma,3.3,1,si,no,no,no
+17.02,sab,centro,ordinario,express,Alfa,Bologna,4.7,3,si,no,no,si
+15.56,lun,nord ovest,picco,standard,Beta,Bologna,2.8,3,no,no,no,no
+10.03,mer,centro,picco,standard,Alfa,Roma,1.6,NA,no,no,no,si
+9.55,sab,isole,ordinario,express,Beta,Milano,0.1,2,no,si,no,no
+11.73,sab,nord ovest,ordinario,standard,Beta,Milano,2.7,2,no,si,no,no
+9.25,gio,nord est,ordinario,standard,Alfa,Bologna,0.5,3,no,no,no,no
+13.38,mer,sud,ordinario,standard,Alfa,Milano,2.0,2,no,si,si,no
+15.73,gio,nord est,ordinario,express,Gamma,Bologna,2.0,2,no,no,no,no
+15.37,mer,centro,picco,standard,Beta,Roma,0.2,NA,no,no,no,si
+7.27,ven,nord ovest,ordinario,standard,Alfa,Bologna,1.0,3,no,no,no,no
+8.79,mer,isole,ordinario,express,Beta,Roma,7.3,3,no,no,no,no
+22.09,mer,centro,ordinario,standard,Beta,Bologna,1.3,3,si,si,no,si
+9.38,lun,centro,ordinario,express,Beta,Milano,0.3,2,no,no,no,no
+11.5,ven,isole,picco,express,Beta,Milano,0.1,3,no,si,no,no
+20.74,ven,nord est,ordinario,standard,Beta,Bologna,1.7,NA,no,no,no,no
+11.49,mar,isole,ordinario,standard,Gamma,Catania,3.5,2,no,no,no,si
+14.25,gio,centro,ordinario,standard,Alfa,Milano,6.6,1,no,si,no,no
+19.12,mer,nord ovest,ordinario,standard,Beta,Milano,5.3,4,no,no,no,no
+20.44,gio,nord est,ordinario,standard,Alfa,Bologna,2.1,2,no,no,no,no
+17.16,gio,sud,ordinario,economy,Gamma,Catania,6.4,3,no,no,no,si
+12.29,ven,isole,ordinario,standard,Gamma,Catania,6.4,3,no,no,no,no
+5.29,lun,centro,picco,economy,Alfa,Bologna,1.9,2,no,no,no,no
+12.18,ven,sud,picco,standard,Alfa,Bologna,4.3,4,si,no,no,si
+15.84,mar,centro,ordinario,economy,Beta,Bologna,0.1,NA,no,no,no,no
+13.05,gio,sud,ordinario,express,Beta,Catania,10.1,4,no,si,no,no
+13.14,mer,centro,picco,standard,Alfa,Roma,1.1,2,si,no,no,no
+16.8,ven,centro,picco,standard,Gamma,Catania,4.4,3,no,no,no,si
+12.0,mar,nord ovest,ordinario,express,Gamma,Roma,2.1,4,no,no,no,no
+8.35,mer,centro,picco,economy,Beta,Bologna,1.3,4,si,no,no,si
+13.01,mar,centro,ordinario,standard,Alfa,Milano,1.7,4,no,no,no,no
+14.96,mar,isole,picco,standard,Alfa,Milano,NA,1,no,no,no,si
+17.13,lun,nord ovest,ordinario,express,Beta,Roma,0.5,1,no,no,no,no
+13.75,gio,centro,ordinario,express,Alfa,Bologna,1.8,4,no,no,no,no
+14.63,ven,nord ovest,picco,standard,Beta,Bologna,1.7,2,no,si,no,no
+10.21,gio,nord est,ordinario,express,Alfa,Milano,3.1,2,no,no,no,no
+12.48,dom,isole,picco,standard,Gamma,Milano,2.1,5,no,no,no,si
+12.01,dom,nord ovest,picco,standard,Beta,Roma,2.1,2,si,si,no,no
+10.93,gio,centro,picco,economy,Alfa,Milano,2.7,2,no,no,no,no
+13.11,mer,centro,ordinario,standard,Gamma,Roma,5.5,3,no,no,no,no
+20.58,mar,sud,ordinario,express,Beta,Roma,0.6,2,no,no,no,no
+12.59,lun,nord ovest,ordinario,economy,Beta,Catania,3.3,2,no,no,no,no
+14.45,sab,nord ovest,picco,standard,Gamma,Bologna,2.1,1,no,no,no,no
+6.59,dom,centro,ordinario,economy,Alfa,Bologna,2.0,3,no,no,no,no
+15.8,ven,sud,ordinario,standard,Gamma,Milano,3.0,1,no,no,no,no
+19.98,sab,centro,ordinario,standard,Alfa,Bologna,1.7,2,no,no,no,no
+14.92,gio,nord ovest,ordinario,standard,Beta,Roma,1.3,2,si,no,no,si
+16.34,mar,nord ovest,ordinario,standard,Gamma,Catania,7.1,2,si,no,no,si
+16.68,mer,isole,picco,economy,Beta,Catania,4.0,2,no,no,si,si
+19.51,gio,nord ovest,ordinario,standard,Alfa,Milano,3.9,1,no,no,no,no
+14.06,ven,sud,ordinario,standard,Beta,Roma,0.8,1,si,no,no,si
+14.14,sab,nord est,ordinario,express,Beta,Milano,1.0,3,no,si,no,no
+18.34,lun,nord ovest,picco,standard,Alfa,Milano,1.5,3,no,no,no,si
+12.5,gio,nord ovest,ordinario,standard,Beta,Milano,2.3,NA,no,no,no,no
+12.86,gio,isole,ordinario,standard,Gamma,Roma,0.6,3,no,no,no,no
+12.95,lun,nord ovest,ordinario,economy,Beta,Bologna,1.6,2,no,no,no,no
+15.36,lun,nord ovest,ordinario,express,Alfa,Roma,1.5,2,no,no,no,si
+13.28,lun,isole,picco,standard,Beta,Bologna,7.8,3,no,no,no,si
+20.33,ven,nord ovest,picco,standard,Beta,Bologna,2.9,4,no,no,si,si
+13.93,gio,nord ovest,ordinario,express,Alfa,Roma,3.1,3,no,si,no,no
+11.54,lun,isole,ordinario,standard,Beta,Milano,1.4,1,no,no,no,no
+20.27,dom,nord ovest,ordinario,express,Alfa,Bologna,2.7,4,no,si,no,no
+19.15,gio,sud,ordinario,standard,Alfa,Catania,5.4,NA,no,no,no,si
+22.34,gio,sud,ordinario,standard,Alfa,Milano,2.8,3,no,si,si,si
+18.05,mer,nord ovest,ordinario,standard,Alfa,Roma,7.1,1,no,no,si,no
+10.11,mar,isole,ordinario,economy,Beta,Milano,0.1,2,no,no,no,no
+21.64,lun,centro,ordinario,standard,Alfa,Bologna,3.3,1,no,no,no,no
+18.63,ven,isole,ordinario,express,Alfa,Bologna,3.3,2,si,no,no,si
+10.45,mar,sud,ordinario,economy,Gamma,Bologna,0.8,2,no,si,no,no
+12.96,lun,nord est,ordinario,express,Beta,Roma,4.8,1,si,no,no,no
+8.56,dom,nord est,ordinario,standard,Alfa,Roma,1.4,3,no,no,si,no
+15.35,mer,nord ovest,ordinario,standard,Gamma,Milano,1.9,4,no,no,no,si
+9.94,mar,centro,ordinario,standard,Gamma,Milano,5.4,3,no,no,no,no
+16.5,mer,nord est,ordinario,express,Alfa,Roma,0.9,2,no,no,no,no
+4.72,mar,sud,ordinario,standard,Gamma,Milano,NA,3,no,no,no,no
+19.0,mer,nord ovest,ordinario,standard,Alfa,Bologna,0.5,2,no,no,no,no
+20.96,dom,nord ovest,picco,standard,Gamma,Bologna,1.2,3,no,no,no,no
+15.52,mar,isole,ordinario,express,Beta,Roma,1.8,5,no,no,no,si
+8.88,mar,sud,picco,standard,Beta,Milano,1.3,3,no,no,no,no
+10.44,mer,centro,ordinario,express,Gamma,Bologna,0.8,4,no,no,no,no
+17.32,dom,nord ovest,ordinario,standard,Alfa,Bologna,0.4,3,no,no,no,no
+3.05,ven,nord est,ordinario,express,Beta,Catania,7.3,2,no,no,no,no
+17.14,lun,nord ovest,ordinario,economy,Alfa,Milano,1.1,1,no,si,no,no
+7.84,ven,sud,ordinario,standard,Beta,Roma,0.9,3,no,no,no,no
+12.08,lun,sud,picco,economy,Alfa,Catania,4.9,3,no,si,no,si
+11.71,sab,isole,picco,standard,Gamma,Milano,4.5,3,no,no,no,si
+14.02,sab,nord est,picco,standard,Alfa,Bologna,0.2,2,si,no,no,si
+16.23,gio,nord est,ordinario,standard,Beta,Bologna,0.3,4,no,no,no,si
+11.92,mer,sud,ordinario,economy,Gamma,Bologna,NA,3,si,no,no,si
+14.88,ven,nord ovest,ordinario,standard,Gamma,Roma,0.6,2,no,si,no,no
+7.95,dom,centro,ordinario,standard,Beta,Milano,4.9,2,no,no,no,no
+14.19,mar,nord ovest,picco,economy,Gamma,Bologna,3.1,5,no,no,no,no
+8.73,ven,centro,picco,standard,Beta,Roma,6.5,1,no,no,no,no
+13.9,gio,centro,ordinario,express,Alfa,Roma,3.0,3,no,no,no,no
+13.58,mar,nord ovest,picco,standard,Alfa,Milano,0.3,NA,no,no,no,no
+14.48,mar,nord est,ordinario,standard,Alfa,Milano,3.7,2,no,no,no,no
+14.37,mer,sud,ordinario,standard,Beta,Roma,3.4,2,no,no,no,no
+13.29,mer,centro,ordinario,standard,Gamma,Catania,7.6,4,si,no,no,no
+17.2,lun,nord est,picco,express,Alfa,Catania,2.4,3,no,no,no,si
+11.12,gio,sud,ordinario,economy,Gamma,Roma,0.6,2,no,si,no,no
+14.01,gio,sud,ordinario,economy,Beta,Bologna,1.8,3,no,si,no,no
+13.59,lun,sud,picco,express,Alfa,Roma,4.3,4,no,no,no,si
+17.42,lun,sud,ordinario,standard,Beta,Roma,4.2,2,si,no,no,si
+13.43,dom,centro,ordinario,economy,Alfa,Milano,0.5,5,no,si,no,no
+12.02,mer,centro,picco,standard,Alfa,Catania,7.1,2,no,si,si,si
+20.8,mar,isole,ordinario,standard,Beta,Roma,3.9,4,no,no,no,no
+12.25,gio,nord est,ordinario,express,Alfa,Catania,6.0,2,si,no,no,no
+8.18,sab,centro,ordinario,standard,Beta,Milano,3.4,2,no,si,no,no
+21.27,mar,isole,picco,standard,Gamma,Roma,1.4,1,no,no,no,si
+12.68,sab,nord ovest,ordinario,express,Beta,Catania,6.5,4,no,si,no,no
+14.25,mar,sud,ordinario,standard,Beta,Milano,2.7,4,no,si,no,si
+13.72,sab,nord est,picco,economy,Alfa,Roma,7.3,2,no,si,no,no
+13.77,gio,isole,ordinario,standard,Gamma,Bologna,4.0,5,no,no,si,no
+12.74,ven,centro,ordinario,express,Alfa,Milano,1.3,1,no,no,no,no
+6.98,gio,isole,ordinario,standard,Beta,Roma,0.1,2,no,no,no,no
+14.9,ven,nord est,ordinario,standard,Gamma,Milano,5.6,1,no,no,no,si
+23.65,lun,nord est,picco,express,Beta,Roma,5.7,1,no,no,no,no
+17.85,mar,centro,picco,standard,Alfa,Roma,2.4,NA,si,no,no,si
+15.54,sab,centro,ordinario,standard,Alfa,Bologna,NA,2,no,no,no,no
+12.57,mar,sud,picco,economy,Alfa,Roma,5.8,1,no,no,no,no
+9.51,ven,centro,ordinario,standard,Gamma,Milano,4.2,2,no,no,no,no
+10.71,dom,isole,ordinario,economy,Beta,Milano,0.4,2,no,si,no,no
+10.77,ven,nord ovest,picco,standard,Beta,Bologna,0.7,4,no,no,no,si
+9.14,ven,nord est,ordinario,economy,Beta,Bologna,0.7,3,si,no,no,no
+20.42,mar,centro,ordinario,economy,Beta,Bologna,1.8,1,no,no,no,no
+14.41,mer,sud,ordinario,standard,Beta,Milano,1.5,2,no,no,no,no
+11.3,ven,nord ovest,ordinario,standard,Alfa,Roma,0.8,4,no,no,no,no
+13.85,mar,nord ovest,ordinario,express,Alfa,Milano,1.8,3,no,no,si,no
+21.02,gio,centro,picco,economy,Gamma,Bologna,NA,2,no,no,no,no
+17.35,mer,centro,ordinario,economy,Alfa,Milano,2.3,2,si,no,no,no
+19.25,lun,nord ovest,ordinario,economy,Alfa,Milano,2.3,5,no,si,no,no
+11.4,lun,nord ovest,ordinario,economy,Beta,Roma,NA,3,si,no,no,si
+8.7,mar,nord est,ordinario,express,Gamma,Milano,1.9,2,no,si,no,no
+15.15,ven,sud,ordinario,economy,Gamma,Milano,0.3,4,no,no,no,si
+15.94,mar,centro,ordinario,standard,Beta,Roma,4.1,3,no,no,no,no
+18.2,mer,centro,ordinario,express,Gamma,Roma,0.4,NA,no,no,no,no
+8.9,lun,centro,ordinario,express,Gamma,Bologna,2.3,2,no,no,no,no
+13.24,ven,nord est,ordinario,standard,Alfa,Milano,5.6,1,no,no,no,no
+21.48,gio,nord ovest,picco,economy,Alfa,Catania,3.1,4,no,no,no,si
+8.37,mer,nord est,ordinario,express,Alfa,Bologna,0.1,1,si,si,no,no
+12.85,lun,nord est,ordinario,standard,Gamma,Milano,6.4,4,no,no,no,no
+13.3,mer,nord est,ordinario,standard,Alfa,Roma,3.3,2,si,no,no,no
+9.8,mar,nord est,picco,express,Beta,Roma,3.2,3,no,no,no,no
+18.55,dom,centro,ordinario,express,Alfa,Milano,8.3,2,no,no,no,no
+13.74,mar,nord ovest,ordinario,standard,Alfa,Catania,3.4,NA,no,no,no,no
+8.81,lun,nord est,ordinario,express,Gamma,Catania,6.8,2,no,no,no,no
+10.91,gio,nord ovest,ordinario,express,Gamma,Roma,4.1,1,si,no,si,si
+11.3,ven,centro,picco,express,Beta,Bologna,4.3,1,no,no,no,no
+21.82,mar,sud,ordinario,standard,Alfa,Milano,1.3,2,no,no,no,no
+13.01,ven,nord est,picco,express,Gamma,Roma,0.4,2,no,si,no,no
+11.7,lun,nord est,picco,express,Beta,Milano,1.4,2,no,no,no,no
+20.35,lun,centro,ordinario,standard,Alfa,Bologna,1.9,1,no,no,no,no
+15.83,dom,nord est,ordinario,economy,Alfa,Roma,2.3,3,no,si,no,no
+23.98,mar,nord ovest,picco,standard,Beta,Bologna,1.2,1,no,si,no,no
+12.41,mar,centro,ordinario,economy,Beta,Roma,1.4,3,no,no,no,no
+6.87,ven,nord est,ordinario,economy,Beta,Milano,2.7,3,no,no,no,no
+20.62,lun,nord est,ordinario,express,Gamma,Bologna,0.5,3,no,no,no,no
+12.51,gio,nord ovest,picco,standard,Alfa,Milano,0.6,2,no,no,no,no
+14.61,mar,nord est,ordinario,standard,Alfa,Roma,5.3,4,no,no,no,no
+13.93,mer,nord est,ordinario,standard,Beta,Roma,1.0,2,no,no,no,no
+11.87,lun,nord ovest,ordinario,express,Beta,Bologna,2.3,2,si,no,no,no
+17.73,lun,sud,ordinario,economy,Alfa,Milano,1.8,3,no,no,no,no
+11.43,ven,nord est,ordinario,express,Alfa,Milano,0.1,3,no,no,no,no
+16.43,ven,centro,picco,economy,Gamma,Catania,2.8,2,si,no,no,si
+13.41,lun,centro,ordinario,express,Beta,Milano,0.5,3,no,no,no,no
+17.19,mer,nord ovest,ordinario,economy,Gamma,Bologna,1.6,2,no,si,no,no
+22.49,gio,centro,picco,express,Alfa,Roma,7.9,1,no,no,no,no
+15.35,gio,sud,ordinario,standard,Beta,Roma,1.3,2,no,no,no,si
+13.2,lun,nord ovest,picco,standard,Gamma,Roma,0.1,2,no,no,si,no
+23.98,mar,nord est,ordinario,standard,Alfa,Roma,1.9,2,no,no,no,no
+22.55,mar,nord est,ordinario,standard,Gamma,Milano,0.3,2,no,no,no,no
+14.04,dom,nord est,ordinario,economy,Alfa,Milano,0.6,4,no,no,no,no
+18.58,mar,centro,ordinario,standard,Alfa,Milano,2.3,2,no,no,no,no
+16.51,sab,isole,ordinario,standard,Beta,Bologna,1.6,2,no,si,no,si
+13.81,lun,sud,ordinario,economy,Alfa,Milano,2.9,1,si,no,no,no
+11.06,mar,nord est,picco,express,Beta,Roma,0.5,2,no,no,no,no
+15.25,sab,nord ovest,ordinario,standard,Gamma,Bologna,1.7,2,no,si,no,no
+9.8,gio,sud,ordinario,express,Alfa,Bologna,2.0,4,no,si,no,si
+21.22,lun,nord ovest,picco,standard,Beta,Bologna,0.4,2,no,no,no,no
+21.78,gio,nord ovest,ordinario,standard,Alfa,Milano,3.4,3,no,no,no,no
+11.35,mar,sud,ordinario,economy,Alfa,Roma,0.2,4,no,no,no,no
+11.94,mar,nord ovest,ordinario,express,Beta,Bologna,4.3,2,si,no,no,no
+9.48,mar,centro,ordinario,economy,Alfa,Roma,4.5,3,no,no,no,no
+20.17,dom,nord est,picco,economy,Alfa,Bologna,0.4,2,no,no,no,no
+15.04,ven,sud,ordinario,standard,Beta,Bologna,NA,2,no,no,no,si
+10.03,mar,sud,ordinario,economy,Beta,Roma,2.3,2,no,si,no,no
+13.22,ven,nord ovest,picco,standard,Beta,Bologna,11.9,4,no,no,no,no
+18.88,sab,nord est,ordinario,economy,Beta,Milano,2.6,1,no,si,si,no
+16.04,mer,isole,ordinario,standard,Gamma,Roma,2.0,1,no,no,no,no
+19.52,sab,nord ovest,picco,standard,Beta,Bologna,6.2,1,no,no,no,no
+5.38,dom,nord est,ordinario,economy,Alfa,Roma,1.2,2,no,no,no,no
+16.11,ven,sud,picco,economy,Beta,Roma,3.4,2,no,si,no,si
+16.62,ven,nord ovest,ordinario,standard,Beta,Bologna,1.2,2,no,si,no,no
+16.22,gio,nord ovest,ordinario,standard,Beta,Roma,1.7,1,si,no,no,si
+15.9,mer,isole,ordinario,standard,Alfa,Milano,4.5,1,si,no,si,si
+12.47,mer,nord est,ordinario,standard,Beta,Roma,0.8,2,no,no,no,no
+13.82,mar,centro,ordinario,economy,Alfa,Roma,2.5,3,no,no,no,no
+11.37,mar,sud,picco,standard,Alfa,Roma,1.2,2,no,no,no,no
+8.96,sab,nord est,ordinario,express,Alfa,Roma,0.1,4,si,no,no,si
+21.32,mar,centro,ordinario,express,Alfa,Milano,4.3,2,no,no,no,no
+11.26,ven,nord est,ordinario,economy,Alfa,Roma,2.6,1,si,no,no,no
+12.19,mar,nord est,picco,standard,Alfa,Bologna,0.3,1,no,si,no,no
+1.69,sab,nord est,ordinario,standard,Alfa,Bologna,3.3,1,no,no,no,no
+17.38,sab,nord ovest,picco,standard,Beta,Roma,2.8,1,si,no,no,si
+13.55,lun,nord est,ordinario,economy,Alfa,Bologna,0.8,3,no,no,si,si
+12.19,lun,centro,ordinario,standard,Alfa,Catania,2.8,4,no,no,si,si
+13.47,ven,sud,ordinario,economy,Alfa,Milano,2.8,5,no,si,no,no
+13.24,mer,nord est,ordinario,standard,Beta,Bologna,0.3,3,no,si,no,no
+11.34,lun,sud,ordinario,express,Beta,Roma,3.0,2,no,no,no,si
+11.51,gio,sud,ordinario,express,Beta,Roma,3.0,1,no,si,no,no
+16.46,sab,isole,ordinario,economy,Gamma,Milano,0.1,1,si,no,no,si
+18.59,ven,centro,picco,standard,Gamma,Catania,3.1,1,no,no,no,si
+19.17,lun,nord est,ordinario,standard,Alfa,Milano,0.6,2,no,no,no,no
+14.84,gio,centro,ordinario,economy,Beta,Catania,7.5,2,no,si,no,no
+19.79,lun,nord est,ordinario,standard,Gamma,Catania,3.2,3,no,no,no,no
+19.32,ven,nord ovest,ordinario,standard,Alfa,Catania,3.2,2,no,si,no,no
+20.17,sab,sud,ordinario,economy,Alfa,Milano,0.3,3,no,si,si,no
+18.79,lun,nord ovest,ordinario,economy,Beta,Roma,5.8,2,no,no,no,no
+8.55,mer,sud,ordinario,standard,Gamma,Milano,1.3,5,no,no,no,no
+15.01,mar,nord ovest,picco,standard,Alfa,Roma,3.7,3,no,no,no,si
+16.44,gio,sud,picco,standard,Gamma,Milano,0.5,1,no,no,no,no
+21.23,mar,sud,picco,standard,Gamma,Catania,3.6,2,no,si,no,si
+12.79,mar,nord est,ordinario,standard,Alfa,Milano,1.3,2,no,no,no,no
+16.76,lun,centro,ordinario,standard,Gamma,Milano,0.6,2,no,no,no,no
+15.51,mer,nord ovest,picco,standard,Gamma,Roma,0.5,2,no,no,no,no
+8.18,ven,nord ovest,ordinario,economy,Gamma,Roma,1.6,2,no,no,no,no
+12.48,mer,centro,ordinario,standard,Alfa,Milano,2.2,1,si,si,no,no
+10.16,ven,centro,picco,standard,Alfa,Roma,2.3,2,no,no,no,no
+23.45,ven,nord est,picco,standard,Beta,Milano,2.7,NA,no,no,no,si
+16.63,lun,nord ovest,ordinario,standard,Alfa,Milano,1.4,2,no,no,no,no
+19.84,dom,nord ovest,picco,standard,Beta,Roma,1.7,4,si,si,no,si
+16.6,sab,centro,ordinario,standard,Beta,Roma,4.2,2,no,si,no,no
+17.22,mer,centro,ordinario,standard,Beta,Milano,3.4,1,si,no,no,no
+19.81,sab,isole,ordinario,express,Alfa,Milano,0.1,2,no,no,no,si
+12.64,mar,sud,ordinario,standard,Gamma,Bologna,4.9,2,no,no,si,no
+10.38,lun,centro,ordinario,economy,Alfa,Bologna,0.4,1,no,no,no,no
+11.2,sab,nord ovest,ordinario,economy,Beta,Milano,3.3,NA,si,no,si,si
+19.24,lun,sud,ordinario,standard,Alfa,Bologna,3.0,2,no,si,no,no
+15.0,lun,nord ovest,ordinario,economy,Alfa,Roma,1.7,2,no,si,no,no
+11.29,ven,isole,ordinario,express,Beta,Milano,1.6,4,no,no,no,no
+9.29,ven,isole,picco,standard,Beta,Bologna,1.8,1,no,no,no,no
+12.23,mer,nord ovest,ordinario,standard,Beta,Bologna,4.6,2,no,no,no,no
+16.3,ven,sud,ordinario,express,Beta,Roma,2.7,2,no,no,no,si
+14.68,dom,sud,picco,economy,Gamma,Roma,3.0,3,no,no,si,si
+12.19,sab,nord ovest,ordinario,standard,Beta,Milano,0.5,2,no,no,no,no
+10.37,mar,nord est,picco,express,Alfa,Milano,1.0,2,no,no,no,no
+12.7,mar,nord ovest,ordinario,standard,Beta,Roma,1.2,4,no,no,no,no
+21.03,ven,nord ovest,picco,standard,Alfa,Milano,1.7,2,no,no,no,si
+23.98,mar,sud,picco,standard,Beta,Roma,0.9,1,no,si,no,si
+15.72,ven,sud,ordinario,economy,Beta,Catania,4.1,2,no,si,no,si
+21.41,gio,nord est,ordinario,economy,Alfa,Milano,NA,2,no,no,no,no
+15.29,sab,nord ovest,ordinario,standard,Beta,Roma,0.8,1,no,no,no,no
+9.36,mar,isole,ordinario,economy,Alfa,Milano,2.9,2,no,no,no,no
+13.34,lun,nord est,picco,standard,Gamma,Milano,1.0,4,no,si,no,no
+9.47,mer,nord est,ordinario,standard,Gamma,Milano,3.8,2,no,no,no,no
+16.14,mar,nord ovest,ordinario,express,Beta,Roma,3.3,2,no,no,si,no
+15.01,sab,nord ovest,ordinario,economy,Alfa,Roma,0.6,2,no,no,no,no
+5.84,gio,centro,ordinario,economy,Alfa,Catania,5.0,3,no,si,no,no
+10.37,dom,sud,ordinario,express,Alfa,Milano,1.5,3,no,no,no,no
+22.05,gio,nord ovest,ordinario,standard,Alfa,Milano,1.9,3,no,no,no,no
+12.16,gio,nord est,picco,economy,Alfa,Milano,4.1,4,no,no,no,no
+15.18,mar,centro,picco,standard,Beta,Milano,3.5,4,no,no,no,si
+12.94,mer,nord est,picco,economy,Beta,Milano,2.7,4,no,no,no,no
+11.01,sab,isole,picco,standard,Gamma,Catania,3.4,4,no,no,no,si
+15.66,mer,nord ovest,ordinario,economy,Gamma,Milano,4.4,1,no,si,no,no
+12.33,mar,nord ovest,ordinario,economy,Alfa,Bologna,4.3,4,no,no,no,no
+11.64,gio,nord ovest,ordinario,express,Alfa,Roma,8.6,1,no,no,no,no
+13.92,mar,nord est,picco,standard,Alfa,Roma,0.5,1,no,si,no,no
+6.07,lun,isole,ordinario,standard,Alfa,Milano,5.1,2,no,no,no,no
+6.9,sab,nord est,picco,standard,Alfa,Bologna,5.3,2,no,no,no,no
+6.33,lun,sud,ordinario,standard,Alfa,Catania,4.7,4,no,no,no,si
+19.13,sab,sud,picco,express,Gamma,Milano,0.3,2,no,no,no,si
+16.39,mer,nord ovest,ordinario,standard,Alfa,Roma,1.0,4,no,no,no,no
+14.37,sab,nord est,picco,standard,Gamma,Milano,3.5,3,no,no,no,no
+16.26,ven,centro,ordinario,economy,Alfa,Milano,3.8,2,si,no,no,si
+17.48,ven,centro,ordinario,standard,Beta,Bologna,2.3,3,no,si,no,no
+3.93,sab,nord est,ordinario,standard,Beta,Milano,1.4,1,no,si,no,no
+6.43,mer,sud,ordinario,standard,Beta,Roma,1.4,1,no,no,no,no
+14.94,ven,nord ovest,picco,economy,Alfa,Milano,2.3,2,si,no,no,si
+18.56,ven,sud,ordinario,standard,Beta,Catania,7.4,2,no,no,no,si
+17.17,ven,nord est,ordinario,express,Alfa,Roma,2.1,2,no,no,no,no
+8.23,mar,nord ovest,ordinario,economy,Alfa,Milano,1.2,2,no,no,si,no
+14.13,sab,nord ovest,ordinario,standard,Beta,Roma,0.9,3,no,no,no,no
+18.02,lun,nord est,picco,economy,Gamma,Roma,3.2,NA,no,no,no,no
+14.04,mar,isole,ordinario,standard,Alfa,Milano,1.2,NA,no,no,no,no
+11.36,mer,centro,picco,express,Alfa,Catania,5.8,2,no,no,no,no
+11.79,mar,centro,picco,standard,Beta,Milano,5.0,3,no,no,no,no
+18.84,mer,nord ovest,picco,express,Beta,Bologna,0.5,2,no,no,no,no
+8.45,gio,nord est,ordinario,express,Beta,Roma,3.9,3,no,no,no,no
+11.6,mer,nord ovest,picco,standard,Gamma,Catania,3.3,1,si,no,no,no
+18.33,dom,nord est,ordinario,standard,Gamma,Milano,2.2,3,no,no,no,no
+11.05,gio,nord est,ordinario,economy,Alfa,Roma,1.8,1,no,no,no,no
+2.33,lun,nord est,ordinario,standard,Alfa,Roma,2.7,NA,no,no,no,no
+15.89,gio,centro,picco,standard,Beta,Milano,1.9,2,no,si,no,no
+12.78,mer,nord ovest,ordinario,standard,Alfa,Milano,3.1,2,no,no,no,no
+7.73,gio,sud,ordinario,standard,Alfa,Bologna,0.9,1,no,no,no,no
+8.51,mer,nord ovest,ordinario,standard,Beta,Bologna,4.2,1,no,no,no,no
+16.62,lun,nord ovest,ordinario,standard,Beta,Milano,2.3,2,no,no,no,no
+17.82,mar,nord ovest,ordinario,standard,Gamma,Catania,7.1,3,no,no,no,no
+9.47,gio,isole,ordinario,standard,Beta,Roma,0.1,5,si,si,no,no
+16.32,ven,isole,ordinario,express,Gamma,Roma,NA,3,no,no,no,si
+12.93,mer,nord est,picco,standard,Gamma,Roma,NA,2,no,no,no,no
+14.44,mar,nord est,ordinario,express,Beta,Catania,4.6,3,no,si,no,si
+17.76,ven,nord ovest,ordinario,standard,Beta,Bologna,0.7,2,no,si,si,si
+7.73,lun,nord ovest,ordinario,economy,Alfa,Roma,5.9,2,no,no,no,no
+11.86,lun,centro,picco,economy,Beta,Milano,2.9,2,no,no,no,no
+23.98,lun,centro,ordinario,economy,Beta,Milano,1.8,1,no,no,no,no
+8.94,mer,nord est,ordinario,standard,Alfa,Milano,0.1,2,no,no,no,no
+15.21,mer,sud,ordinario,standard,Gamma,Milano,4.5,2,si,si,no,si
+9.62,gio,centro,picco,standard,Gamma,Bologna,1.3,5,si,no,no,si
+18.02,mar,centro,ordinario,economy,Alfa,Catania,11.5,2,no,si,no,no
+16.3,lun,sud,ordinario,standard,Beta,Bologna,0.9,1,no,no,no,no
+11.21,dom,centro,ordinario,economy,Beta,Bologna,3.1,NA,no,no,no,no
+14.28,gio,nord ovest,ordinario,standard,Gamma,Milano,1.7,2,si,no,no,no
+16.67,sab,centro,ordinario,standard,Beta,Roma,2.0,1,si,no,no,si
+19.73,gio,centro,ordinario,economy,Alfa,Roma,1.5,1,no,no,no,no
+16.46,ven,sud,ordinario,express,Alfa,Roma,1.1,1,no,no,no,no
+20.16,sab,nord est,ordinario,economy,Gamma,Bologna,5.3,1,no,no,no,no
+15.63,mer,isole,ordinario,economy,Alfa,Catania,6.9,1,no,no,no,no
+19.39,gio,sud,ordinario,standard,Gamma,Roma,NA,4,no,si,no,si
+16.38,mer,isole,ordinario,economy,Beta,Milano,5.7,3,no,no,no,si
+15.31,gio,nord ovest,picco,standard,Beta,Bologna,0.8,3,no,si,si,si
+16.89,ven,nord ovest,picco,economy,Beta,Milano,3.6,1,no,si,no,no
+16.91,mer,nord est,picco,express,Gamma,Bologna,3.2,4,no,no,no,no
+15.06,lun,nord est,ordinario,standard,Alfa,Catania,3.7,2,no,no,no,si
+10.29,dom,nord ovest,ordinario,standard,Alfa,Milano,0.8,5,no,no,no,no
+13.44,gio,nord ovest,ordinario,economy,Beta,Roma,0.8,NA,no,no,no,no
+19.6,sab,isole,ordinario,standard,Beta,Bologna,NA,1,no,si,no,no
+14.89,mer,centro,ordinario,standard,Alfa,Roma,1.3,2,no,no,no,no
+11.15,sab,nord est,ordinario,standard,Alfa,Roma,0.9,2,no,no,no,no
+12.77,dom,nord est,ordinario,standard,Alfa,Milano,3.4,3,no,no,no,no
+19.68,ven,sud,ordinario,express,Alfa,Milano,1.4,4,si,si,no,si
+8.58,mer,nord ovest,ordinario,standard,Beta,Milano,1.3,2,si,no,no,no
+7.83,ven,centro,picco,standard,Gamma,Milano,2.2,1,no,no,si,si
+11.43,lun,isole,ordinario,standard,Beta,Bologna,4.9,4,no,no,no,si
+10.59,mar,centro,ordinario,economy,Gamma,Bologna,1.2,4,no,no,no,no
+18.4,gio,nord ovest,ordinario,standard,Alfa,Bologna,1.1,3,no,no,no,no
+15.5,mar,centro,ordinario,standard,Alfa,Milano,1.8,3,no,no,no,no
+17.12,mar,centro,ordinario,economy,Beta,Milano,4.2,4,no,no,no,si
+12.92,gio,nord est,ordinario,standard,Alfa,Milano,1.0,3,no,no,no,no
+17.58,mer,isole,picco,express,Beta,Bologna,1.1,2,si,no,no,si
+13.81,mer,sud,ordinario,standard,Alfa,Roma,2.8,2,no,no,no,no
+10.32,mar,sud,ordinario,express,Beta,Milano,0.1,5,no,no,no,si
+10.89,mer,nord ovest,ordinario,standard,Beta,Roma,2.4,2,no,no,si,no
+17.02,mer,sud,ordinario,economy,Beta,Milano,1.8,2,no,si,no,no
+16.71,sab,centro,ordinario,standard,Alfa,Milano,2.4,3,no,no,no,no
+11.81,mar,sud,ordinario,economy,Alfa,Milano,4.1,2,si,no,no,no
+18.55,mar,nord est,ordinario,standard,Gamma,Milano,2.6,2,no,no,no,no
+16.37,ven,nord ovest,ordinario,standard,Beta,Catania,3.0,2,no,no,si,si
+13.07,mer,nord ovest,ordinario,standard,Alfa,Catania,5.5,2,no,si,no,no
+9.38,gio,centro,ordinario,standard,Alfa,Bologna,2.3,2,no,no,no,no
+20.31,dom,centro,ordinario,economy,Beta,Catania,3.5,2,si,si,no,no
+15.87,dom,centro,ordinario,standard,Gamma,Milano,1.5,3,no,no,no,no
+17.97,dom,centro,ordinario,express,Gamma,Milano,1.8,2,no,si,no,no
+10.69,mer,nord ovest,ordinario,standard,Gamma,Milano,3.4,3,no,no,no,no
+15.64,lun,sud,ordinario,express,Alfa,Catania,7.1,2,no,no,no,no
+18.16,dom,nord ovest,ordinario,economy,Beta,Roma,3.8,1,no,no,no,no
+15.39,mar,centro,ordinario,standard,Beta,Catania,5.6,4,no,no,no,no
+14.42,gio,sud,ordinario,standard,Beta,Roma,5.5,2,no,no,no,no
+9.45,mer,nord ovest,ordinario,economy,Beta,Bologna,1.7,3,no,si,no,no
+19.8,gio,nord ovest,ordinario,standard,Gamma,Catania,4.2,3,no,si,si,si
+17.7,mer,nord est,ordinario,standard,Beta,Roma,1.9,5,no,no,no,no
+11.7,sab,nord ovest,ordinario,standard,Alfa,Milano,0.9,2,si,no,no,no
+6.96,sab,centro,picco,standard,Alfa,Catania,4.5,5,no,si,no,si
+19.0,mar,nord ovest,ordinario,standard,Gamma,Roma,0.3,3,no,no,no,no
+10.01,sab,sud,ordinario,economy,Gamma,Catania,6.9,1,no,no,no,no
+13.29,gio,centro,ordinario,standard,Gamma,Bologna,2.6,3,no,no,no,no
+13.81,sab,nord ovest,ordinario,standard,Beta,Milano,5.8,2,no,no,no,no
+23.75,lun,nord ovest,ordinario,standard,Beta,Roma,2.3,2,no,no,no,no
+16.34,mar,sud,ordinario,standard,Gamma,Bologna,1.0,3,no,si,no,si
+21.62,ven,nord ovest,picco,express,Beta,Catania,3.0,1,si,si,no,si
+16.01,mer,sud,ordinario,economy,Alfa,Bologna,2.7,1,no,si,no,no
+11.3,ven,sud,ordinario,standard,Alfa,Roma,2.6,2,no,no,no,no
+19.56,dom,nord ovest,ordinario,express,Alfa,Bologna,0.6,2,no,si,no,no
+23.23,ven,nord est,ordinario,standard,Beta,Bologna,1.3,2,no,no,no,no
+12.63,mer,centro,ordinario,standard,Alfa,Milano,1.1,2,no,no,no,no
+12.62,mer,centro,ordinario,standard,Gamma,Roma,5.6,1,no,si,no,no
+19.54,mer,nord ovest,picco,standard,Gamma,Milano,6.0,2,no,no,no,no
+22.72,mer,nord ovest,ordinario,standard,Alfa,Milano,1.2,4,no,no,no,no
+13.11,lun,nord ovest,ordinario,standard,Beta,Bologna,1.9,1,no,si,no,no
+11.92,mar,centro,picco,standard,Beta,Roma,2.4,1,no,si,no,no
+13.79,ven,nord est,ordinario,standard,Alfa,Roma,1.8,4,no,no,no,no
+13.25,ven,nord est,ordinario,standard,Alfa,Bologna,1.3,2,no,no,no,no
+11.7,gio,sud,ordinario,express,Gamma,Bologna,2.6,2,no,no,no,no
+16.61,dom,nord ovest,ordinario,standard,Gamma,Bologna,5.3,3,no,no,no,no
+13.98,mar,centro,ordinario,standard,Alfa,Bologna,0.8,3,no,si,no,no
+12.57,gio,centro,picco,standard,Beta,Roma,2.3,4,no,no,no,no
+17.47,lun,nord est,picco,standard,Gamma,Bologna,2.6,3,no,si,no,no
+7.54,mer,nord est,ordinario,economy,Gamma,Milano,0.4,2,si,no,no,no
+20.91,mar,centro,ordinario,economy,Alfa,Roma,5.0,2,no,si,no,no
+21.56,gio,isole,ordinario,express,Gamma,Milano,1.8,4,no,no,no,no
+17.11,dom,nord est,ordinario,standard,Beta,Roma,1.5,2,si,no,no,no
+12.47,lun,centro,ordinario,standard,Beta,Milano,0.8,3,no,no,si,no
+10.67,mar,isole,ordinario,standard,Beta,Bologna,4.9,3,no,si,no,no
+11.03,mer,sud,ordinario,standard,Beta,Bologna,2.7,5,no,no,no,si
+16.77,mar,nord est,ordinario,standard,Gamma,Milano,6.3,2,no,no,no,no
+12.73,mar,centro,ordinario,standard,Beta,Roma,0.7,5,no,no,no,no
+17.86,dom,isole,ordinario,standard,Beta,Catania,4.7,5,no,no,no,si
+14.11,sab,nord ovest,ordinario,standard,Alfa,Bologna,1.1,2,no,si,no,no
+16.24,ven,sud,ordinario,economy,Beta,Milano,3.3,2,no,si,no,no
+20.13,ven,nord ovest,picco,standard,Alfa,Bologna,2.4,4,si,no,no,si
+15.94,mar,nord ovest,ordinario,standard,Beta,Bologna,1.2,3,si,si,no,si
+10.23,sab,nord ovest,ordinario,standard,Alfa,Catania,4.3,2,no,si,no,no
+13.52,ven,centro,picco,express,Alfa,Catania,3.5,3,no,si,no,si
+5.66,dom,sud,ordinario,standard,Alfa,Bologna,2.5,NA,no,no,no,no
+15.53,mar,nord ovest,ordinario,standard,Alfa,Catania,4.8,3,no,si,no,no
+4.92,sab,nord ovest,ordinario,express,Alfa,Bologna,2.1,2,no,no,no,no
+12.24,lun,nord ovest,ordinario,economy,Alfa,Bologna,1.7,2,no,no,no,no
+11.12,mar,nord ovest,ordinario,express,Alfa,Roma,0.4,2,si,no,no,si
+12.91,mer,sud,ordinario,economy,Gamma,Catania,3.5,2,no,no,no,no
+18.96,sab,centro,picco,economy,Alfa,Roma,1.8,3,no,no,no,no
+13.58,mer,centro,picco,standard,Gamma,Bologna,3.8,1,no,no,no,no
+14.26,mar,nord est,ordinario,economy,Beta,Catania,NA,2,no,no,no,no
+7.86,lun,nord ovest,picco,standard,Alfa,Bologna,0.5,4,si,no,no,si
+14.88,mer,nord ovest,ordinario,standard,Beta,Catania,6.1,3,no,si,no,si
+17.67,ven,nord est,picco,standard,Alfa,Roma,7.1,2,no,no,si,si
+9.07,ven,nord ovest,picco,standard,Alfa,Roma,0.8,2,no,no,no,no
+11.67,ven,sud,ordinario,economy,Beta,Roma,0.6,2,no,no,no,no
+3.4,mer,isole,ordinario,standard,Gamma,Milano,1.5,3,no,no,no,no
+18.48,mar,nord ovest,ordinario,express,Beta,Roma,0.5,2,si,no,no,si
+15.37,sab,sud,ordinario,standard,Gamma,Catania,3.4,4,si,no,no,si
+6.82,sab,centro,ordinario,economy,Gamma,Roma,NA,3,no,no,no,no
+17.2,mar,centro,ordinario,economy,Beta,Milano,1.2,1,no,si,no,no
+11.7,gio,centro,ordinario,economy,Beta,Roma,3.7,1,no,no,si,no
+9.91,sab,sud,ordinario,express,Gamma,Milano,5.4,2,no,no,no,no
+22.38,mer,nord ovest,ordinario,economy,Alfa,Bologna,0.6,1,no,no,no,no
+14.66,lun,sud,ordinario,economy,Alfa,Milano,0.1,4,no,si,no,no
+10.59,ven,centro,picco,express,Alfa,Roma,1.1,2,no,no,no,no
+6.26,mer,isole,picco,express,Gamma,Roma,NA,4,no,no,no,no
+17.1,mer,nord ovest,ordinario,economy,Alfa,Roma,8.1,5,no,no,no,no
+12.94,gio,isole,ordinario,express,Beta,Roma,2.7,2,no,no,no,no
+8.27,ven,sud,ordinario,standard,Beta,Milano,4.6,1,no,no,no,no
+14.05,gio,isole,ordinario,standard,Beta,Milano,0.6,1,no,no,no,no
+10.2,mer,nord ovest,ordinario,economy,Beta,Roma,1.1,3,no,no,no,no
+16.29,lun,nord est,ordinario,standard,Beta,Bologna,1.2,4,no,no,no,si
+18.25,ven,centro,ordinario,express,Gamma,Milano,8.1,4,no,si,no,si
+13.81,sab,sud,ordinario,standard,Alfa,Milano,1.2,NA,si,si,no,si
+16.43,mar,nord ovest,ordinario,economy,Beta,Bologna,1.1,3,no,no,no,no
+16.83,gio,sud,ordinario,standard,Beta,Roma,1.1,3,no,no,no,si
+20.4,gio,nord est,picco,standard,Beta,Catania,3.5,5,no,no,no,si
+16.08,ven,nord ovest,ordinario,standard,Gamma,Roma,1.7,3,no,no,no,no
+9.47,dom,nord ovest,ordinario,economy,Alfa,Roma,5.5,3,no,no,no,no
+19.59,gio,centro,ordinario,standard,Alfa,Milano,6.7,3,si,no,no,no
+12.79,mer,nord est,picco,express,Alfa,Roma,0.8,NA,no,si,no,no
+13.43,mar,nord est,ordinario,standard,Beta,Bologna,4.0,2,no,no,no,no
+15.52,lun,centro,ordinario,economy,Beta,Milano,1.3,1,no,no,no,no
+16.27,ven,nord est,picco,standard,Beta,Milano,3.5,5,si,si,no,si
+12.44,lun,sud,ordinario,express,Beta,Bologna,2.5,1,no,no,no,no
+13.61,ven,isole,ordinario,standard,Alfa,Milano,2.4,3,no,no,no,no
+15.06,mer,nord ovest,ordinario,economy,Beta,Milano,0.3,1,no,si,no,no
+9.95,dom,nord ovest,ordinario,standard,Alfa,Milano,3.6,3,no,si,no,no
+7.3,lun,nord ovest,picco,standard,Gamma,Milano,1.7,1,no,no,no,no
+14.36,ven,isole,ordinario,standard,Alfa,Milano,6.5,1,no,no,no,no
+14.85,lun,sud,ordinario,express,Gamma,Milano,0.9,2,no,no,no,no
+12.0,lun,nord est,ordinario,economy,Alfa,Bologna,8.2,1,no,no,no,no
+11.56,lun,centro,ordinario,economy,Beta,Milano,0.7,2,no,no,no,no
+13.35,mer,sud,ordinario,standard,Beta,Roma,7.2,1,no,no,no,no
+13.8,mer,nord ovest,ordinario,standard,Gamma,Catania,4.7,4,no,no,no,no
+12.71,lun,nord est,ordinario,express,Gamma,Milano,0.1,1,no,si,si,no
+13.55,mer,nord ovest,picco,express,Gamma,Roma,1.8,2,si,no,no,no
+13.79,mar,nord ovest,picco,express,Beta,Roma,11.6,3,no,no,no,no
+10.56,dom,centro,picco,standard,Alfa,Milano,0.7,3,no,no,no,no
+4.82,gio,nord est,ordinario,standard,Gamma,Roma,2.2,1,no,no,no,no
+11.46,mer,nord est,ordinario,economy,Beta,Bologna,1.7,4,no,si,no,no
+14.65,gio,sud,ordinario,express,Beta,Roma,3.1,NA,si,si,no,si
+3.16,mer,nord est,ordinario,standard,Alfa,Catania,3.8,2,no,no,no,no
+9.4,gio,isole,ordinario,economy,Alfa,Milano,0.1,3,no,no,no,no
+5.46,gio,sud,ordinario,standard,Gamma,Bologna,2.3,2,si,no,no,si
+12.06,gio,centro,picco,standard,Gamma,Milano,5.9,2,no,no,si,no
+16.04,mer,isole,ordinario,express,Beta,Bologna,6.6,2,no,no,no,no
+15.9,ven,centro,ordinario,economy,Beta,Milano,1.5,1,no,si,no,no
+16.7,mer,sud,ordinario,express,Alfa,Roma,0.8,4,no,si,no,si
+20.6,lun,nord est,picco,economy,Beta,Catania,3.9,4,si,si,no,si
+13.93,gio,nord ovest,ordinario,standard,Alfa,Milano,1.7,5,si,no,no,no
+17.52,dom,nord est,ordinario,economy,Gamma,Catania,4.6,3,si,no,no,si
+18.56,mer,sud,picco,economy,Gamma,Catania,4.4,2,si,no,si,si
+8.67,gio,nord ovest,ordinario,standard,Beta,Bologna,4.0,4,si,si,no,no
+18.57,mar,sud,ordinario,standard,Gamma,Catania,3.7,NA,no,no,no,si
+17.75,gio,nord ovest,ordinario,standard,Gamma,Bologna,0.6,2,no,no,no,no
+14.16,mer,nord ovest,ordinario,express,Alfa,Catania,6.3,2,no,no,si,si
+18.24,dom,nord ovest,ordinario,economy,Alfa,Roma,3.4,5,no,no,no,si
+17.27,mer,centro,ordinario,standard,Alfa,Milano,2.0,2,no,no,no,no
+14.83,ven,sud,ordinario,express,Gamma,Roma,2.7,1,no,no,si,si
+15.84,mer,sud,ordinario,standard,Beta,Roma,2.7,5,no,no,no,si
+17.99,ven,centro,ordinario,standard,Beta,Roma,2.8,4,no,no,no,no
+17.25,lun,centro,ordinario,standard,Beta,Roma,0.7,1,no,si,no,no
+8.69,lun,sud,ordinario,economy,Gamma,Roma,2.5,5,no,no,no,no
+18.07,mer,nord ovest,ordinario,express,Alfa,Bologna,3.3,3,no,si,no,no
+18.72,mar,sud,picco,standard,Alfa,Catania,2.4,3,no,si,si,si
+17.88,gio,nord ovest,picco,standard,Alfa,Roma,1.5,2,no,no,no,no
+14.02,sab,nord ovest,ordinario,standard,Gamma,Roma,1.2,2,si,no,no,no
+16.37,sab,nord ovest,ordinario,standard,Beta,Roma,2.4,3,no,si,no,no
+11.54,gio,nord est,ordinario,standard,Gamma,Bologna,1.4,2,no,no,no,no
+14.11,gio,nord est,ordinario,standard,Beta,Bologna,0.3,1,no,no,no,no
+15.06,mer,isole,ordinario,economy,Alfa,Roma,0.2,2,no,no,no,si
+18.04,sab,isole,picco,standard,Beta,Catania,6.8,3,no,no,no,si
+10.19,dom,nord ovest,ordinario,standard,Gamma,Milano,2.1,3,no,no,no,no
+10.89,gio,sud,ordinario,economy,Alfa,Bologna,8.6,3,no,no,no,no
+12.95,dom,centro,picco,standard,Beta,Milano,3.2,3,no,no,no,no
+17.58,mer,centro,ordinario,standard,Alfa,Roma,16.5,1,no,no,no,no
+15.55,ven,sud,ordinario,standard,Gamma,Bologna,0.8,2,no,no,no,no
+19.55,lun,nord est,picco,express,Beta,Milano,2.7,3,no,si,no,si
+17.57,lun,nord est,ordinario,express,Gamma,Roma,1.6,2,si,no,no,si
+11.92,mar,nord ovest,picco,standard,Alfa,Catania,3.3,4,no,no,no,si
+8.54,lun,nord ovest,ordinario,economy,Beta,Roma,0.4,2,no,no,no,no
+8.48,dom,sud,picco,standard,Gamma,Roma,2.7,3,no,no,no,si
+11.33,lun,nord est,ordinario,standard,Gamma,Roma,6.3,4,no,no,no,no
+19.81,gio,nord ovest,ordinario,standard,Gamma,Roma,0.3,3,no,no,no,no
+14.58,ven,nord ovest,ordinario,express,Beta,Milano,1.4,2,no,si,no,no
+17.24,ven,nord est,ordinario,express,Alfa,Roma,4.8,3,no,no,no,no
+8.83,mer,nord ovest,ordinario,economy,Beta,Milano,2.9,1,no,si,no,no
+11.26,sab,nord est,ordinario,standard,Alfa,Catania,3.6,NA,no,no,no,no
+10.71,gio,isole,ordinario,standard,Beta,Milano,1.8,3,no,no,no,no
+10.97,mar,nord ovest,picco,standard,Gamma,Milano,1.0,1,no,si,no,no
+14.32,mer,centro,ordinario,economy,Gamma,Milano,1.4,4,no,no,no,no
+13.55,lun,nord ovest,ordinario,economy,Alfa,Catania,3.4,3,no,si,no,no
+10.74,mer,nord est,ordinario,express,Alfa,Milano,0.9,1,si,no,no,no
+11.29,mar,nord ovest,ordinario,express,Beta,Roma,1.0,1,no,no,no,no
+13.96,gio,nord ovest,ordinario,economy,Alfa,Milano,2.0,3,no,no,no,no
+8.81,ven,nord ovest,picco,standard,Beta,Roma,3.1,3,no,si,no,no
+20.4,ven,nord est,ordinario,economy,Beta,Milano,1.2,2,no,no,si,no
+12.52,gio,nord ovest,picco,economy,Gamma,Roma,2.0,1,no,no,no,no
+11.93,lun,nord ovest,ordinario,express,Alfa,Catania,4.4,1,no,no,no,no
+15.8,ven,sud,picco,express,Gamma,Milano,0.9,2,no,si,no,si
+18.76,gio,centro,ordinario,economy,Beta,Roma,0.1,2,no,no,no,no
+15.35,mer,centro,picco,express,Beta,Catania,3.4,2,no,no,no,no
+15.24,lun,nord est,ordinario,economy,Beta,Milano,1.4,3,no,no,no,no
+17.53,mer,nord ovest,picco,express,Gamma,Milano,2.3,1,no,si,no,no
+12.37,sab,centro,ordinario,economy,Alfa,Roma,2.3,2,no,no,no,no
+11.68,mar,nord ovest,ordinario,economy,Alfa,Bologna,1.1,1,no,si,no,no
+12.62,mar,nord est,ordinario,standard,Beta,Roma,6.9,NA,no,no,no,no
+11.72,mer,centro,ordinario,express,Alfa,Roma,6.6,3,si,no,no,si
+9.72,gio,nord est,ordinario,standard,Beta,Milano,1.1,1,si,no,no,no
+21.44,dom,nord est,ordinario,standard,Alfa,Milano,1.3,1,no,no,no,no
+19.05,ven,sud,ordinario,standard,Beta,Catania,NA,2,no,no,no,no
+14.59,mar,centro,picco,standard,Beta,Roma,3.3,4,no,no,no,no
+19.46,gio,sud,picco,standard,Alfa,Bologna,1.6,4,no,no,si,si
+8.03,mer,sud,ordinario,standard,Alfa,Milano,1.2,4,no,no,no,no
+12.54,dom,nord ovest,ordinario,standard,Alfa,Roma,2.5,1,si,no,no,no
+20.63,mar,nord ovest,ordinario,express,Alfa,Bologna,2.3,3,no,no,no,si
+17.78,lun,centro,picco,economy,Alfa,Bologna,1.9,1,no,si,no,no
+13.46,ven,nord ovest,ordinario,standard,Gamma,Catania,4.0,2,no,no,no,no
+8.49,lun,sud,ordinario,express,Gamma,Bologna,6.9,NA,no,no,no,no
+20.05,sab,centro,ordinario,express,Beta,Roma,4.1,3,si,no,no,si
+9.7,ven,centro,picco,express,Beta,Milano,1.1,2,no,no,si,no
+11.29,lun,nord est,ordinario,standard,Alfa,Milano,2.4,3,no,no,no,no
+14.29,gio,centro,ordinario,economy,Alfa,Milano,NA,2,no,no,no,si
+14.41,sab,sud,ordinario,standard,Beta,Milano,5.8,2,no,si,no,no
+15.3,mar,centro,ordinario,standard,Beta,Bologna,4.1,2,si,no,no,si
+16.0,mar,nord ovest,ordinario,standard,Beta,Milano,0.1,4,no,no,no,si
+16.18,mar,centro,ordinario,economy,Gamma,Catania,3.0,1,si,si,no,no
+23.98,sab,centro,ordinario,express,Alfa,Milano,1.9,2,si,no,no,no
+16.44,mar,centro,ordinario,economy,Gamma,Bologna,1.6,2,no,si,no,no
+14.57,mer,nord est,picco,standard,Beta,Milano,2.3,1,si,no,no,si
+5.89,lun,nord ovest,picco,economy,Gamma,Milano,3.0,2,no,no,no,si
+18.71,ven,sud,ordinario,standard,Beta,Bologna,1.9,1,si,no,no,si
+12.34,dom,nord ovest,picco,standard,Beta,Milano,5.9,NA,si,no,no,no
+18.06,mer,isole,ordinario,standard,Beta,Roma,1.0,1,no,no,no,no
+14.98,ven,nord ovest,ordinario,standard,Gamma,Milano,4.7,4,no,no,no,no
+18.49,dom,sud,picco,express,Alfa,Catania,3.3,2,no,no,no,si
+19.59,mer,isole,ordinario,economy,Beta,Milano,0.8,2,si,si,no,si
+22.33,ven,nord ovest,ordinario,standard,Alfa,Roma,1.6,1,no,no,no,no
+13.88,ven,sud,ordinario,economy,Alfa,Milano,NA,1,no,no,no,no
+9.73,sab,nord ovest,picco,standard,Gamma,Bologna,NA,3,no,si,no,no
+14.71,mar,nord est,ordinario,standard,Beta,Milano,4.8,2,no,si,no,no
+6.41,ven,centro,ordinario,standard,Beta,Roma,1.1,1,no,si,no,no
+13.14,gio,sud,picco,express,Gamma,Catania,4.4,2,si,si,no,si
+14.47,mar,isole,ordinario,standard,Beta,Bologna,0.3,2,no,no,no,no
+4.05,gio,centro,ordinario,standard,Alfa,Milano,0.5,3,no,si,no,no
+18.98,mar,nord ovest,ordinario,economy,Alfa,Bologna,1.3,2,no,no,no,si
+10.2,ven,nord ovest,ordinario,economy,Alfa,Milano,0.6,2,no,no,no,no
+12.76,mer,centro,picco,economy,Alfa,Roma,1.5,1,si,no,no,si
+15.46,ven,nord est,ordinario,express,Alfa,Bologna,10.8,3,no,no,no,no
+14.23,mer,sud,ordinario,standard,Gamma,Roma,3.7,3,no,no,no,no
+16.28,dom,sud,ordinario,standard,Alfa,Catania,6.3,3,no,no,no,si
+14.3,dom,nord ovest,ordinario,express,Alfa,Milano,1.4,3,no,no,no,no
+15.62,mar,nord ovest,ordinario,express,Alfa,Roma,1.4,1,no,si,no,no
+10.11,gio,isole,ordinario,economy,Alfa,Roma,0.9,2,no,no,no,no
+17.93,gio,nord est,picco,standard,Gamma,Roma,0.3,3,no,no,no,no
+11.27,lun,nord est,ordinario,economy,Beta,Catania,3.1,1,no,si,no,no
+9.26,mer,isole,ordinario,express,Alfa,Milano,0.9,2,no,no,no,no
+13.48,mar,nord ovest,ordinario,express,Beta,Catania,6.3,1,no,no,no,no
+9.57,mar,nord ovest,ordinario,express,Beta,Roma,0.8,1,no,no,no,no
+1.3,mar,nord ovest,ordinario,standard,Beta,Roma,4.1,4,si,no,no,no
+21.52,mar,nord est,ordinario,economy,Gamma,Roma,1.0,3,no,no,no,si
+10.85,dom,nord est,ordinario,economy,Gamma,Roma,1.6,2,no,no,no,no
+13.95,gio,nord est,ordinario,express,Beta,Milano,2.2,3,no,no,si,no
+23.33,mer,nord ovest,ordinario,standard,Beta,Milano,1.6,2,no,si,no,no
+9.6,lun,sud,ordinario,economy,Alfa,Roma,3.6,3,no,no,no,no
+13.62,mar,sud,ordinario,standard,Beta,Roma,3.2,3,no,no,no,no
+16.2,lun,sud,ordinario,standard,Alfa,Roma,0.9,2,no,no,no,no
+18.84,sab,sud,ordinario,standard,Alfa,Roma,2.0,NA,si,no,no,si
+9.12,ven,nord ovest,ordinario,standard,Alfa,Catania,9.3,1,no,no,no,no
+8.64,dom,nord ovest,ordinario,express,Alfa,Roma,0.9,4,no,no,no,no
+18.83,mar,nord est,ordinario,economy,Gamma,Roma,2.7,4,no,si,no,no
+15.08,mar,nord ovest,ordinario,express,Beta,Milano,1.9,1,no,si,no,no
+9.13,mer,centro,ordinario,standard,Alfa,Bologna,0.2,3,no,no,no,no
+7.89,lun,centro,ordinario,standard,Beta,Bologna,1.7,3,no,no,no,no
+18.38,mer,nord ovest,picco,standard,Alfa,Bologna,3.1,2,no,si,no,no
+20.07,lun,nord est,picco,economy,Beta,Bologna,5.0,3,no,no,no,si
+13.76,dom,sud,picco,standard,Beta,Bologna,1.0,2,no,no,no,no
+13.66,dom,isole,ordinario,standard,Beta,Milano,3.2,1,no,no,no,no
+12.28,mer,nord est,picco,standard,Alfa,Roma,1.4,3,si,no,no,si
+3.38,gio,nord est,ordinario,standard,Alfa,Roma,3.5,3,no,no,si,no
+20.04,dom,centro,ordinario,standard,Gamma,Roma,1.8,2,no,no,no,no
+14.62,mer,sud,ordinario,standard,Beta,Roma,3.3,1,no,si,no,no
+19.8,gio,sud,ordinario,economy,Alfa,Milano,1.5,2,si,no,no,no
+11.8,lun,nord ovest,picco,standard,Beta,Catania,2.9,2,no,no,no,si
+13.09,lun,nord ovest,ordinario,economy,Alfa,Milano,0.8,2,si,no,no,no
+14.18,lun,nord ovest,ordinario,express,Gamma,Milano,2.7,2,no,no,no,no
+14.23,mar,sud,ordinario,express,Beta,Roma,3.5,1,no,no,no,no
+12.91,gio,nord ovest,ordinario,express,Beta,Catania,7.1,5,no,no,no,si
+20.15,lun,centro,picco,economy,Gamma,Catania,3.4,1,no,no,no,no
+20.04,sab,centro,ordinario,standard,Alfa,Roma,0.3,2,si,no,no,no
+19.18,gio,sud,picco,standard,Beta,Bologna,2.2,2,no,no,no,si
+12.32,lun,centro,ordinario,standard,Alfa,Milano,1.1,3,no,no,no,no
+14.02,sab,sud,ordinario,standard,Gamma,Roma,0.2,2,no,no,no,no
+10.28,mar,sud,ordinario,standard,Beta,Milano,1.0,3,no,no,no,no
+23.98,mar,nord est,picco,express,Alfa,Bologna,3.6,1,no,no,no,no
+12.6,dom,centro,picco,standard,Alfa,Roma,7.9,3,si,no,no,si
+15.56,mar,centro,picco,standard,Gamma,Roma,0.3,2,no,si,no,no
+10.85,gio,centro,ordinario,economy,Beta,Roma,0.2,2,si,no,no,no
+17.1,ven,centro,picco,standard,Alfa,Catania,6.0,2,no,no,no,si
+18.41,mar,nord ovest,ordinario,standard,Alfa,Roma,4.9,3,si,si,no,no
+10.66,sab,nord est,ordinario,standard,Beta,Bologna,2.0,2,no,no,no,no
+17.25,lun,centro,picco,economy,Beta,Roma,1.6,1,no,no,no,no
+11.19,ven,sud,ordinario,standard,Alfa,Roma,0.1,2,no,si,no,no
+12.4,sab,nord est,ordinario,standard,Alfa,Bologna,0.3,2,no,no,no,no
+14.16,gio,nord ovest,ordinario,economy,Alfa,Bologna,2.7,2,no,no,no,no
+11.58,sab,nord est,ordinario,express,Beta,Milano,0.6,1,si,no,no,no
+18.75,sab,sud,ordinario,standard,Gamma,Bologna,1.7,3,no,no,no,no
+13.18,ven,nord est,ordinario,economy,Beta,Catania,4.1,4,no,si,no,no
+14.94,ven,sud,picco,standard,Alfa,Milano,4.9,3,no,no,no,si
+16.83,gio,nord est,ordinario,standard,Beta,Bologna,4.0,5,no,no,no,si
+11.1,lun,sud,ordinario,economy,Beta,Milano,0.6,4,no,no,no,no
+13.22,mar,isole,ordinario,standard,Beta,Catania,7.3,3,no,no,no,no
+13.59,ven,sud,ordinario,express,Beta,Milano,NA,3,si,no,no,no
+6.82,mer,nord est,picco,economy,Beta,Roma,2.6,1,no,no,no,no
+21.85,sab,sud,ordinario,standard,Gamma,Milano,1.4,2,no,no,no,no
+17.57,lun,nord est,ordinario,standard,Gamma,Bologna,2.8,3,no,si,si,si
+16.39,mar,nord ovest,ordinario,economy,Alfa,Milano,1.1,4,no,no,no,si
+17.54,ven,nord ovest,ordinario,economy,Gamma,Bologna,1.0,4,no,si,no,no
+9.29,gio,nord est,ordinario,economy,Beta,Bologna,1.7,1,si,no,no,no
+13.64,mar,nord est,ordinario,standard,Alfa,Roma,2.3,1,no,no,no,no
+19.83,ven,nord ovest,ordinario,economy,Alfa,Bologna,1.2,3,no,no,no,no
+12.39,mer,nord ovest,ordinario,express,Alfa,Roma,3.4,NA,no,si,no,no
+15.48,lun,sud,ordinario,economy,Alfa,Catania,2.7,4,no,no,no,si
+16.13,mer,nord est,ordinario,express,Gamma,Catania,3.6,3,no,si,no,no
+7.83,mar,nord est,picco,express,Beta,Milano,0.5,1,no,no,no,no
+12.06,lun,sud,ordinario,standard,Beta,Catania,NA,5,no,no,no,si
+16.93,ven,nord ovest,ordinario,standard,Beta,Bologna,NA,3,no,si,no,no
+15.04,gio,nord ovest,ordinario,standard,Alfa,Milano,1.5,2,no,no,no,no
+23.55,lun,nord est,picco,standard,Alfa,Milano,1.8,1,no,no,no,no
+16.43,ven,nord est,ordinario,standard,Beta,Bologna,2.6,3,no,si,no,si
+5.19,ven,centro,ordinario,express,Gamma,Bologna,0.7,1,no,si,no,no
+21.3,mer,nord est,ordinario,standard,Alfa,Bologna,1.7,4,no,no,no,no
+8.58,ven,nord est,ordinario,standard,Alfa,Bologna,NA,4,si,no,no,no
+16.25,gio,nord ovest,ordinario,express,Gamma,Milano,4.4,3,no,no,no,no
+15.83,ven,nord ovest,ordinario,standard,Alfa,Roma,0.7,3,no,no,no,no
+15.72,dom,sud,picco,standard,Alfa,Roma,1.4,3,no,no,no,si
+15.43,gio,sud,ordinario,express,Alfa,Bologna,1.5,2,no,no,no,si
+10.91,mer,centro,ordinario,economy,Beta,Milano,4.6,1,no,no,no,no
+17.42,mer,nord ovest,ordinario,economy,Alfa,Bologna,3.0,3,si,no,si,si
+15.57,mer,isole,ordinario,economy,Gamma,Roma,4.9,1,no,no,no,no
+12.55,gio,nord ovest,ordinario,express,Gamma,Catania,7.5,1,no,no,no,no
+17.51,gio,nord ovest,ordinario,standard,Beta,Bologna,2.0,2,no,si,no,no
+23.98,sab,nord ovest,picco,express,Alfa,Milano,1.4,4,no,no,no,no
+9.57,lun,isole,ordinario,standard,Alfa,Catania,4.0,3,no,si,no,no
+11.96,gio,sud,ordinario,express,Alfa,Bologna,1.9,2,no,no,no,no
+13.99,gio,centro,ordinario,economy,Beta,Bologna,0.5,4,no,no,no,no
+10.41,mer,nord est,ordinario,standard,Alfa,Bologna,4.5,1,no,no,no,no
+14.34,sab,sud,ordinario,standard,Beta,Milano,2.5,2,no,no,no,no
+10.48,ven,sud,ordinario,economy,Beta,Roma,3.1,5,no,si,no,no
+14.65,gio,nord ovest,picco,standard,Alfa,Milano,5.2,3,no,no,no,no
+18.59,lun,nord est,ordinario,express,Beta,Milano,1.8,2,no,no,si,si
+15.57,lun,nord ovest,ordinario,standard,Beta,Roma,3.5,1,no,no,no,no
+13.19,dom,nord est,ordinario,express,Alfa,Roma,1.1,3,no,no,no,no
+16.35,mer,nord ovest,ordinario,economy,Alfa,Milano,0.1,4,no,no,no,si
+15.46,gio,nord est,ordinario,standard,Alfa,Catania,NA,3,no,no,no,si
+17.53,gio,isole,ordinario,economy,Beta,Milano,0.5,1,no,no,no,no
+13.91,mar,nord est,picco,standard,Alfa,Milano,1.7,2,no,no,no,no
+8.63,gio,nord est,ordinario,standard,Alfa,Milano,6.3,2,no,si,no,no
+17.59,gio,isole,ordinario,standard,Gamma,Bologna,0.1,4,no,si,no,si
+13.05,gio,isole,picco,standard,Alfa,Roma,2.1,5,no,si,no,si
+13.32,mar,centro,ordinario,standard,Beta,Bologna,1.0,2,no,no,no,no
+18.29,mer,centro,ordinario,express,Beta,Catania,4.9,2,no,no,no,si
+15.99,gio,nord ovest,picco,standard,Gamma,Catania,5.1,2,no,no,no,si
+12.65,lun,nord ovest,ordinario,economy,Alfa,Milano,1.3,3,si,no,no,si
+23.98,dom,centro,ordinario,standard,Alfa,Roma,0.9,2,no,si,no,no
+21.77,mer,sud,ordinario,economy,Gamma,Roma,4.4,3,no,no,no,no
+12.55,mer,nord est,ordinario,economy,Gamma,Milano,3.3,2,no,no,no,no
+7.11,lun,centro,picco,standard,Beta,Roma,0.1,2,no,no,si,no
+19.08,mar,nord ovest,ordinario,standard,Gamma,Bologna,NA,2,si,si,no,si
+16.31,sab,centro,ordinario,standard,Beta,Milano,4.5,4,no,no,no,no
+14.53,gio,nord est,ordinario,express,Alfa,Roma,0.8,5,no,no,no,si
+15.86,sab,centro,ordinario,express,Gamma,Roma,2.9,3,no,no,no,no
+14.02,lun,sud,ordinario,express,Beta,Bologna,3.0,4,no,no,si,si
+17.19,gio,centro,ordinario,standard,Gamma,Milano,0.6,5,no,no,no,si
+15.02,dom,nord est,ordinario,express,Beta,Milano,1.6,1,no,no,no,no
+18.58,gio,nord ovest,ordinario,economy,Gamma,Bologna,2.7,2,no,si,no,no
+19.26,gio,centro,ordinario,standard,Alfa,Milano,3.2,4,no,no,no,si
+14.4,sab,nord ovest,ordinario,express,Gamma,Catania,7.6,1,no,no,no,no
+16.58,lun,centro,ordinario,standard,Alfa,Bologna,2.5,2,si,no,no,no
+17.04,lun,sud,ordinario,express,Gamma,Catania,2.9,1,no,no,no,no
+14.59,mer,sud,picco,express,Gamma,Catania,3.1,1,si,si,no,si
+17.24,mer,nord est,ordinario,standard,Beta,Catania,2.8,5,no,no,no,si
+14.18,lun,sud,ordinario,standard,Gamma,Milano,1.2,2,no,no,no,si
+18.6,lun,nord est,picco,standard,Alfa,Roma,2.7,1,no,no,no,no
+12.24,lun,centro,ordinario,economy,Beta,Milano,2.3,2,no,no,no,no
+13.73,mar,nord ovest,ordinario,economy,Alfa,Catania,4.5,4,no,no,no,no
+7.59,mar,centro,ordinario,standard,Gamma,Bologna,0.9,3,no,no,no,no
+8.47,dom,nord ovest,ordinario,standard,Beta,Milano,6.7,5,si,si,no,si
+16.04,ven,nord ovest,ordinario,standard,Beta,Milano,5.4,3,no,no,no,si
+14.11,gio,sud,picco,standard,Alfa,Bologna,4.9,2,no,no,no,si
+14.62,mar,isole,ordinario,standard,Beta,Bologna,1.6,2,no,no,no,no
+20.88,lun,centro,ordinario,standard,Beta,Catania,4.2,NA,si,no,no,si
+14.65,ven,centro,ordinario,standard,Gamma,Milano,3.3,2,no,no,no,no
+23.98,mer,nord est,ordinario,economy,Alfa,Roma,0.9,3,no,no,no,no
+7.08,ven,nord est,ordinario,standard,Alfa,Roma,3.1,5,no,no,no,no
+15.24,gio,isole,ordinario,economy,Alfa,Catania,3.3,2,si,si,no,si
+19.63,dom,sud,ordinario,standard,Alfa,Roma,3.9,2,no,si,no,no
+16.31,mer,nord est,ordinario,economy,Alfa,Roma,0.9,3,no,no,no,no
+17.33,sab,nord est,ordinario,standard,Beta,Roma,NA,3,si,no,no,no
+12.01,lun,nord ovest,picco,express,Alfa,Milano,7.1,4,si,no,no,no
+7.44,sab,nord ovest,picco,standard,Alfa,Bologna,2.1,5,no,no,no,si
+14.08,gio,nord est,picco,standard,Alfa,Milano,1.3,2,no,no,no,no
+18.18,lun,centro,ordinario,standard,Beta,Milano,NA,2,no,no,si,no
+16.28,mar,centro,ordinario,standard,Alfa,Milano,1.4,2,no,no,no,no
+10.11,lun,centro,ordinario,express,Gamma,Catania,4.2,2,no,no,no,no
+17.55,mar,sud,ordinario,economy,Gamma,Milano,2.7,1,si,no,no,si
+14.15,gio,centro,ordinario,standard,Alfa,Catania,9.5,3,no,no,no,si
+13.97,ven,centro,ordinario,standard,Alfa,Bologna,1.6,2,no,no,no,si
+16.62,gio,nord ovest,ordinario,economy,Alfa,Catania,NA,1,no,no,no,no
+10.5,ven,nord est,ordinario,standard,Alfa,Bologna,4.3,2,no,no,no,no
+19.13,sab,nord est,ordinario,economy,Beta,Milano,1.2,3,no,si,si,no
+22.91,gio,nord ovest,ordinario,standard,Gamma,Milano,0.2,3,no,no,no,no
+9.53,sab,nord ovest,ordinario,standard,Beta,Milano,3.5,3,no,no,no,no
+15.09,mer,nord est,ordinario,standard,Gamma,Roma,1.3,2,no,no,no,no
+9.43,dom,sud,ordinario,express,Beta,Roma,3.9,3,no,no,no,no
+15.8,mer,centro,ordinario,economy,Beta,Milano,0.7,2,no,no,no,no
+17.19,ven,nord ovest,picco,standard,Beta,Catania,9.4,NA,no,no,no,si
+21.89,ven,nord ovest,picco,express,Alfa,Milano,0.7,3,no,si,no,si
+10.83,mar,nord ovest,ordinario,standard,Beta,Bologna,3.8,3,no,no,no,no
+12.49,gio,sud,ordinario,express,Beta,Roma,1.5,2,si,no,no,si
+17.52,ven,nord est,picco,express,Beta,Bologna,2.3,2,no,no,no,si
+14.12,gio,nord ovest,ordinario,express,Alfa,Bologna,1.5,1,no,no,si,no
+16.54,mer,isole,ordinario,standard,Gamma,Milano,1.7,2,no,no,no,no
+21.92,dom,nord ovest,ordinario,express,Beta,Milano,8.1,4,no,no,no,no
+17.62,mar,nord ovest,ordinario,economy,Beta,Catania,4.3,2,no,no,no,no
+9.33,mer,centro,picco,economy,Alfa,Bologna,0.6,4,no,no,no,no
+21.84,sab,sud,picco,express,Alfa,Milano,2.3,1,no,no,no,si
+9.02,lun,sud,ordinario,economy,Gamma,Milano,2.0,1,no,no,no,no
+17.88,lun,sud,picco,standard,Beta,Bologna,3.0,3,no,no,no,si
+15.19,gio,centro,ordinario,standard,Alfa,Bologna,3.7,NA,no,no,no,si
+16.59,gio,nord ovest,picco,express,Alfa,Roma,6.6,3,no,si,no,no
+15.08,gio,nord est,ordinario,standard,Alfa,Milano,5.0,1,no,no,no,no
+16.47,ven,centro,ordinario,express,Alfa,Roma,1.5,1,no,si,no,no
+6.31,mer,sud,picco,standard,Beta,Roma,2.9,3,no,no,no,si
+15.99,mer,isole,ordinario,standard,Alfa,Milano,3.0,3,no,si,no,si
+10.78,ven,nord est,picco,standard,Alfa,Catania,3.1,5,si,no,si,si
+11.06,dom,nord est,ordinario,economy,Beta,Milano,4.7,2,no,no,no,no
+14.64,mar,nord est,ordinario,express,Beta,Roma,2.2,3,no,no,no,no
+14.91,ven,centro,ordinario,standard,Gamma,Roma,0.7,2,no,no,no,no
+13.03,lun,isole,ordinario,express,Alfa,Catania,5.0,1,no,si,no,no
+22.24,ven,sud,ordinario,standard,Gamma,Bologna,7.4,5,no,no,no,si
+17.86,mer,sud,ordinario,economy,Alfa,Milano,NA,3,si,si,no,si
+6.08,lun,centro,ordinario,standard,Beta,Milano,6.8,2,no,no,no,no
+12.29,sab,sud,picco,express,Alfa,Roma,5.3,1,no,no,no,si
+10.05,mer,nord ovest,ordinario,standard,Alfa,Bologna,4.5,3,no,no,no,no
+11.85,dom,nord ovest,ordinario,express,Alfa,Catania,5.3,2,no,no,no,no
+21.91,lun,sud,picco,economy,Beta,Bologna,0.9,1,si,no,no,si
+14.67,mar,nord est,ordinario,standard,Gamma,Bologna,5.1,1,no,si,no,no
+18.24,mer,centro,ordinario,standard,Beta,Milano,2.5,1,no,no,no,no
+17.26,dom,sud,ordinario,standard,Gamma,Milano,2.6,2,no,no,si,si
+9.16,ven,nord ovest,ordinario,standard,Gamma,Milano,2.6,2,no,si,no,no
+9.88,sab,centro,picco,economy,Gamma,Roma,1.6,4,no,no,si,no
+13.52,gio,sud,ordinario,standard,Alfa,Roma,1.4,4,no,no,no,si
+15.61,mer,nord est,ordinario,standard,Alfa,Catania,5.8,2,no,no,no,no
+11.08,mar,nord ovest,ordinario,express,Gamma,Bologna,1.3,2,si,no,no,no
+16.22,mer,sud,picco,standard,Gamma,Roma,1.5,4,no,no,no,si
+14.67,gio,centro,ordinario,economy,Alfa,Roma,1.2,1,no,si,no,no
+15.83,mar,nord est,ordinario,standard,Beta,Roma,2.4,2,no,si,no,no
+19.88,ven,nord est,ordinario,standard,Alfa,Milano,4.2,1,si,no,no,si
+17.22,gio,nord ovest,ordinario,standard,Beta,Milano,3.7,5,no,no,no,no
+22.31,sab,nord ovest,ordinario,standard,Alfa,Milano,6.0,1,si,si,no,no
+12.79,ven,centro,ordinario,standard,Alfa,Catania,4.6,1,no,no,no,no
+15.06,lun,nord est,ordinario,standard,Gamma,Roma,2.4,1,si,no,si,si
+6.03,mar,centro,ordinario,standard,Beta,Roma,0.3,4,no,no,no,no
+13.85,mar,isole,ordinario,standard,Beta,Milano,1.9,2,no,no,no,no
+18.12,mar,centro,ordinario,standard,Alfa,Bologna,3.5,NA,no,no,no,si
+7.69,dom,centro,picco,standard,Beta,Milano,0.3,3,no,no,no,no
+10.67,mer,centro,ordinario,standard,Alfa,Roma,4.1,1,si,no,no,no
+17.07,lun,nord ovest,picco,standard,Alfa,Milano,4.9,3,no,no,no,si
+11.31,sab,nord est,ordinario,standard,Alfa,Catania,5.7,3,si,no,no,si
+17.04,mar,nord est,ordinario,standard,Beta,Roma,0.5,1,no,no,no,no
+22.2,mer,sud,picco,economy,Gamma,Catania,3.4,3,si,no,no,si
+19.16,ven,nord est,ordinario,standard,Beta,Roma,0.1,4,si,no,si,si
+8.7,lun,nord est,ordinario,economy,Beta,Milano,0.4,1,no,no,no,no
+13.91,mar,isole,picco,express,Alfa,Milano,3.4,3,si,si,no,si
+15.55,mar,nord est,picco,express,Alfa,Roma,3.9,4,no,no,no,no
+12.65,mar,sud,ordinario,express,Beta,Catania,4.0,2,si,no,no,si
+13.88,lun,sud,ordinario,standard,Gamma,Roma,0.1,3,si,no,no,no
+13.78,ven,nord ovest,ordinario,standard,Gamma,Roma,5.2,2,si,no,no,no
+6.52,mer,sud,ordinario,standard,Beta,Catania,7.7,1,no,no,no,no
+17.39,gio,nord ovest,ordinario,economy,Alfa,Roma,0.3,2,no,si,no,no
+18.1,mer,nord ovest,ordinario,standard,Gamma,Milano,4.5,3,no,no,no,no
+20.66,gio,isole,picco,standard,Gamma,Bologna,1.8,2,no,si,no,no
+6.93,mar,centro,ordinario,economy,Gamma,Bologna,1.1,3,no,si,si,no
+15.83,mer,centro,picco,standard,Alfa,Milano,2.7,3,no,no,no,si
+18.67,dom,nord ovest,ordinario,standard,Gamma,Milano,0.3,2,no,no,no,no
+14.76,lun,nord est,ordinario,standard,Beta,Catania,6.0,2,no,no,no,no
+10.55,ven,nord est,picco,standard,Beta,Roma,2.0,3,no,no,no,no
+8.46,mar,nord ovest,ordinario,standard,Alfa,Milano,2.4,2,no,no,no,no
+19.53,mer,nord ovest,ordinario,economy,Gamma,Catania,3.2,5,no,no,si,si
+9.2,dom,isole,picco,express,Alfa,Catania,5.9,4,no,no,no,si
+10.21,ven,nord ovest,ordinario,express,Alfa,Milano,0.3,2,no,no,no,no
+21.43,lun,nord est,ordinario,express,Gamma,Bologna,1.9,1,no,no,no,no
+7.1,sab,nord ovest,ordinario,standard,Gamma,Milano,0.1,2,no,si,no,no
+17.02,gio,sud,picco,economy,Gamma,Milano,4.3,3,no,no,no,si
+16.24,sab,sud,ordinario,standard,Alfa,Bologna,4.8,1,no,no,si,no
+14.64,dom,nord ovest,ordinario,economy,Beta,Catania,5.7,2,si,no,no,no
+16.23,sab,nord ovest,picco,express,Alfa,Catania,4.0,4,no,si,no,si
+8.59,mar,centro,ordinario,economy,Beta,Bologna,0.1,1,no,si,no,no
+14.45,lun,isole,ordinario,standard,Alfa,Roma,0.6,2,no,no,no,no
+17.94,gio,nord ovest,ordinario,economy,Alfa,Milano,2.3,3,no,no,no,no
+15.98,mer,nord est,picco,standard,Gamma,Milano,1.3,3,no,no,no,no
+14.32,mar,nord ovest,ordinario,standard,Alfa,Milano,2.5,2,no,no,no,no
+7.88,gio,nord ovest,ordinario,express,Gamma,Catania,3.0,2,si,no,no,si
+12.74,lun,isole,ordinario,standard,Alfa,Milano,1.2,1,no,si,no,no
+20.7,mer,nord est,ordinario,express,Gamma,Milano,0.5,2,no,si,no,no
+18.84,mer,nord est,ordinario,standard,Alfa,Milano,0.4,4,no,no,no,no
+16.94,gio,sud,ordinario,express,Gamma,Bologna,7.7,2,no,no,no,no
+15.12,gio,nord ovest,ordinario,economy,Alfa,Milano,1.1,5,no,no,no,si
+18.51,ven,nord est,ordinario,standard,Gamma,Milano,4.0,1,no,si,si,si
+16.79,dom,nord ovest,ordinario,standard,Alfa,Milano,0.1,2,no,no,no,no
+10.56,sab,nord est,picco,standard,Beta,Bologna,1.5,3,no,si,no,no
+16.92,lun,sud,ordinario,economy,Beta,Bologna,NA,1,no,no,no,no
+17.79,gio,isole,ordinario,express,Beta,Catania,4.8,3,no,no,no,si
+9.22,mer,isole,ordinario,economy,Alfa,Roma,1.0,1,no,no,no,no
+18.76,lun,sud,picco,standard,Beta,Bologna,4.1,3,no,no,no,no
+10.79,dom,nord ovest,ordinario,standard,Alfa,Milano,4.4,2,no,no,no,no
+18.13,mar,centro,picco,standard,Alfa,Bologna,NA,1,no,si,no,no
+14.57,ven,centro,ordinario,standard,Alfa,Milano,6.0,2,si,no,si,si
+15.79,gio,sud,ordinario,standard,Alfa,Bologna,2.9,NA,no,no,no,no
+9.54,sab,sud,ordinario,standard,Beta,Bologna,1.1,2,no,no,no,no
+18.77,gio,sud,picco,standard,Beta,Bologna,2.6,4,no,no,no,si
+13.66,sab,sud,ordinario,standard,Alfa,Catania,3.7,2,no,si,no,no
+12.53,mar,nord ovest,ordinario,standard,Alfa,Bologna,1.6,1,no,no,no,no
+19.54,ven,nord ovest,picco,express,Gamma,Bologna,2.9,2,no,no,no,si
+12.19,mar,centro,picco,economy,Alfa,Bologna,0.1,2,no,no,no,no
+15.54,mer,nord ovest,ordinario,standard,Beta,Milano,3.8,1,no,no,no,no
+20.96,lun,nord ovest,ordinario,express,Beta,Milano,4.9,3,no,no,no,si
+12.12,lun,centro,ordinario,standard,Alfa,Milano,5.1,2,no,no,no,no
+10.21,dom,centro,ordinario,express,Beta,Roma,0.6,3,no,no,no,no
+14.82,mar,nord ovest,ordinario,standard,Alfa,Roma,NA,2,no,no,no,no
+12.34,ven,nord est,ordinario,standard,Alfa,Bologna,0.3,3,no,no,no,no
+13.63,mer,centro,ordinario,express,Alfa,Milano,1.8,3,no,no,no,no
+11.25,sab,nord est,ordinario,standard,Alfa,Roma,3.0,4,no,no,no,no
+11.25,lun,nord est,ordinario,economy,Gamma,Milano,4.6,1,no,no,no,no
+5.75,lun,nord ovest,ordinario,standard,Beta,Roma,1.6,2,si,no,no,no
+8.57,mer,nord est,ordinario,standard,Alfa,Roma,3.5,2,no,no,no,no
+15.17,lun,nord ovest,ordinario,express,Beta,Catania,4.4,1,no,no,no,si
+14.7,dom,sud,picco,express,Alfa,Milano,1.5,2,no,no,no,si
+16.42,lun,nord est,picco,express,Gamma,Bologna,4.9,2,no,no,no,si
+19.58,ven,centro,ordinario,express,Gamma,Roma,1.2,2,no,no,no,no
+10.64,ven,nord ovest,ordinario,economy,Alfa,Milano,0.1,2,no,si,no,no
+14.24,gio,nord est,ordinario,standard,Beta,Bologna,1.7,4,no,no,no,si
+12.12,mer,isole,ordinario,standard,Gamma,Catania,5.1,3,no,si,no,no
+16.57,ven,sud,ordinario,standard,Beta,Roma,6.0,3,no,no,no,si
+11.27,mar,sud,ordinario,economy,Alfa,Bologna,7.0,NA,no,no,no,no
+16.78,sab,centro,ordinario,standard,Gamma,Roma,6.1,1,no,no,no,no
+9.24,mer,nord est,ordinario,standard,Alfa,Catania,6.0,NA,no,no,no,no
+15.47,lun,nord est,ordinario,standard,Beta,Milano,1.2,1,no,no,si,no
+15.73,mer,centro,ordinario,economy,Beta,Milano,NA,3,si,no,no,si
+19.28,ven,nord est,ordinario,economy,Alfa,Milano,2.6,4,no,si,no,no
+16.83,lun,nord ovest,ordinario,standard,Gamma,Roma,0.6,5,si,no,no,si
+18.35,mar,centro,picco,standard,Alfa,Milano,2.6,1,no,no,no,no
+15.54,gio,nord ovest,ordinario,standard,Beta,Roma,7.2,3,no,si,no,no
+11.66,lun,sud,ordinario,standard,Alfa,Milano,1.8,3,no,no,no,no
+10.94,sab,nord est,picco,economy,Gamma,Bologna,3.6,3,no,no,no,no
+15.37,gio,sud,picco,express,Beta,Bologna,1.4,2,no,no,no,no
+11.49,mar,centro,picco,express,Gamma,Milano,2.7,2,si,si,no,no
+10.01,mar,nord est,ordinario,standard,Alfa,Roma,0.8,1,si,no,no,no
+5.46,ven,nord ovest,ordinario,express,Beta,Roma,1.4,2,si,si,no,no
+10.27,sab,sud,ordinario,express,Alfa,Catania,5.1,1,no,no,si,no
+10.32,sab,centro,ordinario,standard,Beta,Roma,3.8,4,no,si,no,si
+8.26,gio,centro,ordinario,express,Gamma,Catania,2.4,1,no,no,si,no
+17.76,sab,sud,ordinario,standard,Gamma,Milano,2.5,2,no,si,no,no
+7.68,mer,nord ovest,ordinario,economy,Gamma,Milano,0.7,2,no,no,no,no
+14.94,lun,sud,picco,standard,Gamma,Milano,0.8,3,no,no,no,si
+15.19,lun,centro,ordinario,economy,Beta,Milano,2.8,2,no,no,no,no
+12.09,dom,sud,ordinario,standard,Beta,Bologna,3.2,4,no,si,no,no
+10.99,sab,nord est,ordinario,standard,Alfa,Bologna,0.8,5,no,si,no,no
+13.21,lun,sud,ordinario,standard,Beta,Bologna,1.4,3,no,si,no,no
+17.96,lun,nord est,ordinario,standard,Beta,Milano,1.8,4,no,no,no,no
+17.69,sab,nord ovest,picco,standard,Alfa,Catania,3.5,2,no,no,no,no
+12.95,mar,nord ovest,ordinario,standard,Beta,Milano,NA,4,no,no,no,no
+13.34,dom,nord ovest,ordinario,economy,Beta,Roma,0.4,1,si,si,no,no
+19.59,lun,nord ovest,ordinario,express,Alfa,Bologna,2.5,4,no,no,no,si
+10.61,lun,nord est,ordinario,express,Alfa,Bologna,3.3,5,no,no,no,si
+14.65,sab,sud,ordinario,standard,Gamma,Milano,1.9,3,no,no,no,no
+18.19,lun,nord ovest,picco,economy,Alfa,Milano,2.0,1,no,si,no,no
+19.67,lun,centro,ordinario,standard,Alfa,Milano,2.6,1,si,no,si,si
+10.28,sab,centro,ordinario,standard,Gamma,Roma,7.8,3,no,no,no,no
+16.47,gio,nord est,ordinario,standard,Beta,Catania,4.7,2,no,no,no,no
+14.64,lun,nord ovest,ordinario,standard,Beta,Bologna,2.5,3,no,no,no,no
+7.24,gio,nord ovest,ordinario,standard,Beta,Milano,1.2,1,no,no,no,no
+10.57,sab,sud,ordinario,standard,Gamma,Bologna,3.9,3,no,no,no,no
+16.98,sab,nord ovest,ordinario,standard,Alfa,Catania,4.2,2,no,no,no,si
+14.38,sab,nord est,ordinario,economy,Gamma,Roma,1.6,1,no,no,no,no
+14.56,mar,isole,ordinario,express,Alfa,Roma,5.3,3,no,no,no,si
+9.61,mar,nord ovest,ordinario,standard,Alfa,Roma,2.4,3,no,si,no,no
+13.5,mar,nord est,ordinario,standard,Gamma,Roma,4.3,3,no,no,no,no
+17.01,dom,sud,ordinario,standard,Gamma,Milano,2.1,2,no,no,no,no
+18.68,dom,nord ovest,ordinario,express,Gamma,Milano,1.3,2,no,no,no,no
+16.96,sab,sud,ordinario,standard,Gamma,Milano,0.7,3,no,no,no,no
+15.94,gio,nord ovest,ordinario,economy,Beta,Bologna,0.3,3,no,no,no,no
+12.26,mer,centro,ordinario,express,Alfa,Catania,3.9,3,no,no,no,no
+23.98,ven,centro,picco,economy,Alfa,Catania,5.0,2,si,no,no,si
+17.91,gio,centro,ordinario,standard,Gamma,Roma,3.9,1,no,no,no,no
+6.28,lun,nord est,ordinario,standard,Beta,Milano,1.8,4,no,no,no,no
+10.74,sab,nord est,ordinario,express,Beta,Milano,4.3,3,no,no,no,no
+15.28,gio,nord est,ordinario,economy,Gamma,Catania,6.9,3,no,no,no,si
+10.29,mar,nord ovest,picco,standard,Beta,Roma,0.1,2,no,no,si,no
+18.77,mar,nord est,ordinario,standard,Beta,Milano,0.5,1,no,si,no,no
+15.74,gio,sud,ordinario,express,Alfa,Catania,2.6,1,no,si,si,no
+15.78,gio,nord est,picco,standard,Beta,Milano,1.9,2,si,no,no,si
+13.0,lun,nord est,ordinario,economy,Gamma,Roma,3.3,1,no,no,no,no
+22.19,mer,centro,ordinario,economy,Gamma,Catania,2.8,5,no,no,no,si
+14.97,ven,nord ovest,picco,standard,Gamma,Roma,1.0,2,no,no,no,si
+10.62,mar,nord est,ordinario,standard,Alfa,Catania,8.6,4,no,no,no,no
+7.63,ven,nord ovest,ordinario,standard,Beta,Milano,7.1,2,no,si,no,no
+15.82,lun,isole,picco,standard,Gamma,Bologna,1.7,1,no,si,no,no
+13.58,gio,sud,ordinario,express,Alfa,Milano,6.4,2,no,no,no,no
+9.73,lun,nord est,ordinario,standard,Beta,Milano,3.8,1,no,si,no,no
+16.07,lun,nord ovest,ordinario,economy,Beta,Catania,4.9,1,no,no,no,no
+11.27,mer,isole,ordinario,economy,Beta,Roma,2.2,1,no,no,no,no
+10.08,mer,centro,ordinario,economy,Alfa,Milano,1.6,2,si,no,no,no
+14.1,gio,nord ovest,ordinario,standard,Beta,Bologna,1.3,4,no,si,no,no
+9.97,mer,centro,ordinario,standard,Beta,Roma,3.3,2,no,si,no,no
+14.37,sab,nord est,ordinario,standard,Gamma,Bologna,5.8,3,no,no,no,no
+9.29,gio,isole,ordinario,standard,Gamma,Catania,3.3,2,no,no,no,no
+11.13,lun,nord est,picco,standard,Alfa,Roma,2.1,3,no,no,no,no
+23.52,mar,nord ovest,ordinario,economy,Gamma,Bologna,0.5,5,no,no,no,no
+10.68,lun,centro,ordinario,economy,Gamma,Bologna,2.0,1,si,no,no,no
+15.16,lun,centro,ordinario,standard,Alfa,Roma,1.6,2,no,no,no,si
+23.98,sab,nord ovest,ordinario,express,Alfa,Roma,1.5,2,no,no,no,no
+14.31,dom,sud,picco,standard,Gamma,Milano,2.1,4,no,si,no,si
+13.07,dom,nord ovest,picco,economy,Alfa,Milano,0.1,3,no,no,no,no
+8.11,lun,sud,ordinario,standard,Alfa,Roma,0.6,2,no,no,no,no
+17.61,mar,isole,ordinario,economy,Gamma,Bologna,0.6,4,no,no,no,no
+4.88,mer,nord est,ordinario,standard,Gamma,Roma,1.5,1,no,no,no,no
+8.38,gio,nord ovest,picco,standard,Gamma,Milano,1.4,2,no,no,no,no
+13.7,ven,sud,ordinario,standard,Beta,Milano,1.3,2,no,si,no,no
+20.81,sab,nord est,ordinario,standard,Beta,Roma,1.3,2,no,no,no,no
+22.53,dom,nord est,picco,economy,Alfa,Roma,0.8,3,no,no,si,si
+19.38,ven,sud,ordinario,standard,Alfa,Roma,NA,2,no,no,si,si
+15.24,mer,nord ovest,ordinario,economy,Alfa,Roma,2.2,NA,no,no,si,si
+11.99,lun,nord est,ordinario,standard,Beta,Bologna,3.7,3,no,no,no,no
+16.27,mer,isole,ordinario,economy,Beta,Roma,0.6,1,no,si,no,no
+19.98,gio,nord ovest,ordinario,standard,Alfa,Roma,1.8,1,no,no,no,no
+13.57,lun,nord est,ordinario,economy,Beta,Bologna,2.7,5,no,no,no,no
+18.96,dom,centro,ordinario,economy,Alfa,Bologna,0.6,3,si,no,no,si
+9.08,mar,isole,ordinario,standard,Beta,Bologna,2.2,2,no,no,no,no
+14.49,mar,nord est,ordinario,standard,Gamma,Bologna,5.4,2,no,si,no,no
+13.08,lun,nord ovest,picco,standard,Gamma,Milano,3.4,NA,si,no,no,si
+16.17,mer,centro,ordinario,express,Alfa,Bologna,0.1,3,no,no,si,no
+12.49,mer,sud,picco,standard,Gamma,Roma,4.3,5,no,no,no,si
+11.79,dom,sud,picco,express,Gamma,Catania,5.8,1,no,no,no,no
+14.22,gio,nord est,ordinario,express,Gamma,Roma,1.5,2,no,si,no,no
+12.59,mer,sud,ordinario,express,Beta,Milano,1.8,2,no,si,no,no
+10.36,mer,centro,ordinario,express,Alfa,Milano,0.8,3,no,no,no,no
+4.9,mar,sud,ordinario,standard,Gamma,Bologna,1.4,4,no,no,no,no
+21.27,lun,nord est,ordinario,standard,Alfa,Milano,5.0,NA,no,no,si,no
+6.56,dom,nord ovest,ordinario,economy,Alfa,Bologna,5.7,3,no,si,si,no
+13.08,mar,centro,ordinario,economy,Alfa,Bologna,4.0,1,no,no,no,no
+14.31,mer,nord ovest,ordinario,standard,Gamma,Roma,1.3,4,no,no,no,si
+20.38,mer,nord est,ordinario,standard,Gamma,Milano,3.2,NA,no,si,no,no
+13.14,mar,sud,picco,standard,Gamma,Catania,2.4,2,no,si,no,si
+14.83,mar,nord est,ordinario,standard,Alfa,Catania,4.2,4,no,no,no,no
+14.6,sab,sud,ordinario,standard,Gamma,Milano,1.6,5,no,no,si,si
+16.79,mer,sud,ordinario,standard,Alfa,Roma,2.6,2,no,no,no,si
+19.5,mer,sud,ordinario,standard,Alfa,Milano,4.8,5,si,si,no,si
+11.52,mar,nord est,picco,standard,Gamma,Roma,0.5,1,no,no,no,no
+13.91,ven,isole,ordinario,standard,Beta,Bologna,4.1,3,no,no,no,no
+7.37,mar,nord ovest,ordinario,standard,Alfa,Bologna,1.0,3,no,si,no,no
+7.74,mar,sud,ordinario,economy,Alfa,Bologna,2.2,3,no,no,no,no
+8.91,mer,nord est,picco,express,Beta,Milano,1.0,3,no,no,no,no
+7.54,lun,centro,ordinario,standard,Gamma,Bologna,0.7,4,no,no,no,no
+17.14,gio,centro,ordinario,economy,Beta,Roma,1.2,4,si,no,no,si
+14.8,mer,isole,ordinario,standard,Alfa,Roma,2.0,2,no,si,no,no
+10.56,dom,nord est,ordinario,express,Gamma,Bologna,3.6,2,si,no,no,no
+23.98,lun,centro,ordinario,standard,Alfa,Milano,1.4,2,no,no,si,no
+15.33,lun,nord ovest,ordinario,economy,Gamma,Bologna,1.0,3,no,no,no,no
+18.89,lun,nord est,ordinario,standard,Alfa,Roma,0.1,2,no,no,no,no
+16.77,lun,isole,picco,express,Gamma,Roma,2.2,1,no,no,no,si
+12.5,ven,nord ovest,ordinario,standard,Alfa,Milano,2.2,3,no,si,no,no
+12.67,mer,nord ovest,ordinario,standard,Beta,Bologna,0.8,3,no,si,no,no
+17.15,gio,nord ovest,ordinario,standard,Alfa,Milano,2.8,1,no,no,no,no
+14.91,sab,sud,picco,standard,Alfa,Catania,NA,2,no,si,no,si
+21.69,mer,centro,ordinario,express,Alfa,Milano,1.8,3,no,no,no,no
+17.61,mar,nord est,picco,standard,Alfa,Bologna,3.1,2,no,no,si,si
+17.12,lun,nord ovest,ordinario,express,Beta,Roma,1.2,1,no,no,no,no
+11.45,mer,sud,ordinario,economy,Alfa,Roma,1.8,4,no,no,no,si
+10.51,lun,sud,ordinario,standard,Beta,Milano,0.6,2,no,no,no,no
+10.99,dom,nord ovest,ordinario,standard,Beta,Bologna,0.5,1,no,no,no,no
+23.27,mar,nord ovest,ordinario,express,Beta,Catania,4.8,2,no,no,si,no
+10.26,ven,sud,picco,express,Alfa,Milano,0.7,2,no,no,no,si
+9.77,gio,nord ovest,ordinario,standard,Alfa,Bologna,1.5,2,no,no,no,no
+17.18,ven,isole,picco,standard,Alfa,Roma,1.6,3,no,no,no,si
+11.81,mar,isole,picco,standard,Gamma,Roma,2.3,4,no,no,no,si
+13.99,lun,centro,ordinario,express,Gamma,Catania,2.4,2,no,no,no,no
+4.75,ven,nord est,ordinario,standard,Alfa,Milano,4.1,1,no,no,no,no
+14.36,mar,isole,picco,standard,Alfa,Bologna,7.5,3,no,si,no,si
+14.3,mar,isole,ordinario,economy,Alfa,Bologna,1.7,3,no,no,no,no
+12.19,mar,centro,ordinario,standard,Beta,Catania,5.7,2,no,no,no,no
+12.94,gio,isole,ordinario,standard,Beta,Milano,1.2,2,si,si,no,no
+13.97,dom,nord ovest,ordinario,express,Gamma,Catania,2.1,2,no,no,no,no
+16.54,mar,centro,ordinario,standard,Gamma,Bologna,1.0,2,no,no,si,no
+11.97,ven,centro,ordinario,standard,Beta,Bologna,2.1,1,si,si,no,no
+17.52,mar,centro,ordinario,standard,Beta,Roma,5.3,2,no,no,no,no
+18.36,lun,isole,ordinario,standard,Gamma,Milano,3.9,1,no,si,si,no
+11.94,mar,centro,ordinario,standard,Gamma,Roma,0.1,3,no,no,no,no
+14.38,lun,nord est,ordinario,economy,Gamma,Milano,0.8,1,no,no,si,no
+16.59,sab,nord ovest,ordinario,standard,Alfa,Bologna,2.9,3,no,si,no,no
+6.24,gio,nord ovest,ordinario,economy,Beta,Roma,3.7,3,no,no,no,no
+12.13,mer,nord ovest,ordinario,express,Beta,Milano,3.8,2,no,si,no,no
+22.67,gio,nord est,ordinario,standard,Gamma,Milano,2.0,1,no,no,no,no
+8.84,sab,sud,ordinario,standard,Alfa,Milano,1.7,2,no,no,no,no
+12.09,mer,nord ovest,ordinario,express,Alfa,Milano,NA,1,no,no,no,no
+16.14,ven,sud,ordinario,economy,Alfa,Milano,0.4,2,no,no,no,si
+16.09,lun,nord est,ordinario,standard,Gamma,Milano,0.5,2,no,no,no,no
+14.93,mer,nord est,ordinario,economy,Gamma,Roma,5.6,2,no,no,no,no
+13.23,dom,sud,ordinario,standard,Beta,Milano,1.3,1,no,si,no,no
+13.52,lun,nord ovest,ordinario,economy,Beta,Bologna,4.5,2,no,no,no,no
+15.4,lun,nord ovest,picco,standard,Beta,Milano,2.2,3,no,no,si,si
+17.73,ven,nord est,ordinario,standard,Beta,Bologna,1.2,2,no,no,no,no
+12.39,mer,nord ovest,ordinario,standard,Beta,Bologna,0.8,3,si,no,no,no
+8.89,ven,nord ovest,ordinario,standard,Alfa,Catania,6.0,1,no,no,no,no
+13.32,ven,centro,picco,express,Alfa,Roma,6.5,2,no,no,no,no
+22.58,lun,sud,ordinario,standard,Beta,Roma,2.4,2,no,no,no,no
+15.83,mar,nord ovest,ordinario,standard,Alfa,Bologna,0.7,2,no,no,si,no
+14.82,dom,nord ovest,picco,express,Gamma,Catania,4.8,2,no,no,no,si
+10.57,lun,centro,ordinario,standard,Alfa,Milano,NA,3,no,no,si,no
+9.33,mar,nord ovest,ordinario,economy,Gamma,Milano,2.3,2,no,no,no,no
+15.44,sab,sud,ordinario,standard,Alfa,Roma,0.1,2,no,no,no,no
+15.41,sab,sud,ordinario,standard,Alfa,Milano,2.5,3,no,no,no,no
+15.7,dom,sud,picco,standard,Alfa,Roma,2.5,2,no,no,no,si
+10.71,lun,centro,ordinario,economy,Alfa,Bologna,0.9,2,no,si,si,no
+12.72,ven,nord ovest,ordinario,economy,Alfa,Roma,2.3,2,no,no,no,no
+12.97,lun,sud,ordinario,economy,Alfa,Bologna,0.4,2,no,no,no,no
+11.86,lun,centro,ordinario,standard,Gamma,Roma,0.6,2,no,si,no,no
+11.78,ven,sud,ordinario,express,Gamma,Milano,2.4,2,no,no,no,no
+12.04,sab,centro,ordinario,express,Alfa,Catania,3.6,1,no,no,si,no
+7.3,mer,nord ovest,ordinario,standard,Alfa,Roma,1.5,1,no,si,no,no
+11.55,mer,centro,ordinario,economy,Beta,Roma,NA,4,no,no,no,no
+6.87,ven,nord ovest,ordinario,standard,Beta,Catania,3.2,2,no,si,no,no
+12.11,dom,nord est,ordinario,economy,Beta,Bologna,2.6,4,no,no,no,no
+20.41,mer,centro,picco,standard,Gamma,Milano,0.1,2,no,no,no,no
+9.02,mar,centro,ordinario,standard,Alfa,Milano,NA,1,no,si,no,no
+18.61,sab,sud,ordinario,standard,Beta,Milano,1.6,2,no,si,no,no
+5.62,mar,sud,picco,economy,Alfa,Roma,4.0,3,no,no,no,si
+16.09,sab,sud,ordinario,standard,Alfa,Bologna,4.0,3,no,si,no,no
+7.67,mar,nord est,ordinario,economy,Alfa,Milano,1.4,2,no,no,no,no
+10.51,mar,nord est,picco,standard,Alfa,Catania,9.5,1,no,no,no,si
+14.95,mer,sud,ordinario,economy,Alfa,Milano,5.5,3,no,no,si,si
+16.1,mer,sud,ordinario,economy,Beta,Roma,1.6,2,no,no,no,no
+12.29,dom,nord ovest,ordinario,standard,Alfa,Milano,6.2,2,no,no,no,no
+20.66,mar,nord ovest,ordinario,express,Beta,Milano,1.5,4,no,no,no,no
+5.4,mer,nord est,picco,standard,Beta,Milano,0.8,4,no,no,no,no
+14.31,mer,sud,picco,express,Beta,Milano,0.4,3,no,no,si,si
+17.0,ven,nord ovest,ordinario,standard,Alfa,Roma,5.4,2,no,si,no,no
+13.48,lun,nord ovest,picco,standard,Alfa,Bologna,4.7,3,si,no,no,no
+16.17,lun,nord ovest,ordinario,standard,Beta,Roma,0.3,3,no,no,no,no
+14.56,lun,sud,ordinario,express,Alfa,Catania,2.6,NA,no,no,no,no
+17.16,sab,centro,ordinario,standard,Alfa,Milano,2.8,2,no,si,no,no
+14.35,gio,sud,ordinario,standard,Alfa,Milano,1.8,2,no,no,no,si
+18.69,mer,nord est,ordinario,economy,Alfa,Roma,2.1,2,no,no,no,no
+16.45,sab,nord est,ordinario,economy,Beta,Roma,2.7,2,no,no,no,no
+13.29,lun,sud,ordinario,standard,Beta,Roma,2.9,3,no,no,no,no
+13.96,mar,centro,ordinario,standard,Beta,Bologna,1.7,3,no,si,no,no
+14.51,mer,nord est,ordinario,standard,Beta,Bologna,3.7,1,no,no,si,no
+14.12,lun,nord ovest,ordinario,standard,Gamma,Milano,0.5,3,no,no,no,no
+23.94,mer,centro,ordinario,standard,Beta,Milano,3.1,3,no,no,no,si
+12.04,lun,nord ovest,ordinario,express,Gamma,Bologna,1.3,NA,no,no,no,no
+13.56,lun,nord est,ordinario,economy,Alfa,Catania,6.9,NA,no,no,no,no
+17.54,dom,nord ovest,ordinario,express,Beta,Roma,0.1,4,no,no,no,si
+17.8,lun,sud,ordinario,express,Alfa,Bologna,1.7,1,no,no,no,no
+18.01,ven,nord ovest,ordinario,economy,Alfa,Roma,2.3,3,no,si,no,no
+15.37,dom,centro,ordinario,economy,Alfa,Catania,5.3,NA,no,si,no,no
+17.12,mer,nord est,ordinario,standard,Beta,Milano,6.2,2,no,no,si,no
+22.5,gio,nord ovest,ordinario,express,Beta,Bologna,0.9,2,no,no,si,no
+19.14,dom,centro,ordinario,standard,Beta,Milano,1.9,4,no,no,no,no
+13.96,sab,centro,ordinario,express,Gamma,Catania,2.4,3,no,no,no,no
+18.91,mer,isole,ordinario,standard,Gamma,Roma,2.6,3,no,no,no,no
+19.5,mar,nord est,ordinario,standard,Alfa,Roma,0.8,2,no,no,no,no
+21.88,sab,nord ovest,ordinario,standard,Beta,Bologna,NA,2,no,no,no,no
+19.13,ven,nord ovest,ordinario,standard,Alfa,Bologna,0.1,2,no,no,no,no
+11.39,mar,sud,ordinario,economy,Alfa,Bologna,6.2,3,no,no,no,no
+16.65,mar,sud,ordinario,standard,Beta,Bologna,2.5,2,si,no,no,si
+14.62,mar,nord est,ordinario,economy,Gamma,Roma,0.1,1,no,no,no,no
+14.59,ven,sud,ordinario,standard,Gamma,Milano,0.5,3,no,no,no,si
+13.67,ven,sud,picco,express,Alfa,Catania,7.8,3,no,no,no,si
+15.27,mar,isole,picco,standard,Gamma,Roma,NA,2,no,no,no,si
+16.9,dom,nord est,ordinario,standard,Gamma,Milano,8.1,2,no,si,no,no
+14.27,ven,nord est,ordinario,standard,Gamma,Roma,4.0,1,no,no,no,no
+16.1,mar,sud,picco,economy,Beta,Milano,1.9,2,no,no,no,no
+10.31,sab,sud,ordinario,express,Alfa,Bologna,NA,2,no,no,no,no
+12.41,mar,centro,ordinario,standard,Alfa,Milano,4.9,2,si,si,no,no
+12.1,lun,isole,ordinario,economy,Beta,Bologna,1.5,1,no,si,no,no
+16.67,gio,centro,ordinario,express,Beta,Catania,3.3,4,no,no,no,no
+16.83,sab,centro,picco,economy,Gamma,Roma,2.8,2,no,si,no,no
+12.12,mer,nord est,ordinario,economy,Gamma,Milano,1.3,2,no,no,no,no
+15.33,gio,sud,ordinario,express,Alfa,Milano,1.6,1,no,no,no,no
+14.94,ven,nord ovest,ordinario,standard,Gamma,Bologna,1.9,1,no,no,no,no
+5.67,lun,isole,ordinario,express,Alfa,Catania,3.6,2,no,si,no,no
+10.85,mar,nord ovest,ordinario,express,Beta,Roma,3.6,3,no,si,no,no
+16.31,lun,nord ovest,ordinario,standard,Alfa,Milano,0.7,3,no,no,no,si
+18.61,mar,nord est,ordinario,economy,Alfa,Catania,2.8,3,no,no,no,no
+13.4,mer,isole,ordinario,standard,Gamma,Bologna,2.3,1,no,si,no,no
+15.57,gio,isole,ordinario,express,Beta,Catania,9.7,4,no,no,no,si
+20.0,mar,nord ovest,ordinario,standard,Beta,Bologna,2.0,5,no,no,no,si
+16.92,gio,nord est,ordinario,standard,Beta,Roma,3.2,2,no,no,no,no
+14.42,sab,nord ovest,ordinario,express,Gamma,Bologna,2.7,2,no,no,no,no
+19.34,mer,sud,ordinario,economy,Beta,Milano,1.6,3,no,no,no,si
+14.76,mar,nord ovest,ordinario,standard,Alfa,Milano,1.8,3,no,no,no,no
+19.81,dom,nord ovest,picco,standard,Gamma,Bologna,1.2,1,no,no,no,no
+16.39,gio,nord ovest,ordinario,standard,Alfa,Bologna,3.5,4,no,si,no,no
+13.36,mer,sud,ordinario,standard,Beta,Roma,4.2,1,no,no,no,no
+15.11,sab,nord est,ordinario,express,Alfa,Milano,1.1,3,no,si,no,no
+16.43,mar,centro,ordinario,standard,Alfa,Bologna,0.1,1,no,no,no,no
+11.68,ven,nord est,ordinario,standard,Beta,Catania,6.5,2,no,no,no,no
+12.41,gio,isole,picco,economy,Gamma,Bologna,5.3,1,no,no,no,no
+16.11,dom,nord ovest,ordinario,standard,Alfa,Bologna,1.8,2,no,no,si,no
+15.2,ven,centro,ordinario,standard,Gamma,Roma,1.1,NA,no,no,no,no
+5.48,sab,nord est,ordinario,standard,Alfa,Bologna,2.6,2,si,no,no,no
+23.98,mer,centro,ordinario,standard,Beta,Roma,0.1,1,no,no,no,no
+15.54,gio,nord est,ordinario,economy,Beta,Roma,2.0,1,no,no,no,no
+17.16,lun,isole,picco,express,Beta,Milano,2.0,1,si,no,no,si
+20.05,lun,isole,ordinario,standard,Gamma,Milano,3.3,1,no,si,no,no
+20.2,ven,nord ovest,picco,standard,Beta,Catania,3.4,1,no,no,no,no
+16.37,ven,isole,picco,economy,Alfa,Bologna,2.4,4,si,no,no,si
+22.61,lun,nord ovest,ordinario,standard,Alfa,Milano,0.6,1,no,no,no,no
+10.95,lun,centro,ordinario,economy,Alfa,Milano,0.5,1,no,no,no,no
+13.16,gio,sud,ordinario,standard,Beta,Milano,2.4,1,no,no,no,no
+10.44,lun,centro,ordinario,economy,Gamma,Bologna,3.1,3,no,no,no,no
+20.28,mer,nord est,ordinario,express,Alfa,Catania,2.5,3,no,no,no,no
+12.0,sab,sud,ordinario,economy,Gamma,Roma,0.3,2,no,no,no,si
+13.63,lun,nord ovest,ordinario,standard,Alfa,Bologna,1.4,1,no,no,no,no
+13.65,dom,isole,ordinario,economy,Gamma,Roma,1.0,3,no,si,no,no
+23.98,mer,nord ovest,ordinario,standard,Alfa,Milano,0.1,3,no,no,si,no
+9.45,lun,nord ovest,picco,standard,Beta,Roma,1.1,1,si,no,no,no
+20.61,gio,centro,ordinario,standard,Beta,Milano,0.5,3,no,si,no,no
+18.02,sab,centro,ordinario,economy,Gamma,Milano,0.5,3,si,no,no,si
+12.06,mer,sud,picco,express,Gamma,Milano,0.3,2,no,si,no,no
+16.59,mer,isole,ordinario,economy,Beta,Milano,NA,2,no,no,no,no
+15.83,gio,isole,ordinario,standard,Beta,Roma,1.2,2,si,no,no,no
+15.25,lun,sud,ordinario,express,Alfa,Bologna,2.1,3,no,no,si,si
+9.44,lun,sud,picco,express,Alfa,Milano,5.6,3,no,no,no,si
+17.63,gio,sud,ordinario,economy,Gamma,Milano,NA,1,no,no,no,no
+13.86,mar,nord est,ordinario,standard,Gamma,Catania,3.0,4,no,si,no,no
+10.98,ven,nord est,picco,standard,Gamma,Milano,4.5,3,no,no,no,no
+19.37,mer,nord ovest,ordinario,standard,Beta,Milano,1.2,3,no,no,no,si
+17.38,mar,nord est,ordinario,standard,Beta,Bologna,0.8,2,si,no,no,si
+18.34,dom,centro,picco,standard,Beta,Roma,2.3,2,no,no,no,no
+16.83,mer,sud,ordinario,standard,Beta,Roma,5.3,2,no,si,no,no
+8.3,gio,centro,picco,standard,Alfa,Roma,3.6,3,no,no,no,no
+12.49,mer,sud,ordinario,express,Beta,Milano,NA,2,no,no,no,no
+13.84,ven,centro,ordinario,express,Gamma,Catania,5.4,2,no,no,no,no
+10.21,mer,centro,picco,standard,Alfa,Milano,1.5,3,si,si,no,no
+8.42,mar,centro,ordinario,economy,Gamma,Bologna,2.1,4,no,no,no,no
+11.9,mar,nord est,ordinario,standard,Alfa,Roma,1.1,1,no,si,no,no
+19.75,dom,sud,ordinario,standard,Beta,Roma,0.9,2,no,no,no,no
+9.53,dom,sud,ordinario,standard,Beta,Bologna,0.7,4,no,no,si,si
+15.41,mar,isole,ordinario,economy,Gamma,Bologna,1.5,2,si,no,no,si
+20.09,mar,sud,ordinario,express,Alfa,Roma,1.0,1,no,no,si,no
+14.9,sab,nord ovest,picco,standard,Alfa,Bologna,0.6,2,no,no,no,no
+13.22,mer,nord ovest,ordinario,standard,Beta,Milano,2.3,2,no,no,no,no
+9.95,ven,nord ovest,ordinario,standard,Alfa,Roma,2.1,1,no,no,no,no
+11.89,ven,nord ovest,ordinario,standard,Alfa,Roma,3.7,1,no,no,si,no
+14.2,sab,isole,ordinario,standard,Alfa,Roma,1.7,2,no,no,no,si
+6.0,mar,sud,ordinario,economy,Beta,Milano,0.6,2,si,no,no,no
+15.02,mar,centro,ordinario,economy,Beta,Roma,3.6,3,no,no,si,si
+23.06,sab,centro,ordinario,standard,Alfa,Milano,4.6,3,no,no,no,no
+10.17,gio,centro,picco,standard,Beta,Milano,1.5,2,no,no,no,no
+20.77,lun,centro,picco,economy,Gamma,Milano,1.7,1,no,no,si,no
+12.26,gio,nord ovest,ordinario,standard,Alfa,Roma,2.1,3,si,no,no,no
+18.86,gio,nord est,ordinario,economy,Gamma,Roma,0.4,3,no,no,no,no
+19.97,dom,nord ovest,ordinario,standard,Beta,Bologna,2.4,2,no,si,no,no
+14.97,lun,nord est,ordinario,standard,Gamma,Catania,3.1,3,no,si,no,no
+10.89,sab,nord est,ordinario,standard,Gamma,Milano,0.9,4,no,no,no,no
+12.96,mar,centro,ordinario,express,Beta,Milano,1.3,2,no,si,no,no
+10.98,gio,nord est,ordinario,standard,Gamma,Roma,3.6,1,no,no,no,no
+12.76,gio,nord est,ordinario,standard,Alfa,Roma,0.7,1,no,no,no,no
+19.31,sab,nord ovest,ordinario,standard,Beta,Bologna,0.1,1,no,no,no,no
+10.44,mar,nord ovest,ordinario,standard,Gamma,Bologna,1.4,1,no,si,no,no
+17.31,dom,nord ovest,ordinario,standard,Alfa,Milano,0.4,2,si,no,no,no
+12.24,lun,sud,ordinario,express,Beta,Roma,0.9,2,no,no,no,no
+10.21,lun,isole,ordinario,express,Beta,Roma,3.8,2,no,si,no,no
+9.98,mer,centro,ordinario,standard,Alfa,Roma,3.4,1,no,no,no,no
+19.56,gio,sud,ordinario,express,Gamma,Bologna,2.3,2,no,no,no,no
+18.48,ven,sud,ordinario,standard,Beta,Catania,8.7,1,no,si,si,si
+13.5,dom,sud,ordinario,standard,Gamma,Bologna,0.6,2,no,no,si,no
+12.49,mer,nord ovest,ordinario,standard,Alfa,Roma,1.3,2,si,si,no,no
+5.73,mar,sud,ordinario,economy,Alfa,Milano,0.5,2,no,no,no,no
+8.81,gio,sud,ordinario,standard,Alfa,Roma,0.2,2,no,si,no,no
+12.45,dom,nord ovest,ordinario,standard,Alfa,Milano,1.5,1,no,no,no,no
+15.65,mer,centro,picco,express,Alfa,Milano,0.7,4,no,no,no,si
+9.78,gio,nord ovest,ordinario,standard,Gamma,Catania,3.0,1,no,no,no,no
+12.99,sab,sud,ordinario,economy,Gamma,Catania,4.7,2,si,no,no,si
+10.36,ven,nord est,ordinario,express,Beta,Catania,4.4,2,si,si,no,si
+13.38,sab,nord est,ordinario,standard,Gamma,Milano,1.3,2,no,no,no,no
+17.17,mer,sud,ordinario,standard,Gamma,Milano,0.5,2,no,no,no,no
+19.89,sab,centro,ordinario,express,Alfa,Roma,1.2,2,no,no,no,no
+10.86,lun,centro,ordinario,economy,Alfa,Milano,3.6,1,no,no,no,no
+15.6,dom,centro,ordinario,economy,Gamma,Milano,6.2,3,si,no,no,si
+15.23,sab,centro,picco,standard,Alfa,Milano,3.7,4,no,no,no,si
+23.05,lun,nord ovest,ordinario,standard,Gamma,Roma,1.7,3,si,no,no,si
+13.56,ven,nord est,ordinario,economy,Beta,Milano,2.7,2,no,no,no,no
+17.4,sab,nord est,ordinario,economy,Alfa,Roma,0.3,1,no,no,no,no
+11.77,gio,nord ovest,ordinario,express,Alfa,Catania,5.0,4,no,no,no,no
+10.4,mer,sud,picco,standard,Gamma,Bologna,1.0,1,no,no,no,no
+13.96,mer,sud,picco,standard,Gamma,Milano,2.0,2,no,no,no,si
+12.79,ven,centro,ordinario,standard,Beta,Milano,0.1,4,no,no,no,no
+13.66,sab,nord est,ordinario,economy,Beta,Bologna,5.0,4,no,si,no,no
+17.28,mer,nord ovest,ordinario,standard,Gamma,Bologna,3.3,2,no,no,no,no
+17.32,gio,nord ovest,picco,express,Alfa,Roma,2.6,4,no,si,no,si
+11.65,gio,nord est,picco,economy,Alfa,Milano,0.5,2,no,no,no,no
+11.6,sab,centro,ordinario,express,Gamma,Catania,5.0,1,no,no,no,no
+10.91,gio,nord ovest,ordinario,economy,Alfa,Bologna,0.4,3,no,si,si,no
+17.21,sab,centro,ordinario,economy,Beta,Bologna,6.3,2,no,no,no,no
+15.44,dom,nord est,picco,express,Gamma,Milano,1.6,3,no,no,no,si
+14.88,mar,centro,ordinario,standard,Beta,Catania,3.5,5,no,si,no,no
+10.89,ven,nord ovest,picco,express,Alfa,Roma,2.9,1,no,no,no,no
+15.27,dom,sud,ordinario,express,Beta,Roma,0.4,1,no,no,no,no
+12.08,dom,centro,ordinario,standard,Gamma,Milano,0.8,2,no,no,no,no
+16.48,lun,nord ovest,ordinario,economy,Beta,Roma,2.1,1,no,no,no,no
+11.81,sab,nord ovest,ordinario,express,Alfa,Roma,NA,1,no,no,no,no
+14.3,lun,nord ovest,ordinario,economy,Beta,Milano,3.2,2,no,no,no,no
+14.2,mer,nord est,picco,economy,Beta,Bologna,0.7,3,no,no,no,si
+19.93,ven,nord est,ordinario,standard,Gamma,Milano,1.0,2,si,no,si,si
+18.14,mar,centro,ordinario,economy,Alfa,Catania,5.2,3,no,no,no,no
+17.27,gio,sud,ordinario,express,Beta,Bologna,2.8,1,no,no,no,no
+17.96,lun,isole,ordinario,express,Alfa,Milano,1.5,2,no,no,no,si
+23.98,mer,sud,ordinario,economy,Alfa,Roma,1.4,2,si,no,no,no
+14.54,sab,isole,ordinario,standard,Alfa,Milano,0.1,1,no,no,no,no
+16.03,mer,sud,ordinario,standard,Gamma,Milano,1.5,5,no,no,no,si
+12.96,lun,nord est,ordinario,standard,Alfa,Milano,2.6,3,no,no,no,no
+16.38,lun,nord est,ordinario,express,Alfa,Roma,2.0,3,no,no,no,si
+11.39,lun,nord ovest,picco,economy,Beta,Roma,1.7,4,no,si,no,no
+17.63,lun,nord est,picco,express,Alfa,Bologna,0.3,3,no,si,no,no
+7.81,ven,nord est,ordinario,standard,Alfa,Milano,2.0,2,no,no,no,no
+18.32,lun,centro,ordinario,economy,Alfa,Catania,3.9,NA,no,si,no,no
+2.09,mar,centro,ordinario,standard,Beta,Catania,4.2,2,no,no,no,no
+16.85,mar,sud,ordinario,economy,Beta,Bologna,0.7,4,no,no,no,si
+8.0,mer,nord ovest,picco,standard,Alfa,Catania,5.4,2,no,no,no,no
+6.11,mer,nord est,ordinario,standard,Alfa,Milano,1.8,3,si,no,no,no
+17.45,mar,sud,ordinario,express,Alfa,Roma,1.9,5,no,no,no,si
+19.17,ven,nord ovest,ordinario,economy,Beta,Milano,0.3,2,no,no,no,no
+18.05,gio,nord est,ordinario,standard,Alfa,Bologna,2.9,2,no,no,no,no
+11.31,dom,sud,ordinario,economy,Gamma,Bologna,1.4,4,si,no,no,no
+20.82,lun,sud,ordinario,economy,Beta,Roma,3.2,4,no,no,no,no
+14.5,gio,nord ovest,ordinario,standard,Gamma,Roma,3.0,2,no,si,no,no
+15.82,dom,nord est,ordinario,standard,Alfa,Bologna,4.3,5,no,no,no,no
+3.05,dom,nord ovest,ordinario,express,Beta,Milano,4.3,1,no,no,no,no
+13.69,sab,nord est,ordinario,standard,Alfa,Bologna,1.6,3,si,no,no,no
+16.17,lun,sud,ordinario,economy,Beta,Bologna,0.9,4,no,no,no,si
+13.14,mer,nord est,ordinario,express,Alfa,Bologna,0.2,3,no,no,no,no
+17.9,ven,sud,ordinario,express,Beta,Roma,5.0,2,no,no,si,si
+18.64,lun,sud,ordinario,standard,Beta,Bologna,0.4,2,si,no,no,si
+21.99,dom,nord est,ordinario,standard,Beta,Roma,2.5,1,no,si,no,no
+10.7,mer,nord ovest,ordinario,economy,Alfa,Catania,3.0,1,no,no,no,no
+12.16,ven,nord ovest,ordinario,express,Beta,Bologna,2.7,2,no,no,no,no
+15.74,mar,nord ovest,picco,express,Beta,Milano,2.1,1,no,si,no,no
+18.94,gio,nord est,picco,standard,Beta,Milano,3.2,1,no,no,no,no
+6.55,mar,sud,ordinario,standard,Gamma,Milano,1.7,4,no,no,no,no
+15.88,lun,sud,ordinario,standard,Alfa,Catania,4.1,1,no,si,no,no
+14.47,lun,centro,picco,standard,Alfa,Milano,1.1,4,no,no,no,no
+19.38,lun,nord ovest,ordinario,standard,Alfa,Roma,2.7,1,no,no,no,no
+10.54,mar,centro,ordinario,standard,Gamma,Bologna,1.4,1,no,si,no,no
+18.01,lun,nord ovest,ordinario,express,Alfa,Roma,NA,1,no,no,no,no
+13.48,mer,sud,picco,standard,Alfa,Catania,6.0,2,no,si,no,no
+21.49,sab,nord ovest,ordinario,standard,Alfa,Milano,0.5,2,no,si,no,no
+15.71,mer,nord est,picco,standard,Beta,Roma,1.2,2,si,si,no,si
+16.73,ven,nord est,ordinario,standard,Beta,Roma,0.7,1,no,no,no,no
+16.48,lun,isole,picco,standard,Alfa,Milano,0.5,4,no,no,no,si
+11.62,dom,centro,picco,express,Alfa,Milano,1.6,NA,si,no,no,si
+11.63,ven,centro,ordinario,standard,Alfa,Catania,5.9,5,si,si,no,si
+11.74,mer,nord ovest,ordinario,standard,Alfa,Milano,5.7,1,no,no,no,no
+4.49,sab,centro,ordinario,express,Alfa,Roma,3.4,5,no,no,no,si
+6.49,gio,sud,ordinario,standard,Beta,Catania,4.4,2,no,no,si,no
+12.92,ven,nord ovest,ordinario,standard,Alfa,Bologna,1.6,3,no,si,no,no
+21.06,mer,centro,ordinario,economy,Alfa,Milano,3.1,3,no,no,no,no
+15.09,ven,sud,ordinario,standard,Alfa,Roma,6.9,4,no,no,no,si
+11.72,ven,centro,ordinario,express,Beta,Roma,NA,2,no,no,no,no
+17.55,mar,nord est,ordinario,standard,Alfa,Roma,1.3,2,no,no,no,no
+16.78,ven,nord ovest,ordinario,economy,Alfa,Milano,1.7,NA,no,no,no,no
+10.42,ven,nord ovest,ordinario,standard,Alfa,Roma,3.0,3,no,no,si,no
+12.73,ven,centro,ordinario,standard,Alfa,Bologna,4.6,1,no,no,no,no
+7.69,ven,isole,ordinario,economy,Alfa,Roma,1.7,1,si,no,no,no
+9.04,ven,isole,ordinario,standard,Beta,Catania,2.4,4,no,no,no,si
+12.95,mer,centro,picco,standard,Alfa,Bologna,7.5,3,no,no,no,no
+19.43,dom,nord ovest,picco,standard,Alfa,Bologna,5.0,3,no,no,no,no
+16.96,dom,nord ovest,ordinario,standard,Gamma,Milano,0.6,1,no,no,no,no
+20.69,lun,sud,ordinario,express,Beta,Milano,0.3,2,no,no,no,no
+12.92,mer,sud,ordinario,standard,Gamma,Catania,7.7,NA,no,no,no,si
+18.15,dom,nord est,ordinario,economy,Gamma,Catania,9.8,NA,no,no,no,no
+9.22,sab,sud,picco,standard,Beta,Milano,5.9,1,no,no,no,no
+16.5,gio,nord ovest,ordinario,economy,Alfa,Milano,2.1,3,no,si,no,si
+8.84,ven,centro,picco,economy,Beta,Milano,3.4,2,no,si,no,no
+18.57,lun,sud,picco,standard,Alfa,Milano,2.7,2,si,no,no,si
+9.62,sab,nord ovest,ordinario,standard,Beta,Catania,8.6,3,no,no,no,no
+18.74,gio,centro,picco,standard,Alfa,Catania,3.4,4,no,no,no,si
+10.52,dom,nord est,ordinario,express,Alfa,Roma,1.2,4,no,si,no,no
+14.58,gio,centro,picco,economy,Gamma,Bologna,1.1,2,no,no,no,no
+13.05,gio,sud,ordinario,standard,Alfa,Roma,2.0,2,no,no,no,no
+9.09,ven,nord ovest,ordinario,express,Alfa,Milano,3.4,4,no,si,no,si
+19.1,mer,nord ovest,ordinario,express,Beta,Milano,0.6,1,no,no,no,no
+17.83,lun,nord est,ordinario,economy,Alfa,Roma,0.8,2,no,no,si,no
+13.99,lun,sud,ordinario,standard,Alfa,Bologna,1.8,1,si,no,no,no
+14.28,gio,centro,ordinario,economy,Alfa,Bologna,0.7,2,no,no,no,no
+14.54,lun,centro,picco,standard,Beta,Catania,NA,2,si,no,no,si
+17.7,mer,nord ovest,ordinario,standard,Gamma,Roma,3.4,4,no,no,no,no
+15.47,dom,sud,ordinario,express,Alfa,Roma,5.5,2,si,si,no,si
+14.66,lun,nord ovest,picco,standard,Alfa,Roma,4.0,2,no,no,no,no
+13.84,dom,nord est,ordinario,standard,Gamma,Bologna,0.6,4,si,no,no,no
+20.05,sab,nord ovest,ordinario,standard,Gamma,Bologna,3.1,1,si,no,no,si
+19.47,dom,nord ovest,ordinario,standard,Gamma,Roma,0.7,1,no,no,no,no
+14.39,ven,nord est,ordinario,standard,Beta,Milano,1.0,3,no,si,no,si
+18.66,sab,nord est,ordinario,express,Alfa,Milano,3.8,2,no,no,si,si
+8.47,mar,sud,picco,express,Alfa,Milano,2.7,1,si,no,no,si
+10.03,dom,nord ovest,ordinario,economy,Alfa,Catania,6.0,5,si,no,no,si
+16.35,lun,nord ovest,ordinario,express,Alfa,Bologna,0.7,3,no,no,no,si
+10.99,gio,sud,ordinario,standard,Beta,Bologna,4.8,4,no,no,no,no
+9.76,ven,centro,ordinario,economy,Alfa,Bologna,0.7,2,si,no,no,no
+14.42,mer,isole,ordinario,standard,Alfa,Milano,2.0,3,no,no,no,si
+14.18,ven,nord ovest,picco,standard,Beta,Catania,3.2,3,no,no,si,si
+16.84,mar,nord est,ordinario,economy,Beta,Catania,5.8,1,no,no,no,no
+17.61,gio,nord ovest,ordinario,standard,Alfa,Milano,4.5,4,no,no,no,no
+12.55,lun,centro,ordinario,economy,Beta,Catania,5.3,5,no,si,no,no
+17.13,lun,nord ovest,ordinario,standard,Gamma,Milano,3.0,2,no,si,no,no
+11.35,dom,nord ovest,ordinario,standard,Beta,Catania,4.8,1,no,no,no,no
+11.99,dom,sud,picco,express,Beta,Catania,4.2,1,no,no,no,no
+5.39,mar,sud,picco,express,Beta,Catania,4.8,4,no,no,no,si
+23.3,gio,nord ovest,ordinario,express,Beta,Roma,4.8,1,si,no,si,si
+16.33,mer,nord ovest,picco,standard,Alfa,Milano,3.0,2,no,no,si,si
+9.05,lun,nord est,ordinario,economy,Alfa,Bologna,2.0,2,si,no,no,no
+18.88,ven,nord est,ordinario,standard,Beta,Catania,2.4,2,no,no,no,si
+12.0,ven,nord ovest,ordinario,standard,Alfa,Milano,1.9,4,no,no,no,no
+14.73,lun,centro,ordinario,economy,Beta,Milano,0.1,1,no,si,no,no
+12.78,gio,centro,picco,express,Gamma,Milano,0.4,2,no,no,no,no
+9.45,mer,nord est,ordinario,standard,Beta,Bologna,0.2,3,no,no,no,no
+16.49,mar,sud,ordinario,standard,Gamma,Bologna,2.6,3,no,si,no,no
+14.12,mer,centro,ordinario,express,Alfa,Milano,2.9,2,si,si,no,si
+9.23,gio,isole,ordinario,express,Beta,Milano,NA,5,no,no,no,no
+12.72,dom,nord est,picco,economy,Gamma,Roma,0.2,4,no,no,no,no
+14.82,sab,nord ovest,ordinario,economy,Beta,Milano,0.3,2,no,si,no,no
+18.07,mer,sud,picco,express,Gamma,Milano,1.6,1,no,no,no,no
+14.58,lun,centro,ordinario,economy,Alfa,Milano,4.9,2,no,no,no,no
+15.22,mar,centro,ordinario,standard,Gamma,Milano,6.7,2,no,no,no,no
+16.7,sab,nord est,ordinario,express,Beta,Bologna,6.5,3,no,no,si,si
+11.71,sab,centro,ordinario,standard,Beta,Milano,7.0,4,si,no,no,si
+17.13,gio,centro,ordinario,economy,Beta,Milano,1.5,1,no,no,no,no
+11.14,mer,sud,ordinario,standard,Alfa,Milano,0.3,1,no,no,no,no
+21.24,gio,nord est,ordinario,economy,Beta,Catania,3.2,2,no,no,no,no
+13.14,lun,nord ovest,ordinario,standard,Beta,Milano,11.6,2,no,no,si,no
+15.25,gio,nord est,ordinario,standard,Gamma,Milano,3.3,4,no,si,si,si
+16.45,lun,nord ovest,ordinario,standard,Alfa,Milano,NA,1,no,si,no,no
+8.06,lun,sud,picco,express,Gamma,Milano,4.9,3,no,no,no,si
+11.26,dom,nord ovest,ordinario,standard,Gamma,Roma,2.0,2,no,si,no,no
+19.22,ven,centro,ordinario,express,Gamma,Roma,1.0,2,no,no,si,si
+19.37,mar,sud,ordinario,economy,Gamma,Milano,2.0,4,no,si,si,si
+7.81,mer,sud,ordinario,economy,Gamma,Roma,2.0,4,no,no,no,no
+10.18,dom,nord est,picco,standard,Beta,Roma,2.0,3,no,si,no,no
+18.38,lun,isole,ordinario,express,Alfa,Roma,1.8,3,no,si,si,si
+19.56,sab,isole,ordinario,express,Beta,Roma,1.5,3,no,no,no,si
+9.81,mar,nord ovest,ordinario,express,Beta,Roma,0.5,1,no,si,no,no
+12.54,gio,nord ovest,picco,economy,Beta,Milano,0.6,2,no,si,no,no
+12.18,gio,centro,ordinario,standard,Gamma,Roma,1.0,4,no,no,no,no
+16.56,gio,isole,ordinario,standard,Gamma,Bologna,5.1,3,no,si,no,no
+5.6,sab,sud,ordinario,standard,Gamma,Catania,3.1,2,no,si,no,no
+12.65,gio,nord ovest,ordinario,standard,Beta,Roma,6.3,3,si,no,si,no
+5.96,lun,nord est,picco,express,Alfa,Catania,3.9,3,no,no,no,no
+11.82,mer,nord est,ordinario,standard,Alfa,Roma,1.4,1,no,no,no,no
+17.33,dom,sud,ordinario,express,Beta,Roma,0.1,2,no,no,no,si
+11.54,sab,nord ovest,ordinario,standard,Gamma,Roma,0.9,3,no,no,no,no
+16.19,gio,sud,picco,economy,Beta,Catania,5.6,3,no,no,no,si
+23.93,gio,sud,ordinario,economy,Gamma,Milano,1.6,5,no,no,no,si
+7.89,mar,sud,ordinario,standard,Gamma,Milano,5.3,2,si,no,no,si
+16.23,gio,centro,ordinario,standard,Alfa,Catania,3.6,2,no,no,no,si
+21.2,ven,isole,ordinario,express,Beta,Milano,2.7,3,no,no,no,si
+13.67,lun,nord est,picco,economy,Alfa,Milano,2.8,2,no,no,no,no
+10.46,mer,centro,picco,standard,Alfa,Milano,6.6,1,si,si,no,no
+9.47,lun,isole,ordinario,express,Beta,Catania,3.5,5,no,no,no,no
+15.04,mer,nord ovest,ordinario,express,Gamma,Roma,4.2,1,no,si,no,no
+15.37,mer,nord est,ordinario,express,Alfa,Bologna,2.3,4,no,no,si,no
+14.29,sab,nord est,picco,express,Beta,Bologna,3.4,4,no,no,no,si
+14.71,ven,nord est,ordinario,standard,Alfa,Roma,4.2,2,no,no,no,no
+12.93,mer,sud,picco,economy,Gamma,Milano,2.1,2,si,no,no,si
+21.65,ven,sud,ordinario,express,Alfa,Milano,1.7,3,no,si,no,no
+7.13,mar,centro,ordinario,economy,Gamma,Bologna,1.8,1,no,no,no,no
+22.64,mar,sud,picco,economy,Alfa,Catania,6.0,2,no,no,no,si
+20.23,ven,nord est,picco,economy,Alfa,Bologna,0.1,2,no,no,no,no
+15.0,mer,sud,ordinario,standard,Alfa,Catania,3.4,1,no,no,si,si
+18.31,mar,centro,ordinario,standard,Beta,Milano,7.0,2,no,no,no,no
+20.58,lun,nord est,ordinario,standard,Beta,Milano,4.6,3,no,si,si,si
+12.37,mar,centro,ordinario,express,Alfa,Milano,6.6,2,no,si,no,no
+7.99,mar,centro,picco,standard,Gamma,Milano,1.7,4,no,no,no,no
+10.92,lun,nord est,ordinario,standard,Alfa,Roma,1.7,2,no,no,no,no
+14.28,mar,centro,ordinario,express,Beta,Roma,2.9,3,no,no,no,no
+22.05,mer,sud,ordinario,standard,Beta,Bologna,2.2,2,si,no,no,si
+11.08,ven,centro,ordinario,standard,Alfa,Roma,0.4,3,no,si,no,no
+11.94,mer,nord est,ordinario,economy,Beta,Milano,NA,2,no,no,si,no
+8.14,gio,isole,ordinario,express,Alfa,Milano,1.1,NA,no,no,no,no
+14.01,mer,nord ovest,picco,economy,Alfa,Roma,1.1,1,no,no,no,no
+17.82,gio,sud,picco,standard,Gamma,Bologna,4.5,1,no,no,no,si
+12.73,lun,isole,picco,standard,Gamma,Roma,0.1,NA,no,no,no,si
+7.33,lun,centro,ordinario,standard,Alfa,Roma,2.4,3,no,si,no,no
+13.84,mer,nord est,ordinario,standard,Alfa,Milano,2.5,2,si,si,no,no
+15.78,mar,nord ovest,ordinario,standard,Alfa,Roma,1.1,2,no,no,si,no
+17.9,mar,centro,ordinario,economy,Gamma,Bologna,1.9,3,no,si,no,no
+3.94,mar,nord est,ordinario,standard,Alfa,Milano,1.1,1,no,no,no,no
+10.38,mer,centro,ordinario,standard,Alfa,Catania,3.9,2,no,no,no,no
+16.97,gio,sud,ordinario,standard,Alfa,Catania,6.1,2,no,no,no,si
+15.85,sab,nord ovest,ordinario,express,Beta,Roma,1.0,2,no,no,no,no
+20.65,lun,nord est,ordinario,express,Alfa,Bologna,4.2,2,no,no,no,no
+13.53,gio,sud,ordinario,standard,Gamma,Bologna,7.1,2,si,no,no,no
+14.68,gio,sud,picco,express,Gamma,Catania,4.3,3,no,si,no,si
+15.17,mar,centro,ordinario,standard,Gamma,Milano,1.9,3,si,si,no,no
+15.65,dom,nord ovest,ordinario,express,Alfa,Bologna,NA,2,no,si,no,no
+18.31,gio,sud,ordinario,express,Beta,Roma,1.9,1,no,no,si,si
+14.23,sab,sud,ordinario,standard,Gamma,Bologna,8.7,2,no,no,no,no
+13.41,gio,nord ovest,ordinario,standard,Alfa,Roma,0.7,5,no,no,no,no
+18.5,mer,nord est,picco,express,Alfa,Milano,0.3,1,si,no,no,no
+18.69,lun,sud,ordinario,economy,Beta,Bologna,1.2,3,si,no,no,si
+18.58,gio,nord ovest,picco,standard,Beta,Milano,NA,3,no,no,no,si
+16.75,dom,isole,ordinario,standard,Alfa,Milano,1.6,3,no,no,no,no
+12.39,mer,sud,ordinario,standard,Gamma,Catania,4.4,NA,no,no,no,no
+18.37,mar,nord ovest,ordinario,standard,Gamma,Catania,3.7,2,no,si,no,no
+22.82,lun,centro,picco,express,Beta,Roma,2.8,1,no,no,no,no
+23.98,mer,centro,picco,economy,Beta,Roma,NA,2,no,no,no,no
+14.43,ven,centro,ordinario,standard,Beta,Roma,2.0,3,no,no,no,no
+13.7,mar,nord ovest,ordinario,standard,Beta,Milano,2.3,2,no,no,no,no
+12.87,mer,nord ovest,ordinario,standard,Alfa,Roma,1.7,3,no,no,no,no
+16.96,gio,isole,picco,economy,Beta,Milano,0.5,5,si,no,no,si
+16.71,gio,centro,ordinario,standard,Alfa,Roma,3.3,4,no,si,no,no
+18.38,sab,nord est,ordinario,standard,Gamma,Milano,0.1,3,no,si,no,no
+16.28,mar,nord ovest,ordinario,standard,Gamma,Milano,5.4,1,no,no,no,no
+14.6,mar,isole,ordinario,standard,Alfa,Roma,2.9,2,no,no,no,no
+19.87,mar,nord ovest,ordinario,express,Beta,Bologna,3.7,1,no,si,no,no
+13.03,mar,sud,picco,standard,Alfa,Milano,NA,3,no,no,no,si
+11.86,ven,sud,picco,economy,Beta,Milano,2.2,4,no,no,no,si
+15.45,ven,nord est,ordinario,standard,Alfa,Roma,1.4,3,si,no,no,si
+16.91,mer,centro,ordinario,standard,Gamma,Bologna,3.5,3,no,no,no,no
+17.92,ven,centro,ordinario,standard,Gamma,Roma,0.4,1,si,no,si,si
+21.17,sab,nord ovest,picco,standard,Beta,Milano,2.4,2,no,no,no,no
+16.6,dom,centro,ordinario,standard,Gamma,Bologna,2.0,1,si,no,no,no
+10.73,lun,isole,ordinario,standard,Alfa,Roma,2.9,2,no,no,no,no
+14.85,gio,isole,ordinario,standard,Beta,Roma,1.5,2,no,no,no,no
+22.21,gio,nord ovest,ordinario,standard,Alfa,Milano,0.4,3,no,si,no,no
+10.64,lun,nord ovest,picco,economy,Beta,Milano,5.0,1,no,no,no,no
+12.76,ven,sud,ordinario,standard,Alfa,Milano,1.6,4,si,no,no,no
+18.4,sab,nord ovest,ordinario,economy,Alfa,Milano,2.0,3,no,no,no,no
+0.0,mer,nord est,ordinario,standard,Gamma,Milano,1.3,2,no,no,no,no
+16.17,ven,isole,ordinario,standard,Beta,Bologna,1.7,2,no,no,no,si
+18.04,lun,centro,ordinario,standard,Beta,Milano,2.4,2,no,si,no,no
+18.72,mer,sud,ordinario,express,Beta,Milano,0.4,2,no,no,no,no
+16.19,mar,nord ovest,ordinario,standard,Alfa,Milano,1.6,3,si,no,no,no
+16.68,lun,nord est,ordinario,standard,Beta,Catania,5.9,2,no,no,si,no
+12.57,ven,isole,ordinario,standard,Alfa,Bologna,1.6,2,no,si,no,no
+14.32,lun,nord est,ordinario,economy,Beta,Milano,1.8,3,no,no,no,no
+14.82,ven,isole,picco,standard,Alfa,Roma,1.7,2,no,si,no,si
+18.76,mer,centro,ordinario,standard,Alfa,Roma,3.5,1,no,no,no,no
+16.77,ven,nord est,ordinario,standard,Gamma,Roma,0.7,3,no,no,no,si
+13.76,dom,centro,ordinario,economy,Gamma,Roma,4.5,3,no,si,no,no
+18.15,gio,nord ovest,ordinario,standard,Beta,Milano,0.9,2,si,si,no,no
+12.64,mer,centro,picco,economy,Gamma,Milano,0.1,2,no,no,no,no
+7.89,gio,sud,ordinario,standard,Beta,Bologna,0.4,4,no,no,no,no
+13.71,gio,nord ovest,ordinario,standard,Alfa,Bologna,4.4,1,no,no,no,no
+19.67,ven,sud,ordinario,standard,Gamma,Bologna,6.0,1,no,no,no,si
+17.17,lun,nord ovest,ordinario,standard,Alfa,Roma,2.5,1,si,no,no,no
+13.42,gio,sud,ordinario,standard,Gamma,Bologna,NA,2,no,si,no,no
+19.19,ven,nord est,ordinario,express,Alfa,Roma,2.4,2,no,no,no,no
+17.64,mar,nord ovest,ordinario,express,Gamma,Roma,7.3,3,no,no,no,si
+15.51,ven,sud,picco,standard,Gamma,Roma,1.0,1,no,si,no,no
+16.42,dom,isole,ordinario,express,Alfa,Roma,5.4,3,no,no,no,si
+14.42,gio,centro,ordinario,standard,Beta,Roma,1.6,4,no,no,no,no
+16.19,sab,nord ovest,ordinario,standard,Alfa,Catania,5.3,3,si,no,no,si
+9.26,gio,isole,picco,standard,Alfa,Bologna,3.9,NA,no,no,no,si
+13.17,gio,nord est,ordinario,standard,Gamma,Bologna,NA,3,no,no,no,no
+11.76,gio,isole,ordinario,standard,Alfa,Milano,1.6,1,no,si,no,no
+16.7,lun,nord ovest,ordinario,standard,Beta,Milano,0.1,1,si,no,si,si
+14.18,ven,sud,picco,standard,Beta,Bologna,1.1,4,no,no,no,si
+9.13,mar,nord est,ordinario,standard,Gamma,Catania,5.4,1,no,no,no,no
+16.61,dom,centro,ordinario,standard,Alfa,Milano,4.1,2,no,no,no,no
+14.46,ven,nord ovest,ordinario,standard,Alfa,Roma,3.4,2,no,si,no,no
+15.15,gio,centro,ordinario,express,Alfa,Roma,1.4,1,no,no,no,no
+11.57,sab,nord ovest,ordinario,economy,Beta,Milano,1.8,2,no,si,no,no
+12.05,ven,nord est,picco,economy,Beta,Roma,1.7,4,si,no,no,si
+23.41,ven,isole,ordinario,standard,Gamma,Milano,2.4,3,no,no,no,si
+8.54,sab,sud,ordinario,standard,Gamma,Bologna,0.1,2,no,si,no,no
+15.21,lun,nord est,picco,express,Gamma,Bologna,0.8,3,no,no,no,si
+10.83,ven,sud,ordinario,express,Gamma,Roma,2.2,2,no,no,no,no
+21.87,mer,centro,ordinario,standard,Gamma,Milano,0.4,2,no,si,no,no
+21.41,mer,nord ovest,ordinario,economy,Beta,Roma,1.3,1,no,no,no,no
+23.98,mer,sud,ordinario,standard,Alfa,Catania,3.3,2,no,si,no,si
+21.65,lun,sud,ordinario,standard,Beta,Bologna,2.5,1,no,no,no,no
+8.56,dom,nord est,ordinario,economy,Alfa,Roma,2.4,NA,no,si,no,no
+10.98,ven,sud,ordinario,standard,Beta,Milano,3.4,1,no,no,si,no
+14.96,mar,nord ovest,ordinario,express,Gamma,Bologna,0.9,2,no,no,no,no
+13.04,gio,nord ovest,picco,economy,Alfa,Milano,1.4,2,si,no,no,no
+8.12,lun,nord est,ordinario,standard,Beta,Roma,1.9,1,no,no,no,no
+13.38,mar,centro,ordinario,standard,Beta,Roma,1.2,2,no,no,no,no
+14.0,ven,sud,ordinario,standard,Beta,Milano,3.1,2,no,no,no,no
+12.22,sab,nord ovest,ordinario,standard,Alfa,Bologna,NA,3,no,no,no,no
+18.43,mer,nord ovest,ordinario,economy,Beta,Milano,2.7,4,no,si,si,si
+15.54,lun,isole,ordinario,standard,Gamma,Milano,2.7,2,si,no,no,no
+15.54,sab,nord ovest,ordinario,economy,Beta,Milano,2.7,5,no,si,no,no
+10.62,mar,nord ovest,ordinario,standard,Gamma,Milano,3.3,2,no,no,no,no
+16.98,lun,nord est,ordinario,standard,Alfa,Bologna,1.6,1,no,no,no,no
+8.79,lun,nord ovest,ordinario,express,Alfa,Bologna,2.4,2,no,no,no,no
+12.18,ven,sud,ordinario,express,Alfa,Catania,4.4,NA,no,no,no,no
+10.31,gio,isole,ordinario,standard,Beta,Roma,0.4,1,no,no,no,no
+12.46,mer,sud,ordinario,standard,Gamma,Catania,5.0,2,no,no,no,no
+11.75,sab,sud,ordinario,express,Gamma,Catania,5.2,1,no,no,no,no
+14.74,mer,nord ovest,ordinario,standard,Alfa,Catania,3.5,1,no,si,no,no
+13.05,mar,sud,ordinario,express,Beta,Milano,1.2,5,no,no,no,no
+13.42,lun,centro,ordinario,standard,Alfa,Catania,3.7,3,no,si,no,no
+12.69,mar,centro,ordinario,economy,Beta,Bologna,1.2,3,no,si,no,no
+18.4,lun,sud,ordinario,economy,Alfa,Milano,3.3,2,no,si,no,no
+16.14,sab,nord ovest,picco,standard,Beta,Bologna,1.3,1,no,no,no,no
+18.38,sab,isole,picco,standard,Alfa,Bologna,0.8,2,no,no,si,si
+12.44,gio,sud,ordinario,standard,Gamma,Roma,3.6,5,no,no,si,si
+15.95,lun,sud,ordinario,standard,Alfa,Roma,0.1,2,no,no,no,no
+9.92,sab,sud,ordinario,express,Gamma,Milano,0.7,1,no,no,no,no
+23.27,mer,centro,ordinario,standard,Gamma,Roma,NA,1,no,no,no,no
+15.46,lun,sud,picco,express,Beta,Bologna,0.1,2,no,si,no,si
+14.74,mer,nord ovest,ordinario,standard,Alfa,Roma,4.0,2,no,no,si,si
+16.52,mer,nord ovest,ordinario,express,Beta,Milano,9.7,4,no,no,no,si
+9.69,mar,centro,ordinario,standard,Beta,Roma,1.2,1,si,no,si,no
+17.33,mar,sud,ordinario,standard,Alfa,Bologna,1.4,3,no,si,no,si
+10.9,lun,isole,ordinario,express,Beta,Roma,2.3,1,no,no,no,no
+19.04,mar,sud,ordinario,standard,Alfa,Roma,0.7,2,no,no,no,no
+20.12,gio,sud,ordinario,standard,Gamma,Roma,2.0,1,si,no,no,si
+20.26,gio,sud,picco,standard,Alfa,Bologna,1.0,3,no,si,no,si
+9.67,dom,centro,ordinario,standard,Alfa,Bologna,2.1,1,no,no,no,no
+22.43,lun,centro,ordinario,standard,Beta,Roma,0.2,3,no,no,no,no
+9.28,gio,sud,picco,standard,Alfa,Roma,1.0,2,no,no,no,no
+13.13,mer,isole,ordinario,standard,Alfa,Catania,7.4,1,no,si,no,no
+11.4,mar,sud,ordinario,standard,Alfa,Milano,2.1,5,no,no,no,si
+6.01,lun,nord est,ordinario,standard,Alfa,Milano,0.3,3,no,no,no,no
+10.5,lun,sud,ordinario,economy,Alfa,Bologna,0.2,2,no,no,no,no
+16.14,ven,nord ovest,ordinario,economy,Beta,Roma,1.7,1,no,si,si,si
+15.23,mar,sud,ordinario,economy,Beta,Bologna,0.1,2,si,no,no,no
+13.77,lun,nord est,picco,standard,Beta,Roma,0.7,2,no,si,no,no
+12.6,mar,nord ovest,ordinario,standard,Gamma,Roma,3.4,1,no,no,no,no
+10.91,mar,nord ovest,ordinario,economy,Alfa,Bologna,2.3,1,no,si,no,no
+20.86,gio,centro,ordinario,express,Gamma,Roma,0.4,3,no,no,no,no
+13.98,ven,nord ovest,ordinario,standard,Beta,Catania,3.6,5,no,no,no,no
+10.46,lun,nord est,ordinario,standard,Beta,Bologna,0.1,1,no,si,no,no
+13.65,ven,nord est,picco,standard,Alfa,Catania,4.6,2,no,no,no,no
+21.75,mar,isole,picco,standard,Alfa,Catania,6.8,1,no,no,no,si
+11.91,dom,centro,ordinario,economy,Gamma,Catania,4.4,2,no,no,si,no
+7.89,dom,nord ovest,ordinario,standard,Gamma,Roma,1.6,4,no,no,no,no
+22.33,gio,nord ovest,picco,standard,Beta,Roma,NA,3,no,no,no,si
+12.56,mer,isole,ordinario,economy,Alfa,Roma,8.2,5,no,no,no,no
+15.9,mer,sud,ordinario,express,Alfa,Bologna,0.4,4,no,no,no,si
+19.35,gio,nord ovest,ordinario,standard,Beta,Milano,0.1,2,no,no,no,no
+12.01,mar,nord ovest,picco,express,Alfa,Bologna,1.2,5,no,si,no,si
+17.45,mer,centro,ordinario,standard,Alfa,Bologna,7.4,2,no,no,no,no
+23.98,dom,centro,picco,economy,Gamma,Roma,1.9,1,no,no,no,no
+18.66,mar,nord ovest,ordinario,standard,Alfa,Roma,2.5,2,no,no,no,no
+13.15,mer,nord est,ordinario,economy,Alfa,Bologna,1.8,NA,no,no,no,no
+19.74,gio,nord est,picco,standard,Gamma,Catania,6.9,2,no,no,no,si
+22.94,ven,centro,ordinario,standard,Alfa,Milano,NA,1,no,no,no,no
+8.99,gio,nord est,ordinario,express,Beta,Milano,2.4,2,no,no,no,no
+15.55,mar,sud,ordinario,economy,Gamma,Milano,0.9,NA,no,no,no,no
+18.82,mer,nord ovest,ordinario,express,Beta,Bologna,2.6,4,si,no,no,si
+12.87,mer,isole,picco,economy,Beta,Bologna,2.1,NA,no,no,no,si
+13.51,gio,sud,ordinario,standard,Alfa,Milano,6.1,3,no,no,si,si
+15.26,lun,nord est,ordinario,standard,Gamma,Milano,0.1,2,si,no,no,si
+18.38,mer,nord ovest,ordinario,standard,Beta,Milano,2.7,2,no,no,no,no
+13.27,ven,nord est,ordinario,standard,Alfa,Bologna,3.8,1,no,si,no,no
+10.75,sab,centro,ordinario,economy,Alfa,Bologna,2.3,5,no,no,no,no
+3.72,dom,sud,ordinario,standard,Beta,Catania,3.1,2,no,si,no,no
+14.33,mar,sud,picco,standard,Alfa,Bologna,0.4,2,si,no,no,si
+19.32,gio,centro,ordinario,express,Gamma,Milano,3.1,NA,no,no,no,no
+11.28,mar,nord est,ordinario,standard,Gamma,Roma,1.7,2,no,no,no,no
+21.31,ven,nord est,ordinario,express,Alfa,Catania,4.9,5,si,no,no,si
+9.59,mer,sud,ordinario,express,Beta,Catania,5.7,3,no,no,no,no
+10.7,lun,nord ovest,ordinario,economy,Beta,Roma,1.4,3,no,no,no,no
+15.55,mar,nord ovest,ordinario,standard,Alfa,Catania,7.9,3,no,no,no,no
+13.27,mar,nord ovest,ordinario,economy,Alfa,Milano,6.5,2,no,no,no,no
+19.79,lun,nord ovest,ordinario,standard,Beta,Roma,7.6,1,si,no,no,no
+11.55,lun,nord ovest,ordinario,economy,Alfa,Roma,4.3,2,no,no,no,no
+10.06,ven,isole,picco,standard,Gamma,Roma,1.4,2,no,si,no,no
+8.11,lun,nord est,ordinario,standard,Alfa,Milano,4.1,4,no,no,no,no
