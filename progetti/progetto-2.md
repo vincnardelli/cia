@@ -8,6 +8,10 @@ nav_order: 2
 
 # Progetto 2 · Analizza un dataset
 
+<div class="patto" markdown="1">
+**Il progetto si fa in aula.** La maggior parte del lavoro va svolta durante le lezioni, con il vostro gruppo: per questo è **necessaria la presenza a tutte le lezioni fino alla consegna**, venerdì 20, lunedì 23 e venerdì 27 novembre.
+</div>
+
 {% include iscrizione-progetto.html %}
 
 Un'azienda ha un problema e un archivio di casi passati: prestiti già erogati, pazienti già dimessi, ordini già consegnati. Vuole sapere se dai dati si può ricavare una regola per decidere meglio. Il vostro gruppo riceve uno di questi archivi e risponde alla domanda con un **albero di classificazione**, verificato su dati che non ha mai visto, come nelle lezioni 11 e 12.
