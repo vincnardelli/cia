@@ -56,7 +56,7 @@ In R: `dati <- read.csv("https://www.vincnardelli.com/cia/materiale_progetti/log
 
 ## Il confronto da battere
 
-Chi risponde sempre «no» indovina circa il **74 %** dei casi, perché i casi con `in_ritardo` uguale a «si» sono circa il 26 %. Un albero vale qualcosa solo se fa meglio di così.
+Chi risponde sempre «no» indovina circa il **73 %** dei casi, perché i casi con `in_ritardo` uguale a «si» sono circa il 27 %. Un albero vale qualcosa solo se fa meglio di così.
 
 > **Attenzione** L'albero senza limiti arriva al 100 % o quasi sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
 
