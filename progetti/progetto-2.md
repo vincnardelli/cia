@@ -65,6 +65,18 @@ Il progetto si fa in **Python in Colab**, come nelle lezioni 11 e 12: un noteboo
 </div>
 
 <div class="via" markdown="1">
+<div class="via__k">Le colonne di testo</div>
+L'albero di scikit-learn lavora solo con i numeri, e ogni dataset ha qualche colonna di testo (`area`, `sesso`, `contratto`...). Prima di dividere in training e test, trasformatele con `pd.get_dummies`, che crea una colonna di 0 e 1 per ogni categoria: `area` diventa `area_centro`, `area_sud` e così via. Per esempio, con il dataset dei prestiti:
+
+```python
+y = dati["insolvente"]
+X = pd.get_dummies(dati.drop(columns="insolvente"), dtype=int)
+```
+
+Il nome della colonna da prevedere è nella scheda del vostro dataset.
+</div>
+
+<div class="via" markdown="1">
 <div class="via__k">Prima di consegnare</div>
 In Colab: *Runtime → Riavvia sessione ed esegui tutto*. Il notebook deve arrivare in fondo senza errori, e lo consegnate con gli output, così si vedono i grafici e i numeri. I dati si leggono direttamente dal sito, con l'indirizzo che trovate nella scheda: niente file da caricare.
 </div>

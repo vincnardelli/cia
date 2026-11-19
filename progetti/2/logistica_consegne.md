@@ -26,14 +26,14 @@ Quali ordini segnalare al servizio clienti il giorno stesso della spedizione? L'
 
 | variabile | tipo | valori | descrizione |
 |---|---|---|---|
-| `ora_ordine` | numerica | 0-23,98 | ora in cui è stato pagato l'ordine (14,5 = le 14 e 30) |
+| `ora_ordine` | numerica | 0-23,98 | ora in cui è stato pagato l'ordine, in ore e frazioni di ora: 14,5 vuol dire le 14:30, 9,25 le 9:15 |
 | `giorno_ordine` | categorica | lun-dom | giorno della settimana dell'ordine |
 | `destinazione` | categorica | nord ovest / nord est / centro / sud / isole | macro-area di destinazione |
 | `periodo` | categorica | ordinario / picco | periodo dell'anno (picco = Black Friday e dicembre) |
 | `servizio` | categorica | economy / standard / express | servizio scelto dal cliente |
 | `corriere` | categorica | Alfa / Beta / Gamma | vettore che effettua la consegna |
 | `deposito` | categorica | Milano / Bologna / Roma / Catania | deposito di partenza |
-| `peso_kg` | numerica | 0,1-30 kg | peso del collo |
+| `peso_kg` | numerica | 0,1-17 kg | peso del collo |
 | `transiti_hub` | numerica | 1-5 | quanti hub attraversa il pacco |
 | `tentativo_fallito` | categorica | si / no | un primo tentativo di consegna è già fallito |
 | `punto_ritiro` | categorica | si / no | consegna in punto di ritirio o locker invece che a domicilio |
@@ -58,6 +58,6 @@ In R: `dati <- read.csv("https://www.vincnardelli.com/cia/materiale_progetti/log
 
 Chi risponde sempre «no» indovina circa il **74 %** dei casi, perché i casi con `in_ritardo` uguale a «si» sono circa il 26 %. Un albero vale qualcosa solo se fa meglio di così.
 
-> **Attenzione** L'albero senza limiti arriva al 100 % sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
+> **Attenzione** L'albero senza limiti arriva al 100 % o quasi sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
 
 Cosa consegnare, entro quando e come viene valutato: nella [pagina del progetto 2]({{ site.baseurl }}/progetti/2/).

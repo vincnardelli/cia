@@ -35,9 +35,9 @@ Con chi fare un colloquio di retention nei prossimi tre mesi? L'ufficio del pers
 | `contratto` | categorica | indeterminato / determinato | tipo di contratto |
 | `soddisfazione` | numerica | 1-5 | punteggio medio dell'indagine interna di clima |
 | `disoccupazione_locale` | numerica | 2-20 % | tasso di disoccupazione della provincia della sede |
-| `straordinari_settimanali` | numerica | 0-14 ore | ore di straordinario medie a settimana |
+| `straordinari_settimanali` | numerica | 0-10 ore | ore di straordinario medie a settimana |
 | `pendolarismo_minuti` | numerica | 2-120 | minuti di tragitto casa-lavoro, solo andata |
-| `mesi_da_promozione` | numerica | 0-180 | mesi trascorsi dall'ultima promozione |
+| `mesi_da_promozione` | numerica | 0-165 | mesi trascorsi dall'ultima promozione; per chi non è mai stato promosso, dall'assunzione |
 | `figli` | numerica | 0-4 | figli a carico |
 | `formazione_giorni` | numerica | 0-15 | giorni di formazione nell'anno |
 | `lavoro_agile` | categorica | si / no | lavora da remoto almeno un giorno a settimana |
@@ -63,6 +63,6 @@ In R: `dati <- read.csv("https://www.vincnardelli.com/cia/materiale_progetti/ris
 
 Chi risponde sempre «no» indovina circa il **73 %** dei casi, perché i casi con `dimissioni_12m` uguale a «si» sono circa il 27 %. Un albero vale qualcosa solo se fa meglio di così.
 
-> **Attenzione** L'albero senza limiti arriva al 100 % sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
+> **Attenzione** L'albero senza limiti arriva al 100 % o quasi sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
 
 Cosa consegnare, entro quando e come viene valutato: nella [pagina del progetto 2]({{ site.baseurl }}/progetti/2/).

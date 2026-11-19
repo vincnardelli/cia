@@ -60,6 +60,6 @@ In R: `dati <- read.csv("https://www.vincnardelli.com/cia/materiale_progetti/ban
 
 Chi risponde sempre «no» indovina circa il **70 %** dei casi, perché i casi con `insolvente` uguale a «si» sono circa il 30 %. Un albero vale qualcosa solo se fa meglio di così.
 
-> **Attenzione** L'albero senza limiti arriva al 100 % sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
+> **Attenzione** L'albero senza limiti arriva al 100 % o quasi sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
 
 Cosa consegnare, entro quando e come viene valutato: nella [pagina del progetto 2]({{ site.baseurl }}/progetti/2/).

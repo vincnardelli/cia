@@ -35,7 +35,7 @@ A chi proporre la scatola nera con uno sconto, sapendo che la compagnia può far
 | `eta_veicolo` | numerica | 0-30 anni | anni del veicolo (l'età media del parco auto italiano è 13 anni) |
 | `potenza_kw` | numerica | 35-230 kW | potenza del veicolo |
 | `alimentazione` | categorica | benzina / diesel / ibrida / elettrica | alimentazione del veicolo |
-| `classe_cu` | numerica | 1-18 | classe di merito bonus-malus (1 è la migliore; l'87% degli assicurati italiani è in classe 1) |
+| `classe_cu` | numerica | 1-18 | classe di merito bonus-malus (1 è la migliore; l'87% degli assicurati italiani è in classe 1; chi ha appena preso la patente parte dalla 14, a meno che erediti la classe di un familiare) |
 | `uso` | categorica | privato / commerciale | uso dichiarato del veicolo |
 | `scatola_nera` | categorica | si / no | il veicolo ha la scatola nera |
 | `anni_compagnia` | numerica | 0,1-30 | da quanti anni è cliente della compagnia |
@@ -57,8 +57,8 @@ In R: `dati <- read.csv("https://www.vincnardelli.com/cia/materiale_progetti/ass
 
 ## Il confronto da battere
 
-Chi risponde sempre «no» indovina circa il **71 %** dei casi, perché i casi con `sinistro_12m` uguale a «si» sono circa il 29 %. Un albero vale qualcosa solo se fa meglio di così.
+Chi risponde sempre «no» indovina circa il **73 %** dei casi, perché i casi con `sinistro_12m` uguale a «si» sono circa il 27 %. Un albero vale qualcosa solo se fa meglio di così.
 
-> **Attenzione** L'albero senza limiti arriva al 100 % sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
+> **Attenzione** L'albero senza limiti arriva al 100 % o quasi sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
 
 Cosa consegnare, entro quando e come viene valutato: nella [pagina del progetto 2]({{ site.baseurl }}/progetti/2/).

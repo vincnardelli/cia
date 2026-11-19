@@ -27,7 +27,7 @@ A quali clienti mandare un'offerta di retention, sapendo che la banca può conta
 | variabile | tipo | valori | descrizione |
 |---|---|---|---|
 | `eta` | numerica | 18-90 anni | età dell'intestatario |
-| `anzianita_anni` | numerica | 0,1-35 | da quanti anni il cliente ha il conto |
+| `anzianita_anni` | numerica | 0,1-18 | da quanti anni il cliente ha il conto |
 | `tipo_conto` | categorica | tradizionale / online / postale | tipo di conto |
 | `prodotti` | numerica | 1-5 | quanti prodotti della banca ha il cliente (conto, carta, fondi, assicurazione…) |
 | `saldo_medio` | numerica | 0-120.000 € | giacenza media nell'anno |
@@ -35,7 +35,7 @@ A quali clienti mandare un'offerta di retention, sapendo che la banca può conta
 | `operazioni_anno` | numerica | 0-1.200 | numero di operazioni nell'anno |
 | `mesi_inattivo` | numerica | 0-12 | mesi consecutivi senza operazioni |
 | `reclami_12m` | numerica | 0-4 | reclami presentati nell'anno |
-| `costo_annuo` | numerica | 0-400 € | spese annue del conto |
+| `costo_annuo` | numerica | 10-170 € | spese annue del conto |
 | `mutuo` | categorica | si / no | il cliente ha un mutuo con la banca |
 | `carta_credito` | categorica | si / no | il cliente ha una carta di credito |
 | `filiale_vicina` | categorica | si / no | c'è una filiale nel comune di residenza |
@@ -60,6 +60,6 @@ In R: `dati <- read.csv("https://www.vincnardelli.com/cia/materiale_progetti/ban
 
 Chi risponde sempre «no» indovina circa il **72 %** dei casi, perché i casi con `chiude_conto` uguale a «si» sono circa il 28 %. Un albero vale qualcosa solo se fa meglio di così.
 
-> **Attenzione** L'albero senza limiti arriva al 100 % sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
+> **Attenzione** L'albero senza limiti arriva al 100 % o quasi sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
 
 Cosa consegnare, entro quando e come viene valutato: nella [pagina del progetto 2]({{ site.baseurl }}/progetti/2/).

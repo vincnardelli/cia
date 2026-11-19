@@ -26,8 +26,8 @@ A chi mandare il buono sconto? E soprattutto: il buono va a chi riacquista comun
 
 | variabile | tipo | valori | descrizione |
 |---|---|---|---|
-| `giorni_ultimo_acquisto` | numerica | 1-540 | giorni trascorsi dall'ultimo ordine (recency) |
-| `acquisti_12_mesi` | numerica | 1-40 | ordini fatti nei dodici mesi (frequency) |
+| `giorni_ultimo_acquisto` | numerica | 1-365 | giorni trascorsi dall'ultimo ordine (recency) |
+| `acquisti_12_mesi` | numerica | 1-12 | ordini fatti nei dodici mesi (frequency) |
 | `scontrino_medio` | numerica | € | valore medio dell'ordine (monetary) |
 | `categoria_prevalente` | categorica | beauty / abbigliamento / alimentari / arredamento / elettronica | categoria in cui il cliente spende di più |
 | `categorie_distinte` | numerica | 1-6 | in quante categorie diverse ha comprato |
@@ -56,8 +56,8 @@ In R: `dati <- read.csv("https://www.vincnardelli.com/cia/materiale_progetti/eco
 
 ## Il confronto da battere
 
-Chi risponde sempre «no» indovina circa il **68 %** dei casi, perché i casi con `riacquista_90gg` uguale a «si» sono circa il 32 %. Un albero vale qualcosa solo se fa meglio di così.
+Chi risponde sempre «no» indovina circa il **69 %** dei casi, perché i casi con `riacquista_90gg` uguale a «si» sono circa il 31 %. Un albero vale qualcosa solo se fa meglio di così.
 
-> **Attenzione** L'albero senza limiti arriva al 100 % sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
+> **Attenzione** L'albero senza limiti arriva al 100 % o quasi sul training. Non è bravo: ha imparato a memoria. Il confronto fra training e test è metà del lavoro.
 
 Cosa consegnare, entro quando e come viene valutato: nella [pagina del progetto 2]({{ site.baseurl }}/progetti/2/).
