@@ -12,7 +12,21 @@ nav_order: 2
 **Il progetto si fa in aula.** La maggior parte del lavoro va svolta durante le lezioni, con il vostro gruppo: per questo è **necessaria la presenza a tutte le lezioni fino alla consegna**, venerdì 20, lunedì 23 e venerdì 27 novembre.
 </div>
 
-{% include iscrizione-progetto.html %}
+## I gruppi
+
+Le iscrizioni sono chiuse. Sette gruppi da quattro, formati a caso tra gli iscritti; a ogni gruppo è toccato, sempre a caso, un dataset diverso. Il numero del gruppo è quello da usare nei nomi dei file e nell'oggetto dell'email.
+
+| Gruppo | Dataset | Componenti |
+|---|---|---|
+| **1** | [Chiusura del conto corrente]({{ site.baseurl }}/progetti/2/banca_conti/) | Claudia Iattarelli, Francesca Maria Monfreda, Giovanna Fucci, Virginia Piccolo |
+| **2** | [Riammissioni ospedaliere entro 30 giorni]({{ site.baseurl }}/progetti/2/sanita_riammissioni/) | Alessandro Pio Minna, Alessia Maiorano, Francesco Pollastrini, Giuseppe Alvisi |
+| **3** | [Riacquisto entro 90 giorni]({{ site.baseurl }}/progetti/2/ecommerce_riacquisto/) | Antonella Rifino, Giulia Di Nucci, Lina Pagnotta, Lorenzo Rischia |
+| **4** | [Visite prenotate e non disdette]({{ site.baseurl }}/progetti/2/sanita_prenotazioni/) | Biagio Ramone, Dimitri Rusu, Elena Anna Ronghi, Rosario Clausi |
+| **5** | [Dimissioni volontarie entro dodici mesi]({{ site.baseurl }}/progetti/2/risorse_umane_dimissioni/) | Alfonso Santilli, Leonardo Cidda, Martina Galanti, Priscilla Poggioli |
+| **6** | [Insolvenze sul credito al consumo]({{ site.baseurl }}/progetti/2/banca_prestiti/) | Alberto Miele, Domenico Giacobbe, Francesco Licciardello, Samuele Giaimo |
+| **7** | [Sinistri RC auto entro dodici mesi]({{ site.baseurl }}/progetti/2/assicurazioni_sinistri/) | Andrea Maria Blandino, Francesca Preci, Lorenzo Giuseppe Purcaro, Vasco Valente Capotondi |
+
+## Il progetto
 
 Un'azienda ha un problema e un archivio di casi passati: prestiti già erogati, pazienti già dimessi, ordini già consegnati. Vuole sapere se dai dati si può ricavare una regola per decidere meglio. Il vostro gruppo riceve uno di questi archivi e risponde alla domanda con un **albero di classificazione**, verificato su dati che non ha mai visto, come nelle lezioni 11 e 12.
 
@@ -21,18 +35,16 @@ Un'azienda ha un problema e un archivio di casi passati: prestiti già erogati, 
 </div>
 
 <div class="spec">
-  <div class="spec__row"><div class="spec__k">Chi</div><div class="spec__v">In gruppi di 3–5 persone, formati a caso tra chi si iscrive al <a href="https://forms.gle/Dr9wGw2miBk5UfZh6" target="_blank" rel="noopener">modulo di iscrizione</a> entro <strong>venerdì 20 novembre 2026, ore 9:00</strong></div></div>
+  <div class="spec__row"><div class="spec__k">Chi</div><div class="spec__v">In gruppi di quattro persone, formati a caso tra gli iscritti: <a href="#i-gruppi">l'elenco è qui sopra</a></div></div>
   <div class="spec__row"><div class="spec__k">Punti</div><div class="spec__v">3 su 30, con un giudizio unico da 0 a 3, lo stesso per tutti i componenti del gruppo</div></div>
   <div class="spec__row"><div class="spec__k">Scadenza</div><div class="spec__v"><strong>Domenica 29 novembre 2026, ore 23:59</strong>. Dopo la scadenza il progetto vale 0 punti.</div></div>
   <div class="spec__row"><div class="spec__k">Cosa</div><div class="spec__v">Due file: il notebook <code>gruppo_N.ipynb</code> (oppure <code>gruppo_N.R</code> se lavorate in R) e il registro AI del gruppo in PDF o Word (<code>gruppo_N_registro_ai.pdf</code> o <code>.docx</code>)</div></div>
   <div class="spec__row"><div class="spec__k">Come</div><div class="spec__v">Una sola email per gruppo a <a href="mailto:vincenzo.nardelli@unicatt.it?subject=CIA%20Progetto%202%20-%20Gruppo%20N">vincenzo.nardelli@unicatt.it</a>, mandata da un componente con gli altri in copia, oggetto <code>CIA Progetto 2 - Gruppo N</code> e i due file in allegato (non link)</div></div>
 </div>
 
-## I gruppi e i dataset
+## I dataset
 
-L'iscrizione è parte del progetto: **chi non si iscrive entro venerdì 20 novembre alle 9:00 non partecipa**: il progetto 2 vale 0 punti. Dopo la chiusura delle iscrizioni formo i gruppi a caso e a ogni gruppo assegno, sempre a caso, uno degli otto dataset. L'elenco dei gruppi arriva in aula e per email, non su questo sito. Se i gruppi sono più di otto, qualche dataset va a due gruppi, che lavorano ognuno per conto suo.
-
-Ogni dataset ha una scheda con il contesto, la domanda dell'azienda e la descrizione di tutte le variabili.
+Gli otto dataset preparati per il progetto sono questi; sette sono stati assegnati ai gruppi, quello della logistica è rimasto libero. Ogni dataset ha una scheda con il contesto, la domanda dell'azienda e la descrizione di tutte le variabili.
 
 | Settore | Dataset | Cosa si prevede |
 |---|---|---|
