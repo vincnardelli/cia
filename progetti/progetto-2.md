@@ -14,7 +14,7 @@ nav_order: 2
 
 ## I gruppi
 
-Le iscrizioni sono chiuse. Sette gruppi da quattro, formati a caso tra gli iscritti; a ogni gruppo è toccato, sempre a caso, un dataset diverso. Il numero del gruppo è quello da usare nei nomi dei file e nell'oggetto dell'email.
+Le iscrizioni sono chiuse. Otto gruppi, formati a caso tra gli iscritti; a ogni gruppo è toccato, sempre a caso, un dataset diverso. Il numero del gruppo è quello da usare nei nomi dei file e nell'oggetto dell'email.
 
 | Gruppo | Dataset | Componenti |
 |---|---|---|
@@ -25,6 +25,7 @@ Le iscrizioni sono chiuse. Sette gruppi da quattro, formati a caso tra gli iscri
 | **5** | [Dimissioni volontarie entro dodici mesi]({{ site.baseurl }}/progetti/2/risorse_umane_dimissioni/) | Alfonso Santilli, Leonardo Cidda, Martina Galanti, Priscilla Poggioli |
 | **6** | [Insolvenze sul credito al consumo]({{ site.baseurl }}/progetti/2/banca_prestiti/) | Alberto Miele, Domenico Giacobbe, Francesco Licciardello, Samuele Giaimo |
 | **7** | [Sinistri RC auto entro dodici mesi]({{ site.baseurl }}/progetti/2/assicurazioni_sinistri/) | Andrea Maria Blandino, Francesca Preci, Lorenzo Giuseppe Purcaro, Vasco Valente Capotondi |
+| **8** · Super ritardatari | [Consegne in ritardo]({{ site.baseurl }}/progetti/2/logistica_consegne/) | i nomi arrivano a breve |
 
 ## Il progetto
 
@@ -35,7 +36,7 @@ Un'azienda ha un problema e un archivio di casi passati: prestiti già erogati, 
 </div>
 
 <div class="spec">
-  <div class="spec__row"><div class="spec__k">Chi</div><div class="spec__v">In gruppi di quattro persone, formati a caso tra gli iscritti: <a href="#i-gruppi">l'elenco è qui sopra</a></div></div>
+  <div class="spec__row"><div class="spec__k">Chi</div><div class="spec__v">In gruppi formati a caso tra gli iscritti: <a href="#i-gruppi">l'elenco è qui sopra</a></div></div>
   <div class="spec__row"><div class="spec__k">Punti</div><div class="spec__v">3 su 30, con un giudizio unico da 0 a 3, lo stesso per tutti i componenti del gruppo</div></div>
   <div class="spec__row"><div class="spec__k">Scadenza</div><div class="spec__v"><strong>Domenica 29 novembre 2026, ore 23:59</strong>. Dopo la scadenza il progetto vale 0 punti.</div></div>
   <div class="spec__row"><div class="spec__k">Cosa</div><div class="spec__v">Due file: il notebook <code>gruppo_N.ipynb</code> (oppure <code>gruppo_N.R</code> se lavorate in R) e il registro AI del gruppo in PDF o Word (<code>gruppo_N_registro_ai.pdf</code> o <code>.docx</code>)</div></div>
@@ -44,7 +45,7 @@ Un'azienda ha un problema e un archivio di casi passati: prestiti già erogati, 
 
 ## I dataset
 
-Gli otto dataset preparati per il progetto sono questi; sette sono stati assegnati ai gruppi, quello della logistica è rimasto libero. Ogni dataset ha una scheda con il contesto, la domanda dell'azienda e la descrizione di tutte le variabili.
+Gli otto dataset del progetto sono questi, uno per gruppo. Ogni dataset ha una scheda con il contesto, la domanda dell'azienda e la descrizione di tutte le variabili.
 
 | Settore | Dataset | Cosa si prevede |
 |---|---|---|
