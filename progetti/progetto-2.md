@@ -25,7 +25,7 @@ Le iscrizioni sono chiuse. Otto gruppi, formati a caso tra gli iscritti; a ogni 
 | **5** | [Dimissioni volontarie entro dodici mesi]({{ site.baseurl }}/progetti/2/risorse_umane_dimissioni/) | Alfonso Santilli, Leonardo Cidda, Martina Galanti, Priscilla Poggioli |
 | **6** | [Insolvenze sul credito al consumo]({{ site.baseurl }}/progetti/2/banca_prestiti/) | Alberto Miele, Domenico Giacobbe, Francesco Licciardello, Samuele Giaimo |
 | **7** | [Sinistri RC auto entro dodici mesi]({{ site.baseurl }}/progetti/2/assicurazioni_sinistri/) | Andrea Maria Blandino, Francesca Preci, Lorenzo Giuseppe Purcaro, Vasco Valente Capotondi |
-| **8** · Super ritardatari | [Consegne in ritardo]({{ site.baseurl }}/progetti/2/logistica_consegne/) | i nomi arrivano a breve |
+| **8** | [Consegne in ritardo]({{ site.baseurl }}/progetti/2/logistica_consegne/) | Federica Anna Salzarulo, Marco Rizzi, Maurizio Giaquinto, Sara Mastrogiacomo |
 
 ## Il progetto
 
